@@ -1,0 +1,22 @@
+# Metric validation set (2026-06-22) for the frame-divergence + coherence metrics.
+# Hand-labeled (source, candidate) pairs to test whether each candidate metric SEPARATES:
+#   frame:  calque  = same scene/situation, relexicalized (we want HIGH frame-divergence flagged as BAD)
+#           divergent = a genuinely different scene (GOOD)
+#   coh:    yes = one coherent situation ; no = grammatical but not one sensible situation
+# Sources are real corpus sentences (#7, #2, #10). Four candidate types per source:
+#   frame-calque (same scene, new words) | good-homeo (new scene, structure held, coherent)
+#   incoherent (grammatical, no single situation) | lexical-calque (reuses source words)
+# columns: id <TAB> frame <TAB> coh <TAB> source <TAB> candidate
+id	frame	coh	source	candidate
+A1	calque	yes	Sapevo che nel finale avremmo ridotto lo svantaggio.	Ero certo che nell'ultimo quarto avremmo recuperato il distacco.
+A2	divergent	yes	Sapevo che nel finale avremmo ridotto lo svantaggio.	Sapevo che entro venerdì avrei consegnato la traduzione.
+A3	divergent	no	Sapevo che nel finale avremmo ridotto lo svantaggio.	Sapevo che nel cassetto avremmo arrugginito la domenica.
+A4	calque	yes	Sapevo che nel finale avremmo ridotto lo svantaggio.	Sapevo che nel finale avremmo ridotto lo stipendio.
+B1	calque	yes	E anche nella lontana città gli capitava di svegliarsi in piena notte con inquietudine.	E perfino nella distante metropoli le accadeva di destarsi nel cuore della notte con angoscia.
+B2	divergent	yes	E anche nella lontana città gli capitava di svegliarsi in piena notte con inquietudine.	E anche nelle prime settimane di scuola gli capitava di annoiarsi durante le lezioni con insofferenza.
+B3	divergent	no	E anche nella lontana città gli capitava di svegliarsi in piena notte con inquietudine.	E anche nella remota equazione gli capitava di fiorire in piena estate con il triangolo.
+B4	calque	yes	E anche nella lontana città gli capitava di svegliarsi in piena notte con inquietudine.	E anche nella lontana città gli capitava di svegliarsi in piena notte con stanchezza.
+C1	calque	yes	Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno parti troppo piccole.	Ad esempio, per i neonati i giochi adatti sono quelli privi di componenti minuscoli.
+C2	divergent	yes	Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno parti troppo piccole.	Per esempio, per i lettori esperti i romanzi consigliati sono quelli che non hanno trame troppo lineari.
+C3	divergent	no	Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno parti troppo piccole.	Per esempio, per i bambini piccoli i tuoni sicuri sono quelli che non hanno parti troppo gentili.
+C4	calque	yes	Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno parti troppo piccole.	Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno spigoli troppo taglienti.

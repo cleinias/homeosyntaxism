@@ -1,0 +1,29 @@
+# secrets
+.env
+*.key
+Claude-API-key*
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# caches
+.cache/
+.stanza/
+stanza_resources/
+
+# copyright: English source (revised Colquhoun, ed. Reynolds) and everything derived
+texts/incipit_en*.txt
+texts/*colquhoun*
+texts/*moore*
+spec/specs_en_*.json
+results/*-en_*.json
+
+# editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/

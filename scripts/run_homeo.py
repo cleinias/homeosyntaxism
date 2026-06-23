@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+"""run_homeo.py — generalized D_n constrained-homeomorphism generator (supersedes run_d2.py).
+
+Generates a source-blind transposition that holds the form at a chosen degree D_n + the
+patterns + the threefold criterion. The degree's "form target" is the only thing that
+changes across rungs; patterns / brief / embargo / divergence / coherence are constant.
+
+The rungs form a PARTIAL ORDER (not a chain): D0 is the top, S and D1 are independent
+projections of it (S forgets the arcs, D1 forgets the order) and are incomparable.
+  D0  hold the full ordered dependency tree (POS + order + relations — the top)
+  S   hold the exact POS sequence (the surface — the calque/Oulipo end; forgets the arcs)
+  D1  hold the dependency structure, order-free (forgets the order)
+  D2  hold the clause architecture (grains: a=inventory, c=schema)   [the operative rung]
+  D3  hold only the hypotaxis profile (clause count + depth — the loosest)
+
+  python scripts/run_homeo.py --backend anthropic --model claude-opus-4-8 \
+      --lang it --degree D0 --n 6 --tag opus48
+  python scripts/run_homeo.py --backend openrouter --model qwen/qwen3-235b-a22b-2507 \
+      --provider deepinfra --lang it --degree D2 --grains a,c --n 6 --tag qwen-or
+
+Reads spec/specs_{lang}_{degree}.json (from build_specs.py); reuses run_production backends.
+"""
+import argparse
+import json
+import sys
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import run_production as RP  # noqa: E402
+
+SPEC_DIR = ROOT / "reproducibility" / "manzoni-mapping" / "spec"
+LANG_NAME = {"it": "Italian", "en": "English"}
+MODERN = {"it": "Write MODERN literary Italian (no apocope, no archaic elisions).",
+          "en": "Write MODERN literary English."}
+
+# per-degree: (name, the instruction telling the model what form to hold)
+DEGREE = {
+    "S": ("the exact part-of-speech sequence (S, the surface)",
+          "Reproduce, period by period, the PART-OF-SPEECH SEQUENCE below exactly --- the same tags "
+          "in the same order. Only the words are yours."),
+    "D0": ("the full ordered dependency tree (D0 --- POS + order + relations, the top of the lattice)",
+           "Reproduce, period by period, the ORDERED DEPENDENCY TREE below: at each position emit a "
+           "word of the part of speech shown, in the same order, AND make its syntactic head and "
+           "relation match the arc shown (each token reads '[position]POS relation->[head position]'). "
+           "Same tags, same order, same arcs. Only the words are yours."),
+    "D1": ("the dependency structure (D1, order-free)",
+           "Reproduce, period by period, the DEPENDENCY RELATIONS below (head POS -> relation -> "
+           "dependent POS) --- the same set of relations, but in any word order you like."),
+    "D2": ("the clause architecture (D2)",
+           "Reproduce, period by period, the CLAUSE ARCHITECTURE below (the same inventory and nesting "
+           "of clauses); word order is entirely free."),
+    "D3": ("the hypotaxis profile (D3, the loosest rung)",
+           "Match, period by period, only the CLAUSE COUNT and MAXIMUM SUBORDINATION DEPTH below; "
+           "you are otherwise free in structure, order, and words."),
+}
+GRAIN_KEY = {"a": "inventory", "c": "schema"}
+
+
+def spec_block(degree, grain, specs):
+    if degree == "D2":
+        return "\n".join(p[GRAIN_KEY[grain]] for p in specs["periods"])
+    return "\n".join(p["spec"] for p in specs["periods"])
+
+
+def build_prompt(degree, grain, specs, lang):
+    ln = LANG_NAME[lang]
+    name, instr = DEGREE[degree]
+    if degree == "D2":
+        name = name + (" --- grain a (clause inventory)" if grain == "a" else " --- grain c (nesting schema)")
+    return f"""You are assisting with a scholarly experiment in structural literary analysis.
+
+TASK: Write an ORIGINAL descriptive opening (incipit) in {ln} for a narrative set in the target
+domain below. It must be a CONSTRAINED HOMEOSYNTACTIC transposition: hold {name}, AND instantiate
+every formal pattern listed --- while inventing entirely new words, images, and content. It is NOT
+a paraphrase, translation, or reconstruction of any source.
+
+FORM TARGET. {instr}
+Reproduce it for all {specs['n_periods']} periods, in this order:
+{spec_block(degree, grain, specs)}
+
+FORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW
+material (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):
+{specs['constraint_block']}
+
+TARGET DOMAIN --- the border/migration landscape of the central Mediterranean (in your own words):
+{specs['brief']}
+
+LEXICAL EMBARGO (absolute): none of these source content words may appear, in any inflected form:
+{", ".join(specs['embargo'])}
+
+REQUIREMENTS --- all three hold together (the constrained homeomorphism):
+1. FORM PRESERVED at {name} (as specified above), in your own words.
+2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque; satisfy each pattern with fresh material.
+3. COHERENT --- one continuous, fully sensible geographical description.
+
+{MODERN[lang]} Produce the {specs['n_periods']} periods in order as continuous prose --- no numbering,
+no headings. Output ONLY the passage: no preamble, no self-audit."""
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--backend", required=True, choices=["vllm-http", "anthropic", "openrouter"])
+    ap.add_argument("--model", required=True)
+    ap.add_argument("--endpoint", default="http://127.0.0.1:8000")
+    ap.add_argument("--provider", default=None)
+    ap.add_argument("--lang", default="it", choices=["it", "en"])
+    ap.add_argument("--degree", default="D2", choices=["S", "D0", "D1", "D2", "D3"])
+    ap.add_argument("--grains", default="a,c", help="D2 only; ignored at other degrees")
+    ap.add_argument("--n", type=int, default=6)
+    ap.add_argument("--temperature", type=float, default=0.9)
+    ap.add_argument("--max-tokens", type=int, default=2048)
+    ap.add_argument("--tag", required=True)
+    a = ap.parse_args()
+
+    specs = json.loads((SPEC_DIR / f"specs_{a.lang}_{a.degree}.json").read_text(encoding="utf-8"))
+    grains = [g.strip() for g in a.grains.split(",") if g.strip()] if a.degree == "D2" else [""]
+    RP.OUT.mkdir(parents=True, exist_ok=True)
+    slug = a.model.replace("/", "_")
+    for grain in grains:
+        prompt = build_prompt(a.degree, grain, specs, a.lang)
+        label = a.degree + (grain if grain else "")
+        print(f"[{label}/{a.lang}] backend={a.backend} model={a.model} n={a.n} prompt_chars={len(prompt)}", flush=True)
+        t0 = time.time()
+        if a.backend == "vllm-http":
+            gens = RP.gen_vllm(a.endpoint, a.model, prompt, a.n, a.temperature, a.max_tokens)
+            ormeta = None
+        elif a.backend == "openrouter":
+            gens, ormeta = RP.gen_openrouter(a.model, prompt, a.n, a.temperature, a.max_tokens, a.provider)
+        else:
+            gens = RP.gen_anthropic(a.model, prompt, a.n, a.temperature, a.max_tokens); ormeta = None
+        dt = round(time.time() - t0, 1)
+        fn = RP.OUT / f"production_{label}_{a.tag}_{slug}.json"
+        fn.write_text(json.dumps({
+            "model": a.model, "backend": a.backend, "degree": a.degree, "grain": grain, "lang": a.lang,
+            "n": a.n, "temperature": a.temperature, "max_tokens": a.max_tokens, "provider_routing": ormeta,
+            "source": specs["source"], "prompt": prompt, "elapsed_s": dt,
+            "gens": [{"i": k, "text": g} for k, g in enumerate(gens)],
+        }, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"[{label}/{a.lang}] wrote {fn.name}: {len(gens)} candidates in {dt}s", flush=True)
+        if gens:
+            print(f"  e.g. ({len(gens[0].split())} w): {gens[0][:200]}", flush=True)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,122 @@
+[
+ {
+  "id": "A1",
+  "frame": "calque",
+  "coh": "yes",
+  "src": "Sapevo che nel finale avremmo ridotto lo svantaggio.",
+  "cand": "Ero certo che nell'ultimo quarto avremmo recuperato il distacco.",
+  "f_struct": 0.0,
+  "f_judge": 0.7,
+  "coh_jdg": 1.0
+ },
+ {
+  "id": "A2",
+  "frame": "divergent",
+  "coh": "yes",
+  "src": "Sapevo che nel finale avremmo ridotto lo svantaggio.",
+  "cand": "Sapevo che entro venerdì avrei consegnato la traduzione.",
+  "f_struct": 0.118,
+  "f_judge": 0.0,
+  "coh_jdg": 1.0
+ },
+ {
+  "id": "A3",
+  "frame": "divergent",
+  "coh": "no",
+  "src": "Sapevo che nel finale avremmo ridotto lo svantaggio.",
+  "cand": "Sapevo che nel cassetto avremmo arrugginito la domenica.",
+  "f_struct": 0.111,
+  "f_judge": 0.0,
+  "coh_jdg": 0.0
+ },
+ {
+  "id": "A4",
+  "frame": "calque",
+  "coh": "yes",
+  "src": "Sapevo che nel finale avremmo ridotto lo svantaggio.",
+  "cand": "Sapevo che nel finale avremmo ridotto lo stipendio.",
+  "f_struct": 0.778,
+  "f_judge": 0.0,
+  "coh_jdg": 0.0
+ },
+ {
+  "id": "B1",
+  "frame": "calque",
+  "coh": "yes",
+  "src": "E anche nella lontana città gli capitava di svegliarsi in piena notte con inquietudine.",
+  "cand": "E perfino nella distante metropoli le accadeva di destarsi nel cuore della notte con angoscia.",
+  "f_struct": 0.0,
+  "f_judge": 0.85,
+  "coh_jdg": 1.0
+ },
+ {
+  "id": "B2",
+  "frame": "divergent",
+  "coh": "yes",
+  "src": "E anche nella lontana città gli capitava di svegliarsi in piena notte con inquietudine.",
+  "cand": "E anche nelle prime settimane di scuola gli capitava di annoiarsi durante le lezioni con insofferenza.",
+  "f_struct": 0.176,
+  "f_judge": 0.1,
+  "coh_jdg": 1.0
+ },
+ {
+  "id": "B3",
+  "frame": "divergent",
+  "coh": "no",
+  "src": "E anche nella lontana città gli capitava di svegliarsi in piena notte con inquietudine.",
+  "cand": "E anche nella remota equazione gli capitava di fiorire in piena estate con il triangolo.",
+  "f_struct": 0.188,
+  "f_judge": 0.0,
+  "coh_jdg": 0.0
+ },
+ {
+  "id": "B4",
+  "frame": "calque",
+  "coh": "yes",
+  "src": "E anche nella lontana città gli capitava di svegliarsi in piena notte con inquietudine.",
+  "cand": "E anche nella lontana città gli capitava di svegliarsi in piena notte con stanchezza.",
+  "f_struct": 0.875,
+  "f_judge": 0.2,
+  "coh_jdg": 0.0
+ },
+ {
+  "id": "C1",
+  "frame": "calque",
+  "coh": "yes",
+  "src": "Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno parti troppo piccole.",
+  "cand": "Ad esempio, per i neonati i giochi adatti sono quelli privi di componenti minuscoli.",
+  "f_struct": 0.194,
+  "f_judge": 0.7,
+  "coh_jdg": 1.0
+ },
+ {
+  "id": "C2",
+  "frame": "divergent",
+  "coh": "yes",
+  "src": "Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno parti troppo piccole.",
+  "cand": "Per esempio, per i lettori esperti i romanzi consigliati sono quelli che non hanno trame troppo lineari.",
+  "f_struct": 0.412,
+  "f_judge": 0.1,
+  "coh_jdg": 1.0
+ },
+ {
+  "id": "C3",
+  "frame": "divergent",
+  "coh": "no",
+  "src": "Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno parti troppo piccole.",
+  "cand": "Per esempio, per i bambini piccoli i tuoni sicuri sono quelli che non hanno parti troppo gentili.",
+  "f_struct": 0.706,
+  "f_judge": 0.0,
+  "coh_jdg": 0.0
+ },
+ {
+  "id": "C4",
+  "frame": "calque",
+  "coh": "yes",
+  "src": "Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno parti troppo piccole.",
+  "cand": "Per esempio, per i bambini piccoli i giocattoli sicuri sono quelli che non hanno spigoli troppo taglienti.",
+  "f_struct": 0.824,
+  "f_judge": 0.2,
+  "coh_jdg": 1.0
+ }
+]

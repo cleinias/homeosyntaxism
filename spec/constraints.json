@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "derived_from": "notebooks/Manzoni_Intertextual_Mapping.ipynb (authoritative authoring location)",
+    "exported": "2026-06-11",
+    "status": "C-P8-01 + correspondence entry 8 revised: 'al giorno d'oggi' NO LONGER verbatim-mandated (Manzonian fingerprint, embargoed); filler = functionally equivalent now-deixis",
+    "note": "Cluster runners (scripts/run_manzoni.py) read these files; re-export after any notebook revision."
+  },
+  "constraints": [
+    {
+      "id": "C-P1-01",
+      "pattern_id": "P_1",
+      "property": "Antiphrastic micro-ensemble",
+      "specification": "The text contains >= 2 clauses predicating benevolent/charitable/pedagogical verbs (the domain's institutional vocabulary: accogliere, soccorrere, mettere in sicurezza, ...) of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Verifiable by listing the predications and checking the absence of evaluative lexemes in their span.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P2-01",
+      "pattern_id": "P_2",
+      "property": "Embedded Italian metric verses",
+      "specification": "The opening syntagm of the passage scans as a canonical Italian verse (novenario preferred, mirroring 'Quel ramo del lago di Como'); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P3-01",
+      "pattern_id": "P_3",
+      "property": "Conjunctive binary coordination",
+      "specification": "The text contains >= 3 two-member coordinations 'X e Y' whose members share a lexical field (seascape/movement), with parallel syntactic shape. Verifiable by enumeration.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P4-01",
+      "pattern_id": "P_4",
+      "property": "Chiasmatic inversion of a recurring pair (presupposes C-P3-01)",
+      "specification": "At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P5-01",
+      "pattern_id": "P_5",
+      "property": "Mare duality — alternating contraction/dilation lexicon, full arc",
+      "specification": "Lexical fields alternate over the single referent 'il mare': dilation (mare aperto, alto mare, distendersi, allargarsi, acque libere/internazionali, orizzonte, golfi, seni) vs contraction (stretto, canale, braccio di mare, ristringersi, rotta, corridoio, zona SAR, acque territoriali). The passage runs the full arc dilation -> contraction -> re-dilation. Verifiable by tagging each occurrence against the two word lists and checking the arc order.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P5-02",
+      "pattern_id": "P_5",
+      "property": "Mare duality — juridical naming pivot",
+      "specification": "The text contains >= 1 pivot sentence in which the same water changes juridical name/state across an invisible boundary, on the model of 'il lago cessa, e l'Adda rincomincia' (e.g. acque internazionali -> zona SAR -> acque territoriali), the boundary made perceptible only by an external marker (chart, coordinates). Verifiable by locating the cessation/recommencement predicates.",
+      "priority": "SHOULD"
+    },
+    {
+      "id": "C-P6-01",
+      "pattern_id": "P_6",
+      "property": "Specular doubling on a single head",
+      "specification": "The text contains >= 1 syntactic frame with paired predications on one landscape element: a direct-perception predicate and a reflection/representation predicate with an inversion or transformation marker (optical: the horizon doubling sea and sky; or institutional: radar track / footage returning the scene transfigured), with the mirror named in the text. Verifiable by parsing the coordinate predications.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P7-01",
+      "pattern_id": "P_7",
+      "property": "Lucid waviness (ondeggiamento) at the SYNTACTIC level — GLOBAL constraint",
+      "specification": "Sustained across the entire passage: the periodic syntax UNDULATES rather than merely winds — successive waves of expansion and contraction, with clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 period of >= 8 clauses — while hierarchy stays fully legible: no anacoluthon, exact lexicon, recoverable syntactic tree. The syntactic shape adheres to the target referent: the sea's wave-motion, not the river's meander. Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility. (Same figure as C-P7-02, one level down.)",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P7-02",
+      "pattern_id": "P_7",
+      "property": "Self-referential formula with PROLEPTIC function — NARRATIVE level",
+      "specification": "The text contains 'ondeggiamento' (or a form of 'ondeggiare') placed so that it (i) denotes the waves' movement, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures the diegetic waviness — the to-and-fro of the crossing and of the migrants' fate that the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). Verifiable: lexeme located mechanically; readings (ii) and (iii) assessed in the human audit. (Same figure as C-P7-01, one level up.)",
+      "priority": "SHOULD"
+    },
+    {
+      "id": "C-P8-01",
+      "pattern_id": "P_8",
+      "property": "Historicized-present puncture",
+      "specification": "The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a now-deixis FUNCTIONALLY equivalent to 'al giorno d'oggi' but NOT verbatim (the locution is a Manzonian fingerprint — revised 2026-06-11; e.g. oggigiorno, ai giorni nostri, oggi come oggi) governing a present-tense verb of ongoing change. Verifiable by locating the adverb and checking the tense environment.",
+      "priority": "MUST"
+    }
+  ]
+}

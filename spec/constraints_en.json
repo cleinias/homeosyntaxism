@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "derived_from": "constraints.json (Italian) + Manzoni_English_Track_Plan.md §2 portability table",
+    "status": "DRAFT scaffold (Claude) — a PRESENTATION DERIVATIVE, not a second Phase 1. To be calibrated by the authors against Moore's incipit (§1bis translation audit): confirm each pattern is realized in Moore, set the C-P7-01 depth threshold from Moore's actual periods, fix the C-P7-02 formula word, confirm the C-P2 decision.",
+    "language": "en",
+    "source_translation": "Michael F. Moore, The Betrothed (Modern Library, 2022) — incipit excerpt; in copyright, not committed",
+    "schema_version": "1.2 (en derivative)",
+    "open_decisions": [
+      "C-P2-01: RESOLVED — re-derived as iambic pentameter (plan option b); NOT a translation of the Italian meter. The non-portability of the Italian syllabic meter is reported as the finding.",
+      "C-P7-02: RESOLVED — English formula word = 'swaying' (forms of 'to sway'); does the style/referent/fate triple duty of 'ondeggiamento'.",
+      "C-P7-01: max-depth threshold STILL OPEN — to be set to Moore's measured value in the §1bis audit (English tolerates less subordination; Moore broke the 9 Italian periods into 23 short sentences)."
+    ]
+  },
+  "constraints": [
+    {
+      "id": "C-P1-01",
+      "pattern_id": "P_1",
+      "property": "Antiphrastic micro-ensemble",
+      "specification": "The text contains >= 2 clauses predicating benevolent/charitable/administrative verbs (the domain's institutional vocabulary: to receive, to rescue, to process, to safeguard, to assist, to return voluntarily, to cooperate) of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Verifiable by listing the predications and checking the absence of evaluative lexemes in their span.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P2-01",
+      "pattern_id": "P_2",
+      "property": "Embedded English metric verse (RE-DERIVED, not translated)",
+      "specification": "Per the plan's option (b): the Italian syllabic meter does not port, so substitute the accentual-syllabic equivalent. The opening syntagm scans as iambic pentameter, and the passage embeds >= 2 blank-verse (unrhymed iambic-pentameter) lines inside descriptive sentences, doing the same iconic-pacing work below conscious scansion. Tag as RE-DERIVED. Verifiable by scansion. NB: the non-portability of the Italian meter is itself reported as a finding (option (a)).",
+      "priority": "SHOULD"
+    },
+    {
+      "id": "C-P3-01",
+      "pattern_id": "P_3",
+      "property": "Conjunctive binary coordination",
+      "specification": "The text contains >= 3 two-member coordinations 'X and Y' whose members share a lexical field (seascape/movement; e.g. 'in bays and inlets', 'swelling and subsiding'), with parallel syntactic shape. Verifiable by enumeration.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P4-01",
+      "pattern_id": "P_4",
+      "property": "Chiasmatic inversion of a recurring pair (presupposes C-P3-01)",
+      "specification": "At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P5-01",
+      "pattern_id": "P_5",
+      "property": "Sea duality — alternating contraction/dilation lexicon, full arc",
+      "specification": "Lexical fields alternate over the single referent 'the sea': dilation (open sea, high seas, widen, spread, expanse, gulf, to distend) vs contraction (strait, channel, narrows, route, corridor, SAR zone, territorial waters, to narrow). The passage runs the full arc dilation -> contraction -> re-dilation. Verifiable by tagging each occurrence against the two word lists and checking the arc order.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P5-02",
+      "pattern_id": "P_5",
+      "property": "Sea duality — juridical naming pivot",
+      "specification": "The text contains >= 1 pivot sentence in which the same water changes juridical name/state across an invisible boundary (e.g. international waters -> SAR zone -> territorial waters), the boundary made perceptible only by an external marker (chart, coordinates). Verifiable by locating the cessation/recommencement predicates.",
+      "priority": "SHOULD"
+    },
+    {
+      "id": "C-P6-01",
+      "pattern_id": "P_6",
+      "property": "Specular doubling on a single head",
+      "specification": "The text contains >= 1 syntactic frame with paired predications on one landscape element: a direct-perception predicate and a reflection/representation predicate with an inversion or transformation marker (optical: the horizon doubling sea and sky; or institutional: a radar track / footage returning the scene transfigured), with the mirror named in the text. Verifiable by parsing the coordinate predications.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P7-01",
+      "pattern_id": "P_7",
+      "property": "Lucid waviness at the SYNTACTIC level — GLOBAL constraint",
+      "specification": "Sustained across the passage: the periodic syntax UNDULATES — successive waves of expansion and contraction, clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 long multi-clause period — while hierarchy stays fully legible (no anacoluthon, recoverable syntactic tree). DEPTH THRESHOLD to be set from Moore's measured incipit (English tolerates less subordination than Italian; the Italian used depth 8). Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility.",
+      "priority": "MUST"
+    },
+    {
+      "id": "C-P7-02",
+      "pattern_id": "P_7",
+      "property": "Self-referential formula with PROLEPTIC function — NARRATIVE level",
+      "specification": "The text contains the English formula word 'swaying' (or a form of 'to sway') placed so that it (i) denotes the waves' movement, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures the to-and-fro of the crossing and of the migrants' fate. Verifiable: lexeme located mechanically; readings (ii) and (iii) assessed in the human audit.",
+      "priority": "SHOULD"
+    },
+    {
+      "id": "C-P8-01",
+      "pattern_id": "P_8",
+      "property": "Historicized-present puncture",
+      "specification": "The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a now-deixis ('to this day', 'nowadays', 'these days') governing a present-tense verb of ongoing change. Verifiable by locating the adverb and checking the tense environment.",
+      "priority": "MUST"
+    }
+  ]
+}

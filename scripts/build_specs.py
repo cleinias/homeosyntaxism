@@ -1,0 +1,193 @@
+#!/usr/bin/env python3
+"""build_specs.py — generalized D_n spec extractor (supersedes build_d2_specs.py).
+
+Emits a source-blind generation spec at any degree of the homeomorphism lattice. The degree
+structure is a PARTIAL ORDER, not a chain: the full tree D0 is the top, and S and D1 are two
+INDEPENDENT forgetful projections of it (S drops the arcs, D1 drops the order), so S and D1 are
+incomparable — that independence keeps the degree axis from collapsing into a single "amount of
+form" scale (and keeps it orthogonal to the constraint-load axis).
+  D0  the full ordered dependency tree : POS + linear order + relations (the top).
+  S   surface : the ordered POS sequence (forget the arcs — the tree's leaves; the calque end).
+  D1            : the order-free dependency structure (forget the order; head-POS —rel→ dep-POS).
+  D2            : clause architecture — two grains: (a) inventory, (c) nesting schema.
+  D3            : the hypotaxis profile (clause count + max depth) — the loosest rung.
+Plus the rubric (constraints), the functional brief, and the source-word embargo (all
+degree-independent). One parse; every rung is a projection of it (tree_metric metrics
+mirror these: s0_pos↔S, d1_triple↔D1, d2_clause↔D2, depth↔D3).
+
+  python scripts/build_specs.py --lang it --degree D2   # → spec/specs_it_D2.json (== legacy d2_specs.json)
+  python scripts/build_specs.py --lang en --degree S    # → spec/specs_en_S.json
+Run with the Atlas venv python (Stanza).
+"""
+import argparse
+import json
+import re
+import sys
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import tree_metric as TM           # noqa: E402
+import run_production as RP         # noqa: E402 (Italian INCIPIT, periods)
+from overlap_metrics import tokens, content_words  # noqa: E402
+
+SPEC = ROOT / "reproducibility" / "manzoni-mapping" / "spec"
+EN_SOURCE = ROOT / "Texts" / "Manzoni" / "incipit_en_colquhoun.txt"
+WHITELIST = {"it": {"mare", "acqua", "acque"}, "en": {"sea", "water", "waters"}}
+REDACTIONS = [
+    (" (novenario preferred, mirroring 'Quel ramo del lago di Como')",
+     " (novenario, settenario, or endecasillabo)"),
+    (", on the model of 'il lago cessa, e l'Adda rincomincia'", ""),
+]
+CONTENT = {"NOUN", "VERB", "ADJ", "ADV", "PROPN"}
+CLAUSE_DEPREL = {"root", "csubj", "ccomp", "xcomp", "advcl", "acl", "acl:relcl", "parataxis"}
+LABEL = {"root": "main clause", "acl": "relative/adnominal clause", "acl:relcl": "relative clause",
+         "advcl": "adverbial clause", "ccomp": "finite complement clause",
+         "xcomp": "open complement (infinitive)", "csubj": "clausal subject",
+         "conj": "coordinated clause", "parataxis": "parataxis"}
+
+
+def is_clause_head(t):
+    return t["deprel"] == "root" or t["deprel"] in CLAUSE_DEPREL or (t["deprel"] == "conj" and t["upos"] == "VERB")
+
+
+# ---------- per-degree spec emitters (source-blind) ----------
+def emit_S(tok):
+    """S (surface): the ordered part-of-speech sequence — forget the arcs (the tree's leaves)."""
+    return " ".join(t["upos"] for t in tok if t["upos"] != "PUNCT")
+
+
+def emit_D0(tok):
+    """D0 (the top): the full ordered dependency tree — at each position, the POS and the arc
+    (relation -> head position). Holds POS AND order AND relations; S forgets the arcs and D1
+    forgets the order, so each is an independent projection of this."""
+    nonp = [t for t in tok if t["upos"] != "PUNCT"]
+    pos = {t["i"]: k for k, t in enumerate(nonp, 1)}
+    return "; ".join(f"[{k}]{t['upos']} {t['deprel']}->[{pos.get(t['head'], 0)}]"
+                     for k, t in enumerate(nonp, 1))
+
+
+def emit_D1(tok):
+    """Order-free dependency structure: the multiset of (head-POS —relation→ dep-POS) triples."""
+    id2 = {t["i"]: t for t in tok}
+    c = Counter()
+    for t in tok:
+        if t["upos"] == "PUNCT":
+            continue
+        h = id2[t["head"]]["upos"] if (t["head"] >= 0 and t["head"] in id2) else "ROOT"
+        c[(h, t["deprel"], t["upos"])] += 1
+    return "; ".join(f"{n}x {h}-{r}->{d}" for (h, r, d), n in c.most_common())
+
+
+def emit_D2_inventory(tok):
+    heads = [t for t in tok if is_clause_head(t)]
+    cnt = Counter(LABEL.get("acl:relcl" if t["deprel"] == "acl:relcl" else t["deprel"], t["deprel"]) for t in heads)
+    inv = "; ".join(f"{n} {lab}{'s' if n > 1 and not lab.endswith('clause') else ''}" for lab, n in cnt.most_common())
+    return f"{inv}; subordination nested up to depth {TM._depth(tok)}."
+
+
+def emit_D2_schema(tok):
+    id2 = {t["i"]: t for t in tok}
+    heads = [t for t in tok if is_clause_head(t)]
+    hids = {t["i"] for t in heads}
+    children = {t["i"]: [] for t in heads}
+    root = None
+    for t in heads:
+        if t["deprel"] == "root":
+            root = t; continue
+        p = t["head"]
+        while p in id2 and p not in hids:
+            p = id2[p]["head"]
+        (children[p] if p in children else children.get(root["i"], [])).append(t["i"])
+    for k in children:
+        children[k].sort()
+    lines = []
+
+    def lab(t):
+        return LABEL.get("acl:relcl" if t["deprel"] == "acl:relcl" else t["deprel"], t["deprel"])
+
+    def walk(i, d):
+        lines.append("  " * (d + 1) + "- " + lab(id2[i]))
+        for ch in children.get(i, []):
+            walk(ch, d + 1)
+    if root:
+        walk(root["i"], 0)
+    return "\n".join(lines)
+
+
+def emit_D3(tok):
+    return f"{len([t for t in tok if is_clause_head(t)])} clauses total; max subordination depth {TM._depth(tok)}."
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--lang", default="it", choices=["it", "en"])
+    ap.add_argument("--degree", default="D2", choices=["S", "D0", "D1", "D2", "D3"])
+    a = ap.parse_args()
+    lang, deg = a.lang, a.degree
+
+    if lang == "it":
+        source = RP.INCIPIT.strip(); cfile, redact, brief_src = "constraints.json", True, None
+    else:
+        source = EN_SOURCE.read_text(encoding="utf-8").strip()
+        cfile, redact, brief_src = "constraints_en.json", False, "EN"
+
+    periods = re.split(r"(?<=[.])\s+(?=[A-Z])", source)
+    out_periods, content_lemmas = [], set()
+    for k, p in enumerate(periods, 1):
+        tok = TM.parse(p, lang=lang)
+        content_lemmas |= {t["lemma"] for t in tok if t["upos"] in CONTENT}
+        block = {"k": k, "words": len(p.split())}
+        if deg == "S":
+            block["spec"] = f"Period {k} (~{len(p.split())} words) POS sequence: " + emit_S(tok)
+        elif deg == "D0":
+            block["spec"] = (f"Period {k} (~{len(p.split())} words) ordered dependency tree "
+                             f"([pos] relation->[head position]): " + emit_D0(tok))
+        elif deg == "D1":
+            block["spec"] = f"Period {k} (~{len(p.split())} words) dependency triples (any order): " + emit_D1(tok)
+        elif deg == "D2":
+            block["inventory"] = f"Period {k} (about {len(p.split())} words): " + emit_D2_inventory(tok)
+            block["schema"] = f"Period {k} (about {len(p.split())} words):\n" + emit_D2_schema(tok)
+        else:  # D3
+            block["spec"] = f"Period {k} (~{len(p.split())} words): " + emit_D3(tok)
+        out_periods.append(block)
+
+    constraints = json.loads((SPEC / cfile).read_text(encoding="utf-8"))["constraints"]
+    if redact:
+        for c in constraints:
+            for old, new in REDACTIONS:
+                c["specification"] = c["specification"].replace(old, new)
+    constraint_block = "\n".join(
+        f"  [{c['id']}] ({c['priority']}) from {c['pattern_id']}: {c['property']}\n    Specification: {c['specification']}"
+        for c in constraints)
+
+    if brief_src is None:
+        corr = json.loads((SPEC / "correspondence.json").read_text(encoding="utf-8"))["correspondence_table"]
+        brief = "\n".join("  - " + re.sub(r"\s*\((DECIDED|decided)[^)]*\)", "", m["target_element"]) for m in corr)
+    else:
+        # English functional brief (kept identical to build_d2_specs' BRIEF_EN)
+        brief = "\n".join("  - " + s for s in [
+            "the strait of water between two shores: the Sicilian Channel, between the North African coast and the island of Lampedusa",
+            "the sea's juridical zones: international waters, the SAR search-and-rescue zones, territorial waters",
+            "the routes and the boats of the migrants",
+            "the lighthouse, the rocks and the inlets of the island",
+            "the vessels and personnel of rescue and control (Coast Guard, Finance Guard)",
+            "the first-reception center on the island",
+            "a fisherman of the island"])
+
+    embargo = (sorted(w for w in content_words(tokens(source)) if w not in WHITELIST["it"]) if lang == "it"
+               else sorted(w for w in content_lemmas if w not in WHITELIST["en"]))
+
+    spec = {"lang": lang, "degree": deg, "source": source, "n_periods": len(periods),
+            "periods": out_periods, "embargo": embargo, "constraint_block": constraint_block, "brief": brief}
+    out = SPEC / f"specs_{lang}_{deg}.json"
+    out.write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"wrote spec/{out.name}: lang={lang} degree={deg}, {len(periods)} periods, "
+          f"{len(embargo)} embargo words, {len(constraints)} constraints")
+    print("\n=== degree spec, period 1 ===")
+    print(out_periods[0].get("spec") or out_periods[0]["inventory"])
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,23 @@
+# Reproducibility environment for the homeosyntactic-deformation pipeline.
+# Python 3.12 (developed on 3.12.7). Versions pinned to what the runs actually used
+# (captured 2026-06-22; the analysis machine had been borrowing the Oulipo-Atlas venv).
+# Install:  python3.12 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
+
+# --- Core: required for the Phase-3 pipeline ---
+# run_d2.py, build_d2_specs.py, score_production.py, sem_metrics.py, tree_metric.py
+stanza==1.12.2          # Stanford UD parser; downloads it/en models on first use (needs internet once)
+
+# Model access uses the Python standard library (urllib) — no SDK required.
+# API keys are read from a local .env (NOT committed):
+#   ANTHROPIC_API_KEY   — Claude generation + the frame/coherence LLM-judges
+#   OPENROUTER_API_KEY  — open-weight models (Qwen, …) via OpenRouter, provider/fp8-pinned
+python-dotenv==1.0.1    # optional convenience; the scripts also parse .env directly
+
+# --- Optional: broader reproducibility (not needed for the core D_n pipeline) ---
+numpy==2.4.4                    # aggregation in some analysis/scoring scripts
+gensim==4.4.0                   # loads fastText cc.it.300 for the domain-distance metric
+sentence-transformers==5.5.0   # the DISCARDED MPNet frame metric (kept to reproduce the negative result)
+
+# --- Self-hosting (cluster only; NOT a pip install on the analysis machine) ---
+# Large open-weight FP8 runs use vLLM >= 0.21 on H100s (see scripts/*_aces.sbatch),
+# with VLLM_USE_DEEP_GEMM=0 and TRITON/INDUCTOR/XDG caches redirected off $HOME.
