@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import run_production as RP  # noqa: E402
 
-SPEC_DIR = ROOT / "reproducibility" / "manzoni-mapping" / "spec"
+SPEC_DIR = ROOT / "spec"
 LANG_NAME = {"it": "Italian", "en": "English"}
 MODERN = {"it": "Write MODERN literary Italian (no apocope, no archaic elisions).",
           "en": "Write MODERN literary English."}
@@ -84,7 +84,7 @@ FORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be inst
 material (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):
 {specs['constraint_block']}
 
-TARGET DOMAIN --- the border/migration landscape of the central Mediterranean (in your own words):
+TARGET DOMAIN --- {specs['domain']} (in your own words):
 {specs['brief']}
 
 LEXICAL EMBARGO (absolute): none of these source content words may appear, in any inflected form:

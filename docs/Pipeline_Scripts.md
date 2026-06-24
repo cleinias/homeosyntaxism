@@ -6,20 +6,23 @@ pipeline, end to end. For each: what it does · what it **consumes** · what it 
 
 The rubric (the 8 patterns) is **produced by `build_rubric.py`** (Stage 0) from the human
 workbook `Phase_1_Workbook_Manzoni.md`, so it is reproducible and editable post‑clone. The
-downstream scripts consume the emitted `spec/patterns.json` / `constraints.json` /
-`correspondence.json` (see `Data_Files.md`).
+downstream scripts consume the emitted `spec/patterns.json` / `constraints.json` (see
+`Data_Files.md`). The transposition **domain** is separate: it is authored in
+`spec/brief_<lang>.json` (see `Target_Domain_Brief.md`).
 
 ## Pipeline at a glance
 ```
- Phase_1_Workbook_Manzoni.md ──► build_rubric.py ──► spec/{patterns,constraints,correspondence}.json
- source text ──────────────────────────────────────────────────┐
+ Phase_1_Workbook_Manzoni.md ──► build_rubric.py ──► spec/{patterns,constraints,constraints_en}.json
+ spec/brief_<lang>.json (the domain) ───────────────────────────┐
+ source text ───────────────────────────────────────────────────┤
                                                                 ▼
- build_d2_specs.py  ──►  spec/d2_specs{,_en}.json      (parse + render rubric)
+ build_specs.py --lang --degree  ──►  spec/specs_<lang>_<degree>.json   (parse + render rubric + brief)
                            ▼
- run_d2.py (+run_production.py)  ──►  results/production_d2{a,c}_*.json   (generate)
+ run_homeo.py (+run_production.py)  ──►  results/production_<label>_*.json   (generate)
                            ▼
  score_production.py  ──►  results/production_scored_*.json              (3-axis gate)
 
+ brief_to_tex.py  ──►  a LaTeX rendering of the brief (slides / paper)
  sem_metrics.py  ──►  metric_validation_scored_*.json   (one-time: validate the judges)
  monitor.py / *_aces.sbatch  : self-hosted serving + output retrieval (ACES)
  tree_metric.py, overlap_metrics.py : libraries (no standalone I/O)
@@ -30,44 +33,46 @@ downstream scripts consume the emitted `spec/patterns.json` / `constraints.json`
 ## Stage 0 — build the rubric (reproducible & editable)
 
 ### `build_rubric.py`
-The single editable source of the rubric: holds the 8 patterns + the verifiable constraints +
-the source→target correspondence as well‑commented Python (each item tied to a claim in
-`Phase_1_Workbook_Manzoni.md`), emits the three spec JSONs, and schema‑validates them (legal
-field values; every `constraint.pattern_id` resolves to a pattern; etc.). Edit this (or the
-workbook) and re‑run to re‑derive or modify the rubric. (Extracted from the authoring notebook;
-the notebook itself stays private.)
+The single editable source of the rubric: holds the 8 patterns + the verifiable constraints
+as well‑commented Python (each item tied to a claim in `Phase_1_Workbook_Manzoni.md`), emits
+the spec JSONs, and schema‑validates them (legal field values; every `constraint.pattern_id`
+resolves to a pattern; etc.). Edit this (or the workbook) and re‑run to re‑derive or modify the
+rubric. (Extracted from the authoring notebook; the notebook itself stays private. The
+transposition **domain** is *not* here — it lives in `spec/brief_<lang>.json`.)
 - **Consumes:** nothing at runtime (the rubric lives in the file); `Phase_1_Workbook_Manzoni.md` is the human reference it transcribes.
-- **Produces:** `spec/patterns.json`, `spec/constraints.json`, `spec/constraints_en.json`, `spec/correspondence.json`.
+- **Produces:** `spec/patterns.json`, `spec/constraints.json`, `spec/constraints_en.json`.
 
-## Stage 1 — build the D₂ specification
+## Stage 1 — build the degree specification
 
-### `build_d2_specs.py`
-Parses the source incipit (Stanza UD) and, per period, extracts the D₂ clause
-architecture at two grains — **(a)** clause‑type inventory + hypotaxis depth, **(c)**
-clause‑nesting schema — then renders the rubric (constraints + functional brief) and the
-source‑word embargo into one self‑contained spec. Bilingual via `--lang it|en`.
-- **Consumes:** the source text (Italian incipit embedded in `run_production.py`; English from `Texts/Manzoni/incipit_en_*.txt`); `spec/constraints.json` / `constraints_en.json`; `spec/correspondence.json`.
-- **Produces:** `spec/d2_specs.json` (it) or `spec/d2_specs_en.json` (en).
+### `build_specs.py`
+Parses the source incipit (Stanza UD) and, per period, emits the form target at the chosen
+**degree** (`--degree S|D0|D1|D2|D3`); D2 carries two grains — **(a)** clause‑type inventory +
+hypotaxis depth, **(c)** clause‑nesting schema. It then folds in the rubric (constraint block),
+the **brief** (domain + elements from `spec/brief_<lang>.json`), and the source‑word embargo,
+into one self‑contained spec. Bilingual via `--lang it|en`; **errors out if the brief's `lang`
+field does not match `--lang`**.
+- **Consumes:** the source text (Italian incipit embedded in `run_production.py`; English from `texts/incipit_en.txt`, which you supply); `spec/constraints.json` / `constraints_en.json`; `spec/brief_<lang>.json`.
+- **Produces:** `spec/specs_<lang>_<degree>.json`.
 - **Imports:** `tree_metric`, `run_production`, `overlap_metrics`.
 
 ## Stage 2 — generate
 
-### `run_d2.py`
-Builds the constrained‑homeomorphism prompt from a `d2_specs` file (D₂ target +
-patterns + brief + embargo + the threefold instruction) and generates N oversampled
-candidates per grain, **source‑blind**. Backends: `vllm-http` (self‑hosted), `anthropic`
-(Opus), `openrouter` (open‑weight, provider/fp8‑pinned). `--lang`, `--grains a,c`,
-`--n`, `--provider`.
-- **Consumes:** `spec/d2_specs{,_en}.json`.
-- **Produces:** `results/production_d2{a,c}_<tag>_<model>.json`.
+### `run_homeo.py`
+Builds the constrained‑homeomorphism prompt from a `specs_<lang>_<degree>.json` file (the
+degree's form target + patterns + brief + embargo + the threefold instruction) and generates N
+oversampled candidates, **source‑blind**. For D2 it does one run per grain. Backends:
+`vllm-http` (self‑hosted), `anthropic` (Opus), `openrouter` (open‑weight, provider/fp8‑pinned).
+`--lang`, `--degree`, `--grains a,c`, `--n`, `--provider`.
+- **Consumes:** `spec/specs_<lang>_<degree>.json`.
+- **Produces:** `results/production_<label>_<tag>_<model>.json` (`label` = degree + grain, e.g. `d2a`).
 - **Imports:** `run_production`.
 
 ### `run_production.py`
-Backend library for `run_d2`: `gen_vllm` (OpenAI‑compatible, n‑sampling), `gen_anthropic`
+Backend library for `run_homeo`: `gen_vllm` (OpenAI‑compatible, n‑sampling), `gen_anthropic`
 (omits the temperature param for opus‑4‑8), `gen_openrouter` (pins
 `provider:{order,quantizations:["fp8"],allow_fallbacks:false}`, records the resolved
-provider). Also embeds the **public‑domain Italian 1840 incipit** and the border/migration
-domain brief, and reads API keys from a local `.env`.
+provider). Also embeds the **public‑domain Italian 1840 incipit** and reads API keys from a
+local `.env`.
 - **Consumes:** `.env` (`ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`); a vLLM endpoint if self‑hosting.
 - **Produces:** nothing on its own (library); when run standalone, `results/production_<tag>_<model>.json`.
 
@@ -78,9 +83,18 @@ The **three‑axis gate** = the operational definition of "constrained homeomorp
 For every candidate computes clause‑F1 + depth_gap + s0_pos (axis 1, D₂), content‑lemma
 Jaccard + frame‑divergence (axis 2), coherence (axis 3), a composite, ranks them, and
 emits the best. Auto‑detects language from each file's `lang` field.
-- **Consumes:** `results/production_d2{a,c}_*.json`.
-- **Produces:** `results/production_scored_d2{a,c}_*.json` (+ printed ranked table).
+- **Consumes:** `results/production_*.json` (any degree/grain).
+- **Produces:** `results/production_scored_*.json` (+ printed ranked table).
 - **Imports:** `tree_metric`, `sem_metrics`.
+
+## Rendering (optional)
+
+### `brief_to_tex.py`
+Renders `spec/brief_<lang>.json` as a self‑standing LaTeX document (the domain header + the
+scene‑world elements as a bulleted brief), for slides / the paper. Compile with a
+Unicode‑native engine (`lualatex` / `xelatex` — the brief carries `—`, `'`, `°`).
+- **Consumes:** `spec/brief_<lang>.json`.
+- **Produces:** LaTeX on stdout (or `--out FILE`).
 
 ## Metric validation (one‑time)
 
@@ -88,8 +102,8 @@ emits the best. Auto‑detects language from each file's `lang` field.
 Builds and **validates** the two judge‑based metrics (frame‑divergence, coherence) used
 by the gate, against a hand‑labelled gold set — and is the home of the judge functions
 (`frame_judge_sim`, `coh_judge`; Italian/English prompts) that `score_production` calls.
-- **Consumes:** `reproducibility/graded-corpus/metric_validation.tsv`; `.env`.
-- **Produces:** `metric_validation_scored_<judge-model>.json` (+ a separation summary).
+- **Consumes:** `results/metric_validation.tsv`; `.env`.
+- **Produces:** `results/metric_validation_scored_<judge-model>.json` (+ a separation summary).
 - **Imports:** `tree_metric`.
 
 ## Libraries (no standalone I/O)
@@ -110,18 +124,19 @@ Light regex tokenizer + content‑word extractor, used to build the source‑wor
 Generic ACES job watcher: `python monitor.py <job_id> <tag> <model_slug>` — polls the
 queue and pulls the two grain output files back when the job finishes.
 - **Consumes:** a SLURM job id (over SSH).
-- **Produces:** local copies of `results/production_d2{a,c}_<tag>_<slug>.json`.
+- **Produces:** local copies of `results/production_<label>_<tag>_<slug>.json`.
 
 ### `qwen_aces.sbatch`, `maverick_aces.sbatch`
-SLURM recipes to serve a large open‑weight model at FP8 on H100s (vLLM) and run `run_d2`
+SLURM recipes to serve a large open‑weight model at FP8 on H100s (vLLM) and run the generator
 against it. Encodes the env requirements: `atlas-llm` env, `VLLM_USE_DEEP_GEMM=0`,
 Triton/Inductor/XDG caches redirected off `$HOME`, and `module load GCC + CUDA` for the
-FP8 JIT toolchain.
-- **Consumes:** the staged FP8 checkpoint (HF cache); `run_d2.py`, `run_production.py`, `spec/d2_specs.json`.
-- **Produces:** `results/production_d2{a,c}_<tag>_<model>.json` (on the cluster).
+FP8 JIT toolchain. (As provided they target the research cluster's working tree; adjust paths
+and the generator invocation to your own layout.)
+- **Consumes:** the staged FP8 checkpoint (HF cache); the generator + `run_production.py`; `spec/specs_<lang>_<degree>.json`.
+- **Produces:** `results/production_<label>_<tag>_<model>.json` (on the cluster).
 
 ---
 
 *Not in the production path (excluded from the public set):* `homeo_prompts.py` (the bare
-D₀/D₁ degree prompts from the POS‑only study) — `run_d2` builds its own prompt, so this is
-kept only if the public repo later exposes the full Dₙ degree ladder as a knob.
+D₀/D₁ degree prompts from the POS‑only study) — `run_homeo` builds its own prompt for every
+degree, so this is not needed.

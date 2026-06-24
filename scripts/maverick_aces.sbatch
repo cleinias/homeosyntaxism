@@ -63,10 +63,10 @@ done
 [ "$READY" -eq 1 ] || { echo "vllm not ready in 50 min"; tail -80 vllm-serve-$SLURM_JOB_ID.log; exit 1; }
 
 echo; echo "=== generate: CONSTRAINED homeosyntactic D2 (grains a + c), border/migration ==="
-python scripts/run_d2.py \
+python scripts/run_homeo.py \
   --backend vllm-http --endpoint http://127.0.0.1:8000 \
   --model $MODEL \
-  --grains a,c --n 12 --temperature 0.9 --max-tokens 2048 \
+  --lang it --degree D2 --grains a,c --n 12 --temperature 0.9 --max-tokens 2048 \
   --tag maverick-aces \
   || echo "RUN FAILED"
 

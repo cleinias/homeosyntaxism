@@ -32,8 +32,8 @@ import tree_metric as TM           # noqa: E402
 import run_production as RP         # noqa: E402 (Italian INCIPIT, periods)
 from overlap_metrics import tokens, content_words  # noqa: E402
 
-SPEC = ROOT / "reproducibility" / "manzoni-mapping" / "spec"
-EN_SOURCE = ROOT / "Texts" / "Manzoni" / "incipit_en_colquhoun.txt"
+SPEC = ROOT / "spec"
+EN_SOURCE = ROOT / "texts" / "incipit_en.txt"  # bring your own (the Colquhoun source is in copyright)
 WHITELIST = {"it": {"mare", "acqua", "acque"}, "en": {"sea", "water", "waters"}}
 REDACTIONS = [
     (" (novenario preferred, mirroring 'Quel ramo del lago di Como')",
@@ -128,10 +128,25 @@ def main():
     lang, deg = a.lang, a.degree
 
     if lang == "it":
-        source = RP.INCIPIT.strip(); cfile, redact, brief_src = "constraints.json", True, None
+        source = RP.INCIPIT.strip(); cfile, redact = "constraints.json", True
     else:
         source = EN_SOURCE.read_text(encoding="utf-8").strip()
-        cfile, redact, brief_src = "constraints_en.json", False, "EN"
+        cfile, redact = "constraints_en.json", False
+
+    # The transposition domain --- the source-blind functional brief --- is authored in
+    # spec/brief_<lang>.json (a "domain" line + one "element" per scene-world item). It is
+    # language-specific, so a mismatch is a hard error (checked up front, before the parse;
+    # see docs/Target_Domain_Brief.md).
+    bf = SPEC / f"brief_{lang}.json"
+    if not bf.exists():
+        sys.exit(f"error: brief file {bf.name} not found --- author a {lang}-language target-domain "
+                 f"brief (see docs/Target_Domain_Brief.md).")
+    bdata = json.loads(bf.read_text(encoding="utf-8"))
+    if bdata.get("lang") != lang:
+        sys.exit(f"error: language mismatch --- {bf.name} declares lang={bdata.get('lang')!r} but "
+                 f"--lang {lang} was requested.")
+    domain = bdata["domain"]
+    brief = "\n".join("  - " + e for e in bdata["elements"])
 
     periods = re.split(r"(?<=[.])\s+(?=[A-Z])", source)
     out_periods, content_lemmas = [], set()
@@ -162,25 +177,12 @@ def main():
         f"  [{c['id']}] ({c['priority']}) from {c['pattern_id']}: {c['property']}\n    Specification: {c['specification']}"
         for c in constraints)
 
-    if brief_src is None:
-        corr = json.loads((SPEC / "correspondence.json").read_text(encoding="utf-8"))["correspondence_table"]
-        brief = "\n".join("  - " + re.sub(r"\s*\((DECIDED|decided)[^)]*\)", "", m["target_element"]) for m in corr)
-    else:
-        # English functional brief (kept identical to build_d2_specs' BRIEF_EN)
-        brief = "\n".join("  - " + s for s in [
-            "the strait of water between two shores: the Sicilian Channel, between the North African coast and the island of Lampedusa",
-            "the sea's juridical zones: international waters, the SAR search-and-rescue zones, territorial waters",
-            "the routes and the boats of the migrants",
-            "the lighthouse, the rocks and the inlets of the island",
-            "the vessels and personnel of rescue and control (Coast Guard, Finance Guard)",
-            "the first-reception center on the island",
-            "a fisherman of the island"])
-
     embargo = (sorted(w for w in content_words(tokens(source)) if w not in WHITELIST["it"]) if lang == "it"
                else sorted(w for w in content_lemmas if w not in WHITELIST["en"]))
 
     spec = {"lang": lang, "degree": deg, "source": source, "n_periods": len(periods),
-            "periods": out_periods, "embargo": embargo, "constraint_block": constraint_block, "brief": brief}
+            "periods": out_periods, "embargo": embargo, "constraint_block": constraint_block,
+            "brief": brief, "domain": domain}
     out = SPEC / f"specs_{lang}_{deg}.json"
     out.write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"wrote spec/{out.name}: lang={lang} degree={deg}, {len(periods)} periods, "

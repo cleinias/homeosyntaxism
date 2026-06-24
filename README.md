@@ -55,8 +55,12 @@ A transposition is accepted only if all three hold together:
 docs/Phase_1_Workbook_Manzoni.md      ← critic's claims, provenance (the rubric's source)
         │  build_rubric.py            ← edit + (re)generate + validate the rubric
         ▼
-spec/{patterns,constraints,constraints_en,correspondence}.json
-        │  build_specs.py --lang it --degree D2     ← project to a source-blind form target
+spec/{patterns,constraints,constraints_en}.json
+        │
+        │   spec/brief_<lang>.json    ← the transposition DOMAIN (docs/Target_Domain_Brief.md)
+        │        │
+        ▼        ▼
+   build_specs.py --lang it --degree D2     ← project form + fold in the brief
         ▼
 spec/specs_it_D2.json
         │  run_homeo.py --degree D2 --grains a,c --backend … --model …
@@ -66,6 +70,12 @@ results/production_<label>_<tag>_<model>.json        ← the generations
         ▼
 results/production_scored_*.json                     ← the 3-axis gate
 ```
+
+The **transposition domain** is set in `spec/brief_<lang>.json` — a `domain` line plus the
+scene-world `elements` the generator must deploy (in its own words) while holding the form.
+It is language-specific: `build_specs.py` exits with an error if a brief's `lang` field does
+not match `--lang`. To transpose into a different world, edit the brief and rebuild. See
+**`docs/Target_Domain_Brief.md`** for what goes into it.
 
 ### Quickstart
 
@@ -123,7 +133,7 @@ worked FP8-MoE examples of standing up such a server on H100s.
 | dir        | contents |
 |------------|----------|
 | `scripts/` | the pipeline (`build_rubric`, `build_specs`, `run_homeo`, `score_production`, the metric libraries, ACES SLURM scripts) |
-| `spec/`    | the rubric (patterns/constraints/correspondence) + the built Italian form-targets `specs_it_{S,D0,D1,D2,D3}.json` |
+| `spec/`    | the rubric (patterns/constraints) + the transposition brief (`brief_{it,en}.json`) + the built Italian form-targets `specs_it_{S,D0,D1,D2,D3}.json` |
 | `texts/`   | the public-domain Italian source (Manzoni 1840) |
 | `results/` | the generations + scored outputs + metric-validation data |
 | `docs/`    | the rubric workbook + `Pipeline_Scripts.md`, `Data_Files.md`, `Tools_and_Stack.md` |

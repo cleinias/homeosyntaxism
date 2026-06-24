@@ -17,7 +17,7 @@ incipit and each generation to Universal Dependencies and read off the
 clause-architecture (clause-type multiset, hypotaxis depth), POS sequence, lemmas,
 and dependency triples. The language-shared UD scheme is why the Italian and
 English (Moore) tracks run on the *same* metric code (`tree_metric.py`,
-`build_d2_specs.py`).
+`build_specs.py`).
 
 ### spaCy — https://spacy.io/  *(used early, then discarded for the metric pipeline)*
 Industrial NLP library with fast statistical/transformer pipelines for tagging,

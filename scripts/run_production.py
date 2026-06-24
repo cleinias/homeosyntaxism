@@ -37,7 +37,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "reproducibility" / "graded-corpus" / "results"
+OUT = ROOT / "results"
 ENV = ROOT / ".env"
 
 # --- source: the Manzoni geographical incipit (Promessi Sposi 1840, cap. I) ---

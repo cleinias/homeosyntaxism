@@ -5,8 +5,9 @@ The JSON artifacts of the pipeline, as data structures — kept distinct from th
 tiers: the **rubric** (emitted by `build_rubric.py` from the workbook), the **spec** (built), the **results** (generated/scored).
 
 Lineage in one line:
-`Phase_1_Workbook_Manzoni.md` → `build_rubric.py` → `patterns.json` + `constraints.json` +
-`correspondence.json` → `d2_specs*.json` → `production_*.json` → `production_scored_*.json`;
+`Phase_1_Workbook_Manzoni.md` → `build_rubric.py` → `patterns.json` + `constraints.json`;
+plus the authored `brief_<lang>.json` (the domain) → `build_specs.py` →
+`specs_<lang>_<degree>.json` → `production_*.json` → `production_scored_*.json`;
 and `metric_validation*` validates the gate.
 
 ---
@@ -25,29 +26,33 @@ layer (published in full — the rubric must be reproducible & editable post‑c
 ### `spec/constraints.json`, `spec/constraints_en.json`
 The **operational** subset of the rubric: each pattern as a single mechanically‑checkable
 requirement. This is what actually enters the prompt (as the "constraint block").
-- **By/for:** produced by `build_rubric.py`; **consumed by** `build_d2_specs.py`.
+- **By/for:** produced by `build_rubric.py`; **consumed by** `build_specs.py`.
 - **Structure:** `{meta, constraints:[{id (C-P1-01…), pattern_id, property, specification, priority (MUST|SHOULD)}]}`. The `_en` file is the English derivative (P_2 re‑derived as iambic pentameter; P_7 formula = "swaying").
 
-### `spec/correspondence.json`
-The source→target domain map (Manzoni → border/migration), incl. the `justification` for each
-mapping (published in full — editable rubric).
-- **By/for:** produced by `build_rubric.py`; **consumed by** `build_d2_specs.py` (→ the functional brief).
-- **Structure:** `{meta, correspondence_table:[{source_element, source_function, target_element, justification}]}`.
+### `spec/brief_it.json`, `spec/brief_en.json`  — the transposition domain
+The **only** place the target domain is set: a source-blind scene-world the generator deploys
+in its own words while holding the form. (Authored directly; the rich `source→target`
+correspondence reasoning lives in the private research repo — only its target column survives
+here, as this brief. See `Target_Domain_Brief.md`.)
+- **By/for:** authored by hand; **consumed by** `build_specs.py` (→ the prompt's `TARGET DOMAIN`).
+- **Structure:** `{lang (it|en), domain (string → the prompt header), elements:[string,…]}`. `build_specs.py` exits with an error if `lang` ≠ the requested `--lang`.
 
-## Tier 2 — the spec (built from rubric + source)
+## Tier 2 — the spec (built from rubric + brief + source)
 
-### `spec/d2_specs.json` (IT), `spec/d2_specs_en.json` (EN)
-The self‑contained generation spec: the D₂ target per period at both grains, plus the
-rendered rubric, brief, and embargo. The single file `run_d2` needs (no Stanza at gen time).
-- **By/for:** produced by `build_d2_specs.py`; **consumed by** `run_d2.py`.
-- **Structure:** `{lang, source, n_periods, periods:[{k, words, inventory (grain a: clause‑type counts + depth, prose), schema (grain c: nesting tree, prose), n_clauses, depth}], embargo:[…content words…], constraint_block (string), brief (string)}`.
-- **Note:** `d2_specs_en.json` embeds the (copyright) English source in `source` → **not** committed; regenerated from a local copy.
+### `spec/specs_<lang>_<degree>.json`  (degree ∈ {S, D0, D1, D2, D3})
+The self‑contained generation spec for one degree: the form target per period, plus the
+rendered rubric, the brief, the domain, and the embargo. The single file `run_homeo.py`
+needs (no Stanza at gen time). For D2 each period carries both grains (a = inventory,
+c = schema); other degrees carry one `spec` string per period.
+- **By/for:** produced by `build_specs.py`; **consumed by** `run_homeo.py`.
+- **Structure:** `{lang, degree, source, n_periods, periods:[{k, words, …degree-specific…}], embargo:[…content words…], constraint_block (string), brief (string), domain (string)}`.
+- **Note:** `specs_en_*.json` embeds the (copyright) English source in `source` → **not** committed; regenerated from a local copy of the English incipit.
 
 ## Tier 3 — the results (generated, then scored)
 
-### `results/production_d2{a,c}_<tag>_<model>.json`
-One file per (grain, run): the N oversampled candidates with full provenance.
-- **By/for:** produced by `run_d2.py`; **consumed by** `score_production.py`.
+### `results/production_<label>_<tag>_<model>.json`  (label e.g. `d2a`, `d2c`, `S`, `D0`…)
+One file per (degree/grain, run): the N oversampled candidates with full provenance.
+- **By/for:** produced by `run_homeo.py`; **consumed by** `score_production.py`.
 - **Structure:** `{model, backend, grain (a|c), lang, n, temperature, max_tokens, provider_routing (resolved OpenRouter provider + quant, or null), source, prompt, elapsed_s, gens:[{i, text}]}`.
 - **Tags seen:** `opus48` / `opus48-en` (Opus), `qwen-or` / `qwen-or-en` (Qwen OpenRouter), `kimi-or` / `kimi-or-en` (Kimi‑K2 OpenRouter), `qwen3-aces` (Qwen self‑hosted), `maverick-aces`. EN files embed the copyright source → gitignored.
 
@@ -58,7 +63,7 @@ The gate output: every candidate scored on all three axes, ranked, with text ret
 
 ## Validation (one‑time, gate calibration)
 
-### `reproducibility/graded-corpus/metric_validation.tsv`  *(input; TSV, not JSON)*
+### `results/metric_validation.tsv`  *(input; TSV, not JSON)*
 Hand‑labelled (source, candidate) pairs spanning frame‑calque / divergent / incoherent,
 with gold labels — the substrate that earns trust in the two LLM‑judge metrics.
 - **Structure (columns):** `id, frame (calque|divergent), coh (yes|no), src, cand`.

@@ -15,8 +15,8 @@ Copyright (c) 2026 Manuela Marchesini and Stefano Franchi.
 **Canonical text**: see [`LICENSE-docs`](LICENSE-docs) in this repository
 **Online reference**: https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
-Covers the rubric (`spec/patterns.json`, `constraints*.json`, `correspondence.json`), the
-built form-targets (`spec/specs_it_D*.json`), the generated texts and scored outputs in
+Covers the rubric (`spec/patterns.json`, `constraints*.json`), the transposition brief
+(`spec/brief_*.json`), the built form-targets (`spec/specs_it_*.json`), the generated texts and scored outputs in
 `results/`, and the prose documentation in `docs/`. You are free to share and adapt this
 material — including commercially — under the following terms:
 
