@@ -22,7 +22,6 @@ downstream scripts consume the emitted `spec/patterns.json` / `constraints.json`
                            ▼
  score_production.py  ──►  results/production_scored_*.json              (3-axis gate)
 
- brief_to_tex.py  ──►  a LaTeX rendering of the brief (slides / paper)
  sem_metrics.py  ──►  metric_validation_scored_*.json   (one-time: validate the judges)
  monitor.py / *_aces.sbatch  : self-hosted serving + output retrieval (ACES)
  tree_metric.py, overlap_metrics.py : libraries (no standalone I/O)
@@ -86,15 +85,6 @@ emits the best. Auto‑detects language from each file's `lang` field.
 - **Consumes:** `results/production_*.json` (any degree/grain).
 - **Produces:** `results/production_scored_*.json` (+ printed ranked table).
 - **Imports:** `tree_metric`, `sem_metrics`.
-
-## Rendering (optional)
-
-### `brief_to_tex.py`
-Renders `spec/brief_<lang>.json` as a self‑standing LaTeX document (the domain header + the
-scene‑world elements as a bulleted brief), for slides / the paper. Compile with a
-Unicode‑native engine (`lualatex` / `xelatex` — the brief carries `—`, `'`, `°`).
-- **Consumes:** `spec/brief_<lang>.json`.
-- **Produces:** LaTeX on stdout (or `--out FILE`).
 
 ## Metric validation (one‑time)
 
