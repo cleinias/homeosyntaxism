@@ -130,6 +130,10 @@ def main():
     if lang == "it":
         source = RP.INCIPIT.strip(); cfile, redact = "constraints.json", True
     else:
+        if not EN_SOURCE.exists():
+            sys.exit(f"error: English source {EN_SOURCE.relative_to(ROOT)} not found --- the revised "
+                     f"Colquhoun translation is in copyright and is not shipped; place your own copy "
+                     f"there to run the English track (see the README).")
         source = EN_SOURCE.read_text(encoding="utf-8").strip()
         cfile, redact = "constraints_en.json", False
 
