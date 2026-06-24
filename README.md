@@ -72,6 +72,7 @@ results/production_scored_*.json                     ← the 3-axis gate
 ```bash
 pip install -r requirements.txt          # Stanza, anthropic, etc.
 python -c "import stanza; stanza.download('it')"
+cp .env.example .env                      # then add your API keys (see below)
 
 python scripts/build_rubric.py                                  # validate/emit the rubric
 python scripts/build_specs.py --lang it --degree D2            # → spec/specs_it_D2.json
@@ -84,6 +85,38 @@ python scripts/score_production.py                             # → results/pro
 `openrouter`, `vllm-http`); the same rubric drives every degree. The Opus/Italian
 gradient over all five rungs is in `results/` — the two tight rungs (`D0`, `S`) drive
 coherence to zero, which only recovers from `D1` down.
+
+## API keys & endpoints
+
+The cloud backends read two keys from a **`.env` file in the repo root** (git-ignored —
+never commit it). Copy the template and fill in only what you need:
+
+```bash
+cp .env.example .env
+# edit .env:
+#   ANTHROPIC_API_KEY=sk-ant-...     # Opus generation + the frame/coherence LLM-judges
+#   OPENROUTER_API_KEY=sk-or-...     # open-weight models (Qwen, Kimi, …) via OpenRouter
+```
+
+- `--backend anthropic` needs `ANTHROPIC_API_KEY`.
+- `--backend openrouter` needs `OPENROUTER_API_KEY` (provider/quant pinned — see `MANIFEST.md`).
+- `score_production.py` **always** needs `ANTHROPIC_API_KEY`: the frame-divergence and
+  coherence judges call Claude no matter which backend produced the candidates. (Set
+  `SEM_JUDGE_MODEL` to override the default judge `claude-sonnet-4-6`.)
+
+**Local / self-hosted models** (`--backend vllm-http`) need no key — point `--endpoint`
+at any OpenAI-compatible `/v1/chat/completions` server:
+
+```bash
+# stand up your own (example): vLLM serving an instruct model
+python -m vllm.entrypoints.openai.api_server --model <hf-model> --port 8000
+# then generate against it
+python scripts/run_homeo.py --backend vllm-http --endpoint http://127.0.0.1:8000 \
+       --model <hf-model> --lang it --degree D2 --grains a,c --n 6 --tag local
+```
+
+The ACES SLURM scripts in `scripts/` (`qwen_aces.sbatch`, `maverick_aces.sbatch`) are
+worked FP8-MoE examples of standing up such a server on H100s.
 
 ## Layout
 
