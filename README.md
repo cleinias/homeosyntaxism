@@ -9,6 +9,11 @@ border/migration landscape of the central Mediterranean. It is the proof-of-conc
 "Inverse Queneau" method (ACH 2026, Marchesini & Franchi): where Queneau holds content and
 varies form, we hold form and vary content, to reveal how form naturalizes meaning.
 
+**Talk & slides.** Marchesini & Franchi, *The Proof is in the Pudding: Structural
+Experimentation as Close Reading Strategy in the Age of LLMs* (ACH 2026). Deposited open
+access (CC BY-SA 4.0) on Humanities Commons CORE:
+<https://doi.org/10.17613/1p8bw-67y06>.
+
 ## The two-dimensional design space
 
 Every run is a point in a 2-D space:
