@@ -42,13 +42,14 @@ def unrestrict(prompt: str) -> str:
     return p
 
 
-def gen_opus(model, prompt, n, max_tokens=2048):
+def gen_opus(model, prompt, n, max_tokens=2048, extra_body=None):
     """Resilient Anthropic loop: skip the occasional refusal, keep good candidates."""
     out, refused, att, cap = [], 0, 0, max(n * 3, 24)
     while len(out) < n and att < cap:
         att += 1
         body = {"model": model, "max_tokens": max_tokens,
                 "messages": [{"role": "user", "content": prompt}]}
+        body.update(extra_body or {})
         try:
             r = RP._post("https://api.anthropic.com/v1/messages", body,
                          {"x-api-key": RP.env("ANTHROPIC_API_KEY"),
@@ -60,6 +61,10 @@ def gen_opus(model, prompt, n, max_tokens=2048):
         try:
             out.append(next(b["text"] for b in r["content"] if b.get("type") == "text").strip())
         except (StopIteration, KeyError):
+            # no text block came back — say why instead of skipping silently
+            # (e.g. stop_reason=max_tokens with the whole budget spent on thinking)
+            print(f"  no text block: stop_reason={r.get('stop_reason')} "
+                  f"usage={r.get('usage', {}).get('output_tokens')}", flush=True)
             continue
     return out, refused, att
 
@@ -69,6 +74,15 @@ def main():
     ap.add_argument("--constrained", required=True, help="recorded constrained-production JSON")
     ap.add_argument("--model", default="claude-opus-4-8")
     ap.add_argument("--n", type=int, default=10)
+    ap.add_argument("--max-tokens", type=int, default=2048,
+                    help="response budget; on models with default-on thinking "
+                         "(Opus 5+) this caps thinking+text together, so give headroom")
+    ap.add_argument("--disable-thinking", action="store_true",
+                    help="pass thinking={type: disabled} (Opus 5: legal at effort "
+                         "high or below; closest analogue to the 4.8 no-thinking regime; "
+                         "rejected by Fable 5, whose thinking is always on)")
+    ap.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"],
+                    help="output_config effort level (default: model default)")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
@@ -78,12 +92,20 @@ def main():
     print(f"[unrestrict] {len(d['prompt'])} -> {len(prompt)} chars; source-blind grain-{grain}, no patterns",
           flush=True)
     t0 = time.time()
-    gens, refused, att = gen_opus(a.model, prompt, a.n)
+    extra = {}
+    if a.disable_thinking:
+        extra["thinking"] = {"type": "disabled"}
+    if a.effort:
+        extra["output_config"] = {"effort": a.effort}
+    gens, refused, att = gen_opus(a.model, prompt, a.n, max_tokens=a.max_tokens,
+                                  extra_body=extra)
     Path(a.out).write_text(json.dumps({
         "model": a.model, "backend": "anthropic", "grain": grain,
         "regime": "unrestricted-homeo-source-blind", "derived_from": str(a.constrained),
         "n": len(gens), "refused": refused, "attempts": att, "temperature": None,
-        "max_tokens": 2048, "source": d.get("source"), "prompt": prompt,
+        "max_tokens": a.max_tokens,
+        "thinking": "disabled" if a.disable_thinking else "default",
+        "effort": a.effort, "source": d.get("source"), "prompt": prompt,
         "elapsed_s": round(time.time() - t0, 1),
         "gens": [{"i": k, "text": g} for k, g in enumerate(gens)],
     }, ensure_ascii=False, indent=1), encoding="utf-8")
