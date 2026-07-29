@@ -42,6 +42,33 @@ def unrestrict(prompt: str) -> str:
     return p
 
 
+def replace_domain(prompt: str, block: str) -> str:
+    """Swap the TARGET DOMAIN brief for a leaner one (everything else untouched).
+
+    The original brief listed ten elements, several of which pre-supplied content the
+    experiment is supposed to elicit — including a fisherman at his nets, who then
+    appeared in 10/10 generations and imported a mid-text individual agent the source
+    never has.  This lets a run specify its own brief.
+    """
+    new, k = re.subn(r'TARGET DOMAIN\b.*?(?=LEXICAL EMBARGO\b)',
+                     block.strip() + "\n\n", prompt, flags=re.DOTALL)
+    assert k == 1, f"expected exactly one TARGET DOMAIN block, replaced {k}"
+    return new
+
+
+# Terms that would identify the source. The LEXICAL EMBARGO legitimately contains
+# source vocabulary -- that is what it is for -- so it is excluded from the check.
+SOURCE_TERMS = ["manzoni", "manzonian", "lecco", "promessi", "como",
+                "spagnol", "spanish", "guarnigione", "garrison"]
+
+
+def assert_source_blind(prompt: str) -> None:
+    embargo = re.search(r'LEXICAL EMBARGO\b.*?(?=\n\n[A-Z])', prompt, flags=re.DOTALL)
+    rest = prompt.replace(embargo.group(0), "") if embargo else prompt
+    hits = [t for t in SOURCE_TERMS if t in rest.lower()]
+    assert not hits, f"source-identifying terms outside the embargo: {hits}"
+
+
 def gen_opus(model, prompt, n, max_tokens=2048, extra_body=None):
     """Resilient Anthropic loop: skip the occasional refusal, keep good candidates."""
     out, refused, att, cap = [], 0, 0, max(n * 3, 24)
@@ -83,12 +110,18 @@ def main():
                          "rejected by Fable 5, whose thinking is always on)")
     ap.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"],
                     help="output_config effort level (default: model default)")
+    ap.add_argument("--domain", help="file holding a replacement TARGET DOMAIN block")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
     d = json.loads(Path(a.constrained).read_text(encoding="utf-8"))
     grain = d.get("grain", "a")  # inherit the grain of the constrained source (a, c, ...)
     prompt = unrestrict(d["prompt"])
+    if a.domain:
+        before = len(prompt)
+        prompt = replace_domain(prompt, Path(a.domain).read_text(encoding="utf-8"))
+        print(f"[domain]     {before} -> {len(prompt)} chars; brief from {a.domain}", flush=True)
+    assert_source_blind(prompt)
     print(f"[unrestrict] {len(d['prompt'])} -> {len(prompt)} chars; source-blind grain-{grain}, no patterns",
           flush=True)
     t0 = time.time()
@@ -102,6 +135,7 @@ def main():
     Path(a.out).write_text(json.dumps({
         "model": a.model, "backend": "anthropic", "grain": grain,
         "regime": "unrestricted-homeo-source-blind", "derived_from": str(a.constrained),
+        "domain_brief": a.domain,
         "n": len(gens), "refused": refused, "attempts": att, "temperature": None,
         "max_tokens": a.max_tokens,
         "thinking": "disabled" if a.disable_thinking else "default",
