@@ -99,6 +99,14 @@ def gen_opus(model, prompt, n, max_tokens=2048, extra_body=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--constrained", required=True, help="recorded constrained-production JSON")
+    ap.add_argument("--backend", default="anthropic",
+                    choices=["anthropic", "vllm-http"],
+                    help="anthropic = frontier reference; vllm-http = self-hosted "
+                         "open weights (ACES), served by the sbatch on :8000")
+    ap.add_argument("--endpoint", default="http://127.0.0.1:8000",
+                    help="vllm-http only")
+    ap.add_argument("--temperature", type=float, default=0.9,
+                    help="vllm-http only; the Anthropic path omits temperature")
     ap.add_argument("--model", default="claude-opus-4-8")
     ap.add_argument("--n", type=int, default=10)
     ap.add_argument("--max-tokens", type=int, default=2048,
@@ -130,13 +138,19 @@ def main():
         extra["thinking"] = {"type": "disabled"}
     if a.effort:
         extra["output_config"] = {"effort": a.effort}
-    gens, refused, att = gen_opus(a.model, prompt, a.n, max_tokens=a.max_tokens,
-                                  extra_body=extra)
+    if a.backend == "vllm-http":
+        # one request, n completions; no refusal channel on the OpenAI-compatible API
+        gens = RP.gen_vllm(a.endpoint, a.model, prompt, a.n, a.temperature, a.max_tokens)
+        refused, att = 0, 1
+    else:
+        gens, refused, att = gen_opus(a.model, prompt, a.n, max_tokens=a.max_tokens,
+                                      extra_body=extra)
     Path(a.out).write_text(json.dumps({
-        "model": a.model, "backend": "anthropic", "grain": grain,
+        "model": a.model, "backend": a.backend, "grain": grain,
         "regime": "unrestricted-homeo-source-blind", "derived_from": str(a.constrained),
         "domain_brief": a.domain,
-        "n": len(gens), "refused": refused, "attempts": att, "temperature": None,
+        "n": len(gens), "refused": refused, "attempts": att,
+        "temperature": a.temperature if a.backend == "vllm-http" else None,
         "max_tokens": a.max_tokens,
         "thinking": "disabled" if a.disable_thinking else "default",
         "effort": a.effort, "source": d.get("source"), "prompt": prompt,
