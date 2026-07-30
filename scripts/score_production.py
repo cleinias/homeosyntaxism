@@ -82,12 +82,13 @@ def score_file(path):
         fsim = judged(M.frame_judge_sim, src, txt, lang)
         coh = judged(M.coh_judge, txt, lang)
         fdiv = (1 - fsim) if fsim is not None else None
-        good = [c["d2_clause"], 1 - c["s0_pos"], 1 - lj,
+        good = [c["clause_inv"], 1 - c["s0_pos"], 1 - lj,
                 fdiv if fdiv is not None else 0.0, coh if coh is not None else 0.0]
         rows.append({
             "i": g["i"], "words": len(txt.split()),
             "embargo_hits": emb_hits(g["text"], spec_embargo),
-            "d2_clause": c["d2_clause"], "depth_gap": c["depth_gap"],
+            "clause_inv": c["clause_inv"], "clause_nest": c["clause_nest"],
+            "depth_gap": c["depth_gap"],
             "s0_pos": c["s0_pos"], "lemma_jacc": round(lj, 3),
             "frame_div": round(fdiv, 3) if fdiv is not None else None,
             "coherence": coh, "score": round(sum(good) / 5, 3), "text": txt,
@@ -134,7 +135,7 @@ def main():
         print(f"{'cand':>4}{'words':>6}{'d2_cl':>7}{'depth':>6}{'s0_pos':>7}"
               f"{'lem_j':>6}{'fr_div':>7}{'coher':>6}{'SCORE':>7}")
         for r in rows:
-            print(f"{r['i']:>4}{r['words']:>6}{r['d2_clause']:>7.3f}{r['depth_gap']:>6.1f}"
+            print(f"{r['i']:>4}{r['words']:>6}{r['clause_inv']:>7.3f}{r['clause_nest']:>7.3f}{r['depth_gap']:>6.1f}"
                   f"{r['s0_pos']:>7.3f}{r['lemma_jacc']:>6.3f}"
                   f"{(r['frame_div'] if r['frame_div'] is not None else float('nan')):>7.3f}"
                   f"{(r['coherence'] if r['coherence'] is not None else float('nan')):>6.2f}"

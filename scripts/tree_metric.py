@@ -102,6 +102,33 @@ def clause_bag(toks):
                    or (t["deprel"] == "conj" and t["upos"] in ("VERB", "AUX")))
 
 
+def _isch(t):
+    return (t["deprel"] in CLAUSE_BASE
+            or (t["deprel"] == "conj" and t["upos"] in ("VERB", "AUX")))
+
+
+def clause_edges(toks):
+    """Multiset of typed clause-attachment edges (parent-clause-deprel -> child-clause-deprel):
+    each clause head is linked to its nearest clause-head ancestor (the root clause -> ROOT).
+    This is the D2 metric --- it scores the clause NESTING (which clause embeds in which),
+    the structure the D3 inventory ignores."""
+    id2 = {t["i"]: t for t in toks}
+    hids = {t["i"] for t in toks if _isch(t)}
+    c = Counter()
+    for t in toks:
+        if not _isch(t):
+            continue
+        if t["deprel"] == "root":
+            c[("ROOT", "root")] += 1
+            continue
+        p = t["head"]
+        while p >= 0 and p not in hids:
+            p = id2[p]["head"]
+        parent = id2[p]["deprel"] if p in hids else "ROOT"
+        c[(parent, t["deprel"])] += 1
+    return c
+
+
 def _f1(a, b):
     overlap = sum((a & b).values())
     sa, sb = sum(a.values()), sum(b.values())
@@ -133,7 +160,9 @@ def compliance(src_toks, gen_toks):
     return {"s0_pos": round(s0_pos_edit(src_toks, gen_toks), 3),
             "d1_deprel": round(_f1(deprel_bag(src_toks), deprel_bag(gen_toks)), 3),
             "d1_triple": round(_f1(triple_bag(src_toks), triple_bag(gen_toks)), 3),
-            "d2_clause": round(_f1(clause_bag(src_toks), clause_bag(gen_toks)), 3),
+            "clause_inv": round(_f1(clause_bag(src_toks), clause_bag(gen_toks)), 3),
+            "clause_nest": round(_f1(clause_edges(src_toks), clause_edges(gen_toks)), 3),
+            "d2_clause": round(_f1(clause_bag(src_toks), clause_bag(gen_toks)), 3),  # legacy name
             "depth_gap": abs(_depth(src_toks) - _depth(gen_toks))}
 
 
