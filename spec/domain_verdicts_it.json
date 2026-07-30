@@ -1,0 +1,163 @@
+{
+ "lang": "it",
+ "question": "domain",
+ "model": "claude-sonnet-4-6",
+ "n": 3,
+ "brief": "TARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography",
+ "positive": "yes",
+ "note": "source-blind: the judge saw the question and the word list only",
+ "verdicts": {
+  "alloggiare": {
+   "yes": 3,
+   "answered": 3
+  },
+  "allontanandosi": {
+   "yes": 3,
+   "answered": 3
+  },
+  "alture": {
+   "yes": 3,
+   "answered": 3
+  },
+  "balze": {
+   "yes": 3,
+   "answered": 3
+  },
+  "campeggia": {
+   "yes": 3,
+   "answered": 3
+  },
+  "congiunge": {
+   "yes": 3,
+   "answered": 3
+  },
+  "contemplate": {
+   "yes": 3,
+   "answered": 3
+  },
+  "contigui": {
+   "yes": 3,
+   "answered": 3
+  },
+  "degradando": {
+   "yes": 3,
+   "answered": 3
+  },
+  "distendersi": {
+   "yes": 3,
+   "answered": 3
+  },
+  "distesa": {
+   "yes": 3,
+   "answered": 3
+  },
+  "falde": {
+   "yes": 3,
+   "answered": 3
+  },
+  "ghiaia": {
+   "yes": 3,
+   "answered": 3
+  },
+  "giace": {
+   "yes": 3,
+   "answered": 3
+  },
+  "guarnigione": {
+   "yes": 3,
+   "answered": 3
+  },
+  "incammina": {
+   "yes": 3,
+   "answered": 3
+  },
+  "ingrossa": {
+   "yes": 3,
+   "answered": 3
+  },
+  "lembo": {
+   "yes": 3,
+   "answered": 3
+  },
+  "ossatura": {
+   "yes": 3,
+   "answered": 3
+  },
+  "promontorio": {
+   "yes": 3,
+   "answered": 3
+  },
+  "ripide": {
+   "yes": 3,
+   "answered": 3
+  },
+  "spazia": {
+   "yes": 3,
+   "answered": 3
+  },
+  "sporgere": {
+   "yes": 3,
+   "answered": 3
+  },
+  "terrapieni": {
+   "yes": 3,
+   "answered": 3
+  },
+  "volge": {
+   "yes": 3,
+   "answered": 3
+  },
+  "alleggerire": {
+   "yes": 2,
+   "answered": 3
+  },
+  "ameno": {
+   "yes": 0,
+   "answered": 3
+  },
+  "considerabile": {
+   "yes": 0,
+   "answered": 3
+  },
+  "contrassegno": {
+   "yes": 0,
+   "answered": 3
+  },
+  "fanciulle": {
+   "yes": 0,
+   "answered": 3
+  },
+  "gioghi": {
+   "yes": 0,
+   "answered": 3
+  },
+  "giogo": {
+   "yes": 0,
+   "answered": 3
+  },
+  "modestia": {
+   "yes": 0,
+   "answered": 3
+  },
+  "settentrione": {
+   "yes": 0,
+   "answered": 3
+  },
+  "somigliare": {
+   "yes": 0,
+   "answered": 3
+  },
+  "tempera": {
+   "yes": 0,
+   "answered": 3
+  },
+  "variato": {
+   "yes": 0,
+   "answered": 3
+  },
+  "vendemmia": {
+   "yes": 0,
+   "answered": 3
+  }
+ }
+}

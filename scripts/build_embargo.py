@@ -200,7 +200,48 @@ def domain_words(lang):
     return out, seen
 
 
-def classify(words, lang, zipf, free, mark, dom, lemmas):
+def judged(path):
+    """word -> (yes, answered) from a domain_lexicon.py verdicts file, if present."""
+    if not path.exists():
+        return {}
+    v = json.loads(path.read_text(encoding="utf-8"))["verdicts"]
+    return {w.lower(): (d["yes"], d["answered"]) for w, d in v.items()}
+
+
+def band_call(k, upos, period, domain, in_gens):
+    """Resolve one middle-band word from the two source-blind judges.
+
+    Two orthogonal questions, and which one applies depends on the part of speech:
+    *period* (is the word still in use?) is asked of everything, because a dated
+    word is a source marker whatever it names; *domain* (is this thing at home
+    here?) is only well posed for nouns — asking it of `somigliare` or `spaziare`
+    returns NO for a verb that is simply generic, not foreign.
+
+    A human is called only where the samples split, or where a judge contradicts
+    the one piece of observed evidence we have: the word turning up in the
+    source-blind generations already run.
+    """
+    pv, pn = period.get(k, (0, 0))
+    dv, dn = domain.get(k, (0, 0))
+    noun = upos in ("NOUN", "PROPN")
+    if not pn:
+        return "decide", "no period verdict"
+    if 0 < pv < pn or (noun and dn and 0 < dv < dn):
+        return "decide", f"judges split (period {pv}/{pn}, domain {dv}/{dn})"
+    if pv * 2 < pn:
+        if in_gens:
+            return "decide", "judged dated, but the domain generations use it"
+        return "EMBARGO", f"dated ({pv}/{pn} current)"
+    if noun and dn and dv * 2 < dn:
+        if in_gens:
+            return "decide", "judged foreign, but the domain generations use it"
+        return "EMBARGO", f"names something foreign to the domain ({dv}/{dn})"
+    return "free", f"current{' and at home' if noun else ', not a noun'}"
+
+
+def classify(words, lang, zipf, free, mark, dom, lemmas, archaisms="free",
+             period=None, domain=None):
+    period, domain = period or {}, domain or {}
     for w in words:
         k = w.lower()
         f = fold(k)
@@ -211,15 +252,20 @@ def classify(words, lang, zipf, free, mark, dom, lemmas):
         if f in NAMES.get(lang, ()) or upos == "PROPN":
             yield w, v, "EMBARGO", "NAME", f"source-identifying ({upos or 'listed'})"
         elif is_archaic(f, lang):
-            yield w, v, "free", "ARCHAIC", "the modernity clause already rules it out"
+            if archaisms == "free":
+                yield w, v, "free", "ARCHAIC", "the register clause already rules it out"
+            else:
+                yield w, v, "EMBARGO", "ARCHAIC", "archaisms embargoed by request"
         elif v >= free:
             yield w, v, "free", "COMMON", f"zipf {v:.2f} (lemma {lem}) >= {free}"
         elif v < mark:
             yield w, v, "EMBARGO", "MARKER", f"zipf {v:.2f} (lemma {lem}) < {mark}"
         else:
-            note = ("appears in the source-blind domain generations"
-                    if f in dom else "not seen in the domain generations")
-            yield w, v, "decide", "DECIDE", note
+            verdict, why = band_call(k, upos, period, domain, f in dom)
+            if verdict == "decide" and not period:
+                why = ("appears in the source-blind domain generations" if f in dom
+                       else "not seen in the domain generations")
+            yield w, v, verdict, "BAND" if period else "DECIDE", why
 
 
 def main():
@@ -233,6 +279,12 @@ def main():
     ap.add_argument("--review", action="store_true", help="print the review tables")
     ap.add_argument("--write", action="store_true",
                     help="write spec/embargo_<lang>_filtered.json")
+    ap.add_argument("--archaisms", default="free", choices=["free", "embargo"],
+                    help="what to do with apocope and archaic spellings. Default free, "
+                         "because the prompt's register clause ('MODERN literary "
+                         "Italian') already forbids them; pass embargo when the target "
+                         "domain is itself period — e.g. a Calvino text transposed into "
+                         "an eighteenth-century world, where archaism is the easy calque")
     ap.add_argument("--build-lemma-cache", action="store_true",
                     help="parse the source with Stanza and write spec/lemma_<lang>.csv")
     ap.add_argument("--from-prompt", metavar="RUN.json",
@@ -263,7 +315,10 @@ def main():
         lookups |= variants(k, lemmas.get(k, lemmas.get(fold(k), (k, "")))[0])
     zipf, src = zipf_table(sorted(lookups), a.lang)
     dom, dom_files = domain_words(a.lang)
-    rows = list(classify(emb, a.lang, zipf, a.zipf_free, a.zipf_mark, dom, lemmas))
+    period = judged(SPEC / f"period_verdicts_{a.lang}.json")
+    domain = judged(SPEC / f"domain_verdicts_{a.lang}.json")
+    rows = list(classify(emb, a.lang, zipf, a.zipf_free, a.zipf_mark, dom, lemmas,
+                         a.archaisms, period, domain))
 
     keep = [r for r in rows if r[2] == "EMBARGO"]
     free = [r for r in rows if r[2] == "free"]
@@ -273,7 +328,9 @@ def main():
           f"{', '.join(dom_files) or 'none found'} ({len(dom)} word types)\n")
     print(f"- **{len(emb)} forms in** → **{len(keep)} embargoed**, {len(free)} freed, "
           f"{len(dec)} to decide")
-    for layer in ["NAME", "MARKER", "ARCHAIC", "COMMON"]:
+    if period or domain:
+        print(f"  band judges: period {len(period)} words, domain {len(domain)} words")
+    for layer in ["NAME", "MARKER", "ARCHAIC", "COMMON", "BAND"]:
         n = len([r for r in rows if r[3] == layer])
         print(f"  - {layer}: {n}")
 
