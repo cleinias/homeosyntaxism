@@ -28,6 +28,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+# the brief swap and the source-blindness assertion live with the unrestricted runner;
+# reused here so a constrained run cannot silently ship the old ten-element brief
+import run_unrestricted_manzoni as RUM  # noqa: E402
 import run_production as RP  # noqa: E402
 
 SPEC_DIR = ROOT / "spec"
@@ -101,8 +104,8 @@ no headings. Output ONLY the passage: no preamble, no self-audit."""
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--backend", required=True, choices=["vllm-http", "anthropic", "openrouter"])
-    ap.add_argument("--model", required=True)
+    ap.add_argument("--backend", choices=["vllm-http", "anthropic", "openrouter"])
+    ap.add_argument("--model")
     ap.add_argument("--endpoint", default="http://127.0.0.1:8000")
     ap.add_argument("--provider", default=None)
     ap.add_argument("--lang", default="it", choices=["it", "en"])
@@ -111,16 +114,40 @@ def main():
     ap.add_argument("--n", type=int, default=6)
     ap.add_argument("--temperature", type=float, default=0.9)
     ap.add_argument("--max-tokens", type=int, default=2048)
-    ap.add_argument("--tag", required=True)
+    ap.add_argument("--tag")
+    ap.add_argument("--domain", metavar="FILE",
+                    help="replacement TARGET DOMAIN block (e.g. specs/domain_brief_3item.txt); "
+                         "same swap run_unrestricted_manzoni.py does, so a constrained run can "
+                         "use the clean brief")
+    ap.add_argument("--print-prompt", action="store_true",
+                    help="assemble the prompt, write it to results/prompt_<label>_<lang>.json "
+                         "and stop -- so scripts/audit_leakage.py can be run on the prompt "
+                         "BEFORE a generation budget is spent on it")
     a = ap.parse_args()
+
+    if not a.print_prompt and not (a.backend and a.model and a.tag):
+        ap.error("--backend, --model and --tag are required unless --print-prompt")
 
     specs = json.loads((SPEC_DIR / f"specs_{a.lang}_{a.degree}.json").read_text(encoding="utf-8"))
     grains = [g.strip() for g in a.grains.split(",") if g.strip()] if a.degree == "D2" else [""]
     RP.OUT.mkdir(parents=True, exist_ok=True)
-    slug = a.model.replace("/", "_")
+    slug = (a.model or "").replace("/", "_")
     for grain in grains:
         prompt = build_prompt(a.degree, grain, specs, a.lang)
+        if a.domain:
+            before = len(prompt)
+            prompt = RUM.replace_domain(prompt, Path(a.domain).read_text(encoding="utf-8"))
+            print(f"[domain] {before} -> {len(prompt)} chars; brief from {a.domain}", flush=True)
+        RUM.assert_source_blind(prompt)
         label = a.degree + (grain if grain else "")
+        if a.print_prompt:
+            RP.OUT.mkdir(parents=True, exist_ok=True)
+            fn = RP.OUT / f"prompt_{label}_{a.lang}.json"
+            fn.write_text(json.dumps({"degree": a.degree, "grain": grain, "lang": a.lang,
+                                      "prompt": prompt}, ensure_ascii=False, indent=1),
+                          encoding="utf-8")
+            print(f"[{label}/{a.lang}] prompt_chars={len(prompt)} -> {fn.name}")
+            continue
         print(f"[{label}/{a.lang}] backend={a.backend} model={a.model} n={a.n} prompt_chars={len(prompt)}", flush=True)
         t0 = time.time()
         if a.backend == "vllm-http":

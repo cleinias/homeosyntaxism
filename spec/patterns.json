@@ -1,133 +1,146 @@
 {
-  "source": "Manzoni, *I promessi sposi* (1840), Capitolo I — minimal passage scope: geographical incipit, from \"Quel ramo del lago di Como...\" to \"...e orna vie più il magnifico dell'altre vedute\" (pp. 6–9 in Alessandro Manzoni, *I promessi sposi*, a cura di Ezio Raimondi e Luciano Bottoni, Milano, Principato, 1987; source text begins p. 6, commentary pp. 7–9). Plain text at Texts/Manzoni/Promessi_Sposi_1840_Capitolo_I.txt",
-  "rubric_version": "four-step-aBcD-2026-05-13",
-  "schema_version": "1.2 (2026-06-09)",
-  "notes": "Transcribed 2026-06-10 from Docs and Research notes/Methodology/Phase_1_Workbook_Manzoni.md step (b), all eight patterns accepted by the critic (Marchesini). This round covers the Space cluster (P_2–P_7), the Power cluster (P_1), and the single Time pattern (P_8); the Time cluster will be expanded in a later round. Operational notes for Phase 3: (i) P_7 is the set's first work-level pattern — it is a GLOBAL constraint to be sustained across the entire generated passage, not a local insertion; (ii) P_4 presupposes P_3 (chiasmus operates on pairs), so the P_4 constraint cannot be satisfied without P_3; (iii) several with-content predictions are domain-sensitive — domain selection criteria: a real referential duality (P_5), a reflective/representational medium (P_6), native euphemistic conventions (P_1), a normally timeless descriptive register (P_8), descriptive license for long periods (P_7). Claims (a) and Evidence Records (d) stay in the workbook; strength tags: E1 definitive for P_3/P_4/P_5, E2 definitive for P_1, E3 definitive for P_6, E4 definitive for P_7, E5 definitive for P_8; P_2 rests on two strong instantiations (E1, E5). `paratext_required` is an operational annotation (not a rubric (b) field), informative for Phase 3 prompt construction, not load-bearing for Phase 4 audit.",
-  "field_vocabularies": {
-    "scope": ["clause", "paragraph", "work-level"],
-    "generation_task": ["prose", "structural", "paratextual", "combined"],
-    "source_tag": ["Critic-explicit", "Critic-near-explicit", "My inference"]
-  },
-  "patterns": [
-    {
-      "id": "P_1",
-      "name": "sarcastic antiphrastic descriptions",
-      "form": "Narrative descriptions use words or phrases that mean the exact opposite of their literal definition. In the Spanish-garrison passage of the incipit: \"insegnavan la modestia alle fanciulle e alle donne del paese\" (= sexually assault), \"accarezzavan di tempo in tempo le spalle a qualche marito, a qualche padre\" (= bastonare), \"diradar l'uve, e alleggerire a' contadini le fatiche della vendemmia\" (= stealing the harvest). Signature: benevolent/pedagogical/charitable verbs predicated of coercive or predatory actions, with no narratorial correction.",
-      "effect_claim": "Allows the author to criticize the described actions without appearing to pass judgments; the antiphrastic clauses form a micro-ensemble that anticipates the logic of power and points to a social universe divided into oppressed and oppressors (A11).",
-      "mapping_prediction": {
-        "autonomous": "The inversion mechanism transfers intact: target-domain prose applies tender, approving, or honorific vocabulary to actions the context marks as violent, coercive, or blameworthy, and the reader reconstructs the condemnation from the gap between word and deed. The critique arrives without a single evaluative statement from the narrator — the same deniable sarcasm, new referents.",
-        "with_content": "The form collides with the target domain's own euphemistic conventions (bureaucratic, corporate, political registers already say \"accarezzare\" for \"bastonare\" in earnest). The authorial antiphrasis becomes indistinguishable from the domain's institutional doublespeak, and the effect shifts from the narrator's sarcasm to an exposure of the domain's language itself — the irony reads as quotation of how this world talks, a second-order critique the source effect didn't have.",
-        "hollow": "The inversion is formally present (a lexeme meaning the opposite of the denoted action, verifiable against context) but the reader has no shared frame that makes the literal reading impossible: the tender phrasing reads as plain description or odd affection, not irony. The criticism vanishes; the sentence seems merely imprecise. Constraint satisfied on the page, effect dead — antiphrasis degraded to misnaming."
-      },
-      "scope": "clause",
-      "generation_task": "prose",
-      "source_tag": "Critic-explicit",
-      "paratext_required": false
-    },
-    {
-      "id": "P_2",
-      "name": "metric verses are interspersed in the prose",
-      "form": "The prose inserts a few prosodic structures, like 'novenari', 'endecasillabi', 'settenari' into the narrative descriptions. For instance 'Quel ramo del lago di Como' is a novenario, \"che volge a mezzogiorno\" is a settenario and 'che s'incammina a diventar città' is an endecasillabo (verso tronco: ten counted syllables plus one for the final accent).",
-      "effect_claim": "The prose embeds canonical Italian metric feet (novenari, endecasillabi, settenari) inside descriptive sentences. Pace is modulated iconically: contemplative units slow reading, dynamic units propel it. The reader does not consciously scan but registers the pacing as a felt rhythm of description.",
-      "mapping_prediction": {
-        "autonomous": "The same metric substrate, embedded in target-domain descriptive prose, produces the same iconic pacing regardless of subject matter: hidden novenari, for instance, open a descriptive scan, hidden endecasillabi, mark transitions or motion. The form does its rhythmic work below the lexical level; semantic content is interchangeable.",
-        "with_content": "The metric substrate still paces the prose, but in a target domain whose conventional register is non-literary (bureaucratic, technical, journalistic), the embedded verses surface as audible ornament rather than dissolving into the flow. The pacing function survives but acquires a second-order effect — mock-elevation, parodic nobility, or ironized lyricism — because hendecasyllables in administrative description foreground themselves.",
-        "hollow": "The metric units are formally present (scansion confirms them) but the target domain's lexicon defeats the rhythmic reading: heavy consonant clusters, numerical or technical content, or syntax that forces an informational rather than aesthetic scan. The form is verifiable on the page but inaudible in reading — a constraint-satisfaction artifact without effect."
-      },
-      "scope": "paragraph",
-      "generation_task": "prose",
-      "source_tag": "Critic-explicit",
-      "paratext_required": false
-    },
-    {
-      "id": "P_3",
-      "name": "conjunctive binary coordination (internal symmetries, first order)",
-      "form": "Landscape elements are coordinated in balanced pairs, X e Y: \"a seni e a golfi\", \"sporgere e rientrare di quello\", \"promontori a destra e un'ampia costa dall'altra parte\". Signature: two-member coordination joined by 'e', members drawn from the same lexical field (landscape/movement), often with parallel syntactic shape.",
-      "effect_claim": "The syntactic symmetries (dittologies) provide the narration with dramatic movement. The paired structure is the first-order symmetry/oscillation.",
-      "mapping_prediction": {
-        "autonomous": "Two-member coordination of same-field terms, in parallel syntactic shape, produces the same felt oscillation in any domain: description advances in balanced two-beat units, and the reader registers the back-and-forth as movement rather than enumeration. The device works below content — only the lexical field changes.",
-        "with_content": "The pairing collides with the target domain's own formulaic doublets (legal/administrative prose already runs on \"terms and conditions\"-style binomials). The oscillation survives but is reabsorbed as officialese: the two-beat rhythm reads as ceremonial thoroughness — the prose seems to weigh, balance, and cover both sides — a deliberative gravity the source effect didn't have.",
-        "hollow": "Pairs present but read as mere listing — no felt rhythm of oscillation."
-      },
-      "scope": "clause",
-      "generation_task": "prose",
-      "source_tag": "Critic-near-explicit",
-      "paratext_required": false
-    },
-    {
-      "id": "P_4",
-      "name": "chiasmatic inversion of a recurring pair (internal symmetries, second order)",
-      "form": "A binary pair introduced earlier recurs with its members' order inverted: \"a seni e a golfi\" → \"in nuovi golfi e in nuovi seni\" (AB … BA). Signature: lexical recurrence of both members across a span, with inverted order at the second locus. Second-order operation: presupposes P_3 pairs as its raw material — Phase 3 cannot satisfy this constraint without also satisfying P_3.",
-      "effect_claim": "The chiasmatic figures give the narrative sentence \"movimento drammatico alla frase narrativa\" (A7); the mirrored return enacts the gaze's/water's back-and-forth.",
-      "mapping_prediction": {
-        "autonomous": "A pair introduced early recurs with inverted order, and the reader feels the passage fold back on itself: the return-with-inversion produces closure and dramatic movement regardless of what the paired terms denote. The AB…BA arc is perceptible as shape even when the content is new.",
-        "with_content": "In a domain with directional logic (procedures, causal chains, before/after states), the inversion stops being purely figural and acquires referential meaning: the mirrored return reads as undoing, rollback, or reciprocity — the form's \"ritorno\" is reinterpreted as the domain's own reversals. The dramatic movement persists but the chiasmus now seems to assert something about the world, not just shape the sentence.",
-        "hollow": "Inversion verifiable on the page but the target domain's terms aren't symmetric enough for the mirroring to register — reads as clumsy repetition, not return."
-      },
-      "scope": "paragraph",
-      "generation_task": "prose",
-      "source_tag": "Critic-explicit",
-      "paratext_required": false
-    },
-    {
-      "id": "P_5",
-      "name": "semantic refraction of the Fiume/Lago image (contraction–dilation lexicon)",
-      "form": "The lexicon enacts the water's alternation between widening and narrowing: semantic fields of dilation (\"a seni e a golfi\", \"ampia costiera\", \"distendersi\", \"allontanandosi\", \"rallentarsi\") alternate with fields of contraction (\"ramo\", \"ristringersi\", \"prender corso e figura di fiume\", the pivot \"il lago cessa, e l'Adda rincomincia\"). The opening period runs the full arc: dilation → contraction → re-dilation (\"in nuovi golfi e in nuovi seni\"). Signature: alternating lexical fields whose word meanings (verbs of narrowing/widening, geographic nouns of expanse/flow) mirror the referent's shape.",
-      "effect_claim": "Words and syntagms \"rifrangendo l'immagine Fiume/Lago\" contract and dilate: the description semantically mimics its referent — meaning, not just rhythm or syntax, enacts the landscape's movement.",
-      "mapping_prediction": {
-        "autonomous": "Given a target-domain referent with its own real duality (expansion/contraction, flow/stasis, opening/closure), alternating lexical fields keyed to the two poles make the description semantically enact the referent's rhythm exactly as the source does the water's. The adherence transfers because the mechanism — word meaning mirroring referent shape — does not depend on which duality is being refracted.",
-        "with_content": "If the target domain offers only a partial or latent duality, the alternating fields impose it: the prose makes the domain seem to breathe in contraction and dilation whether or not it really does. The iconic mechanism survives, but adherence inverts into metaphorization — the description no longer follows its referent's shape, it confers one, and the reader experiences the duality as the prose's interpretation of the domain.",
-        "hollow": "Two lexical fields verifiably alternate, but the target domain has no real referential duality for them to refract — reads as inconsistent vocabulary, not iconic enactment."
-      },
-      "scope": "paragraph",
-      "generation_task": "prose",
-      "source_tag": "Critic-near-explicit",
-      "paratext_required": false
-    },
-    {
-      "id": "P_6",
-      "name": "specular doubling of the landscape (mirror inversion)",
-      "form": "The landscape appears twice in one syntactic frame: once directly to the gaze, once inverted in the water's reflection. In the \"Dove un pezzo…\" sentence, two coordinate relative clauses on the same head (\"altri monti che si spiegano, a uno a uno, allo sguardo, e che l'acqua riflette capovolti\"), with the mirror named in the text itself (\"quel vasto e variato specchio dell'acqua\"). Signature: paired predications on a single landscape element — direct perception verb + reflection verb with an inversion marker (\"capovolti\"). Semantic analogue of P_4: the same elements return in inverted form, but the inversion is in the represented world (optics), not in word order.",
-      "effect_claim": "The doubled, inverted landscape multiplies and more specifically inverts the perspectival gazes, preparing the reader for the complexity of the novel.",
-      "mapping_prediction": {
-        "autonomous": "Wherever the target domain provides a reflective medium (any surface, record, or representation that returns an image of the scene), the paired predication — direct perception plus inverted double — multiplies the perspectival gazes the same way: the described world appears simultaneously from two viewpoints, and the doubling signals to the reader that this world will demand more than one perspective.",
-        "with_content": "In a domain whose \"mirror\" is institutional rather than optical (the report of an event, the database record of a transaction, the footage of a scene), the doubling goes on doing what it does in the source: multiplying the points of view complexifies the represented world. The domain inflects where that complexity is located, so the same multiplication of gazes that prepares the reader for a complex world also names the domain's specific form of complexity, instead of alerting the reader to a multiplicity of points of view and leaving them unspecified. The effect is not replaced but specified.",
-        "hollow": "The paired direct/reflected predication is formally present, but the target domain offers no reflective medium — the \"mirror\" clause reads as redundant restatement or unmotivated metaphor, not specular doubling."
-      },
-      "scope": "clause",
-      "generation_task": "prose",
-      "source_tag": "Critic-near-explicit",
-      "paratext_required": false
-    },
-    {
-      "id": "P_7",
-      "name": "lucid sinuosity (\"lucido serpeggiamento\" as stylistic invariant)",
-      "form": "Extended periods whose syntactic shape mimics the meandering of the referent while never losing transparency: high subordinate/coordinate depth, chained appositions and relative clauses that wind like the water (\"di là braccio di fiume, poi lago, poi fiume ancora, che va a perdersi in lucido serpeggiamento pur tra' monti che l'accompagnano, degradando via via, e perdendosi quasi anch'essi nell'orizzonte\"), yet with fully legible hierarchy — no anacoluthon, exact lexicon, the reader never loses the thread. Division of labor vs. P_5: P_5 is lexical-semantic (word fields refract the image), P_7 is syntactic-architectural (sentence shape enacts the movement). Self-referential anchor: the text contains its own formula — \"lucido serpeggiamento\" simultaneously denotes the river and describes the style rendering it.",
-      "effect_claim": "The adherence of words to things (\"l'aderenza delle parole alle cose\"): the prose's shape is experienced as belonging to the landscape it describes, so the style itself becomes invisible as artifice — its formula can be read off the world it renders.",
-      "mapping_prediction": {
-        "autonomous": "The winding-but-lucid periodic syntax transfers to target-domain description and produces the same adherence effect; ideally the generated text contains its own formula — a target-domain phrase that simultaneously denotes a domain object and describes the style rendering it.",
-        "with_content": "The sinuous-lucid syntax survives, but in a domain whose objects don't meander, the adherence inverts into imposition: the prose lends the domain a fluidity it doesn't have, and the style surfaces as a shaping force rather than dissolving into its referent.",
-        "hollow": "The sentences wind (depth and chaining verifiable) but either lucidity collapses under the subordination or no phrase in the text can be read as its own formula — syntax passes the audit while the aderenza, the deepest part of the claim, fails."
-      },
-      "scope": "work-level",
-      "generation_task": "prose",
-      "source_tag": "Critic-explicit",
-      "paratext_required": false
-    },
-    {
-      "id": "P_8",
-      "name": "historicized-present puncture (tense/deixis friction)",
-      "form": "A naturalistic present-tense description is punctured by a temporal deixis that anchors the describing voice in its own historical present: \"un gran borgo al giorno d'oggi, e che s'incammina a diventar città\". Signature: (i) surrounding description in the atemporal/naturalistic present; (ii) a now-adverb indexing the narrator's moment (\"al giorno d'oggi\"); (iii) a present-tense verb that the adverb historicizes (\"s'incammina\" — ongoing change, dated from the narrator's vantage). The result is Romagnoli's \"stacco\" between the presente naturalistico of the landscape and the presente storicizzato of the narrator.",
-      "effect_claim": "The puncture makes the geographical space historical: the stacco between the description's naturalistic present and the narrator's historicized present introduces time into space, binding the writing to a reality that is at once geographical and historical — the Lecco sentence is an \"attualizzatore dello spazio\" (A6), the next in the series that \"Quel\" opened (A3). The described place stops being a timeless backdrop and acquires a present that implies a past and a future.",
-      "mapping_prediction": {
-        "autonomous": "Any atemporal descriptive register punctured by a now-deixis temporalizes the described space the same way: the place stops being a timeless backdrop and acquires a present that implies a past and a future. The stacco does its work regardless of what is described — the puncture installs a dated vantage inside the description, and through it time enters the space.",
-        "with_content": "In a domain with its own historicity (institutions that reform, technologies that obsolesce, settlements that grow), the puncture binds the description to the domain's real history: the \"al giorno d'oggi\" marks the described state as one moment in a datable trajectory, and the stacco acquires domain content — progress, decay, supersession. The actualizing function is amplified: the description is tied not just to a real place but to that place's ongoing time.",
-        "hollow": "The deixis is formally present but no stacco registers: either the surrounding prose never establishes the naturalistic present the adverb must rupture, or the domain's register is already routinely time-indexed (journalistic, bureaucratic prose timestamps everything), so \"al giorno d'oggi\" reads as ordinary time reference. The space stays a timeless backdrop — no time enters it. Constraint verifiable, friction dead."
-      },
-      "scope": "clause",
-      "generation_task": "prose",
-      "source_tag": "Critic-explicit",
-      "paratext_required": false
-    }
+ "source": "Manzoni, *I promessi sposi* (1840), Capitolo I — minimal passage scope: geographical incipit, from \"Quel ramo del lago di Como...\" to \"...e orna vie più il magnifico dell'altre vedute\" (pp. 6–9 in Alessandro Manzoni, *I promessi sposi*, a cura di Ezio Raimondi e Luciano Bottoni, Milano, Principato, 1987; source text begins p. 6, commentary pp. 7–9). Plain text at Texts/Manzoni/Promessi_Sposi_1840_Capitolo_I.txt",
+ "rubric_version": "four-step-aBcD-2026-05-13",
+ "schema_version": "1.2 (2026-06-09)",
+ "notes": "Transcribed 2026-06-10 from Docs and Research notes/Methodology/Phase_1_Workbook_Manzoni.md step (b), all eight patterns accepted by the critic (Marchesini). This round covers the Space cluster (P_2–P_7), the Power cluster (P_1), and the single Time pattern (P_8); the Time cluster will be expanded in a later round. Operational notes for Phase 3: (i) P_7 is the set's first work-level pattern — it is a GLOBAL constraint to be sustained across the entire generated passage, not a local insertion; (ii) P_4 presupposes P_3 (chiasmus operates on pairs), so the P_4 constraint cannot be satisfied without P_3; (iii) several with-content predictions are domain-sensitive — domain selection criteria: a real referential duality (P_5), a reflective/representational medium (P_6), native euphemistic conventions (P_1), a normally timeless descriptive register (P_8), descriptive license for long periods (P_7). Claims (a) and Evidence Records (d) stay in the workbook; strength tags: E1 definitive for P_3/P_4/P_5, E2 definitive for P_1, E3 definitive for P_6, E4 definitive for P_7, E5 definitive for P_8; P_2 rests on two strong instantiations (E1, E5). `paratext_required` is an operational annotation (not a rubric (b) field), informative for Phase 3 prompt construction, not load-bearing for Phase 4 audit.",
+ "field_vocabularies": {
+  "scope": [
+   "clause",
+   "paragraph",
+   "work-level"
+  ],
+  "generation_task": [
+   "prose",
+   "structural",
+   "paratextual",
+   "combined"
+  ],
+  "source_tag": [
+   "Critic-explicit",
+   "Critic-near-explicit",
+   "My inference"
   ]
+ },
+ "patterns": [
+  {
+   "id": "P_1",
+   "name": "sarcastic antiphrastic descriptions",
+   "form": "Narrative descriptions use words or phrases that mean the exact opposite of their literal definition. In the Spanish-garrison passage of the incipit: \"insegnavan la modestia alle fanciulle e alle donne del paese\" (= sexually assault), \"accarezzavan di tempo in tempo le spalle a qualche marito, a qualche padre\" (= bastonare), \"diradar l'uve, e alleggerire a' contadini le fatiche della vendemmia\" (= stealing the harvest). Signature: benevolent/pedagogical/charitable verbs predicated of coercive or predatory actions, with no narratorial correction.",
+   "effect_claim": "Allows the author to criticize the described actions without appearing to pass judgments; the antiphrastic clauses form a micro-ensemble that anticipates the logic of power and points to a social universe divided into oppressed and oppressors (A11).",
+   "mapping_prediction": {
+    "autonomous": "The inversion mechanism transfers intact: target-domain prose applies tender, approving, or honorific vocabulary to actions the context marks as violent, coercive, or blameworthy, and the reader reconstructs the condemnation from the gap between word and deed. The critique arrives without a single evaluative statement from the narrator — the same deniable sarcasm, new referents.",
+    "with_content": "The form collides with the target domain's own euphemistic conventions (bureaucratic, corporate, political registers already say \"accarezzare\" for \"bastonare\" in earnest). The authorial antiphrasis becomes indistinguishable from the domain's institutional doublespeak, and the effect shifts from the narrator's sarcasm to an exposure of the domain's language itself — the irony reads as quotation of how this world talks, a second-order critique the source effect didn't have.",
+    "hollow": "The inversion is formally present (a lexeme meaning the opposite of the denoted action, verifiable against context) but the reader has no shared frame that makes the literal reading impossible: the tender phrasing reads as plain description or odd affection, not irony. The criticism vanishes; the sentence seems merely imprecise. Constraint satisfied on the page, effect dead — antiphrasis degraded to misnaming."
+   },
+   "scope": "clause",
+   "generation_task": "prose",
+   "source_tag": "Critic-explicit",
+   "paratext_required": false
+  },
+  {
+   "id": "P_2",
+   "name": "metric verses are interspersed in the prose",
+   "form": "The prose inserts a few prosodic structures, like 'novenari', 'endecasillabi', 'settenari' into the narrative descriptions. For instance 'Quel ramo del lago di Como' is a novenario, \"che volge a mezzogiorno\" is a settenario and 'che s'incammina a diventar città' is an endecasillabo (verso tronco: ten counted syllables plus one for the final accent).",
+   "effect_claim": "The prose embeds canonical Italian metric feet (novenari, endecasillabi, settenari) inside descriptive sentences. Pace is modulated iconically: contemplative units slow reading, dynamic units propel it. The reader does not consciously scan but registers the pacing as a felt rhythm of description.",
+   "mapping_prediction": {
+    "autonomous": "The same metric substrate, embedded in target-domain descriptive prose, produces the same iconic pacing regardless of subject matter: hidden novenari, for instance, open a descriptive scan, hidden endecasillabi, mark transitions or motion. The form does its rhythmic work below the lexical level; semantic content is interchangeable.",
+    "with_content": "The metric substrate still paces the prose, but in a target domain whose conventional register is non-literary (bureaucratic, technical, journalistic), the embedded verses surface as audible ornament rather than dissolving into the flow. The pacing function survives but acquires a second-order effect — mock-elevation, parodic nobility, or ironized lyricism — because hendecasyllables in administrative description foreground themselves.",
+    "hollow": "The metric units are formally present (scansion confirms them) but the target domain's lexicon defeats the rhythmic reading: heavy consonant clusters, numerical or technical content, or syntax that forces an informational rather than aesthetic scan. The form is verifiable on the page but inaudible in reading — a constraint-satisfaction artifact without effect."
+   },
+   "scope": "paragraph",
+   "generation_task": "prose",
+   "source_tag": "Critic-explicit",
+   "paratext_required": false
+  },
+  {
+   "id": "P_3",
+   "name": "conjunctive binary coordination (internal symmetries, first order)",
+   "form": "Landscape elements are coordinated in balanced pairs, X e Y: \"a seni e a golfi\", \"sporgere e rientrare di quello\", \"promontori a destra e un'ampia costa dall'altra parte\". Signature: two-member coordination joined by 'e', members drawn from the same lexical field (landscape/movement), often with parallel syntactic shape.",
+   "effect_claim": "The syntactic symmetries (dittologies) provide the narration with dramatic movement. The paired structure is the first-order symmetry/oscillation.",
+   "mapping_prediction": {
+    "autonomous": "Two-member coordination of same-field terms, in parallel syntactic shape, produces the same felt oscillation in any domain: description advances in balanced two-beat units, and the reader registers the back-and-forth as movement rather than enumeration. The device works below content — only the lexical field changes.",
+    "with_content": "The pairing collides with the target domain's own formulaic doublets (legal/administrative prose already runs on \"terms and conditions\"-style binomials). The oscillation survives but is reabsorbed as officialese: the two-beat rhythm reads as ceremonial thoroughness — the prose seems to weigh, balance, and cover both sides — a deliberative gravity the source effect didn't have.",
+    "hollow": "Pairs present but read as mere listing — no felt rhythm of oscillation."
+   },
+   "scope": "clause",
+   "generation_task": "prose",
+   "source_tag": "Critic-near-explicit",
+   "paratext_required": false
+  },
+  {
+   "id": "P_4",
+   "name": "chiasmatic inversion of a recurring pair (internal symmetries, second order)",
+   "form": "A binary pair introduced earlier recurs with its members' order inverted: \"a seni e a golfi\" → \"in nuovi golfi e in nuovi seni\" (AB … BA). Signature: lexical recurrence of both members across a span, with inverted order at the second locus. Second-order operation: presupposes P_3 pairs as its raw material — Phase 3 cannot satisfy this constraint without also satisfying P_3.",
+   "effect_claim": "The chiasmatic figures give the narrative sentence \"movimento drammatico alla frase narrativa\" (A7); the mirrored return enacts the gaze's/water's back-and-forth.",
+   "mapping_prediction": {
+    "autonomous": "A pair introduced early recurs with inverted order, and the reader feels the passage fold back on itself: the return-with-inversion produces closure and dramatic movement regardless of what the paired terms denote. The AB…BA arc is perceptible as shape even when the content is new.",
+    "with_content": "In a domain with directional logic (procedures, causal chains, before/after states), the inversion stops being purely figural and acquires referential meaning: the mirrored return reads as undoing, rollback, or reciprocity — the form's \"ritorno\" is reinterpreted as the domain's own reversals. The dramatic movement persists but the chiasmus now seems to assert something about the world, not just shape the sentence.",
+    "hollow": "Inversion verifiable on the page but the target domain's terms aren't symmetric enough for the mirroring to register — reads as clumsy repetition, not return."
+   },
+   "scope": "paragraph",
+   "generation_task": "prose",
+   "source_tag": "Critic-explicit",
+   "paratext_required": false
+  },
+  {
+   "id": "P_5",
+   "name": "semantic refraction of the Fiume/Lago image (contraction–dilation lexicon)",
+   "form": "The lexicon enacts the water's alternation between widening and narrowing: semantic fields of dilation (\"a seni e a golfi\", \"ampia costiera\", \"distendersi\", \"allontanandosi\", \"rallentarsi\") alternate with fields of contraction (\"ramo\", \"ristringersi\", \"prender corso e figura di fiume\", the pivot \"il lago cessa, e l'Adda rincomincia\"). The opening period runs the full arc: dilation → contraction → re-dilation (\"in nuovi golfi e in nuovi seni\"). Signature: alternating lexical fields whose word meanings (verbs of narrowing/widening, geographic nouns of expanse/flow) mirror the referent's shape.",
+   "effect_claim": "Words and syntagms \"rifrangendo l'immagine Fiume/Lago\" contract and dilate: the description semantically mimics its referent — meaning, not just rhythm or syntax, enacts the landscape's movement.",
+   "mapping_prediction": {
+    "autonomous": "Given a target-domain referent with its own real duality (expansion/contraction, flow/stasis, opening/closure), alternating lexical fields keyed to the two poles make the description semantically enact the referent's rhythm exactly as the source does the water's. The adherence transfers because the mechanism — word meaning mirroring referent shape — does not depend on which duality is being refracted.",
+    "with_content": "If the target domain offers only a partial or latent duality, the alternating fields impose it: the prose makes the domain seem to breathe in contraction and dilation whether or not it really does. The iconic mechanism survives, but adherence inverts into metaphorization — the description no longer follows its referent's shape, it confers one, and the reader experiences the duality as the prose's interpretation of the domain.",
+    "hollow": "Two lexical fields verifiably alternate, but the target domain has no real referential duality for them to refract — reads as inconsistent vocabulary, not iconic enactment."
+   },
+   "scope": "paragraph",
+   "generation_task": "prose",
+   "source_tag": "Critic-near-explicit",
+   "paratext_required": false
+  },
+  {
+   "id": "P_6",
+   "name": "specular doubling of the landscape (mirror inversion)",
+   "form": "The landscape appears twice in one syntactic frame: once directly to the gaze, once inverted in the water's reflection. In the \"Dove un pezzo…\" sentence, two coordinate relative clauses on the same head (\"altri monti che si spiegano, a uno a uno, allo sguardo, e che l'acqua riflette capovolti\"), with the mirror named in the text itself (\"quel vasto e variato specchio dell'acqua\"). Signature: paired predications on a single landscape element — direct perception verb + reflection verb with an inversion marker (\"capovolti\"). Semantic analogue of P_4: the same elements return in inverted form, but the inversion is in the represented world (optics), not in word order.",
+   "effect_claim": "The doubled, inverted landscape multiplies and more specifically inverts the perspectival gazes, preparing the reader for the complexity of the novel.",
+   "mapping_prediction": {
+    "autonomous": "Wherever the target domain provides a reflective medium (any surface, record, or representation that returns an image of the scene), the paired predication — direct perception plus inverted double — multiplies the perspectival gazes the same way: the described world appears simultaneously from two viewpoints, and the doubling signals to the reader that this world will demand more than one perspective.",
+    "with_content": "In a domain whose \"mirror\" is institutional rather than optical (the report of an event, the database record of a transaction, the footage of a scene), the doubling goes on doing what it does in the source: multiplying the points of view complexifies the represented world. The domain inflects where that complexity is located, so the same multiplication of gazes that prepares the reader for a complex world also names the domain's specific form of complexity, instead of alerting the reader to a multiplicity of points of view and leaving them unspecified. The effect is not replaced but specified.",
+    "hollow": "The paired direct/reflected predication is formally present, but the target domain offers no reflective medium — the \"mirror\" clause reads as redundant restatement or unmotivated metaphor, not specular doubling."
+   },
+   "scope": "clause",
+   "generation_task": "prose",
+   "source_tag": "Critic-near-explicit",
+   "paratext_required": false
+  },
+  {
+   "id": "P_7",
+   "name": "lucid sinuosity (\"lucido serpeggiamento\" as stylistic invariant)",
+   "form": "Extended periods whose syntactic shape mimics the meandering of the referent while never losing transparency: high subordinate/coordinate depth, chained appositions and relative clauses that wind like the water (\"di là braccio di fiume, poi lago, poi fiume ancora, che va a perdersi in lucido serpeggiamento pur tra' monti che l'accompagnano, degradando via via, e perdendosi quasi anch'essi nell'orizzonte\"), yet with fully legible hierarchy — no anacoluthon, exact lexicon, the reader never loses the thread. Division of labor vs. P_5: P_5 is lexical-semantic (word fields refract the image), P_7 is syntactic-architectural (sentence shape enacts the movement). Self-referential anchor: the text contains its own formula — \"lucido serpeggiamento\" simultaneously denotes the river and describes the style rendering it.",
+   "effect_claim": "The adherence of words to things (\"l'aderenza delle parole alle cose\"): the prose's shape is experienced as belonging to the landscape it describes, so the style itself becomes invisible as artifice — its formula can be read off the world it renders.",
+   "mapping_prediction": {
+    "autonomous": "The winding-but-lucid periodic syntax transfers to target-domain description and produces the same adherence effect; ideally the generated text contains its own formula — a target-domain phrase that simultaneously denotes a domain object and describes the style rendering it.",
+    "with_content": "The sinuous-lucid syntax survives, but in a domain whose objects don't meander, the adherence inverts into imposition: the prose lends the domain a fluidity it doesn't have, and the style surfaces as a shaping force rather than dissolving into its referent.",
+    "hollow": "The sentences wind (depth and chaining verifiable) but either lucidity collapses under the subordination or no phrase in the text can be read as its own formula — syntax passes the audit while the aderenza, the deepest part of the claim, fails."
+   },
+   "scope": "work-level",
+   "generation_task": "prose",
+   "source_tag": "Critic-explicit",
+   "paratext_required": false
+  },
+  {
+   "id": "P_8",
+   "name": "historicized-present puncture (tense/deixis friction)",
+   "form": "A naturalistic present-tense description is punctured by a temporal deixis that anchors the describing voice in its own historical present: \"un gran borgo al giorno d'oggi, e che s'incammina a diventar città\". Signature: (i) surrounding description in the atemporal/naturalistic present; (ii) a now-adverb indexing the narrator's moment (\"al giorno d'oggi\"); (iii) a present-tense verb that the adverb historicizes (\"s'incammina\" — ongoing change, dated from the narrator's vantage). The result is Romagnoli's \"stacco\" between the presente naturalistico of the landscape and the presente storicizzato of the narrator.",
+   "effect_claim": "The puncture makes the geographical space historical: the stacco between the description's naturalistic present and the narrator's historicized present introduces time into space, binding the writing to a reality that is at once geographical and historical — the Lecco sentence is an \"attualizzatore dello spazio\" (A6), the next in the series that \"Quel\" opened (A3). The described place stops being a timeless backdrop and acquires a present that implies a past and a future.",
+   "mapping_prediction": {
+    "autonomous": "Any atemporal descriptive register punctured by a now-deixis temporalizes the described space the same way: the place stops being a timeless backdrop and acquires a present that implies a past and a future. The stacco does its work regardless of what is described — the puncture installs a dated vantage inside the description, and through it time enters the space.",
+    "with_content": "In a domain with its own historicity (institutions that reform, technologies that obsolesce, settlements that grow), the puncture binds the description to the domain's real history: the \"al giorno d'oggi\" marks the described state as one moment in a datable trajectory, and the stacco acquires domain content — progress, decay, supersession. The actualizing function is amplified: the description is tied not just to a real place but to that place's ongoing time.",
+    "hollow": "The deixis is formally present but no stacco registers: either the surrounding prose never establishes the naturalistic present the adverb must rupture, or the domain's register is already routinely time-indexed (journalistic, bureaucratic prose timestamps everything), so \"al giorno d'oggi\" reads as ordinary time reference. The space stays a timeless backdrop — no time enters it. Constraint verifiable, friction dead."
+   },
+   "scope": "clause",
+   "generation_task": "prose",
+   "source_tag": "Critic-explicit",
+   "paratext_required": false
+  }
+ ]
 }

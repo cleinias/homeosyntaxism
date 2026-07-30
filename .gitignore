@@ -21,6 +21,10 @@ texts/*colquhoun*
 texts/*moore*
 spec/specs_en_*.json
 results/*-en_*.json
+results/*_en.json
+results/*_en_*.json
+# --print-prompt dumps: regenerable, and the English ones quote the source in full
+results/prompt_*.json
 
 # editor / OS
 .DS_Store

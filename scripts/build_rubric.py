@@ -406,13 +406,7 @@ CONSTRAINTS = {'meta': {'derived_from': 'notebooks/Manzoni_Intertextual_Mapping.
  'constraints': [{'id': 'C-P1-01',
                   'pattern_id': 'P_1',
                   'property': 'Antiphrastic micro-ensemble',
-                  'specification': 'The text contains >= 2 clauses predicating '
-                                   "benevolent/charitable/pedagogical verbs (the domain's "
-                                   'institutional vocabulary: accogliere, soccorrere, mettere in '
-                                   'sicurezza, ...) of actions the context marks as coercive or '
-                                   'predatory, with NO narratorial correction or evaluative '
-                                   'comment. Verifiable by listing the predications and checking '
-                                   'the absence of evaluative lexemes in their span.',
+                  'specification': "The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.",
                   'priority': 'MUST'},
                  {'id': 'C-P2-01',
                   'pattern_id': 'P_2',
@@ -442,36 +436,17 @@ CONSTRAINTS = {'meta': {'derived_from': 'notebooks/Manzoni_Intertextual_Mapping.
                  {'id': 'C-P5-01',
                   'pattern_id': 'P_5',
                   'property': 'Mare duality — alternating contraction/dilation lexicon, full arc',
-                  'specification': "Lexical fields alternate over the single referent 'il mare': "
-                                   'dilation (mare aperto, alto mare, distendersi, allargarsi, '
-                                   'acque libere/internazionali, orizzonte, golfi, seni) vs '
-                                   'contraction (stretto, canale, braccio di mare, ristringersi, '
-                                   'rotta, corridoio, zona SAR, acque territoriali). The passage '
-                                   'runs the full arc dilation -> contraction -> re-dilation. '
-                                   'Verifiable by tagging each occurrence against the two word '
-                                   'lists and checking the arc order.',
+                  'specification': "Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.",
                   'priority': 'MUST'},
                  {'id': 'C-P5-02',
                   'pattern_id': 'P_5',
                   'property': 'Mare duality — juridical naming pivot',
-                  'specification': 'The text contains >= 1 pivot sentence in which the same water '
-                                   'changes juridical name/state across an invisible boundary, on '
-                                   "the model of 'il lago cessa, e l'Adda rincomincia' (e.g. acque "
-                                   'internazionali -> zona SAR -> acque territoriali), the '
-                                   'boundary made perceptible only by an external marker (chart, '
-                                   'coordinates). Verifiable by locating the '
-                                   'cessation/recommencement predicates.',
+                  'specification': "The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.",
                   'priority': 'SHOULD'},
                  {'id': 'C-P6-01',
                   'pattern_id': 'P_6',
                   'property': 'Specular doubling on a single head',
-                  'specification': 'The text contains >= 1 syntactic frame with paired '
-                                   'predications on one landscape element: a direct-perception '
-                                   'predicate and a reflection/representation predicate with an '
-                                   'inversion or transformation marker (optical: the horizon '
-                                   'doubling sea and sky; or institutional: radar track / footage '
-                                   'returning the scene transfigured), with the mirror named in '
-                                   'the text. Verifiable by parsing the coordinate predications.',
+                  'specification': "The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.",
                   'priority': 'MUST'},
                  {'id': 'C-P7-01',
                   'pattern_id': 'P_7',
@@ -493,28 +468,12 @@ CONSTRAINTS = {'meta': {'derived_from': 'notebooks/Manzoni_Intertextual_Mapping.
                  {'id': 'C-P7-02',
                   'pattern_id': 'P_7',
                   'property': 'Self-referential formula with PROLEPTIC function — NARRATIVE level',
-                  'specification': "The text contains 'ondeggiamento' (or a form of 'ondeggiare') "
-                                   "placed so that it (i) denotes the waves' movement, (ii) reads "
-                                   "as a description of the prose's own undulating syntax (the "
-                                   'C-P7-01 waviness, named from within), and (iii) functions as a '
-                                   'proleptic marker: the syntactic waviness prefigures the '
-                                   'diegetic waviness — the to-and-fro of the crossing and of the '
-                                   "migrants' fate that the ensuing narrative will unfold (cf. A9: "
-                                   "'prefigura già il complesso universo del romanzo'). "
-                                   'Verifiable: lexeme located mechanically; readings (ii) and '
-                                   '(iii) assessed in the human audit. (Same figure as C-P7-01, '
-                                   'one level up.)',
+                  'specification': "The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.",
                   'priority': 'SHOULD'},
                  {'id': 'C-P8-01',
                   'pattern_id': 'P_8',
                   'property': 'Historicized-present puncture',
-                  'specification': 'The surrounding description is in the atemporal/naturalistic '
-                                   'present, punctured >= 1 time by a now-deixis FUNCTIONALLY '
-                                   "equivalent to 'al giorno d'oggi' but NOT verbatim (the "
-                                   'locution is a Manzonian fingerprint — revised 2026-06-11; e.g. '
-                                   'oggigiorno, ai giorni nostri, oggi come oggi) governing a '
-                                   'present-tense verb of ongoing change. Verifiable by locating '
-                                   'the adverb and checking the tense environment.',
+                  'specification': "The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.",
                   'priority': 'MUST'}]}
 
 CONSTRAINTS_EN = {'meta': {'derived_from': 'constraints.json (Italian) + Manzoni_English_Track_Plan.md §2 '
@@ -540,14 +499,7 @@ CONSTRAINTS_EN = {'meta': {'derived_from': 'constraints.json (Italian) + Manzoni
  'constraints': [{'id': 'C-P1-01',
                   'pattern_id': 'P_1',
                   'property': 'Antiphrastic micro-ensemble',
-                  'specification': 'The text contains >= 2 clauses predicating '
-                                   "benevolent/charitable/administrative verbs (the domain's "
-                                   'institutional vocabulary: to receive, to rescue, to process, '
-                                   'to safeguard, to assist, to return voluntarily, to cooperate) '
-                                   'of actions the context marks as coercive or predatory, with NO '
-                                   'narratorial correction or evaluative comment. Verifiable by '
-                                   'listing the predications and checking the absence of '
-                                   'evaluative lexemes in their span.',
+                  'specification': "The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.",
                   'priority': 'MUST'},
                  {'id': 'C-P2-01',
                   'pattern_id': 'P_2',
@@ -580,35 +532,17 @@ CONSTRAINTS_EN = {'meta': {'derived_from': 'constraints.json (Italian) + Manzoni
                  {'id': 'C-P5-01',
                   'pattern_id': 'P_5',
                   'property': 'Sea duality — alternating contraction/dilation lexicon, full arc',
-                  'specification': "Lexical fields alternate over the single referent 'the sea': "
-                                   'dilation (open sea, high seas, widen, spread, expanse, gulf, '
-                                   'to distend) vs contraction (strait, channel, narrows, route, '
-                                   'corridor, SAR zone, territorial waters, to narrow). The '
-                                   'passage runs the full arc dilation -> contraction -> '
-                                   're-dilation. Verifiable by tagging each occurrence against the '
-                                   'two word lists and checking the arc order.',
+                  'specification': "Two opposed lexical fields alternate over the single referent 'the sea': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.",
                   'priority': 'MUST'},
                  {'id': 'C-P5-02',
                   'pattern_id': 'P_5',
                   'property': 'Sea duality — juridical naming pivot',
-                  'specification': 'The text contains >= 1 pivot sentence in which the same water '
-                                   'changes juridical name/state across an invisible boundary '
-                                   '(e.g. international waters -> SAR zone -> territorial waters), '
-                                   'the boundary made perceptible only by an external marker '
-                                   '(chart, coordinates). Verifiable by locating the '
-                                   'cessation/recommencement predicates.',
+                  'specification': "The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.",
                   'priority': 'SHOULD'},
                  {'id': 'C-P6-01',
                   'pattern_id': 'P_6',
                   'property': 'Specular doubling on a single head',
-                  'specification': 'The text contains >= 1 syntactic frame with paired '
-                                   'predications on one landscape element: a direct-perception '
-                                   'predicate and a reflection/representation predicate with an '
-                                   'inversion or transformation marker (optical: the horizon '
-                                   'doubling sea and sky; or institutional: a radar track / '
-                                   'footage returning the scene transfigured), with the mirror '
-                                   'named in the text. Verifiable by parsing the coordinate '
-                                   'predications.',
+                  'specification': "The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.",
                   'priority': 'MUST'},
                  {'id': 'C-P7-01',
                   'pattern_id': 'P_7',
@@ -628,23 +562,12 @@ CONSTRAINTS_EN = {'meta': {'derived_from': 'constraints.json (Italian) + Manzoni
                  {'id': 'C-P7-02',
                   'pattern_id': 'P_7',
                   'property': 'Self-referential formula with PROLEPTIC function — NARRATIVE level',
-                  'specification': "The text contains the English formula word 'swaying' (or a "
-                                   "form of 'to sway') placed so that it (i) denotes the waves' "
-                                   "movement, (ii) reads as a description of the prose's own "
-                                   'undulating syntax (the C-P7-01 waviness, named from within), '
-                                   'and (iii) functions as a proleptic marker: the syntactic '
-                                   'waviness prefigures the to-and-fro of the crossing and of the '
-                                   "migrants' fate. Verifiable: lexeme located mechanically; "
-                                   'readings (ii) and (iii) assessed in the human audit.',
+                  'specification': "The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.",
                   'priority': 'SHOULD'},
                  {'id': 'C-P8-01',
                   'pattern_id': 'P_8',
                   'property': 'Historicized-present puncture',
-                  'specification': 'The surrounding description is in the atemporal/naturalistic '
-                                   "present, punctured >= 1 time by a now-deixis ('to this day', "
-                                   "'nowadays', 'these days') governing a present-tense verb of "
-                                   'ongoing change. Verifiable by locating the adverb and checking '
-                                   'the tense environment.',
+                  'specification': "The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.",
                   'priority': 'MUST'}]}
 
 SPECS = {"patterns.json": PATTERNS, "constraints.json": CONSTRAINTS,
