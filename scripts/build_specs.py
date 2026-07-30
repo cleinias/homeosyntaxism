@@ -133,6 +133,10 @@ def emit_D4_profile(tok):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lang", default="it", choices=["it", "en"])
+    ap.add_argument("--embargo", default="auto", choices=["auto", "filtered", "full"],
+                    help="auto (default) uses spec/embargo_<lang>_filtered.json when it "
+                         "exists — the source's names and markers — and the unfiltered "
+                         "content-word list otherwise; full forces the old behaviour")
     ap.add_argument("--degree", default="D2", choices=["S", "D0", "D1", "D2", "D3", "D4"],
                     help="D2 = clause nesting, D3 = clause inventory, D4 = depth profile "
                          "(the old D2-grain-c / D2-grain-a / D3 respectively)")
@@ -194,16 +198,35 @@ def main():
         f"  [{c['id']}] ({c['priority']}) from {c['pattern_id']}: {c['property']}\n    Specification: {c['specification']}"
         for c in constraints)
 
-    embargo = (sorted(w for w in content_words(tokens(source)) if w not in WHITELIST["it"]) if lang == "it"
-               else sorted(w for w in content_lemmas if w not in WHITELIST["en"]))
+    # The embargo: by default the filtered list — the source's names and markers —
+    # rather than every content word it contains.  build_embargo.py explains why the
+    # unfiltered version forbade ordinary Italian and could not be obeyed; --embargo
+    # full restores it for comparison.
+    full = (sorted(w for w in content_words(tokens(source)) if w not in WHITELIST["it"]) if lang == "it"
+            else sorted(w for w in content_lemmas if w not in WHITELIST["en"]))
+    filtered_path = SPEC / f"embargo_{lang}_filtered.json"
+    if a.embargo == "full" or (a.embargo == "auto" and not filtered_path.exists()):
+        embargo, emb_src = full, f"full ({len(full)} content words)"
+    else:
+        f = json.loads(filtered_path.read_text(encoding="utf-8"))
+        embargo = sorted(f["embargo"])
+        missing = [w for w in embargo if w not in full]
+        if missing:
+            sys.exit(f"build_specs: {filtered_path.name} lists words absent from the "
+                     f"source's content words ({missing[:5]}) — rebuild it")
+        if f.get("decide"):
+            print(f"  note: {len(f['decide'])} words still unruled in "
+                  f"{filtered_path.name}; they are NOT embargoed")
+        emb_src = (f"filtered ({len(embargo)} of {len(full)}; thresholds "
+                   f"{f['thresholds']['zipf_free']}/{f['thresholds']['zipf_mark']})")
 
     spec = {"lang": lang, "degree": deg, "source": source, "n_periods": len(periods),
-            "periods": out_periods, "embargo": embargo, "constraint_block": constraint_block,
-            "brief": brief, "domain": domain}
+            "periods": out_periods, "embargo": embargo, "embargo_source": emb_src,
+            "constraint_block": constraint_block, "brief": brief, "domain": domain}
     out = SPEC / f"specs_{lang}_{deg}.json"
     out.write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"wrote spec/{out.name}: lang={lang} degree={deg}, {len(periods)} periods, "
-          f"{len(embargo)} embargo words, {len(constraints)} constraints")
+          f"embargo {emb_src}, {len(constraints)} constraints")
     print("\n=== degree spec, period 1 ===")
     print(out_periods[0]["spec"])
 

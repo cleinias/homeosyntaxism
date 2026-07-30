@@ -23,6 +23,7 @@ Coherence is the binding axis, so it also prints the best COHERENT candidate.
 Run with the Atlas venv python (Stanza). Needs ANTHROPIC_API_KEY in .env.
 """
 import json
+import re
 import sys
 import time
 import urllib.error
@@ -59,6 +60,13 @@ def score_file(path):
     data = json.loads(Path(path).read_text(encoding="utf-8"))
     src = data["source"]
     lang = data.get("lang", "it")
+    # the embargo as the run actually stated it, read back out of its own prompt,
+    # so old and new runs are both scoreable without consulting a spec file
+    body = data.get("prompt", "").split("inflected form", 1)
+    spec_embargo = sorted({w.strip().lower() for w in
+                           body[1].split("REQUIREMENTS")[0].replace(":", " ")
+                           .replace("\n", " ").split(",")
+                           if w.strip() and " " not in w.strip()}) if len(body) > 1 else []
     stok = TM.parse(src, lang=lang)
     sl = lemmas(stok)
     rows = []
@@ -77,6 +85,7 @@ def score_file(path):
                 fdiv if fdiv is not None else 0.0, coh if coh is not None else 0.0]
         rows.append({
             "i": g["i"], "words": len(txt.split()),
+            "embargo_hits": emb_hits(g["text"], spec_embargo),
             "d2_clause": c["d2_clause"], "depth_gap": c["depth_gap"],
             "s0_pos": c["s0_pos"], "lemma_jacc": round(lj, 3),
             "frame_div": round(fdiv, 3) if fdiv is not None else None,
@@ -85,6 +94,31 @@ def score_file(path):
         time.sleep(0.2)
     rows.sort(key=lambda r: r["score"], reverse=True)
     return data, rows
+
+
+def emb_hits(text, embargo):
+    """Embargoed forms present in a generation, by lemma-blind stem match.
+
+    Reported, never enforced: the criterion is the gate, and a violation rate is
+    itself a finding — it is how we learned the old 284-word list could not be
+    obeyed.  Stems because the embargo forbids "any inflected form".
+    """
+    if not embargo:
+        return []
+    words = set(re.findall(r"[a-zà-ÿ']{3,}", text.lower()))
+    hits = set()
+    for e in embargo:
+        for w in words:
+            # exact, or one is the other's prefix with at most two characters of
+            # inflection between them.  A blunter 5-character stem match reported
+            # `strada` as `stradette` and `contrada` as `contrassegno` — different
+            # words that merely start alike.
+            if w == e or (len(e) > 4
+                          and ((w.startswith(e) and len(w) - len(e) <= 2)
+                               or (e.startswith(w) and len(e) - len(w) <= 2))):
+                hits.add(e)
+                break
+    return sorted(hits)
 
 
 def main():

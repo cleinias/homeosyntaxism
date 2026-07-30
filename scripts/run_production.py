@@ -177,13 +177,20 @@ def gen_vllm(endpoint, model, prompt, n, temperature, max_tokens):
     return [c["message"]["content"].strip() for c in r["choices"]]
 
 
-def gen_anthropic(model, prompt, n, temperature, max_tokens):
+NO_TEMPERATURE = ("opus-4-8", "opus-5", "fable-5")
+
+
+def gen_anthropic(model, prompt, n, temperature, max_tokens, extra_body=None):
     out = []
     for _ in range(n):
         body = {"model": model, "max_tokens": max_tokens,
                 "messages": [{"role": "user", "content": prompt}]}
-        if "opus-4-8" not in model:   # opus-4-8 rejects temperature
+        # Newer Anthropic models reject the parameter outright: Opus 5 answers
+        # "`temperature` is deprecated for this model" with a 400.  Sampling on those
+        # comes from the model's own default, so an n>1 run still varies.
+        if not any(k in model for k in NO_TEMPERATURE):
             body["temperature"] = temperature
+        body.update(extra_body or {})
         r = _post("https://api.anthropic.com/v1/messages", body,
                   {"x-api-key": env("ANTHROPIC_API_KEY"),
                    "anthropic-version": "2023-06-01",

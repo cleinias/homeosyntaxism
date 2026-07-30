@@ -200,6 +200,25 @@ def domain_words(lang):
     return out, seen
 
 
+def rulings(lang):
+    """Human decisions on the band, applied last and overriding everything.
+
+    A judge that is unanimous can still be wrong -- `degradando` came back DATED
+    three times out of three and is ordinary modern Italian -- so the critic's
+    ruling is the final layer, and it lives in spec/ as data rather than in this
+    file as a special case.
+    """
+    path = SPEC / f"embargo_rulings_{lang}.json"
+    if not path.exists():
+        return {}
+    d = json.loads(path.read_text(encoding="utf-8"))
+    out = {}
+    for verdict, key in (("free", "free"), ("EMBARGO", "embargo")):
+        for w, why in (d.get(key) or {}).items():
+            out[w.lower()] = (verdict, why)
+    return out
+
+
 def judged(path):
     """word -> (yes, answered) from a domain_lexicon.py verdicts file, if present."""
     if not path.exists():
@@ -240,12 +259,16 @@ def band_call(k, upos, period, domain, in_gens):
 
 
 def classify(words, lang, zipf, free, mark, dom, lemmas, archaisms="free",
-             period=None, domain=None):
-    period, domain = period or {}, domain or {}
+             period=None, domain=None, ruled=None):
+    period, domain, ruled = period or {}, domain or {}, ruled or {}
     for w in words:
         k = w.lower()
         f = fold(k)
         lem, upos = lemmas.get(k, lemmas.get(f, (k, "")))
+        if k in ruled:
+            verdict, why = ruled[k]
+            yield w, max(zipf.get(x, 0.0) for x in variants(k, lem)), verdict, "RULING", why
+            continue
         # a word is as common as its most common form: `golfi` 2.24 / `golfo` 4.19,
         # `perdendosi` 2.50 / `perdendo` 4.36
         v = max(zipf.get(x, 0.0) for x in variants(k, lem))
@@ -317,8 +340,9 @@ def main():
     dom, dom_files = domain_words(a.lang)
     period = judged(SPEC / f"period_verdicts_{a.lang}.json")
     domain = judged(SPEC / f"domain_verdicts_{a.lang}.json")
+    ruled = rulings(a.lang)
     rows = list(classify(emb, a.lang, zipf, a.zipf_free, a.zipf_mark, dom, lemmas,
-                         a.archaisms, period, domain))
+                         a.archaisms, period, domain, ruled))
 
     keep = [r for r in rows if r[2] == "EMBARGO"]
     free = [r for r in rows if r[2] == "free"]
@@ -330,7 +354,9 @@ def main():
           f"{len(dec)} to decide")
     if period or domain:
         print(f"  band judges: period {len(period)} words, domain {len(domain)} words")
-    for layer in ["NAME", "MARKER", "ARCHAIC", "COMMON", "BAND"]:
+    if ruled:
+        print(f"  human rulings applied: {len(ruled)}")
+    for layer in ["NAME", "MARKER", "ARCHAIC", "COMMON", "BAND", "RULING"]:
         n = len([r for r in rows if r[3] == layer])
         print(f"  - {layer}: {n}")
 

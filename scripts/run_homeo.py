@@ -94,7 +94,8 @@ material (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on targe
 TARGET DOMAIN --- {specs['domain']} (in your own words):
 {specs['brief']}
 
-LEXICAL EMBARGO (absolute): none of these source content words may appear, in any inflected form:
+LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may
+appear, in any inflected form:
 {", ".join(specs['embargo'])}
 
 REQUIREMENTS --- all three hold together (the constrained homeomorphism):
@@ -119,7 +120,13 @@ def main():
                          "grain c is now D2, grain a is now D3, the old D3 is D4")
     ap.add_argument("--n", type=int, default=6)
     ap.add_argument("--temperature", type=float, default=0.9)
-    ap.add_argument("--max-tokens", type=int, default=2048)
+    ap.add_argument("--max-tokens", type=int, default=2048,
+                    help="on models whose thinking is on by default (Opus 5+) this caps "
+                         "thinking and text together, so give headroom")
+    ap.add_argument("--disable-thinking", action="store_true",
+                    help="thinking={type: disabled} — Opus 5 otherwise spends the budget "
+                         "on the thinking block and returns no passage")
+    ap.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"])
     ap.add_argument("--tag")
     ap.add_argument("--domain", metavar="FILE",
                     help="replacement TARGET DOMAIN block (e.g. specs/domain_brief_3item.txt); "
@@ -161,9 +168,18 @@ def main():
         elif a.backend == "openrouter":
             gens, ormeta = RP.gen_openrouter(a.model, prompt, a.n, a.temperature, a.max_tokens, a.provider)
         else:
-            gens = RP.gen_anthropic(a.model, prompt, a.n, a.temperature, a.max_tokens); ormeta = None
+            extra = {}
+            if a.disable_thinking:
+                extra["thinking"] = {"type": "disabled"}
+            if a.effort:
+                extra["output_config"] = {"effort": a.effort}
+            gens = RP.gen_anthropic(a.model, prompt, a.n, a.temperature, a.max_tokens,
+                                    extra_body=extra); ormeta = None
         dt = round(time.time() - t0, 1)
-        fn = RP.OUT / f"production_{label}_{a.tag}_{slug}.json"
+        # language in the name, not smuggled into the tag: an EN run used to be told
+        # apart only by a "-en" suffix on --tag, so forgetting it silently overwrote
+        # the IT run of the same degree AND slipped past the copyright ignore rule
+        fn = RP.OUT / f"production_{label}_{a.lang}_{a.tag}_{slug}.json"
         fn.write_text(json.dumps({
             "model": a.model, "backend": a.backend, "degree": a.degree, "lang": a.lang,
             "n": a.n, "temperature": a.temperature, "max_tokens": a.max_tokens, "provider_routing": ormeta,

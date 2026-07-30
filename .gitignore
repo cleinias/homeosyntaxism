@@ -20,6 +20,13 @@ texts/incipit_en*.txt
 texts/*colquhoun*
 texts/*moore*
 spec/specs_en_*.json
+# ... including anything that reproduces its vocabulary: the frequency table, the
+# lemma cache and the band verdicts are all lists of the source's own content words
+spec/zipf_en.csv
+spec/lemma_en.csv
+spec/embargo_en_filtered.json
+spec/domain_verdicts_en.json
+spec/period_verdicts_en.json
 results/*-en_*.json
 results/*_en.json
 results/*_en_*.json

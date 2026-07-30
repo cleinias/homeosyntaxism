@@ -1,0 +1,10 @@
+{
+ "lang": "it",
+ "note": "Human rulings on the filter's middle band. Applied last: they override every automatic layer, including a unanimous judge. Recorded here rather than in the code so the reasoning survives and the run is reproducible.",
+ "ruled_by": "SF, 2026-07-30",
+ "free": {
+  "settentrione": "common high-register Italian, against the plain 'nord' — not a period marker",
+  "degradando": "definitely not dated; the period judge was wrong"
+ },
+ "embargo": {}
+}
