@@ -178,16 +178,14 @@ def is_archaic(w, lang):
 
 def domain_words(lang):
     """content words of the source-blind three-item-brief generations we have."""
-    runs = [
-        D / "results" / f"production_d2c_unrestricted_{lang}_opus5_dom3_n10.json",
-        D / "results" / (f"production_d2c_unrestricted_{lang}_"
-                         "Qwen3-235B-A22B-Instruct-2507-FP8_dom3.json"),
-        D.parent / "reproducibility/graded-corpus/results" /
-        f"production_d2c_unrestricted_{lang}_opus5_dom3_n10.json",
-        D.parent / "reproducibility/graded-corpus/results" /
-        (f"production_d2c_unrestricted_{lang}_"
-         "Qwen3-235B-A22B-Instruct-2507-FP8_dom3.json"),
-    ]
+    # Globbed rather than named: the corroboration is "whatever source-blind runs in
+    # this domain we have", and naming them pinned it to the dom3 files, which were
+    # generated against the superseded source and are now in legacy-pre-1840/.
+    runs = sorted(
+        [q for q in (D / "results").glob(f"unrestricted_{lang}_*.json")
+         if "legacy" not in q.parts]
+        + [q for q in (D.parent / "reproducibility/graded-corpus/results").glob(
+            f"unrestricted_{lang}_*.json") if "legacy" not in q.parts])
     out, seen = set(), []
     for p in runs:
         if not p.exists():

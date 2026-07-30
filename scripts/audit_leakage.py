@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Audit a recorded constrained-production prompt for hint leakage.
 
-    python3 scripts/audit_leakage.py results/production_d2c_opus48_claude-opus-4-8.json
+    python3 scripts/audit_leakage.py results/production_D2_it_pilot-1840_claude-opus-5.json
     python3 scripts/audit_leakage.py <prompt.json> --brief specs/domain_brief_3item.txt
 
 The constrained prompt has four blocks that are supposed to do different jobs:
