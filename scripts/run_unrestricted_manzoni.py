@@ -157,6 +157,9 @@ def main():
                                       extra_body=extra)
     Path(a.out).write_text(json.dumps({
         "model": a.model, "backend": a.backend, "degree": degree,
+        # recorded because the scorer used to default a missing lang to Italian and
+        # silently parsed an English run with the Italian model
+        "lang": "en" if (d.get("source_ref") or "").endswith("_en.txt") else "it",
         "regime": "unrestricted-homeo-source-blind", "derived_from": str(a.constrained),
         "domain_brief": a.domain,
         "n": len(gens), "refused": refused, "attempts": att,

@@ -59,7 +59,17 @@ def judged(fn, *a):
 
 def score_file(path):
     data = json.loads(Path(path).read_text(encoding="utf-8"))
-    lang = data.get("lang", "it")
+    # No default.  Defaulting to Italian scored an English run against the Italian
+    # Stanza model and produced a table of identical, meaningless numbers: inventory
+    # and nesting both 0.96 for every candidate, surface at 0.91 where it should sit
+    # near 0.38.  Infer from the source reference if the run predates the lang field.
+    lang = data.get("lang")
+    if not lang:
+        ref = data.get("source_ref") or ""
+        lang = "en" if ref.endswith("_en.txt") else ("it" if ref.endswith("_it.txt") else None)
+    if not lang:
+        sys.exit(f"score_production: {Path(path).name} records no `lang` and none can be "
+                 f"inferred from its source_ref — refusing to guess")
     src = RP.resolve_source(data)
     # the embargo as the run actually stated it, read back out of its own prompt,
     # so old and new runs are both scoreable without consulting a spec file
