@@ -31,6 +31,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import run_production as RP   # noqa: E402
 import tree_metric as TM   # noqa: E402
 import sem_metrics as M    # noqa: E402
 
@@ -58,8 +59,8 @@ def judged(fn, *a):
 
 def score_file(path):
     data = json.loads(Path(path).read_text(encoding="utf-8"))
-    src = data["source"]
     lang = data.get("lang", "it")
+    src = RP.resolve_source(data)
     # the embargo as the run actually stated it, read back out of its own prompt,
     # so old and new runs are both scoreable without consulting a spec file
     body = data.get("prompt", "").split("inflected form", 1)
@@ -153,7 +154,7 @@ def main():
 
 
 def src_of(data):
-    return data["source"]
+    return RP.resolve_source(data)
 
 
 if __name__ == "__main__":

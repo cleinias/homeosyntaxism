@@ -27,6 +27,10 @@
    "yes": 3,
    "answered": 3
   },
+  "capovolti": {
+   "yes": 3,
+   "answered": 3
+  },
   "congiunge": {
    "yes": 3,
    "answered": 3
@@ -36,10 +40,6 @@
    "answered": 3
   },
   "contigui": {
-   "yes": 3,
-   "answered": 3
-  },
-  "degradando": {
    "yes": 3,
    "answered": 3
   },
@@ -107,8 +107,12 @@
    "yes": 3,
    "answered": 3
   },
-  "alleggerire": {
+  "variato": {
    "yes": 2,
+   "answered": 3
+  },
+  "alleggerire": {
+   "yes": 1,
    "answered": 3
   },
   "ameno": {
@@ -139,19 +143,11 @@
    "yes": 0,
    "answered": 3
   },
-  "settentrione": {
-   "yes": 0,
-   "answered": 3
-  },
   "somigliare": {
    "yes": 0,
    "answered": 3
   },
   "tempera": {
-   "yes": 0,
-   "answered": 3
-  },
-  "variato": {
    "yes": 0,
    "answered": 3
   },

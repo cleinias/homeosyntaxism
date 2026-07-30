@@ -22,6 +22,7 @@ ampia,ampio,ADJ
 anche,anche,ADV
 ancor,ancora,ADV
 ancora,ancora,ADV
+andirivieni,andiriviene,NOUN
 anzi,anzi,ADV
 aperti,aperto,ADJ
 appoggiata,appoggiare,VERB
@@ -34,6 +35,7 @@ braccio,braccio,NOUN
 buon,buono,ADJ
 campeggia,campeggiare,VERB
 campi,campo,NOUN
+capovolti,capovolto,ADJ
 casali,casale,NOUN
 castello,castello,NOUN
 catene,catena,NOUN
@@ -49,7 +51,7 @@ città,città,NOUN
 ciò,ciò,PRON
 cocuzzoli,cocuzzolo,NOUN
 comandante,comandante,NOUN
-come,come,SCONJ
+come,come,ADV
 como,como,PROPN
 comparendo,comparire,VERB
 comune,comune,ADJ
@@ -69,7 +71,6 @@ costa,costa,NOUN
 costiera,costiera,NOUN
 cui,cui,PRON
 da,da,ADP
-declivio,declivio,NOUN
 degradando,degradare,VERB
 deposito,deposito,NOUN
 destra,destra,NOUN
@@ -124,13 +125,12 @@ gli,il,DET
 golfi,golfo,NOUN
 gradevolmente,gradevolmente,ADV
 gran,grande,ADJ
-grande,grande,ADJ
 grossi,grosso,ADJ
+gruppo,gruppo,NOUN
 guardano,guardare,VERB
 guarnigione,guarnigione,NOUN
 i,il,DET
 il,il,DET
-immagine,immagine,NOUN
 in,in,ADP
 incammina,incamminare,VERB
 ingrossa,ingrossare,VERB
@@ -169,6 +169,7 @@ milano,milano,PROPN
 modestia,modestia,NOUN
 molti,molto,DET
 montagna,montagna,NOUN
+montagne,montagna,NOUN
 monte,monte,NOUN
 monti,monte,NOUN
 mura,muro,NOUN
@@ -189,6 +190,7 @@ oscuro,oscuro,ADJ
 ossatura,ossatura,NOUN
 padre,padre,NOUN
 paese,paese,NOUN
+paesetti,paesetti,NOUN
 par,par,VERB
 parte,parte,NOUN
 passeggiate,passeggiata,VERB
@@ -201,6 +203,7 @@ perder,perdere,VERB
 pezzo,pezzo,NOUN
 piane,piano,ADJ
 piglian,pigliare,VERB
+piuttosto,piuttosto,ADV
 più,più,ADV
 poco,poco,ADV
 poggi,poggio,NOUN
@@ -208,6 +211,7 @@ poggio,poggio,NOUN
 poi,poi,ADV
 ponte,ponte,NOUN
 possedere,possedere,VERB
+posti,porre,VERB
 prender,prendere,VERB
 prendiamo,prendere,VERB
 prima,prima,ADV
@@ -219,7 +223,7 @@ prospetti,prospetto,NOUN
 punti,punto,NOUN
 punto,punto,NOUN
 pur,pure,ADV
-purché,purché,SCONJ
+purchè,purché,SCONJ
 qua,qua,ADV
 qualche,qualche,DET
 qualcosa,qualcosa,PRON
@@ -241,16 +245,15 @@ resegone,resegone,PROPN
 resto,resto,NOUN
 ricchi,ricco,ADJ
 rientrare,rientrare,VERB
+riflette,riflettere,VERB
 rilevate,rilevare,VERB
 rincomincia,rincominciare,VERB
-ripetuti,ripetuto,ADJ
 ripide,ripido,ADJ
 ripigliar,ripigliare,VERB
 ristringer,ristringere,VERB
 riva,riva,NOUN
 rive,riva,NOUN
 rompe,rompere,VERB
-rovesciati,rovesciare,VERB
 sale,salire,VERB
 san,san,PROPN
 scena,scena,NOUN
@@ -271,6 +274,7 @@ settentrione,settentrione,NOUN
 sguardo,sguardo,NOUN
 si,si,PRON
 sia,essere,AUX
+smarrito,smarrire,VERB
 sol,solo,ADJ
 soldati,soldato,NOUN
 somigliare,somigliare,VERB
@@ -297,7 +301,7 @@ suoi,suo,DET
 svolge,svolgere,VERB
 tagliato,tagliare,VERB
 tal,tale,ADJ
-talché,talché,SCONJ
+talchè,talché,ADV
 tanto,tanto,ADV
 tempera,tempere,VERB
 tempi,tempo,NOUN
@@ -329,7 +333,6 @@ veder,vedere,VERB
 vedute,veduta,NOUN
 vendemmia,vendemmia,NOUN
 vero,vero,NOUN
-verso,verso,ADP
 vetta,vetta,NOUN
 vi,vi,PRON
 via,via,ADV

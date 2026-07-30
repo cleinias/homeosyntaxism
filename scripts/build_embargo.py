@@ -329,7 +329,9 @@ def main():
         spec = json.loads(spec_path.read_text(encoding="utf-8"))
     emb = spec["embargo"]
     if a.build_lemma_cache:
-        lemma_table(a.lang, spec["source"], build=True)
+        sys.path.insert(0, str(D / "scripts"))
+        import run_production as RP
+        lemma_table(a.lang, RP.resolve_source(spec, D), build=True)
         return
     lemmas = lemma_table(a.lang)
     lookups = set()

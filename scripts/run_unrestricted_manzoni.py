@@ -159,7 +159,9 @@ def main():
         "temperature": a.temperature if a.backend == "vllm-http" else None,
         "max_tokens": a.max_tokens,
         "thinking": "disabled" if a.disable_thinking else "default",
-        "effort": a.effort, "source": d.get("source"), "prompt": prompt,
+        "effort": a.effort, "prompt": prompt,
+        "source_ref": d.get("source_ref"), "source_sha1": d.get("source_sha1"),
+        "source": d.get("source"),   # only present when derived from a pre-2026-07-30 run
         "elapsed_s": round(time.time() - t0, 1),
         "gens": [{"i": k, "text": g} for k, g in enumerate(gens)],
     }, ensure_ascii=False, indent=1), encoding="utf-8")

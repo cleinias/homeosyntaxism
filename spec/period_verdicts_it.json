@@ -35,6 +35,10 @@
    "yes": 3,
    "answered": 3
   },
+  "capovolti": {
+   "yes": 3,
+   "answered": 3
+  },
   "congiunge": {
    "yes": 3,
    "answered": 3
@@ -139,23 +143,15 @@
    "yes": 3,
    "answered": 3
   },
+  "gioghi": {
+   "yes": 2,
+   "answered": 3
+  },
   "considerabile": {
    "yes": 0,
    "answered": 3
   },
-  "degradando": {
-   "yes": 0,
-   "answered": 3
-  },
   "fanciulle": {
-   "yes": 0,
-   "answered": 3
-  },
-  "gioghi": {
-   "yes": 0,
-   "answered": 3
-  },
-  "settentrione": {
    "yes": 0,
    "answered": 3
   }

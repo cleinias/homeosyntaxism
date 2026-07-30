@@ -220,7 +220,9 @@ def main():
         emb_src = (f"filtered ({len(embargo)} of {len(full)}; thresholds "
                    f"{f['thresholds']['zipf_free']}/{f['thresholds']['zipf_mark']})")
 
-    spec = {"lang": lang, "degree": deg, "source": source, "n_periods": len(periods),
+    spec = {"lang": lang, "degree": deg,
+            "source_ref": RP.SOURCE_REF[lang], "source_sha1": RP.source_sha1(source),
+            "n_periods": len(periods),
             "periods": out_periods, "embargo": embargo, "embargo_source": emb_src,
             "constraint_block": constraint_block, "brief": brief, "domain": domain}
     out = SPEC / f"specs_{lang}_{deg}.json"

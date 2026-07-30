@@ -199,13 +199,20 @@ def classify(a, brief):
               f"in {len(chunks)} chunks")
     out = (pathlib.Path(a.out) if a.out else
            SPEC / f"{a.question}_verdicts_{a.lang}.json")
+    # MERGE, never replace: judging one newly-added band word used to overwrite the
+    # file and silently discard the verdicts for every other word in it.
+    kept = {}
+    if out.exists():
+        prev = json.loads(out.read_text(encoding="utf-8")).get("verdicts", {})
+        kept = {w: d for w, d in prev.items() if w.lower() not in yes}
     out.write_text(json.dumps({
         "lang": a.lang, "question": a.question, "model": a.model, "n": a.n,
         "brief": brief if a.question == "domain" else None,
         "positive": positive,
         "note": "source-blind: the judge saw the question and the word list only",
-        "verdicts": {w: {"yes": yes[w], "answered": seen[w]}
-                     for w in sorted(band, key=lambda x: -yes[x.lower()])},
+        "verdicts": dict(sorted(
+            ({w: {"yes": yes[w.lower()], "answered": seen[w.lower()]} for w in band}
+             | kept).items(), key=lambda kv: (-kv[1]["yes"], kv[0]))),
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     unan = sum(1 for w in yes if seen[w] and yes[w] in (0, seen[w]))
     print(f"wrote {out.relative_to(D)}: {len(band)} words, "

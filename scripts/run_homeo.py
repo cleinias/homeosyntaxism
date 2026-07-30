@@ -183,7 +183,8 @@ def main():
         fn.write_text(json.dumps({
             "model": a.model, "backend": a.backend, "degree": a.degree, "lang": a.lang,
             "n": a.n, "temperature": a.temperature, "max_tokens": a.max_tokens, "provider_routing": ormeta,
-            "source": specs["source"], "prompt": prompt, "elapsed_s": dt,
+            "source_ref": specs.get("source_ref"), "source_sha1": specs.get("source_sha1"),
+            "prompt": prompt, "elapsed_s": dt,
             "gens": [{"i": k, "text": g} for k, g in enumerate(gens)],
         }, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"[{label}/{a.lang}] wrote {fn.name}: {len(gens)} candidates in {dt}s", flush=True)

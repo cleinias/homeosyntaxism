@@ -29,6 +29,8 @@ Backends:
 """
 import argparse
 import json
+import pathlib
+import hashlib
 import re
 import sys
 import time
@@ -41,68 +43,18 @@ OUT = ROOT / "results"
 ENV = ROOT / ".env"
 
 # --- source: the Manzoni geographical incipit (Promessi Sposi 1840, cap. I) ---
-INCIPIT = (
-    "Quel ramo del lago di Como, che volge a mezzogiorno, tra due catene non "
-    "interrotte di monti, tutto a seni e a golfi, a seconda dello sporgere e "
-    "del rientrare di quelli, vien, quasi a un tratto, a ristringersi, e a "
-    "prender corso e figura di fiume, tra un promontorio a destra, e un’ampia "
-    "costiera dall’altra parte; e il ponte, che ivi congiunge le due rive, par "
-    "che renda ancor più sensibile all’occhio questa trasformazione, e segni il "
-    "punto in cui il lago cessa, e l’Adda rincomincia, per ripigliar poi nome "
-    "di lago dove le rive, allontanandosi di nuovo, lascian l’acqua distendersi "
-    "e rallentarsi in nuovi golfi e in nuovi seni. "
-    "La costiera, formata dal deposito di tre grossi torrenti, scende appoggiata "
-    "a due monti contigui, l’uno detto di san Martino, l’altro, con voce "
-    "lombarda, il Resegone, dai molti suoi cocuzzoli in fila, che in vero lo "
-    "fanno somigliare a una sega: talché non è chi, al primo vederlo, purché "
-    "sia di fronte, come per esempio di su le mura di Milano che guardano a "
-    "settentrione, non lo discerna tosto, a un tal contrassegno, in quella lunga "
-    "e vasta giogaia, dagli altri monti di nome più oscuro e di forma più "
-    "comune. "
-    "Per un buon pezzo, la costa sale con un pendìo lento e continuo; poi si "
-    "rompe in poggi e in valloncelli, in erte e in ispianate, secondo "
-    "l’ossatura de’ due monti, e il lavoro dell’acque. "
-    "Il lembo estremo, tagliato dalle foci de’ torrenti, è quasi tutto ghiaia e "
-    "ciottoloni; il resto, campi e vigne, sparse di terre, di ville, di casali; "
-    "in qualche parte boschi, che si prolungano su per la montagna. "
-    "Lecco, la principale di quelle terre, e che dà nome al territorio, giace "
-    "poco discosto dal ponte, alla riva del lago, anzi viene in parte a trovarsi "
-    "nel lago stesso, quando questo ingrossa: un gran borgo al giorno d’oggi, e "
-    "che s’incammina a diventar città. "
-    "Ai tempi in cui accaddero i fatti che prendiamo a raccontare, quel borgo, "
-    "già considerabile, era anche un castello, e aveva perciò l’onore "
-    "d’alloggiare un comandante, e il vantaggio di possedere una stabile "
-    "guarnigione di soldati spagnoli, che insegnavan la modestia alle fanciulle "
-    "e alle donne del paese, accarezzavan di tempo in tempo le spalle a qualche "
-    "marito, a qualche padre; e, sul finir dell’estate, non mancavan mai di "
-    "spandersi nelle vigne, per diradar l’uve, e alleggerire a’ contadini le "
-    "fatiche della vendemmia. "
-    "Dall’una all’altra di quelle terre, dall’alture alla riva, da un poggio "
-    "all’altro, correvano, e corrono tuttavia, strade e stradette, più o men "
-    "ripide, o piane; ogni tanto affondate, sepolte tra due muri, donde, "
-    "alzando lo sguardo, non iscoprite che un pezzo di cielo e qualche vetta di "
-    "monte; ogni tanto elevate su terrapieni aperti: e da qui la vista spazia "
-    "per prospetti più o meno estesi, ma ricchi sempre e sempre qualcosa nuovi, "
-    "secondo che i diversi punti piglian più o meno della vasta scena "
-    "circostante, e secondo che questa o quella parte campeggia o si scorcia, "
-    "spunta o sparisce a vicenda. "
-    "Dove un pezzo, dove un altro, dove una lunga distesa di quel vasto e "
-    "variato specchio dell’acqua; di qua lago, chiuso all’estremità o "
-    "verso l’estremità da un’ampia montagna, e di mano in mano allargato tra "
-    "altri monti che si spiegano, a uno a uno, allo sguardo, e in un grande "
-    "specchio rovesciati coll’immagine ripetuti; di là braccio di fiume, poi "
-    "lago, poi fiume ancora, che va a perdersi in lucido serpeggiamento pur "
-    "tra’ monti che l’accompagnano, degradando via via, e perdendosi quasi "
-    "anch’essi nell’orizzonte. "
-    "Il luogo stesso da dove contemplate que’ vari spettacoli, vi fa spettacolo "
-    "da ogni parte: il monte di cui passeggiate le falde, vi svolge, al di "
-    "sopra e d’intorno, le sue cime e le sue balze, distinte, rilevate, mutabili "
-    "quasi a ogni passo, aprendosi e contornandosi in gioghi ciò che v’era "
-    "sembrato prima un sol giogo, e comparendo in vetta ciò che poco innanzi "
-    "vi si rappresentava sul declivio: e l’ameno, il domestico di quelle falde "
-    "tempera gradevolmente il selvaggio, e orna vie più il magnifico "
-    "dell’altre vedute."
-)
+SOURCE_REF = {"it": "texts/incipit_it.txt", "en": "texts/incipit_en.txt"}
+
+# The Italian source is READ, not retyped.  Until 2026-07-30 this was a string
+# literal pasted in at the Phase D launch, and it was not the 1840 text the project
+# declares and the critic's workbook analyses: it read "verso l'estremità da un'ampia
+# montagna ... in un grande specchio rovesciati coll'immagine ripetuti" where the
+# quarantana reads "o piuttosto smarrito in un gruppo, in un andirivieni di montagne
+# ... e che l'acqua riflette capovolti, co' paesetti posti sulle rive", and "sul
+# declivio" for "sulla costa".  Periods 8 and 9 parsed differently in consequence.
+# The old literal is kept at texts/incipit_it_as_parsed.txt so that runs recorded
+# against it stay resolvable and identifiable; nothing new should use it.
+INCIPIT = (ROOT / SOURCE_REF["it"]).read_text(encoding="utf-8").strip()
 
 # --- target domain: border/migration, central Mediterranean (DECIDED 2026-06-10).
 # A BRIEF describing the scene-world, NOT a lexeme correspondence table. ---
@@ -175,6 +127,34 @@ def gen_vllm(endpoint, model, prompt, n, temperature, max_tokens):
                "max_tokens": max_tokens},
               {"content-type": "application/json"})
     return [c["message"]["content"].strip() for c in r["choices"]]
+
+
+
+
+def source_sha1(text):
+    return hashlib.sha1(text.strip().encode("utf-8")).hexdigest()
+
+
+def resolve_source(obj, root=ROOT):
+    """The source text a run or a spec was built from.
+
+    Runs written before 2026-07-30 carry the passage inline, which duplicated a
+    copyrighted translation into every English result file.  Later ones carry
+    `source_ref` + `source_sha1` and the text is read back from the file and
+    verified, so a source that changes under us fails loudly instead of silently
+    rescoring against a different edition.
+    """
+    if obj.get("source"):
+        return obj["source"]
+    ref, want = obj.get("source_ref"), obj.get("source_sha1")
+    if not ref:
+        raise SystemExit("resolve_source: no `source` and no `source_ref` in this file")
+    text = (pathlib.Path(root) / ref).read_text(encoding="utf-8").strip()
+    got = source_sha1(text)
+    if want and got != want:
+        raise SystemExit(f"resolve_source: {ref} hashes to {got[:12]} but the file "
+                         f"records {want[:12]} — the source has changed since the run")
+    return text
 
 
 NO_TEMPERATURE = ("opus-4-8", "opus-5", "fable-5")
