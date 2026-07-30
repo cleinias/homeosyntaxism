@@ -143,7 +143,15 @@ def main():
         best = rows[0]
         coherent = [r for r in rows if (r["coherence"] or 0) >= 0.5]
         best_coh = coherent[0] if coherent else None
-        outp = Path(path).with_name(Path(path).stem.replace("production_", "production_scored_") + ".json")
+        # The rename only fires on files that start with "production_"; on anything
+        # else the replace was a no-op and this wrote the scores OVER the run it had
+        # just read.  Never let the output path equal the input path.
+        stem = Path(path).stem
+        out_stem = (stem.replace("production_", "production_scored_")
+                    if stem.startswith("production_") else "scored_" + stem)
+        outp = Path(path).with_name(out_stem + ".json")
+        if outp.resolve() == Path(path).resolve():
+            sys.exit(f"score_production: refusing to overwrite the run file {path}")
         outp.write_text(json.dumps({"model": data.get("model"), "source": src_of(data),
                                     "rows": rows}, ensure_ascii=False, indent=1),
                         encoding="utf-8")
