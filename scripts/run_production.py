@@ -188,9 +188,14 @@ def gen_openrouter(model, prompt, n, temperature, max_tokens, provider):
     out, used = [], None
     for _ in range(n):
         body = {"model": model, "messages": [{"role": "user", "content": prompt}],
-                "temperature": temperature, "top_p": 0.95, "max_tokens": max_tokens,
-                "provider": {"order": [provider], "quantizations": ["fp8"],
-                             "allow_fallbacks": False}}
+                "temperature": temperature, "top_p": 0.95, "max_tokens": max_tokens}
+        # Pin the provider and the precision only when a provider was asked for.
+        # Sending {"order": [None]} — which is what happened when --provider was
+        # omitted — is a 400, and the pin exists for cross-model precision parity,
+        # which does not apply when the caller has expressed no preference.
+        if provider:
+            body["provider"] = {"order": [provider], "quantizations": ["fp8"],
+                                "allow_fallbacks": False}
         r = _post("https://openrouter.ai/api/v1/chat/completions", body,
                   {"Authorization": "Bearer " + env("OPENROUTER_API_KEY"),
                    "content-type": "application/json"})
