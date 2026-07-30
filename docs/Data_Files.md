@@ -47,8 +47,8 @@ nesting, D3 = inventory, D4 = depth profile; pre-2026-07-30 D2 files carried bot
 `inventory` and `schema` keys for the two grains,
 c = schema); other degrees carry one `spec` string per period.
 - **By/for:** produced by `build_specs.py`; **consumed by** `run_homeo.py`.
-- **Structure:** `{lang, degree, source, n_periods, periods:[{k, words, …degree-specific…}], embargo:[…content words…], constraint_block (string), brief (string), domain (string)}`.
-- **Note:** `specs_en_*.json` embeds the (copyright) English source in `source` → **not** committed; regenerated from a local copy of the English incipit.
+- **Structure:** `{lang, degree, source_ref, source_sha1, n_periods, periods:[{k, words, spec}], embargo:[…], embargo_source, constraint_block (string), brief (string), domain (string)}`. The source passage itself is **not** stored: `source_ref` names the file (`texts/incipit_<lang>.txt`) and `source_sha1` pins its content, and `run_production.resolve_source()` reads it back and verifies the hash. Files written before 2026-07-30 carry the passage inline in `source` instead, and the resolver still accepts them.
+- **Note:** `specs_en_*.json` is still **not** committed. It no longer embeds the English source, but its `embargo` and per-period specs are derived from a copyrighted translation, so it is regenerated from a local copy of the English incipit rather than shipped. The same applies to `spec/zipf_en.csv`, `spec/lemma_en.csv`, the EN band verdicts, and `results/*_en_*.json`.
 
 ## Tier 3 — the results (generated, then scored)
 
