@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""run_unrestricted_manzoni.py — UNRESTRICTED homeosyntactic D2 (grain a) transposition of the
+"""run_unrestricted_manzoni.py — UNRESTRICTED homeosyntactic transposition of the
 Manzoni incipit, for the short paper's Appendix A.
 
 The short paper's instrument is source-blind degree-holding + the threefold criterion, with NO
 critical-claim patterns (those belong to the full paper's constrained homeomorphism). This script
 derives the unrestricted prompt from a recorded constrained-production prompt by removing the
 FORMAL PATTERNS block and its two in-text references, keeping only: the D2 clause-inventory target
-(grain a), the target-domain brief, the lexical embargo, and the threefold requirement. Source-blind.
+the target-domain brief, the lexical embargo, and the threefold requirement. Source-blind.
+The degree is inherited from the constrained run it is derived from (D2 = clause nesting,
+D3 = clause inventory; pre-2026-07-30 runs say grain c and grain a for the same two).
 
 It reads the constrained prompt from a production JSON at runtime, so the script itself embeds no
 copyrighted source material (the EN/Colquhoun embargo list stays in the gitignored input file).
@@ -123,14 +125,18 @@ def main():
     a = ap.parse_args()
 
     d = json.loads(Path(a.constrained).read_text(encoding="utf-8"))
-    grain = d.get("grain", "a")  # inherit the grain of the constrained source (a, c, ...)
+    # Inherit the degree of the constrained source.  Runs recorded before the
+    # 2026-07-30 relabelling carry `grain` instead: c was the nesting schema (now D2),
+    # a was the clause inventory (now D3).
+    LEGACY = {"c": "D2", "a": "D3"}
+    degree = d.get("degree") or LEGACY.get(d.get("grain", "a"), "D3")
     prompt = unrestrict(d["prompt"])
     if a.domain:
         before = len(prompt)
         prompt = replace_domain(prompt, Path(a.domain).read_text(encoding="utf-8"))
         print(f"[domain]     {before} -> {len(prompt)} chars; brief from {a.domain}", flush=True)
     assert_source_blind(prompt)
-    print(f"[unrestrict] {len(d['prompt'])} -> {len(prompt)} chars; source-blind grain-{grain}, no patterns",
+    print(f"[unrestrict] {len(d['prompt'])} -> {len(prompt)} chars; source-blind {degree}, no patterns",
           flush=True)
     t0 = time.time()
     extra = {}
@@ -146,7 +152,7 @@ def main():
         gens, refused, att = gen_opus(a.model, prompt, a.n, max_tokens=a.max_tokens,
                                       extra_body=extra)
     Path(a.out).write_text(json.dumps({
-        "model": a.model, "backend": a.backend, "grain": grain,
+        "model": a.model, "backend": a.backend, "degree": degree,
         "regime": "unrestricted-homeo-source-blind", "derived_from": str(a.constrained),
         "domain_brief": a.domain,
         "n": len(gens), "refused": refused, "attempts": att,

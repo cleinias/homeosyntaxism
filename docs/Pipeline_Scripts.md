@@ -45,7 +45,8 @@ transposition **domain** is *not* here — it lives in `spec/brief_<lang>.json`.
 
 ### `build_specs.py`
 Parses the source incipit (Stanza UD) and, per period, emits the form target at the chosen
-**degree** (`--degree S|D0|D1|D2|D3`); D2 carries two grains — **(a)** clause‑type inventory +
+**degree** (`--degree S|D0|D1|D2|D3|D4`); **D2** = clause nesting (which clause embeds in which,
+the operative rung), **D3** = clause‑type inventory,
 hypotaxis depth, **(c)** clause‑nesting schema. It then folds in the rubric (constraint block),
 the **brief** (domain + elements from `spec/brief_<lang>.json`), and the source‑word embargo,
 into one self‑contained spec. Bilingual via `--lang it|en`; **errors out if the brief's `lang`
@@ -59,11 +60,11 @@ field does not match `--lang`**.
 ### `run_homeo.py`
 Builds the constrained‑homeomorphism prompt from a `specs_<lang>_<degree>.json` file (the
 degree's form target + patterns + brief + embargo + the threefold instruction) and generates N
-oversampled candidates, **source‑blind**. For D2 it does one run per grain. Backends:
+oversampled candidates, **source‑blind**. One run per degree. Backends:
 `vllm-http` (self‑hosted), `anthropic` (Opus), `openrouter` (open‑weight, provider/fp8‑pinned).
-`--lang`, `--degree`, `--grains a,c`, `--n`, `--provider`.
+`--lang`, `--degree`, `--n`, `--provider`, `--domain` (replacement TARGET DOMAIN block), `--print-prompt` (assemble and stop, for auditing).
 - **Consumes:** `spec/specs_<lang>_<degree>.json`.
-- **Produces:** `results/production_<label>_<tag>_<model>.json` (`label` = degree + grain, e.g. `d2a`).
+- **Produces:** `results/production_<degree>_<tag>_<model>.json`, e.g. `production_D2_opus48_…`. Pre-2026-07-30 files use the old label (degree + grain, e.g. `d2a`).
 - **Imports:** `run_production`.
 
 ### `run_production.py`
@@ -82,7 +83,7 @@ The **three‑axis gate** = the operational definition of "constrained homeomorp
 For every candidate computes clause‑F1 + depth_gap + s0_pos (axis 1, D₂), content‑lemma
 Jaccard + frame‑divergence (axis 2), coherence (axis 3), a composite, ranks them, and
 emits the best. Auto‑detects language from each file's `lang` field.
-- **Consumes:** `results/production_*.json` (any degree/grain).
+- **Consumes:** `results/production_*.json` (any degree).
 - **Produces:** `results/production_scored_*.json` (+ printed ranked table).
 - **Imports:** `tree_metric`, `sem_metrics`.
 
@@ -112,7 +113,7 @@ Light regex tokenizer + content‑word extractor, used to build the source‑wor
 
 ### `monitor.py`
 Generic ACES job watcher: `python monitor.py <job_id> <tag> <model_slug>` — polls the
-queue and pulls the two grain output files back when the job finishes.
+queue and pulls the output files back when the job finishes.
 - **Consumes:** a SLURM job id (over SSH).
 - **Produces:** local copies of `results/production_<label>_<tag>_<slug>.json`.
 

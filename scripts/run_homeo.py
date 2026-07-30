@@ -10,13 +10,18 @@ projections of it (S forgets the arcs, D1 forgets the order) and are incomparabl
   D0  hold the full ordered dependency tree (POS + order + relations — the top)
   S   hold the exact POS sequence (the surface — the calque/Oulipo end; forgets the arcs)
   D1  hold the dependency structure, order-free (forgets the order)
-  D2  hold the clause architecture (grains: a=inventory, c=schema)   [the operative rung]
-  D3  hold only the hypotaxis profile (clause count + depth — the loosest)
+  D2  hold the clause NESTING — which clause embeds in which     [the operative rung]
+  D3  hold the clause INVENTORY — which types, how many (forget the nesting)
+  D4  hold only the hypotaxis profile (clause count + depth — the loosest)
+
+The D2/D3 split replaces the old single "clause architecture" rung with its two
+grains: what was D2 grain c is now D2, D2 grain a is now D3, and the old D3 is D4.
+Runs recorded before 2026-07-30 carry `grain` instead of `degree`; map c->D2, a->D3.
 
   python scripts/run_homeo.py --backend anthropic --model claude-opus-4-8 \
       --lang it --degree D0 --n 6 --tag opus48
   python scripts/run_homeo.py --backend openrouter --model qwen/qwen3-235b-a22b-2507 \
-      --provider deepinfra --lang it --degree D2 --grains a,c --n 6 --tag qwen-or
+      --provider deepinfra --lang it --degree D2 --n 6 --tag qwen-or
 
 Reads spec/specs_{lang}_{degree}.json (from build_specs.py); reuses run_production backends.
 """
@@ -51,27 +56,26 @@ DEGREE = {
     "D1": ("the dependency structure (D1, order-free)",
            "Reproduce, period by period, the DEPENDENCY RELATIONS below (head POS -> relation -> "
            "dependent POS) --- the same set of relations, but in any word order you like."),
-    "D2": ("the clause architecture (D2)",
-           "Reproduce, period by period, the CLAUSE ARCHITECTURE below (the same inventory and nesting "
-           "of clauses); word order is entirely free."),
-    "D3": ("the hypotaxis profile (D3, the loosest rung)",
+    "D2": ("the clause nesting (D2, the operative rung)",
+           "Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in "
+           "which (each node is a clause type, indentation is subordination); word order within it "
+           "is entirely free."),
+    "D3": ("the clause inventory (D3)",
+           "Reproduce, period by period, the CLAUSE INVENTORY below --- which clause types and how "
+           "many of each; how they nest, and the word order, are yours."),
+    "D4": ("the hypotaxis profile (D4, the loosest rung)",
            "Match, period by period, only the CLAUSE COUNT and MAXIMUM SUBORDINATION DEPTH below; "
            "you are otherwise free in structure, order, and words."),
 }
-GRAIN_KEY = {"a": "inventory", "c": "schema"}
 
 
-def spec_block(degree, grain, specs):
-    if degree == "D2":
-        return "\n".join(p[GRAIN_KEY[grain]] for p in specs["periods"])
+def spec_block(degree, specs):
     return "\n".join(p["spec"] for p in specs["periods"])
 
 
-def build_prompt(degree, grain, specs, lang):
+def build_prompt(degree, specs, lang):
     ln = LANG_NAME[lang]
     name, instr = DEGREE[degree]
-    if degree == "D2":
-        name = name + (" --- grain a (clause inventory)" if grain == "a" else " --- grain c (nesting schema)")
     return f"""You are assisting with a scholarly experiment in structural literary analysis.
 
 TASK: Write an ORIGINAL descriptive opening (incipit) in {ln} for a narrative set in the target
@@ -81,7 +85,7 @@ a paraphrase, translation, or reconstruction of any source.
 
 FORM TARGET. {instr}
 Reproduce it for all {specs['n_periods']} periods, in this order:
-{spec_block(degree, grain, specs)}
+{spec_block(degree, specs)}
 
 FORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW
 material (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):
@@ -109,8 +113,10 @@ def main():
     ap.add_argument("--endpoint", default="http://127.0.0.1:8000")
     ap.add_argument("--provider", default=None)
     ap.add_argument("--lang", default="it", choices=["it", "en"])
-    ap.add_argument("--degree", default="D2", choices=["S", "D0", "D1", "D2", "D3"])
-    ap.add_argument("--grains", default="a,c", help="D2 only; ignored at other degrees")
+    ap.add_argument("--degree", default="D2", choices=["S", "D0", "D1", "D2", "D3", "D4"],
+                    help="D2 = clause nesting (operative), D3 = clause inventory, "
+                         "D4 = depth profile. Supersedes the old D2 --grains a,c: "
+                         "grain c is now D2, grain a is now D3, the old D3 is D4")
     ap.add_argument("--n", type=int, default=6)
     ap.add_argument("--temperature", type=float, default=0.9)
     ap.add_argument("--max-tokens", type=int, default=2048)
@@ -129,21 +135,20 @@ def main():
         ap.error("--backend, --model and --tag are required unless --print-prompt")
 
     specs = json.loads((SPEC_DIR / f"specs_{a.lang}_{a.degree}.json").read_text(encoding="utf-8"))
-    grains = [g.strip() for g in a.grains.split(",") if g.strip()] if a.degree == "D2" else [""]
     RP.OUT.mkdir(parents=True, exist_ok=True)
     slug = (a.model or "").replace("/", "_")
-    for grain in grains:
-        prompt = build_prompt(a.degree, grain, specs, a.lang)
+    for _ in [None]:
+        prompt = build_prompt(a.degree, specs, a.lang)
         if a.domain:
             before = len(prompt)
             prompt = RUM.replace_domain(prompt, Path(a.domain).read_text(encoding="utf-8"))
             print(f"[domain] {before} -> {len(prompt)} chars; brief from {a.domain}", flush=True)
         RUM.assert_source_blind(prompt)
-        label = a.degree + (grain if grain else "")
+        label = a.degree
         if a.print_prompt:
             RP.OUT.mkdir(parents=True, exist_ok=True)
             fn = RP.OUT / f"prompt_{label}_{a.lang}.json"
-            fn.write_text(json.dumps({"degree": a.degree, "grain": grain, "lang": a.lang,
+            fn.write_text(json.dumps({"degree": a.degree, "lang": a.lang,
                                       "prompt": prompt}, ensure_ascii=False, indent=1),
                           encoding="utf-8")
             print(f"[{label}/{a.lang}] prompt_chars={len(prompt)} -> {fn.name}")
@@ -160,7 +165,7 @@ def main():
         dt = round(time.time() - t0, 1)
         fn = RP.OUT / f"production_{label}_{a.tag}_{slug}.json"
         fn.write_text(json.dumps({
-            "model": a.model, "backend": a.backend, "degree": a.degree, "grain": grain, "lang": a.lang,
+            "model": a.model, "backend": a.backend, "degree": a.degree, "lang": a.lang,
             "n": a.n, "temperature": a.temperature, "max_tokens": a.max_tokens, "provider_routing": ormeta,
             "source": specs["source"], "prompt": prompt, "elapsed_s": dt,
             "gens": [{"i": k, "text": g} for k, g in enumerate(gens)],

@@ -42,7 +42,9 @@ here, as this brief. See `Target_Domain_Brief.md`.)
 ### `spec/specs_<lang>_<degree>.json`  (degree ∈ {S, D0, D1, D2, D3})
 The self‑contained generation spec for one degree: the form target per period, plus the
 rendered rubric, the brief, the domain, and the embargo. The single file `run_homeo.py`
-needs (no Stanza at gen time). For D2 each period carries both grains (a = inventory,
+needs (no Stanza at gen time). Each period carries one `spec` for the file's degree (D2 =
+nesting, D3 = inventory, D4 = depth profile; pre-2026-07-30 D2 files carried both
+`inventory` and `schema` keys for the two grains,
 c = schema); other degrees carry one `spec` string per period.
 - **By/for:** produced by `build_specs.py`; **consumed by** `run_homeo.py`.
 - **Structure:** `{lang, degree, source, n_periods, periods:[{k, words, …degree-specific…}], embargo:[…content words…], constraint_block (string), brief (string), domain (string)}`.
@@ -51,9 +53,9 @@ c = schema); other degrees carry one `spec` string per period.
 ## Tier 3 — the results (generated, then scored)
 
 ### `results/production_<label>_<tag>_<model>.json`  (label e.g. `d2a`, `d2c`, `S`, `D0`…)
-One file per (degree/grain, run): the N oversampled candidates with full provenance.
+One file per (degree, run): the N oversampled candidates with full provenance.
 - **By/for:** produced by `run_homeo.py`; **consumed by** `score_production.py`.
-- **Structure:** `{model, backend, grain (a|c), lang, n, temperature, max_tokens, provider_routing (resolved OpenRouter provider + quant, or null), source, prompt, elapsed_s, gens:[{i, text}]}`.
+- **Structure:** `{model, backend, degree, lang, n, temperature, max_tokens, provider_routing (resolved OpenRouter provider + quant, or null), source, prompt, elapsed_s, gens:[{i, text}]}`. Files written before 2026-07-30 carry `grain` (c = nesting, now D2; a = inventory, now D3) in place of `degree`.
 - **Tags seen:** `opus48` / `opus48-en` (Opus), `qwen-or` / `qwen-or-en` (Qwen OpenRouter), `kimi-or` / `kimi-or-en` (Kimi‑K2 OpenRouter), `qwen3-aces` (Qwen self‑hosted), `maverick-aces`. EN files embed the copyright source → gitignored.
 
 ### `results/production_scored_d2{a,c}_<tag>_<model>.json`

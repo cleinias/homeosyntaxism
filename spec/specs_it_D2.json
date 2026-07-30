@@ -7,56 +7,47 @@
   {
    "k": 1,
    "words": 111,
-   "inventory": "Period 1 (about 111 words): 6 coordinated clause; 5 relative/adnominal clause; 3 adverbial clause; 2 open complement (infinitive)s; 1 main clause; 1 finite complement clause; subordination nested up to depth 8.",
-   "schema": "Period 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause"
+   "spec": "Period 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause"
   },
   {
    "k": 2,
    "words": 91,
-   "inventory": "Period 2 (about 91 words): 5 relative/adnominal clause; 3 open complement (infinitive)s; 1 main clause; 1 adverbial clause; 1 parataxis; 1 coordinated clause; subordination nested up to depth 4.",
-   "schema": "Period 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - relative/adnominal clause\n        - coordinated clause\n          - relative/adnominal clause\n          - open complement (infinitive)"
+   "spec": "Period 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - relative/adnominal clause\n        - coordinated clause\n          - relative/adnominal clause\n          - open complement (infinitive)"
   },
   {
    "k": 3,
    "words": 35,
-   "inventory": "Period 3 (about 35 words): 1 main clause; 1 coordinated clause; subordination nested up to depth 1.",
-   "schema": "Period 3 (about 35 words):\n  - main clause\n    - coordinated clause"
+   "spec": "Period 3 (about 35 words):\n  - main clause\n    - coordinated clause"
   },
   {
    "k": 4,
    "words": 37,
-   "inventory": "Period 4 (about 37 words): 3 relative/adnominal clause; 1 main clause; subordination nested up to depth 1.",
-   "schema": "Period 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause"
+   "spec": "Period 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause"
   },
   {
    "k": 5,
    "words": 45,
-   "inventory": "Period 5 (about 45 words): 2 open complement (infinitive)s; 2 coordinated clause; 1 relative/adnominal clause; 1 main clause; 1 adverbial clause; 1 finite complement clause; subordination nested up to depth 4.",
-   "schema": "Period 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause"
+   "spec": "Period 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause"
   },
   {
    "k": 6,
    "words": 83,
-   "inventory": "Period 6 (about 83 words): 5 relative/adnominal clause; 4 coordinated clause; 1 open complement (infinitive); 1 main clause; 1 finite complement clause; 1 adverbial clause; subordination nested up to depth 3.",
-   "schema": "Period 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause"
+   "spec": "Period 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause"
   },
   {
    "k": 7,
    "words": 102,
-   "inventory": "Period 7 (about 102 words): 8 coordinated clause; 3 adverbial clause; 1 main clause; subordination nested up to depth 3.",
-   "schema": "Period 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause"
+   "spec": "Period 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause"
   },
   {
    "k": 8,
    "words": 84,
-   "inventory": "Period 8 (about 84 words): 7 relative/adnominal clause; 1 main clause; 1 open complement (infinitive); 1 adverbial clause; 1 coordinated clause; subordination nested up to depth 6.",
-   "schema": "Period 8 (about 84 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n        - relative/adnominal clause\n        - relative/adnominal clause\n          - open complement (infinitive)\n            - relative/adnominal clause\n              - adverbial clause\n              - coordinated clause"
+   "spec": "Period 8 (about 84 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n        - relative/adnominal clause\n        - relative/adnominal clause\n          - open complement (infinitive)\n            - relative/adnominal clause\n              - adverbial clause\n              - coordinated clause"
   },
   {
    "k": 9,
    "words": 88,
-   "inventory": "Period 9 (about 88 words): 5 coordinated clause; 4 relative/adnominal clause; 1 main clause; 1 parataxis; 1 adverbial clause; subordination nested up to depth 5.",
-   "schema": "Period 9 (about 88 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n          - coordinated clause\n            - relative/adnominal clause\n    - coordinated clause\n      - coordinated clause"
+   "spec": "Period 9 (about 88 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n          - coordinated clause\n            - relative/adnominal clause\n    - coordinated clause\n      - coordinated clause"
   }
  ],
  "embargo": [

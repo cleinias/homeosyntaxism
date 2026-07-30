@@ -18,7 +18,7 @@ negative finding).
 ## Generation parameters
 
 `n = 6` candidates per cell · `temperature = 0.9` · `max_tokens = 2048`. Each run holds
-degree **D2** at two grains — **a** (clause inventory) and **c** (nesting schema) — plus the
+degree **D2** (clause nesting) and **D3** (clause inventory) — plus the
 eight patterns and the threefold criterion. Source-blind: the model never sees the source
 text, only the projected form target + the rubric + the lexical embargo.
 
@@ -28,7 +28,7 @@ provider is written into each result file under `provider_routing`.
 
 ## Runs recorded (Italian)
 
-For each model × grain (`a`, `c`): `results/production_d2{a,c}_<tag>_<model>.json` (raw) and
+For each model × degree: `results/production_<degree>_<tag>_<model>.json` (raw) and
 `results/production_scored_d2{a,c}_<tag>_<model>.json` (gated). Tags: `opus48`, `qwen-or`,
 `qwen3-aces`, `kimi-or`.
 

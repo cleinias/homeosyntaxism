@@ -68,7 +68,7 @@ spec/{patterns,constraints,constraints_en}.json
    build_specs.py --lang it --degree D2     ← project form + fold in the brief
         ▼
 spec/specs_it_D2.json
-        │  run_homeo.py --degree D2 --grains a,c --backend … --model …
+        │  run_homeo.py --degree D2 --backend … --model …
         ▼
 results/production_<label>_<tag>_<model>.json        ← the generations
         │  score_production.py
@@ -92,7 +92,7 @@ cp .env.example .env                      # then add your API keys (see below)
 python scripts/build_rubric.py                                  # validate/emit the rubric
 python scripts/build_specs.py --lang it --degree D2            # → spec/specs_it_D2.json
 python scripts/run_homeo.py --backend anthropic --model claude-opus-4-8 \
-       --lang it --degree D2 --grains a,c --n 6 --tag opus48
+       --lang it --degree D2 --n 6 --tag opus48
 python scripts/score_production.py                             # → results/production_scored_*.json
 ```
 
@@ -127,7 +127,7 @@ at any OpenAI-compatible `/v1/chat/completions` server:
 python -m vllm.entrypoints.openai.api_server --model <hf-model> --port 8000
 # then generate against it
 python scripts/run_homeo.py --backend vllm-http --endpoint http://127.0.0.1:8000 \
-       --model <hf-model> --lang it --degree D2 --grains a,c --n 6 --tag local
+       --model <hf-model> --lang it --degree D2 --n 6 --tag local
 ```
 
 The ACES SLURM scripts in `scripts/` (`qwen_aces.sbatch`, `maverick_aces.sbatch`) are

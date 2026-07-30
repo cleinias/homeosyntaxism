@@ -9,13 +9,23 @@ form" scale (and keeps it orthogonal to the constraint-load axis).
   D0  the full ordered dependency tree : POS + linear order + relations (the top).
   S   surface : the ordered POS sequence (forget the arcs — the tree's leaves; the calque end).
   D1            : the order-free dependency structure (forget the order; head-POS —rel→ dep-POS).
-  D2            : clause architecture — two grains: (a) inventory, (c) nesting schema.
-  D3            : the hypotaxis profile (clause count + max depth) — the loosest rung.
+  D2            : clause NESTING — which clause embeds in which (the operative rung).
+  D3            : clause INVENTORY — which clause types, how many (forget the nesting).
+  D4            : the hypotaxis profile — clause count + max depth only (the loosest rung).
 Plus the rubric (constraints), the functional brief, and the source-word embargo (all
 degree-independent). One parse; every rung is a projection of it (tree_metric metrics
-mirror these: s0_pos↔S, d1_triple↔D1, d2_clause↔D2, depth↔D3).
+mirror these: s0_pos↔S, d1_triple↔D1, clause_nest↔D2, clause_inv↔D3, depth↔D4).
 
-  python scripts/build_specs.py --lang it --degree D2   # → spec/specs_it_D2.json (== legacy d2_specs.json)
+NOTE ON THE RELABELLING (2026-07-30). This ladder used to run S/D0/D1/D2/D3 with D2
+carrying two "grains", a = inventory and c = nesting schema, and D3 = the depth
+profile. The CHR 2027 paper separated the two invariants D2 conflated, so nesting
+and inventory are now degrees in their own right and everything past the old D2
+shifts up by one. The translation for pre-existing runs and result files:
+  grain c  ->  D2 (nesting)     grain a  ->  D3 (inventory)     old D3  ->  D4
+Result files written before this date keep their `d2a`/`d2c` names and their
+`grain` field; readers map them with the table above.
+
+  python scripts/build_specs.py --lang it --degree D2   # → spec/specs_it_D2.json (clause nesting)
   python scripts/build_specs.py --lang en --degree S    # → spec/specs_en_S.json
 Run with the Atlas venv python (Stanza).
 """
@@ -80,14 +90,14 @@ def emit_D1(tok):
     return "; ".join(f"{n}x {h}-{r}->{d}" for (h, r, d), n in c.most_common())
 
 
-def emit_D2_inventory(tok):
+def emit_D3_inventory(tok):
     heads = [t for t in tok if is_clause_head(t)]
     cnt = Counter(LABEL.get("acl:relcl" if t["deprel"] == "acl:relcl" else t["deprel"], t["deprel"]) for t in heads)
     inv = "; ".join(f"{n} {lab}{'s' if n > 1 and not lab.endswith('clause') else ''}" for lab, n in cnt.most_common())
     return f"{inv}; subordination nested up to depth {TM._depth(tok)}."
 
 
-def emit_D2_schema(tok):
+def emit_D2_nesting(tok):
     id2 = {t["i"]: t for t in tok}
     heads = [t for t in tok if is_clause_head(t)]
     hids = {t["i"] for t in heads}
@@ -116,14 +126,16 @@ def emit_D2_schema(tok):
     return "\n".join(lines)
 
 
-def emit_D3(tok):
+def emit_D4_profile(tok):
     return f"{len([t for t in tok if is_clause_head(t)])} clauses total; max subordination depth {TM._depth(tok)}."
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lang", default="it", choices=["it", "en"])
-    ap.add_argument("--degree", default="D2", choices=["S", "D0", "D1", "D2", "D3"])
+    ap.add_argument("--degree", default="D2", choices=["S", "D0", "D1", "D2", "D3", "D4"],
+                    help="D2 = clause nesting, D3 = clause inventory, D4 = depth profile "
+                         "(the old D2-grain-c / D2-grain-a / D3 respectively)")
     a = ap.parse_args()
     lang, deg = a.lang, a.degree
 
@@ -166,10 +178,11 @@ def main():
         elif deg == "D1":
             block["spec"] = f"Period {k} (~{len(p.split())} words) dependency triples (any order): " + emit_D1(tok)
         elif deg == "D2":
-            block["inventory"] = f"Period {k} (about {len(p.split())} words): " + emit_D2_inventory(tok)
-            block["schema"] = f"Period {k} (about {len(p.split())} words):\n" + emit_D2_schema(tok)
-        else:  # D3
-            block["spec"] = f"Period {k} (~{len(p.split())} words): " + emit_D3(tok)
+            block["spec"] = f"Period {k} (about {len(p.split())} words):\n" + emit_D2_nesting(tok)
+        elif deg == "D3":
+            block["spec"] = f"Period {k} (about {len(p.split())} words): " + emit_D3_inventory(tok)
+        else:  # D4
+            block["spec"] = f"Period {k} (~{len(p.split())} words): " + emit_D4_profile(tok)
         out_periods.append(block)
 
     constraints = json.loads((SPEC / cfile).read_text(encoding="utf-8"))["constraints"]
@@ -192,7 +205,7 @@ def main():
     print(f"wrote spec/{out.name}: lang={lang} degree={deg}, {len(periods)} periods, "
           f"{len(embargo)} embargo words, {len(constraints)} constraints")
     print("\n=== degree spec, period 1 ===")
-    print(out_periods[0].get("spec") or out_periods[0]["inventory"])
+    print(out_periods[0]["spec"])
 
 
 if __name__ == "__main__":

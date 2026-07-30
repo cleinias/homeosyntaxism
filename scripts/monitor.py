@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generic ACES job monitor: poll a job; when its grain a/c production JSONs land,
+"""Generic ACES job monitor: poll a job; when its production JSONs land,
 pull them locally; exit on success or job-gone.
   python scripts/monitor.py <job_id> <tag> <model_slug>
 """
