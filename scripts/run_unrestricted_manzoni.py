@@ -14,7 +14,7 @@ It reads the constrained prompt from a production JSON at runtime, so the script
 copyrighted source material (the EN/Colquhoun embargo list stays in the gitignored input file).
 
   python scripts/run_unrestricted_manzoni.py \
-      --constrained results/production_d2a_opus48_claude-opus-4-8.json \
+      --constrained results/production_D2_it_pilot-1840_claude-opus-5.json \
       --model claude-opus-4-8 --n 10 --out results/production_d2a_unrestricted_it_opus48.json
 """
 import argparse, json, re, sys, time
@@ -33,6 +33,10 @@ def unrestrict(prompt: str) -> str:
     p = p.replace('CONSTRAINED HOMEOSYNTACTIC transposition', 'HOMEOSYNTACTIC transposition')
     p = re.sub(r'period by period,\s*AND instantiate\s*every formal pattern listed below\s*—\s*while',
                'period by period — while', p, flags=re.DOTALL)
+    # run_homeo's wording since the D_n refactor: "hold <degree>, AND instantiate
+    # every formal pattern listed --- while inventing ..."
+    p = re.sub(r',\s*AND instantiate\s*\n?every formal pattern listed\s*---\s*while',
+               ' --- while', p, flags=re.DOTALL)
     # 3. REQUIREMENTS: drop the "satisfy every pattern" clause + rename the label
     p = re.sub(r';\s*satisfy every pattern with fresh material,\s*not by copying a phrasing\.',
                '.', p, flags=re.DOTALL)
