@@ -46,6 +46,18 @@ N=${N:-10}
 DEGREES=${DEGREES:-D2 D3}
 SHORT=$(basename $MODEL)
 
+# The run tag names the cell in every output filename, so it has to follow MODEL.
+# Job 1999824 ran Maverick with the tag left at its Qwen default and wrote four
+# files reading `qwen3-1840` — harmless only because the model suffix disambiguated
+# them.  Derive it instead, and keep TAG overridable for one-off cells.
+case "$SHORT" in
+  Qwen3-*)          DEFTAG=qwen3-1840 ;;
+  Llama-4-Maverick*) DEFTAG=maverick-1840 ;;
+  *)                DEFTAG=$(echo "$SHORT" | tr 'A-Z' 'a-z' | cut -d- -f1)-1840 ;;
+esac
+TAG=${TAG:-$DEFTAG}
+echo "tag=$TAG"
+
 echo "=== job $SLURM_JOB_ID on $SLURMD_NODENAME ==="; date -Is
 echo "model=$MODEL tp=$TP n=$N degrees='$DEGREES'  (1840 source, menu-free patterns)"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
@@ -75,9 +87,9 @@ for LANG in it en; do
       --model $MODEL --lang $LANG --degree $DEG \
       --n $N --temperature 0.9 --max-tokens 2048 \
       --domain specs/domain_brief_3item.txt \
-      --tag qwen3-1840 || echo "RUN FAILED ($LANG/$DEG)"
+      --tag $TAG || echo "RUN FAILED ($LANG/$DEG)"
   done
 done
 
 echo; echo "[sbatch] done"; date -Is
-ls -la results/production_D*_qwen3-1840_*.json 2>/dev/null
+ls -la results/production_D*_${TAG}_*.json 2>/dev/null
