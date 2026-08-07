@@ -1,0 +1,131 @@
+You are assisting with a scholarly experiment in structural literary analysis.
+
+TASK: Write an ORIGINAL descriptive opening (incipit) in Italian for a narrative set in the target
+domain below. It must be a HOMEOSYNTACTIC transposition: hold the clause nesting (D2, the operative rung) --- while inventing entirely new words, images, and content. It is NOT
+a paraphrase, translation, or reconstruction of any source.
+
+FORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.
+Reproduce it for all 9 periods, in this order:
+Period 1 (about 111 words):
+  - main clause
+    - relative/adnominal clause
+      - relative/adnominal clause
+      - coordinated clause
+    - open complement (infinitive)
+      - coordinated clause
+    - coordinated clause
+      - relative/adnominal clause
+      - finite complement clause
+        - open complement (infinitive)
+      - coordinated clause
+        - relative/adnominal clause
+          - coordinated clause
+            - adverbial clause
+              - relative/adnominal clause
+                - adverbial clause
+                - adverbial clause
+                  - coordinated clause
+Period 2 (about 91 words):
+  - main clause
+    - relative/adnominal clause
+    - open complement (infinitive)
+      - adverbial clause
+    - parataxis
+      - relative/adnominal clause
+        - open complement (infinitive)
+      - relative/adnominal clause
+      - finite complement clause
+        - relative/adnominal clause
+        - coordinated clause
+          - open complement (infinitive)
+Period 3 (about 35 words):
+  - main clause
+    - coordinated clause
+Period 4 (about 37 words):
+  - main clause
+    - relative/adnominal clause
+    - relative/adnominal clause
+    - relative/adnominal clause
+Period 5 (about 45 words):
+  - main clause
+    - relative/adnominal clause
+    - open complement (infinitive)
+    - coordinated clause
+      - open complement (infinitive)
+      - adverbial clause
+        - coordinated clause
+          - finite complement clause
+Period 6 (about 83 words):
+  - main clause
+    - relative/adnominal clause
+      - relative/adnominal clause
+        - open complement (infinitive)
+    - coordinated clause
+      - relative/adnominal clause
+    - relative/adnominal clause
+      - relative/adnominal clause
+    - coordinated clause
+    - coordinated clause
+      - finite complement clause
+        - adverbial clause
+        - coordinated clause
+Period 7 (about 102 words):
+  - main clause
+    - coordinated clause
+    - coordinated clause
+      - adverbial clause
+        - coordinated clause
+      - adverbial clause
+    - coordinated clause
+      - adverbial clause
+    - coordinated clause
+      - coordinated clause
+      - coordinated clause
+        - coordinated clause
+Period 8 (about 91 words):
+  - main clause
+    - relative/adnominal clause
+      - relative/adnominal clause
+        - finite complement clause
+          - relative/adnominal clause
+            - adverbial clause
+            - coordinated clause
+    - adverbial clause
+      - coordinated clause
+      - relative/adnominal clause
+        - relative/adnominal clause
+          - coordinated clause
+            - open complement (infinitive)
+            - relative/adnominal clause
+Period 9 (about 86 words):
+  - main clause
+    - relative/adnominal clause
+    - parataxis
+      - relative/adnominal clause
+      - coordinated clause
+      - adverbial clause
+        - coordinated clause
+          - relative/adnominal clause
+      - coordinated clause
+        - relative/adnominal clause
+      - coordinated clause
+    - coordinated clause
+
+TARGET DOMAIN — the border/migration landscape of the central Mediterranean
+(deploy in your own words; nothing beyond these three):
+  - THE SCENE: the border/migration landscape of the central Mediterranean
+  - THE PLACE: Lampedusa
+  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography
+
+LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may
+appear, in any inflected form:
+accaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia
+
+REQUIREMENTS --- all three hold together (the constrained homeomorphism):
+1. FORM PRESERVED at the clause nesting (D2, the operative rung) (as specified above), in your own words.
+2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque; satisfy each pattern with fresh material.
+3. COHERENT --- one continuous, fully sensible geographical description.
+
+Write MODERN literary Italian (no apocope, no archaic elisions). Produce the 9 periods in order as continuous prose --- no numbering,
+no headings. Output ONLY the passage: no preamble, no self-audit.
+

@@ -1,0 +1,132 @@
+You are assisting with a scholarly experiment in structural literary analysis.
+
+TASK: Write an ORIGINAL descriptive opening (incipit) in English for a narrative set in the target
+domain below. It must be a HOMEOSYNTACTIC transposition: hold the clause nesting (D2, the operative rung) --- while inventing entirely new words, images, and content. It is NOT
+a paraphrase, translation, or reconstruction of any source.
+
+FORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.
+Reproduce it for all 12 periods, in this order:
+Period 1 (about 106 words):
+  - main clause
+    - relative/adnominal clause
+    - adverbial clause
+      - coordinated clause
+      - coordinated clause
+    - coordinated clause
+      - relative/adnominal clause
+      - open complement (infinitive)
+        - coordinated clause
+          - relative/adnominal clause
+            - coordinated clause
+              - adverbial clause
+                - open complement (infinitive)
+                  - adverbial clause
+                    - adverbial clause
+                      - open complement (infinitive)
+                        - coordinated clause
+Period 2 (about 90 words):
+  - main clause
+    - relative/adnominal clause
+    - relative/adnominal clause
+    - relative/adnominal clause
+      - open complement (infinitive)
+    - parataxis
+      - adverbial clause
+      - adverbial clause
+      - adverbial clause
+Period 3 (about 38 words):
+  - main clause
+    - parataxis
+      - adverbial clause
+Period 4 (about 39 words):
+  - main clause
+    - relative/adnominal clause
+    - parataxis
+      - relative/adnominal clause
+Period 5 (about 53 words):
+  - main clause
+    - relative/adnominal clause
+      - coordinated clause
+    - open complement (infinitive)
+      - adverbial clause
+    - parataxis
+      - relative/adnominal clause
+        - open complement (infinitive)
+Period 6 (about 92 words):
+  - main clause
+    - relative/adnominal clause
+      - open complement (infinitive)
+    - relative/adnominal clause
+    - coordinated clause
+      - relative/adnominal clause
+      - relative/adnominal clause
+        - coordinated clause
+        - coordinated clause
+          - open complement (infinitive)
+            - adverbial clause
+              - coordinated clause
+Period 7 (about 32 words):
+  - main clause
+    - open complement (infinitive)
+    - coordinated clause
+Period 8 (about 34 words):
+  - main clause
+    - open complement (infinitive)
+    - parataxis
+    - coordinated clause
+      - coordinated clause
+    - coordinated clause
+      - adverbial clause
+Period 9 (about 50 words):
+  - main clause
+    - parataxis
+      - coordinated clause
+      - adverbial clause
+        - coordinated clause
+          - coordinated clause
+          - coordinated clause
+Period 10 (about 107 words):
+  - main clause
+    - parataxis
+      - coordinated clause
+      - coordinated clause
+        - relative/adnominal clause
+          - coordinated clause
+    - parataxis
+      - relative/adnominal clause
+        - relative/adnominal clause
+          - adverbial clause
+            - open complement (infinitive)
+            - adverbial clause
+Period 11 (about 19 words):
+  - main clause
+    - relative/adnominal clause
+Period 12 (about 84 words):
+  - main clause
+    - relative/adnominal clause
+    - adverbial clause
+      - coordinated clause
+      - adverbial clause
+        - relative/adnominal clause
+    - coordinated clause
+      - relative/adnominal clause
+    - parataxis
+
+TARGET DOMAIN — the border/migration landscape of the central Mediterranean
+(deploy in your own words; nothing beyond these three):
+  - THE SCENE: the border/migration landscape of the central Mediterranean
+  - THE PLACE: Lampedusa
+  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography
+
+LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may
+appear, in any inflected form:
+adda, como, foreshorten, lakeside, lecco, lombard, martino, milan, modesty, obscurer, resegone, san, spanish, wildness
+
+REQUIREMENTS --- all three hold together (the constrained homeomorphism):
+1. FORM PRESERVED at the clause nesting (D2, the operative rung) (as specified above), in your own words.
+2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque; satisfy each pattern with fresh material.
+3. COHERENT --- one continuous, fully sensible geographical description.
+
+Write MODERN literary English. Produce the 12 periods in order as continuous prose --- no numbering,
+no headings. Output ONLY the passage: no preamble, no self-audit.
+
