@@ -32,6 +32,7 @@ LABEL = [
     (r"^qwen/qwen3-235b", "Qwen3-235B (OpenRouter)"),
     (r"kimi-k2", "Kimi-K2"),
     (r"Maverick", "Llama-4-Maverick (ACES)"),
+    (r"^Qwen/Qwen2\.5-72B", "Qwen2.5-72B (ACES)"),
 ]
 COLS = [("clause_inv", "clause-inv"), ("clause_nest", "clause-nest"),
         ("depth_gap", "depth-gap"), ("s0_pos", "surf-synt"),
