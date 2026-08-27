@@ -55,7 +55,83 @@ def env(k):
     return None
 
 
+# ---------- judge routing: TAMU Chat AI for the models it serves --------------
+# TAMU Chat AI is a LiteLLM proxy onto AWS Bedrock. Use it for every Claude model
+# it carries; the direct Anthropic API stays for what it does not (Opus 5) and as
+# an override. Four quirks of that endpoint, each of which costs a debugging hour:
+#
+#   1. Cloudflare 403s the default Python-urllib User-Agent with "error code:
+#      1010". Any ordinary UA gets through. This looks like an auth failure and
+#      is not.
+#   2. `temperature` is rejected outright -- extended thinking is on server-side.
+#      The direct API calls set temperature=0.0; TAMU cannot, so the judge is NOT
+#      byte-identical across the two backends even at the same model version.
+#   3. `max_tokens` must exceed the server's thinking budget. The direct call uses
+#      12 (it wants one number); 200 fails here, 2048 works.
+#   4. Responses stream by default and errors arrive inside the SSE body rather
+#      than as an HTTP status, so a 400 reads as malformed output. Always
+#      "stream": false.
+#
+# Model ids carry a `protected.` prefix and contain spaces.
+TAMU_BASE = os.environ.get("TAMU_AI_BASE", "https://chat-api.tamu.ai/openai")
+TAMU_MODELS = {
+    "claude-sonnet-4-6": "protected.Claude Sonnet 4.6",
+    "claude-sonnet-4-5": "protected.Claude Sonnet 4.5",
+    "claude-opus-4-8":   "protected.Claude Opus 4.8",
+    "claude-opus-4-7":   "protected.Claude Opus 4.7",
+    "claude-opus-4-6":   "protected.Claude Opus 4.6",
+    "claude-haiku-4-5":  "protected.Claude-Haiku-4.5",
+}
+# auto = TAMU when it carries the model and a key exists; else direct API.
+# DECIDED 2026-08-27: the DIRECT Anthropic API is the judge of record. TAMU is
+# opt-in via SEM_JUDGE_BACKEND=tamu, for exploratory work only.
+#
+# Why, despite TAMU being free and carrying the same model version: it is not the
+# same instrument. A 40-item agreement check against the cached direct-API values
+# found exact agreement on 29/40, mean |diff| 0.0875, and a SYSTEMATIC +0.0825
+# upward shift -- larger than the ~0.05 noise floor the paper already treats as
+# indistinguishable. One case reversed outright, 0.00 -> 1.00. That reversal is
+# the dangerous one: the gate argument in the paper's §4 rests on high-form,
+# zero-coherence candidates, and a judge that scores those 1.00 dissolves the
+# evidence. TAMU runs Bedrock with extended thinking on and rejects temperature,
+# which the direct calls set to 0.0.
+JUDGE_BACKEND = os.environ.get("SEM_JUDGE_BACKEND", "anthropic")   # anthropic | tamu
+TAMU_MIN_TOKENS = 2048
+
+
+def _tamu_key():
+    return os.environ.get("CHAT_AI_TAMU_API_KEY") or env("CHAT_AI_TAMU_API_KEY")
+
+
+def _use_tamu(model):
+    """Opt-in only. Never infer TAMU from the mere presence of a key: the judge of
+    record is the direct API, and silently switching instruments would bias the
+    coherence axis upward for whichever cells happened to be judged later."""
+    if JUDGE_BACKEND != "tamu":
+        return False
+    if model not in TAMU_MODELS:
+        raise JudgeError(f"SEM_JUDGE_BACKEND=tamu but TAMU does not carry {model}")
+    return True
+
+
+def _tamu_call(prompt, model, max_tokens):
+    body = {"model": TAMU_MODELS[model],
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": max(max_tokens, TAMU_MIN_TOKENS),
+            "stream": False}          # never omit: errors hide in the SSE body
+    req = urllib.request.Request(
+        TAMU_BASE + "/chat/completions", data=json.dumps(body).encode(),
+        headers={"Authorization": f"Bearer {_tamu_key()}",
+                 "content-type": "application/json",
+                 "User-Agent": "manzoni-judge/1.0"},   # not Python-urllib: Cloudflare 1010
+        method="POST")
+    r = json.loads(urllib.request.urlopen(req, timeout=120).read())
+    return r["choices"][0]["message"]["content"]
+
+
 def anthropic(prompt, max_tokens=12):
+    if _use_tamu(JUDGE_MODEL):
+        return _tamu_call(prompt, JUDGE_MODEL, max_tokens)
     body = {"model": JUDGE_MODEL, "max_tokens": max_tokens,
             "messages": [{"role": "user", "content": prompt}]}
     if "opus-4-8" not in JUDGE_MODEL:   # opus-4-8 rejects the temperature param
