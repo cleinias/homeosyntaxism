@@ -1,0 +1,115 @@
+{
+ "lang": "en",
+ "question": "period",
+ "model": "claude-sonnet-4-6",
+ "n": 3,
+ "brief": null,
+ "positive": "current",
+ "note": "source-blind: the judge saw the question and the word list only",
+ "verdicts": {
+  "broaden": {
+   "yes": 3,
+   "answered": 3
+  },
+  "commandant": {
+   "yes": 3,
+   "answered": 3
+  },
+  "cosy": {
+   "yes": 3,
+   "answered": 3
+  },
+  "discern": {
+   "yes": 3,
+   "answered": 3
+  },
+  "foothill": {
+   "yes": 3,
+   "answered": 3
+  },
+  "fortify": {
+   "yes": 3,
+   "answered": 3
+  },
+  "grandeur": {
+   "yes": 3,
+   "answered": 3
+  },
+  "grouping": {
+   "yes": 3,
+   "answered": 3
+  },
+  "intersect": {
+   "yes": 3,
+   "answered": 3
+  },
+  "lakeside": {
+   "yes": 3,
+   "answered": 3
+  },
+  "lighten": {
+   "yes": 3,
+   "answered": 3
+  },
+  "modesty": {
+   "yes": 3,
+   "answered": 3
+  },
+  "northwards": {
+   "yes": 3,
+   "answered": 3
+  },
+  "pebble": {
+   "yes": 3,
+   "answered": 3
+  },
+  "pinnacle": {
+   "yes": 3,
+   "answered": 3
+  },
+  "pleasantly": {
+   "yes": 3,
+   "answered": 3
+  },
+  "precipice": {
+   "yes": 3,
+   "answered": 3
+  },
+  "promontory": {
+   "yes": 3,
+   "answered": 3
+  },
+  "rampart": {
+   "yes": 3,
+   "answered": 3
+  },
+  "recede": {
+   "yes": 3,
+   "answered": 3
+  },
+  "scatter": {
+   "yes": 3,
+   "answered": 3
+  },
+  "southwards": {
+   "yes": 3,
+   "answered": 3
+  },
+  "torrent": {
+   "yes": 3,
+   "answered": 3
+  },
+  "unbroken": {
+   "yes": 3,
+   "answered": 3
+  },
+  "unfold": {
+   "yes": 3,
+   "answered": 3
+  },
+  "vantage": {
+   "yes": 3,
+   "answered": 3
+  }
+ }
+}

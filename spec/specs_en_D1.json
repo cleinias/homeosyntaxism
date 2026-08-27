@@ -1,0 +1,89 @@
+{
+ "lang": "en",
+ "degree": "D1",
+ "source_ref": "texts/incipit_en.txt",
+ "source_sha1": "d58c771f08c109d809ce57f20d46c0ec80d95bfc",
+ "n_periods": 12,
+ "periods": [
+  {
+   "k": 1,
+   "words": 106,
+   "spec": "Period 1 (~106 words) dependency triples (any order): 16x NOUN-det->DET; 9x NOUN-case->ADP; 6x VERB-advmod->ADV; 5x NOUN-nmod->NOUN; 5x VERB-cc->CCONJ; 5x VERB-conj->VERB; 4x NOUN-nummod->NUM; 4x NOUN-amod->ADJ; 4x VERB-obl->NOUN; 4x NOUN-cc->CCONJ; 4x NOUN-conj->NOUN; 4x VERB-nsubj->NOUN; 4x VERB-obj->NOUN; 3x NOUN-acl->VERB; 3x VERB-mark->PART; 2x VERB-nsubj->PRON; 2x VERB-xcomp->VERB; 2x VERB-advcl->VERB; 1x ROOT-root->NOUN; 1x PROPN-case->ADP; 1x NOUN-nmod->PROPN; 1x NOUN-cop->AUX; 1x VERB-mark->SCONJ; 1x NOUN-advcl->VERB; 1x VERB-advmod->ADP; 1x ADJ-case->ADP; 1x ADJ-det->DET; 1x NOUN-nmod->ADJ; 1x NOUN-conj->VERB; 1x PRON-case->ADP; 1x VERB-obl->PRON; 1x PROPN-det->DET; 1x VERB-nsubj->PROPN; 1x VERB-xcomp->NOUN; 1x ADJ-advmod->ADV; 1x ADJ-advcl->VERB; 1x ADV-advmod->ADV; 1x VERB-compound->ADP"
+  },
+  {
+   "k": 2,
+   "words": 90,
+   "spec": "Period 2 (~90 words) dependency triples (any order): 13x NOUN-case->ADP; 7x NOUN-det->DET; 6x NOUN-amod->ADJ; 6x NOUN-nmod->NOUN; 5x VERB-obl->NOUN; 3x VERB-advmod->ADV; 2x NOUN-acl->VERB; 2x NOUN-nummod->NUM; 2x VERB-aux->AUX; 2x NOUN-cc->CCONJ; 2x NOUN-conj->NOUN; 2x VERB-mark->SCONJ; 2x VERB-advcl->VERB; 2x VERB-obj->PRON; 1x VERB-nsubj->NOUN; 1x VERB-obj->NOUN; 1x ROOT-root->VERB; 1x NOUN-amod->VERB; 1x NOUN-appos->NUM; 1x NUM-acl->VERB; 1x VERB-xcomp->PROPN; 1x PROPN-flat->PROPN; 1x ADJ-det->DET; 1x NOUN-reparandum->ADJ; 1x NOUN-compound->PROPN; 1x PROPN-det->DET; 1x NOUN-appos->PROPN; 1x NOUN-nmod->PRON; 1x ADJ-compound->NOUN; 1x SCONJ-fixed->SCONJ; 1x ADV-advmod->ADV; 1x NOUN-mark->SCONJ; 1x NOUN-nsubj->PRON; 1x NOUN-cop->AUX; 1x ADV-advcl->NOUN; 1x PROPN-case->ADP; 1x NOUN-nmod->PROPN; 1x VERB-nsubj->PRON; 1x VERB-parataxis->VERB; 1x VERB-compound->ADP; 1x ADV-case->ADP; 1x VERB-obl->ADV; 1x NOUN-advmod->ADV; 1x ADJ-cc->CCONJ; 1x ADJ-conj->ADJ; 1x ADJ-advmod->ADV"
+  },
+  {
+   "k": 3,
+   "words": 38,
+   "spec": "Period 3 (~38 words) dependency triples (any order): 6x NOUN-det->DET; 5x NOUN-case->ADP; 4x NOUN-cc->CCONJ; 3x NOUN-amod->ADJ; 3x NOUN-conj->NOUN; 2x VERB-obl->NOUN; 2x VERB-advmod->ADV; 2x NOUN-nmod->NOUN; 1x VERB-nsubj->NOUN; 1x ROOT-root->VERB; 1x ADV-cc->CCONJ; 1x ADV-conj->ADV; 1x VERB-nsubj->PRON; 1x VERB-parataxis->VERB; 1x VERB-compound->ADP; 1x ADJ-conj->NOUN; 1x VERB-advcl->VERB; 1x VERB-obj->NOUN; 1x NOUN-nummod->NUM"
+  },
+  {
+   "k": 4,
+   "words": 39,
+   "spec": "Period 4 (~39 words) dependency triples (any order): 6x NOUN-conj->NOUN; 5x NOUN-det->DET; 4x NOUN-cc->CCONJ; 3x NOUN-case->ADP; 2x NOUN-nsubj->NOUN; 2x NOUN-acl->VERB; 2x VERB-obl->NOUN; 2x NOUN-cop->AUX; 1x NOUN-nmod->PRON; 1x NOUN-nmod->NOUN; 1x ADV-advmod->ADV; 1x NOUN-advmod->ADV; 1x ROOT-root->NOUN; 1x NOUN-parataxis->NOUN; 1x NOUN-amod->VERB; 1x ADV-case->ADP; 1x NOUN-nmod->ADV; 1x PRON-cc->CCONJ; 1x ADV-conj->PRON; 1x ADP-advmod->ADV; 1x VERB-advmod->ADP; 1x NOUN-compound->NOUN"
+  },
+  {
+   "k": 5,
+   "words": 53,
+   "spec": "Period 5 (~53 words) dependency triples (any order): 8x NOUN-det->DET; 6x NOUN-case->ADP; 3x ADJ-cop->AUX; 3x VERB-obl->NOUN; 2x ADJ-nsubj->PRON; 2x ADJ-advmod->ADV; 2x NOUN-advmod->ADV; 1x VERB-nsubj->PROPN; 1x ADJ-det->DET; 1x PROPN-acl->ADJ; 1x ADJ-obl->NOUN; 1x VERB-cc->CCONJ; 1x ADJ-conj->VERB; 1x NOUN-nmod->PRON; 1x VERB-obj->NOUN; 1x ROOT-root->VERB; 1x ADV-advmod->PART; 1x VERB-advmod->ADV; 1x ADV-obl->NOUN; 1x ADJ-cc->CCONJ; 1x VERB-conj->ADJ; 1x VERB-mark->PART; 1x ADJ-xcomp->VERB; 1x VERB-obj->PRON; 1x VERB-advcl->ADJ; 1x NOUN-nsubj->PRON; 1x NOUN-cop->AUX; 1x NOUN-amod->ADJ; 1x VERB-parataxis->NOUN; 1x NOUN-discourse->INTJ; 1x NOUN-obl->NOUN; 1x VERB-mark->SCONJ; 1x NOUN-acl->VERB; 1x VERB-xcomp->NOUN"
+  },
+  {
+   "k": 6,
+   "words": 92,
+   "spec": "Period 6 (~92 words) dependency triples (any order): 18x NOUN-det->DET; 13x NOUN-case->ADP; 7x NOUN-nmod->NOUN; 6x VERB-obj->NOUN; 5x VERB-obl->NOUN; 4x VERB-conj->VERB; 3x VERB-mark->PART; 3x VERB-advmod->ADV; 3x VERB-cc->CCONJ; 3x NOUN-cc->CCONJ; 3x NOUN-conj->NOUN; 3x NOUN-amod->ADJ; 2x VERB-obj->PRON; 2x NOUN-acl->VERB; 2x VERB-compound->ADP; 1x ADJ-nsubj->PRON; 1x ADJ-cop->AUX; 1x NOUN-acl->ADJ; 1x ADJ-xcomp->VERB; 1x VERB-nsubj->NOUN; 1x NOUN-nsubj->PRON; 1x NOUN-cop->AUX; 1x NOUN-advmod->ADV; 1x NOUN-acl->NOUN; 1x VERB-aux->AUX; 1x ROOT-root->VERB; 1x VERB-mark->SCONJ; 1x VERB-nsubj->PRON; 1x VERB-xcomp->VERB; 1x VERB-advcl->VERB"
+  },
+  {
+   "k": 7,
+   "words": 32,
+   "spec": "Period 7 (~32 words) dependency triples (any order): 4x NOUN-case->ADP; 3x NOUN-det->DET; 2x NOUN-cc->CCONJ; 2x NOUN-conj->NOUN; 1x VERB-nsubj->NOUN; 1x ROOT-root->VERB; 1x VERB-mark->PART; 1x VERB-xcomp->VERB; 1x VERB-cc->CCONJ; 1x VERB-advmod->ADV; 1x VERB-conj->VERB; 1x NUM-case->ADP; 1x VERB-obl->NUM; 1x DET-case->ADP; 1x NUM-nmod->DET; 1x DET-nmod->NOUN; 1x NOUN-compound->NOUN; 1x VERB-obl->NOUN; 1x NOUN-nmod->NOUN; 1x NOUN-nummod->NUM; 1x ADJ-case->ADP; 1x ADJ-det->DET; 1x NOUN-nmod->ADJ"
+  },
+  {
+   "k": 8,
+   "words": 34,
+   "spec": "Period 8 (~34 words) dependency triples (any order): 4x VERB-advmod->ADV; 3x VERB-conj->VERB; 2x VERB-nsubj->PRON; 2x NOUN-advmod->ADV; 2x VERB-cc->CCONJ; 2x NOUN-case->ADP; 2x NOUN-det->DET; 2x VERB-aux->AUX; 1x ROOT-root->VERB; 1x VERB-xcomp->ADJ; 1x VERB-parataxis->NOUN; 1x VERB-obj->PRON; 1x NOUN-nummod->NUM; 1x VERB-obl->NOUN; 1x PRON-case->ADP; 1x VERB-obl->PRON; 1x VERB-advcl->VERB; 1x VERB-compound->ADP; 1x VERB-nsubj->NOUN; 1x NOUN-nmod->NOUN; 1x NOUN-cc->CCONJ; 1x NOUN-compound->NOUN; 1x NOUN-conj->NOUN"
+  },
+  {
+   "k": 9,
+   "words": 50,
+   "spec": "Period 9 (~50 words) dependency triples (any order): 7x NOUN-case->ADP; 4x NOUN-amod->ADJ; 4x VERB-cc->CCONJ; 3x VERB-advmod->ADV; 3x VERB-obl->NOUN; 3x NOUN-det->DET; 3x VERB-nsubj->NOUN; 3x NOUN-nmod->NOUN; 3x VERB-conj->VERB; 2x VERB-compound->ADP; 2x VERB-mark->SCONJ; 1x VERB-nsubj->PRON; 1x ROOT-root->VERB; 1x VERB-parataxis->VERB; 1x NOUN-amod->VERB; 1x ADJ-advmod->ADV; 1x ADJ-obl->NOUN; 1x NOUN-conj->VERB; 1x VERB-advcl->VERB; 1x NOUN-nummod->NUM; 1x ADJ-cc->CCONJ; 1x ADJ-det->DET; 1x NOUN-conj->ADJ; 1x VERB-aux->AUX"
+  },
+  {
+   "k": 10,
+   "words": 107,
+   "spec": "Period 10 (~107 words) dependency triples (any order): 15x NOUN-det->DET; 14x NOUN-case->ADP; 8x VERB-obl->NOUN; 7x VERB-advmod->ADV; 6x NOUN-amod->ADJ; 5x NOUN-advmod->ADV; 5x NOUN-conj->NOUN; 5x NOUN-nmod->NOUN; 3x VERB-nsubj->PRON; 3x VERB-aux->AUX; 3x NOUN-cc->CCONJ; 3x VERB-conj->VERB; 3x NOUN-acl->VERB; 2x VERB-compound->ADP; 2x VERB-cc->CCONJ; 2x VERB-obj->PRON; 2x VERB-advcl->VERB; 1x ROOT-root->VERB; 1x VERB-obj->NOUN; 1x NOUN-appos->DET; 1x DET-advmod->ADV; 1x VERB-nsubj->NOUN; 1x VERB-parataxis->VERB; 1x NOUN-nummod->NUM; 1x VERB-advmod->ADP; 1x VERB-obj->NUM; 1x NUM-case->ADP; 1x NUM-nmod->NUM; 1x NOUN-obl->NOUN; 1x NOUN-cop->AUX; 1x VERB-parataxis->NOUN; 1x NOUN-amod->VERB; 1x VERB-xcomp->ADJ; 1x ADJ-cc->CCONJ; 1x ADJ-conj->ADJ; 1x VERB-mark->SCONJ"
+  },
+  {
+   "k": 11,
+   "words": 19,
+   "spec": "Period 11 (~19 words) dependency triples (any order): 3x NOUN-amod->ADJ; 2x NOUN-det->DET; 2x VERB-nsubj->NOUN; 2x VERB-obl->PRON; 2x VERB-aux->AUX; 2x NOUN-case->ADP; 2x VERB-obl->NOUN; 1x PRON-case->ADP; 1x ADJ-advmod->ADV; 1x NOUN-acl->VERB; 1x ROOT-root->VERB"
+  },
+  {
+   "k": 12,
+   "words": 84,
+   "spec": "Period 12 (~84 words) dependency triples (any order): 14x NOUN-det->DET; 9x NOUN-case->ADP; 5x VERB-obl->NOUN; 5x NOUN-nmod->NOUN; 4x VERB-advmod->ADV; 3x VERB-nsubj->NOUN; 3x NOUN-nmod->PRON; 3x VERB-aux->AUX; 3x VERB-obj->NOUN; 3x VERB-compound->ADP; 3x NOUN-amod->ADJ; 2x NOUN-cc->CCONJ; 2x VERB-advcl->VERB; 2x VERB-cc->CCONJ; 2x VERB-conj->VERB; 2x VERB-obj->PRON; 2x PRON-acl->VERB; 1x VERB-nsubj->PRON; 1x NOUN-acl->VERB; 1x ROOT-root->VERB; 1x NOUN-conj->NOUN; 1x PRON-case->ADP; 1x ADP-cc->CCONJ; 1x ADP-conj->ADP; 1x VERB-nsubj->DET; 1x ADJ-case->ADP; 1x ADJ-nmod->PRON; 1x VERB-obl->ADJ; 1x VERB-mark->PRON; 1x ADJ-cc->CCONJ; 1x ADJ-conj->ADJ; 1x VERB-parataxis->VERB; 1x NOUN-cop->AUX; 1x VERB-conj->NOUN"
+  }
+ ],
+ "embargo": [
+  "adda",
+  "como",
+  "foreshorten",
+  "lakeside",
+  "lecco",
+  "lombard",
+  "martino",
+  "milan",
+  "modesty",
+  "obscurer",
+  "resegone",
+  "san",
+  "spanish",
+  "wildness"
+ ],
+ "embargo_source": "filtered (14 of 250; thresholds 3.5/2.5)",
+ "constraint_block": "  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (SHOULD) from P_2: Embedded English metric verse (RE-DERIVED, not translated)\n    Specification: Per the plan's option (b): the Italian syllabic meter does not port, so substitute the accentual-syllabic equivalent. The opening syntagm scans as iambic pentameter, and the passage embeds >= 2 blank-verse (unrhymed iambic-pentameter) lines inside descriptive sentences, doing the same iconic-pacing work below conscious scansion. Tag as RE-DERIVED. Verifiable by scansion. NB: the non-portability of the Italian meter is itself reported as a finding (option (a)).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X and Y' whose members share a lexical field (seascape/movement; e.g. 'in bays and inlets', 'swelling and subsiding'), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Sea duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'the sea': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Sea duality — juridical naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid waviness at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the passage: the periodic syntax UNDULATES — successive waves of expansion and contraction, clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 long multi-clause period — while hierarchy stays fully legible (no anacoluthon, recoverable syntactic tree). DEPTH THRESHOLD to be set from Moore's measured incipit (English tolerates less subordination than Italian; the Italian used depth 8). Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility.\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.",
+ "brief": "  - the strait of water between two shores: the Sicilian Channel, between the North African coast and the island of Lampedusa\n  - the sea's juridical zones: international waters, the SAR search-and-rescue zones, territorial waters\n  - the routes and the boats of the migrants\n  - the lighthouse, the rocks and the inlets of the island\n  - the vessels and personnel of rescue and control (Coast Guard, Finance Guard)\n  - the first-reception center on the island\n  - a fisherman of the island",
+ "domain": "the border/migration landscape of the central Mediterranean"
+}

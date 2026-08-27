@@ -15,22 +15,24 @@ venv/
 .stanza/
 stanza_resources/
 
-# copyright: English source (revised Colquhoun, ed. Reynolds) and everything derived
-texts/incipit_en*.txt
+# Copyright — the FULL English novel ONLY.
+#
+# SETTLED, do not re-narrow: the incipit excerpt we analyse (~680 words, the
+# same passage as texts/incipit_it.txt) and everything produced from it — the
+# specs, the embargo and lemma/zipf tables built from it, and the generations
+# and scored cells derived from it — are fair use for scholarly analysis and
+# ARE tracked. Excluding them cost us a day: the English cells lived only on
+# hippias, so rebuilding the production table on another machine silently
+# produced 18 cells instead of 26.
+#
+# What must never land here is a COMPLETE text of the translation.
 texts/*colquhoun*
 texts/*moore*
-spec/specs_en_*.json
-# ... including anything that reproduces its vocabulary: the frequency table, the
-# lemma cache and the band verdicts are all lists of the source's own content words
-spec/zipf_en.csv
-spec/lemma_en.csv
-spec/embargo_en_filtered.json
-spec/domain_verdicts_en.json
-spec/period_verdicts_en.json
-results/*-en_*.json
-results/*_en.json
-results/*_en_*.json
-# --print-prompt dumps: regenerable, and the English ones quote the source in full
+texts/*betrothed*
+texts/*_full.txt
+texts/*_complete.txt
+
+# --print-prompt dumps: excluded because they are regenerable, not for copyright
 results/prompt_*.json
 
 # editor / OS
