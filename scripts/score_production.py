@@ -142,7 +142,7 @@ def main():
         data, rows = score_file(path)
         print(f"=== {Path(path).name}  ({data.get('model')}, "
               f"periods={data.get('periods')}, n={len(rows)}) ===")
-        print(f"{'cand':>4}{'words':>6}{'d2_cl':>7}{'depth':>6}{'s0_pos':>7}"
+        print(f"{'cand':>4}{'words':>6}{'cl_inv':>7}{'cl_nst':>7}{'depth':>6}{'s0_pos':>7}"
               f"{'lem_j':>6}{'fr_div':>7}{'coher':>6}{'SCORE':>7}")
         for r in rows:
             print(f"{r['i']:>4}{r['words']:>6}{r['clause_inv']:>7.3f}{r['clause_nest']:>7.3f}{r['depth_gap']:>6.1f}"
