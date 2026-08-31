@@ -31,6 +31,7 @@ LABEL = [
     (r"^Qwen/Qwen3-235B", "Qwen3-235B (ACES)"),
     (r"^qwen/qwen3-235b", "Qwen3-235B (OpenRouter)"),
     (r"kimi-k2", "Kimi-K2"),
+    (r"bidl/mmarchesini/Llama-4-Maverick", "Llama-4-Maverick (bf16, Delta)"),
     (r"Maverick", "Llama-4-Maverick (ACES)"),
     (r"^Qwen/Qwen2\.5-72B", "Qwen2.5-72B (ACES)"),
 ]
@@ -92,7 +93,8 @@ def main():
     if a.regime:
         rows = [r for r in rows if r["regime"] == a.regime]
     order = {"Opus 5": 0, "Opus 4.8": 1, "Fable 5": 2, "Qwen3-235B (ACES)": 3,
-             "Qwen3-235B (OpenRouter)": 4, "Kimi-K2": 5, "Llama-4-Maverick (ACES)": 6}
+             "Qwen3-235B (OpenRouter)": 4, "Kimi-K2": 5, "Llama-4-Maverick (ACES)": 6,
+             "Llama-4-Maverick (bf16, Delta)": 7}
     rows.sort(key=lambda r: (r["regime"] != "constrained", order.get(r["model"], 9),
                              r["lang"], r["degree"]))
 
