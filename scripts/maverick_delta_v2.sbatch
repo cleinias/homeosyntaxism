@@ -37,7 +37,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=64
 #SBATCH --mem=0
-#SBATCH --time=03:00:00
+#SBATCH --time=04:00:00
 #SBATCH --output=/projects/bidl/mmarchesini/jobs/maverick-bf16-%j.out
 #SBATCH --error=/projects/bidl/mmarchesini/jobs/maverick-bf16-%j.err
 
@@ -76,7 +76,7 @@ TAG=maverick-bf16
 cd $WORKDIR
 
 LOADFMT=${LOADFMT:-runai_streamer}
-READY_LIMIT=${READY_LIMIT:-3600}   # absolute seconds allowed to reach readiness
+READY_LIMIT=${READY_LIMIT:-10800}   # absolute seconds allowed to reach readiness
 STALL_LIMIT=${STALL_LIMIT:-600}    # seconds with no loader progress before abort
 MEM_LOG=$JOBDIR/meminfo-$SLURM_JOB_ID.log
 ABORT_FLAG=$JOBDIR/.abort-$SLURM_JOB_ID
