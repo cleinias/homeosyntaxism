@@ -29,6 +29,7 @@ Backends:
 """
 import argparse
 import json
+import os
 import pathlib
 import hashlib
 import re
@@ -97,6 +98,10 @@ def build_prompt(src):
 
 
 def env(k):
+    # the process environment wins (e.g. `source ~/.config/anthropic/env`), so a
+    # rotated key does not have to be copied into the repo's .env
+    if os.environ.get(k):
+        return os.environ[k]
     for line in ENV.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if line.startswith(k + "="):

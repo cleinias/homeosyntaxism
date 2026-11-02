@@ -62,6 +62,26 @@ def replace_domain(prompt: str, block: str) -> str:
     return new
 
 
+def replace_discourse(prompt: str, spec: dict) -> str:
+    """Change the DISCOURSE TYPE the prompt asks for (the CHR reviewer-2 control).
+
+    The production prompt asks for a "descriptive opening (incipit) ... for a narrative"
+    and requires "one continuous, fully sensible geographical description", so a domain
+    swap alone would still ask for a description.  `spec` gives the replacement for the
+    TASK's text-type phrase ("what") and for requirement 3 ("coherent").  Form target,
+    embargo and requirements 1-2 are untouched.
+    """
+    new, k1 = re.subn(r'(TASK: Write an ORIGINAL )descriptive opening \(incipit\)( in \w+ )'
+                      r'for a narrative set in the target\s*domain below\.',
+                      lambda m: m.group(1) + spec["what"] + m.group(2).rstrip() +
+                      ", set in the target domain below.", prompt)
+    new, k2 = re.subn(r'3\. COHERENT --- .*?\n',
+                      lambda m: "3. COHERENT --- " + spec["coherent"] + "\n", new)
+    assert k1 == 1 and k2 == 1, f"discourse swap failed: task {k1}, coherent {k2}"
+    assert "geographical" not in new and "descriptive opening" not in new
+    return new
+
+
 # Terms that would identify the source. The LEXICAL EMBARGO legitimately contains
 # source vocabulary -- that is what it is for -- so it is excluded from the check.
 SOURCE_TERMS = ["manzoni", "manzonian", "lecco", "promessi", "como",
@@ -125,6 +145,8 @@ def main():
     ap.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"],
                     help="output_config effort level (default: model default)")
     ap.add_argument("--domain", help="file holding a replacement TARGET DOMAIN block")
+    ap.add_argument("--discourse", help="JSON {what, coherent}: change the requested "
+                    "discourse type (see replace_discourse)")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
@@ -139,6 +161,9 @@ def main():
         before = len(prompt)
         prompt = replace_domain(prompt, Path(a.domain).read_text(encoding="utf-8"))
         print(f"[domain]     {before} -> {len(prompt)} chars; brief from {a.domain}", flush=True)
+    if a.discourse:
+        prompt = replace_discourse(prompt, json.loads(Path(a.discourse).read_text(encoding="utf-8")))
+        print(f"[discourse]  text type from {a.discourse}", flush=True)
     assert_source_blind(prompt)
     print(f"[unrestrict] {len(d['prompt'])} -> {len(prompt)} chars; source-blind {degree}, no patterns",
           flush=True)
@@ -161,7 +186,7 @@ def main():
         # silently parsed an English run with the Italian model
         "lang": "en" if (d.get("source_ref") or "").endswith("_en.txt") else "it",
         "regime": "unrestricted-homeo-source-blind", "derived_from": str(a.constrained),
-        "domain_brief": a.domain,
+        "domain_brief": a.domain, "discourse": a.discourse,
         "n": len(gens), "refused": refused, "attempts": att,
         "temperature": a.temperature if a.backend == "vllm-http" else None,
         "max_tokens": a.max_tokens,
