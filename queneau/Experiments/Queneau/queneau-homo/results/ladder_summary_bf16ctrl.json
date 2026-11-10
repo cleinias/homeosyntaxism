@@ -1,0 +1,14 @@
+{
+ "struct_bar": 0.6,
+ "coh_bar": 0.5,
+ "ladder": [
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.335,
+   "d2_clause": 0.626,
+   "pass_rate": 0,
+   "coherence": 0.681
+  }
+ ]
+}

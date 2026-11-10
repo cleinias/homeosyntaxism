@@ -1,0 +1,414 @@
+{
+ "ladder": [
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "coherence": 0.058,
+   "n": 90
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "coherence": 0.16,
+   "n": 90
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "coherence": 0.331,
+   "n": 90
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "coherence": 0.564,
+   "n": 90
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "coherence": 0.691,
+   "n": 90
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "coherence": 0.727,
+   "n": 90
+  }
+ ],
+ "cells": [
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "en",
+   "scenario": "grocery-checkout",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "en",
+   "scenario": "grocery-checkout",
+   "coherence": 0.27,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "en",
+   "scenario": "grocery-checkout",
+   "coherence": 0.88,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "en",
+   "scenario": "grocery-checkout",
+   "coherence": 0.83,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "en",
+   "scenario": "grocery-checkout",
+   "coherence": 0.64,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "en",
+   "scenario": "grocery-checkout",
+   "coherence": 0.87,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "en",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.05,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "en",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.59,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "en",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.87,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "en",
+   "scenario": "hospital-emergency-room",
+   "coherence": 1.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "en",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.7,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "en",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.93,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "en",
+   "scenario": "security-checkpoint",
+   "coherence": 0.06,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "en",
+   "scenario": "security-checkpoint",
+   "coherence": 0.22,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "en",
+   "scenario": "security-checkpoint",
+   "coherence": 1.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "en",
+   "scenario": "security-checkpoint",
+   "coherence": 1.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "en",
+   "scenario": "security-checkpoint",
+   "coherence": 0.94,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "en",
+   "scenario": "security-checkpoint",
+   "coherence": 0.83,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "fr",
+   "scenario": "grocery-checkout",
+   "coherence": 0.08,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "fr",
+   "scenario": "grocery-checkout",
+   "coherence": 0.08,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "fr",
+   "scenario": "grocery-checkout",
+   "coherence": 0.42,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "fr",
+   "scenario": "grocery-checkout",
+   "coherence": 0.43,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "fr",
+   "scenario": "grocery-checkout",
+   "coherence": 0.14,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "fr",
+   "scenario": "grocery-checkout",
+   "coherence": 0.22,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "fr",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.07,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "fr",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.18,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "fr",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.83,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "fr",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.8,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "fr",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.15,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "fr",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.7,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "fr",
+   "scenario": "security-checkpoint",
+   "coherence": 0.09,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "fr",
+   "scenario": "security-checkpoint",
+   "coherence": 0.1,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "fr",
+   "scenario": "security-checkpoint",
+   "coherence": 0.79,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "fr",
+   "scenario": "security-checkpoint",
+   "coherence": 0.7,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "fr",
+   "scenario": "security-checkpoint",
+   "coherence": 0.31,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "fr",
+   "scenario": "security-checkpoint",
+   "coherence": 0.71,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "it",
+   "scenario": "grocery-checkout",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "it",
+   "scenario": "grocery-checkout",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "it",
+   "scenario": "grocery-checkout",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "it",
+   "scenario": "grocery-checkout",
+   "coherence": 0.18,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "it",
+   "scenario": "grocery-checkout",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "it",
+   "scenario": "grocery-checkout",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "it",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.1,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "it",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "it",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.76,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "it",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.7,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "it",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "it",
+   "scenario": "hospital-emergency-room",
+   "coherence": 0.46,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "lang": "it",
+   "scenario": "security-checkpoint",
+   "coherence": 0.07,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "lang": "it",
+   "scenario": "security-checkpoint",
+   "coherence": 0.0,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "lang": "it",
+   "scenario": "security-checkpoint",
+   "coherence": 0.67,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "lang": "it",
+   "scenario": "security-checkpoint",
+   "coherence": 0.9,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "lang": "it",
+   "scenario": "security-checkpoint",
+   "coherence": 0.1,
+   "n": 10
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "lang": "it",
+   "scenario": "security-checkpoint",
+   "coherence": 0.36,
+   "n": 10
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "struct_bar": 0.6,
+ "coh_bar": 0.5,
+ "ladder": [
+  {
+   "model": "claude-opus-4-8",
+   "cells": 18,
+   "s0_pos": 0.387,
+   "d2_clause": 0.878,
+   "pass_rate": 0,
+   "coherence": 0.952
+  }
+ ]
+}

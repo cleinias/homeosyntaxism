@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "grocery-checkout",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nSulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 104.2,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Alla cassa del supermercato in un pomeriggio. Un cliente sulla quarantina, giacca sgualcita con una spilla al posto del bottone, sguardo troppo teso, come se glielo avessero incollato. La fila avanza. Il signore davanti litiga con qualcuno. Gli contesta di premerlo appena scivola qualcosa. Tono petulante, con velleità di durezza. Non appena scorge lo spazio libero, vi si getta. Due minuti dopo quasi lo ritrovo all'uscita del Conad, oltre le casse, proprio dietro il banco Frutta Verdura. È con una vicina che gli osserva: «Dovresti far scorrere un divisorio dietro la spesa». Gli indica dove (sul nastro) e perché."
+  },
+  {
+   "i": 1,
+   "text": "Alla Coop, in un'ora di calca. Il cliente davanti circa cinquanta carrelli spesa ingombri dietro il nastro tra le corsie sotto un lampeggiare metallico, quasi frenetico, mentre qualcuno viene servito. Il cassiere sospira. Lo scontrino di carta le esce dal lettore. Lei borbotta di aspettare accanto quella spartizione mentre ostacola lui. Sacchetto vuoto sotto scanner con divisorio. Là, quando appoggia la merce pesante, qualcuno lo pretende. Due bip appena adesso, un annuncio dalla Fidaty verso Esselunga, poi presso la Carta Punti Coop. È dietro la fila chi le indica. Ha voluto sistemare quel prodotto sopra là dietro la mensola. Gli conviene ripassare presto verso la cassa oppure ora."
+  },
+  {
+   "i": 2,
+   "text": "Alla cassa del supermercato, in un'ora di calca. Una signora sulla circa cinquantina, cappotto verde ampio con una borsa al posto della sporta, dai capelli grigi, come se glieli avessero cotonati apposta. La fila avanza. La cliente davanti brontola contro un carrello. Lo accusa di urtarla quando avanza qualcuno. Voce stridula con pretese di sopportazione. Appena arriva il divisorio nero lei lo poggia. Una collega dietro intanto la scruta dalla Emmezeta di Milano, proprio nella Grande Via Torino. Sono dietro il nastro che lei osserva. Ha finito scandire la spesa con lentezza sopra il piano. Le prova mostrare pure dove sul lettore e perché."
+  },
+  {
+   "i": 3,
+   "text": "Alla Coop, in un'ora di calca. Il carrello di circa quaranta articoli, sacchetti troppo pieni, sulla superficie di gomma, verso la zona del pagamento, con una barra divisoria assai storta, mentre qualcuno si spazientisce. Il cliente avanza. La cassiera con gentilezza lo saluta durante la scansione. Lei passa a battere ogni prodotto finché arriva lui. Barra sottile tra spesa e spesa. Dietro, mentre riempie quel sacchetto pesante, qualcuno lo urta. Un signore piuttosto insistentemente lo incalza da dietro alla cassa, proprio verso il povero Marco Bianchi. Sbotta contro la fila, gli si rivolge. Vorrebbe spostare la merce da lì verso il lettore. Gli chiede aiuto indicando prima verso la tessera e poi."
+  },
+  {
+   "i": 4,
+   "text": "Alla cassa del supermercato, in un'ora di punta. Una signora di circa quaranta anni, borsa capiente con una tracolla al posto del manico, sguardo dietro gli occhiali spessi, come se avesse fretta. La fila avanza. Il tizio davanti litiga con una cassiera. Le rimprovera di sbagliare ogni volta che scansiona qualcosa. Tono seccato, con pretese di ragione. Appena che vede lo spazio libero, vi si sposta. Due persone dopo lo ritrovo al Conad di Bologna, davanti al Centro Nova Ovest. È con un amico che gli suggerisce: «Dovresti far attivare la tessera fedeltà». Gli fa notare dove (allo sportello) e come."
+  },
+  {
+   "i": 5,
+   "text": "Alla Coop, in un pomeriggio di ressa. Una signora sui circa quaranta anni, giacca leggera con una spilla al posto del bottone, sotto il braccio una borsa di una marca ormai sbiadita, come se l'avessero smacchiata. Il nastro scorre. La cliente davanti sbuffa contro il carrello. Gli rimprovera di bloccarlo mentre carica la merce. Voce stridula, con smanie di superiorità. Appena come vede lo spazio libero, ci si getta. Due sportelli più oltre la ritrovo alla Cassa di Piano, dietro allo Scaffale Surgelati. È tra le mani che le si allunga. Ha voluto sistemare la barretta di nuovo sopra il divisore. Le indica dove (accanto allo scanner) e perché."
+  },
+  {
+   "i": 6,
+   "text": "Alla Coop, in un pomeriggio di ressa. Un signore di circa cinquant'anni, giacca sportiva con una spilla al posto del taschino, sguardo troppo teso, come se qualcuno lo avesse innervosito. La fila avanza. L'uomo davanti al carrello si lamenta con la cassiera. Le rimprovera di sbagliare ogni prezzo che compare. Voce stridula, con smania di protesta. Appena vede lo scanner libero, vi si precipita. Due minuti dopo lo scorgo verso l'uscita, davanti alla Farmacia Comunale. È con una compagna che gli suggerisce: «Dovresti mettere le buste sul nastro con più anticipo». Gli indica dove e come."
+  },
+  {
+   "i": 7,
+   "text": "Alla cassa del supermercato in ora di punta. Un signore di circa quaranta anni, giacca sportiva con una toppa al posto della tasca, sguardo troppo nervoso, come se qualcuno lo avesse innervosito. La coda avanza. Il cliente davanti litiga con qualcuno alle spalle. Gli contesta di premere quando accosta il carrello. Voce stridula, con velleità di fermezza. Appena scorge lo spazio libero, vi si getta. Due minuti dopo lo rivedo al parcheggio di Esselunga, presso l'ingresso di Corso Vittorio Emanuele. È al telefono con qualcuno che gli suggerisce: «Dovresti far cambiare quel bottone alla giacca». Gli indica dove (sul colletto) e perché."
+  },
+  {
+   "i": 8,
+   "text": "Alla Coop, in un'ora di calca. Il carrello di circa venti articoli, nastro trasportatore scorrevole verso la cassa, con un divisorio sopra il piano, come se qualcuno lo avesse posato. La fila avanza. Il cliente davanti si spazientisce con la vicina. Le rimprovera di premere quando arriva qualcuno. Voce sommessa, con pretese di fastidio. Appena scorge uno spazio libero, lo occupa. Due sacchetti dopo lo rivedo al Bancomat, oltre la Postazione, proprio presso il Lettore Carte Fedeltà. È dietro una signora che le suggerisce: «Dovresti mettere spuntare la tessera sul retro, così sotto lo scanner». Lui bipa scansiona ancora sopra il display e allora."
+  },
+  {
+   "i": 9,
+   "text": "Alla Coop, in un'ora di ressa. Un cliente di circa quaranta anni, giacca sportiva con una spilla al posto del bottone, sguardo troppo vago, come se lo avessero distratto. La coda avanza. Il tale di prima si spazientisce con una vicina. Le rimprovera di anticiparlo mentre carica la spesa. Fastidio evidente, con pretese di ragione. Appena scorge un varco libero, lui vi si infila. Due minuti dopo ancora lo ritrovo alla Cassa di Sotto, davanti al Bancomat, proprio sotto il Cartello Offerte Speciali. È con una collega che gli dice: «Dovresti chiedere uno scontrino nuovo». Gli indica dove firmare la ricevuta con l'altra sul lettore. Lei sorride annuendo appena verso la fila e poi."
+  }
+ ]
+}

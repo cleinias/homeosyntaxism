@@ -1,0 +1,34 @@
+You are assisting with a scholarly experiment in structural literary analysis.
+
+TASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be
+a HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level
+specified below while inventing entirely new words and moving the content into the target
+scenario. It is NOT a paraphrase or a translation.
+
+FORM TARGET (hold this). Reproduce, period by period, the DEPENDENCY TRIPLES below --- the same multiset of (head part-of-speech -> relation -> dependent part-of-speech) triples, in ANY word order you like. Which words depend on which, and how, is fixed; the linear order and the words themselves are entirely yours.
+Reproduce it for all 10 periods, in this order:
+Period 1 (~8 words) dependency triples (order-free): 2x NOUN-case->ADP; 2x NOUN-det->DET; 1x NOUN-compound->PROPN; 1x ROOT-root->NOUN; 1x NOUN-compound->NOUN; 1x NOUN-nmod->NOUN
+Period 2 (~29 words) dependency triples (order-free): 4x NOUN-det->DET; 2x NOUN-case->ADP; 2x VERB-obl->NOUN; 2x VERB-aux->AUX; 1x VERB-nsubj->NOUN; 1x NUM-case->ADP; 1x NUM-advmod->ADV; 1x NOUN-nmod->NUM; 1x ROOT-root->VERB; 1x VERB-xcomp->NOUN; 1x NOUN-case->ADV; 1x ADV-fixed->ADP; 1x NOUN-conj->NOUN; 1x ADV-advmod->ADV; 1x NOUN-advmod->ADV; 1x VERB-mark->SCONJ; 1x SCONJ-fixed->SCONJ; 1x VERB-nsubj->PRON; 1x VERB-advcl->VERB; 1x VERB-obj->NOUN; 1x NOUN-nmod->NOUN; 1x PRON-case->ADP; 1x VERB-obl->PRON
+Period 3 (~3 words) dependency triples (order-free): 1x VERB-nsubj->NOUN; 1x ROOT-root->VERB; 1x VERB-compound->ADP
+Period 4 (~15 words) dependency triples (order-free): 2x NOUN-det->DET; 2x NOUN-case->ADP; 1x VERB-nsubj->NOUN; 1x NOUN-nmod->NOUN; 1x VERB-aux->AUX; 1x ROOT-root->VERB; 1x NUM-case->ADP; 1x VERB-obl->NUM; 1x NUM-nmod->NOUN; 1x NOUN-acl->VERB; 1x VERB-advmod->ADV; 1x PRON-case->ADP; 1x VERB-obl->PRON
+Period 5 (~11 words) dependency triples (order-free): 2x VERB-nsubj->PRON; 2x VERB-obj->PRON; 1x ROOT-root->VERB; 1x VERB-mark->SCONJ; 1x VERB-advcl->VERB; 1x NOUN-det->DET; 1x VERB-obl->NOUN; 1x NOUN-acl->VERB; 1x VERB-advmod->ADV
+Period 6 (~9 words) dependency triples (order-free): 1x NOUN-det->DET; 1x NOUN-amod->ADJ; 1x ROOT-root->NOUN; 1x VERB-nsubj->PRON; 1x VERB-aux->AUX; 1x NOUN-acl->VERB; 1x ADJ-mark->PART; 1x ADJ-cop->AUX; 1x VERB-xcomp->ADJ
+Period 7 (~12 words) dependency triples (order-free): 2x VERB-nsubj->PRON; 1x VERB-advmod->ADV; 1x VERB-advcl->VERB; 1x NOUN-det->DET; 1x NOUN-amod->ADJ; 1x VERB-obj->NOUN; 1x ROOT-root->VERB; 1x VERB-obj->PRON; 1x VERB-compound->ADP; 1x PRON-case->ADP; 1x VERB-obl->PRON
+Period 8 (~18 words) dependency triples (order-free): 4x PROPN-flat->PROPN; 2x PROPN-case->ADP; 2x PROPN-det->DET; 1x NOUN-nummod->NUM; 1x ADV-obl->NOUN; 1x VERB-advmod->ADV; 1x VERB-nsubj->PRON; 1x ROOT-root->VERB; 1x VERB-obj->PRON; 1x VERB-obl->PROPN; 1x NOUN-case->ADP; 1x VERB-obl->NOUN; 1x NOUN-nmod->PROPN
+Period 9 (~19 words) dependency triples (order-free): 2x NOUN-case->ADP; 2x NOUN-det->DET; 2x NOUN-acl->VERB; 1x NOUN-nsubj->PRON; 1x NOUN-cop->AUX; 1x ROOT-root->NOUN; 1x VERB-nsubj->PRON; 1x VERB-aux->AUX; 1x AUX-nsubj->PRON; 1x VERB-ccomp->AUX; 1x VERB-mark->PART; 1x AUX-xcomp->VERB; 1x NOUN-amod->ADJ; 1x VERB-obj->NOUN; 1x NOUN-nmod->PRON; 1x VERB-obl->NOUN
+Period 10 (~9 words) dependency triples (order-free): 1x VERB-nsubj->PRON; 1x ROOT-root->VERB; 1x VERB-obj->PRON; 1x VERB-ccomp->ADV; 1x NOUN-case->ADP; 1x NOUN-det->DET; 1x ADV-obl->NOUN; 1x ADV-cc->CCONJ; 1x ADV-conj->ADV
+
+TARGET SCENARIO --- render the content here (in your own words):
+  - an airport/border security checkpoint at a busy hour
+  - the queue and the barriers; the divestment of belongings into trays
+  - the scanners, metal detectors, and the body-search gesture
+  - an officer and a traveller singled out of the line; documents and a wanded pat-down
+  - the register of control: instructions, signage, the impersonal courtesy of authority
+
+REQUIREMENTS --- both hold together:
+1. DEPENDENCY STRUCTURE PRESERVED --- the same set of head->relation->dependent triples per period, in any order and words.
+2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,
+   no trace of any source content.
+
+Write modern, natural English. Produce the 10 periods in order as continuous prose --- no
+numbering, no headings. Output ONLY the passage: no preamble, no self-audit.

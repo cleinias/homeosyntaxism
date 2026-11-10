@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "fr",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 23 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 12 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 14 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\nPeriod 9 (about 18 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - finite complement clause\n        - open complement (infinitive)\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 2.9,
+ "gens": [
+  {
+   "i": 0,
+   "text": "À l'heure de pointe à la sécurité d'un aéroport, la file d'attente se déroule avec précipitation. Les bagages sont disposés en traytes en déposant le contenu. Les scanners et les détecteurs métalliques surveillent le flux tandis que l'officier, seul au milieu du cortège, effectue un contrôle corporel sur le voyageur sélectionné. Au centre de la scène, une affiche instructive fait office de guide, tandis que la routine de vérification documentaire se poursuit. Les signes d'information et l'humeur impersonnelle de l'autorité règnent en maître."
+  },
+  {
+   "i": 1,
+   "text": "Dans la file d'attente bruyante de l'embarquement, les bagages sont étalés sur les tables. Le contrôle des bagages et des portemanteaux déploient leur douane invisible. Les rayonnements x de la machine balayent les épaules des passagers. Un policier se penche vers un voyageur isolé. Le passeport est examiné, suivi d'un fouillis de gestes d'autorité. À la caisse du contrôle, les instructions sont claires, le ton est impersonnel. Les panneaux signalétiques guident le flux. Les contrôles de sécurité opèrent, chacun sous l'œil vigilant d'un agent. Les corps sous les rayons sont scrupuleusement inspectés. La file avance à reculons, le silence de fer face au monde extérieur."
+  },
+  {
+   "i": 2,
+   "text": "À l'heure de pointe à la douane aérienne, le queue s'étirait déjà sous une pression croissante. Les sacs étaient déposés sur les tables métalliques, chaque personne retirant consciencieusement ce qu'elle possédait de valeur. Les rayons des scanners scintillaient, tandis que les barrières métalliques s'enclenchèrent. Un agent était soudain isolé, ses papiers et la minutage corporelle suivirent le rituel impératif. Le registre de contrôle s'ouvrait devant lui, signalé par des pancartes claires. Il regardait avec une distance amicale les instructions qui se dressaient, l'air de dire : \"Nous prenons soin de vous.\""
+  },
+  {
+   "i": 3,
+   "text": "Au marché du jour où le flux s'accroît, la file d'attente est un flot incessant. Les bagages sont dépouillés dans des paniers alignés devant les barrières de sécurité, tandis que les scanners, métaldetecteurs et l'acte de fouille corporelle se mettent au travail. Un agent, parmi la cohorte, a été isolé du cortège, réduit à l'état de centre d'intérêt. Son dossier et une inspection corporelle ont suivi, toutes deux marquées par une routine impersonnelle et autoritaire. À côté d'eux, le tableau de contrôle se dresse, avec ses panneaux explicatifs, les panneaux signalétiques et son aura de sévérité distante."
+  },
+  {
+   "i": 4,
+   "text": "Au tumulte du contrôle d'entrée, une file s'étirait, chaque passager tendant la main pour libérer ses effets. Les rayons infrarouges inspectaient l'équipement tandis que les barrages métalliques agissaient comme des sentinelles silencieuses. Un agent se détachait du flux : sa valise, ses papiers, et même son corps, soumis à un minutieux examen. Dans le registre de contrôle, les instructions étaient impersonnelles, tandis que la courtoisie autoritaire se lisait sur les visages des responsables."
+  },
+  {
+   "i": 5,
+   "text": "À l'heure de pointe à la douane, une file s'étire tandis que les passagers déposent leurs bagages dans des tréteaux. Les rayons des scanners et les vibrations des détecteurs métalliques se conjuguent avec le geste de contrôle corporel. Un agent est isolé du reste de la file, son sac étalé sur un plateau. Ses papiers sont vérifiés en détail, suivis par une minutieuse fouille. À côté, la liste de contrôle se déploie : le règlement, les panneaux d'instructions, l'inertie polie des autorités."
+  },
+  {
+   "i": 6,
+   "text": "Au gré du tumulte d'un accès de l'aéroport bondé, la file s'étend vers les portes de sécurité ; des sacs posés en rangées sous les panneaux de signalisation, chaque détail est déshabillé dans une caisse métallique. Au-dessus, les rayons de scanner et le cliquetis des détecteurs à métaux se mêlent au ronronnement incessant des télécopieurs de contrôle. Devant moi, un officier de police inspecte un visiteur particulier, ses papiers présentés devant les caméras d'inspection tandis qu'un doux mouvement de main le scrute sous tous angles. À l'autre bout du hall, l'écran de lecture automatique affiche les ordres stricts de l'administration : l'entrée, sans retarder, pour le bénéfice de tous."
+  },
+  {
+   "i": 7,
+   "text": "Au tumulte de l'heure chargée de l'aéroport ou frontière, le queue s'étend en bandes serrées. Les bagages sont sortis des sacs et déposés dans les paniers à main. Le scanner, la barrière métallique, et les gestes corporels de vérification se déroulent en chaîne. Un officier se trouve isolé au milieu du flux, l'homme de passage soumet ses papiers et subit une minutieuse inspection physique. Sur le registre de contrôle, les messages d'instruction se poursuivent, les pancartes donnent l'ordre et la présence froide de l'autorité règne."
+  },
+  {
+   "i": 8,
+   "text": "Au déroulement effréné de l'heure d'afflux, les filets s'étirent tandis que les bagages se dévisageaient sous les écrans en couleur. Les rayons des scanners dévoilaient les secrets silencieux et les miroirs métalliques sifflaient avec une douceur froide. Un agent, isolé parmi les autres, scrutait attentivement un passager dans une file étirée. La procédure s'élevait comme un rituel, ses ordres résonnaient dans la pièce comme un souffle de commandement impersonnel. L'enregistrement de contrôle, avec son alliance de signes instructifs et d'inscriptions officielles, reflétait un espace où le respect des règles n'était pas une option."
+  },
+  {
+   "i": 9,
+   "text": "À l'aéroport bondé de ce matin, la file d'attente s'étirait vers le terminal. Les bagages étaient dépouillés, éparpillés sur les tables tandis que les appareils scanners et les détecteurs métalliques vérifiaient chaque passage. La barrière de sécurité scellait l'accès aux zones privilégiées. Un policier, attentif à ses missions, inspectait un voyageur isolé. Après avoir vérifié les papiers et subi une fouille corporelle minutieuse, le contrôle automatique s'affichait comme autorisation pour le passage. Le tableau de bord du contrôle, peuplé de signes et de panneaux, révélait une politesse froide et impersonnelle."
+  }
+ ]
+}

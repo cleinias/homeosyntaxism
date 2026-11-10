@@ -1,0 +1,62 @@
+{
+ "struct_bar": 0.6,
+ "coh_bar": 0.5,
+ "ladder": [
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.222,
+   "d2_clause": 0.521,
+   "pass_rate": 0,
+   "coherence": 0.058
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.32,
+   "d2_clause": 0.622,
+   "pass_rate": 0,
+   "coherence": 0.16
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.359,
+   "d2_clause": 0.579,
+   "pass_rate": 0,
+   "coherence": 0.691
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.385,
+   "d2_clause": 0.782,
+   "pass_rate": 0,
+   "coherence": 0.727
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.385,
+   "d2_clause": 0.616,
+   "pass_rate": 0,
+   "coherence": 0.331
+  },
+  {
+   "model": "Qwen/Qwen2.5-72B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.397,
+   "d2_clause": 0.788,
+   "pass_rate": 0,
+   "coherence": 0.867
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.372,
+   "d2_clause": 0.657,
+   "pass_rate": 0,
+   "coherence": 0.564
+  }
+ ]
+}

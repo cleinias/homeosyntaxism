@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2c",
+ "lang": "en",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 29 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 15 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 5 (about 11 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - relative/adnominal clause\nPeriod 6 (about 9 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 12 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 18 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 19 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n          - relative/adnominal clause\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 78.3,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "The line stretched past the magazine rack. She began to unload her cart, setting each item on the belt, while the scanner blinked its patient red light across the counter. The belt lurched forward. A woman behind her nudged a basket that pressed against the divider bar. The cashier smiled faintly whenever a barcode refused to register on the first pass. She reached for a coupon that she had meant to redeem. The beeps came steadily as the total climbed higher. A jar of pickles rolled toward the bagging area and knocked against a loaf of bread. The card reader asked whether she wished to confirm the payment she had entered to complete the purchase that cleared the account. The screen announced that her loyalty points had posted."
+  },
+  {
+   "i": 1,
+   "text": "The line at the register was long. She began to unload her cart, wanting to finish before the store filled further, though the crowd behind her kept surging. The belt hummed forward. A scanner blinked over each item that she slid past its red glass eye. Every barcode beeped once as it crossed the light that priced it. She reached for the divider bar to mark her groceries. The bagging area filled while the cashier worked. The card reader waited for a tap. Behind her a man pressed his basket against her hip, impatient, restless, close. The cashier announced a total that she claimed would clear once the shopper agreed to scan a card that granted loyalty points. The screen prompted that a receipt would print."
+  },
+  {
+   "i": 2,
+   "text": "The line at register four stretched past the endcaps. She unloaded her cart onto the belt, careful to space the cans out, while the scanner blinked its red thread over each item. The belt lurched forward. A woman behind her nudged a basket that already touched the divider bar. Whenever the beep sounded, the total that hung on the little screen climbed. The cashier reached to swivel the card reader around. The bagging area filled up as she dropped her loyalty card twice. She fumbled it into the slot, tapped the green button, waited for the machine to think, and finally heard the chirp of approval. The receipt, which curled from its mouth in a long tongue, printed a coupon that offered points anyone could redeem to buy the very brand she had just abandoned on the shelf. She realized then that the woman had already begun unloading."
+  },
+  {
+   "i": 3,
+   "text": "The line at register four had swelled past patience. The cashier reached for the next item, meaning to keep her rhythm steady, though the belt kept lurching with more groceries than it could carry. The scanner beeped. A woman set down her basket beside the divider bar that separated one order from the next. She waited while the total climbed toward a number that surprised her. The man behind her leaned forward, eager to close the gap. He crowded nearer as the cart nudged her heel. She said nothing, only stiffened, adjusting her weight against the cold edge of the bagging shelf. The cashier announced a figure that the woman thought she had misheard until she chose to check it against the receipt the machine was printing. The prompt asked whether she carried a loyalty card."
+  },
+  {
+   "i": 4,
+   "text": "The line snaked back toward the frozen aisles. She heaved her basket onto the belt, meaning to unload it fast, before the shopper behind her nudged closer with an impatient cart. The scanner beeped. A woman at the register swept each item past the glass eye that read its code. The divider bar slid forward whenever a gap opened that the next customer could claim. He leaned in, eager to plant his groceries early. The belt hummed again as the total climbed higher. The cashier called the amount aloud and gestured toward the little card reader beside the bags. The prompt flickered, asking whether she held the loyalty account that would let her earn the points that the sign near the door had promised. She realized she had forgotten it entirely."
+  },
+  {
+   "i": 5,
+   "text": "The line stretched back toward the frozen aisle. She began unloading her cart onto the belt, hoping to finish before the crowd thickened, because the store filled quickly around this hour. Beeps answered her. The scanner caught each barcode with a chirp that satisfied some private tally. She stacked cans behind the divider while a woman whose basket brimmed edged nearer. The cashier reached to swipe the milk. Bags drooped in the bagging area as items multiplied. The card reader glowed, the total flashed green, and a small screen requested her loyalty number in cheerful letters. She placed the last box down carefully, aware that the woman behind believed she deserved to occupy the space the divider marked as still hers. The receipt printed longer than she expected, insisting that she had saved four dollars."
+  },
+  {
+   "i": 6,
+   "text": "The line stretched back toward the frozen aisles. She moved the divider bar forward to claim her stretch of belt, though the man behind her had already begun stacking his cans. The scanner beeped. A jar of pickles rolled toward the bagging area, where it wobbled against the metal lip. If the belt jerked once more, the eggs that she had balanced on top would crack. She reached for the reader, ready to tap her card. The cashier smiled thinly as the total climbed higher. The man pressed his cart against her heels, nudging, always nudging, filling every inch of space the queue allowed. The cashier asked whether the shopper had the loyalty card that would earn the points she meant to save for whatever coupon the season offered. He grumbled that the machine was slow."
+  },
+  {
+   "i": 7,
+   "text": "The line stretched back past the magazines. She began unloading her cart, to keep the belt moving, though the woman behind her already pressed too close. The scanner beeped. A gallon of milk rolled forward against the divider bar that split their orders. The cashier waited while the barcode, which had smeared somehow, refused to register. She reached for a coupon tucked to save a dollar. The reader chirped its prompt as the card hovered near the pad. The bagging area filled slowly with cans and boxes and a wilting bunch of celery. The shopper behind sighed, a sound that suggested she believed everyone ought to hurry through a ritual that dragged on forever. The total flashed, and the screen asked whether a loyalty number applied."
+  },
+  {
+   "i": 8,
+   "text": "The line at the register was long. She pushed her cart forward to reach the belt, while the woman behind her edged closer than the space allowed. The scanner beeped. The cashier lifted a carton of milk that had rolled against the divider bar. She waited as the customer whose card kept failing tried again. The reader flashed a prompt asking her to insert. The total appeared once the last item passed. The man behind sighed and nudged his basket against the small of her back. He muttered that the line was slow because she was fumbling for the loyalty card that lived somewhere deep in her bag. The cashier said the receipt was printing."
+  },
+  {
+   "i": 9,
+   "text": "The line at register four coiled back toward the freezers. She began unloading her cart, meaning to sort the cold things last, while the belt lurched forward under its stuttering rubber hum. The scanner beeped. A woman behind her nudged a basket that already pressed against the small divider bar. Each item slid past a red light that caught its barcode. The cashier reached for a bagging rack meant to hold the heavier tins. Prices flashed on the little screen as the total climbed. The card reader waited, its keypad glowing, its cheerful prompt insisting on a loyalty number nobody could recall. She sensed the woman crowding closer, certain that the space she claimed on the belt was somehow the room that another shopper had wanted to occupy first. The receipt curled out, announcing that the machine, at last, was finished."
+  }
+ ]
+}

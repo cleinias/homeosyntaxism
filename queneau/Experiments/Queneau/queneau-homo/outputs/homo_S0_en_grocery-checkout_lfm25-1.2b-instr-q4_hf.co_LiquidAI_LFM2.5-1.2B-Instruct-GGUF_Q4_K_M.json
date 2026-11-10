@@ -1,0 +1,57 @@
+{
+ "model": "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+ "backend": "ollama-openai-loop",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "grocery-checkout",
+ "n": 10,
+ "temperature": 0.9,
+ "top_p": 0.95,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 14.1,
+ "gens": [
+  {
+   "i": 0,
+   "text": "A bustling aisle filled with voices, a steady hum of machines, and the soft murmur of cashiers sorting transactions. A steady stream of shoppers passed, each step a pause in the rhythmic clatter of items. Behind a counter, a customer paused, glancing at the scanner as it flickered to life. The register blinked, then displayed a receipt, while another customer adjusted his bag, unaware of the quiet ballet unfolding around him. The air thrummed with the promise of ease, a seamless dance of orders and routines. Each moment was etched in the silence of the checkout, a silent symphony of service and service."
+  },
+  {
+   "i": 1,
+   "text": "A narrow aisle of gleaming counters hums with the rhythm of transactional motion. Stalls stretch ahead, brushed with the scent of fresh produce, while hands dance across registers with practiced ease. Behind the counter, a solitary figure paces, absorbing the symphony of clattering boxes and whispered conversations. The air buzzes with urgency, each click and tap a note in a daily cadence. Above, a flickering screen glows with digital identifiers, guiding shoppers through a seamless flow. Every movement is choreographed, a silent ballet of commerce and computation. The crowd thrives in the space between orders, a shared rhythm shaped by necessity and habit."
+  },
+  {
+   "i": 2,
+   "text": "A bustling aisle stretches ahead, where shoppers weave through lines, their voices murmuring among the clatter of carts and the hum of machines. The display shelf glints under fluorescent lights, promising a quick exchange. A clerk approaches, hand poised beside a scanner, ready to scan the items. Nearby, a shopper lingers near a stack of bags, their gaze shifting between receipts and the shelf. A faint whir echoes as the conveyor lifts an item, a soft click announcing its arrival. The air buzzes with urgency, every click a reminder of the routine unfolding behind the scenes. Each footstep, each glance, carries the weight of a transaction, a silent exchange of purpose in the rhythm of retail. The scene pulses with the quiet intensity of a well-oiled machine, precise yet alive."
+  },
+  {
+   "i": 3,
+   "text": "A bustling supermarket scene unfolded at a rush hour, where people filed past shelves and whispers filled the air. At the checkout line, machines hummed softly, scanning tags and tallying sales. Nearby, a barcode scanner glided over products, while a small bagging area buzzed with activity. A cashier worked with precision, guiding a customer through the routine. Behind the counter, another shopper moved swiftly, feeling the gentle pull of a receipt. The noise of beeps echoed softly, marking each transaction. The space between lines was narrow, yet purposeful, each step part of a structured process. The atmosphere buzzed with efficiency, a seamless dance of order and motion."
+  },
+  {
+   "i": 4,
+   "text": "The bustling aisle hummed with voices, each step a rhythm in the shop’s pulse. Barcodes danced beside rusted signs, while shoppers moved like currents through a slow tide. A cashier’s voice cut through the din, steady as a metronome, as she guided a weary traveler through the maze of goods. Behind her, carts clacked softly, and the weight of receipts pressed into the space between breaths. The air buzzed with anticipation, a silent contract between hand and machine. Amidst the hum, a small friction lingered—a moment where time seemed to pause, before the next transaction unfolded. The scene pulsed, alive with the pulse of commerce and the quiet thrill of discovery."
+  },
+  {
+   "i": 5,
+   "text": "The neon lights flickered over rows of canned goods, while the checkout hum buzzed softly. A woman reached for a receipt, her fingers brushing past a tag that clicked like a small bell. Behind her, a line of shoppers moved with quiet purpose, exchanging notes with a cashier whose voice softened as the registers whirred. A child’s laughter echoed through the narrow aisle, merging with the distant thud of a cart sliding past. The air smelled faintly of paper and the metallic scent of loyalty cards, a ritual repeating itself with every turn of the turnstile. Somewhere in the background, a beep confirmed the transaction, a brief punctuation in the rhythm of the crowd. Around them, the order of daily commerce persisted, unspoken yet unbreakable."
+  },
+  {
+   "i": 6,
+   "text": "Amid the clatter of transactional rhythms, a silent parade unfolds beneath the fluorescent hum of the aisles. Workers glide past stalls lined with gleaming displays, their footsteps syncing with the soft chime of receipts. Shelves whisper with promises, while a customer pauses, weighing choices like a balance of chance. Each turn reveals a new story in the rhythm of motion, the hum of purpose, the quiet symphony of purchase."
+  },
+  {
+   "i": 7,
+   "text": "A bustling supermarket corridor pulses with movement and the soft hum of machines. At the point of sale, hands weave through bins, scanners glide over tags, and a few shoppers push through a queue with quiet purpose. Behind them, a register ticks softly, a voice echoes prompts, and receipts are printed with precise care. Another customer lingers, eyes scanning the aisles, a slight tension in the air as space narrows between shoppers. The room buzzes with the rhythm of routine, each step a part of a carefully structured flow."
+  },
+  {
+   "i": 8,
+   "text": "A line of shoppers moves past the display, the scanner hums softly as hands sort items, a keeper stands near the register, while paper receipts flutter among the wares. The store buzzes with quiet orders, each voice part of a larger rhythm. Beeps echo, prompts flash, and a steady flow shapes the daily transaction. Through the glass, the world blends seamlessly into routine. The atmosphere thrums with the pulse of commerce, each moment a note in the structure of commerce. The scene shifts, each phase aligning with the next in purposeful order."
+  },
+  {
+   "i": 9,
+   "text": "A bustling aisle stretches beneath the glow of fluorescent lights, each aisle lined with shelves that hum with the soft whir of conveyor belts. Shoppers weave through the crowd, eyes scanning labels and receipts, their footsteps rhythmic against polished floors. Behind them, a cashier moves swiftly, a clipboard in hand, handing cards out with a practiced rhythm. Between them, a line of shoppers forms, their voices a low murmur as they wait, the air thick with the scent of fresh produce and the faint tang of plastic bags. The scene pulses, a seamless dance of commerce and human rhythm, each moment marking the beat of the store’s unseen machinery."
+  }
+ ]
+}

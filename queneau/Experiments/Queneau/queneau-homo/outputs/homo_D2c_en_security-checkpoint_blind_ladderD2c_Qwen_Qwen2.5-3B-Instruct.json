@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "en",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 29 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 15 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 5 (about 11 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - relative/adnominal clause\nPeriod 6 (about 9 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 12 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 18 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 19 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n          - relative/adnominal clause\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 2.2,
+ "gens": [
+  {
+   "i": 0,
+   "text": "At the bustling hour, travelers queued closely, divesting their belongings into trays. Metal detectors hummed, and scanners beamed cold light through every layer. A lone officer stood apart, eyes sharp on a solitary traveler. Papers shuffled, and a pat-down followed. Control logs ticked, with signs that guided but remained unapproachable. Instructions flashed above, cold reminders of duty. Security hummed around them, its presence felt more than seen. Yet, amidst the sterile chaos, there was a calm, a quiet routine."
+  },
+  {
+   "i": 1,
+   "text": "At the bustling security checkpoint, a traveler waits in the queue, his belongings placed on trays before him. A guard spots a single individual singled out from the crowd; papers are swiftly inspected, followed by a hushed pat-down. The register of control looms, its cold precision etched in the air, marked by clear instructions and stern signage. The traveler’s eyes wander across the space, registering the unseen flow of other travelers around him, their movements halted by the solemnity of authority."
+  },
+  {
+   "i": 2,
+   "text": "At the airport’s thronged security checkpoint, a traveller jostles through the bustling queue. Bags and trunks are swiftly divested into trays. X-ray machines scan items, metal detectors buzz, and bodies receive a thorough pat-down. An officer eyes a solitary individual, scrutinizing their documents. A wand glows, probing for concealed objects. Security instructions and signages loom ahead, the authority’s cool, unyielding presence. The register of control pulses with its stern commands. Documents are carefully inspected, fingerprints pressed against sensors. Inside, a stranger’s personal effects are meticulously examined. The register of control continues its watchful vigil, directives crisp and clear. Security screens hum softly, guarding what lies beyond. Another traveler emerges, their belongings placed neatly in trays."
+  },
+  {
+   "i": 3,
+   "text": "At the airport’s security checkpoint during rush hour, travelers formed lines, their bags swaying in trays as they were divested. Metal detectors hummed, and X-ray scanners whirred. A lone officer flagged down a traveller, whose eyes narrowed in suspicion. Documents were checked, and a pat-down followed, leaving the man uneasy. A register of control listed clearances, its stark instructions echoing through the sterile air. Signs pointed toward the next checkpoint, their impersonal courtesy unyielding. The traveler, now anxious, shuffled closer to the officer, who studied his paperwork with dispassionate scrutiny. A tray filled with personal items lay on the counter, awaiting inspection. Finally, the officer nodded, signifying clearance, and the traveler sighed in relief, stepping back into the bustling crowd."
+  },
+  {
+   "i": 4,
+   "text": "At the crowded terminal, the steady stream of passengers moved through the check lanes. Their bags were divested into trays, each item meticulously examined by the scanner's whirr and the beep of alarms. An officer, eyes scanning the sea of faces, singled out a traveler from the crowd. With practiced motions, she waved her wand over the man, triggering soft beeps for every item he possessed. Documents were extracted from his pockets, and a thorough pat-down ensured nothing was amiss. In a separate booth, registration awaited, a stark sign of control—instructions, signs, and the unyielding respect of authority."
+  },
+  {
+   "i": 5,
+   "text": "At the bustling airport security checkpoint, the line stretched long, a steady stream of travelers jockeying for position. Among the queues, two officers stood vigilant, their keen eyes scanning the crowd. Beside them, trays lay empty, awaiting the divestment of belongings—laptops, coats, purses. X-ray machines hummed rhythmically, revealing contents with eerie clarity. Metal detectors groaned softly, their metallic tongues tracing bodies as if tasting for contraband. A palpable tension lingered, thick in the air, punctuated by the occasional body-search gesture. Security instructions blared from overhead speakers, their monotone voice clear and direct. Yet amidst this impersonal courtesy of authority, a traveler was singled out. Papers unfolded neatly, a meticulous process of validation underway. Suddenly, the screen flickered, a shadow of uncertainty flickering across his face, before the officer’s gentle hand descended upon him, conducting a quick, reassuring pat-down."
+  },
+  {
+   "i": 6,
+   "text": "An airport hummed with life as the queues grew thick, the air filled with the scent of coffee and fear. She trudged through the bustling hall, divesting her belongings into trays methodically. The scanners hummed, the metal detectors beeped, and the officer’s hands moved over her body in the routine gesture. In that moment, she felt the keen scrutiny, the register of control ticking in the background: instructions on the wall, the impersonal assurance from the authority figures. A traveler, singled out of the line, handed over documents with care, under the watchful eye. She waited, the wanding sensation a fleeting reminder of their authority, as the official scanned her, a silent instruction etched into the atmosphere."
+  },
+  {
+   "i": 7,
+   "text": "At the bustling security checkpoint, a traveler’s belongings were swiftly moved into trays, their hands held under a wand as they stood in the row of anxious travelers. Above the counter, instructions and signs directed each step clearly, yet impersonally authoritative, a stark contrast to the palpable urgency and nervousness that filled the air. A lone officer approached, eyes scanning the line until his gaze settled on a figure. Documents and a thorough pat-down awaited, each movement precise yet urgent, sealing the traveler into a temporary state of containment."
+  },
+  {
+   "i": 8,
+   "text": "At the bustling airport, the queue stretched long, bodies shifting uneasily beneath the fluorescent lights. Passengers moved swiftly through the checkpoints, divesting their belongings into trays—laptops, phones, jewelry—each item meticulously accounted for. Metal detectors hummed softly, their sounds mingling with the distant buzz of announcements. A solitary figure was pulled aside, papers clutched in his hand, subjected to a thorough body search. His face betrayed none of the anxiety felt by those behind him. At the register of control, signs directed them like automatons, authoritative yet cold. Directly ahead, a screen blinked commands to scan through bags and carry-ons."
+  },
+  {
+   "i": 9,
+   "text": "At the bustling airport security checkpoint, a queue stretched long. Travellers divested their belongings into trays, each object meticulously placed and recorded. X-ray machines hummed, metal detectors whirred, and occasional pat-downs punctuated the routine. Officer Sarah watched over, her stance calm yet alert, eyes scanning every detail. One traveler was singled out, papers ready, a nervous gaze fixed on the official. Sarah approached him, her voice steady, \"Please step aside.\" He complied, his hands raised, a mix of fear and resignation. Signs and instructions adorned the walls, indifferent yet authoritative. Security logs recorded each entry, a digital echo of the human process."
+  }
+ ]
+}

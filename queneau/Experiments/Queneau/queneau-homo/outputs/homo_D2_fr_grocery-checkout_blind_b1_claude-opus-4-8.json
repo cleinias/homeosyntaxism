@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2",
+ "lang": "fr",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~23 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~12 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 open complement (infinitive); subordination nested up to depth 2.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~14 words) clause architecture: 1 main clause; 1 open complement (infinitive); subordination nested up to depth 1.\nPeriod 9 (~18 words) clause architecture: 1 main clause; 1 adverbial clause; 1 finite complement clause; 1 open complement (infinitive); subordination nested up to depth 3.\nPeriod 10 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 89.0,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "La file s'allongeait vers la caisse encombrée. Le tapis roulant, qui charriait mes provisions vers la scanneuse, avançait par saccades tandis que la caissière égrenait chaque article d'un geste lassé. Les bips résonnaient. Une lumière rouge balayait les codes-barres. Je posais la barre de séparation, songeant à ranger les sacs qui s'entassaient déjà. Derrière moi, quelqu'un poussait, pressé de finir. Comme le client me collait aux talons, je serrais mon chariot. Le terminal réclamait ma carte, prêt à valider le montant annoncé. La caissière me demanda, avec un sourire fatigué, si je possédais la carte de fidélité que réclamait l'enseigne, désireuse de fidéliser sa clientèle. Le ticket sortit enfin dans un dernier grésillement."
+  },
+  {
+   "i": 1,
+   "text": "La file s'allongeait devant la caisse bruyante. Le tapis roulant avançait lentement, poussant les articles que la cliente y déposait, tandis que le scanner émettait son bip régulier. Le lecteur clignotait. Une pièce de séparation glissait sur le tapis. La caissière commençait à ranger les provisions dans un sac qui bâillait déjà. Un homme approchait son chariot, pressé de payer. Pendant qu'il avançait encore, l'espace se réduisait dangereusement. La cliente sentait ce souffle derrière elle, gênée de se retrouver ainsi coincée. Elle recula d'un pas sec, car elle jugeait que cet inconnu franchissait la limite invisible, sans même songer à s'excuser. La caissière annonça enfin le montant total."
+  },
+  {
+   "i": 2,
+   "text": "Le tapis roulant avance sous les articles. Une caissière, dont les gestes semblent parfaitement rodés, glisse chaque produit devant le lecteur pendant que la file grossit derrière elle. Un bip retentit. Le total s'affiche enfin sur l'écran. La cliente hésite à ranger ses achats qui débordent déjà du sac. Le client suivant pousse pour avancer son caddie. Quand la barre de séparation coulisse, un léger agacement traverse la queue. L'homme derrière insiste pour serrer davantage ses courses contre le comptoir. La caissière, tandis qu'elle rappelle que la carte de fidélité offre des points, tend le terminal pour valider le paiement sans quitter son écran. Le ticket sort enfin dans un dernier crissement."
+  },
+  {
+   "i": 3,
+   "text": "La file s'allongeait devant la caisse unique. Le tapis roulant, qui transportait mes provisions vers la caissière, avançait par saccades tandis que le lecteur optique bipait sans relâche. Une pièce tomba. La borne de paiement clignotait d'impatience. Je m'efforçais d'aligner mes articles que séparait la barrette de plastique. La cliente derrière voulait poser ses courses. Comme elle poussait son chariot, je reculai légèrement. Elle insistait pour glisser ses paquets sur le comptoir déjà encombré. La caissière annonça le total pendant qu'un écran demandait si je possédais une carte que le magasin réclamait pour cumuler des points. Le ticket sortit enfin de la machine."
+  },
+  {
+   "i": 4,
+   "text": "Le tapis roulant avançait vers la caissière. Elle saisissait chaque article que je posais devant elle, tandis que le scanner émettait son bip régulier au-dessus du comptoir bondé. La file s'allongeait. Un chariot heurtait la barre séparatrice. Derrière moi, un homme pressé cherchait à combler l'espace qui nous restait encore. Il avançait, décidé à me devancer. Comme la caissière annonçait le total, je tendais ma carte. Le lecteur affichait un message me proposant de valider ma fidélité. J'hésitais un instant, parce que l'homme soupirait bruyamment, si bien que je sentais qu'il souhaitait me voir accélérer mes gestes. Le ticket sortit enfin de la machine."
+  },
+  {
+   "i": 5,
+   "text": "La file s'allongeait vers la caisse bruyante. Le tapis roulant, qui avançait par saccades sous les articles, portait déjà mes courses vers la caissière lorsque la sonnerie du scanner retentit. Un bip résonna. La barre de séparation glissait doucement derrière moi. Je posai le lecteur de carte, prêt à valider le montant que l'écran affichait. La cliente pressée voulait avancer son chariot. Comme l'espace manquait cruellement, je reculai mon panier vers le comptoir. La caissière annonça le total, sans oublier de réclamer ma carte de fidélité. Elle insista poliment pendant que l'écran clignotait, affirmant que la réduction s'appliquait toujours, avant de me tendre le ticket froissé. Le reçu sortit enfin de l'imprimante."
+  },
+  {
+   "i": 6,
+   "text": "La file s'allonge à l'heure de pointe.\n\nLe tapis roulant, que la caissière fait avancer d'un geste las, glisse doucement vers la caisse tandis que les articles s'entassent contre la barre.\n\nUn bip retentit.\n\nLe scanner lit chaque code-barres sans faillir.\n\nJe pose mes courses, prêt à ranger les sacs qui s'accumulent.\n\nLa cliente derrière moi semble vouloir avancer.\n\nQuand elle pousse son chariot, mon panier bascule légèrement.\n\nLe lecteur s'illumine, m'invitant à insérer ma carte.\n\nLa caissière annonce le total pendant que l'écran affiche que ma carte de fidélité pourrait m'offrir une réduction à valider.\n\nLe ticket sort enfin de la machine."
+  },
+  {
+   "i": 7,
+   "text": "La file avançait avec une lenteur exaspérante. Le tapis roulant, qui portait mes provisions vers la caissière, glissait doucement pendant que le lecteur émettait ses bips réguliers. Une longue attente. La barre de séparation marquait mes achats. Je posais mes articles, tâchant de suivre le rythme que la machine imposait. Chacun voulait avancer, sans jamais bousculer son voisin. Quand la cliente derrière moi soupira, je serrai les dents. Le total s'afficha soudain, obligeant mon voisin à reculer un peu. La caissière annonça la somme tandis que je comprenais qu'il me faudrait sortir ma carte pour régler l'ensemble. Mon ticket sortit dans un dernier bourdonnement."
+  },
+  {
+   "i": 8,
+   "text": "La file s'allonge devant la caisse bruyante. Le tapis roulant avance lentement ses paquets vers la scanneuse, qui les fait glisser sans un mot pendant que la sonnerie répète son bip monotone. Une cliente attend. Elle pose ses articles avec soin. La caissière semble vouloir accélérer le rythme que la foule exige déjà. Un chariot tente de se frayer un passage. Comme l'espace manque, un homme pousse derrière elle. Elle recule un peu pour ranger ses sacs remplis. Elle songe soudain, tandis que le lecteur réclame sa carte de fidélité, que le total annoncé dépasse ce qu'elle avait cru dépenser. Le ticket sort enfin de la machine."
+  },
+  {
+   "i": 9,
+   "text": "La file d'attente serpentait jusqu'aux rayons du fond. Le tapis roulant, que la caissière relançait d'un geste las, avançait par saccades tandis que les articles glissaient vers la zone d'emballage. Les bips crépitaient. Le lecteur de codes-barres clignotait sans relâche. Une cliente pressée voulait poser la barre de séparation qui délimitait son maigre chariot. Un homme derrière elle cherchait à gagner du terrain. Comme personne ne bougeait, la tension montait doucement. Le terminal de paiement invitait le client à composer discrètement son code secret. La caissière annonça le total pendant qu'elle demandait si le monsieur possédait la carte de fidélité qui permettait d'accumuler des points. Le ticket sortit enfin dans un chuintement bref."
+  }
+ ]
+}

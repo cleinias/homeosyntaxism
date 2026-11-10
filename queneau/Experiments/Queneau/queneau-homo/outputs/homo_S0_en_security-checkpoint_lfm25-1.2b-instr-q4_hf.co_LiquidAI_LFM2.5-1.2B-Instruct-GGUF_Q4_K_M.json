@@ -1,0 +1,57 @@
+{
+ "model": "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+ "backend": "ollama-openai-loop",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "security-checkpoint",
+ "n": 10,
+ "temperature": 0.9,
+ "top_p": 0.95,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 12.8,
+ "gens": [
+  {
+   "i": 0,
+   "text": "The bustling terminal hummed with a restless rhythm, where travelers paused amid the clang of metal and the whisper of announcement. Staff moved with practiced precision, scanning faces and securing belongings with careful, steady hands. Across the threshold, a sense of order unfurled, guiding each passenger through the maze of checks and exchanges. Voices murmured beneath the weight of rules, each step a silent negotiation between trust and scrutiny. Through the lens of structure, the scene unfolded—a tapestry woven from presence, procedure, and quiet resolve."
+  },
+  {
+   "i": 1,
+   "text": "At the bustling hub of transit, a crowd gathered at the checkpoint, their attention split between the waiting line and the checkpoints in view. Between queues, barriers rose like silent sentinels, each one a quiet barrier to the passage of purposeful hands. Officers moved with calm precision, while travelers spoke softly, navigating through the maze of metal and memory. Scanners hummed, bodies were examined, and the air carried a tense stillness as authority and protocol intertwined. Signage reminded passersby of their roles, and voices echoed in the background, binding order to the rhythm of the day. The scene was one of meticulous control, where every detail shaped the experience of arrival."
+  },
+  {
+   "i": 2,
+   "text": "A bustling terminal hummed with restless people, each navigating a complex web of signs and signals. At the entrance, scanners clicked softly, while metal detectors beeped and officers scanned travelers with meticulous care. Amid the flow of bags and voices, a clerk arranged papers with quiet authority. Clarity emerged through strict protocols, ensuring every detail was accounted for. Security personnel moved with precision, guiding individuals through the checkpoint. The scene reflected a meticulous dance between technology and human presence. Authorities maintained a calm presence, directing with calm assurance. The environment balanced efficiency and warmth. Every action served a purpose, reinforcing order. Observers noted the seamless integration of rules and personnel. Ultimately, the checkpoint stood as a testament to structured control."
+  },
+  {
+   "i": 3,
+   "text": "A bustling port stands as a threshold of steel and silence, where travelers pause amidst the rush of tides. Workers move with purpose, scanning faces behind glass, their presence a quiet command. Nearby, metal grips await, and voices rise in orderly commands. Through the haze of regulation, each step is measured, each voice a thread in the structure of control. The air hums with authority, while belongings tremble and shift, each moment a careful balance of order and movement."
+  },
+  {
+   "i": 4,
+   "text": "An elegant line bustled at the edge of the hum, a silent procession of travelers passing past. Words danced through the air, weaving through signs and steel, as scanners hummed softly beneath the feet. A guardian paused, measuring every item, calm in the rush of routine. Documents folded, hands moved with quiet precision, each gesture a pause in the flow. The scene unfolded in stillness, controlled yet alive, a moment suspended between duty and purpose."
+  },
+  {
+   "i": 5,
+   "text": "A bustling hub pulsed with motion and purpose, a checkpoint where stories halted to reveal the unseen threads binding life and law. Strangers paused amidst the swirl of people, each seeking clarity in the shifting tides of procedure. Sensors hummed, scanners glided, and hands reached out with measured intent, as if each action were a word in a larger narrative. Authority spoke softly, offering guidance amidst the chaos, while paperwork and purpose intertwined in a delicate dance. The environment buzzed with anticipation, a moment frozen between order and human effort. In this space, every detail carried weight, a silent narrator shaping the unfolding scene. The atmosphere thickened with expectation, each second stretching like a sentence waiting to be completed. Authority's voice echoed, urging precision, while the people moved with a quiet resolve, prepared for the next chapter of their story. The scene breathed, alive with the rhythm of control and the hum of progress."
+  },
+  {
+   "i": 6,
+   "text": "At the threshold of the bustling terminal, a silent march unfolded beneath the watchful eyes of duty-bound sentinels. Passengers queued with purpose, their steps measured by the rhythm of unspoken rules. Barriers gleamed like silent sentinels, catching the tremors of belongings being carefully arranged into compartments. Officers paused with deliberate calm, their voices cutting through the murmur of urgency. Scanners hummed softly, casting faint pulses across faces, while handlers moved with measured precision. A traveler paused, hand hovering over a document, the weight of authority in their gaze. Instructions echoed through the space, binding every action in an unbroken chain of control. The air hummed with regulation, each moment a thread in the structure of the moment."
+  },
+  {
+   "i": 7,
+   "text": "A bustling gate holds the rush of travelers, their steps echoing through the air. Clutching bags, they pass through metal eyes and silent checks. A guard speaks, a traveler listens, words swirl in the crowded space. Scanners hum, detections flash, the flow of life reshapes itself. Hand signs rise, papers shift, the city breathes between order and chaos. Officers note names, passersby pause, and the day continues in this measured dance. Authority guides the scene, each action a small act of order. The station hums with purpose, a moment suspended between purpose and purpose."
+  },
+  {
+   "i": 8,
+   "text": "At the bustling threshold, hands paused as whispers curled through the crowd. Scanners hummed softly beside towering walls, each beam a silent witness. A traveler fumbled a few items into a tray, while officers leaned in with calm authority. Paperwork swirled, metal detectors rang, and a gentle grip was applied. Words echoed in the air, a silent exchange of trust. Signs announced rules, yet comfort settled like a warm hand. The scene pulsed with purpose, order weaving through chaos."
+  },
+  {
+   "i": 9,
+   "text": "The terminal gate hummed beneath the constant flow of travelers, a silent witness to the rush of footsteps and whispered conversations. A line snaked through the controlled passage, each face a puzzle of purpose and procedure. Security scanners clinked softly against metal, while officers adjusted clips with deliberate care. The air buzzed with the clatter of briefcases and the soft murmur of instructions carried across polished floors. Paperwork shifted and shifted, a silent symphony of order amidst the chaos. Signs guided movement, their words steady, their intent clear. In this controlled space, every action balanced precision and purpose. The scene unfolded with measured steps, each word a thread in the larger design. The airport hummed on, a place where discipline met the pulse of human flow."
+  }
+ ]
+}

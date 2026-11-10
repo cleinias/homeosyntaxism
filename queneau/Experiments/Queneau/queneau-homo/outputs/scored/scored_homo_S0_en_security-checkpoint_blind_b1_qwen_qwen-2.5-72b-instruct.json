@@ -1,0 +1,138 @@
+{
+ "model": "qwen/qwen-2.5-72b-instruct",
+ "lang": "en",
+ "scenario": "security-checkpoint",
+ "n": 10,
+ "agg": {
+  "s0_pos": 0.357,
+  "d1_triple": 0.478,
+  "d2_clause": 0.645,
+  "words": 154,
+  "depth_gap": 1.1,
+  "coherence": 0.92,
+  "held_rate": 0,
+  "pass_rate": 0
+ },
+ "rows": [
+  {
+   "i": 0,
+   "s0_pos": 0.391,
+   "d1_deprel": 0.773,
+   "d1_triple": 0.524,
+   "d2_clause": 0.696,
+   "depth_gap": 2,
+   "coherence": 1.0,
+   "words": 98,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 1,
+   "s0_pos": 0.359,
+   "d1_deprel": 0.707,
+   "d1_triple": 0.446,
+   "d2_clause": 0.679,
+   "depth_gap": 0,
+   "coherence": 1.0,
+   "words": 179,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 2,
+   "s0_pos": 0.339,
+   "d1_deprel": 0.718,
+   "d1_triple": 0.445,
+   "d2_clause": 0.577,
+   "depth_gap": 1,
+   "coherence": 1.0,
+   "words": 166,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 3,
+   "s0_pos": 0.361,
+   "d1_deprel": 0.729,
+   "d1_triple": 0.457,
+   "d2_clause": 0.6,
+   "depth_gap": 1,
+   "coherence": 1.0,
+   "words": 122,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 4,
+   "s0_pos": 0.371,
+   "d1_deprel": 0.725,
+   "d1_triple": 0.507,
+   "d2_clause": 0.621,
+   "depth_gap": 1,
+   "coherence": 1.0,
+   "words": 148,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 5,
+   "s0_pos": 0.302,
+   "d1_deprel": 0.589,
+   "d1_triple": 0.357,
+   "d2_clause": 0.563,
+   "depth_gap": 1,
+   "coherence": 0.3,
+   "words": 278,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 6,
+   "s0_pos": 0.374,
+   "d1_deprel": 0.749,
+   "d1_triple": 0.489,
+   "d2_clause": 0.6,
+   "depth_gap": 0,
+   "coherence": 0.9,
+   "words": 169,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 7,
+   "s0_pos": 0.364,
+   "d1_deprel": 0.762,
+   "d1_triple": 0.513,
+   "d2_clause": 0.81,
+   "depth_gap": 2,
+   "coherence": 1.0,
+   "words": 138,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 8,
+   "s0_pos": 0.353,
+   "d1_deprel": 0.766,
+   "d1_triple": 0.506,
+   "d2_clause": 0.636,
+   "depth_gap": 2,
+   "coherence": 1.0,
+   "words": 125,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 9,
+   "s0_pos": 0.353,
+   "d1_deprel": 0.746,
+   "d1_triple": 0.54,
+   "d2_clause": 0.667,
+   "depth_gap": 1,
+   "coherence": 1.0,
+   "words": 117,
+   "held": false,
+   "pass": false
+  }
+ ]
+}

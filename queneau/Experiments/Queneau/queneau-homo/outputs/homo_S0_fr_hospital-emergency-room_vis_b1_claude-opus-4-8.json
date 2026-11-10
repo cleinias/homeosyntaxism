@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "hospital-emergency-room",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nDans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 82.5,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Aux urgences, à une heure d'affluence. Un patient dans les quarante-cinq ans, blouse froissée avec pansement remplaçant la manche, teint trop pâle comme si on lui avait aspiré dessus. Les brancards défilent. Le patient en question s'impatiente contre une infirmière. Il lui reproche de le négliger chaque fois qu'elle traverse quelqu'un. Ton geignard qui se veut agressif. Comme il repère une chaise libre, se précipite dessus. Deux heures plus tard, je le retrouve Bâtiment C, devant le service Pasteur. Il est avec un aide-soignant qui lui dit: \"Tu devrais faire ajouter un bracelet supplémentaire à ton dossier.\" Il lui indique où et pourquoi."
+  },
+  {
+   "i": 1,
+   "text": "Dans le service des urgences à l'heure d'affluence. Un patient dans la cinquantaine, veste froissée portant encore une étiquette, bracelet trop serré comme si on l'avait attaché maladroitement. Les brancards s'alignent. Le monsieur en question s'impatiente contre une infirmière. Il lui reproche de le négliger depuis qu'on l'installe ici. Un ton geignard qu'il veut ferme. Puisqu'il aperçoit une chaise libre, il s'assoit lourdement. Deux heures plus tard, je le retrouve salle d'attente, devant le comptoir Radiologie. Il est dans le couloir où on lui explique qu'il faudra remplir un formulaire supplémentaire pour cette admission. On lui indique quoi joindre au dossier et pourquoi."
+  },
+  {
+   "i": 2,
+   "text": "Aux urgences Lariboisière, à une heure d'affluence. Un patient dans les cinquante ans, blouson kaki avec fermeture arrachée au col, teint trop pâle comme si on l'avait exsangue longtemps. Le brancardier passe. Le voisin de gauche s'énerve contre une infirmière. Il lui reproche de négliger sa douleur alors qu'il attend depuis. Ton geignard qu'il croit ferme. Comme il aperçoit un fauteuil libre, il s'y traîne aussitôt. Trois heures plus tard, je le revois assis devant Radiologie, près du guichet Cardiologie. Il est avec un accompagnant qui lui souffle : \"Tu devrais faire ajouter une mention supplémentaire sur ton formulaire.\" Il lui indique où et comment."
+  },
+  {
+   "i": 3,
+   "text": "Aux urgences Lariboisière durant une garde. Un patient dans les quarante ans, blouse froissée avec bracelet remplaçant sa chemise, teint trop pâle comme si on l'avait vidé complètement. Les brancards affluent. Le patient en cause s'agace contre une infirmière. Il lui reproche de le négliger chaque fois qu'ausculte quelqu'un. Ton geignard qui se prétend calme. Comme il aperçoit un fauteuil vacant, se traîne dessus. Trois heures plus tard, je le revois hall d'entrée, devant les portes Ambroise. Il est avec une accompagnatrice qui lui suggère qu'il faudrait réclamer une prise supplémentaire pour sa perfusion. Elle lui indique quoi remplir sur le formulaire et pourquoi."
+  },
+  {
+   "i": 4,
+   "text": "Aux urgences, à une heure d'engorgement. Un patient dans les cinquante ans, blouse froissée dévoilant un bras trop pâle comme si on lui avait ponctionné trop. Les infirmières circulent. Le monsieur en détresse s'impatiente contre une aide-soignante. Il lui reproche de traîner chaque fois qu'elle repousse quelqu'un. Un ton geignard qui se veut ferme. Comme il aperçoit une chaise libre, il s'affaisse dessus. Deux heures plus tard, je le retrouve salle Antoine, devant le box Radiologie. Il est sous la surveillance qu'une aide lui prodigue, elle lui aurait recommandé un formulaire supplémentaire pour le transfert. Elle lui indique où et pourquoi."
+  },
+  {
+   "i": 5,
+   "text": "Aux urgences Saint-Vincent, à une heure d'engorgement. Un patient dans les cinquante ans, blouse froissée déchirée sous l'aisselle, respiration trop haletante comme si quelqu'un l'avait essoufflé volontairement. Les brancardiers circulent. Le malade en souffrance s'impatiente contre un aide-soignant. Il lui reproche de le négliger chaque fois qu'on appelle quelqu'un. Ton geignard qu'il veut menaçant. Comme il aperçoit une chaise vacante, il s'y installe aussitôt. Deux heures plus tard, je le revois Salle des Familles, devant l'accueil Pédiatrie. Il est auprès d'un compagnon qui lui suggère qu'il faudrait signaler un bracelet supplémentaire à son formulaire. Il lui indique où (au poignet) et pourquoi."
+  },
+  {
+   "i": 6,
+   "text": "Aux urgences, à une heure d'engorgement. Un patient dans les cinquante ans, blouse froissée maculée de sang, respiration trop rauque comme si on lui avait comprimé quelque chose. Les brancardiers passent. Le monsieur en détresse s'agrippe à une infirmière. Il la supplie de calmer cette douleur tandis qu'elle ausculte quelqu'un. Une plainte qu'elle juge légitime. Comme il aperçoit une civière libre, il rampe presque. Trois heures peut-être plus tard, on le retrouve salle Vésale, devant le comptoir Ambroise-Paré. Il patiente près du guichet où on lui remet un bracelet numéroté sur le formulaire. On le rassure, mais doucement."
+  },
+  {
+   "i": 7,
+   "text": "Aux urgences Saint-Antoine, à une heure d'affluence. Un patient dans la quarantaine, blouse froissée avec bracelet dépassant du poignet, teint trop pâle comme si on l'avait vidé complètement. Les soignants circulent. Le patient en détresse s'impatiente contre une infirmière. Il lui reproche de l'ignorer chaque fois qu'elle traverse le couloir. Un ton geignard qu'il veut menaçant. Comme il aperçoit une chaise vacante, il s'y jette aussitôt. Trois heures plus tard, je le revois salle d'attente, devant le comptoir Radiologie. Il est près d'une aide-soignante qui lui répond qu'elle devra faire signer un formulaire supplémentaire pour son admission. Il lui indique où (au guichet) et pourquoi."
+  },
+  {
+   "i": 8,
+   "text": "Aux urgences Saint-Vincent, à une heure d'affluence. Un patient dans les quarante ans, blouson kaki avec bandage remplaçant la manche, souffle trop court comme si on lui avait pesé dessus. Les brancardiers arrivent. Le patient en cause s'impatiente contre une infirmière. Il lui reproche de le négliger chaque fois qu'elle croise quelqu'un. Ton geignard qui se veut menaçant. Comme il aperçoit un box vide, il se précipite dedans. Deux heures plus tard, je le revois salle Beaumont, devant le comptoir Delacroix. Il est avec une accompagnante qui lui dit qu'il devrait faire poser un bracelet supplémentaire au poignet. Elle lui montre où (au registre) et pourquoi."
+  },
+  {
+   "i": 9,
+   "text": "Aux urgences Sainte-Croix, à une heure d'engorgement. Un patient dans la cinquantaine, blouse froissée entrouverte sur le brancard, montrant une pâleur inquiète comme si quelqu'un l'avait vidé soudain. Les infirmières circulent. Un homme près de lui réclame contre l'attente. Il la trouve pour eux interminable puisqu'on néglige quelqu'un. Le monitorage qui le laisse anxieux. Comme il voit une pochette libre, il attrape aussitôt. Deux formulaires plus tard, on lui remet bracelet vers Radiologie sous le nom Delmas. Il est devant la porte que je crois qu'on aurait posé une perfusion mal dans la veine. On lui signale où, sous le poignet, et pourquoi."
+  }
+ ]
+}

@@ -2,6 +2,9 @@
 
 What this repository contains, the runs it records, and how to reproduce them.
 
+This file covers the Manzoni pipeline in the root. The Queneau ladder of the CHR 2027 paper
+is documented in `queneau/README.md` and `queneau/PROVENANCE.md`.
+
 ## Models & providers
 
 | label                 | model id                                   | backend / provider        | precision |

@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2c",
+ "lang": "fr",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 23 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 12 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 14 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\nPeriod 9 (about 18 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - finite complement clause\n        - open complement (infinitive)\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 87.1,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "La file s'étire lentement vers les portiques. Les voyageurs, qui déposent leurs sacs dans les bacs gris, avancent d'un pas hésitant tandis que les agents surveillent chaque geste avec attention. Une voix résonne. Les consignes défilent sur les écrans lumineux. Chacun s'efforce de retirer les objets métalliques qui pourraient déclencher l'alarme. Un homme s'approche du détecteur qu'il faut franchir. On l'écarte de la file dès qu'il passe. L'officier lui demande de présenter ses documents et de lever les bras. Le contrôle se poursuit calmement, car l'agent explique qu'il devra procéder à une palpation méthodique. La courtoisie impersonnelle enveloppe toute la scène."
+  },
+  {
+   "i": 1,
+   "text": "La file s'étirait comme un serpent lent. Les voyageurs, qui poussaient leurs bagages sur le sol luisant, avançaient pas à pas tandis que la voix métallique répétait les mêmes consignes. Le portique bipait. Chacun vidait ses poches par habitude. Les bacs gris glissaient sur les rouleaux, prêts à recevoir manteaux et ceintures que l'on retirait en hâte. Un agent s'approcha, chargé de contrôler ce flot patient. Les écrans s'illuminaient dès qu'un objet suspect apparaissait. Une femme fut priée d'écarter les bras devant tout le monde. On la fit patienter à l'écart parce qu'un signal, disait le détecteur, semblait révéler une anomalie sous sa veste. La courtoisie de l'uniforme restait parfaitement impersonnelle."
+  },
+  {
+   "i": 2,
+   "text": "La file avançait avec une lenteur exténuante. Les voyageurs, qui traînaient des bagages trop lourds, déposaient leurs affaires dans les bacs gris pendant qu’une voix diffusait ses consignes. Les portiques bourdonnaient. Chaque objet métallique déclenchait une alarme brève. Un agent invita un homme à passer de nouveau sous le détecteur qui venait de sonner. C’était le passager choisi pour subir la fouille. Une lumière rouge clignotait quand il franchit le seuil. On lui demanda de lever les bras et d’écarter légèrement les jambes. L’officier promena son détecteur manuel le long du corps, avec cette politesse froide qui laissait entendre qu’il fallait obéir sans discuter. Les panneaux rappelaient les règles en silence."
+  },
+  {
+   "i": 3,
+   "text": "La file s'étire jusqu'aux barrières mobiles.\n\nChaque voyageur qui approche du portique doit vider ses poches, tandis qu'une voix enregistrée répète les consignes au-dessus des bacs gris alignés sur le tapis.\n\nOn avance lentement.\n\nLes ceintures et les ordinateurs disparaissent séparément.\n\nUn agent me fait signe d'attendre là, près du scanner qui bourdonne.\n\nIl me demande de patienter, le temps de vérifier mes papiers.\n\nJe tends mon passeport pendant qu'il examine l'écran.\n\nUne collègue s'approche pour effectuer la palpation d'usage.\n\nElle passe le détecteur sans un mot, si bien que je comprends qu'il vaut mieux rester immobile.\n\nLa courtoisie reste polie, froide, parfaitement réglée."
+  },
+  {
+   "i": 4,
+   "text": "La file s'étire jusqu'aux barrières mobiles. Les voyageurs, qui poussent des bacs gris le long du tapis, se déchaussent en silence pendant que l'agent répète les mêmes consignes. Le portique bourdonne. Chacun vide ses poches sans hésiter. On invite le monsieur pressé à passer sous l'arche métallique qui clignote. Une femme s'avance, dont le bagage semble palpiter. Le détecteur sonne dès qu'elle franchit le seuil. Un agent s'approche pour effectuer une fouille rapide et impersonnelle. Le contrôleur exige les papiers avec une courtoisie si neutre qu'on dirait un panneau réciter les règles à voix haute. Le passager tend son passeport ouvert."
+  },
+  {
+   "i": 5,
+   "text": "La file s'étire jusqu'aux barrières mobiles. Les voyageurs, qui poussent lentement leurs valises vers l'avant, hésitent un instant dès que l'agent leur adresse un signe pressé. Un bac glisse. Chacun y dépose montres, ceintures et téléphones. Une voix diffuse invite les passagers à retirer les objets qui déclenchent l'alarme. On franchit le portique, prêt à lever les bras. La sonnerie retentit lorsqu'une boucle métallique persiste. Un homme est écarté du rang pour subir un contrôle plus attentif. L'agent examine les documents avec une politesse froide, tandis qu'il annonce qu'il devra vérifier que rien ne demeure dissimulé sous la veste. Le bâton détecteur glisse le long des épaules."
+  },
+  {
+   "i": 6,
+   "text": "La file avance à petits pas contraints. Un agent, dont la voix reste égale, répète les mêmes consignes pendant que les voyageurs déposent leurs affaires. Les bacs glissent. Chacun retire ceinture, montre et chaussures. On invite les passagers à franchir le portique qui détecte le moindre métal. Une lumière clignote, prête à signaler une anomalie. Le portique sonne dès qu'une pièce oubliée subsiste. Un homme est prié de s'écarter pour subir une vérification. On lui demande de lever les bras, d'écarter légèrement les jambes et de patienter. L'agent poursuit sa palpation méthodique tandis qu'un panneau rappelle que les liquides doivent rester en quantité limitée pour passer. La courtoisie impersonnelle referme enfin l'échange."
+  },
+  {
+   "i": 7,
+   "text": "La file avance à petits pas contraints. Les voyageurs, qui posent leurs sacs sur le tapis roulant, retirent ceintures et montres avant que le portique ne les avale un à un. Une alarme retentit. Un agent lève aussitôt la main gauche. Il fait signe au passager de s'écarter vers la zone qu'un ruban délimite. Une pancarte prie chacun d'attendre son tour. Chacun obtempère, puisque l'autorité ne souffre aucune hâte. L'agent commence à palper les épaules avec un détecteur portatif. Le passager reste immobile pendant qu'on lui explique que la procédure oblige à vider entièrement ses poches. La courtoisie impersonnelle enveloppe tout ce contrôle méthodique."
+  },
+  {
+   "i": 8,
+   "text": "La file s'étire jusqu'aux barrières mobiles. Les bacs gris, que chacun remplit à contrecœur, glissent sur le tapis tandis que la machine avale les manteaux et les sacs. Une voix résonne. Personne ne conteste les consignes affichées. Un agent s'approche, prêt à désigner le voyageur qui hésite encore. C'est lui qu'on invite à s'écarter. Le portique sonne quand ses clés restent oubliées. On lui demande poliment de lever les bras. L'homme obéit sans un mot, bien qu'il sente que le bâton promène son bourdonnement jusqu'à effleurer chaque poche. La courtoisie impersonnelle clôt enfin l'examen."
+  },
+  {
+   "i": 9,
+   "text": "La file s'étirait le long des barrières.\n\nUn agent, qui surveillait l'écran où défilaient les silhouettes, indiquait le bac aux voyageurs pressés dès qu'une place se libérait sur le tapis roulant.\n\nLes alarmes retentissaient.\n\nChacun vidait ses poches en silence.\n\nUne femme cherchait à retirer la ceinture qui serrait encore son manteau.\n\nUn contrôleur s'approchait, pressé de vérifier.\n\nLe détecteur bourdonnait quand le passager franchissait le portique.\n\nL'officier commençait à palper les épaules du voyageur écarté.\n\nLa consigne restait affichée partout, si bien que nul n'ignorait qu'il faudrait présenter les documents avant d'avancer.\n\nLa courtoisie impersonnelle réglait chaque geste."
+  }
+ ]
+}

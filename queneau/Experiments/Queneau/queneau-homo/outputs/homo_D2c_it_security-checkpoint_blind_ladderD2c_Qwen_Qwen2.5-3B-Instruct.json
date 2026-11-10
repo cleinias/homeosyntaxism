@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "it",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 25 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 10 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 17 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 7 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 10 (about 10 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\nPeriod 11 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 3.9,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel caotico traffico dell'aeroporto in pieno tardo pomeriggio, la fila di controlli d'accesso sembrava un filo invisibile tra i turisti e le spedizioni commerciali. Il viaggiatore si divisò i bagagli nell'inchiostro dei contenitori per gli oggetti da nascondere, mentre i rivelatori d'alluminio e i sensore del corpo scricchiolavano come malinconici lamenti in sordina. Un poliziotto, con una scheda di controllo stretta fra le mani, sorvolò il viaggiatore, lanciando occhiate in direzione del registro di controllo illuminato che indicava istruzioni, segni e l'eterna cortesia autoritaria."
+  },
+  {
+   "i": 1,
+   "text": "All'aeroporto principale, dove il traffico aeromobili era sproporziato, l'area di筛查在人潮中显得拥挤。长长的队伍蜿蜒穿过安检区域，旅客的行李在黑色金属托盘里逐一取出。X光机的屏幕闪动，金属探测器发出低沉的声音；随后，一位身穿制服的安检员走向一个被标识为“高風險”的人。他的护照和随身物品经过仔细检查后，被送往一间单独的房间接受身体搜查。监控屏幕上显示着一系列指示，走廊尽头的指示牌清晰地标示出“請保持通暢”；这里弥漫着一种官方权威的冷淡。"
+  },
+  {
+   "i": 2,
+   "text": "In un aeroporto pieno di gente alla fine d'una giornata, una coda formava lungo i cancelli di sicurezza. Le persone staccavano le loro cose e la pietraia si riempiva rapidamente. I controllori da trapano e i radar esaminavano le valigie. Un poliziotto individuò il mio compagno di viaggio tra la confusione. Con passaggi a ruota, estrasse dalla valigia un foglio e ci guardò attentamente. Sulla parete, una serie di regolamenti apparivano chiari e impersonali. Il viso del mio compagno era rigido dallo stress. Le parole che gli leggeva tremavano sulla sua fronte. Il corpo di lui subì un rapido, silenzioso esame. Un'aria di autorità era diffusa nell'edificio, ma il trattamento era piuttosto rassicurante."
+  },
+  {
+   "i": 3,
+   "text": "In quell'ufficio di controllo, in una mattinata fitta di voli, si snodava una fila di viaggiatori con il bagaglio a braccetto. Ogni tramestiera veniva chiamato per sottoporre il proprio bagaglio alle scansioni automatiche e alla verifica del detector metallico. Il portiere, un uomo d'alto raggio, li guidava verso l'apposita fila e la serie di barriere. In ciascuno dei quintali di plastica, i bagagli venivano estratti e spostati da tramesteri in ordine. Le macchine automatiche scrutavano ogni oggetto, cercando qualcosa che non dovesse essere lì. Il controllo si estendeva oltre, fino ai controllori di sicurezza che, in quel momento, facevano eseguire le manose agli stessi viaggiatori. Un taccuino era a portata di mano, con dettagli come \"Identificazione\" e \"Controllo\". La voce sommessa dell'autorità risuonava in quegli uffici desiderosi di ordine."
+  },
+  {
+   "i": 4,
+   "text": "L'ufficio d'ispezione scorreva nella lunga coda di un aerobusino affollato. Il viaggiatore stava divelendo con cura il suo portafoglio nei pannelli scuri, mentre il metal detector strillava lieve. La sbarra passò davanti al suo volto, ma l'aria era tesa come una corda. L'ufficiale, isolato dal resto del flusso, si chinò sulle sue spalle, poi esaminò le sue mani inquiete. Le luci delle scanner lampeggiavano sopra la sua testa, mentre un raggio di metal detector lampeggiava intorno alla sua pancia. I documenti venivano registrati e le istruzioni erano chiare nel registro di controllo. Poi, l'ufficiale strinse lo sguardo sul viso del viaggiatore, preparandosi per la verifica del corpo."
+  },
+  {
+   "i": 5,
+   "text": "In un aeroporto di spettacolare affollamento, alla frontiera di una città in piena vigilia di festival, la fila all'ispettoria di sicurezza era uno spazio di tensione. Il viaggiatore, raggomitolato nel suo bagaglio, faceva scorrere ogni oggetto attraverso i sensi elettronici. Il controllo era come una danza tra il viaggiatore e l'impiegato d'ispezione, l'uno portava gli oggetti, l'altro li esaminava attenta, con un tocco che non era un gesto di preoccupazione ma di rispetto per la formalità. Le immagini passavano nel monitor davanti all'impiegato, una serie di sfumature di colore e segni metallici. In uno schermo accanto, un elenco si rivelava, un mosaico di istruzioni e segnali che informavano chiunque avesse paura del silenzio, ma non della disciplina. La mano dell'impiegato scorreva rapidamente sulla plastica della cartella, mentre la mente di lui rifaceva le trame dei documenti, cercando ogni traccia di menzogna. Poi veniva il contatto, una carezza breve e delicata che diceva più che qualsiasi altra cosa. Nel finale, la fila procedeva lentamente, i bagagli separati, registrati su un registro di controllo che sembrava un luogo di pace e di routine, non di tensione."
+  },
+  {
+   "i": 6,
+   "text": "L'ufficio di筛查矗立在机场繁忙的出口，队伍排成长龙，行李逐一移至扫描仪和金属探测器前。一名军官与一旅客被隔离出来，他们手中持着文件，接受了一次身体检查。控制登记上指示分明，标牌指示清晰，权威的声音显得冷漠而亲切。队伍中的每一个人都步履匆匆，等待着他们的时刻。扫描仪发出柔和的光芒，金属探测器发出低沉的嗡鸣声，像是在预示着即将到来的考验。护照和身份证件放在指定的隔间，然后经过严密的扫描和检查。安检口处的指示灯不断闪烁，提醒着每一个人遵守秩序。金属探测器响起警报声，引起了一阵轻微的骚动，但很快就被冷静而专业的语气安抚下去。行李箱和手提包依次有序地通过，每个人的心跳都随着安检过程而微微加快，却也渐渐平静下来。队伍缓缓前行，每个人的脸上写满了期待与紧张交织的情绪。控制站里，一张张证件在屏幕上依次闪过，仿佛是这个忙碌场景中唯一不变的部分。每一个环节都在无声地进行，每个人都在耐心等待，直至最后的一步——一次温暖的挥手致意，标志着旅途的重新开始。"
+  },
+  {
+   "i": 7,
+   "text": "In un aeroporto all’ora più affollata, lungo la linea di controllo si stendeva il lungo filo di una fila. Lì, davanti alle barriere, i bagagli venivano depositati uno a uno nelle piccole ciotole. I detector metallici e gli scanner si avvicinavano a ogni oggetto, mentre le mani dell’ufficiale venivano a contatto con il corpo della persona selezionata. Di lato, un registro di controllo registrava ordini e segni di benvenuto, senza alcun rifiuto dall’autorità impositiva."
+  },
+  {
+   "i": 8,
+   "text": "Nell'atrio del controlllo sicurezza dell'aeroporto, al tramonto di una giornata affollata, la fila si ammassava intorno alle barriere che divisa le aree accessibili e non. Ciascuno teneva in mano un involucro di plastica per l'impostazione di bagagli, mentre le macchine di scansione avanzavano in rigidi cerchi su un pavimento luminoso. L'ispezione fisica seguiva un ordine preciso, una serie di gesti che portavano il contatto manuale con il corpo del viaggiatore. Un poliziotto, solitamente anonimo tra gli altri, lo individuò come uno di quegli spettatori che attiravano la mia attenzione, un uomo con una borsa pesante, una valigia color avorio e un cappotto da viaggio. Si rivolse al passaporto, soppesò i documenti, e mi venne chiesto se desideravo un controllo del tutto personale. Le parole erano state pronunciate con una forma impersonale ma di cortese autorità, il tipo di familiarità che si dà nel luogo pubblico."
+  },
+  {
+   "i": 9,
+   "text": "Nel caotico traffico dell'aeroporto, la fila lunga risuona con il ticchettio degli orari, mentre gli spostamenti di bagagli si fermano in una serie di cestini. Le manette della scansione e le porte metalliche agitano il silenzio, attendendo la prossima destinazione. Il protocollo è sempre lo stesso, come un danzatore sul palcoscenico del tempo: l'ufficiale e il passeggero estraneo dallo stordito fiume umano, i documenti scartati sotto le lenti accese, la carezza di un gesto che trasforma il passaggio in un test. Al centro, il registro di controllo, un insieme di istruzioni incisive, maledettamente precise, e il servizio formale della leggerezza. Lì, al centro, il silenzio, interrotto solo dalle luci che si accendono e spezzano il vuoto."
+  }
+ ]
+}

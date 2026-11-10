@@ -1,0 +1,56 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2",
+ "lang": "it",
+ "scenario": "grocery-checkout",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~25 words) clause architecture: 1 main clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~10 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~17 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 9 (~7 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1.\nPeriod 10 (~10 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\nPeriod 11 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 2.5,
+ "gens": [
+  {
+   "i": 0,
+   "text": "La coda del caffettario era lunga come una corda di telecamera. Il carrello della vettura galleggiava sospeso tra i binari del convogliatore e il divieto di variazione. L'immagine del carico veniva scansionata automaticamente da un sistema di rilevamento codice barre; nel frattempo, la carta di riconoscimento era inserita nella unità di lettura di taglie. La cassiere, assorta nel suo rituale regolare, riceveva ordini dall'annunciatore che si spiegava continuamente: \"Tutto ok, è tutto ok\". Dall'angolo della sua visuale, una nuova vetturina si avvicinava, impaziente di intrufolarsi nel flusso. Un lieve mormorio risuonò nell'aria, un accenno di tensione nei ranghi. Il raccattapane automatico squittì quando qualcuno cercò di prendere posto vicino al dispositivo di contabilità. La cassiera annunciò l'importo totale, accompagnandone l'interno con un breve messaggio sul sistema di abbonamento."
+  },
+  {
+   "i": 1,
+   "text": "La coda al centro di un carrello scorre sullo strumento a scansione dei codici a barre, mentre la cartella si frizione contro il divider. La cassiere e il compratore, con il ricevito in mano, si muove veloce attraverso le aree di impacco. Un altro spettatore si insinua nel gruppo, intralciando la marea che scorre. Sul registratore, i segnali sonore ritmici di scattare, l'annuncio della somma totale e le promemorande per le carte di abbonamento."
+  },
+  {
+   "i": 2,
+   "text": "Lunga fila alla ca-sse-to del centro-commerciale; il vortice di movimento, il bandito della coda, il punto di pesaggio, il lettore dei codici a barre. La cassiera, la sconosciuta, con la sua cartella, lo spazio diviso, il ricevuto in mano. L’altro cliente, che affrettava il passo, si affacciava da dietro, un piccolo scontro tra loro. Il regolatore dei costi di vendita: i bip, l'annuncio totale, le promemoria di flessibilità della carta di rilievo."
+  },
+  {
+   "i": 3,
+   "text": "Nel corridoio della cassa di un supermercato affollato, il cavo del portaparole segnava l'ultimo passo nell'orario pomeridiano. Il vettore di scanea incrociava i riquadri dei prodotti sulle ceste mentre la catena dell'accoppiamento trasportava i confezionati verso l'area dello scarico. Lì, vicino alla finestra della cassa, il venditore e il cliente si trovavano fianco a fianco, un muretto di carta tra loro. Un altro spettatore si era affrettato da dietro, intralciando l'andatura ordinata della fila. Nello stemma della cauzione, i bip echeggiavano insieme al conto annunciato, mentre la carta di riconoscimento richiedeva la sua adesione."
+  },
+  {
+   "i": 4,
+   "text": "Nella fila sussultante al supermercato, il cestino scivolò dalla mano della signora, sfuggendo ai suoi gesti agitati. Sull'asse, la scannatura batté il ritmo dei beppe che segnalavano le azioni. Il cassiere, con il braccio stanco posato sulla balanza, parlava allezione con la bocca. La donna si trascinava avanti, cercando un po' di spazio tra i passanti. Un altro cliente affrettò lo scatto, accorrendo dall'indietro per schiarirsi nel flusso. In quel frastuono, il registratore martellava i dati e annunciava la quantità. La signora afferrò la scheda e premette l'intento di pagamento, mentre il sistema invitava alla selezione del biglietto fisso per la domenica."
+  },
+  {
+   "i": 5,
+   "text": "La coda al rastreadore era lunga come un serpente, il carrello della spesa oscillava tra il dividere e l'acquisto, e la barra di scatto pulsava in silenzio, mentre il registratore annunciava la somma con i tintinnì. Un altro cliente si affacciò, sfiorando l'altra parte della fila con una delicatezza da danza classica. Sullo schermo del registratore, le promemoria di appuntamento sulle carte di riconoscimento comparvero automaticamente, mentre il cartellino del codice scattava e sibilava, trascinando con sé i rumori del giorno: gli spruzzi d'olio da macchina nella dispensa accanto, il fruscio del filo da bucato in una cesta in plastica, e poi, finalmente, il beep del sistema che confermava l'acquisto."
+  },
+  {
+   "i": 6,
+   "text": "Un uomo barcollava di qua e di là, cercando un posto libero nei corridoi della caffetteria mentre la coda del supermercato si spingeva verso l'alto come una formica. Sul piano del registro, le luci dei beeper danzavano in ritmo con il martellare del cartello dell'onorevole, chiamando l'attenzione dell'assistente di cassa. La fila si stendeva lungo il bancone, con i cartelli che indicavano l'ultima posizione di scarto, le catene di carta da regalo spartiti dalla passerella. L'uomo portava il suo carrello, ma un altro spazierino da parte sua avrebbe significato un'intercessione tra i filetti. Il cartello dell'onorevole era di nuovo sul monitor del ricevitore, attirando l'attenzione del cliente che si era mosso per dare spazio."
+  },
+  {
+   "i": 7,
+   "text": "La coda al bancone dell'asciugacapelli era lunga. Il vettore si muoveva in fretta sullo sfarfallio del convogliatore, mentre la scanneria eseguiva il suo balletto sull'armadietto. Lì, l'operazione di confezionaggio era in corso. Lì, un altro cliente, pronto, avanzava. Accanto al bancone, lo schermo del rilevatore di carta brillava come una fiamma. Dietro di lui, una piccola frizione di spazio nel flusso, un braccio divieto da attraversare. Sotto i suoi piedi, una carreggiata di plastica che sussurrava e mormorava. Sul bancone, la cassetta accanto alla cartella della clientela rispondeva come al solito, beeping, annunciando il conto, invocando la scheda di appartenenza."
+  },
+  {
+   "i": 8,
+   "text": "La coda all'ascensore era lunga come un fiume nel trambusto del pomeriggio. Il cassetto scorreva lentamente, il sistema di codice da scansare cigolava, mentre il pacco veniva controllato in bagno. La cassiera afferrava con dita ansiose il ricevitrice, mentre la cliente portava la carrellino. Un'altra persona si stropicciava nel retro dell'area, cercando di rientrare nella fila che si accorciava. L'apparecchio della vendita continuava il suo rituale, i bip, la somma annunciata, e le richieste della carta di riconoscimento."
+  },
+  {
+   "i": 9,
+   "text": "Il cartello s'illuminava, segnalando la fila fatta di schegge. Il carrello della donna scorreva con calma lungo il corridoio verde, tra il rumore intermittente del registratore e il brusio dei clienti. In quella calca, una piccola traccia di stallo era visibile tra i cartelli. Lei, con l’occhio vigile, scansionava la coda del pagamento con la sua cartella chiusa. Lui, intanto, aveva posato la borsa su una sedia, intento a leggere un giornale. Un altro cliente, però, si insinuava furtivamente dal retro, strizzando gli occhi per vedere meglio. Il suono della bolla di cibo proveniva dall’area di tagliando, mentre la voce di un collega rimbombava alle sue spalle sugli avvisi di appalto sulla qualità dell’acqua. La scritta sul ricevuto diceva \"Pagamento da 10 euro\", provocando uno scambio rapido tra loro per spazio. Le note musicali del registro ritmavano la routine quotidiana, il bip accompagnato dal totale annunciato, interrotto poi dalle promemoria sul sistema di riconoscimento del cognome."
+  }
+ ]
+}

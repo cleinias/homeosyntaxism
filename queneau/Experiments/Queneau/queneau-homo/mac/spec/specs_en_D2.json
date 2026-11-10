@@ -1,0 +1,58 @@
+{
+ "lang": "en",
+ "degree": "D2",
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "n_periods": 10,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 2,
+   "words": 29,
+   "spec": "Period 2 (~29 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 adverbial clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 4,
+   "words": 15,
+   "spec": "Period 4 (~15 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 5,
+   "words": 11,
+   "spec": "Period 5 (~11 words) clause architecture: 1 main clause; 1 adverbial clause; 1 relative/adnominal clause; subordination nested up to depth 2."
+  },
+  {
+   "k": 6,
+   "words": 9,
+   "spec": "Period 6 (~9 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 open complement (infinitive); subordination nested up to depth 2."
+  },
+  {
+   "k": 7,
+   "words": 12,
+   "spec": "Period 7 (~12 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 8,
+   "words": 18,
+   "spec": "Period 8 (~18 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 9,
+   "words": 19,
+   "spec": "Period 9 (~19 words) clause architecture: 2 relative/adnominal clause; 1 main clause; 1 finite complement clause; 1 open complement (infinitive); subordination nested up to depth 4."
+  },
+  {
+   "k": 10,
+   "words": 9,
+   "spec": "Period 10 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1."
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "lang": "it",
+ "degree": "D2",
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "n_periods": 11,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 2,
+   "words": 25,
+   "spec": "Period 2 (~25 words) clause architecture: 1 main clause; 1 adverbial clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 4,
+   "words": 9,
+   "spec": "Period 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 5,
+   "words": 10,
+   "spec": "Period 5 (~10 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2."
+  },
+  {
+   "k": 6,
+   "words": 6,
+   "spec": "Period 6 (~6 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 7,
+   "words": 9,
+   "spec": "Period 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 8,
+   "words": 17,
+   "spec": "Period 8 (~17 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 9,
+   "words": 7,
+   "spec": "Period 9 (~7 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 10,
+   "words": 10,
+   "spec": "Period 10 (~10 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 11,
+   "words": 9,
+   "spec": "Period 11 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1."
+  }
+ ]
+}

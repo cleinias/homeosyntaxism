@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 119.1,
+ "refused": 1,
+ "attempts": 11,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel reparto Emergenze durante le ore di punta. La corsia dopo appena tre minuti diventa affollata di infermieri, con una barella lungo il muro, verso la sala visite ancora troppo silenziosa affinché qualcuno possa respirare. Un paziente attende. La sedia dell'attesa lo lascia con la stanchezza. Lui prova a chiedermi il conforto quando arrivo io. Segnale acustico dal monitor sopra letto. Ancora perché suona quel campanello sordo, chi ti sente? Due infermiere là dentro lo assistono con la Marina di Genova, poi verso la Croce Rossa Ligure. Sarà sotto quel telo che ci ripariamo. Bisogna riempire compilare il modulo di nuovo per la firma. Ci vorrebbe correre subito verso la barella e allora."
+  },
+  {
+   "i": 1,
+   "text": "Nel il Pronto tra le corsie del turno.\n\nLa barella verso appena due infermieri specialisti ferrei dietro il monitor sotto la tenda oltre lo sportello triage particolarmente affollato ormai perché qualcuno aveva sbagliato.\n\nUn paziente respira.\n\nIl compagno di sala lo trascina verso la sedia.\n\nLui sbotta per aspettare gli il codice mentre reclama tutto.\n\nUrgenza clinica dentro reparto senza tregua.\n\nAncora perché suona la flebo interrotta chi ci sente.\n\nTre pazienti troppo lì ci soccorso nel Policlinico di Milano appena tra la Croce Verde Ambulanza.\n\nRestano tra le braccia lo mi guardano.\n\nAvevano dovuto reggere il fascicolo di là dentro la cartella.\n\nChi vuole firmare adesso presso il modulo eppure invano."
+  },
+  {
+   "i": 2,
+   "text": "Verso il Santa Chiara nell'ora di punta.\n\nLa barella lungo appena tre metri accanto reparto stringe contro il muro nel corridoio sotto una luce fredda con un'infermiera stanca eppure operosa velocemente perché qualcuno ha chiamato.\n\nIl monitor lampeggia.\n\nLa flebo del paziente lo consuma dentro la vena.\n\nLui protesta per attendere ancora quel turno mentre osserva tutti.\n\nUrgenza clinica dietro tende di pronto.\n\nAncora mentre passa un medico esausto qualcosa gli sfugge.\n\nDue ore troppo lentamente qualcuno registra alla Croce di Torino ormai verso il Policlinico Gemelli Roma.\n\nSono nella sala che mi accolgono.\n\nHanno dovuto compilare i moduli con là dentro la corsia.\n\nQualcuno chiama grida forte dentro la stanza e adesso."
+  },
+  {
+   "i": 3,
+   "text": "Nel il Pronto tra le ore di punta. La corsia dopo appena tre pazienti barellati distesi lungo il corridoio verso la parete presso lo sportello triage, ancora affollato quasi mentre qualcuno viene registrato. La monitorina squilla. Il braccialetto di plastica qualcuno stringe attorno al polso. Lei chiede di sapere quando arriva il medico che visita finalmente. Attesa infinita nella barella sotto luce. Ancora perché protesta la donna spaventata cui nessuno risponde. Due infermiere già lì gli somministrano dentro la Bay verso Radiologia mentre tra il dottor Rossi Bianchi. Vengono verso una flebo qualcuno ci prepara. Sembra dover restare la sacca di là senza una prescrizione. Lui vorrebbe uscire subito dopo la diagnosi ma finalmente."
+  },
+  {
+   "i": 4,
+   "text": "Nel il Pronto tra le corsie del reparto. La barella per appena tre minuti resta libera lungo il corridoio verso la stanza con la flebo accanto, ancora vuota però qualcuno la reclama. Un monitor lampeggia. Il paziente in affanno lo osserva dietro la tenda. Lei implora di aspettare accanto al banco mentre firma tutto. Attesa lunga davanti all'accettazione con impazienza. Là dove riposa il malato grave qualcuno lo veglia. Due infermieri quasi silenziosamente lo trasportano oltre il Triage verso Radiologia rapidamente dentro il San Camillo Ospedale Centrale. Sono nell'urgenza quelli che lo curano. Hanno voluto trasferire la degente per ora presso la corsia. Nessuno risponde ancora dentro la sala eppure presto."
+  },
+  {
+   "i": 5,
+   "text": "Nell'ala del Pronto verso il culmine della sera.\n\nLa corsia dopo appena tre lettighe accostate strette lungo la parete davanti al bancone presso lo sportello dell'accettazione ancora affollato quasi impietosamente quando qualcuno ha ceduto.\n\nUn monitor lampeggia.\n\nL'infermiera dietro l'ossigeno gli somministra dentro una vena.\n\nLei accorre a controllare loro il polso mentre chiama lui.\n\nFatica evidente per l'attesa nella barella.\n\nAncora perché grida un dolore acuto che lo consuma.\n\nDue medici lì subito le braccia sopra la Sala di Rianimazione oltre nel reparto Cardiologia Terapia Intensiva.\n\nSono nell'urgenza quelli che ci separano.\n\nHanno provato a trattenere il respiro di là dietro la tenda.\n\nQualcuno mormora rassicura piano tra le voci ma inutilmente."
+  },
+  {
+   "i": 6,
+   "text": "Nel il Pronto Soccorso di questo reparto di sera.\n\nIl corridoio con appena dodici sedie barelle vuote lungo la parete verso la porta verso lo sportello triage sempre affollato là dove qualcuno viene registrato.\n\nL'infermiera corre.\n\nLa paziente con affanno lo osserva dietro una tenda.\n\nLo prega di chiamare qualcuno il medico affinché arrivi presto.\n\nMonitor accesi con flebo per emergenza.\n\nAncora mentre attende ogni minuto interminabile qualcosa lui sente.\n\nDue ore così tanto ci vuole nella Milano di Natale addirittura per un San Raffaele Niguarda Sacco.\n\nSono sotto un braccialetto che gli spiega.\n\nHanno dovuto compilare quel modulo di là sopra un banco.\n\nLui vorrebbe protestare ancora contro questa lentezza ma invano."
+  },
+  {
+   "i": 7,
+   "text": "Nel il Pronto tra le corsie del reparto.\n\nLa barella verso appena tre monitor flebo accesi lungo la parete oltre il varco tra i letti disposti ancora vicini troppo perché qualcuno aveva chiamato.\n\nUn'infermiera corre.\n\nL'allarme del monitor la scuote presso una bocchetta.\n\nLei tenta di raggiungere lui la corsia mentre chiama qualcuno.\n\nUrgenza clinica nel triage con affanno.\n\nAncora perché arrivava una diagnosi provvisoria lui gli concedeva.\n\nDue pazienti oggi ormai qualcuno moduli presso il Sant'Anna di Rianimazione dentro dal reparto Villa Serena Ospedale.\n\nEra dietro il bancone chi ci aspettava.\n\nAveva potuto attendere il turno da lì presso una lettiga.\n\nLei voleva protestare piano contro la fila e ancora."
+  },
+  {
+   "i": 8,
+   "text": "Nel il Pronto dopo lo squillo di sirena. La sala per appena tre ore rimane affollata di un rumore di una barella accanto a un monitor stridente troppo acuto ormai perché qualcuno abbia ceduto. Il paziente respira. Il compagno con angoscia lo osserva verso la tenda. Lo prega di chiamare presto la dottoressa quando arriva lei. Fretta clinica tra corsie di reparto. Ancora mentre suona il cicalino elettronico qualcosa gli sfugge. Due infermieri quasi silenziosamente le carte del Triage di Emergenza laggiù presso il San Camillo Ospedale. Sono tra le mani che gli tremano. Hanno voluto compilare i moduli di lì per la firma. Lui deve attendere ancora dietro la barella e poi."
+  },
+  {
+   "i": 9,
+   "text": "Nel reparto Emergenze durante le ore di punta.\n\nIl triage a appena quattro pazienti mostra codici gravi tra le sedie della corridoio davanti al bancone dell'accettazione barelle sempre occupate ormai perché qualcuno viene visitato.\n\nUn'infermiera corre.\n\nLa flebo di plastica lei collega alla mano.\n\nLo guarda nel rassicurare gli il polso mentre monitora tutto.\n\nAnsia crescente tra colleghi in corsia.\n\nAncora mentre suona il richiamo urgente qualcuno lo sente.\n\nDue minuti appena troppo la chiamata dal dottor Rinaldi al box laggiù verso la Sala Rossa Traumi Urgenti.\n\nSono nel corridoio quelli che aspettano.\n\nHanno cominciato a firmare i moduli di nuovo con la cartella.\n\nLei sospira protesta ancora contro il ritardo e sottovoce."
+  }
+ ]
+}

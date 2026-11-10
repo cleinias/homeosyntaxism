@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "security-checkpoint",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nDans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 6.0,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans l'aéroport, à une heure de flux intense. Un voyageur aux trente ans, blouson noir avec écusson au lieu de bouton, silhouette trop étirée comme si elle avait été tirée. Les passagers déposent leurs affaires. L'homme en question s'agace contre un voisin. Il lui reproche de le heurter chaque fois qu'on dépasse quelqu'un. Ton geignard qui tente d'être intimidant. Comme il voit un espace libre, s'y précipite. Deux heures après, je le croise Zone de contrôle, près de la sécurité. Il est avec un agent qui lui dit : \"Vous devriez ajouter une fermeture éclair à votre sac.\" Il lui montre où (à la poche) et pourquoi."
+  },
+  {
+   "i": 1,
+   "text": "Au contrôle, parmi la foule dense. Un voyageur vers la trentaine, veste en cuir avec broderie remplaçant la boutonnière, taille trop fine comme si on l'avait étirée. Les passagers déposent leurs effets. L'individu mentionné s'énerve contre un voisin. Il lui reproche de le frôler chaque fois qu'on avance. Ton impatient qui tente d'être sévère. Comme il repère une zone libre, s'y dirige rapidement. Deux heures plus tard, je le croise Hall des Départs, devant la sécurité. Il est accompagné par un agent qui lui dit : \"Vous devriez attacher votre ceinture plus serrée.\" Il lui montre où (sur le côté) et comment."
+  },
+  {
+   "i": 2,
+   "text": "Dans l'aéroport, au milieu du tumulte. Un voyageur d'une trentaine d'années, blouson élimé avec des coutures apparentes, air tendu comme s'il venait de courir. Les passagers déposent leurs affaires. L'homme mentionné se plaint à un agent. Il lui reproche de lui faire signe chaque fois qu'il y a un contrôle. Ton agacé qui prétend être calme. Comme il remarque une file plus courte, s'y dirige rapidement. Deux heures après, je le croise près de la douane, avant le poste de sécurité. Il est avec un officier qui lui dit : \"Vous devriez porter une ceinture plus large pour vos voyages.\" Il lui montre où (à la taille) et pourquoi."
+  },
+  {
+   "i": 3,
+   "text": "Dans l'aéroport, aux heures de pointe. Un passager vers trente ans, manteau épais avec écharpe fine, allure pressée comme s'il était attendu quelque part. Les voyageurs avancent. Le passager mentionné s'agace envers un agent. Il lui reproche de le surveiller constamment alors qu'il passe chaque objet. Ton agacé qui feint l'autorité. Comme il remarque une place libre, s'y précipite. Plus tard, je le croise près du contrôle, devant le poste de sécurité. Il est avec un officier qui lui indique : \"Vous devriez ajouter une boucle supplémentaire à votre ceinture.\" Il lui montre où (à la boucle) et pourquoi."
+  },
+  {
+   "i": 4,
+   "text": "Dans l'aéroport, à une heure de rush. Un voyageur aux alentours des trente ans, veste en cuir avec fermeture éclair à la place du bouton, silhouette trop élancée comme si elle avait été étirée. Les passagers avancent. L'homme en question s'agace contre un prochain. Il le critique de l'encombrer chaque fois qu'il franchit un contrôle. Ton geignard qui prétend être menaçant. Comme il remarque un espace libre, s'y précipite. Trente minutes après, je le croise Hall de Transit, près du poste de sécurité. Il est avec un agent qui lui suggère : \"Tu devrais penser à réajuster ton sac à dos.\" Il lui indique où (aux sangles) et pourquoi."
+  },
+  {
+   "i": 5,
+   "text": "Dans l'aéroport, à une heure de foule. Un voyageur dans la quarantaine, écharpe grise sur le cou robuste, allure déterminée comme s'il devait prouver quelque chose. Les passagers avancent. Le voyageur mentionné s'agace contre un agent. Il lui reproche de le presser chaque fois qu'il voit quelqu'un traîner. Ton agacé qui se veut autoritaire. Comme il remarque une place vide, s'empresse de la prendre. Une heure plus tard, je le croise près du contrôle frontalier, devant la zone de sécurité. Il est avec un officier qui lui dit : \"Vous devriez attacher votre ceinture plus serrée.\" Il lui montre comment (au niveau de la taille) et pourquoi."
+  },
+  {
+   "i": 6,
+   "text": "Dans l'aéroport, à la zone de contrôle. Un voyageur aux alentours de la trentaine, blouson mat avec fermeture éclair, silhouette trop droite comme si elle était tendue. Les passagers déposent leurs affaires. Le voyageur mentionné s'agace auprès d'un voisin. Il lui reproche de lui faire perdre du temps chaque fois qu'on le retient. Ton impatient qui prétend être calme. Comme il repère une place vacante, s'empresse de l'occuper. Deux heures après, je le vois Terminal B, devant la sécurité. Il est avec un officier qui lui indique : « Tu devrais placer un badge supplémentaire sur ta carte. » Il lui montre où (sur le côté) et pourquoi."
+  },
+  {
+   "i": 7,
+   "text": "Dans l'aéroport, aux heures de foule. Un voyageur autour des trente-cinq ans, manteau épais avec fermeture éclair, allure pressée comme s'il était poursuivi. Les passagers déposent leurs effets. L'homme en question s'agace contre un proche. Il le critique pour le toucher chaque fois qu'on franchit une barrière. Ton agacé qui tente de rester calme. Comme il remarque un espace libre, se dirige rapidement vers celui-ci. Deux heures après, je le vois Hall Central, devant le poste de sécurité. Il est avec un agent qui lui indique : \"Vous devriez porter une ceinture plus large sur votre valise.\" Il lui montre où (au milieu) et comment."
+  },
+  {
+   "i": 8,
+   "text": "Dans l'aéroport, à la zone de contrôle. Un voyageur aux trente-cinq ans, manteau sombre avec écusson métallique, allure hâtive comme s'il courait après le temps. Les passagers attendent. L'individu en question proteste contre un agent. Il lui reproche de le presser chaque fois que passe quelqu'un. Ton autoritaire qui se veut protecteur. Comme il aperçoit une file moins dense, se dirige vers elle. Deux heures plus tard, je le retrouve salle d'embarquement, devant le comptoir d'enregistrement. Il est avec un fonctionnaire qui lui dit : \"Vous devriez vérifier vos documents avant le passage.\" Il lui montre comment (à l'accueil) et pourquoi."
+  },
+  {
+   "i": 9,
+   "text": "Dans la salle, à une heure de tumulte. Un voyageur aux trente-cinq ans, casquette plate sans lanière, bras trop courts comme s’ils avaient été raccourcis. Les voyageurs avancent. L’individu en question proteste contre une voisine. Il lui reproche de le heurter à chaque fois que quelqu’un passe. Ton indigné qui prétend être calme. Voyant une place vide, se précipite dessus. Trois heures plus tard, je le retrouve Hall des Départs, près du poste de sécurité. Il est avec un agent qui lui dit : \"Tu devrais rajouter un badge supplémentaire à ta carte.\" Il lui indique où (sur le bord) et pourquoi."
+  }
+ ]
+}

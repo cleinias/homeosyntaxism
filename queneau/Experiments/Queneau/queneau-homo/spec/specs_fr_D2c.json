@@ -1,0 +1,58 @@
+{
+ "lang": "fr",
+ "degree": "D2c",
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "n_periods": 10,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (about 8 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 2,
+   "words": 23,
+   "spec": "Period 2 (about 23 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause"
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (about 3 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 4,
+   "words": 9,
+   "spec": "Period 4 (about 9 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 5,
+   "words": 12,
+   "spec": "Period 5 (about 12 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause"
+  },
+  {
+   "k": 6,
+   "words": 6,
+   "spec": "Period 6 (about 6 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)"
+  },
+  {
+   "k": 7,
+   "words": 9,
+   "spec": "Period 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause"
+  },
+  {
+   "k": 8,
+   "words": 14,
+   "spec": "Period 8 (about 14 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)"
+  },
+  {
+   "k": 9,
+   "words": 18,
+   "spec": "Period 9 (about 18 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - finite complement clause\n        - open complement (infinitive)"
+  },
+  {
+   "k": 10,
+   "words": 9,
+   "spec": "Period 10 (about 9 words) clause-nesting schema:\n  - main clause"
+  }
+ ]
+}

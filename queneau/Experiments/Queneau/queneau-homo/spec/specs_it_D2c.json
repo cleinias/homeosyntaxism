@@ -1,0 +1,63 @@
+{
+ "lang": "it",
+ "degree": "D2c",
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "n_periods": 11,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (about 8 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 2,
+   "words": 25,
+   "spec": "Period 2 (about 25 words) clause-nesting schema:\n  - main clause\n    - adverbial clause"
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (about 3 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 4,
+   "words": 9,
+   "spec": "Period 4 (about 9 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 5,
+   "words": 10,
+   "spec": "Period 5 (about 10 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause"
+  },
+  {
+   "k": 6,
+   "words": 6,
+   "spec": "Period 6 (about 6 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 7,
+   "words": 9,
+   "spec": "Period 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause"
+  },
+  {
+   "k": 8,
+   "words": 17,
+   "spec": "Period 8 (about 17 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 9,
+   "words": 7,
+   "spec": "Period 9 (about 7 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause"
+  },
+  {
+   "k": 10,
+   "words": 10,
+   "spec": "Period 10 (about 10 words) clause-nesting schema:\n  - main clause\n    - finite complement clause"
+  },
+  {
+   "k": 11,
+   "words": 9,
+   "spec": "Period 11 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause"
+  }
+ ]
+}

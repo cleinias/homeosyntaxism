@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "en",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 29 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 15 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 5 (about 11 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - relative/adnominal clause\nPeriod 6 (about 9 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 12 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 18 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 19 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n          - relative/adnominal clause\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 5.0,
+ "gens": [
+  {
+   "i": 0,
+   "text": "The terminal hummed with travelers. To ensure safety, everyone must surrender items, stepping through gates. The process was swift. Officers watched, their eyes scanning the crowd. A scanner beeped, signaling a concern. A man was pulled aside, his bag inspected. Rules were clear, enforced with polite precision. Passengers moved orderly, despite the tension. The selected traveler complied, documents checked, hands raised for the wand. Security maintained, everyone felt reassured."
+  },
+  {
+   "i": 1,
+   "text": "The checkpoint buzzed with travelers. Agents scanned bags, instructing patrons to remove shoes, belts, watches. Lines snaked. A woman fidgeted, her tray filled with personal items. Beyond, a metal detector hummed, its robotic arm poised to search. A man was gestured aside, his documents scrutinized. Security whispered, wand tracing contours, ensuring compliance. Signage glowed, directing flow, maintaining order. An officer reviewed the screen, eyes narrowed, asking a traveler to demonstrate opening a lock. Patrons nodded, moving through, the rhythm unbroken."
+  },
+  {
+   "i": 2,
+   "text": "The checkpoint buzzed with travelers. A line snaked through the barriers, bags placed neatly in trays. Guards scanned with precision. Each step was regulated by strict protocols. Signs directed the flow, officers watched closely. Travelers moved cautiously, aware of scrutiny. Instructions echoed, voices blending with the hum. Documents were checked meticulously. An officer gestured to a traveler, asking for a private inspection. Patience defined the process."
+  },
+  {
+   "i": 3,
+   "text": "The terminal buzzed with travelers. To enter, one must place items gently on the conveyor belt, ensuring nothing obstructs the path. Quick. A traveler, whose bag contained a peculiar shape, was halted. At the scanner, an officer watched intently, her eyes scanning the screen meticulously. She gestured for the traveler to step aside, where a secondary check awaited. With precision, the officer requested the traveler to remove their jacket, to inspect further. The atmosphere was tense, yet orderly, with signs guiding every move. Instructions were clear, delivered with a polite firmness. A document, carefully examined, confirmed the traveler’s identity. Finally, the officer nodded, signaling clearance."
+  },
+  {
+   "i": 4,
+   "text": "The terminal buzzed with travelers. To ensure safety, officers scanned each bag, watching screens intently. Lines snaked. A tray slide echoed, rhythmic and steady. Beyond barriers, machines hummed, awaiting each step. Passengers removed shoes, belts, arranging items carefully. Instructions were clear, posted high and low. An officer gestured, guiding a traveler aside for further checks. Documents examined closely, a wand traced carefully, ensuring no threat lurked unseen. Security maintained, everyone moved on, courteous nods exchanged."
+  },
+  {
+   "i": 5,
+   "text": "The terminal buzzed with travelers. Agents scanned bags, instructing patrons to divest. Shoes tapped rhythms on the tiled floor. A woman’s necklace caught light, shimmering as she waited. Security flagged a man, pulling him aside for inspection. His documents trembled slightly in his hand. Signs directed the flow, maintaining秩序. Passengers moved through the checkpoint with practiced ease. An officer examined a laptop, asking the owner to power it on. Compliance was swift, silent, expected."
+  },
+  {
+   "i": 6,
+   "text": "The terminal buzzed with travelers hurrying through security checkpoints. An officer gestured for a man to place his belongings in a tray, stepping aside to let others through. Inside, the scanner hummed, a constant soundtrack. A woman, whose bag had triggered the alarm, was directed to a side station. There, her documents were carefully examined, and she submitted to a thorough pat-down. Meanwhile, passengers flowed steadily, their movements choreographed by signs and announcements. Signs instructed everyone to remove belts and shoes, a familiar ritual. The officer, calm and polite, maintained a steady pace, ensuring smooth processing. A man, singled out by the system, stood quietly as the officer explained the need for further inspection, his documents in hand. Once cleared, he joined the line, the process continuing seamlessly."
+  },
+  {
+   "i": 7,
+   "text": "The terminal buzzed with travelers. A line snaked through the checkpoint, waiting to surrender their possessions into plastic bins. Security screens glowed. Officers scanned IDs, eyes alert. A man was pulled aside, his bag flagged. He handed over documents, compliant. Signs directed the flow, enforcing orderly progress. Metal detectors beeped intermittently. Instructions were polite but firm. An officer guided the traveler, wanding methodically. His movements were precise, respectful. Compliance ensured the journey continued smoothly."
+  },
+  {
+   "i": 8,
+   "text": "The traveler's heart raced, eyes scanning the chaotic terminal. To pass through, he needed to remove his shoes, belt, and jacket, placing them carefully on the tray. A long line snaked past the metal detector, where a stern officer stood, watchful. Nearby, screens flickered, displaying abstract shapes and colors. Beyond, the body scanner awaited, its arms extended, motionless. An officer gestured for a woman to step aside, her documents scrutinized closely. She was then patted down methodically, a wanding device tracing her outline. Instructions echoed from loudspeakers, blending with the hum of activity. At the registration desk, a man recited his details, a screen confirming his clearance. The officer nodded, signaling him forward."
+  },
+  {
+   "i": 9,
+   "text": "The terminal buzzed with travelers. A man placed his bag to clear the scanner, stepping aside.  \nNext, a woman slid her phone into the tray, eyes scanning the rules posted overhead.  \nShe sighed.  \nHer belongings lay neatly, each item inspected before passing through.  \nThe officer, who watched intently, gestured for her to approach.  \nHe spoke calmly, instructing her to remove her coat.  \nShe complied, placing it gently on the belt.  \nThe traveler, whose name was scribbled on a form, waited as the officer checked the document, ensuring it matched the ID shown.  \nHe nodded, signaling her passage."
+  }
+ ]
+}

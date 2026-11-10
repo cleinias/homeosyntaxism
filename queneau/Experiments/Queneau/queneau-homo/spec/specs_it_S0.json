@@ -1,0 +1,63 @@
+{
+ "lang": "it",
+ "degree": "S0",
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "n_periods": 11,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN"
+  },
+  {
+   "k": 2,
+   "words": 25,
+   "spec": "Period 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB"
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB"
+  },
+  {
+   "k": 4,
+   "words": 9,
+   "spec": "Period 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN"
+  },
+  {
+   "k": 5,
+   "words": 10,
+   "spec": "Period 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON"
+  },
+  {
+   "k": 6,
+   "words": 6,
+   "spec": "Period 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN"
+  },
+  {
+   "k": 7,
+   "words": 9,
+   "spec": "Period 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB"
+  },
+  {
+   "k": 8,
+   "words": 17,
+   "spec": "Period 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN"
+  },
+  {
+   "k": 9,
+   "words": 7,
+   "spec": "Period 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB"
+  },
+  {
+   "k": 10,
+   "words": 10,
+   "spec": "Period 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN"
+  },
+  {
+   "k": 11,
+   "words": 9,
+   "spec": "Period 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV"
+  }
+ ]
+}

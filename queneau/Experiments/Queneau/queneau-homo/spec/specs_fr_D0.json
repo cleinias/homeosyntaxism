@@ -1,0 +1,58 @@
+{
+ "lang": "fr",
+ "degree": "D0",
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "n_periods": 10,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (~8 words) ordered dependency tree ([pos] relation->[head position]): [1]ADP case->[3]; [2]DET det->[3]; [3]PROPN root->[0]; [4]ADP case->[6]; [5]DET det->[6]; [6]NOUN conj->[3]; [7]ADP case->[8]; [8]NOUN nmod->[6]"
+  },
+  {
+   "k": 2,
+   "words": 23,
+   "spec": "Period 2 (~23 words) ordered dependency tree ([pos] relation->[head position]): [1]DET det->[2]; [2]NOUN root->[0]; [3]ADP case->[6]; [4]DET det->[6]; [5]NUM nummod->[6]; [6]NOUN nmod->[2]; [7]NOUN appos->[2]; [8]ADJ amod->[7]; [9]ADP case->[10]; [10]NOUN nmod->[7]; [11]VERB acl->[10]; [12]DET det->[13]; [13]NOUN obj->[11]; [14]NOUN conj->[7]; [15]ADV advmod->[16]; [16]ADJ amod->[14]; [17]SCONJ mark->[22]; [18]SCONJ mark->[22]; [19]PRON nsubj->[22]; [20]PRON iobj->[22]; [21]AUX aux:tense->[22]; [22]VERB advcl->[16]; [23]ADV advmod->[22]"
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (~3 words) ordered dependency tree ([pos] relation->[head position]): [1]DET det->[2]; [2]NOUN nsubj->[3]; [3]VERB root->[0]"
+  },
+  {
+   "k": 4,
+   "words": 9,
+   "spec": "Period 4 (~9 words) ordered dependency tree ([pos] relation->[head position]): [1]DET det->[2]; [2]NOUN nsubj->[6]; [3]ADP case->[4]; [4]NOUN nmod->[2]; [5]PRON expl:pass->[6]; [6]VERB root->[0]; [7]ADP case->[9]; [8]DET det->[9]; [9]NOUN obl:mod->[6]"
+  },
+  {
+   "k": 5,
+   "words": 12,
+   "spec": "Period 5 (~12 words) ordered dependency tree ([pos] relation->[head position]): [1]PRON nsubj->[3]; [2]PRON iobj->[3]; [3]VERB root->[0]; [4]ADP mark->[6]; [5]PRON obj->[6]; [6]VERB xcomp->[3]; [7]DET det->[8]; [8]NOUN obl:mod->[6]; [9]SCONJ mark->[11]; [10]PRON nsubj->[11]; [11]VERB acl->[8]; [12]PRON obj->[11]"
+  },
+  {
+   "k": 6,
+   "words": 6,
+   "spec": "Period 6 (~6 words) ordered dependency tree ([pos] relation->[head position]): [1]DET det->[2]; [2]NOUN root->[0]; [3]PRON nsubj->[5]; [4]PRON expl:pv->[5]; [5]VERB acl:relcl->[2]; [6]ADJ xcomp->[5]"
+  },
+  {
+   "k": 7,
+   "words": 9,
+   "spec": "Period 7 (~9 words) ordered dependency tree ([pos] relation->[head position]): [1]SCONJ mark->[3]; [2]PRON nsubj->[3]; [3]VERB advcl->[8]; [4]DET det->[5]; [5]NOUN obj->[3]; [6]ADJ amod->[5]; [7]PRON expl:pass->[8]; [8]VERB root->[0]; [9]ADV advmod->[8]"
+  },
+  {
+   "k": 8,
+   "words": 14,
+   "spec": "Period 8 (~14 words) ordered dependency tree ([pos] relation->[head position]): [1]NUM nummod->[2]; [2]NOUN obl:mod->[7]; [3]ADV advmod->[4]; [4]ADV advmod->[2]; [5]PRON nsubj->[7]; [6]PRON obj->[7]; [7]VERB root->[0]; [8]NOUN xcomp->[7]; [9]ADP case->[10]; [10]PROPN nmod->[8]; [11]ADP case->[13]; [12]DET det->[13]; [13]NOUN obl:mod->[7]; [14]PROPN appos->[13]"
+  },
+  {
+   "k": 9,
+   "words": 18,
+   "spec": "Period 9 (~18 words) ordered dependency tree ([pos] relation->[head position]): [1]PRON expl:subj->[5]; [2]AUX cop->[5]; [3]ADP case->[5]; [4]DET det->[5]; [5]NOUN root->[0]; [6]PRON nsubj->[8]; [7]PRON iobj->[8]; [8]VERB advcl:cleft->[5]; [9]PRON nsubj->[10]; [10]VERB ccomp->[8]; [11]AUX aux:caus->[12]; [12]VERB xcomp->[10]; [13]DET det->[14]; [14]NOUN obj->[12]; [15]ADJ amod->[14]; [16]ADP case->[18]; [17]DET det->[18]; [18]NOUN obl:arg->[12]"
+  },
+  {
+   "k": 10,
+   "words": 9,
+   "spec": "Period 10 (~9 words) ordered dependency tree ([pos] relation->[head position]): [1]PRON nsubj->[3]; [2]PRON iobj->[3]; [3]VERB root->[0]; [4]PRON obl:mod->[3]; [5]ADP case->[7]; [6]DET det->[7]; [7]NOUN obl:mod->[3]; [8]CCONJ cc->[9]; [9]ADV conj->[7]"
+  }
+ ]
+}

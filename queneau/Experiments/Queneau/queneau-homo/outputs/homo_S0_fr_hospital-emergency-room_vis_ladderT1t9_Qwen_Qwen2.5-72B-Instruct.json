@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "hospital-emergency-room",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nDans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 5.7,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans l'hôpital, à une heure de surcharge. Un homme dans la quarantaine, blouse ouverte sur un torse pâle, air tendu comme s'il portait un fardeau invisible. Les patients attendent. L'homme en question proteste contre une voisine. Il lui reproche de parler fort chaque fois que quelqu'un arrive. Ton irrité qui cherche querelle. Comme il voit une chaise vide, s'empresse d'y aller. Deux heures plus tard, je le croise salle d'attente, près du comptoir d'accueil. Il est avec un infirmier qui lui dit : \"Tu devrais demander un sédatif pour te calmer.\" Il lui montre où (au bras) et pourquoi."
+  },
+  {
+   "i": 1,
+   "text": "Dans l'H, à une heure d'effervescence. Un malade près des quarante ans, bandeau sur l'œil, visage pâle comme s'il venait de perdre du sang. Les patients entrent. Le patient en question s'agace contre une infirmière. Il lui reproche de ne pas le soigner rapidement. Ton plaintif qui tente d'être ferme. Comme il voit une chaise libre, s'y précipite. Une heure plus tard, je le croise Salle d'Accueil, près du bureau des entrées. Il est avec un visiteur qui lui dit : \"Tu devrais demander plus d'attention médicale pour ton bras.\" Il lui montre où (sur le pansement) et pourquoi."
+  },
+  {
+   "i": 2,
+   "text": "Dans l'ER, à une heure de surcharge. Un malade parmi les quarante ans, brassard au bras indiquant l'urgence, front trop pâle comme si la fièvre l'avait épuisé. Les infirmières passent. Le patient en question s'énerve contre une voisine. Il lui reproche de lui parler trop fort chaque fois qu'elle appelle quelqu'un. Ton agacé qui se veut calme. Comme il voit un fauteuil libre, se jette dessus. Une heure plus tard, je le croise salle d'attente, près des box. Il est avec un ami qui lui dit: \"Tu devrais demander un oreiller supplémentaire pour ta couche.\" Il lui montre où (sur le côté) et pourquoi."
+  },
+  {
+   "i": 3,
+   "text": "Dans l'UR, à une heure de surcharge. Un patient sur les quarante-cinq ans, masque chirurgical avec élastique remplaçant la lanière, bras trop maigre comme s'il avait subi une malnutrition. Les personnes arrivent. L'individu en question s'emporte contre une infirmière. Il lui reproche de retarder le traitement chaque fois qu'il entend une page. Ton agacé qui se veut urgent. Comme il voit une chaise libre, s'élance vers celle-ci. Deux heures plus tard, je le croise au comptoir des admissions, devant la salle d'attente. Il est avec un compagnon qui lui suggère : \"Tu devrais demander un bracelet supplémentaire pour ton dossier.\" Il lui montre où (au poignet) et pourquoi."
+  },
+  {
+   "i": 4,
+   "text": "Dans l'H, à une heure d'affluence. Un malade sur les soixante ans, masque bleu avec élastique remplaçant la courroie, bras trop maigres comme si on les avait étirés. Les patients sortent. Le patient en question s'agite contre un proche. Il lui reproche de l'importuner chaque fois que passe quelqu'un. Ton plaintif qui prétend être dur. Comme il voit une place vacante, s'empresse d'y aller. Deux heures plus tard, je le croise salle d'attente, près du bureau des urgences. Il est avec un infirmier qui lui dit : \"Vous devriez demander un suivi psychologique pour votre anxiété.\" Il lui montre où (au formulaire) et pourquoi."
+  },
+  {
+   "i": 5,
+   "text": "Dans l'hôpital, à une heure chargée. Un homme aux alentours de quarante ans, masque médical couvrant le bas du visage, front creusé par l'inquiétude. Les patients s'assoient. L'individu en question manifeste son agacement envers une voisine. Il la critique de le déranger dès qu'elle se lève. Ton impatient qui prétend être calme. Comme il remarque une chaise vacante, s'y précipite. Trente minutes plus tard, je le croise salle d'attente, près du comptoir d'accueil. Il est avec une assistante qui lui recommande : \"Vous devriez demander une couverture supplémentaire pour votre lit.\" Elle lui montre où (au pied) et pourquoi."
+  },
+  {
+   "i": 6,
+   "text": "Dans l'H, à une heure de tension. Un malade aux trente-cinq ans, bracelet au poignet signe de son état, figure pâle comme si le temps l'avait usé. Les personnes attendent. L'individu en question s'agace contre un proche. Il lui reproche de lui murmurer trop fort chaque fois qu'on appelle quelqu'un. Ton geignard qui prétend être patient. Comme il remarque une chaise vacante, se rue dessus. Trente minutes après, je le croise Salon de Santé, près du poste infirmier. Il est avec une assistante qui lui conseille : \"Tu devrais demander un remède supplémentaire à ta potion.\" Elle lui indique où (à la dose) et pourquoi."
+  },
+  {
+   "i": 7,
+   "text": "Dans l'ER, à une heure d'affluence. Un homme aux quarante ans, masque bleu sur le visage, front trop pâle comme s'il avait froid. Les patients attendent. L'homme en question s'agace contre un voisin. Il lui reproche de le déranger chaque fois qu'il passe quelqu'un. Ton agacé qui se veut autoritaire. Comme il voit une place libre, s'empresse de la prendre. Deux heures plus tard, je le croise au comptoir des urgences, près de la salle d'attente. Il est avec un ami qui lui dit : \"Tu devrais faire vérifier ta tension plus souvent.\" Il lui montre comment (au bras) et pourquoi."
+  },
+  {
+   "i": 8,
+   "text": "Dans l'hôpital, à une heure d'affluence. Un patient au triage, accompagné d'une carte vitale avec bracelet remplaçant le numéro, visage blême comme s'il avait été épuisé. Les brancards passent. L'homme en question s'agace contre un infirmier. Il lui reproche de ne pas le prioriser assez rapidement quand il entend des appels. Ton impatient qui se veut pressant. Comme il voit une place libre, s'installe aussitôt. Deux heures plus tard, je le croise salle d'attente, devant la réception. Il est avec un médecin qui lui dit: \"Tu devrais prendre un antalgique supplémentaire pour ta douleur.\" Il lui montre où (sur l'épaule) et pourquoi."
+  },
+  {
+   "i": 9,
+   "text": "Dans l'hôpital, à une heure de surcharge. Un malade dans les cinquante ans, bracelet au poignet comme un ornement, peau trop pâle comme si on l'avait lavé. Les patients attendent. L'homme en question fulmine contre une infirmière. Il lui reproche de le négliger chaque fois qu'il demande de l'aide. Ton geignard qui veut être important. Comme il voit un fauteuil libre, s'y rue. Trente minutes plus tard, je le croise salle d'attente, près du comptoir d'accueil. Il est avec un médecin qui lui dit: \"Tu devrais porter une ceinture supplémentaire autour de ta taille.\" Il lui montre où (au niveau des hanches) et pourquoi."
+  }
+ ]
+}

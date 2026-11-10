@@ -1,0 +1,62 @@
+{
+ "model": "qwen/qwen-2.5-72b-instruct",
+ "backend": "openrouter",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "grocery-checkout",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": {
+  "requested_provider": "DeepInfra",
+  "resolved_provider": "DeepInfra",
+  "quant": "fp8"
+ },
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nSulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 88.7,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel supermercato, in un'ora affollata. Un cliente di circa trent'anni, cappellino sportivo con una visiera sbilenca, braccia troppo corte, come se fossero state troncate. Le persone si muovono. L'uomo in questione si infastidisce con un vicino. Lo rimprovera di occupare troppo spazio ogni volta che passa qualcuno. Tono seccato, con pretese di superiorità. Non appena vede uno spazio libero, vi si piazza. Due ore più tardi lo incontro alla cassa automatica, vicino alla porta d'uscita. È con un amico che gli dice: «Dovresti far controllare il carrello». Gli fa vedere dove (alle ruote) e perché."
+  },
+  {
+   "i": 1,
+   "text": "Nel supermercato, in un'ora di affluenza. Un cliente di circa trent'anni, berretto stropicciato con una fascetta al posto del nastro, fisico sottile, come se fosse stato tirato per il collo. Le persone avanzano. Il tipo in questione si irrita con il vicino. Lo accusa di spingerlo ogni volta che qualcuno si muove. Tonalità lamentosa, con pretese di severità. Appena vede uno spazio libero, ci si infila. Due ore più tardi lo incontro al centro commerciale, davanti alla cassa. È con un amico che gli dice: «Dovresti far aggiustare il carrello». Gli mostra dove (alla maniglia) e perché."
+  },
+  {
+   "i": 2,
+   "text": "Nel supermercato, in un'ora di affollamento. Un cliente di circa trent'anni, cappuccio floscio con una cordicella al posto del laccio, collo troppo corto, come se fosse stato compresso. La gente procede. Il tipo in questione si irrita con un vicino. Lo rimprovera di spingerlo ogni volta che qualcuno passa. Tono brusco, con pretese di fermezza. Non appena vede uno spazio libero, vi si posiziona. Due ore più tardi lo incontro alla cassa, davanti alla fila di pagamento. È con un amico che gli dice: «Dovresti far sistemare la ruota del carrello». Gli mostra dove (alla staffa) e perché."
+  },
+  {
+   "i": 3,
+   "text": "Nel supermercato, in un'ora affollata. Un cliente di circa trent'anni, cappello da baseball con una visiera storta, naso troppo corto, come se fosse stato schiacciato. La gente procede. Il cliente in questione si arrabbia con uno dietro di lui. Lo rimprovera di occupare troppo spazio ogni volta che qualcuno si avvicina. Tono irritato, con pretese di autorità. Non appena vede uno spazio libero, vi si mette. Due ore più tardi lo incontro alla cassa, davanti alla fila di checkout. È con un amico che gli dice: «Dovresti far aggiustare il carrello». Gli fa vedere dove (alla ruota posteriore) e perché."
+  },
+  {
+   "i": 4,
+   "text": "Nel reparto, in un'ora di affluenza. Un cliente di circa trenta anni, berretto inclinato con una visiera consumata, corpo troppo snello, come se fosse stato stirato. La gente avanza. Il tipo in questione si irrita con un vicino. Lo accusa di spingerlo ogni volta che qualcuno passa. Tono lamentoso, con pretese di autorità. Non appena vede uno spazio libero, vi si inserisce. Due ore più tardi lo incontro all'ingresso, davanti al supermercato. È con un amico che gli dice: «Dovresti far sistemare la cinghia della borsa». Gli fa vedere dove (sul lato destro) e perché."
+  },
+  {
+   "i": 5,
+   "text": "Nel supermercato, in un'ora di affollamento. Un cliente di circa trenta anni, berretto stropicciato con una bandana al posto della fascia, braccia troppo corte, come se fossero state tagliate. La gente avanza. L'uomo in questione si irrita con un vicino. Gli rimprovera di spingerlo ogni volta che qualcuno passa. Tono irritato, con pretese di autorità. Non appena vede uno spazio libero, vi si infila. Due ore più tardi lo incontro davanti alla cassa, vicino all'uscita. È con un amico che gli dice: «Dovresti far mettere una ruota in più al carrello». Gli fa vedere dove (all'angolo) e perché."
+  },
+  {
+   "i": 6,
+   "text": "Sul nastro, in un'ora di affollamento. Un cliente di circa trenta anni, berretto floscio con una visiera al posto del nastro, collo troppo corto, come se glielo avessero tagliuzzato. La gente paga. Il tipo in questione si irrita con un vicino. Gli rimprovera di spingere ogni volta che qualcuno passa. Tono brusco, con pretese di autorità. Non appena vede un posto libero, vi si piazza. Due ore più tardi lo incontro al centro commerciale, davanti alla Cassa Uno. È con un amico che gli dice: «Dovresti far mettere un cestino in più al carrello». Gli fa vedere dove (alla barra) e perché."
+  },
+  {
+   "i": 7,
+   "text": "Nel supermercato, in un'ora di affollamento. Un cliente di circa trent'anni, cappuccio basso con una fibbia al posto del cordoncino, braccia troppo corte, come se fossero state tagliate. Le persone pagano. Il cliente in questione si irrita con un vicino. Lo rimprovera di spingerlo ogni volta che passa qualcuno. Tono infastidito, con pretese di superiorità. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla cassa rapida, davanti alla grande esposizione. È con un amico che gli dice: «Dovresti far sistemare la ruota del carrello». Gli fa vedere dove (sulla parte destra) e perché."
+  },
+  {
+   "i": 8,
+   "text": "Nel supermercato, in un'ora di affollamento. Un cliente di circa trent'anni, cappello sportivo con una visiera al posto della bandana, collo troppo corto, come se glielo avessero comprimuto. Le persone fanno la coda. Il cliente in questione si irrita con un vicino. Gli rimprovera di spingerlo ogni volta che qualcuno si sposta. Tono risentito, con pretese di importanza. Non appena vede uno spazio libero, ci si avvicina. Due ore più tardi lo incontro nella zona di pagamento, vicino alla cassa automatica. È con un amico che gli dice: «Dovresti far mettere una ruota in più al carrello». Gli fa vedere dove (sul supporto) e perché."
+  },
+  {
+   "i": 9,
+   "text": "Nel reparto, in un'ora di affluenza. Un cliente di circa trenta anni, berretto di lana con una sciarpa al collo, braccia troppo corte, come se glieli avessero tagliati. La gente si muove. Il tipo in questione si irrita con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono aggressivo, con pretese di rabbia. Non appena vede un posto libero, vi si piazza. Due ore più tardi lo incontro al supermercato, davanti alla cassa automatica. È con un amico che gli dice: «Dovresti far mettere un tappo in più alla tua valigia». Gli fa vedere dove (alla maniglia) e perché."
+  }
+ ]
+}

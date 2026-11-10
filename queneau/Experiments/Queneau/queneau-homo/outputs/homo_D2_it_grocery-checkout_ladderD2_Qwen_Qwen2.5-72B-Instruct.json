@@ -1,0 +1,56 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2",
+ "lang": "it",
+ "scenario": "grocery-checkout",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~25 words) clause architecture: 1 main clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~10 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~17 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 9 (~7 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1.\nPeriod 10 (~10 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\nPeriod 11 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 9.8,
+ "gens": [
+  {
+   "i": 0,
+   "text": "La cassa era affollata, e la coda si allungava con il trambusto del pomeriggio. Quando l’ultima scatola scivolò lungo il nastro, il cassiere sorrise, pronto ad accogliere il cliente successivo. Era tesa. La signora estrasse il portafoglio, cercando la carta di credito. Mentre aspettava il suo turno, un uomo si avvicinò, invadendo lo spazio. Lo scontrino si stampò con un rumore secco. Se non fosse stato così occupato, il cassiere avrebbe notato la tensione nell'aria. Sullo schermo apparvero i punti del programma fedeltà. Il cliente accanto, impaziente, tamburellava con le dita. Annunciò il totale, sperando che tutto finisse in fretta. La cassa ronzava, un ritornello familiare di routine quotidiana."
+  },
+  {
+   "i": 1,
+   "text": "Nel corridoio affollato, la coda si snodava lunga e serpentina. Mentre aspettava il suo turno, una signora sistemava nervosamente gli articoli sulla cinta trasportatrice. Il carrello cigolava lievemente. Il cassiere scansionava con precisione ogni oggetto. La cliente, che aveva dimenticato il tesserino fedeltà, cercava nelle tasche del cappotto. Una spinta discreta da dietro svelava l’impazienza del successivo. Il registratore di cassa emetteva continui bip. L’importo totale venne annunciato con voce ferma. Sullo scaffale per lo stipato, le buste attendevano ordinatamente. La ricevuta fu stesa e consegnata con un sorriso."
+  },
+  {
+   "i": 2,
+   "text": "La coda si snoda lungo il corridoio, mentre i carrelli si ammassano davanti alla cassa automatica, pronti a consegnare i loro tesori. Quando il nastro si ferma, la cassiera invita il cliente a scansionare i prodotti, uno per uno, con precisione quasi militare. Il silenzio. Il rumore. La scansione interrompe il flusso costante di merci, che scivolano sul nastro come pesci in un fiume. Dopo aver posato l'ultimo articolo, l'uomo spinge il divisore con decisione, preparandosi a pagare. Prima che possa estrarre la carta, un altro cliente si avvicina impaziente, cercando di guadagnare spazio nella fila. Non appena la carta viene letta, la cassiera annuncia il totale, invitando il cliente a inserire il suo codice segreto. Sullo schermo appare il riepilogo della spesa, con il totale lampeggiante. La cassiera chiede se il cliente vuole utilizzare la tessera fedeltà, offrendo sconti speciali. Il ricevuta esce dal distributore, sigillando la transazione con un tintinnio finale."
+  },
+  {
+   "i": 3,
+   "text": "La coda al supermercato si allunga, mentre le casse ronzano come api laboriose. Quando il carrello raggiunge la linea, un bip acuto segna l'inizio della danza dei prodotti. La commessa sorride, invitando il cliente a sistemare le merci sul nastro. Sullo scongiuro del tempo, il lettore di codici scansiona con precisione chirurgica. Il tesserino, che promette punti, viene mostrato da un cliente impaziente, mentre la busta attende di essere riempita. Dietro, un altro spinge timidamente, reclamando lo spazio stretto. Nel silenzio, solo i suoni metallici del registro rompono la quiete. L'importo totale risuona nell'aria, annunciato con voce limpida. Un secondo dopo, la domanda per il bonus fedeltà arriva inesorabile. Il cliente esita, poi conferma con un cenno del capo. Infine, il sussurro della ricevuta che esce dalla stampante chiude la danza."
+  },
+  {
+   "i": 4,
+   "text": "Nel reparto cassa del supermercato, la gente si ammassa. Quando il nastro scorre, il lettore di codici a barre emette un bip, e la spesa si accumula. Attende. La cliente estrae la carta di credito, pronta a pagare. Dietro di lei, un uomo impaziente si avvicina troppo. Lo sguardo della cassiera si posa sul totale, annunciato dall’apparecchio. Nonostante tutto, la routine continua. Ogni oggetto passato, ogni prezzo registrato, ogni cliente servito. Sullo schermo lampeggia la richiesta della carta fedeltà. Il tono risuona cortese, ma fermo. Infine, la ricevuta viene stampata."
+  },
+  {
+   "i": 5,
+   "text": "La coda si estende come un serpente impaziente. Quando la cassiera scansiona i prodotti, il nastro scorre con un ronzio continuo. Il carrello attende. La spesa si accumula. Le borse sono pronte, l'etichetta di prezzo si stampa. La cliente paga. Prima che il totale sia annunciato, il display lampeggia. L'altro cliente si avvicina troppo. La carta fedeltà viene richiesta. Il cambio è calcolato. Il scontrino esce dal registratore."
+  },
+  {
+   "i": 6,
+   "text": "Nel supermercato affollato, la coda alla cassa si allunga. Mentre il nastro scorre lentamente, un cliente sistema i prodotti con cura. Paga. Il cassiere annuncia il totale, invitando a inserire la carta. Dietro, una cliente impaziente spinge leggermente il carrello. Nonostante le barriere, lo spazio sembra sempre insufficiente. Quando il beeper segnala l'ultimo articolo, si respira un sospiro collettivo. Prima di stampare la ricevuta, il cassiere chiede se è societa'. Una discussione sussurra tra i clienti sulla velocità del servizio. Qualcuno suggerisce di usare l'app per pagamenti più rapidi."
+  },
+  {
+   "i": 7,
+   "text": "La coda si snoda davanti alla cassa. Quando il carrello raggiunge il nastro, la commessa inizia a scansare i prodotti con destrezza. Beep. Un fruscio di sacchetti. La cliente, impaziente, attende che venga calcolato l'importo, mentre un uomo si avvicina troppo. Con discrezione, la cassiera annuncia il totale e invita a pagare con la carta fedeltà. Il display lampeggia, richiedendo conferma. Un scontrino viene steso sul banco. Il successivo, nervoso, spinge leggermente la spesa. L'aria è piena del ritmo delle operazioni quotidiane."
+  },
+  {
+   "i": 8,
+   "text": "Nel supermercato affollato, la coda alla cassa si allunga. Quando il nastro scorre veloce, i prodotti passano sotto lo scanner, mentre la cliente preleva il portafoglio. Lei paga. La cassiera, paziente, prepara le buste con cura, accanto al lettore di carte. Dietro, un uomo impaziente spinge un carrello carico, quasi urtando la sbarra divisoria. Si scambiano uno sguardo. Nonostante tutto, il rumore dei bip continua regolare. Sullo schermo lampeggia il totale da pagare. Il viso della cassiera si illumina, invitando gentilmente a presentare la carta fedeltà. Annunciato l'importo, invita il cliente successivo. Pronto, il successivo può avvicinarsi."
+  },
+  {
+   "i": 9,
+   "text": "Nel reparto cassa del supermercato, la coda si allunga. Quando il carrello si ferma, il nastro scorre lentamente, portando con sé prodotti vari. Il rumore. Ogni oggetto scansionato risuona. Con un sorriso, la cassiera, che indossa il grembiule aziendale, attende paziente. Le mani del cliente sistemano le borse, pronte per l'acquisto. Davanti allo scontrino stampato, si avverte una pressione. Un altro cliente si avvicina, impaziente, cercando spazio. La voce della cassiera rompe il silenzio, annunciando il totale. Sul display appare l'invito per la tessera fedeltà. La carta viene inserita, completando la transazione."
+  }
+ ]
+}

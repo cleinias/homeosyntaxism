@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 1.6,
+ "gens": [
+  {
+   "i": 0,
+   "text": "In the bustling emergency room, nurses and a doctor hurried back and forth from bay to bay. Monitors beeped, IV drips flowed, a curtain separated each area. A patient writhed in agony, clutching his chest, while his distraught companion grumbled about long waits. Beside them, a nurse scribbled on a form, the intercom crackled with urgent calls. The register of clinical urgency hummed with activity—wristbands clinked, forms whirred through the printer."
+  },
+  {
+   "i": 1,
+   "text": "At the bustling emergency room, through the open door, I saw the triage desk crowded with nurses and a hunched doctor darting back and forth between rows of gurneys lined up along the corridor. A curtain had been drawn, revealing a monitor blinking incessantly, dripping tubes hanging from the ceiling. Between the rows of gurneys sat two figures, a patient writhing in pain and a companion who seemed exasperated by the long wait. In the center of it all was the registration desk where intercoms buzzed incessantly, the air filled with the whirring of machines and the scent of antiseptic. Wristbands clattered against the counter as patients handed them over, filling out forms hastily."
+  },
+  {
+   "i": 2,
+   "text": "At the bustling hospital emergency room, the triage desk buzzed with activity. Waiting chairs lined the corridor, where gurneys rested quietly. Nurses and a doctor moved swiftly between examination bays. Monitors beeped, drips dripped gently, and curtains were drawn to shield privacy. A patient writhed in pain, clutching their chest, while their companion stood outside, complaining about the long wait. The register charted the severity of cases—intercoms chirped, wristbands clinked, and forms floated across the counter. A nurse called out, \"Emergency! Third bay please.\" The patient’s cries echoed through the hall. Meanwhile, the companion jotted down notes, hoping the situation would soon resolve."
+  },
+  {
+   "i": 3,
+   "text": "At the bustling hospital emergency room, the triage desk buzzed with activity as nurses and a doctor darted between patient bays. Monitors beeped and drips hung from gurneys lined the corridor. A patient screamed in pain, clutching his chest; beside him, his worried companion complained about the long wait. Forms filled out hastily on a nearby table, while intercoms crackled with urgent instructions. Patient ID wristbands fluttered as staff rushed back and forth. The interstitial curtains were drawn to shield sensitive information from prying eyes."
+  },
+  {
+   "i": 4,
+   "text": "In the bustling hospital emergency room, at the triage desk under fluorescent lights, chairs lined up in rows awaited patients, while gurneys were placed along the corridor. Nurses and a doctor darted back and forth between bays; monitors blinked, dripping saline solutions, a curtain partially drawn. A patient in distress, clutching their chest, leaned on a companion, voicing complaints about the long wait. Above, an intercom beeped, a nurse called out patient numbers, wristbands clutched, hurried papers scattered. Registers of clinical urgency buzzed, intercoms chimed, pages whirled through hallways. The room hummed with activity, a pulse of medical necessity."
+  },
+  {
+   "i": 5,
+   "text": "At the busy hour of a hospital emergency room, nurses and a doctor moved between gurneys along the corridor, the triage desk buzzing with activity. The waiting chairs were filled, their occupants anxious faces mirroring the tension. Monitors flickered lifeless, drips dripping steadily, a pale curtain drawn to shield one bay from another. A patient in distress lay on a gurney, his companion beside him, both complaining about the prolonged wait. On the register of clinical urgency, intercom pages pinged constantly, wristbands fluttering like banners, medical forms scattered haphazardly."
+  },
+  {
+   "i": 6,
+   "text": "At the hospital’s bustling emergency room, the triage desk buzzed with activity, waiting chairs lined up against the wall, and gurneys stood in neat rows along the corridor. Nurses and a doctor darted between bays, their faces etched with concern. Monitors beeping, drips hanging from IV stands, a curtain drawn to separate the sick from the anxious. A patient in distress lay on a gurney, clutching her chest, her companion beside her, voicing their frustration at the long wait. The register of clinical urgency rang out through the intercom, page after page of wristbands and forms stacked beside each bay."
+  },
+  {
+   "i": 7,
+   "text": "At the bustling hospital emergency room, the triage desk buzzed with activity, waiting chairs swiveled restlessly, and gurnies lined the corridor. Nurses hurried between treatment bays, while doctors moved silently with purpose. Monitors beeped, drips hung loosely, and a curtain veiled a curtained space. A patient writhed in pain, clutching her chest, while her companion waited anxiously. Voices carried over the intercom, wristbands clinked, and forms fluttered across tables."
+  },
+  {
+   "i": 8,
+   "text": "At the bustling hospital emergency room, nurses and a doctor moved between bays. The triage desk was crowded, patients waited in waiting chairs, and gurneys lined the corridor. Monitors flickered to life, drips hung from hooks, and a curtain hung before a critical bed. A woman in distress sat beside her companion, who complained bitterly about the lengthy wait. Beside them, medical records and forms filled the air. Emergency calls echoed through the hallways. Nurses hurried back and forth, pausing briefly to assess each patient’s condition. The intercom buzzed intermittently, interrupting their silence."
+  },
+  {
+   "i": 9,
+   "text": "At the busy hospital ER, the triage desk buzzed with activity. Waiting chairs creaked under shifting weight, and gurneys lined the corridor. Nurses and a doctor darted between treatment bays. Monitors beeped softly, drips hung from plastic tubes, and a curtain concealed something private. A patient in distress, clutching their chest, was comforted by a concerned companion. The complaint was the long wait. On a chart, a row of numbers indicated clinical urgency. An intercom chirped intermittently, and bracelets marked the patients' names. Forms were scattered across desks and tables."
+  }
+ ]
+}

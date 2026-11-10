@@ -1,0 +1,38 @@
+{
+ "struct_bar": 0.6,
+ "coh_bar": 0.5,
+ "ladder": [
+  {
+   "model": "claude-opus-4-8",
+   "cells": 18,
+   "s0_pos": 0.783,
+   "d2_clause": 0.884,
+   "pass_rate": 0.121,
+   "coherence": 0.145
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "cells": 18,
+   "s0_pos": 0.332,
+   "d2_clause": 0.556,
+   "pass_rate": 0.028,
+   "coherence": 0.684
+  },
+  {
+   "model": "qwen/qwen-2.5-72b-instruct",
+   "cells": 18,
+   "s0_pos": 0.567,
+   "d2_clause": 0.801,
+   "pass_rate": 0.294,
+   "coherence": 0.766
+  },
+  {
+   "model": "qwen/qwen-2.5-7b-instruct",
+   "cells": 18,
+   "s0_pos": 0.436,
+   "d2_clause": 0.633,
+   "pass_rate": 0.111,
+   "coherence": 0.359
+  }
+ ]
+}

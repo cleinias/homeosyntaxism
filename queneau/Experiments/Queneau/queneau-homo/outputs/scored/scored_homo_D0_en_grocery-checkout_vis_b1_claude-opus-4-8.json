@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-4-8",
+ "lang": "en",
+ "scenario": "grocery-checkout",
+ "n": 4,
+ "agg": {
+  "s0_pos": 0.75,
+  "d1_triple": 0.791,
+  "d2_clause": 0.839,
+  "words": 121.5,
+  "depth_gap": 1.25,
+  "coherence": 0.525,
+  "held_rate": 1,
+  "pass_rate": 0.5
+ },
+ "rows": [
+  {
+   "i": 0,
+   "s0_pos": 0.714,
+   "d1_deprel": 0.869,
+   "d1_triple": 0.77,
+   "clause_inv": 0.829,
+   "clause_nest": 0.829,
+   "d2_clause": 0.829,
+   "d2c_attach": 0.829,
+   "depth_gap": 2,
+   "coherence": 1.0,
+   "words": 111,
+   "held": true,
+   "pass": true
+  },
+  {
+   "i": 1,
+   "s0_pos": 0.767,
+   "d1_deprel": 0.883,
+   "d1_triple": 0.818,
+   "clause_inv": 0.81,
+   "clause_nest": 0.81,
+   "d2_clause": 0.81,
+   "d2c_attach": 0.81,
+   "depth_gap": 1,
+   "coherence": 0.4,
+   "words": 114,
+   "held": true,
+   "pass": false
+  },
+  {
+   "i": 2,
+   "s0_pos": 0.85,
+   "d1_deprel": 0.867,
+   "d1_triple": 0.789,
+   "clause_inv": 0.864,
+   "clause_nest": 0.864,
+   "d2_clause": 0.864,
+   "d2c_attach": 0.864,
+   "depth_gap": 1,
+   "coherence": 0.7,
+   "words": 121,
+   "held": true,
+   "pass": true
+  },
+  {
+   "i": 3,
+   "s0_pos": 0.667,
+   "d1_deprel": 0.905,
+   "d1_triple": 0.788,
+   "clause_inv": 0.851,
+   "clause_nest": 0.723,
+   "d2_clause": 0.851,
+   "d2c_attach": 0.723,
+   "depth_gap": 1,
+   "coherence": 0.0,
+   "words": 140,
+   "held": true,
+   "pass": false
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 1.7,
+ "gens": [
+  {
+   "i": 0,
+   "text": "At the airport’s security checkpoint during a hectic hour, the queue formed, barriers blocking movement. A tray was divested of belongings; scans by the metal detector checked the bags, and a pat-down by hand followed. An officer singled out a traveler from the line, documents scrutinized, and then they stood aside, their presence masked behind instructions and signage, the impersonal courtesy of authority intact."
+  },
+  {
+   "i": 1,
+   "text": "At the bustling airport security checkpoint, the queue swelled under the constant stream of travelers. Each individual's belongings were meticulously divested into trays, passing through scanners and metal detectors before the inevitable wand pat-down. An officer, eyes sharp and demeanor stern, singled out a solitary traveler from the crowd. Documents were extracted from pockets, pages carefully reviewed and sometimes held up to scrutinizing lights. The register of control stood watch, its instructions and signage issuing the impersonal courtesy of authority. Signs reminded travelers to remove liquids, gels, and powders from their luggage; cameras flashed occasionally, adding to the impersonal air of control. The traveler’s hands trembled slightly as the wand scanned, but there was no need for alarm; routine checks ensured security."
+  },
+  {
+   "i": 2,
+   "text": "At the bustling airport checkpoint during peak hours, the queue and barriers stood stark against the background. Passengers divested their belongings meticulously into trays laid out in rows. Scanners hummed audibly beside metal detectors, ready to assess every piece of luggage. An officer and a solitary traveler were singled out from the sea of faces. Papers were produced, followed by a thorough pat-down conducted with an unseen yet firm hand.\n\nThe register of control loomed before them, its bright lights casting shadows on everything within reach. Instructions and signs directed each step clearly, their voices unassuming but authoritative. In this space, the impersonality of the authority felt almost welcoming."
+  },
+  {
+   "i": 3,
+   "text": "At the bustling airport security checkpoint, the long queue moved steadily forward, barreling through trays where travelers divested their belongings. Metal detectors hissed and scanned objects, body-search gestures lingering with cautious empathy. An officer, singled out amidst the throng, held up papers and was subject to a thorough pat-down. The register of control buzzed with instructions and signage, the impersonal courtesy of authority omnipresent."
+  },
+  {
+   "i": 4,
+   "text": "An officer at a bustling airport security checkpoint scans the queue and barriers with practiced ease. Passengers, divesting their belongings into trays, await their turn. X-ray machines hum softly beside the metal detectors, and the occasional body-search gesture punctuates the quiet. Suddenly, a solitary traveller catches his eye—documents held aloft, ready to submit, and under the watchful gaze of the X-ray machine, the officer conducts a thorough pat-down. Atop a register of control, instructions and signage guide the process, the impersonal courtesy of authority maintaining an air of professionalism. A security camera captures the scene, its lens indifferent yet focused. The traveller’s heart races, but beneath the uniformed figure, there is a sense of familiarity, a moment of connection forged through shared experience."
+  },
+  {
+   "i": 5,
+   "text": "at the airport checkpoint, amidst the bustling crowd, travelers wait in line, their bags already divided into clear plastic trays. the scanners hum, the metal detectors beep, and the officers gesture towards the body-search area. an officer notices a traveler being singled out; his passport and personal effects are carefully inspected. behind the counter, the control register shows instructions, signs, and the cold, unyielding authority of bureaucracy."
+  },
+  {
+   "i": 6,
+   "text": "At the busy airport security checkpoint, a queue formed under the watchful eye of the officer. She motioned the traveller forward, who nervously divested his belongings, placing them into designated trays. The X-ray scanner whirred, scanning through the contents, while the metal detector hummed in alert mode. Suddenly, the officer’s hand extended to perform a body search. Behind the sterile glass, signs instructed patiently, the impersonal authority of the checkpoint taking center stage."
+  },
+  {
+   "i": 7,
+   "text": "At the airport’s crowded security check, the line snaked like a meandering river through the bustling hall. Travellers hurriedly divested their belongings, placing them in designated trays, each step meticulous and orderly. Scanners hummed rhythmically, checking bags for what they sought—metallic intrusions. Metal detectors crackled as unseen items were detected, causing travellers to pause in their stride, a ritual performed every morning. Officers, standing tall and resolute, inspected each traveler. Their eyes scanned documents, searching for compliance and authenticity. A pat-down followed, a physical check designed to ensure safety. The register of control—a blend of instruction and signage—demanded respect from its subjects. Its impersonal yet courteous tone served to remind everyone that order was paramount."
+  },
+  {
+   "i": 8,
+   "text": "At the bustling airport security checkpoint, a traveler hurriedly divested belongings into trays as they stood in line, their passport and other items placed on a scanner beneath the metal detector. A lone officer watched from behind the counter, her eyes scanning through the register of control—a grid of signs, instructions, and the impersonal courtesy of authority. As the traveler stepped forward, they were subjected to a thorough pat-down, the officer’s hands probing every inch of their body, careful not to miss a single detail."
+  },
+  {
+   "i": 9,
+   "text": "At the bustling airport security checkpoint, the queue snaked through the crowded terminal. Passengers held suitcases tightly to their chests, divesting belongings into trays methodically. Metal detectors hummed, and X-ray machines scanned bags silently. A lone officer, clad in a uniform badge, singled out a traveler for a thorough check. Documents were pulled out, and a wand conducted a gentle pat-down. The register of control buzzed with automated instructions, signposted directions, and the stern but polite demeanor of authority."
+  }
+ ]
+}

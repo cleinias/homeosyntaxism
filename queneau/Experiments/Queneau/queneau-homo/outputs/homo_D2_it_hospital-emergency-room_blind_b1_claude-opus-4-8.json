@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2",
+ "lang": "it",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~25 words) clause architecture: 1 main clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~10 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~17 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 9 (~7 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1.\nPeriod 10 (~10 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\nPeriod 11 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 101.1,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Il pronto soccorso ribolliva di voci concitate. Quando la barella superò le porte scorrevoli, un'infermiera afferrò subito la cartella che pendeva dal montante metallico. Suonava l'interfono. Il medico attraversava rapido le due corsie. Una donna cercava di trattenere il figlio, che si contorceva sul lettino. I monitor pulsavano nel buio. Mentre l'ago perforava la vena, il paziente lanciò un gemito rauco. Il braccialetto plastificato riportava un codice, una data di nascita, un numero di stanza inciso a stampatello. Un accompagnatore protestava, spazientito dall'attesa che sembrava interminabile. Le note dicevano che i parametri restavano instabili. La flebo gocciolava lenta e ognuno sapeva che il tempo stringeva."
+  },
+  {
+   "i": 1,
+   "text": "Le porte scorrevoli si aprirono di scatto. Al banco del triage l'infermiera compilava un modulo mentre una sirena si spegneva fuori nel piazzale illuminato. Squillò l'interfono. Lungo il corridoio le barelle attendevano allineate. Un medico corse a controllare un monitor che lampeggiava dietro la tenda. I braccialetti giacevano ammucchiati. Quando un uomo protestò per l'attesa, la giovane infermiera alzò appena lo sguardo. Le sedie della sala erano piene di volti stanchi, di gomiti appoggiati alle ginocchia, di occhi socchiusi sotto le luci fredde. Il paziente gemeva sulla lettiga che rollava piano. L'accompagnatore ripeteva che nessuno li aveva ancora visitati. Il medico rispose che presto sarebbe arrivato il loro turno."
+  },
+  {
+   "i": 2,
+   "text": "Il pronto soccorso ribolliva di voci concitate. Quando l'infermiera chiamò il numero successivo, una donna si alzò dalla sedia con il volto teso, stringendo tra le dita un modulo spiegazzato. Le barelle attendevano. Lungo il corridoio scorrevano flebo e monitor lampeggianti. Un medico correva verso la bay accanto per esaminare un uomo che respirava a fatica. La tenda si chiuse di scatto. Mentre l'altoparlante ripeteva un codice urgente, due infermieri spingevano un carrello. Il braccialetto identificativo pendeva allentato dal polso pallido del paziente disteso sotto la luce fredda. L'accompagnatore, che aspettava da ore, protestava a bassa voce. Ripeteva all'addetto al triage che nessuno lo aveva ancora visitato. Il medico rispose infine che il caso richiedeva subito la sala rossa."
+  },
+  {
+   "i": 3,
+   "text": "Il pronto soccorso ribolliva di voci concitate. Quando la barella superò le porte automatiche, un'infermiera corse verso il bancone del triage per registrare il nuovo arrivo. Squillò l'interfono. Un medico attraversò il corridoio affollato. La donna cercava di calmare il marito, che tremava sotto la coperta sottile. I monitor lampeggiavano senza sosta. Mentre una flebo gocciolava lentamente, l'infermiere annotò i parametri sul modulo. Lungo la parete, tre pazienti aspettavano seduti sulle sedie di plastica con i braccialetti bianchi già allacciati al polso. Il compagno protestava, perché l'attesa diventava insopportabile. Tutti sapevano che ogni minuto poteva pesare come un macigno. L'infermiera rispose che il codice rosso aveva la precedenza assoluta."
+  },
+  {
+   "i": 4,
+   "text": "Il pronto soccorso ribolliva di voci concitate. Quando l'infermiera chiamò il numero successivo, una donna si alzò di scatto dalla sedia, trascinando il compagno che a stento reggeva la flebo. La barella scivolò. Un monitor lampeggiava accanto alla tenda tirata. Il medico attraversò la corsia per raggiungere il paziente che gemeva sommessamente. L'altoparlante gracchiò un codice urgente. Mentre le luci pulsavano sopra i box, un braccialetto si stringeva al polso sudato. Il modulo dell'accettazione giaceva abbandonato sul bancone del triage, macchiato e stropicciato tra siringhe vuote e garze sparse. La sala d'attesa, che si riempiva senza sosta, sembrava una gabbia. La donna protestò che l'attesa durava ormai da ore. Il medico rispose che ogni caso veniva valutato secondo la gravità."
+  },
+  {
+   "i": 5,
+   "text": "Le porte del pronto soccorso non si fermavano mai. Mentre le infermiere spingevano una barella lungo il corridoio, un uomo al banco del triage alzava la voce, perché l'attesa gli sembrava ormai insopportabile. Suonò l'interfono. Una voce chiamava il medico di turno. La caposala corse a controllare la flebo di un paziente che respirava a fatica dietro la tenda. I monitor lampeggiavano senza sosta. Quando il dottore scostò il telo, la donna accanto alla sedia si irrigidì. Sul polso del malato il braccialetto plastificato riportava un codice, una data, un numero che nessuno leggeva davvero. La compagna, che stringeva i moduli compilati a metà, tremava. Il medico spiegò che i valori erano scesi troppo. L'uomo capì che nessuno gli avrebbe restituito quel tempo."
+  },
+  {
+   "i": 6,
+   "text": "Il pronto soccorso ribolliva di voci concitate. Mentre le infermiere spingevano una barella lungo il corridoio, un uomo al banco del triage alzava la voce, perché nessuno lo aveva ancora chiamato. Suonava l'interfono. Una tendina scorreva sopra il letto del paziente. Il medico correva a controllare il monitor che segnalava un battito irregolare. La flebo gocciolava lentamente. Quando la donna si avvicinò al bancone, l'infermiera le porse un modulo. Il braccialetto stringeva il polso del malato, mentre le sedie della sala d'attesa si riempivano di gente stanca e impaziente. L'uomo protestava per l'attesa che sembrava eterna. La donna ripeteva che suo marito stava peggiorando di minuto in minuto. Il medico rispose che lo avrebbero visitato al più presto."
+  },
+  {
+   "i": 7,
+   "text": "Il pronto soccorso ribolliva di voci sovrapposte. Al banco del triage un'infermiera compilava i moduli con gesti rapidi, mentre il monitor accanto scandiva un battito che nessuno sembrava ascoltare. Squillò l'interfono. Una voce metallica chiamava il medico di turno. Lungo il corridoio le barelle attendevano, allineate come navi ormeggiate che dondolano appena. Una tenda scorse sul suo binario. Quando il dottore comparve tra i box, un accompagnatore gli si fece incontro con urgenza. La paziente sulla sedia stringeva il braccialetto di plastica al polso e respirava a fatica, il volto pallido, le mani tremanti sotto la luce fredda. L'uomo che l'aveva portata protestò per l'attesa interminabile. L'infermiera rispose che i casi più gravi passavano prima. Il medico assicurò che l'avrebbero visitata subito."
+  },
+  {
+   "i": 8,
+   "text": "Le porte del pronto soccorso non si fermavano mai. Mentre le sedie della sala d'attesa si riempivano di volti stanchi, un'infermiera correva verso il banco del triage con una cartella tra le mani. Suonava l'interfono. Una barella attendeva lungo il corridoio. Il medico cercava di raggiungere la tenda che era stata tirata attorno al terzo posto. I monitor lampeggiavano senza sosta. Quando la flebo cominciò a gocciolare, il paziente respirò appena più piano. Un uomo accanto alla barella stringeva il braccialetto della moglie e protestava a voce alta contro l'attesa infinita di quella notte affollata. Una nurse portava un modulo che nessuno aveva ancora compilato. Il medico spiegò che i codici rossi passavano sempre per primi. Il compagno ribatté che nessuno li aveva ancora nemmeno guardati."
+  },
+  {
+   "i": 9,
+   "text": "Il pronto soccorso ribolliva di voci concitate. Quando l'infermiera al triage chiamò il numero successivo, una donna si alzò di scatto dalla sedia, stringendo tra le mani un modulo compilato a metà. Le barelle attendevano. Lungo il corridoio i monitor lampeggiavano senza sosta. Un medico attraversò la corsia per raggiungere il paziente che rantolava dietro la tenda. L'altoparlante gracchiò un codice urgente. Mentre le flebo gocciolavano lente, un accompagnatore protestava contro l'attesa interminabile. Il braccialetto identificativo scivolò dal polso sottile di un anziano che tremava sotto la coperta ruvida. La sedia accanto restava vuota, dove poco prima sedeva un uomo pallido. L'infermiere ripeté a voce alta che i tempi si stavano allungando. Il medico annuì, sapendo che ogni minuto contava davvero."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "model": "qwen/qwen-2.5-7b-instruct",
+ "backend": "openrouter",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "grocery-checkout",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": {
+  "requested_provider": "Together",
+  "resolved_provider": "Together",
+  "quant": "fp8"
+ },
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nIn the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 18.7,
+ "gens": [
+  {
+   "i": 0,
+   "text": "At the market, in the peak hour. A youth of around twenty-seven, hat with a string instead of a band, neck too long, as if someone’s been tugging at it. People moving forward. The youth gets annoyed with another person standing behind him. He accuses them of bumping into him every time someone passes. With a whiny tone meant to be confrontational. When he sees an open space, he steps into it. Two hours later, I encounter him in the aisle of the supermarket, near the checkouts. He’s with a friend who says: \"You should get an extra pocket in your bag.\" He points out where (at the front) and why."
+  },
+  {
+   "i": 1,
+   "text": "In the S market, in the rush hour. A gal of about 26, tote bag with a strap instead of a handle, legs too long, as if someone's been stretching them. Items getting scanned. The gal in question gets annoyed with one of the shoppers standing next to her. She accuses him of crowding her every time anyone goes past. A whiny tone which is meant to be assertive. When she sees a vacant space, she pushes her cart into it. Two hours later, I meet her in the checkout line, in front of the register. She's with a friend who's saying: \"You ought to get an extra divider added to your cart.\" She shows him where (at the handle) and why."
+  },
+  {
+   "i": 2,
+   "text": "In the M store, in the busy hour. A gal of around 32, apron with a belt instead of a bow, hips too wide, as if someone's been stretching them. People moving forward. The gal in question gets vexed with one of the men ahead of her. He complains of being bumped every time anyone approaches. A whining tone which is meant to be aggressive. When she sees an open space, she rushes into it. Two hours later, I meet her in the check lane, in front of the market entrance. She's with a friend who says: \"You ought to get an extra clip on your tote.\" She points out where (at the straps) and why."
+  },
+  {
+   "i": 3,
+   "text": "In the A supermarket, in the busy hour. A lad of about 27, flannel shirt with a knot instead of a tie, arms too long, as if someone’s been stretching them. Shoppers getting off. The lad in question gets annoyed with one of the women standing next to him. He accuses her of bumping into him every time anyone goes past. A whining tone which is meant to be aggressive. When he sees a free spot, he leaps into it. Two hours later, I meet him in the B checkout line, in front of the Caisse Dorée. He’s with a friend who’s saying: \"You ought to get an extra pocket put on your wallet.\" He shows him where (at the front) and why."
+  },
+  {
+   "i": 4,
+   "text": "At the market, in the busy hour. A lady of around 28, tote bag with a strap instead of a handle, hair too long, as if someone’s been having a tug-of-war with it. Items getting scanned. The lady in question gets annoyed with one of the shoppers standing in front of her. She accuses them of bumping her every time someone moves. A whiny tone which is meant to be assertive. When she reaches the checkout she impatiently slides her card. Two hours later, I spot her in the produce section, in front of the dairy. She’s with a friend who’s saying: \"You ought to get an extra pocket put on your bag.\" She shows her where (at the bottom) and why."
+  },
+  {
+   "i": 5,
+   "text": "At the checkout, in the busy hour. A gal of around 26, floral bag with a strap instead of a handle, stride too quick, as if someone’s been running with it. Items moving down. The gal in question gets annoyed with one of the shoppers standing behind. She accuses them of bumping her every time anyone goes past. A whiny tone which is meant to be authoritative. When she sees a free slot, she slides in. Two hours later, I meet her in the Auchan, in front of the Monoprix. She’s with a friend who’s saying: \"You ought to get an extra pocket put on your shopping bag.\" She shows him where (at the straps) and why."
+  },
+  {
+   "i": 6,
+   "text": "In the supermarket line, in the rush hour. A lass of about 30, floral bag with a strap instead of a loop, arms too long, as if someone’s been stretching them. Shoppers getting off. The lass in question gets annoyed with one of the men standing next to her. He’s jostling her every time someone goes past. A whining tone which is meant to be aggressive. When she sees a vacant space, she slides into it. Two hours later, I meet her in the alley, in front of the main entrance. She’s with a friend who’s saying: \"You ought to get an extra pocket put on your bag.\" She shows him where (at the bottom) and why."
+  },
+  {
+   "i": 7,
+   "text": "In the checkout line, in the busy hour. A gal of about 28, tote bag with a strap instead of a handle, arms too long, as if someone's been stretching them. Customers moving on. The gal in question gets annoyed with one of the people standing ahead of her. She accuses them of pushing her every time anyone goes past. A whining tone which is meant to be assertive. When she sees an open space, she steps into it. Two hours later, I meet her in the produce section, in front of the dairy aisle. She's with a friend who's saying: \"You ought to get an extra clip put on your purse.\" She shows him where (at the straps) and why."
+  },
+  {
+   "i": 8,
+   "text": "At the supermarket, in the busy hour. A gal of around 28, green vest with a strap instead of a zipper, waist too narrow, as if someone’s been pinching it. Items getting scanned. The gal in question gets annoyed with one of the shoppers standing behind her. She accuses him of bumping into her every time anyone moves. A whining tone which is meant to be assertive. When she sees a free slot, she thrusts her cart in. Three hours later, I meet her in the produce section, near the checkout. She’s with a friend who’s saying: \"You ought to get an extra clip added to your apron.\" She points out where (at the waist) and why."
+  },
+  {
+   "i": 9,
+   "text": "In the A supermarket, in the busy hour. A gal of about 28, black bag with a strap instead of a handle, hands too full, as if someone’s been filling them up. Shoppers getting off. The gal in question gets annoyed with one of the people standing next to her. She accuses them of jostling her every time anyone goes past. A whiny tone which is meant to be aggressive. When she sees a clear spot, she pushes herself into it. Two hours later, I meet her in the Baisse Cour, in front of the gare Saint-Lazure. She’s with a friend who’s saying: \"You ought to get an extra pocket put on your tote.\" She shows him where (at the straps) and why."
+  }
+ ]
+}

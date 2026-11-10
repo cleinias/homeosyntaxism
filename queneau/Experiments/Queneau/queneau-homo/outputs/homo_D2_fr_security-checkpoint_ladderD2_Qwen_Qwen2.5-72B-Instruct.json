@@ -1,0 +1,56 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2",
+ "lang": "fr",
+ "scenario": "security-checkpoint",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~23 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~12 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 open complement (infinitive); subordination nested up to depth 2.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~14 words) clause architecture: 1 main clause; 1 open complement (infinitive); subordination nested up to depth 1.\nPeriod 9 (~18 words) clause architecture: 1 main clause; 1 adverbial clause; 1 finite complement clause; 1 open complement (infinitive); subordination nested up to depth 3.\nPeriod 10 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 9.5,
+ "gens": [
+  {
+   "i": 0,
+   "text": "La foule s'agite au contrôle de sécurité. Lorsque le voyageur pose son sac, une alarme retentit, révélant un objet métallique. Il avance. Son tour arrive. Le douanier, après avoir examiné ses papiers, l’invite à retirer ses chaussures, pour vérification. Ses mains, gantées, fouillent minutieusement le passager. Alors qu'il patiente, des panneaux indiquent les étapes. Suivre les consignes, maintient l’ordre. Les agents, malgré la routine, restent polis, mais distants. Une fois libéré, il rejoint la file, soulagé."
+  },
+  {
+   "i": 1,
+   "text": "Dans l'aéroport, les voyageurs se pressent. Au contrôle, une file s'étire, où chacun dépose ses affaires, avant de franchir les barrières. Les regards sont fixés. Des sacs glissent sur le tapis. Un agent observe attentivement le flux, cherchant toute anomalie. Un voyageur, sélectionné, reçoit des instructions pour un examen plus approfondi. Toute procédure respecte la sécurité. L'officier demande poliment de lever les bras. Dans cet espace, chaque geste est codifié, chaque mot est mesuré, chaque mouvement est contrôlé. Les consignes s'affichent clairement."
+  },
+  {
+   "i": 2,
+   "text": "Dans la foule, le voyageur avance lentement vers les contrôles. Alors qu'il dépose ses affaires dans un bac, une alarme retentit soudainement. Il attend. Un agent s'approche. Le voyageur, choisi parmi la file, doit présenter ses papiers. L'agent, qui vérifie minutieusement, lui demande de lever les bras. Ainsi, sous le regard des autres, il obéit sans hésiter. Pour assurer la sécurité, l'officier effectue une palpation rapide. Après avoir confirmé son identité, le voyageur est autorisé à continuer. Les consignes sont claires : une courtoisie stricte règne ici."
+  },
+  {
+   "i": 3,
+   "text": "Dans la foule dense de l'aéroport, les voyageurs avancent lentement.  \nLeurs bagages glissent sur le tapis, sous le regard vigilant des agents.  \nSilence.  \nChacun attend son tour, anxieux.  \nL'officier sélectionne une femme, invitant celle-ci à s'approcher pour inspection.  \nSa valise est ouverte, examinée avec soin.  \nAvant d'entrer, elle passe par le détecteur de métaux.  \nIl lui demande de lever les bras, patiemment.  \nAlors qu'elle obéit, un autre agent vérifie ses documents attentivement.  \nL'autorité, bien que froide, reste toujours polie."
+  },
+  {
+   "i": 4,
+   "text": "Dans le hall bondé, les voyageurs se pressent. Leurs bagages glissent sous le regard vigilant de la caméra, tandis que l'écho des pas résonne. Ici, le temps s'étire. Les barrières guident le flux humain. Un agent, scrutant les écrans, interpelle un passager à part. Ses documents examinés, il est invité à lever les bras pour le balayage. Ainsi, chaque geste est encadré par des consignes affichées. On tend le passeport, prêt à franchir l'étape suivante. Les consignes sont claires, et l'autorité y veille. Enfin, l'accès au vol est confirmé."
+  },
+  {
+   "i": 5,
+   "text": "Dans la foule dense, les voyageurs avancent lentement vers les barrières de contrôle. Chaque passant dépose ses affaires dans les plateaux, sous l'œil vigilant des caméras de sécurité. Les sirènes retentissent. Une ombre glisse, silencieuse. Soudain, un agent interpelle une femme, lui demandant de passer au détecteur de métaux. Elle pose son sac, le cœur battant, devant l'officier. Tandis qu'il vérifie ses documents, elle s'avance, les mains levées. Si la machine sonne, il effectuera une fouille corporelle rapide. L'autorité impose sa présence par des signes et des consignes, toujours courtoise mais ferme."
+  },
+  {
+   "i": 6,
+   "text": "Dans la foule bruyante de l'aéroport, les voyageurs patientent. À chaque pas, leurs affaires glissent dans des plateaux, tandis qu'une alarme retentit soudainement. Le silence. Les regards se tournent. Un agent invite alors un passager à s'approcher pour vérification, son sac à la main. S'avançant, il dépose ses documents sur le comptoir, sous l'œil vigilant. Devant lui, une pancarte indique clairement la procédure, les consignes affichées. Il obéit, tendant les bras pour l'examen minutieux, sans hésitation. Alors que le contrôle s'achève, un autre voyageur rejoint la file, la routine continue."
+  },
+  {
+   "i": 7,
+   "text": "Dans la foule, les voyageurs se pressent vers les contrôles de sécurité. L'officier, attentif, observe chaque geste, tandis que les bagages glissent sur le tapis. Un regard. Une instruction. La file avance lentement, ponctuée par des bip mécaniques. Soudain, un écran clignote, alertant le personnel présent. Le voyageur sélectionné, nerveux, s’approche, documents à la main. Ses mouvements révèlent une tension palpable. Quand il passe, l’alarme retentit, indiquant une anomalie. Il doit retirer ses chaussures, puis se soumettre à un examen approfondi. Patiemment, il attend, suivant les consignes affichées. Enfin, le contrôle terminé, il rejoint le flot des voyageurs."
+  },
+  {
+   "i": 8,
+   "text": "Dans la salle d'embarquement bondée, les voyageurs patientent en file indienne. L'agent de sécurité, attentif, observe les sacs glisser sur le tapis roulant, tandis que l'alarme retentit soudain. Chacun avance, lentement. Les trayeurs vident leurs poches, méthodiquement. Soudain, un passager est interpellé pour un contrôle supplémentaire, sa valise ouverte. Un autre voyageur, sélectionné au hasard, doit présenter ses documents, puis se soumettre à une fouille corporelle. Avant de passer le portique, il est invité à retirer ses chaussures. Une pancarte indique clairement les étapes du processus, malgré l'anxiété ambiante. Tandis que les consignes sont énoncées poliment, le voyageur inspecté attend son tour, impassible. Enfin, l'officier lui signale qu'il peut récupérer ses affaires et poursuivre son chemin."
+  },
+  {
+   "i": 9,
+   "text": "Dans l'aéroport, le flux incessant de voyageurs s'étire en une longue file serpentine, chacun déposant ses effets personnels dans les bacquets plastiques avec une diligence méthodique, tandis que les agents de sécurité, impassibles, scrutent chaque contour des corps à travers les rayons X. Les barrières métalliques claquent, rythmant le passage obligatoire par les détecteurs de métaux, où un geste standardisé désigne ceux qui doivent être fouillés manuellement. Une tension subtile anime l'air. Soudain, l'officier interrompt le flot, invitant un voyageur sélectionné à se rapprocher pour un examen plus approfondi. Ses documents sont vérifiés avec une minutie rigoureuse, tandis que le baton lumineux parcourt son corps, révélant chaque detail caché. Chaque mouvement est encadré par des panneaux d'instructions, symbolisant l'ordre et la précision de cette procédure. Le voyageur, bien que tendu, répond aux directives avec une politesse distante, conscient du regard omniprésent de l'autorité. Enfin, après une dernière inspection, il reprend sa route, rejoignant le flot anonyme des autres passagers."
+  }
+ ]
+}

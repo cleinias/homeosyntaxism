@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "hospital-emergency-room",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.7,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nIn the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 4.3,
+ "gens": [
+  {
+   "i": 0,
+   "text": "In the ER, during the peak hour. A man around forty, worn jacket with a patch in lieu of a label, legs too thin, as though stretched by a relentless force. Patients leaving. The man in question grows agitated with one of the staff nearby. He accuses her of bumping him every time anyone passes by. A whining tone intended to be assertive. When he spots an empty chair, he collapses into it. Two hours later, I encounter him in the lobby, near the main entrance. He’s with a companion who’s suggesting: \"You should get another band added to your bracelet.\" He demonstrates where (on the clasp) and why."
+  },
+  {
+   "i": 1,
+   "text": "In the hospital, in the emergency room. A person of around forty, stethoscope hanging loosely, face too pale, as if drained of color. Patients arriving. The individual in question grows irritated with one of the nurses passing by. She accuses her of ignoring her every time anyone enters. A pleading tone which is meant to be assertive. When she sees an open chair she collapses onto it. Two hours later, I encounter her near the triage desk, beside the waiting area. She’s with a companion who’s suggesting: \"You should get more rest.\" She points out where (at the eyes) and why."
+  },
+  {
+   "i": 2,
+   "text": "In the ER, during the peak rush. A man of around thirty, crumpled jacket with a patch instead of a pocket, arm too thin, as if someone had been pulling it in a game. Patients leaving. The man in question grows irritated with one of the nurses passing by him. He accuses her of bumping him every time anyone moves past. A whiny tone intended to sound urgent. When he spots an empty chair, he slumps into it. Two hours later, I encounter him near the triage desk, beside the main entrance. He’s with a friend who remarks: \"You need to adjust your wristband for the scans.\" He points out where (on the wrist) and explains why."
+  },
+  {
+   "i": 3,
+   "text": "In the hospital, in the emergency room. A patient of about thirty, felt mask with a strap instead of a ribbon, arm too long, as if someone’s been stretching it. People entering. The patient in question gets agitated with one of the nurses standing near him. He accuses her of bumping him every time anyone walks past. A whining tone which is meant to be forceful. When he sees an empty chair he collapses onto it. Two hours later, I meet him in the triage area, in front of the registration desk. He’s with a friend who’s saying: \"You ought to have an extra cushion placed on your chair.\" He shows him where (at the backrest) and why."
+  },
+  {
+   "i": 4,
+   "text": "In the ER, in the chaos hour. A patient of around 42, heart monitor with a cable instead of a pulse, face too pale, as if someone’s been draining it. Patients leaving. The person in question grows impatient with one of the nurses passing by. He accuses her of neglecting him every time anyone enters. A whining tone which is meant to be urgent. When he sees an empty chair he collapses onto it. Two hours later, I encounter him near the triage desk, beside the main entrance. He’s with a relative who’s saying: \"You should get a second opinion from another specialist.\" He points out where (by the MRI results) and why."
+  },
+  {
+   "i": 5,
+   "text": "In the hospital, in the busy hour. A person of about thirty, blue gown with a badge instead of a name tag, legs too short, as if nature had forgotten to elongate them. Patients leaving. The individual in question becomes irritated with one of the visitors standing beside him. They accuse them of bumping into them every time anyone passes by. A whining tone intended to be forceful. When they spot an empty chair, they collapse onto it. Two hours later, I encounter them near the triage desk, in front of the registration area. They’re with an attendant who’s suggesting: \"You might benefit from a new bracelet for your wrist.\" They demonstrate where (on the wrist) and how."
+  },
+  {
+   "i": 6,
+   "text": "In the hospital, during the busy hour. A man of about thirty-five, medical bracelet with a tag instead of a label, face too pale, as if someone’s been draining his blood. Patients leaving. The man in question gets frustrated with one of the nurses passing by him. He accuses her of ignoring him every time anyone comes through. A whining tone which is meant to be urgent. When he spots an empty chair he collapses onto it. Two hours later, I see him in the triage area, near the registration desk. He’s with a friend who’s saying: \"You should get an extra dose of your medication.\" He points out where (on the wristband) and why."
+  },
+  {
+   "i": 7,
+   "text": "In the ER, during the busiest shift. A man around forty, with a bandage wrapped loosely around his arm, seemed to have been pulled through a wringer. Patients leaving. The man in question grows irritated with a nurse passing nearby. He accuses her of bumping into him every time someone hurries past. A whining voice intended to sound assertive. When he spots an empty chair, he collapses into it. Two hours later, I encounter him near the triage area, beside the main entrance. He’s with another patient who remarks: \"You should ask for a painkiller.\" He points out where (on the forearm) and why."
+  },
+  {
+   "i": 8,
+   "text": "In the hospital, during the busiest hour. A man of around forty, stethoscope hanging loosely, face too pale, as if sleep has been eluding him. Patients arriving. The man in question grows irritated with a nurse beside him. He accuses her of ignoring him every time someone enters. A whining tone that aims to be assertive. When he spots an empty chair, he collapses into it. Two hours later, I encounter him near the triage desk, by the registration area. He’s with a colleague who’s suggesting: \"You should get some rest after this shift.\" He points out when (by the monitors) and how."
+  },
+  {
+   "i": 9,
+   "text": "In the hospital, during the busy hour. A person of about thirty-five, bandaged arm with a sling instead of a cast, legs too restless, as if someone’s been pacing with them. Patients leaving. The individual in question grows irritated with one of the staff passing by. He complains loudly that they bump him every time anyone moves past. An anxious tone which is meant to be assertive. When he spots an empty chair he collapses onto it. Two hours later, I encounter him near the triage desk, beside the entrance. He’s with a friend who’s suggesting: \"You should request an additional dose of your medication.\" He demonstrates where (on the chart) and why."
+  }
+ ]
+}

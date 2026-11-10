@@ -1,0 +1,58 @@
+{
+ "lang": "en",
+ "degree": "D1",
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "n_periods": 10,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (~8 words) dependency triples (order-free): 2x NOUN-case->ADP; 2x NOUN-det->DET; 1x NOUN-compound->PROPN; 1x ROOT-root->NOUN; 1x NOUN-compound->NOUN; 1x NOUN-nmod->NOUN"
+  },
+  {
+   "k": 2,
+   "words": 29,
+   "spec": "Period 2 (~29 words) dependency triples (order-free): 4x NOUN-det->DET; 2x NOUN-case->ADP; 2x VERB-obl->NOUN; 2x VERB-aux->AUX; 1x VERB-nsubj->NOUN; 1x NUM-case->ADP; 1x NUM-advmod->ADV; 1x NOUN-nmod->NUM; 1x ROOT-root->VERB; 1x VERB-xcomp->NOUN; 1x NOUN-case->ADV; 1x ADV-fixed->ADP; 1x NOUN-conj->NOUN; 1x ADV-advmod->ADV; 1x NOUN-advmod->ADV; 1x VERB-mark->SCONJ; 1x SCONJ-fixed->SCONJ; 1x VERB-nsubj->PRON; 1x VERB-advcl->VERB; 1x VERB-obj->NOUN; 1x NOUN-nmod->NOUN; 1x PRON-case->ADP; 1x VERB-obl->PRON"
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (~3 words) dependency triples (order-free): 1x VERB-nsubj->NOUN; 1x ROOT-root->VERB; 1x VERB-compound->ADP"
+  },
+  {
+   "k": 4,
+   "words": 15,
+   "spec": "Period 4 (~15 words) dependency triples (order-free): 2x NOUN-det->DET; 2x NOUN-case->ADP; 1x VERB-nsubj->NOUN; 1x NOUN-nmod->NOUN; 1x VERB-aux->AUX; 1x ROOT-root->VERB; 1x NUM-case->ADP; 1x VERB-obl->NUM; 1x NUM-nmod->NOUN; 1x NOUN-acl->VERB; 1x VERB-advmod->ADV; 1x PRON-case->ADP; 1x VERB-obl->PRON"
+  },
+  {
+   "k": 5,
+   "words": 11,
+   "spec": "Period 5 (~11 words) dependency triples (order-free): 2x VERB-nsubj->PRON; 2x VERB-obj->PRON; 1x ROOT-root->VERB; 1x VERB-mark->SCONJ; 1x VERB-advcl->VERB; 1x NOUN-det->DET; 1x VERB-obl->NOUN; 1x NOUN-acl->VERB; 1x VERB-advmod->ADV"
+  },
+  {
+   "k": 6,
+   "words": 9,
+   "spec": "Period 6 (~9 words) dependency triples (order-free): 1x NOUN-det->DET; 1x NOUN-amod->ADJ; 1x ROOT-root->NOUN; 1x VERB-nsubj->PRON; 1x VERB-aux->AUX; 1x NOUN-acl->VERB; 1x ADJ-mark->PART; 1x ADJ-cop->AUX; 1x VERB-xcomp->ADJ"
+  },
+  {
+   "k": 7,
+   "words": 12,
+   "spec": "Period 7 (~12 words) dependency triples (order-free): 2x VERB-nsubj->PRON; 1x VERB-advmod->ADV; 1x VERB-advcl->VERB; 1x NOUN-det->DET; 1x NOUN-amod->ADJ; 1x VERB-obj->NOUN; 1x ROOT-root->VERB; 1x VERB-obj->PRON; 1x VERB-compound->ADP; 1x PRON-case->ADP; 1x VERB-obl->PRON"
+  },
+  {
+   "k": 8,
+   "words": 18,
+   "spec": "Period 8 (~18 words) dependency triples (order-free): 4x PROPN-flat->PROPN; 2x PROPN-case->ADP; 2x PROPN-det->DET; 1x NOUN-nummod->NUM; 1x ADV-obl->NOUN; 1x VERB-advmod->ADV; 1x VERB-nsubj->PRON; 1x ROOT-root->VERB; 1x VERB-obj->PRON; 1x VERB-obl->PROPN; 1x NOUN-case->ADP; 1x VERB-obl->NOUN; 1x NOUN-nmod->PROPN"
+  },
+  {
+   "k": 9,
+   "words": 19,
+   "spec": "Period 9 (~19 words) dependency triples (order-free): 2x NOUN-case->ADP; 2x NOUN-det->DET; 2x NOUN-acl->VERB; 1x NOUN-nsubj->PRON; 1x NOUN-cop->AUX; 1x ROOT-root->NOUN; 1x VERB-nsubj->PRON; 1x VERB-aux->AUX; 1x AUX-nsubj->PRON; 1x VERB-ccomp->AUX; 1x VERB-mark->PART; 1x AUX-xcomp->VERB; 1x NOUN-amod->ADJ; 1x VERB-obj->NOUN; 1x NOUN-nmod->PRON; 1x VERB-obl->NOUN"
+  },
+  {
+   "k": 10,
+   "words": 9,
+   "spec": "Period 10 (~9 words) dependency triples (order-free): 1x VERB-nsubj->PRON; 1x ROOT-root->VERB; 1x VERB-obj->PRON; 1x VERB-ccomp->ADV; 1x NOUN-case->ADP; 1x NOUN-det->DET; 1x ADV-obl->NOUN; 1x ADV-cc->CCONJ; 1x ADV-conj->ADV"
+  }
+ ]
+}

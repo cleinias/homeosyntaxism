@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2c",
+ "lang": "it",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 25 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 10 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 17 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 7 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 10 (about 10 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\nPeriod 11 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 110.1,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Il nastro trasportatore scorreva lento verso la cassa. La cassiera passava ogni prodotto sotto lo scanner con gesti rapidi, mentre la fila alle sue spalle si allungava sempre di più. I bip si susseguivano. Le buste si accumulavano nella zona d'imballaggio. Cominciai a sistemare la spesa nei sacchetti che avevo portato da casa. La barra divisoria segnava il confine. Un altro cliente premeva da dietro, benché lo spazio fosse ormai saturo. Il carrello di quell'uomo urtò appena il mio tallone, e io mi voltai con un gesto stizzito verso quella sagoma impaziente. La cassiera annunciò il totale, che comparve anche sullo schermo del lettore di carte. Mi chiese poi se avessi la tessera fedeltà del negozio. Risposi infine che l'avevo dimenticata a casa."
+  },
+  {
+   "i": 1,
+   "text": "Il nastro trasportatore scorreva senza sosta verso la cassa. La cassiera passava ogni prodotto sotto lo scanner con gesti rapidi, mentre la fila dietro di lei cresceva a ogni minuto che passava. Un bip risuonò. Il lettore illuminò il codice a barre in rosso. La cliente cominciò a posare le buste vuote sul ripiano che le stava davanti. Il carrello urtava lo scaffale. Una signora si avvicinò troppo, benché lo spazio fosse ormai davvero ridotto. La barra divisoria separava la sua spesa dagli acquisti dell'uomo impaziente che spingeva appena più in là il suo cestino colmo. Squillò la voce meccanica del terminale, che annunciava il totale da pagare. La cassiera domandò gentilmente se la cliente possedesse la tessera fedeltà. L'uomo brontolò che la sua pazienza era ormai finita."
+  },
+  {
+   "i": 2,
+   "text": "Il nastro trasportatore avanzava con un ronzio monotono. La cassiera trascinava ogni articolo davanti al lettore ottico, mentre la fila dietro di me cresceva senza sosta come una marea impaziente. Suonò un bip. Le lattine scivolavano verso la zona d'imballaggio. Cominciai a sistemare la spesa nei sacchetti che avevo portato da casa. La cliente davanti pagava lentamente. Il carrello urtò la barra separatrice, quando l'uomo alle mie spalle si avvicinò troppo. Lo guardai con un cenno seccato, ma lui finse di non capire e spinse ancora il suo cestino contro il mio fianco. Arrivò infine lo scontrino, che la macchina espelleva con un fruscio secco. La cassiera annunciò che il totale ammontava a quarantadue euro. Poi chiese se possedevo la tessera fedeltà del negozio."
+  },
+  {
+   "i": 3,
+   "text": "Il nastro trasportatore scorreva lento sotto le mani. La cassiera passava ogni prodotto sullo scanner con gesti meccanici, mentre la fila dietro di lei cresceva minuto dopo minuto senza mai fermarsi. Un bip acuto risuonò. La luce rossa illuminò il codice a barre. Il cliente cominciò a sistemare le buste nella zona d'imballaggio che ormai traboccava di scatole. Il carrello urtò lo scaffale. La barretta divisoria cadde di lato, quando un altro avventore la spinse via bruscamente. Quell'uomo alle spalle premeva contro il primo con evidente impazienza, quasi volesse rubargli lo spazio esiguo davanti alla tastiera del pagamento. Lo scontrino uscì strisciando dalla stampante che gracchiava faticosamente. La cassiera annunciò che il totale ammontava a trentadue euro esatti. Il display suggerì che occorreva inserire la tessera fedeltà prima del pagamento."
+  },
+  {
+   "i": 4,
+   "text": "La cassa numero tre ronza sotto la luce fredda. Il nastro scorre in avanti con un tremolio meccanico, trascinando barattoli e sacchetti verso lo scanner, mentre la fila dietro cresce e preme come un fiume gonfio. Un bip secco. La cassiera passa ogni codice a barre. Comincia lei a sistemare la spesa nell'area che i clienti riempiono in fretta. Il lettore attende la carta. La barra divisoria scivola sul nastro quando l'uomo dietro la spinge avanti con impazienza. Lui appoggia la sua confezione di latte troppo vicino, oltrepassando il piccolo separatore di plastica che segna il confine tra due spese. Arriva lo scontrino, che esce dalla stampantina con un fruscio. La cassiera annuncia che il totale è quarantatré euro. Il display chiede se il cliente possiede la tessera fedeltà."
+  },
+  {
+   "i": 5,
+   "text": "Il nastro trasportatore scorreva sotto le mani stanche. La cassiera passava ogni articolo davanti allo scanner con un gesto meccanico, mentre la coda dietro di lei cresceva lentamente in quell'ora di punta. Un bip risuonò. Il divisorio separava le mie spese dalle altre. Cominciai a spingere il carrello vuoto verso l'uscita che ormai si affollava. La lettrice attendeva la carta. La cliente cercava le monete, mentre l'uomo alle sue spalle sbuffava impaziente. Un signore troppo vicino appoggiò la sua cesta sul nastro ancora ingombro e mi urtò leggermente il gomito senza scusarsi. La cassiera annunciò il totale, che superava le mie previsioni. Le chiesi allora se accettasse la carta fedeltà. Lei rispose che il lettore aveva già registrato i punti."
+  },
+  {
+   "i": 6,
+   "text": "Il nastro trasportatore scorreva verso il lettore. La cassiera passava ogni prodotto sotto lo scanner con gesti rapidi, mentre la fila dietro di lei si allungava senza sosta fino all'ingresso del negozio. Suonava un bip. Il totale apparve sul piccolo schermo luminoso. La signora cominciò a cercare la tessera fedeltà che teneva sepolta in fondo alla borsa. Un carrello urtò la barra separatrice. L'uomo alle sue spalle sbuffava, mentre spingeva la sua spesa oltre il divisorio. La cassiera intanto ripeteva la richiesta della carta con una pazienza ormai meccanica e vuota. Arrivò infine lo scontrino, che uscì arricciandosi dalla stampante. La signora capì che aveva dimenticato di avvicinare la tessera al sensore. L'uomo dietro insisteva che toccava a lui pagare adesso."
+  },
+  {
+   "i": 7,
+   "text": "Il nastro trasportatore avanzava con un ronzio stanco. La cassiera passava ogni prodotto sotto lo scanner, mentre la fila dietro di lei si allungava lentamente verso i frigoriferi in fondo al negozio. I bip risuonavano. La barra separatrice divideva due spese diverse. Il cliente cominciò a sistemare le buste nella zona d'imballaggio che restava sempre troppo stretta. Una lattina rotolò sul piano. La signora dietro spingeva il carrello, sebbene lo spazio davanti non fosse ancora libero. Il lettore di carte lampeggiava paziente nell'attesa che qualcuno decidesse finalmente di avvicinare la tessera al piccolo terminale grigio. Arrivò lo scontrino, che uscì arricciato dalla fessura della stampante. La cassiera annunciò che il totale superava di poco i quaranta euro. Il cliente rispose che la carta fedeltà era rimasta a casa."
+  },
+  {
+   "i": 8,
+   "text": "Il nastro trasportatore avanzava con un ronzio costante. La cassiera passava ogni articolo davanti allo scanner, mentre le confezioni scivolavano una dopo l'altra verso la zona di imbustamento in fondo al banco. Un bip risuonò. La cliente spingeva il carrello contro la barra divisoria. Cominciò a cercare la carta fedeltà che aveva riposto nel portafoglio. Il lettore attendeva paziente. Il totale apparve sul display, quando la cassiera lo annunciò a voce. L'uomo dietro premeva il suo cestino contro la schiena della donna, invadendo lo spazio ormai stretto della fila. Sbuffò la signora, che si voltò con un'occhiata infastidita. La cassiera precisò con calma che ciascuno doveva rispettare il proprio turno. Lo scontrino uscì lentamente, mentre il prossimo cliente sperava che la coda scorresse più veloce."
+  },
+  {
+   "i": 9,
+   "text": "Il nastro trasportatore avanzava con un ronzio stanco. La cassiera passava ogni articolo davanti allo scanner, mentre la fila dietro di lei si allungava fino agli scaffali delle bevande. Bip. La barra divisoria separava le due spese. Il cliente cominciò a sistemare le buste nella zona di imballaggio ancora ingombra. La cassiera annunciò il totale. Il lettore chiese la carta, appena lo schermo si illuminò di verde. L'uomo alle sue spalle spingeva il carrello contro i suoi talloni, impaziente, quasi convinto che ogni secondo fosse un torto personale. La donna avvertì una pressione che non le apparteneva. Il cassiere ripeté che serviva anche la tessera fedeltà. Lei rispose seccamente che nessuno aveva il diritto di affrettarla così."
+  }
+ ]
+}

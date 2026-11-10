@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "security-checkpoint",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nDans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 95.5,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Vers le Terminal deux, à une heure d'attente. Un voyageur dans les trente ans, sac bandoulière avec fermeture débordant de partout, air vaguement crispé comme si quelqu'un lui avait volé quelque chose. Les portiques bipent. Le contrôle en cause l'appelle sous le regard. Il le prie de vider ses poches. Il lui montre le bac où il faut déposer. Le geste le lui rend obligatoire. Alors il pose son manteau épais qu'il replie soigneusement. Deux agents plus loin, on le fait patienter derrière Blanche, devant le sas Métaux. Il est à la barrière quand on lui demande de se laisser palper la ceinture près du scanner. Il le suit sans discuter vers un box, puis ailleurs."
+  },
+  {
+   "i": 1,
+   "text": "Devant le hall Charles-de-Gaulle, à heure de pointe. Un voyageur dans les quarante ans, veste froissée avec badge pendant sous le col, regard trop fuyant comme si on l'avait pris dedans. Les passagers avancent. Le contrôle sur bagages le retient devant une barrière. Il se plaint à un agent parce que celui-ci fouille chaque bac qu'il présente. Une lassitude qu'il croit patiente. Comme il repère une file libre, il s'y glisse aussitôt. Deux heures plus tard, je le revois assis devant Terminal, sous le panneau Douane. Il est près du tapis quand quelqu'un lui souffle qu'il faudrait retirer la ceinture métallique de son pantalon. Il lui indique où passer et pourquoi."
+  },
+  {
+   "i": 2,
+   "text": "Vers le Terminal deux, à une heure d'affluence. Un voyageur dans les quarante ans, veste froissée aux poches gonflées de tickets, portant une valise cabine presque trop lourde comme si on l'avait empli exagérément. La file avance. Un agent près du portique le contrôle sous la lumière. Il lui demande de vider ses bacs comme on rappelle quelque consigne. Le ton neutre qu'il emploie semble machinal. Puisqu'il repère un signal sonore, il réagit immédiatement. Deux passagers plus loin, ils déclenchent l'alarme devant Sécurité près du sas Départ. Il est prié au poste où on lui indique qu'il faut ouvrir cette pochette scellée sous le manteau. On le palpe soigneusement au moyen du magnétomètre, puis poliment."
+  },
+  {
+   "i": 3,
+   "text": "À l'aéroport pendant une heure d'affluence. Un contrôle vers les six postes ouverts simultanés de sécurité forme une file interminable, tellement dense qu'à mesure qu'on avance on est refoulé encore. Les voyageurs patientent. Le bac de plastique que chacun remplit avec un geste las. Il vous ordonne de vous délester des objets pendant qu'on franchit celui-ci. Le portique qui vous scrute impassible. Quand elle sonne, la sécurité vous palpe méthodiquement. Deux agents alors soudain me font signe vers Roissy dans le terminal Ouest. On était devant le tapis qui me réclamait, je devais présenter mes documents lisibles à l'inspecteur. Elle me montre où poser et pourquoi."
+  },
+  {
+   "i": 4,
+   "text": "Vers le Terminal à une heure d'affluence. Un voyageur dans la trentaine, veste froissée sanglée remplaçant le manteau, mine trop tendue comme si on l'avait retenu longtemps. Les files avancent. Le sac de derrière lui glisse contre une barrière. Il se penche vers elle, ramasse un bagage tandis qu'on le presse encore. Un agent le lui réclame sèchement. Parce qu'il tend son passeport froissé, on vérifie aussitôt. Deux appels plus loin, on le fait patienter côté Départs, devant le portique Sécurité. Il est devant un tapis où on le somme d'avancer, puis se voit palper le torse entier sous le détecteur. On le laisse repartir vers la sortie, mais lentement."
+  },
+  {
+   "i": 5,
+   "text": "Dans le Terminal à une heure d'affluence. Un voyageur dans les quarante ans, veste froissée avec badge accroché au col, regard trop fixe comme si on l'avait épié longtemps. Les passagers avancent. Le contrôleur en poste s'agace contre une file. Il lui ordonne de vider ses poches tant que passe le portique. Ton administratif qui se veut poli. Comme il repère un plateau vide, y dépose tout. Trois minutes plus tard, on le rappelle près du scanner, devant la borne Sécurité. Il est à côté d'un agent qui lui explique qu'il faut retirer la ceinture métallique de son pantalon. Il lui indique où et pourquoi."
+  },
+  {
+   "i": 6,
+   "text": "Vers le portique, à une heure d'affluence. Un voyageur dans la quarantaine, veste froissée avec badge remplaçant la cravate, regard trop nerveux comme si on l'avait surveillé longtemps. Les bagages défilent. Un agent en gilet lui fait signe vers une cabine. Il lui demande de vider ses poches puisque quelque chose a sonné dedans. Le ton reste poliment ferme. Comme il désigne le tapis roulant, il obéit aussitôt. Deux barrières plus loin, on nous oriente ailleurs, près de Genève, vers le contrôle Douanes. Il est devant le détecteur qui me précède, on lui a passé le bâton métallique sur les épaules. Il lui rend son billet enfin, puis repart."
+  },
+  {
+   "i": 7,
+   "text": "Vers le portique, à une heure de contrôle. Un voyageur dans les quarante ans, veste sombre avec badge remplaçant la cravate, regard trop fuyant comme si on l'avait surveillé longtemps. Les passagers avancent. Le voyageur en cause proteste contre un agent. Il lui reproche de le fouiller chaque fois qu'il franchit quelqu'un. Ton geignard qui se veut agressif. Comme il aperçoit une allée dégagée, s'y engouffre aussitôt. Deux heures plus tard, je le revois hall de Départ, devant la porte Vingt-trois. Il est avec un collègue qui lui suggère: \"Tu devrais faire ajouter une pochette supplémentaire à ton bagage.\" Il lui indique où et pourquoi."
+  },
+  {
+   "i": 8,
+   "text": "Dans le hall Charles-de-Gaulle, à une heure d'affluence. Un voyageur dans les trente ans, veste froissée pardessus déboutonné sur l'épaule, portant un sac cabine bien lourd tandis que devant lui la file avançait péniblement. Les passagers patientent. Le portique de contrôle le fait sonner à la fouille. Il lui demande de vider ses poches lorsqu'il repasse dessous. Le ton demeure lui-même parfaitement courtois. Comme il présente une pièce officielle, on vérifie longuement. Trois agents alors soudain le lui confirment près du tapis à la salle Départs. Il est prié de la ceinture qu'on lui retire pour repasser sans faire le signal habituel devant le détecteur. On le laisse repartir enfin vers les portes, et là."
+  },
+  {
+   "i": 9,
+   "text": "À la Porte D par un jour d'affluence. Le passager dans les quarante ans, veste beige épaisse sur épaule, tirant sa valise cabine assez lourde comme si quelqu'un la lui avait chargée trop. Les gens patientent. Le contrôle des bagages qui ralentit devant la borne. Ils leur demandent de vider les poches quand on avance vers. Le tapis les vous rend intacts. Comme on approche du portique métallique, il retentit soudain. Un agent surgit alors, prononce le protocole habituel, puis intervient calmement, gestes précis vers Monsieur devant la file Delta. On lui adresse, à cet instant, ce qu'il faut savoir : que veuille présenter les documents nécessaires à la fouille. On le prie, à travers le guichet et ainsi."
+  }
+ ]
+}

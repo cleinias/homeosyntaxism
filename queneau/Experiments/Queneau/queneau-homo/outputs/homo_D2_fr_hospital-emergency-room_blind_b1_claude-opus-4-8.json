@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2",
+ "lang": "fr",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~23 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~12 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 open complement (infinitive); subordination nested up to depth 2.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~14 words) clause architecture: 1 main clause; 1 open complement (infinitive); subordination nested up to depth 1.\nPeriod 9 (~18 words) clause architecture: 1 main clause; 1 adverbial clause; 1 finite complement clause; 1 open complement (infinitive); subordination nested up to depth 3.\nPeriod 10 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 110.6,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Les urgences bourdonnaient à cette heure tardive. Le comptoir de tri, où une infirmière classait les bracelets colorés, débordait de dossiers pendant qu'une file d'attente s'allongeait vers les chaises. Les brancards s'alignaient. Un moniteur clignotait faiblement dans le couloir sombre. Une perfusion semblait goutter au rythme lent qui apaisait le malade. Un rideau tiré cachait le médecin en train d'ausculter. Quand l'interphone grésilla, le personnel accéléra soudain. Un compagnon inquiet réclamait qu'on vienne examiner cette douleur persistante. La femme protestait à voix haute, exigeant qu'on admette enfin que l'attente devenait insupportable et menaçait de nuire au patient épuisé. Les formulaires s'entassaient encore sur le chariot métallique."
+  },
+  {
+   "i": 1,
+   "text": "Les urgences débordaient ce soir-là.\n\nÀ l'accueil, une infirmière qui pianotait sur son écran répétait les mêmes consignes, tandis que la salle d'attente se remplissait de visages tendus.\n\nLes chaises craquaient.\n\nUn homme âgé gémissait sur un brancard.\n\nSa compagne tentait de calmer l'angoisse qui lui serrait la gorge.\n\nLe médecin passait, pressé de rejoindre un box.\n\nQuand le haut-parleur grésilla, tout le couloir se figea.\n\nUne aide-soignante s'approcha pour vérifier le bracelet du patient.\n\nLa femme protesta enfin, car elle sentait que ce délai risquait de tout aggraver, sans oser hausser la voix.\n\nLes moniteurs clignotaient dans la pénombre."
+  },
+  {
+   "i": 2,
+   "text": "Les urgences débordaient ce soir-là. Une infirmière, qui portait un plateau de seringues, traversa le couloir en hâte tandis que l'interphone grésillait un appel pressant. Les chaises attendaient. Un vieil homme somnolait contre le mur. Le médecin s'approcha du box pour ausculter un patient qui gémissait faiblement. Une jeune femme cherchait à consoler son compagnon. Quand le brancard passa, deux aides-soignants s'écartèrent vivement. La compagne s'agita, voulant savoir combien de temps durerait encore cette interminable attente. Elle protesta d'une voix tremblante, parce qu'elle sentait que son mari souffrait trop pour supporter longtemps de rester ainsi couché. Le rideau du box se referma lentement."
+  },
+  {
+   "i": 3,
+   "text": "Les urgences débordaient ce soir-là. Une infirmière, qui portait un dossier serré contre elle, traversait le couloir en hâte pendant que les brancards s'alignaient contre le mur. Un moniteur bipait. Les chaises de la salle restaient toutes occupées. Le médecin cherchait un box libre pour examiner l'homme qui gémissait. Il fallait poser une perfusion sans attendre. Quand l'interphone appela une équipe, tout le monde se figea. Un accompagnant s'approcha du comptoir pour réclamer une explication. Il exigea qu'on précise, alors que la file s'allongeait encore, combien de temps il faudrait patienter avant de voir enfin un soignant. Le bracelet cliquetait à son poignet."
+  },
+  {
+   "i": 4,
+   "text": "Les urgences bourdonnaient à cette heure. L'infirmière du tri, qui pianotait sur son écran depuis un moment, releva la tête quand une civière franchit les portes battantes. Un homme geignait. Sa compagne serrait un formulaire froissé. Elle voulait comprendre pourquoi l'attente qu'on leur imposait durait autant. Un médecin passa, pressé de rejoindre le box. Pendant qu'un moniteur sonnait, une perfusion s'égouttait lentement. On l'appela par l'interphone pour venir sans tarder au chevet du blessé. La femme protestait encore, tandis qu'une aide-soignante lui expliquait que le bracelet suffirait à identifier son mari sans risquer une erreur. Le rideau se tira enfin sur leur inquiétude."
+  },
+  {
+   "i": 5,
+   "text": "Les urgences bourdonnaient comme une ruche saturée. Derrière le comptoir de triage, une infirmière qui pianotait des formulaires interminables levait à peine les yeux, tandis que les brancards s'alignaient le long du couloir. Un moniteur clignotait. Les fauteuils d'attente débordaient déjà de patients épuisés. Une femme cherchait, malgré son inquiétude grandissante, à calmer un homme qui gémissait sans relâche. Le médecin surgit pour ausculter ce corps qui tremblait. Quand la sonnerie retentit, deux aides se précipitèrent vers la baie. On tira le rideau afin d'isoler le malade dont le teint virait au gris. Le compagnon protesta, car il jugeait que cette attente insupportable finissait par mettre en péril une vie qu'on aurait pu secourir bien plus tôt. Les intercoms grésillaient encore leurs appels pressants."
+  },
+  {
+   "i": 6,
+   "text": "Les urgences bourdonnaient à cette heure tardive. Une infirmière, qui poussait un brancard vers le couloir, avançait vite parce que les bips des moniteurs s'affolaient déjà. Un rideau claque. Le médecin traversait les box sans ralentir. Il fallait installer la perfusion avant que la douleur ne revienne. Un accompagnant s'approche, voulant comprendre l'attente. Quand l'interphone grésilla, les fauteuils se remplirent encore. On appelait le patient afin de vérifier son bracelet d'identification. Le formulaire attendait sur le comptoir, tandis que l'homme protestait qu'on l'avait oublié, sans jamais élever la voix. Les portes coulissantes s'ouvraient sur d'autres arrivants."
+  },
+  {
+   "i": 7,
+   "text": "Les urgences débordaient ce soir-là. Une infirmière, qui poussait un brancard le long du couloir, pressait le pas parce que le patient râlait sous sa couverture. Les moniteurs clignotaient. Le comptoir de tri croulait sous les formulaires. On voyait un médecin traverser les box qu'une longue file encombrait. Un homme épuisé cherchait à s'asseoir. Quand l'interphone grésilla, toute la salle leva les yeux. Le compagnon du malade se leva pour réclamer un peu d'attention. Il protesta si fort que l'aide-soignante lui promit qu'on viendrait bientôt poser une perfusion. Le rideau du box se referma lentement."
+  },
+  {
+   "i": 8,
+   "text": "Les portes coulissantes s'ouvraient sans relâche. Derrière le comptoir de tri, une infirmière notait les symptômes tandis qu'un brancard, qu'on venait de pousser dans le couloir, attendait son tour contre le mur. Les moniteurs clignotaient. Une perfusion gouttait lentement au-dessus du lit. Le médecin traversait les box pour examiner un patient dont le pouls s'affolait. Un rideau tiré cachait la femme qui semblait souffrir. Quand l'intercom appela le service, une voix couvrit le brouhaha. Un accompagnant s'approcha du guichet pour réclamer un peu d'attention. Il protesta longuement, car il jugeait que l'attente devenait insupportable pour son épouse qui commençait à trembler sans pouvoir se calmer. Le bracelet d'identification glissait à son poignet fatigué."
+  },
+  {
+   "i": 9,
+   "text": "Les urgences débordaient ce soir-là. Devant le comptoir de tri, une infirmière notait les noms tandis qu'une file de patients épuisés attendait sur les chaises alignées contre le mur. Un moniteur clignotait. Des brancards encombraient déjà le couloir étroit. Le médecin passait d'un box à l'autre pour ausculter ceux que la fièvre accablait. Une aide-soignante cherchait un dossier à remplir. Quand l'interphone grésilla, tout le personnel se figea un instant. Une femme s'approcha du guichet pour signaler la douleur de son compagnon. Elle réclamait qu'on l'examine sans tarder, car son bracelet indiquait une priorité que personne ne semblait vouloir respecter. Derrière le rideau tiré, une perfusion gouttait lentement."
+  }
+ ]
+}

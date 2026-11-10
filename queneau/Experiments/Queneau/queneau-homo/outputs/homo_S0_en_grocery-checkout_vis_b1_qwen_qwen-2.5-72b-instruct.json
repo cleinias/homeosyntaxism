@@ -1,0 +1,62 @@
+{
+ "model": "qwen/qwen-2.5-72b-instruct",
+ "backend": "openrouter",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "grocery-checkout",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": {
+  "requested_provider": "DeepInfra",
+  "resolved_provider": "DeepInfra",
+  "quant": "fp8"
+ },
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nIn the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 43.3,
+ "gens": [
+  {
+   "i": 0,
+   "text": "In the checkout line, in the busy hour. A customer of about 40, felt scarf with a cord instead of a ribbon, neck too long, as if someone’s been pulling at it. People moving forward. The customer in question gets irritated with one of the shoppers crowding behind him. He accuses them of pushing every time anyone steps closer. A whining tone which is meant to be assertive. When he sees an empty space at the bagging area, he throws himself into it. Two hours later, I see him in the parking lot, in front of the store entrance. He’s with a friend who’s saying: \"You should get a loyalty card for the discounts.\" He shows them where (at the customer service desk) and why."
+  },
+  {
+   "i": 1,
+   "text": "In the checkout line, in the rush hour. A person of about 30, with a cap instead of a hat, neck too thick, as if someone’s been pushing on it. People moving forward. The person in question gets irritated with one of the shoppers crowding behind them. They complain about the other’s proximity every time anyone shifts position. A whining tone which is meant to be assertive. When they see an open space, they dash into it. Two hours later, I encounter them in the parking lot, near the entrance of the supermarket. They’re with a friend who’s saying: \"You should get a bigger cart for your groceries.\" They show them where (by the divider bar) and why."
+  },
+  {
+   "i": 2,
+   "text": "In the checkout line, at the busy hour. A shopper of about 32, with a cap instead of a hat, queue too long, as if someone’s been stretching it. People moving on. The person in question gets irritated with one of the shoppers behind him. He accuses her of pushing him every time anyone steps forward. A whining tone which is meant to be assertive. When he sees an open space, he rushes into it. Two hours later, I meet him in the produce section, near the organic apples. He’s with a friend who’s saying: \"You ought to get a cart with better wheels.\" He shows him where (at the bottom) and why."
+  },
+  {
+   "i": 3,
+   "text": "In the Aisle, in the busy hour. A person of about 30, cap with a band instead of a strap, neck too thick, as if someone’s been puffing it up. People moving forward. The person in question gets irritated with one of the shoppers standing behind them. They accuse them of pushing them every time anyone comes through. A whiny tone which is meant to be firm. When they see an empty spot they rush into it. Two hours later, I meet them in the Checkout Lane, in front of the register. They’re with a friend who’s saying: \"You should get a smaller cart for your groceries.\" They show them where (at the handles) and why."
+  },
+  {
+   "i": 4,
+   "text": "In the S supermarket, in the busy hour. A person of about 30, felt hat with a band instead of a ribbon, neck too short, as if someone’s been pulling it. People moving on. The person in question gets irritated with one of the shoppers standing next to them. They accuse them of bumping them every time anyone goes past. A whining tone which is meant to be assertive. When they see an empty spot they rush into it. Two hours later, I meet them in the aisle of fruit, in front of the checkout. They’re with a friend who’s saying: \"You ought to get a bigger cart for your groceries.\" They show them where (at the bottom) and why."
+  },
+  {
+   "i": 5,
+   "text": "In the checkout lane, in the rush hour. A customer of about thirty, leather jacket with a zipper instead of buttons, waist too wide, as if someone’s been inflating it. People moving on. The customer in question gets irritated with one of the shoppers crowding behind. He accuses her of nudging him every time anyone pushes forward. A whining tone that tries to sound tough. When he sees an empty spot he hurries into it. Two hours later, I see him in the produce section, near the organic apples. He’s with a friend who’s saying: \"You should get a shopping cart with a bigger basket.\" He points out where (at the bottom) and why."
+  },
+  {
+   "i": 6,
+   "text": "In the checkout lane, in the busy hour. A person of about 30, with a baseball cap instead of a visor, arms too long, as if someone’s been pulling them. People moving forward. The person in question gets irritated with one of the shoppers behind them. They complain about them pushing every time anyone moves. A whining tone, which is supposed to be firm. When they see an open spot, they jump into it. Two hours later, I meet them in the parking lot, in front of the grocery store. They’re with a friend who’s saying: \"You should get a bigger cart next time.\" They show them where (at the bottom) and why."
+  },
+  {
+   "i": 7,
+   "text": "In the A checkout, in the busy hour. A person of about 30, felt jacket with a badge instead of a pin, arms too long, as if someone’s been stretching them. People moving on. The person in question gets irritated with one of the shoppers behind them. They accuse them of pushing them every time anyone comes through. A whining tone which is supposed to be stern. When they see an open spot they jump into it. Two hours later, I meet them in the front of the store, near the entrance. They’re with a friend who’s saying: \"You should get a bigger cart for your groceries.\" They show them where (at the handles) and why."
+  },
+  {
+   "i": 8,
+   "text": "In the checkout line, during the busiest hour. A person of around thirty, cap with a strap instead of a band, legs too short, as if someone’s been pulling them. Shoppers moving on. The individual in question gets irritated with one of the people behind them. They complain about being nudged every time someone moves forward. A whiny tone meant to be assertive. When they see an empty space, they lunge into it. Two hours later, I encounter them near the produce section, by the fruit display. They’re with a friend who’s saying: \"You should get a bigger cart next time.\" They show them where (at the handles) and why."
+  },
+  {
+   "i": 9,
+   "text": "In the busy store, in the checkout line. A woman of about 30, with a cart full of groceries, hair tied back, as if someone’s been pulling at it. People moving forward. The woman in question gets irritated with one of the shoppers behind her. She accuses her of pushing every time anyone shuffles forward. A whining tone that’s meant to be fierce. When she sees an empty space, she rushes to fill it. Two hours later, I see her in the parking lot, by the entrance. She’s with a friend who’s saying: \"You ought to get a better cart for your trips.\" She shows her where (at the handles) and why."
+  }
+ ]
+}

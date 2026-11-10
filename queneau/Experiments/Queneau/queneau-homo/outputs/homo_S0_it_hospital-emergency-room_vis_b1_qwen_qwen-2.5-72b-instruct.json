@@ -1,0 +1,62 @@
+{
+ "model": "qwen/qwen-2.5-72b-instruct",
+ "backend": "openrouter",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "hospital-emergency-room",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": {
+  "requested_provider": "DeepInfra",
+  "resolved_provider": "DeepInfra",
+  "quant": "fp8"
+ },
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nSulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 79.0,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel reparto, durante un'ora affollata. Un uomo di circa trent'anni, berretto stropicciato con una cordicella al posto del nastrino, collo eccessivamente lungo, come se fosse stato tirato. La gente entra e esce. L'uomo in questione si altera con un vicino. Lo rimprovera per spingerlo ogni volta che qualcuno passa. Tonante e frustrato, con pretese di autorità. Non appena vede una sedia libera, vi si butta. Due ore più tardi lo incontro al banco delle triage, davanti all'ingresso principale. È con un'infermiera che gli dice: «Dovresti farti controllare la pressione». Gli mostra dove (al braccio sinistro) e perché."
+  },
+  {
+   "i": 1,
+   "text": "Nel pronto soccorso, in un'ora di calca. Un paziente di circa quarant'anni, con un braccio fasciato e una cicatrice sulla fronte, viso pallido, come se fosse stato colpito da un colpo. Le persone aspettano. Il paziente in questione si agita con un vicino. Lo rimprovera di parlare troppo forte ogni volta che passa un medico. Tono lamentoso, con pretese di urgenza. Non appena vede una sedia libera, vi si lascia cadere. Due ore più tardi lo incontro alla reception, davanti al reparto di terapia intensiva. È con un infermiere che gli dice: «Dovresti mettere un po' di pazienza in più». Gli fa vedere dove (alla sala d'attesa) e perché."
+  },
+  {
+   "i": 2,
+   "text": "In ospedale, in un'ora di emergenza. Un paziente di circa cinquant'anni, bracciale rosso al polso, respiro affannoso, come se l'avessero trascinato. La gente si agita. L'uomo in questione si altera con un vicino. Gli rimprovera di occupare due sedie ogni volta che passa qualcuno. Tono preoccupato, con pretese di urgenza. Non appena vede una sedia libera, vi si siede. Due ore più tardi lo incontro alla reception, davanti all'area di triage. È con un infermiere che gli dice: «Dovresti metterti un po' d'acqua fresca sulla fronte». Gli indica dove (alla tempia) e perché."
+  },
+  {
+   "i": 3,
+   "text": "Nel pronto soccorso, in un'ora affollata. Un paziente di circa quarant'anni, borsa del ghiaccio sulla fronte, respiro affannoso, come se l'avessero picchiato. Le persone si muovono. L'uomo in questione si altera con un vicino. Lo accusa di occupare due sedie ogni volta che entra qualcuno. Tono irritato, con pretese di diritto. Non appena vede un posto libero, ci si lancia. Due ore più tardi lo incontro alla reception, davanti all'area di triage. È con un'infermiera che gli dice: «Dovresti farti controllare quella ferita». Gli mostra dove (alla tempia) e perché."
+  },
+  {
+   "i": 4,
+   "text": "Nel reparto, in un'ora di affollamento. Un uomo di circa trentacinque anni, camicia stropicciata e occhiali da vista, faccia troppo pallida, come se fosse stato privato di sonno. Le persone attendono. Il paziente in questione si agita con un accompagnatore. Lamenta la lunghezza dell'attesa ogni volta che passa un'infermiera. Tono ansioso, con pretese di impazienza. Non appena vede un posto libero, vi si siede. Due ore più tardi lo incontro alla triage, vicino all'ingresso. È con un infermiere che gli dice: «Dovresti farti visitare prima del previsto». Gli indica dove (alla benda) e perché."
+  },
+  {
+   "i": 5,
+   "text": "Nel reparto, in un'ora di affollamento. Un uomo di circa trent'anni, camicia sbottonata con una fascia al posto della cravatta, braccia troppo magre, come se le avessero allungate. Le persone attendono. L'uomo in questione si lamenta con un vicino. Gli rimprovera di disturbare ogni volta che qualcuno passa. Tono angosciato, con pretese di disperazione. Non appena vede una sedia libera, vi si siede. Due ore più tardi lo incontro al bancone dell'accettazione, davanti all'ingresso principale. È con un'infermiera che gli dice: «Dovresti farti controllare il polso». Gli indica dove (all'avambraccio) e perché."
+  },
+  {
+   "i": 6,
+   "text": "Nel reparto, in un'ora di emergenza. Un uomo di circa trentacinque anni, giacca aperta e cravatta allentata, braccio fasciato, come se fosse stato in un incidente. Le persone si muovono. Il paziente in questione si agita con un accompagnatore. Lo accusa di non stare con lui ogni volta che passa un infermiere. Voce concitata, con tono di protesta. Non appena vede una sedia libera, vi si siede. Due ore più tardi lo incontro alla reception, fuori dall'ambulatorio. È con un medico che gli dice: «Dovresti fare un esame di controllo». Gli indica dove (al braccio) e perché."
+  },
+  {
+   "i": 7,
+   "text": "Nel reparto, durante un'ora affollata. Un uomo di circa trent'anni, camicia slacciata e occhi cerchiati, volto smunto, come se fosse stato privato di sonno. Le persone aspettano. Il paziente in questione si agita verso un vicino. Lo accusa di non farlo respirare a ogni movimento. Tono irritato, con pretese di impazienza. Appena vede una sedia libera, vi si lancia. Due ore più tardi lo incontro all'ingresso, davanti alla sala d'attesa. È con un infermiere che gli dice: «Dovresti cercare di calmarti». Gli mostra come (con respiri profondi) e perché."
+  },
+  {
+   "i": 8,
+   "text": "Nel pronto soccorso, in un'ora di affollamento. Un uomo di circa trent'anni, berretto stropicciato con una striscia di stoffa al posto del nastro, collo troppo corto, come se fosse stato compresso. Le persone si muovono. Il paziente in questione si irrita con un vicino. Lo rimprovera di continuare a spingerlo ogni volta che qualcuno passa. Tono esasperato, con pretese di fastidio. Non appena vede una sedia libera, vi si siede. Due ore più tardi lo incontro nella sala d'attesa, davanti al bancone della triage. È con un amico che gli dice: «Dovresti far mettere un braccialetto di riconoscimento». Gli fa vedere dove (al polso) e perché."
+  },
+  {
+   "i": 9,
+   "text": "Nel reparto, in un'ora di emergenza. Un paziente di circa trent'anni, bracciale rosso al polso, sguardo troppo intenso, come se fosse stato risucchiato nel suo stato. Le persone si muovono. L'uomo in questione si agita con una vicina. Le lamenta di non rispettare la sua privacy ogni volta che qualcuno passa. Tonality irritata, con pretese di disperazione. Non appena vede una sedia libera, vi si siede. Due ore più tardi lo incontro alla scrivania di triage, davanti al reparto di terapia intensiva. È con un'infermiera che gli dice: «Dovresti farti controllare di nuovo la pressione». Gli indica dove (sul braccio sinistro) e perché."
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2",
+ "lang": "it",
+ "scenario": "security-checkpoint",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~25 words) clause architecture: 1 main clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~10 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~17 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 9 (~7 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1.\nPeriod 10 (~10 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\nPeriod 11 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 8.0,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Il terminal brulicava di viaggiatori ansiosi. Quando l'orologio digitale segnò il ritardo, il flusso si fece più serrato. Aspettavano. Sotto lo sguardo vigile, posarono gli oggetti nelle ciotole trasparenti, senza una parola. Una guardia indicò un uomo, il cui bagaglio conteneva oggetti sospetti, e lo invitò ad avanzare. Si avvicinò. Prima di procedere, gli fu chiesto di aprire le mani. Seguì le indicazioni, mostrando un passaporto impeccabile. L'uomo venne scelto per una verifica aggiuntiva, nonostante sembrasse tranquillo. Annunciò che doveva essere controllato con il rivelatore. Annunciò anche che tutto sarebbe stato rapido e rispettoso."
+  },
+  {
+   "i": 1,
+   "text": "Nella calca dell'ora punta, la gente si snoda lungo le barriere metalliche. Quando arriva il turno, ognuno posa le proprie cose nelle vaschette di plastica. Fermarsi. Guardare. L'ufficiale osserva attentamente ogni oggetto, prima di farlo passare attraverso il metal detector. Un viaggiatore viene individuato e invitato a un controllo supplementare. Mentre gli altri procedono, lui rimane in disparte. Così, con movimenti precisi, l'agente verifica documenti e bagagli. Seguire le indicazioni, mostrare pazienza. Tutti i gesti sono guidati da segni luminosi e voci impersonali. Ogni istante risulta regolato da precise norme di sicurezza. Il tono cortese, ma fermo, accompagna ogni istruzione data."
+  },
+  {
+   "i": 2,
+   "text": "Nel caos del checkpoint, le persone si muovono come onde. Quando la coda si allunga, il tempo rallenta, ma i controlli rimangono precisi. Attenti. Ognuno lascia oggetti preziosi su vassoi di plastica grigia. La macchina scansiona corpi e borse, cercando minacce invisibili, sotto lo sguardo vigile degli agenti. Qui, un uomo è scelto, chiamato da mani guantate, con delicatezza. Mentre, oltre, la linea continua senza interruzioni. Seguendo i cartelli, ognuno si conforma, silenzioso e determinato. Al banco, un documento viene esaminato con cura. L'ufficiale, impassibile, ordina una perquisizione più approfondita. Tutti obbediscono, senza discutere, nella routine della sicurezza."
+  },
+  {
+   "i": 3,
+   "text": "Nell'atrio affollato, i viaggiatori si muovono cauti. Quando il sistema richiede la consegna dei bagagli, ognuno obbedisce senza indugio. Svelti, sistemano le valigie. Una giovane donna, intenta a prepararsi, osserva l'ufficiale con curiosità. Con delicatezza, lui invita la signora a passare attraverso il detector. L'aria è carica di tensione. Mentre il dispositivo emette segnali, la folla attende in silenzio. Gli occhi dell'agente sono vigili, attenti a ogni dettaglio. La voce calma dà indicazioni precise, quasi sussurrate. Un uomo viene isolato, e gli vengono chiesti documenti e una perquisizione. Infine, tutto torna alla normale routine."
+  },
+  {
+   "i": 4,
+   "text": "Nel corridoio dell'aeroporto, il frastuono dei viaggiatori si mescola con l'eco degli annunci. Quando la fila si muove, ognuno si appresta, nervoso, a svuotare tasche e borse. Il tempo scorre. La tensione cresce. Un agente, con un cenno, invita un passeggero a seguirlo. La paura si dipinge sul viso di chi attende di essere scansionato. Prima di entrare, tutti devono passare attraverso i controlli. La voce impersonale del sistema richiede ordine e precisione. Sullo schermo, una sagoma si staglia nitida. L'uomo ferma indica il documento da mostrare. Ogni dettaglio viene registrato. Le istruzioni sono chiare, ma rigide. L'autorità mantiene la calma."
+  },
+  {
+   "i": 5,
+   "text": "Nel terminal affollato, il viaggiatore attende paziente con la valigia. Quando il suo turno arriva, si avvicina al banco, dove un agente lo invita a svuotare le tasche. La cintura cade nella scatola di plastica. Gli oggetti personali sono disposti con cura sui vassoi. L'ufficiale esamina il passaporto dell'uomo che è stato selezionato. Si sottopone docilmente alla procedura, come richiesto dalle istruzioni. Prima di passare attraverso il metal detector, annuisce. Un secondo controllo manuale segue, metodico e impersonale. Il documento viene verificato ancora una volta con attenzione. L'agente conferma tutto in ordine, indicando il cammino libero."
+  },
+  {
+   "i": 6,
+   "text": "Nel caldo frullio dell'ora punta, l'aeroporto rimbomba di passi. Quando la folla si stringe ai tornelli, ognuno posa zaini e borse sul nastro luminoso. Scatti metallici. Bagagli scivolano via. Una guardia invita un viaggiatore, con un cenno, a sollevare le braccia. Poi. Prima di procedere, osserva i documenti con cura. La fila avanzava, lenta e ordinata, seguendo le indicazioni luminose. Gli altoparlanti diffondevano istruzioni in tre lingue. L'agente, impassibile, controlla il badge del passeggero. Conferma l'accesso solo dopo aver completato il protocollo. Annunciava la fine della visita con un cenno."
+  },
+  {
+   "i": 7,
+   "text": "Nella calca dell'aeroporto, la fila si snoda lentamente verso le barriere di sicurezza, mentre i viaggiatori posano le loro borse sul nastro. Ogni passo sembra amplificato nel silenzio artificiale delle vetrate, dove il rumore dei tacchi risuona come un ritmo costante. Le mani tremano leggermente. L'ansia cresce. Una viaggiatrice viene invitata da un agente a passare attraverso il metal detector, segnalando una possibile anomalia. Porge il documento con mano tremante. Prima di procedere, l'agente controlla attentamente il badge. La zona è regolata da cartelli luminosi e indicazioni precise, che guidano il flusso di persone. Ognuno segue le istruzioni con precisione meccanica. L'atmosfera è tesa, ma ordinata."
+  },
+  {
+   "i": 8,
+   "text": "Nella sala d'imbarco, il rumore cresce con l'affluenza dei passeggeri. Quando le porte si aprono, la folla si riversa verso i nastri di sicurezza. Voci si mescolano, creando un mormorio costante. Le borse vengono posate sulle cassette con cura e precisione. Tra la folla, una mano guida delicatamente un viaggiatore verso un angolo isolato, dove i documenti vengono esaminati. L'ufficiale, impassibile, indica un punto sulla sua lista. Prima di proseguire, ogni dettaglio viene verificato attentamente. Gli avvisi luminosi scandiscono le regole, mentre gli operatori mantenono un'etichetta formale. Una volta completata l'ispezione, il viaggiatore riceve l'assenso per continuare. L'autorità esercita il suo controllo con freddezza e rigore."
+  },
+  {
+   "i": 9,
+   "text": "Nel frastuono del terminal, i viaggiatori si snodano in una fila interminabile. Quando il turno di ognuno arriva, le tasche si svuotano con precisione metodica. Poi, la tensione aumenta. Un agente solleva un polso per indicare. Tra le barriere metalliche, una sagoma attende di essere scandagliata. Qui, ogni movimento è controllato. Mentre gli scanner ronzano, istruzioni riecheggiano nell'aria. Il cartello sopra l'ufficio segna il confine della tranquillità. Il documento scivola tra mani ferme, occhi scrutano con attenzione. La cortesia impersonale dell'autorità rassicura e allarma insieme. L'ultimo controllo conferma la libertà di passaggio."
+  }
+ ]
+}

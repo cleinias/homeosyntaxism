@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "grocery-checkout",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nDans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 90.7,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Vers le Monoprix, à une heure d'achats. Une cliente dans les quarante ans, veste polaire avec fermeture remplaçant les boutons, panier trop lourd comme si on l'avait vraiment rempli parce que quelqu'un l'avait retardée là. Le tapis avance. La dame devant elle bloque sur la caisse. Elle lui reproche de coller son chariot tandis qu'elle scanne quelque chose. Le ton qu'elle prend paraît agacé. Comme elle atteint la barre séparatrice, elle avance enfin. Deux articles seulement là-derrière, ils me dépassent devant Delphine, vers la borne Fidélité. Elle discute avec une caissière qui la voit puis lui montre comment activer sa carte magnétique sur le lecteur. Elle lui explique où, sur le terminal, et pourquoi."
+  },
+  {
+   "i": 1,
+   "text": "Vers le Franprix, à une heure d'affluence. Un client dans la quarantaine, panier plein de conserves alignées contre l'anse, regard trop fixe comme si on l'avait vraiment épuisé. Les caissières scannent. Le monsieur devant moi s'agace contre une dame. Il lui reproche de le talonner quand elle avance son chariot alors qu'il attend lui. Un souffle qu'il croit menaçant. Comme il aperçoit une caisse libre, il file aussitôt. Deux minutes après, ensuite, je le revois vers Monoprix, sous la halle Beaugrenelle. Il est avec une amie qui lui souffle qu'il faudrait ajouter un divisoire supplémentaire sur le tapis. Elle lui indique où (au bagage) et pourquoi."
+  },
+  {
+   "i": 2,
+   "text": "Dans le Monoprix, à une heure d'affluence. Un client dans les quarante ans, veste kaki avec badge pendant sur la poche, chariot trop plein comme si on lui avait ordonné dedans. Les gens patientent. Le type devant lui s'énerve contre une caissière. Il lui reproche de scanner ses articles quand elle presse tout. Ce ton geignard qui se croit ferme. Comme il repère une caisse libre, il file dessus. Dix minutes plus tard, je le retrouve rayon frais, devant les yaourts Danone. Il est avec un ami qui lui suggère qu'il aille demander une remise supplémentaire sur son ticket. Il lui indique quoi près du total et pourquoi."
+  },
+  {
+   "i": 3,
+   "text": "Chez le Super, à une heure d'affluence. Un client dans les trente ans, panier trop chargé pour ses bras, nuque tendue comme si quelqu'un le pressait derrière. La file avance. Le client concerné s'agace contre un voisin. Il lui reproche de le talonner dès qu'on approche du tapis. Une voix geignarde qui se veut ferme. Comme il repère une caisse libre, il s'y engouffre aussitôt. Vingt minutes plus tard, je le revois rayon surgelés, devant les Fromages Découpés. Il est avec un ami qui lui glisse: \"Tu devrais faire ajouter une poche supplémentaire à ton cabas.\" Il lui indique où et pourquoi."
+  },
+  {
+   "i": 4,
+   "text": "Vers la caisse, à une heure d'encombrement. Une cliente dans la quarantaine, sac renforcé avec sangle doublant l'anse, bras trop chargé comme si on l'avait forcé, empoigne son panier débordant, presque plein, tandis que devant elle avance lentement. La file piétine. Le tapis sous articles la fait glisser vers la caissière. Elle le pousse contre lui, dépasse la barre quand il déborde dessus. Un homme la lui reproche, agacé. Puisqu'il sent une pression derrière, il grommelle sèchement. Deux voix presque simultanément se lancent excuses vers Sophie devant le lecteur Carte. Elle a, sous le bip, tout ce que réclame, semble avoir compté chaque produit scanné sous le comptoir. On la voit ranger l'ensemble dans un cabas et voilà."
+  },
+  {
+   "i": 5,
+   "text": "Dans le Monoprix, à une heure d'affluence. Un client dans la cinquantaine, veste froissée pochette remplaçant la cravate, air trop pressé comme si on lui avait volé quelque chose. Les caisses bipent. Le client de devant s'agace contre quelqu'un. Il lui reproche de le presser chaque fois qu'il pose un article. Voix geignarde qui se veut ferme. Quand il aperçoit une caisse libre, il s'y jette aussitôt. Vingt minutes plus tard, je le revois rayon des surgelés, devant les congélateurs Picard. Il est avec un compagnon qui lui dit: \"Tu devrais faire ajouter une poignée supplémentaire à ton chariot.\" Il lui montre où et pourquoi."
+  },
+  {
+   "i": 6,
+   "text": "Vers le Monoprix, à une heure d'affluence. Un client dans les trente ans, panier trop chargé pour lui, portant un pull informe presque violet quoique délavé, tandis qu'il ronchonne encore. La file avance. Une dame derrière le talonne contre le tapis. Elle lui reproche de bloquer le passage lorsqu'elle pousse. Un soupir qu'elle veut agacé. Comme il repère une caisse libre, il file dedans. Vingt minutes plus tard, je le recroise sortant de Monoprix, sous la galerie marchande. Il discute avec un copain qui lui explique qu'il aurait dû reprendre le ticket resté dans le lecteur. Il lui indique comment finaliser puis pourquoi."
+  },
+  {
+   "i": 7,
+   "text": "Chez le Monoprix, à une heure chargée. Un client dans les trente ans, veste kaki avec fermeture doublant le col, visage trop tendu comme si on l'avait pressé longtemps. Les caddies avancent. Le type devant lui râle contre la caissière. Il lui reproche de scanner chaque article quand elle bipe quelque chose. Un ton geignard qui se veut hautain. Comme il aperçoit une caisse libre, il s'y glisse aussitôt. Dix minutes plus tard, je le revois rayon près Rungis, derrière le stand Fromages. Il patiente devant un tapis où quelqu'un lui montre qu'il aurait pu poser sa barre séparatrice sur le comptoir. Il lui explique comment, sur la file, et pourquoi."
+  },
+  {
+   "i": 8,
+   "text": "Dans le Carrefour, à une heure d'affluence. Un client dans les trente ans, veste kaki avec fermeture remplaçant les boutons, panier trop plein comme si on avait vidé dessus. Les articles avancent. Le monsieur en question s'agace contre un voisin. Il lui reproche de le pousser chaque fois qu'il approche quelqu'un. Ton geignard qui se veut ferme. Comme il repère un espace libre, se glisse dedans. Deux minutes plus tard, je le retrouve rayon Boissons, devant la caisse Express. Il est avec un ami qui lui dit: \"Tu devrais faire ajouter un article supplémentaire à ton addition.\" Il lui indique où (sur le ticket) et pourquoi."
+  },
+  {
+   "i": 9,
+   "text": "Dans le Monoprix, à une heure d'affluence. Une cliente devant la troisième caisse rapide, sac lourd comme cabas, tapis roulant presque plein, tandis qu'elle range ses courses là. Le lecteur bipe. Le tapis en marche la pousse vers le comptoir. Elle se plaint contre quelqu'un derrière son épaule parce qu'on la serre trop. Ton geignard qu'on croit agressif. Comme elle voit la barre libre, elle avance dessus. Deux minutes plus tard, je la retrouve caisse devant Carrefour, sous le hangar Beaulieu. Elle est avec une amie qui la houspille et lui suggère de rajouter une pochette supplémentaire dans le caddie. Elle lui indique où sur le rayon et pourquoi."
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "it",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 25 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 10 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 17 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 7 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 10 (about 10 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\nPeriod 11 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 6.4,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel supermercato affollato, la fila si muoveva lentamente. Mentre il nastro scorreva, la cassiera scansionava con precisione. I prodotti. Le borse attendevano pronte. Il cliente porse la carta, pronto a pagare. La coda dietro iniziava a impazientirsi. Nonostante tutto, il ritmo era costante. La cassiera sorrise, registrando ogni articolo. Un carrello pieno. Lo scontrino fu stampato, chiudendo la transazione."
+  },
+  {
+   "i": 1,
+   "text": "Nel supermercato affollato, la coda alla cassa si estendeva lungo il corridoio. Dalle casse arrivavano i bip continui, mentre la gente sistemava gli acquisti nelle buste. Il nastro mobile non smetteva mai. La cliente presentò la carta di credito. Il cassiere, paziente, aspettava di scansionare ogni articolo, che scorreva veloce. La spesa accumulata era impressionante. Mentre inseriva i dati, un cliente impaziente si avvicinava dietro. La cassiera annunciò il totale con un sorriso. Sullo scontrino apparvero le offerte speciali del giorno."
+  },
+  {
+   "i": 2,
+   "text": "Nella corsia del supermercato, la fila si snoda lungo il nastro. La cassiera scansiona i prodotti con precisione, mentre le luci lampeggiano ritmicamente. Paga. Il cliente presenta il carrello, pronto a pagare. Accanto al lettore di carte, un separatore divide gli articoli. L’uomo attende paziente, senza fretta. Altre persone si affollano, impazienti dietro di lui. Un leggero disagio si diffonde, per lo spazio ristretto. La cassiera annuncia il totale, sorridendo cortesemente. Il display mostra il prezzo finale, esatto e chiaro. Chiede se il cliente ha una carta fedeltà. Invita a inserire la carta nel lettore. Conclude l’operazione, stampando la ricevuta."
+  },
+  {
+   "i": 3,
+   "text": "Nel supermercato affollato, la fila alla cassa si allunga.  \nLa cinghia scorre lentamente, mentre la cassiera scansa con precisione.  \nPacchi.  \nCarte di credito sfrecciano.  \nLe mani afferrano il prodotto, pronte a trasferirlo nella borsa, che sembra sempre troppo piccola.  \nSguardi si incrociano.  \nL'ora punta peggiora l'ansia, con la folla che si stringe.  \nUn carrello malfermo minaccia di intralciare l'accesso.  \nUna spesa, fresca di acquisto, attende paziente.  \nIl totale lampeggia, annunciato da un beep ritmico.  \nLa cliente, interpellata, estrae la tessera fedeltà."
+  },
+  {
+   "i": 4,
+   "text": "Nel supermercato affollato, la coda alla cassa si allungava. Davanti a me, una signora disponeva i prodotti sul nastro, paziente. Il suo carrello traboccava di generi alimentari. Sullo scanner, le scatole si susseguivano, beep dopo beep. La cassiera annunciava il totale, chiedendo cortesemente il pagamento. Dietro di noi, un uomo si faceva impaziente. Un fruscio di sacchetti riempiva l'aria. La routine commerciale procedeva, metodica e costante. La carta fedeltà era pronta, offerta con un sorriso. Sullo schermo apparve il totale, confermato con un cenno. La ricevuta uscì dalla stampante, segnando la fine della transazione."
+  },
+  {
+   "i": 5,
+   "text": "Nel supermercato affollato, la fila alla cassa si snoda lentamente. Davanti a me, una signora inserisce le sue cose sul nastro, mentre il suo carrello attende. La coda si muove a scatti. Il cassiere, concentrato, scansiona gli articoli con precisione. Porge a un cliente la ricevuta, invitandolo a pagare con la carta. Dietro di noi, un altro avventore si spazientisce. La tensione cresce, l'aria è tesa. Le voci si alzano, ma solo per poco. Sul bancone, il dividerso separa le spese. Un cliente estrae la carta fedeltà, rispondendo alle domande della cassiera. L'ultimo oggetto passa, il totale risuona."
+  },
+  {
+   "i": 6,
+   "text": "Nel corridoio affollato, la coda si allunga. Il nastro scorre veloce, mentre le mani della cassiera danzano sopra lo scanner. Paga. Un carrello pieno di generi alimentari. Accanto al registro, un badgeletto blu promette punti fedeltà. La fila procede lentamente, ogni passaggio scandito da un bip acuto. La cliente inserisce la carta, nervosa. Anche il cliente successivo appare impaziente. L'importo totale risuona nell'aria. Qualcuno alle sue spalle si agita, invadendo lo spazio. La voce della cassiera richiede gentilmente il totale."
+  },
+  {
+   "i": 7,
+   "text": "Nella calca del supermercato, la coda alla cassa si allunga come un serpente impaziente. Nonostante l'ora di punta, la commessa mantiene un ritmo costante, scandito dai bip della scansione. Il nastro scorre veloce, portando avanti il carrello. La cliente estrae le buste, pronta a riempirle. Paga con carta, inserendola nel lettore senza indugi. Dietro di lei, un altro acquirente si avvicina troppo, cercando spazio. Si scambiano uno sguardo, ma non ci sono parole. Il totale appare sullo schermo, annunciato dalla voce meccanica. La commessa chiede se ha una tessera fedeltà. L'annuncio del totale risuona di nuovo, chiudendo la transazione. La ricevuta viene stampata, segnando la fine dell'acquisto."
+  },
+  {
+   "i": 8,
+   "text": "La coda alla cassa si allunga, serpeggiante. Ogni cliente avanza lentamente, mentre il nastro trasportatore ronza costantemente. Sospira. Il cassiere scansa con precisione, uno dopo l'altro. Il carrello vuoto attende paziente, pronto per essere riempito. La scialuppa di plastica separa i prodotti. L'area di imballaggio è ordinata, ma affollata. Un altro cliente si avvicina alle spalle, leggermente irrequieto. I bip del lettore a codici a barre scandiscono il ritmo della giornata. La somma totale risuona chiara, annunciata dallo scontrino. La carta di fedeltà viene sollecitata con cortesia. Il pagamento digitale completa la transazione."
+  },
+  {
+   "i": 9,
+   "text": "Nel supermercato affollato, la fila si muoveva lentamente. I prodotti scivolavano sul nastro mentre la cassiera scansava codici a barre con precisione. Il carrello era pieno. Il display lampeggiava con il totale. La cliente consegnò la carta, pronto a pagare, che lei teneva stretta. La coda si faceva sempre più lunga. Un altro cliente spingeva impaziente da dietro. La cassa emetteva suoni intermittenti. Accanto alla cliente, una borsa era pronta. Il totale fu annunciato ad alta voce. Il sistema chiese di inserire un bonus card."
+  }
+ ]
+}

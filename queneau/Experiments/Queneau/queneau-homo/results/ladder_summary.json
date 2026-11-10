@@ -1,0 +1,30 @@
+{
+ "struct_bar": 0.6,
+ "coh_bar": 0.5,
+ "ladder": [
+  {
+   "model": "qwen2.5:14b-instruct-q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.31,
+   "d2_clause": 0.558,
+   "pass_rate": 0,
+   "coherence": 0.9
+  },
+  {
+   "model": "qwen2.5:7b-instruct-q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.339,
+   "d2_clause": 0.638,
+   "pass_rate": 0,
+   "coherence": 0.843
+  },
+  {
+   "model": "qwen2.5:7b-instruct-q8_0",
+   "cells": 3,
+   "s0_pos": 0.341,
+   "d2_clause": 0.639,
+   "pass_rate": 0,
+   "coherence": 0.74
+  }
+ ]
+}

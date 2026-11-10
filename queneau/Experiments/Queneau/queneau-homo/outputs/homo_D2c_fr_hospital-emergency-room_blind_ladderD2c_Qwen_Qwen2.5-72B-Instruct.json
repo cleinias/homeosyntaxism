@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "fr",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 23 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 12 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 14 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\nPeriod 9 (about 18 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - finite complement clause\n        - open complement (infinitive)\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 6.8,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans la salle d'urgence, le bruit est incessant. Une infirmière, portant une blouse bleue, s'occupe d'un patient, tandis que l'intercom annonce des appels urgents. La tension est palpable. Les chaises d'attente sont pleines. Un homme, agité, se plaint de l'attente, son visage marqué par l'anxiété. À côté de lui, une femme fixe intensément le sol. Les moniteurs bipent sans relâche. Un médecin, équipé de gants, examine attentivement un dossier médical, avant de disparaître derrière un rideau tiré. Les brancards alignés dans le couloir témoignent du flux constant de patients. Une infirmière vérifie les perfusions, ajustant les gouttes avec précision. L'atmosphère est chargée d'une urgence silencieuse."
+  },
+  {
+   "i": 1,
+   "text": "Dans la salle d'urgence, le bruit est incessant. Un patient, les traits tirés, attend depuis longtemps, tandis que son compagnon murmure des paroles apaisantes, espérant que l'aide arrive vite. Le médecin passe, consulte rapidement les moniteurs. Les infirmières s’activent, les gouttes de sérum coulent doucement. Chaque geste, chaque mouvement, semble orchestré par une urgence silencieuse. À travers le rideau tiré, on entend un cri. Une femme, impatiente, se plaint à voix basse du délai interminable. L'interphone appelle un numéro, la routine clinique continue, inébranlable. Des bracelets colorés marquent les priorités, les formulaires s'accumulent. La tension monte, mais tous restent concentrés, déterminés."
+  },
+  {
+   "i": 2,
+   "text": "Dans la salle d'urgence, l'agitation est palpable. Le poste de triage est envahi par des malades et leurs proches, tandis que les infirmières s'affairent à noter les noms. Derrière le rideau, un moniteur émet des bip réguliers. Un patient s'agite sur une civière, son visage crispé par la douleur. Sa compagne tente de le calmer, en vain. Dans le couloir, une infirmière passe, tenant un formulaire. Le médecin apparaît, demandant qu'on prépare le patient pour une perfusion. L'interphone crache des numéros de bracelets, des instructions urgentes. Tout autour, les gémissements se mêlent aux conversations à voix basse. Une femme s'impatiente, maugréant contre l'attente interminable. Les minutes s'égrènent, ponctuées par les bruits de la salle d'urgence."
+  },
+  {
+   "i": 3,
+   "text": "Dans la salle d'urgence, l'agitation est palpable. Au triage, une infirmière évalue rapidement les nouveaux arrivants, tandis que des patients s'impatientent sur des chaises d'attente. Le bruit. Des brancards s’alignent le long du couloir. Un médecin passe entre les boxes, ajustant des moniteurs, vérifiant des perfusions, tirant un rideau. Un patient respire avec difficulté, son compagnon marmonne une plainte à voix basse. L'infirmière répond aux appels de l'intercom, distribuant des bracelets, remplissant des formulaires. La tension monte. Un médecin revient, demandant à un patient d'attendre encore. Pendant ce temps, une infirmière explique pourquoi le processus prend du temps, assurant qu'on s'occupe de tous. Les minutes s'étirent."
+  },
+  {
+   "i": 4,
+   "text": "Dans la salle d'urgence, le bruit est incessant. Les infirmières, qui portent des bracelets de couleur, courent vers les lits roulants. Le temps file. L'attente est longue. Un homme, derrière la réception, tente de calmer une femme qui s'énerve. Les moniteurs affichent des signes vitaux instables. À chaque page annoncée par l'intercom, un médecin se précipite. Dans un box, un patient respire difficilement tandis que sa compagne remplit des formulaires. Tout autour, des rideaux occultent la vue sur les autres lits."
+  },
+  {
+   "i": 5,
+   "text": "Dans la salle d'urgence, l'agitation est palpable. Un homme aux traits tirés, qui attend depuis des heures, observe les infirmières et le médecin qui se déplacent rapidement entre les boxes. Il soupire, irrité par le temps interminable. À côté de lui, une femme s’agite, le visage marqué par l'anxiété. Elle tient fermement la main d'un patient en détresse, couvert de sueur. Derrière eux, un brancard glisse silencieusement dans le couloir. Les moniteurs bipent régulièrement, rythmant la tension ambiante. L'interphone résonne, annonçant des numéros de bracelets. Sur le comptoir de triage, les formulaires s'accumulent, attendant d'être remplis. Chaque seconde compte ici, où la vie et la mort se côtoient sans cesse."
+  },
+  {
+   "i": 6,
+   "text": "Dans la salle d'urgence, le bruit est constant. Un patient, qui porte un bracelet bleu, s’agite sur une chaise, tandis que son ami murmure des paroles apaisantes. Le médecin passe rapidement entre les boxes. Les infirmières vérifient les moniteurs. Une voix grésille dans l'intercom, appelant un spécialiste. Un rideau est tiré pour protéger l'intimité d'un malade en détresse. Son compagnon se plaint du temps d'attente. Des formulaires s'accumulent sur le bureau de triage. Les gouttes des perfusions tombent régulièrement. Les brancards alignés le long du couloir attendent leur tour."
+  },
+  {
+   "i": 7,
+   "text": "Dans la salle d'urgence bondée, l'atmosphère est tendue. Une infirmière, qui porte un brassard rouge, s’active autour des lits roulants alignés dans le couloir, tandis que le docteur consulte les moniteurs. Les patients attendent, assis sur des chaises inconfortables, sous le regard vigilant du personnel. Un homme, agité, demande à voir le médecin immédiatement, car son ami est en état de détresse. L’infirmière, qui tient un dossier, l’écoute patiemment. Les pages aux intercoms résonnent, brisant le silence oppressant. Le docteur décide d’examiner le patient, espérant soulager rapidement sa souffrance. Pendant ce temps, une autre infirmière prépare les formulaires nécessaires pour accélérer le processus. Le murmure constant des appareils renforce l'impression d'une urgence clinique palpable."
+  },
+  {
+   "i": 8,
+   "text": "Dans la salle d'urgence bondée, les bruits se mêlent aux cris. Le bureau de triage est encerclé par des patients anxieux, tandis qu'au-delà, une infirmière guide une civière. La tension monte, impatience palpable. Les sièges d'attente sont occupés par des silhouettes fatiguées. Un homme s'approche du comptoir, son visage marqué par l'inquiétude. Sa compagne, assise non loin, murmure une plainte à voix basse. Les moniteurs bipent, rythmant le silence. Le médecin passe rapidement entre les rideaux, une pile de formulaires à la main. À chaque appel de l'interphone, des poignets se marquent de bracelets colorés. Les secondes s'étirent, ponctuées par le murmure constant des conversations."
+  },
+  {
+   "i": 9,
+   "text": "Dans la salle d'urgence, l'agitation est palpable. Au triage, une infirmière examine rapidement un patient, alors qu'autour, les gens s'impatientent. L'attente semble interminable. Un homme agite une main, réclamant de l'aide. Dans le couloir, on entend le grincement des brancards. Un couple discute à voix basse, le visage marqué par l'anxiété. À chaque instant, les moniteurs émettent des bip incessants. Près d'une rideau tiré, un médecin s'apprête à examiner un cas critique. Des infirmières passent, portant des formulaires et des bracelets d'identification. Malgré le tumulte, chacun sait que chaque geste compte."
+  }
+ ]
+}

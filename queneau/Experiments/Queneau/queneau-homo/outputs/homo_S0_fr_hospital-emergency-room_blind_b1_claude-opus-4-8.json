@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 102.9,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans le service des Urgences après la tombée du soir, la salle avec ses quatre chaises métalliques alignées contre le mur accueillait les patients épuisés, tandis que dehors les brancards attendaient encore, immobiles, parce que rien ne s'était vraiment calmé. Le brancardier soupirait. Une infirmière au visage qu'illuminait derrière une lampe. Elle nous confia qu'elle redoutait cette nuit, si personne ne relayait quelqu'un. Le médecin qui nous entendait, fatigué. Bien qu'il enfilât la blouse froide, il s'avançait pourtant. Trois moniteurs bipaient soudainement ; ils réveillèrent Madame Vasseur près du couloir Delaunay. Elle était devant la porte, celle-ci nous appelant, elle s'était plainte du délai interminable dans le triage. Nous nous accoudâmes toi contre le comptoir et enfin."
+  },
+  {
+   "i": 1,
+   "text": "Vers les Urgences de la clinique du soir, le brancard de la salle deux longeait un couloir bondé, encombrant la file entière presque immobile, tandis que nous nous étions arrêtés déjà. La sonnette retentit. Un patient en fauteuil se plaignait devant le comptoir. Il se tordait sous une douleur que personne ne calmait. Le moniteur, lui, clignotait rouge. Comme une infirmière frôlait la civière voisine, elle repartait aussitôt. Trois soignants encore là nous apportaient réconfort près de Karim, sous une perfusion Ringer. Elle avait dans le brouhaha, elle, on l'aurait juré, retrouvé ce timbre familier de la voix. On les entendait passer par le rideau et ailleurs."
+  },
+  {
+   "i": 2,
+   "text": "Dès les urgences de la nuit des arrivées.\n\nLe brancard sous les trois portes battantes hospitalières de couloir encombrait la salle d'attente déjà pleine, quoique lorsque nous elle avait reçu tardivement.\n\nLes moniteurs sonnaient.\n\nUne infirmière de garde qui passait devant un rideau.\n\nElle lui expliquait à quelqu'un venait le patient tandis qu'on installait ailleurs.\n\nLe pansement qu'on posait serré.\n\nComme elle vérifiait les constantes vitales qu'elle notait vite.\n\nTrois bracelets pourtant déjà on nous remettait formulaire à Marseille dans le service Nord.\n\nElle était sous une perfusion qui se vidait, on devait surveiller la tension basse malgré la fatigue.\n\nNous nous plaignions ensemble devant le comptoir mais encore."
+  },
+  {
+   "i": 3,
+   "text": "Dans les Urgences de la ville de Rouen. Le brancard sous les trois barres métalliques rouillées de couloir traînait un patient blême, presque inerte, tandis que quand elle avait été poussée lentement. La perfusion coule. Le moniteur près duquel elle veillait sur la civière. Il lui restait de quoi calmer une angoisse quand on rassure quelqu'un. Le rideau qu'on avait tiré. Puisqu'on entend une sonnette lointaine qui retentit encore. Trois infirmières là aussi elles avaient signé le formulaire depuis Rouen jusqu'à la salle Curie. Elle était dans une bay où on la voyait attendre, était devenue une compagne inquiète sous les néons. On la voit là, avec un bracelet et ailleurs."
+  },
+  {
+   "i": 4,
+   "text": "Vers les Urgences de la clinique du Nord. La salle à cette dernière heure lourde de fatigue emplit les fauteuils bondés presque insupportables lorsque, quand elle-même est demeurée immobile. Le brancard attend. Un moniteur près d'elle bourdonne dans la travée. Elle nous montre où saigne la plaie tandis qu'on la panse. Le pansement, lui, se révèle inefficace. Que je regarde le bracelet blanc, il s'arrache doucement. Deux infirmières là aussi nous apportent secours vers Marc jusqu'à la baie Dupont. On était dans le couloir quand elle nous voit se glisser, avoir franchi les portes vitrées de la réception. Cela nous inquiète toutes vers le médecin ou encore."
+  },
+  {
+   "i": 5,
+   "text": "Dès les Urgences de la ville, à minuit.\n\nLe brancard près des trois lits vides accueille, sans mot, cette blessure profonde tandis que quand elle-même a saigné longtemps.\n\nL'infirmière court.\n\nLe médecin de garde lui répond depuis la baie.\n\nIl la rassure en lui expliquant les soins puisqu'il comprend tout.\n\nCette douleur, il la sent aiguë.\n\nQuand elle réclame une perfusion urgente, elle survient enfin.\n\nDeux moniteurs, presque trop, ils nous signalent l'arythmie de Durand sous une surveillance Martin.\n\nOn aurait, dans les couloirs, quiconque nous entendait, on devrait alerter le personnel disponible auprès du patient.\n\nOn les appelle rapidement vers le triage et vite."
+  },
+  {
+   "i": 6,
+   "text": "Dans les Urgences de la Pitié-Salpêtrière. Le brancard de la troisième heure demeurait immobile près du couloir, laissait une porte battante entrouverte comme si personne ne s'était présenté ainsi. Le moniteur bipait. Une infirmière de garde te réclamait auprès du poste. Elle nous répétait de lui apporter les bracelets tandis qu'on remplissait tout. Le médecin qui les voulait pressés. Puisqu'on entendait la sonnerie continue et retentir encore. Deux perfusions déjà simplement nous tenaient là, entre Dupont sous une civière Martin. Ils étaient dans le triage où ils prétendaient qu'on aurait dû noter le dossier complet sur un formulaire. On te réveillait toi devant la file mais déjà."
+  },
+  {
+   "i": 7,
+   "text": "Vers les Urgences de la ville aux bousculades. Le brancard près des trois portes battantes coulissantes ouvertes vers l'accueil bloquait le couloir central déjà saturé, tandis que dehors quelqu'un chacun avait patienté longtemps. Un moniteur clignotait. La perfusion sous l'écran qui goutte dans une poche. Elle lui montre à quelqu'un signalant le rythme quand personne n'entend rien. Le pouls que tous jugeaient irrégulier. Puisque nous attendions un bracelet plastifié que voici enfin. Trois infirmières encore vite se passaient dossier vers Martin depuis une bulle Delaunay. Il avait derrière la banque quelqu'un que quelque chose voulait avoir signalé le formulaire manquant sous le guichet. On lui remettait quelque chose sous une civière ou ailleurs."
+  },
+  {
+   "i": 8,
+   "text": "Vers les Urgences de la ville, sous une lumière de néon. Le couloir, dès les premières minutes nocturnes, semblait saturé de patients, alignant les brancards épuisés, terriblement immobiles, alors que, quelque part, on avait déclenché encore. Un moniteur clignotait. La sonnette de détresse que réclamait un homme. Il le savait, en attendant, redoutait cette urgence dont personne ne s'occupait vraiment. Le compagnon, lui, restait pâle. Quand il pressait le bouton rouge, personne ne venait pourtant. Trois formulaires, là, déjà, on lui tendait attente sous Marchand, dans le service Réanimation. Elle était dans une civière où elle, murmurant, avait exprimé la peine intolérable de son voisin. Il lui fallait quelqu'un devant le guichet ou immédiatement."
+  },
+  {
+   "i": 9,
+   "text": "Dans le service des Urgences de Saint-Rémi, la lumière du néon éclaire les couloirs surchargés de brancards où gémit un patient encore lucide, tant qu'il lui reste consciente. Une infirmière accourt. L'agitation du bloc s'étend vers les box. Elle lui promet de le soigner puisqu'on l'appelle enfin. Le médecin qui les rejoint semble pressé. Pendant qu'elle ausculte le corps souffrant, il consulte aussitôt. Trois moniteurs déjà pourtant les emplissent d'alarmes vers Béatrice sous une perfusion Ringer. Elle demeure sous la civière que le compagnon voit s'affoler tandis que patiente le vieux mari épuisé dans la salle. Il l'entend murmurer quelque chose à la fenêtre, mais encore."
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2",
+ "lang": "en",
+ "scenario": "security-checkpoint",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~29 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~15 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1.\nPeriod 5 (~11 words) clause architecture: 1 main clause; 1 adverbial clause; 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~9 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 open complement (infinitive); subordination nested up to depth 2.\nPeriod 7 (~12 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~18 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 9 (~19 words) clause architecture: 2 relative/adnominal clause; 1 main clause; 1 finite complement clause; 1 open complement (infinitive); subordination nested up to depth 4.\nPeriod 10 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 4.6,
+ "gens": [
+  {
+   "i": 0,
+   "text": "The terminal buzzed with hurried strides. To ensure swift passage, each traveler placed belongings, as instructed, into plastic bins. Security loomed. A scanner, which meticulously examined every item, stood tall. Before it, where travelers paused, a sign detailed the procedure. An officer motioned for a man, who nervously shuffled aside. His documents were inspected, then he was patted down. When the process concluded, the traveler nodded, relieved. Meanwhile, the queue moved, guided by signs and polite directives. Everyone proceeded, their faces a mix of anticipation and compliance."
+  },
+  {
+   "i": 1,
+   "text": "The terminal hummed with ceaseless chatter. Officers gestured for travellers, their belongings strewn in plastic bins, to proceed through the scanners. Next. A woman paused, her eyes scanning the signs. Behind the barrier, a man was flagged, his movements slow and deliberate. Security asked him to remove his jacket, placing it gently on the conveyor. Before he stepped aside, the officer politely requested his cooperation. After the wanding, he was directed to collect his items. Everything seemed to operate with mechanical precision. Documents scrutinized, the officer nodded, waving the traveller through. Despite the routine, a sense of tension lingered."
+  },
+  {
+   "i": 2,
+   "text": "The terminal buzzes with a steady hum. Travellers line up, each placing their belongings onto trays, eager to proceed through the checkpoint. Noise swells. A scanner glows, signaling the next person. An officer, whose eyes scan the crowd, notices a man fidgeting nervously. Before he speaks, the traveller is directed to a side area for further inspection. Here, the officer asks to see his documents, carefully inspecting each page. As instructed, the traveller stands still, hands raised, while the officer conducts a thorough pat-down. Signs and notices guide the flow, maintaining order amidst the chaos. Everyone follows the routine, aware of the rules. The process, though impersonal, is conducted with polite efficiency."
+  },
+  {
+   "i": 3,
+   "text": "The terminal hums with hurried footsteps. Passengers rush to place items, eager to clear the checkpoint quickly. Silence. A sign reads \"Liquids in clear bags,\" guiding travelers' actions. The scanner, which glows with soft hues, signals safety. Before the metal detector, a traveler pauses, ensuring no metal remains. An officer requests, with a nod, the removal of shoes, for thorough inspection. Once through, the flow resumes, as if nothing happened. The queue moves steadily, each person following the routine. A traveler, whose documents seem off, is asked politely to step aside, to verify details, and ensure compliance. Instructions echo, maintaining order."
+  },
+  {
+   "i": 4,
+   "text": "The terminal hummed with constant chatter. Officers scanned, instructing passengers to place items, before they stepped through. Lines snaked, tense. Travellers, whose bags revealed suspicious shadows, were waved aside. A man, clutching his passport, approached the desk, to explain. Before he spoke, the officer gestured, directing him. Rules were clear, posted everywhere. Security ensured safety, maintaining order. Two agents, after reviewing credentials, asked him quietly, to remove his jacket, for inspection. Clearance granted, he moved on, relieved."
+  },
+  {
+   "i": 5,
+   "text": "The terminal buzzes with urgency. Travellers queue, eager to place items, as alarms whisper warnings. Bags zip. A scanner hums, its light slicing shadows. Beyond, a metal detector stands, guarding paths. An officer motions, gesturing subtly, to a traveler aside. Documents checked, a wand trails softly. Signs loom, instructing, above the chaos. Commands echo, polite yet firm. The process flows, controlled, seamless."
+  },
+  {
+   "i": 6,
+   "text": "The queue snaked through the checkpoint, a river of travelers. To pass, each must place their bags, then step into the scanner’s embrace, where the machine hummed with inspection. Next. A sign beckoned, \"Please remove all items.\" Through the arch, a traveler walked, watched by eyes on monitors. Aside, an officer motioned, guiding someone out for a closer look, a brief pause. Before the desk, papers shuffled, questions asked, and a wand swept over the body. In this controlled space, voices were soft, polite, yet firm. Commands hung in the air, clear and concise. All moved with a choreographed rhythm, a dance of security and trust."
+  },
+  {
+   "i": 7,
+   "text": "The terminal buzzes with travelers. Each person, queuing with purpose, places belongings gently into plastic bins. Noise crescendos. Security barriers, like urban sentinels, guide the flow. Travelers, who carry tales in their bags, step through scanners. An officer, noticing a hesitation, gestures for a man to approach. He hands over documents, eyes wide. When the machine beeps, she conducts a thorough pat-down. Before the exit, signs direct movement with quiet authority. Efficiency reigns here, each step scripted."
+  },
+  {
+   "i": 8,
+   "text": "The terminal buzzes, bustling with travelers. A passenger places their bag onto the conveyor, stepping aside to remove shoes. Lines snake, barriers guiding. The scanner whirs, a metal detector beeps loudly. Beyond, an officer gestures, signaling a thorough check. A traveler nods, complying with the request. Before the desk, documents are inspected meticulously. An official tone, polite yet firm, directs the process. A wand traces outlines, every movement precise, ensuring safety. Clearance granted, the journey resumes smoothly."
+  },
+  {
+   "i": 9,
+   "text": "The terminal buzzes with travelers. To secure their passage, they must divest all items, placing them neatly into bins, which glide through the scanner’s watchful eye. Time ticks. Each step is governed by unseen rules. Security checks, where belts and shoes lie abandoned, create a brief pause. Officers, standing by with practiced ease, guide the flow. Before entering, visitors are reminded to clear all alarms. Instructions loom large on digital signs, directing the crowd. A traveler, singled out by fate, stands aside for further scrutiny, his documents examined under the officer’s meticulous gaze. With a courteous nod, he submits to the wanded touch, ensuring compliance. Security ensures the journey begins safely."
+  }
+ ]
+}

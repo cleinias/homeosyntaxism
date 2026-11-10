@@ -1,0 +1,56 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2",
+ "lang": "fr",
+ "scenario": "grocery-checkout",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~23 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~12 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 open complement (infinitive); subordination nested up to depth 2.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~14 words) clause architecture: 1 main clause; 1 open complement (infinitive); subordination nested up to depth 1.\nPeriod 9 (~18 words) clause architecture: 1 main clause; 1 adverbial clause; 1 finite complement clause; 1 open complement (infinitive); subordination nested up to depth 3.\nPeriod 10 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 2.7,
+ "gens": [
+  {
+   "i": 0,
+   "text": "À la hauteur du caissier, le rayon se déroulait en une étrange danse. Au-dessus de son crâne, le panneau numérique clignotait, signalant l’heure. Sous sa paume, la tablette cliquetait à intervalles réguliers, comme des battements de cœur mécanique. À ses pieds, le rouleau de produits s’étirait en long, tendu entre le tapis vert et la carte magnétique glissant à pleine vitesse. Entre les rayons, la file s’allongeait en un serpent obstiné. Un autre client tentait de franchir le rideau invisible, provoquant un sifflement inhabituel. La tablette sonnait chaque fois qu’un code barre se détachait, annonçant sa montée en température. À côté, le sac à provisions attendait, prêt à être balancé. Le panneau de commande s’éclairait lorsque l’on approchait, projetant une lumière froide sur la scène. Un murmure de cliquetis et de chiffres retentissait, résonnant dans l’air saturé de parfums d'aliments frais. L'appel au paiement venait de s'élever, entrecoupé par le ralenti de la transaction. La carte d'adhésion suggérait un voyage virtuel vers le compte de fidélité."
+  },
+  {
+   "i": 1,
+   "text": "Dans l'agitation du rayon des rayons, le chariot s'aventurait entre le panneau divisant et la carte à lecteur. Devant le guichet, le commissaire tendait un panier tandis que le lecteur de codes se mettait à grésiller. De derrière, une femme se frayait un chemin avec vigueur, pressant l'espace d'une petite lutte pour l'ordre. À l'oreille, le registre répétait son rituel : les bip-bip, la somme annoncée, les encouragements au paiement de carte."
+  },
+  {
+   "i": 2,
+   "text": "Dans la file de caisses en pleine heure creuse, le convoyeur se balançait sous la main de la caméra de barre, tandis que la caissière surveillait le panier, le lecteur de carte posé devant elle. Une autre file s'écrabouillait derrière, obstruant un peu la circulation. Sur le caisson métallique, la moniteuse émettait des sons brefs, l'affichage annonçait le total, et l'annonceur suggérait les points d'expérience."
+  },
+  {
+   "i": 3,
+   "text": "Dans l'immense file d'attente du rayon alimentaire, le robot de scanner scannait les codes-barres. Le caissier et la cliente se trouvaient dans l'espace réservé pour le bagagiste, à une table entre le distributeur de tickets et la rangée de sacs. L'autre client pressait le flanc de la file, faisant glisser une chaîne de cartons entre eux. Au-dessus des yeux des deux clients, un comptoir lumineux répétait son cycle mécanique. La caisse émettait des sons de clochettes. La somme annoncée s'affichait sur l'écran devant le caissier. Le système de fidélité déclenchait ses messages."
+  },
+  {
+   "i": 4,
+   "text": "Au cœur de ce rush d'affluence, la file de caissiers ressemblait à une danse endiablée. À son centre, un rayon de verre scintillait au niveau du sol, agité par le doux tic-tac d'une machine à barcodes. En face, l'espace se rétrécissait entre la file qui déroulait sa chaîne jusqu'au bout et les étagères bien alignées, où le bruit des caisses résonnait. Devant la caissière assise sur un tabouret, un panier d'outils en plastique gisait, entre une barrière divisante et un tapis roulant qui avançait lentement. Devant elle, une carte de fidélité oscillait dans le vent léger. Le client, avec son panier, s'était engagé dans la file, laissant la place pour l'autre inquiet. L'échange de regards se traduisait en une mince échelle humaine, sans bruit mais palpable. À chaque seconde, les claquements électriques accompagnaient la cadence de la caisse, annoncé par le tonnerre de la somme totale, puis par le bref cri de l'avertisseur pour le code de fidélité."
+  },
+  {
+   "i": 5,
+   "text": "La file d'attente au guichet se bousculait à cause de la foule de cette heure crevassée. Le tapis roulant avançait inexorablement sous les feux de la lumière, tandis que le lecteur de codes-barres sifflait mécaniquement. Au-delà du panneau séparateur, la piocheuse travaillait sans relâche, tandis que le lecteur de carte sifflotait un air tranquille. Devant un panneau de contrôle, la caissière et le client se côtoyaient, flanqués d'un grand panier d'aliments et d'une feuille de papier reçu. La file se bousculait, une autre clientèle s'interposait, empêchant l'autre de passer. Dans cette cacophonie de routine, les pépins de la caisse résonnaient, annonçaient le montant, et interpellait les clients pour leur piquette de fidélité."
+  },
+  {
+   "i": 6,
+   "text": "Au rush du supermarché, le guichet se remplit de mouvements ; la bande transporteuse file, la caméra de lecture de codes-barres fait des bonds rapides, tandis que l'espace bagage vibre et où se loge un panneau de lecture des cartes. Derrière un comptoir, un vendeur se relève pour accueillir une cliente qui tire une charge sur une charrette, séparée par une barre ; une facture est posée devant elle. Un autre acheteur s'approche en faisant pression, provoquant un brouhaha d'excitation dans la file. Le tourniquet de règlement entame son rituel : les bipsons résonnent dans l'air, le total s'affiche avec force et les messages de fidélité apparaissent au fond de l'écran."
+  },
+  {
+   "i": 7,
+   "text": "Au cœur d'un rayon animé, le caillou du silence se posait sur la feuille de papier, tandis que le chœur du cliquètement résonnait doucement. Le caillou, un objet inerte, se déplaçait à travers les mains de l'homme au sac à main, vers la barre de séparation, une silhouette en contrebas agitait sa propre feuille, déclenchant un murmure inhabituel dans le rang. Au loin, des pas pressés se rapprochaient, le bruit de la porte couvrant partiellement la musique d'accompagnement du magasin. À côté de lui, une carte de fidélité s'allumait de ses feux rouges ; la caisse, comme un automate, faisait entendre son beuglement régulier. Les chiffres s'alignaient en une longue ligne blanche, annonçant une somme, avant que la voix du système ne retentît, promettant une nouvelle affluence à l'entrée prochaine."
+  },
+  {
+   "i": 8,
+   "text": "Le caissier de l'aube, un client dans les bras, le lecteur d'articles et la ceinture de sécurité émaillés par les becs rythmés. La file se bouscule autour de la piste de courses, les sacs alignés comme des rangées d'arbres. Un autre acheteur s'immisce, un sourire crispé sur ses lèvres tandis que le client lutte pour garder son espace. À l'étage du total, le comptoir de la routine ronflait, les messages de fidélité et le cri de l'argent résonnaient à travers le bruit."
+  },
+  {
+   "i": 9,
+   "text": "Sur la longue file d'attente du magasin bondée, le tapis roulant se déplace avec rapidité, tandis que la caméra de scannage tire sur les codes-barres de l'emballage. Le comptoir de caisse et le panier de courses sont au centre ; à côté de lui, un panneau de diviseur empêche tout désordre. Au loin, une carte magnétique gît à portée de main. Un client se rue en avant, faisant glisser le panier par-dessus le rebord. L'autre acheteur, impatiente, s'introduit avec difficulté, provoquant une petite friction pour la place. Dans la routine quotidienne du caissier, le bip clignote, annonçant le total, tandis que les messages de fidélité apparaissent à l'écran."
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "it",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 25 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 10 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 17 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 7 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 10 (about 10 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\nPeriod 11 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 3.5,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nella sala di emergenza del pronto soccorso si stava svolgendo un frastuono incessante. Il banco di triage era affollato di pazienti che attendevano. I gomiti sulle ginocchia e le mani accavallate sui petti, altri attendevano nelle sedie da ospedale lunghe lunghe lunghe. Sul corridoio, i gavettini erano occupati da pazienti trasportati, ciascuno con una copertina bianca e un elenco delle loro condizioni. Le infermiere e il dottore scivolavano tra i bagni, osservando i monitor, i getti d'aria e l'incrocio di tendine nera e grigia. Un paziente, agitato e coperto da una coperta, urlava contro il suo accompagnatore. L'assistente registrò la sua preoccupazione per la sua aspettativa. Sul registro clinico dell'urgenza, un intonatore interno squillava, le manette pulsavano sui polsi dei pazienti e i moduli venivano compilati."
+  },
+  {
+   "i": 1,
+   "text": "Nella corsia d'urgenza del pronto soccorso, la calca era feroce. Altri pazienti ansimavano accanto ai tavoli, mentre i monitor controllavano i battiti cardinale e il respiro. La porta dello sussiego era sempre aperta, le gommate dei goniatori oscillavano lungo il corridoio. Il medico e i nurse correvano tra i bagni, dietro cui erano appese i tubicini. Sulla scrivania, un registro della gravità clinica registrava intercotti con numeri e dettagli. Un paziente agitato cercava di tranquillizzare la sua compagna, lamentando l'attesa infinita. Allo schermo dell'intercom, una voce automatica richiedeva aggiornamenti. Sotto una cortina arretrata, un paziente sventolava un foglio di forma cliniche."
+  },
+  {
+   "i": 2,
+   "text": "Nell'ufficio di triage, una fila di pazienti si muove silenziosa tra gli schieramenti di sedie d'attesa e i girelli che si affacciano lungo il corridoio. Le infermiere e l'urgenza corrono da una bazione all'altra, le telemedicine in tensione e il lenzuolo rivelato dietro un tendaggio. Una persona affranta viene condotta da una compagna, la voce del compagno impaziente. Dalla scrivania di riferimento scatta un intercetto: schedari di crisi, bandierine di sottoscrizione e documenti che vagano."
+  },
+  {
+   "i": 3,
+   "text": "In corsia ospedaliera il traffico è al vertice; la seggiola di emergenza è occupata, il corridoio pieno di lettini e camere d'ospedale. Le infermiere e il dottore si muovono tra i baini; apparecchi monitorati, siringhe, tende tirate. Un paziente ansioso cerca conforto presso una compagna; si lamenta della lunga attesa. Al registro clinico la urgenza è registrata; intercom suonato, bandiera alzata, documenti da compilare."
+  },
+  {
+   "i": 4,
+   "text": "Nell'ansia del pronto soccorso, il dottore si affrettava lungo il corridoio, monitorando i circuiti sullo schermo. Le infermiere passavano con urgenza da una banchina all'altra, leggendo i registri di urgenza dalle loro scrivanie. La sala attesa era piena di letti vuoti e pazienti agitati, alcuni seduti nella stanchezza, altri su ghiribizzi attaccati ai fili. In un angolo, un uomo e una donna erano seduti, discutendo sconsolatamente della loro insoddisfazione. Dietro di loro, il medico registrò con cura il caso del paziente a bordo del lettino, annotando i sintomi e la lista delle cure mediche. Il compagno continuava a chiamare l'interfono, cercando di ottenere risposte. Gli ultimi segnali pulsavano sui monitor, un segno vivido dell'attività incessante. Sotto il pallone bianco che nascondeva il letto, le cartelline dei pazienti erano disposte in ordine, come uno specchio dell'ordine clinico. Nel corridoio, i rumori degli esseri umani creavano un mosaico costante di sofferenze, speranze e curiosità."
+  },
+  {
+   "i": 5,
+   "text": "Nel corridoio del pronto soccorso, il dramma scorre tra la targa di accettazione e i letti girevole. Le infermiere e il medico si spostano tra le stanze, con monitor, cateter e tendine da letto attaccate. Un paziente afflitto batte impaziente le mani, mentre il suo compagno protesta contro l'attesa prolungata. Lungo il muro di fianco, un registratore indica l'urgenza diagnostica, con il segnale di interruzione telefonica, le bandierine sulla pancia e i fogli che svolazzano. Un'infermiera arriva con una camicia azzurra, portando una borsa d'azione per la pressione arteriosa. Il paziente grida per il dolore mentre il compagno lo stringe tra le braccia, chiedendo informazioni sulle procedure di rianimazione."
+  },
+  {
+   "i": 6,
+   "text": "Nell'ambiente sconfortante del reparto di emergenza della nostra ospedale, una delle ore più affollate, un'infermiera si muove tra i letti, maneggiando con destrezza una siringa. Sul tavolo dietro di lei, il monitor segnala un battito cardiaco lievemente accelerato. In fondo al corridoio, c'erano i giri di sostegno, fiancheggiati da ghiacciari e pazienti che attendevano. Una coppia, la donna colpita dal terrore, sussurrava a suo marito: \"Non posso più aspettare. Non credo che lo stiamo facendo giusto.\" L'enfatico annuncio su dell'interfono annunciava ulteriori interruzioni. Altri pazienti si precipitavano verso la porta, le loro facce contrite. Su una scrivania, l'infermiera compilava rapidamente i registri clinici, inserendo in forma automatica numeri e sigilli di sicurezza. Altri pazienti venivano trasferiti in banchi, dove le infermiere supervisarono con cura i parametri vitali, mentre un dottore osservava attraverso la tendina."
+  },
+  {
+   "i": 7,
+   "text": "Nell'ospedale, la corsia di emergenza era affollata. Al banco di triage, le sedie erano occupate da pazienti e curiosi. Lungo il corridoio, goni affiancati sporgevano dai lettini. Dalla stanza accanto si leva una grida acuta, seguita da un sospiro di compassione. Un dottore e alcune infermiere scorrevano tra i baino con rapidità svelta. Dietro di loro, monitorizzavano pazienti con puntatori, infusi e cuscini neri. Oltre la tenda, una figura stava tentando di parlare, ma era costretta dal mormorio insistente del mondo fuori. Lì, sul registro di priorità clinica, il segnale dell'intercom squillava ogni minuto, i braccialetti degli ospiti erano incisi a caratteri chiari, e davanti al banco si trovavano i blocchi di assegnazione delle cure."
+  },
+  {
+   "i": 8,
+   "text": "In un ospedale in piena corsa, al banco di triage la folla scorreva, sedie attaccate lungo il corridoio e gavette disposte sui fianchi. La dottorezzava si muoveva tra le banchine con determinazione, monitori e cateteri accanto. Un paziente agitato conduceva un compagno, lamentandosi della lunga attesa. Sotto la tenda veniva registrata l'urgenza medica, intercambi di squilli elettronici, bandierine a braccio. Sul registro, i numeri di pazienti e i fogli da riempire."
+  },
+  {
+   "i": 9,
+   "text": "Nella corsia d'urgenza dell'ospedale affollato di clienti, una coppia si trova nella sala d'attesa, vicino ai letti girevole e ai corridoi gremiti di goni. Un infermiere corre tra i bai, facendo segnali alla dottoressa con la tromba. Sul monitor, un numero rosso lampeggia mentre le camere del respiratore pompano lento e regolare. Il compagno della paziente mormora, frustrato, mentre la donna cerca disperatamente di calmarsi, agitata da sibili intermittenti. Nel registro di urgenza, il suono dello schermo intercom si fa più forte, le pagine di registri diagnostici vengono richieste da colpi sul banco, i faldoni delle diagnosi vengono aperti e riavvolti per un'occhiata accurata."
+  }
+ ]
+}

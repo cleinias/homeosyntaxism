@@ -8,7 +8,7 @@ Copyright (c) 2026 Manuela Marchesini and Stefano Franchi.
 
 ---
 
-## Content — `spec/`, `results/`, `texts/`, `docs/`
+## Content — `spec/`, `results/`, `texts/`, `docs/`, `queneau/Experiments/`
 
 **License**: Creative Commons Attribution-ShareAlike 4.0 International
 **SPDX identifier**: `CC-BY-SA-4.0`
@@ -26,10 +26,12 @@ material — including commercially — under the following terms:
   your contributions under the same license as the original.
 
 The Italian source text in `texts/` is from Manzoni, *I promessi sposi* (1840), and is in the
-**public domain**. (The English source used in the paper is in copyright and is **not**
-included here — see the README.)
+**public domain**. The English incipit (revised Colquhoun translation) and the Queneau passage
+with its English and Italian translations, in `queneau/Experiments/Queneau/queneau_prototype/`,
+are in copyright and are **not** covered by this license: they are short excerpts quoted for
+scholarly analysis (see the README).
 
-## Software — `scripts/*.py`, `scripts/*.sbatch`
+## Software — `scripts/*.py`, `scripts/*.sbatch`, `queneau/scripts/`
 
 **License**: GNU General Public License version 3
 **SPDX identifier**: `GPL-3.0-only`
@@ -53,8 +55,8 @@ CC-BY-SA-4.0, same terms as the content.
 For tooling that scans license metadata via the [REUSE specification](https://reuse.software/),
 the defaults are:
 
-- `scripts/*.py`, `scripts/*.sbatch`: `SPDX-License-Identifier: GPL-3.0-only`
-- `spec/**`, `results/**`, `docs/**`, `*.md`: `SPDX-License-Identifier: CC-BY-SA-4.0`
+- `scripts/*.py`, `scripts/*.sbatch`, `queneau/scripts/**`: `SPDX-License-Identifier: GPL-3.0-only`
+- `spec/**`, `results/**`, `docs/**`, `queneau/Experiments/**`, `*.md`: `SPDX-License-Identifier: CC-BY-SA-4.0`
 
 Per-file headers are not yet inserted; the declarations in this `LICENSE.md` are authoritative
 for the v1 deposit.

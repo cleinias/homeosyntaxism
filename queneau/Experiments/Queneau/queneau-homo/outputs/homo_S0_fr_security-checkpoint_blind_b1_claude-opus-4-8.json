@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 101.7,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans le hall Charles-de-Gaulle à l'heure du contrôle. La file entre les deux barrières métalliques ondoyantes de fatigue épuise les voyageurs pressés, presque muets, tandis que quiconque nous aurons appelé avance lentement. Un agent surveille. La consigne de sécurité vous impose de la discipline. Chacun se déleste sur soi, vide ses poches quand on lui ordonne. Le portique vous nous rend nerveux. Lorsque nous franchissons cette porte étroite, quelque chose bipe encore. Deux passagers ainsi soudain nous vous désignons parmi ceux devant la borne Roissy. Vous êtes dans la salle où l'on vous fait vous placer, on doit tendre les documents froissés vers un fonctionnaire. Vous nous palpez avec, selon la procédure et méthodiquement."
+  },
+  {
+   "i": 1,
+   "text": "Dès le Terminal sous le contrôle de sécurité. La file devant les trois portiques métalliques ouverts sous verrière encombre le hall central, presque interminable, tandis que chacun nous avons attendu longtemps. Un agent surveille. Le passage vers l'écran nous conduit sous une arche.\n\nNous nous délestons dans un bac déposant nos affaires quand on nous rappelle. La consigne, elle nous paraît stricte. Puisqu'elle exige une pièce officielle, on obéit aussitôt. Deux voyageurs alors donc nous nous présentons documents devant Sécurité sous la palette Rapiscan. On est dans la zone où nous laissons nous fouiller pour vérifier le geste précis sur les vêtements. On nous palpe encore contre le comptoir et poliment."
+  },
+  {
+   "i": 2,
+   "text": "Dès le Terminal sous la lueur des enseignes. La file devant les deux portiques automatiques, saturée dès l'aube, forme un serpent hésitant, presque immobile, tandis que chacun se voit avancer lentement. Les bacs glissent. Le dépôt des affaires nous impose de la patience. Nous nous délestons de tout, abandonnant la ceinture puisqu'on nous l'ordonne. L'agent que je crois pressé. Alors je franchis le seuil aimanté qui sonne aussitôt. Deux mains d'abord, puis on me fait signe vers Sécurité sur le portique Delta. Je suis dans la travée qu'on me tend, palpé, ausculté selon le protocole strict de la fouille. On me rend tout, hormis le passeport, et enfin."
+  },
+  {
+   "i": 3,
+   "text": "Dès le Terminal sous le hall de contrôle, la file devant les trois portiques automatiques inquiets de bagages exige une patience presque totale, car bien que nous avancions lentement. Les tapis défilent. Le voyageur devant moi dépose dans le bac. Il se courbe pour y ranger ses affaires tandis qu'il retire tout. Le manteau lui-même paraît suspect. Quand elle scrute le sac oublié, elle rappelle sèchement. Trois passagers déjà donc on désigne près du scanner devant la barrière métallique. Vous êtes derrière la borne qui vous invite, vous demande de présenter les documents froissés vers le comptoir. On me palpe soigneusement dans le silence et là."
+  },
+  {
+   "i": 4,
+   "text": "Dans le hall Charles-de-Gaulle à l' heure de pointe. Une file devant les trois portiques métalliques ouverts au contrôle attend son passage réglementaire, patiemment résignée, quoique lorsque nul autre ne soit pressé. Le tapis avance. Le bac de plastique lui parvient sur le comptoir. Chacun y dépose, dans lui vidant les poches, tandis qu' il regarde ailleurs. Un agent le lui indique sévère. Quand vous franchissez la borne lumineuse, elle sonne encore. Deux passagers pourtant déjà se se voient tirés hors de rang par la palpation systématique. On est devant le guichet où l' on nous somme de présenter les papiers exigés à ce détecteur. Vous les gardez près de vous ou dessous."
+  },
+  {
+   "i": 5,
+   "text": "Dès le petit Roissy à la première heure, le contrôle des files se déroule sous une haute lumière. La queue devant les deux portiques automatiques d'accès frôle les barrières métalliques presque immobiles, tant que nul voyageur n'a franchi vraiment. Les bacs circulent. Le tapis de sécurité les emporte vers un scanner. Chacun se penche sur soi, vide ses poches quand il retire sa ceinture. Un agent le lui désigne, courtois. Bien qu'il montre le titre valable, on le fouille encore. Deux mains, doucement et méthodiquement, le lui parcourent, palpation vers Orly comme une routine Schengen. Il est devant la borne où on le prie de lever les bras larges sous le détecteur. On le laisse repartir enfin, vers le comptoir, et ailleurs."
+  },
+  {
+   "i": 6,
+   "text": "Vers le Terminal de la frontière. La file devant les trois barrières mobiles ondulait vers l'aube, gonflait ses remous nerveux presque impatients quand pourtant chacun nous restait figé là. Un contrôleur approche. La consigne de vigilance nous parvient sous le grésillement. Nous nous délestons de nos poches, vidons les bacs et les glissons dedans. Le portique qui nous scrute, implacable. Puisqu'il sonne le corps suspect, on avance encore. Un voyageur, soudain trop, on le retire hors du tapis vers Interpol après une fouille Sécurité. Il fut sur la banquette où on le somme, il devra présenter les papiers exigés sous la palpation. On me tâte lentement contre le détecteur mais posément."
+  },
+  {
+   "i": 7,
+   "text": "Dans le hall Roissy à la douane du matin. La file devant les trois portiques métalliques luisants sous néon dessine une lente cohue presque immobile, car quoique tous nous soyons avancés déjà. La barrière coulisse. Le bac de plastique que déposent sur le tapis. Nous chacun défaisons de quoi enlevons la ceinture avant qu'on scanne tout. Le détecteur qui nous rend nerveux. Puisqu'on franchit le seuil étroit qui bourdonne encore. Un voyageur soudain là me on prie d'écart vers Sécurité selon le protocole Vigipirate. On est devant le comptoir qui nous fouille, on laisse contrôler les papiers valides sous la palpation. On me sonde encore avec un magnétomètre et poliment."
+  },
+  {
+   "i": 8,
+   "text": "Vers le terminal après la fouille du matin.\n\nLes voyageurs devant les deux portiques métalliques ouverts sous surveillance forment une file inquiète, tellement longue que jamais elle ne se sera dissoute vraiment.\n\nL'agent surgit.\n\nUn homme de la queue se détache vers la barrière.\n\nIl lui montre à celle-ci l'insigne que tous connaissent.\n\nLa procédure les vous rend impersonnels.\n\nQuand on présente les documents froissés, on avance lentement.\n\nDeux minutes plus tard, elle vous tend l'autorisation de Genève par le poste Delta.\n\nIl est dans le bac que je lui pose, on doit vider ces effets épars sous le scanner.\n\nOn te palpe entièrement contre la cloison, mais doucement."
+  },
+  {
+   "i": 9,
+   "text": "Dès le Terminal sous la clarté du matin, la file devant les trois portiques métalliques luisants sous l'enseigne annonce une attente longue, quoique lorsque tout aura défilé lentement. Les bacs circulent. Le tapis de contrôle nous glisse vers un scanner. Nous nous approchons de lui, présentons nos papiers tandis qu'il examine chacun. La consigne, elle nous paraît sévère. Puisqu'on retire un objet suspect, on avance encore. Un voyageur, calmement, se voit désigné aussitôt vers Berlin par une agente Duval. Elle est devant le tapis, on la fouille, on l'aura palpée d'un geste discret sur le seuil. On la laisse repartir enfin vers la sortie, et voilà."
+  }
+ ]
+}

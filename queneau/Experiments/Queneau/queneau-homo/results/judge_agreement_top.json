@@ -1,0 +1,545 @@
+{
+ "judge": "mistral-large-2512",
+ "items": [
+  {
+   "rung": "S0",
+   "cell": "S0_en_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 4,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_fr_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 2,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 0.7,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_fr_hospital-emergency-room_blind_ladderS0_Qwen_Qwen2.5-7B-Instruct",
+   "i": 8,
+   "lang": "fr",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.7,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_fr_hospital-emergency-room_blind_ladderS0_Qwen_Qwen2.5-32B-Instruct",
+   "i": 1,
+   "lang": "fr",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.4,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_it_grocery-checkout_blind_ladderS0_Qwen_Qwen2.5-32B-Instruct",
+   "i": 9,
+   "lang": "it",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_en_grocery-checkout_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 2,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_en_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 3,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 0.4,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_fr_hospital-emergency-room_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 7,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_fr_hospital-emergency-room_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 8,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_it_hospital-emergency-room_blind_ladderS0_Qwen_Qwen2.5-32B-Instruct",
+   "i": 2,
+   "lang": "it",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.6,
+   "mistral": 0.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_it_hospital-emergency-room_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 5,
+   "lang": "it",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_fr_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-7B-Instruct",
+   "i": 4,
+   "lang": "fr",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.4,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_en_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-7B-Instruct",
+   "i": 9,
+   "lang": "en",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_en_hospital-emergency-room_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 9,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "S0",
+   "cell": "S0_fr_grocery-checkout_blind_ladderS0_Qwen_Qwen2.5-72B-Instruct",
+   "i": 3,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_it_hospital-emergency-room_blind_ladderD0soft_Qwen_Qwen2.5-32B-Instruct",
+   "i": 8,
+   "lang": "it",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_fr_security-checkpoint_blind_ladderD0soft_Qwen_Qwen2.5-7B-Instruct",
+   "i": 3,
+   "lang": "fr",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.7,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_fr_hospital-emergency-room_blind_ladderD0soft_Qwen_Qwen2.5-72B-Instruct",
+   "i": 4,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_fr_grocery-checkout_blind_ladderD0soft_Qwen_Qwen2.5-32B-Instruct",
+   "i": 5,
+   "lang": "fr",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.3,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_fr_grocery-checkout_blind_ladderD0soft_Qwen_Qwen2.5-72B-Instruct",
+   "i": 0,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_fr_hospital-emergency-room_blind_ladderD0soft_Qwen_Qwen2.5-7B-Instruct",
+   "i": 5,
+   "lang": "fr",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.7,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_en_grocery-checkout_blind_ladderD0soft_Qwen_Qwen2.5-7B-Instruct",
+   "i": 3,
+   "lang": "en",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.6,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_fr_security-checkpoint_blind_ladderD0soft_Qwen_Qwen2.5-72B-Instruct",
+   "i": 4,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_en_security-checkpoint_blind_ladderD0soft_Qwen_Qwen2.5-32B-Instruct",
+   "i": 6,
+   "lang": "en",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_it_security-checkpoint_blind_ladderD0soft_Qwen_Qwen2.5-72B-Instruct",
+   "i": 3,
+   "lang": "it",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_fr_grocery-checkout_blind_ladderD0soft_Qwen_Qwen2.5-32B-Instruct",
+   "i": 7,
+   "lang": "fr",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_it_hospital-emergency-room_blind_ladderD0soft_Qwen_Qwen2.5-72B-Instruct",
+   "i": 1,
+   "lang": "it",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_it_hospital-emergency-room_blind_ladderD0soft_Qwen_Qwen2.5-72B-Instruct",
+   "i": 6,
+   "lang": "it",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_it_hospital-emergency-room_blind_ladderD0soft_Qwen_Qwen2.5-32B-Instruct",
+   "i": 7,
+   "lang": "it",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D0",
+   "cell": "D0_it_grocery-checkout_blind_ladderD0soft_Qwen_Qwen2.5-72B-Instruct",
+   "i": 5,
+   "lang": "it",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_en_hospital-emergency-room_blind_ladderD2c_Qwen_Qwen2.5-72B-Instruct",
+   "i": 1,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": null
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_fr_hospital-emergency-room_blind_ladderD2c_Qwen_Qwen2.5-72B-Instruct",
+   "i": 1,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_it_hospital-emergency-room_blind_ladderD2c_Qwen_Qwen2.5-72B-Instruct",
+   "i": 4,
+   "lang": "it",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_it_grocery-checkout_blind_ladderD2c_Qwen_Qwen2.5-32B-Instruct",
+   "i": 3,
+   "lang": "it",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_fr_security-checkpoint_blind_ladderD2c_Qwen_Qwen2.5-72B-Instruct",
+   "i": 0,
+   "lang": "fr",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 0.6,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_it_hospital-emergency-room_blind_ladderD2c_Qwen_Qwen2.5-32B-Instruct",
+   "i": 3,
+   "lang": "it",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_it_security-checkpoint_blind_ladderD2c_Qwen_Qwen2.5-7B-Instruct",
+   "i": 3,
+   "lang": "it",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_en_security-checkpoint_blind_ladderD2c_Qwen_Qwen2.5-32B-Instruct",
+   "i": 3,
+   "lang": "en",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_en_grocery-checkout_blind_ladderD2c_Qwen_Qwen2.5-32B-Instruct",
+   "i": 2,
+   "lang": "en",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_fr_hospital-emergency-room_blind_ladderD2c_Qwen_Qwen2.5-32B-Instruct",
+   "i": 0,
+   "lang": "fr",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.7,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_fr_hospital-emergency-room_blind_ladderD2c_Qwen_Qwen2.5-7B-Instruct",
+   "i": 1,
+   "lang": "fr",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.6,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_fr_grocery-checkout_blind_ladderD2c_Qwen_Qwen2.5-7B-Instruct",
+   "i": 2,
+   "lang": "fr",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.6,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_it_grocery-checkout_blind_ladderD2c_Qwen_Qwen2.5-7B-Instruct",
+   "i": 8,
+   "lang": "it",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_it_hospital-emergency-room_blind_ladderD2c_Qwen_Qwen2.5-72B-Instruct",
+   "i": 8,
+   "lang": "it",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D2",
+   "cell": "D2c_en_security-checkpoint_blind_ladderD2c_Qwen_Qwen2.5-72B-Instruct",
+   "i": 9,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_en_hospital-emergency-room_ladderD2_Qwen_Qwen2.5-32B-Instruct",
+   "i": 7,
+   "lang": "en",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_fr_hospital-emergency-room_ladderD2_Qwen_Qwen2.5-32B-Instruct",
+   "i": 1,
+   "lang": "fr",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.7,
+   "mistral": null
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_it_grocery-checkout_ladderD2_Qwen_Qwen2.5-72B-Instruct",
+   "i": 9,
+   "lang": "it",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_fr_grocery-checkout_ladderD2_Qwen_Qwen2.5-32B-Instruct",
+   "i": 7,
+   "lang": "fr",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 0.4,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_en_hospital-emergency-room_ladderD2_Qwen_Qwen2.5-72B-Instruct",
+   "i": 7,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_en_grocery-checkout_ladderD2_Qwen_Qwen2.5-72B-Instruct",
+   "i": 2,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_it_grocery-checkout_ladderD2_Qwen_Qwen2.5-7B-Instruct",
+   "i": 6,
+   "lang": "it",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_en_grocery-checkout_ladderD2_Qwen_Qwen2.5-72B-Instruct",
+   "i": 1,
+   "lang": "en",
+   "model": "Qwen2.5-72B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_it_security-checkpoint_ladderD2_Qwen_Qwen2.5-32B-Instruct",
+   "i": 1,
+   "lang": "it",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_fr_security-checkpoint_ladderD2_Qwen_Qwen2.5-7B-Instruct",
+   "i": 6,
+   "lang": "fr",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.7,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_it_grocery-checkout_ladderD2_Qwen_Qwen2.5-32B-Instruct",
+   "i": 4,
+   "lang": "it",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_it_security-checkpoint_ladderD2_Qwen_Qwen2.5-7B-Instruct",
+   "i": 9,
+   "lang": "it",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_en_grocery-checkout_ladderD2_Qwen_Qwen2.5-32B-Instruct",
+   "i": 7,
+   "lang": "en",
+   "model": "Qwen2.5-32B-Instruct",
+   "sonnet": 1.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_it_grocery-checkout_ladderD2_Qwen_Qwen2.5-7B-Instruct",
+   "i": 9,
+   "lang": "it",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.0,
+   "mistral": 1.0
+  },
+  {
+   "rung": "D3",
+   "cell": "D2_en_security-checkpoint_ladderD2_Qwen_Qwen2.5-7B-Instruct",
+   "i": 2,
+   "lang": "en",
+   "model": "Qwen2.5-7B-Instruct",
+   "sonnet": 0.6,
+   "mistral": 1.0
+  }
+ ]
+}

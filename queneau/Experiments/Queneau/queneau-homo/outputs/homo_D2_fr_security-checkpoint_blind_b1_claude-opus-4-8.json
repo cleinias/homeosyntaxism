@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2",
+ "lang": "fr",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~23 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~12 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 open complement (infinitive); subordination nested up to depth 2.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~14 words) clause architecture: 1 main clause; 1 open complement (infinitive); subordination nested up to depth 1.\nPeriod 9 (~18 words) clause architecture: 1 main clause; 1 adverbial clause; 1 finite complement clause; 1 open complement (infinitive); subordination nested up to depth 3.\nPeriod 10 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 86.5,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "La file s'étirait sous les néons blancs. Les voyageurs, que la fatigue rendait dociles, avançaient lentement vers les barrières dès qu'un agent leur adressait un signe bref de la main. Un tapis roulant grondait. Chacun déposait ses affaires dans les bacs. Il fallait tout retirer, les ceintures que l'on rangeait pêle-mêle près des ordinateurs. On m'invitait à passer, les bras levés. Quand le portique sonna, un contrôleur me fit signe. Une inspectrice s'approcha pour examiner mes papiers avec une courtoisie glaciale. Elle passa le détecteur le long de mon corps tandis qu'elle expliquait, d'un ton neutre, que la procédure exigeait de vérifier chaque passager. Les panneaux affichaient les mêmes consignes indifférentes."
+  },
+  {
+   "i": 1,
+   "text": "La file s'étirait devant les barrières métalliques. Un agent, dont l'uniforme signalait l'autorité, faisait avancer les voyageurs lentement tandis que les bacs glissaient sur le tapis roulant. Chacun se dévêtait. Ceintures, montres et pièces tombaient dans les plateaux. On priait les passagers de retirer leurs chaussures, que les portiques détectaient au moindre métal. Une voix demandait d'approcher pour être fouillé. Quand mon tour arriva, l'agent me fit signe. On me pria de lever les bras pendant que le détecteur balayait mon corps. L'agent, avec une courtoisie glaciale, me signifia que je devais patienter afin de laisser vérifier mes papiers une dernière fois. Les panneaux répétaient leurs consignes muettes."
+  },
+  {
+   "i": 2,
+   "text": "La file s'étirait sous les néons blancs. Un agent, qui vérifiait chaque passeport avec lenteur, désignait les voyageurs un à un tandis que la sirène du portique retentissait encore. On avançait péniblement. Les bacs gris glissaient vers le scanner. Chacun devait déposer ses affaires dans ces récipients que la bande transportait. Une femme s'arrêta, sommée de retirer sa ceinture. Quand le détecteur sonna, l'homme leva docilement les bras. Le contrôleur s'approcha pour passer le bâton le long du corps. Il murmura une formule polie, bien que son regard fixât l'écran où l'ombre d'un objet paraissait surgir sous le tissu. La courtoisie de l'autorité restait glaciale."
+  },
+  {
+   "i": 3,
+   "text": "La file s'étirait sous les lampes froides. Les voyageurs, qui piétinaient depuis une heure devant les barrières, avançaient lentement dès que l'agent leur faisait signe. Un bac glissa. Chacun vidait ses poches sans un mot. Il fallait retirer sa ceinture, son manteau, tout objet qui pouvait sonner. On me pria d'ôter mes chaussures pour passer. Quand le portique retentit, un contrôleur s'approcha de moi. Une femme fut priée de lever les bras pour la fouille. L'homme examina mes papiers pendant qu'une voix annonçait que la file devait rester derrière la ligne jaune, sans franchir le seuil. Le détecteur promené glissa le long de mes flancs."
+  },
+  {
+   "i": 4,
+   "text": "Le hall bourdonne dès la première heure. La file, que scinde une barrière rétractable, avance lentement tandis que chaque voyageur redoute l'attente. Les bacs glissent. On y dépose vestes, montres, ceintures. Un agent nous invite à passer sous le portique qui clignote. Une femme s'arrête, obligée de lever les bras. Quand l'alarme retentit, l'officier l'écarte du flux. Un contrôleur s'approche pour parcourir ses papiers du regard. Il annonce, sur ce ton neutre que réclame l'usage, qu'il devra vérifier ses poches avant de la libérer. La courtoisie administrative demeure impeccable."
+  },
+  {
+   "i": 5,
+   "text": "La file s'allonge sous les néons blafards. Le voyageur qui patiente depuis une heure avance lentement, tandis que l'agent, derrière sa vitre, examine chaque document avec une lenteur exaspérante. On approche. Les bacs gris glissent sur les rouleaux. Il faut déposer ses affaires dans ces plateaux qu'un tapis emporte. Un panneau interdit de franchir sans autoriser le contrôle. Quand le portique sonne, une femme est écartée. On lui demande de lever les bras pour la palpation. L'officier passe le détecteur le long du corps, murmurant que la procédure est brève et qu'il faudra patienter encore un instant. La courtoisie impersonnelle habille chaque geste."
+  },
+  {
+   "i": 6,
+   "text": "La file s'allonge sous les néons blafards. Le voyageur qui pose son manteau sur le tapis avance lentement, tandis qu'une voix diffuse répète les mêmes consignes. Les bacs glissent. Chacun dépose ses clés, sa ceinture. On l'invite à retirer ses chaussures pour franchir le portique qui clignote soudain. Un agent s'approche, prêt à vérifier. Quand l'alarme retentit, l'homme s'immobilise net. Le fonctionnaire lui demande de lever les bras. Il murmure, d'un ton neutre, que la fouille est de routine et l'invite à patienter sans bouger. Le détecteur balaie ses poches vides."
+  },
+  {
+   "i": 7,
+   "text": "La file s'étirait sous les néons blafards. Les voyageurs, qui traînaient leurs valises fatiguées, avançaient lentement vers les portiques dès que l'agent leur faisait signe d'un geste las. On patiente. Chacun dépose ses affaires dans les bacs. Il fallait retirer sa ceinture, ses chaussures que le règlement condamnait sans exception. Un homme s'arrête, sommé de vider ses poches. Quand le détecteur sonna, l'officier releva la tête. On l'écarta de la colonne pour vérifier ses documents froissés. Le contrôleur lui demanda calmement qu'il levât les bras, promenant sur son torse le bâton qui grésillait comme un insecte agacé. La courtoisie impersonnelle ordonnait tout."
+  },
+  {
+   "i": 8,
+   "text": "La file avançait lentement vers les barrières.\n\nUn agent, dont l'uniforme paraissait trop neuf, contrôlait chaque passager quand la sonnerie du portique retentissait sans raison apparente.\n\nLes bacs défilaient.\n\nChacun y déposait ceintures, montres et clés.\n\nOn nous priait de vider nos poches, geste que tout le monde répétait machinalement.\n\nLe voyageur qu'on écartait devait lever les bras.\n\nComme les documents semblaient conformes, l'officier hésita brièvement.\n\nL'appareil balayait le corps sans jamais frôler la peau.\n\nBien que la courtoisie fût impeccable, je sentis que cette fouille cherchait à réduire chacun au silence.\n\nLes instructions résonnaient au-dessus des têtes anonymes."
+  },
+  {
+   "i": 9,
+   "text": "La file avançait lentement vers les portiques.\n\nUn agent, qui surveillait le tapis roulant depuis son estrade, désignait chaque voyageur d'un geste sec, tandis que la sonnerie du détecteur retentissait sans relâche.\n\nLes bacs glissaient.\n\nChacun déposait ses affaires sans hésiter.\n\nIl fallait ôter sa ceinture, ce que la pancarte rappelait fermement.\n\nL'ordre imposé exigeait de tout vider.\n\nQuand mon tour arriva, l'officier m'écarta de la colonne.\n\nOn me demanda mes papiers avant de procéder à la fouille manuelle.\n\nJe compris, tandis que le bâton magnétique longeait mes bras, que la courtoisie de l'autorité voulait tout inspecter sans jamais me regarder.\n\nLa barrière se referma derrière moi doucement."
+  }
+ ]
+}

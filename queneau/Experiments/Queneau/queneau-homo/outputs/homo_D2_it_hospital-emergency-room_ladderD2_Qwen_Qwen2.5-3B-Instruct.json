@@ -1,0 +1,56 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2",
+ "lang": "it",
+ "scenario": "hospital-emergency-room",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~25 words) clause architecture: 1 main clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~10 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~17 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 9 (~7 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1.\nPeriod 10 (~10 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\nPeriod 11 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 2.6,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nell'ufficio di triage del pronto soccorso affacciatosi da un incessante mormorio, i medici e le infermiere si muovevano tra le gocce d'acqua dei monitor e le vittime dei catarifiuti nelle cure. Il corridoio era occupato dalle panche di plastica vuote e dagli attrezzi mediche posati sull'unghia di ferro. In fondo, una paziente ansimava, la mano aggrappata a un amico che cercava di tranquillizzarla con delle parole che non riusciva a sentire. All'angolo di corridoio, un'infermiera teneva una cartella clinica aperta in un gesto ritmico mentre la sua compagna, con il microfono appuntito nell'orecchio, intercettava una richiesta dalla cabina intercom. Sullo schermo della cartella clinica, una stola grigia copriva il nome del paziente che attendeva di essere rilasciato."
+  },
+  {
+   "i": 1,
+   "text": "All'interno del pronto soccorso, il corridoio brulicava di attività. Le infermiere e il dottore spazientiti correvano da una camera all'altra, fiancheggiati da gomitate e intrecci di tubi. Sul tavolo a regolar distanza, le monitor vibravano come un cuore sconvolto. Tra le sedie vuote e gli attrezzi inutilizzati, era evidente la disorganizzazione. Un paziente agonizzante giaceva in una borsa a spirale, agitato e coperto da una cortina. Una persona accompagnante lo guardava, irritata. Alcune chiamate intercom risuonavano in sottofondo. Sulle panche, i pazienti aspettavano, raggelati dallo sguardo angosciato sui letti vicini. Un registro clinico era appeso alle pareti, con l'impronta della cura impiegata. Il paziente gridò verso il medico, accusandolo del lungo aspettare. Nel tentativo di tranquillizzarlo, il compagno si schiarì la voce. A destra, una donna ossessionata controllava le cinghie, sfuggendo a occhi accusatori."
+  },
+  {
+   "i": 2,
+   "text": "Nel corridoio del pronto soccorso affollato, la segreteria clinica squillava intermittenze, gli sforzi dei medici e infermiere tra i letti vibravano di attività. Un paziente agonizzante si agitava, circondato da un amico che protestava contro l'attesa eterna. A destra, la cinta bianca del paziente, la sua mano legata a una catena di ossigeno. In lontananza, i monitor segnavano battiti irregolari. Lungo il percorso, girello per girelli, i pazienti attendevano, immersi nel silenzio soffocante. Registratori clinici accesi scivolavano in ogni stanza, i campanelli intercom risuonavano, le bende bianche ondeggiavano con il movimento. L'aria era densa di curiosità e ansietà."
+  },
+  {
+   "i": 3,
+   "text": "Nel corridoio dell'ospedale, tra le scrivanie del pronto soccorso, i sedili di attesa e i lettini in fila, i curiosi scalpitavano. Una infermiera corse lungo la passerella, seguita da un medico che trasportava una borsa. Il monitor segnava il battito cardiano di una paziente, mentre la dama di notte versava l'iniezione sul braccio di un paziente. La donna gridò: \"Non posso più aspettare.\" Su un tavolo vicino, erano accatastate carte con i numeri di casellario. In fondo al corridoio, un gruppo di persone attendeva ansimanti, coperte da una tendina verde."
+  },
+  {
+   "i": 4,
+   "text": "E' una corsia d'urgenza del pronto soccorso piena di attività, gli infermieri e il medico che si muovono tra i bai con cura, mentre le apparecchiature monitor, le cannule e un tendino ricoprono il corridoio. Un paziente soffoca con un gemito di dolore, accanto a lui c'è la sua compagna che lamenta la lunga attesa. Sul registro di urgienza, il suono dell'interfono risuona, le cravatte dei pazienti e i moduli si trovano intorno. Il paziente, con la testa tra le mani, spiega il suo stato a sua compagna, mentre le sue parole vengono interrotte da un altro richiamo. La medicina inietta una dosagenza al paziente, ma non sembra ristabilire rapidamente l'equilibrio fisico. Nel corridoio, altre figure agiscono rapidamente, ma la sensazione di impazienza aumenta sempre di più. La paziente, irritata, guarda verso il monitor, sperando che i segnali siano stabili."
+  },
+  {
+   "i": 5,
+   "text": "L'ospedale era affollato come una ruota in rotazione. Al piano inferiore, lo spazio tra le gocce di sangue sul pavimento del corridoio ricordava una specie di balletto di gommaturi e gavette. Le infermiere e il dottore correvano freneticamente tra i letti, monitorizzatori e viti mediche dappertutto, il tendine scuro attorno al letto si muoveva in ronzio. Un paziente agonizzante giaceva nel letto, circondato da un'ombra nera. Il suo compagno gli sussurrava parole dolci nella notte, una preghiera che non veniva mai risposta. Nella ciotola dell'ammissione, l'intercom squillava in un rullare sonoro, la stela di plastica brillava sotto la luce della lampada, i fascicoli chirurgici giacevano accatastati senza ordine."
+  },
+  {
+   "i": 6,
+   "text": "Nell'ambiente confinato della sala d'attesa, le panche vuote attiravano gli occhi dei visitatori ansiosi mentre i monitor segnalavano i pazienti attesi. Sul corridoio, ginecologie e pediatria corrispondevano ai gavettini assortiti dai pazienti. Un collega di turno e un medico si muovevano tra le stanze, sorreggendosi tra la curiosità e il bisogno di interrompere i cavi di ossigeno e la lampada. Il paziente sconvolto, abbracciato da un amico, discuteva a bassa voce del tempo impiegato. Sotto l'inquietante tenda, i registri clinici si facevano sempre più umidi, intercomsi squillavano e le bandiere mediche erano in ordine."
+  },
+  {
+   "i": 7,
+   "text": "In sala d'urgenza affollata, il collegamento di emergenza squillava incessantemente. La cintura di sicurezza attivata pulsava impaziente mentre la guardia di sicurezza guardava nervosamente dal monitor. I pazienti, appoggiati ai sedili, guardavano ansiosi la schermo del cardiografo. Nella stanza adiacente, i medici e le infermiere si scambiavano rapidi segnali. Il paziente, con una stretta al cuore, si girò verso il compagno, lamentando lo stralci di tempo trascorsi. Sul registro della pressione sanguigna, gli annunci delle interruzioni del telefono scorrevano veloci, mentre le bende sulle braccia dei pazienti erano disposte secondo un sistema preciso."
+  },
+  {
+   "i": 8,
+   "text": "Nel corridoio dell'ambulatorio, le cure si accumulavano con la velocità di un rane nel sole. Le infermiere e il dottore scorrazzavano tra i banchi, mano nella mano con un paziente in preda all'emorragia. La sedia vuota di una coppia di spettatori rimaneva in attesa, i denti stretti dalla frustrazione del lungo attesa. Sulle pareti, monitorizzatori scintillavano, vasi sanguigni pendevano, e una tenda ricopriva il letto di un paziente che tossicchiava irrequieto. Sul registro di emergenza, la voce dell'interruttore della radio squillava, mentre il paziente aveva già indossato la cuffia elettronica che lo identificava come uno dei più urgenti."
+  },
+  {
+   "i": 9,
+   "text": "Nel corridoio affollato dell'ambulatorio, le infermiere e il dottore si muovevano tra i letti, dietro i monitor che emettevano un debole segnale. Gli attacchi infusori pendevano dai ghiaccioli bianchi che si erano appena formato. Dietro una tenda, un paziente agitava le braccia disperatamente, mentre una moglie lo guardava, irritata da quella lunga attesa. Sulla scrivania, un registro registrava le priorità cliniche, intercambiato attraverso il citofono e tracciati nei cartelli di plastica con i numeri delle bocche."
+  }
+ ]
+}

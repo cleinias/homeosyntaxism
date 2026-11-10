@@ -1,0 +1,62 @@
+{
+ "model": "qwen/qwen-2.5-72b-instruct",
+ "backend": "openrouter",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "security-checkpoint",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": {
+  "requested_provider": "DeepInfra",
+  "resolved_provider": "DeepInfra",
+  "quant": "fp8"
+ },
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nSulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 63.6,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel terminal, durante l'ora di maggior affluenza. Un uomo di circa trent'anni, giacca di pelle con una fibbia al posto della cintura, braccia troppo corte, come se fossero state tagliate. Le persone passano. Il tipo in questione si arrabbia con un vicino. Lo accusa di ostacolarlo ogni volta che qualcuno mette i bagagli nella cassetta. Tono irritato, con pretese di sicurezza. Non appena vede uno spazio libero, vi si avvicina. Due ore più tardi lo rivedo all'area di sicurezza, vicino al checkpoint. È con un agente che gli dice: «Dovresti mettere un allarme alla valigia». Gli spiega dove (alla cerniera) e perché."
+  },
+  {
+   "i": 1,
+   "text": "Nel terminal, in un'ora di traffico. Un uomo di circa trentacinque anni, cappotto sformato con una sciarpa al collo, occhi troppo stretti, come se li avessero schiacciati. La gente avanza. Il tipo in questione si irrita con un vicino. Lo rimprovera di ostacolarlo ogni volta che passa un controllo. Tono risentito, con pretese di autorità. Non appena vede una fila più libera, vi si affretta. Due ore più tardi lo incontro al punto di controllo, davanti al gate di partenza. È con un agente che gli dice: «Dovresti fare attenzione con il tuo bagaglio». Gli fa notare dove (alla cerniera) e perché."
+  },
+  {
+   "i": 2,
+   "text": "Nel terminal, durante un'ora di traffico intenso. Un uomo di circa trentacinque anni, con una camicia a scacchi e occhiali dalla montatura spessa, aspetto nervoso, come se fosse in ritardo. Gli altri viaggiatori passano. L'uomo in questione si lamenta con un vicino. Lo accusa di occupare troppo spazio con la valigia ogni volta che si sposta. Tono irritato, con pretese di autorità. Appena vede un posto libero, vi si precipita. Due ore più tardi lo incontro alla dogana, prima della partenza. È con un agente che gli dice: «Dovresti mettere i tuoi documenti in ordine». Gli indica dove (nella tasca laterale) e perché.\n\nAlla fine della fila, un ufficiale controlla. I documenti con cura, li esamina uno per uno. Gli altri passeggeri aspettano pazienti. La procedura di sicurezza si svolge metodica. Ogni oggetto deve essere messo nei vasselli. I segnali luminosi indicano l'ordine da seguire. Non appena passa, l'uomo viene fermato. È isolato e invitato a una perquisizione. Gli viene chiesto di spogliarsi parzialmente, con delicatezza. L'ufficiale lo esamina con attenzione, senza fretta. Solo dopo, l'uomo viene rilasciato, con un cenno di conferma."
+  },
+  {
+   "i": 3,
+   "text": "Nel checkpoint, in un'ora di afflusso. Un uomo di circa trent'anni, giacca sformata con una tasca troppo grande, collo rigido, come se fosse irrigidito. La gente procede. Il tipo in questione si altera con un vicino. Lo accusa di ostacolarlo ogni volta che passa qualcuno. Tono seccato, con pretese di importanza. Non appena vede uno sportello libero, vi si dirige. Due ore più tardi lo incontro alla security, davanti al gate A. È con un agente che gli dice: «Dovresti sistemare la fibbia della cintura». Gli indica dove (all'altezza della cintura) e perché."
+  },
+  {
+   "i": 4,
+   "text": "Nel checkpoint, in un'ora di traffico. Un uomo di circa trent'anni, giacca slacciata con una tasca vuota, collo troppo corto, come se fosse stato compresso. La gente passa. Il tipo in questione si irrita con un vicino. Lo rimprovera di toccarlo ogni volta che passa qualcuno. Tono irritato, con pretese di autorità. Non appena vede un varco libero, vi si avvicina. Due ore più tardi lo incontro all'aeroporto, davanti al controllo passaporti. È con un agente che gli dice: «Dovresti fare mettere un distintivo in più al badge». Gli fa vedere dove (alla cintura) e perché."
+  },
+  {
+   "i": 5,
+   "text": "Nell'area di sicurezza, durante un'ora di punta. Un uomo di circa trenta anni, giacca sformata con un distintivo al posto del bottone, gambe troppo lunghe, come se le avessero estese. La gente passa. Il tipo in questione si arrabbia con un vicino. Lo accusa di spingerlo ogni volta che qualcuno mette le sue cose nei vasselli. Tono irritato, con pretese di autorità. Non appena vede un posto libero, vi si avvicina. Due ore più tardi lo incontro al check-in, davanti al terminal. È con un agente che gli dice: «Dovresti far sistemare la cerniera del passaporto». Gli indica dove (all'angolo) e perché."
+  },
+  {
+   "i": 6,
+   "text": "Nell'aeroporto, in un'ora di traffico intenso. Un uomo di circa trent'anni, giacca sformata con una spilla al posto del bottone, gambe troppo lunghe, come se le avessero allungate. La gente avanza. Il tizio in questione si inquieta con un vicino. Gli rimprovera di toccarlo ogni volta che qualcuno passa. Tono irritato, con pretese di autorità. Non appena vede una postazione libera, ci si precipita. Due ore più tardi lo incontro al checkpoint, davanti alla zona di sicurezza. È con un agente che gli dice: «Dovresti portare una giacca più aderente». Gli mostra dove (alla vita) e perché.\n\nL'uomo annuisce. L'agente indica il metal detector. Lui passa attraverso senza problemi. Non appena supera l'area, un altro agente lo ferma. Gli chiede di aprire la valigia e mostrare i documenti. Procedura standard, con un tono cortese. Appena vede il permesso di soggiorno, lo annota. Due ore più tardi, all'uscita, l'agente lo rilascia. Gli fa cenno di riprendersi le sue cose e andare. Lui obbedisce, con un cenno di ringraziamento e un passo deciso."
+  },
+  {
+   "i": 7,
+   "text": "Nel checkpoint, in un'ora di viaggiatori. Un uomo di circa trenta anni, giacca leggera con una tasca esterna al posto della tasca interna, collo troppo corto, come se fosse stato compresso. La gente passa. L'uomo in questione si infastidisce con un vicino. Lo accusa di toccarlo ogni volta che passa qualcuno. Tono irritato, con pretese di severità. Non appena vede uno spazio vuoto, vi si dirige. Due ore più tardi lo incontro presso la dogana, davanti all'area di sicurezza. È con un collega che gli dice: «Dovresti mettere un taglio più lungo alla giacca». Gli fa vedere dove (alla piega) e perché."
+  },
+  {
+   "i": 8,
+   "text": "Nel terminal, in un'ora di traffico intenso. Un uomo di circa trentacinque anni, giacca slacciata e occhiali da sole, passo affrettato, come se fosse in ritardo. La gente avanza. Il tizio in questione si infastidisce con un vicino. Gli rimprovera di occupare troppo spazio ogni volta che qualcuno passa. Tono irritato, con pretese di autorità. Non appena vede una postazione libera, vi si dirige. Due ore più tardi lo incontro all'uscita di sicurezza, davanti al checkpoint. È con un agente che gli dice: «Dovresti mettere un altro giro alla cintura». Gli fa vedere dove (alla fibbia) e perché."
+  },
+  {
+   "i": 9,
+   "text": "Nel terminal, in un'ora di corse. Un uomo di circa trenta anni, giacca sportiva con una fibbia al posto del bottone, passo troppo rapido, come se fosse inseguito. Le persone aspettano. L'uomo in questione si irrita con un vicino. Lo accusa di ostacolarlo ogni volta che passa qualcuno. Tonalità seccata, con pretese di sicurezza. Non appena vede uno spazio libero, lo occupa. Due ore più tardi lo incontro all'uscita, davanti al controllo di sicurezza. È con un agente che gli dice: «Dovresti tenere meglio i tuoi documenti». Gli fa vedere dove (alla tasca) e perché."
+  }
+ ]
+}

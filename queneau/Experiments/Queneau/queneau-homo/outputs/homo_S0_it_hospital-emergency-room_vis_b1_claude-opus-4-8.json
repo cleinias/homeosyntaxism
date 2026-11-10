@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "hospital-emergency-room",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nSulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 89.3,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel reparto Emergenze, durante un'ora di punta. Una barella con appena due infermieri accanto, spinta lungo il corridoio verso la sala oltre una porta a battenti, procede lentamente, quasi troppo piano, mentre qualcuno si lamenta. La paziente respira. Un uomo di fianco le stringe con una mano. Lei chiede di sapere quale sia il turno perché resiste ancora. Voce debole, con toni di paura. Appena che vede la sedia libera, ci si accascia. Due minuti dopo intanto la raggiunge nella Sala del Codice giallo, verso la Zona Osservazione Breve. Sono presso il monitor loro che gli parlano. Hanno provato a leggere il tracciato per bene sotto il braccialetto. Le mostrano dove esattamente sul quel referto e poi."
+  },
+  {
+   "i": 1,
+   "text": "Nel reparto Emergenze durante un turno di picco. Un paziente sulla cinquantina, camice ospedaliero con una fascetta al posto del bottone, respiro troppo affannato, come se glielo avessero strappato. Le barelle arrivano. Il ferito accanto litiga con un'infermiera. Le rinfaccia di ignorarlo ogni volta che squilla il monitor. Voce querula, con velleità di rimprovero. Appena quando compare una sedia libera, vi si accascia. Due ore più tardi lo ritrovo nel Corridoio di Radiologia, davanti alla Sala Traumi Verde. È con un familiare che gli spiega: «Dovreste tenere pronto il modulo per quando ricoverano tua sorella». Gli indica dove firmare e perché."
+  },
+  {
+   "i": 2,
+   "text": "Al Pronto in un'ora di calca. Un paziente di circa quaranta anni, camice sgualcito con una cannula al posto del bracciale, respiro troppo affannoso, come se glielo avessero strozzato. Le infermiere corrono. Il malato in questione litiga con un accompagnatore. Gli rinfaccia di ignorarlo ogni volta che chiamano qualcuno. Tono querulo, con pretese di sofferenza. Appena come indica una barella libera, vi si sdraia. Due ore quasi dopo lo rivedo al Reparto di Cardiologia, oltre la Sala Accettazione Urgenze. È con un'infermiera che gli sussurra: «Dovresti far apporre un braccialetto sul polso». Gli mostra dove (al gomito) e perché."
+  },
+  {
+   "i": 3,
+   "text": "Al Pronto Soccorso, in un'ora di punta. Un uomo di circa quaranta anni, camice azzurro con un tesserino al posto della targhetta, andatura troppo rigida, come se lo avessero irrigidito. La gente aspetta. Il paziente accanto litiga con un'infermiera. Le rimprovera di ignorarlo ogni volta che chiama qualcuno. Tono querulo, con pretese di dignità. Appena scorge una barella libera, vi si sdraia. Due ore più tardi lo rivedo alla Sala d'Attesa, davanti al Reparto Medicina Generale. È con un parente che gli suggerisce: «Dovresti far aggiungere un braccialetto in più al polso». Gli mostra dove (all'articolazione) e perché."
+  },
+  {
+   "i": 4,
+   "text": "Nel reparto Emergenze durante un turno di sera. Un paziente sui quaranta circa, camice azzurro con un braccialetto al posto della fascia, respiro troppo affannato, addirittura cianotico, quasi come se qualcuno lo stesse soffocando. La barella scivola. Il compagno del malato gli protesta contro un'infermiera. Le rimprovera di trascurarlo mentre gli somministra il farmaco che aggrava tutto. Lamentele acute con toni di rabbia. Ancora prima che arrivi il medico giovane qualcuno gli si avvicina. Due monitor lì accanto lo segnalano dalla Sala di Rianimazione, precisamente presso il Padiglione Ospedaliero Centrale. È dietro al carrello che ci sopraggiunge. Doveva restare accanto al malato per poco presso la corsia. Le indica dove intervenire subito sulla flebo e finalmente."
+  },
+  {
+   "i": 5,
+   "text": "Al Pronto Soccorso in un'ora di punta. Un paziente di circa quarant'anni, camice ospedaliero con una fascetta al posto della manica, braccio troppo gonfio, come se glielo avessero fasciato. Il monitor lampeggia. Un'infermiera dietro barella lo controlla dentro la corsia. Lui protesta di attendere accanto quella sedia perché soffre parecchio. Voce roca con pretese di calma. Sempre quando arriva una barella nuova qualcuno lo sposta. Due ore dopo lo rivedo davanti alla Radiologia dietro Cardiologia, proprio verso il Reparto Emergenze Traumatologiche. È con un accompagnatore che lo consola. Deve firmare compilare quel modulo per adesso presso lo sportello. Gli indica dove (allo sportello) e come."
+  },
+  {
+   "i": 6,
+   "text": "Al Pronto Soccorso in un'ora di punta. Un paziente sui trentacinque anni, felpa grigia con una macchia al posto della tasca, respiro troppo affannoso, come se glielo avessero strozzato. La barella arriva. Il tizio steso protesta con un'infermiera. Le rimprovera di ignorarlo ogni volta che passa qualcuno. Voce roca, con pretese di dignità. Appena chiama un medico libero, gli si aggrappa. Due ore dopo lo rivedo nella sala d'attesa, accanto al reparto Radiologia, seduto con una compagna che gli dice: «Dovresti far segnare un sintomo in più al modulo». Gli mostra dove (alla casella) e perché."
+  },
+  {
+   "i": 7,
+   "text": "Nel reparto d'urgenza durante un turno di sera. Un paziente sui cinquant'anni, camicia stropicciata con una macchia al posto del taschino, respiro troppo affannoso, come se qualcuno gli avesse compresso il petto. La barella arriva. Il signore in questione discute con un infermiere. Gli contesta di ignorarlo ogni volta che suona qualche allarme. Tono supplichevole, con venature di rabbia. Appena quando compare una sedia libera, lui vi crolla. Due ore quasi dopo lo rivedo davanti all'ingresso di Radiologia, oltre nel corridoio del Pronto Soccorso. È con una figlia che gli spiega: «Dovresti chiedere una fascia in più al monitor». Gli mostra dove applicarla al polso e perché."
+  },
+  {
+   "i": 8,
+   "text": "Al Pronto Soccorso in un'ora di punta. Un paziente sui circa settant'anni, camice azzurro con una fascetta al posto del bottone, sotto la barella, come se lo avessero dimenticato lì. La gente attende. Il malato accanto protesta con un'infermiera. Le rimprovera di ignorarlo mentre passa qualcuno. Tono querulo, con pretese di dignità. Appena arriva una barella libera, vi si adagia. Due ore dopo ancora lo scorgo nel corridoio dell'Ala Ovest, davanti alla Sala Radiologica Centrale. Sta con un medico che gli spiega: «Dovrebbe firmare quel modulo per l'accettazione». Gli indica dove e perché."
+  },
+  {
+   "i": 9,
+   "text": "Al Pronto Soccorso in un'ora di afflusso. Un paziente sui quarant'anni, camice ospedaliero con una fascetta al posto del cinturino, respiro troppo affannoso, come se glielo avessero strappato. La barella scorre. L'uomo in questione discute con un infermiere. Gli contesta di ignorarlo ogni volta che squilla qualcosa. Tono supplichevole, con pretese di rabbia. Appena quando adocchia una sedia vuota, vi si accascia. Due ore poi lo rivedo nel Reparto di Cardiologia, davanti al Nucleo Terapie Intensive. È con un familiare che gli spiega: «Dovresti far compilare un modulo in più alla cartella». Gli indica dove (nell'anamnesi) e perché."
+  }
+ ]
+}

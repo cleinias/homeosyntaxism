@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 100.9,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Vers la Caisse à cette heure d'affluence.\n\nLe tapis de ces quatre articles disparates près du lecteur montrait une file interminable presque impatiente, tandis que chacun lui-même semblait attendre encore.\n\nLe scanner bipe.\n\nLa cliente devant moi range dans son chariot.\n\nElle je regarde vers elle poser la barre pendant qu'elle avance lentement.\n\nLe caddie qui me pousse trop.\n\nParce que je sens la pression derrière moi grandissant déjà.\n\nTrois articles là aussi elles se réclament l'espace vers Marchand devant la borne Fidélité.\n\nOn aurait dans la queue qui vous heurte, on aurait pris un ticket froissé sous ce comptoir.\n\nElle nous rappelle celle-ci de la promotion, mais bientôt."
+  },
+  {
+   "i": 1,
+   "text": "Vers la Caisse de cet après-midi de cohue.\n\nLe tapis de ces trois articles épars traînait lentement vers l'agent, précipitant la queue houleuse déjà nerveuse quand pourtant tout se dénouait mal.\n\nLe scanner clignote.\n\nLe bip de sécurité que redoutait depuis le matin.\n\nElle se retourne vers moi, cherchant un regard tandis qu'elle m'ignore.\n\nLe chariot que je pousse serré.\n\nPuisque j'atteins la barre séparatrice, elle glisse ailleurs.\n\nDeux paniers presque brusquement se me heurtent contre Barbara sous le comptoir Réductions.\n\nElle avait sur la file qui me devançait me faisait avancer ce ticket froissé vers le lecteur.\n\nOn me demande soudain devant la carte ou non."
+  },
+  {
+   "i": 2,
+   "text": "Vers la caisse de Sylvie sous les lumières du soir. Le tapis de la trois roule ses articles épars vers l'écran, avance son ruban lentement mécanique tandis que, pressée, quelqu'un me bouscule déjà. La cliente attend. Le chariot devant elle glisse contre la barre. Elle me pousse pour me céder cet espace, mais elle m'agace. Le scanner que je saisis bipe strident. Quand elle range les sacs pleins, elle soupire encore. Deux articles seulement pourtant, elle les tend, ticket vers Sylvie sur le comptoir Carrefour. Je suis dans la file, elle m'invite, elle veut avancer, aurait franchi ce seuil étroit devant la borne. Elle me presse encore contre le bord et vite."
+  },
+  {
+   "i": 3,
+   "text": "Vers la Caisse dans le magasin du soir.\n\nLa file devant les trois clients pressés d'attente épuise le tapis roulant tellement long que quoique je patiente encore.\n\nLe scanner bipe.\n\nLa cliente devant moi dépose sur le comptoir.\n\nElle me tend de quoi séparer les courses tandis qu'elle avance derrière.\n\nLa barre qui nous divise semble étroite.\n\nQuand elle repousse la caissière lasse qui souffle bruyamment.\n\nDeux clients trop vite se me réclament l'espace vers Sortie sous la marque Fidélité.\n\nCela agace car le monsieur qui nous bouscule voudrait passer la carte magnétique dans le terminal.\n\nIl me remet quelque part sous le reçu et enfin."
+  },
+  {
+   "i": 4,
+   "text": "Dès le Franprix de la rue du marché, la caissière de la troisième caisse semblait pressée par l'affluence : glissaient les articles pesants, presque mécaniquement, quand pourtant ils étaient rangés déjà. Le tapis avance. Le client de derrière lui parlait de son chariot. Il me demandait de me céder la place, tandis qu'il poussait tout. La barre que je posais paraissait insuffisante. Bien que je sente une gêne légère qui montait encore. Trois bips seulement, puis nous entendions résonner l'annonce sur Carrefour, dans le fond Fidélité. Elle avait vers la carte que je lui tendais mais froissait déjà le ticket froissé sous le lecteur. Nous nous regardions, elle avec un soupir et vaguement."
+  },
+  {
+   "i": 5,
+   "text": "Vers la Caisse dans le supermarché.\n\nLe client de la deuxième file bondée du soir dépose ses articles ensemble méthodiques bien qu'il les avait posés vite.\n\nLe tapis avance.\n\nLa caissière derrière le comptoir lui sourit avec un hochement.\n\nElle le prie de le laisser ce répit tandis qu'elle scanne tout.\n\nLe bipeur, lui, se montre régulier.\n\nQuand il pousse la barre séparatrice, elle glisse aussitôt.\n\nDeux paniers là déjà se cherchent place vers Marie sous le rayon Frais.\n\nIl a dans un instant qu'on lui demande de composer le code secret sur le terminal.\n\nElle le remercie enfin près du reçu puis doucement."
+  },
+  {
+   "i": 6,
+   "text": "Vers la caisse de la fin de journée. Le tapis avec ses deux articles solitaires glisse vers l'employée sous un scanner presque muet, tandis qu'ici nous sommes rangés encore. La file avance. Un chariot devant l'homme qui pousse contre la barre. Il me demande de passer mon panier quand il approche trop. Le client qui me presse énervé. Puisque je pose la marchandise ultime, elle bipe enfin. Trois codes déjà pourtant je les entends résonner longtemps dans l'espace près du lecteur Visa. Ils sont sur le total qu'on nous annonce, il faut compter la somme fidèle avec la carte. Elle me réclame encore devant le terminal ou bien lentement."
+  },
+  {
+   "i": 7,
+   "text": "Vers la Coopérative dans une cohue de fin de journée.\n\nLa file devant les trois caisses ouvertes semblait interminable, et pourtant chacun poussait son chariot débordant, presque impatient, tandis que devant nous stagnait encore.\n\nLe tapis avançait.\n\nUne main sur l'article que balayait sous le scanner.\n\nJe le regardais tandis que je posais mes courses, alors que je séparais les.\n\nLa barrette, moi, je saisissais dernière.\n\nPuisque nous formions une queue serrée, quelqu'un piétinait derrière.\n\nDeux clients tout près, eux, nous frôlaient malgré ce coude-à-coude aussi bien qu'à la Coopérative.\n\nCela avait sous la friction que nous ressentions, chacun réclamant avait revendiqué un espace minuscule contre le comptoir.\n\nNous nous excusions vaguement devant le lecteur mais poliment."
+  },
+  {
+   "i": 8,
+   "text": "Dès le Franprix de la fin d'après-midi, la queue de la vingt-deuxième caisse ressemblait résolument bousculée, car tandis qu'elle avançait, elle était bloquée aussi. Le tapis glissait. Un chariot de courses me heurtait contre la barre. Je te jure que je frôlais la voisine parce qu'elle poussait déjà. Une impatience nous nous rendait nerveux. Puisqu'on entendait le bip strident, tout crépitait encore. Trois articles seulement, pourtant je nous voyais patienter derrière Maxime dans une éternité interminable. On avait sur le clavier de quoi payer, on pouvait glisser la carte fidèle sous le lecteur. Elle nous rendait le ticket avec l'addition, mais enfin."
+  },
+  {
+   "i": 9,
+   "text": "Vers la Superette de la Grande Avenue. Le client de la seize heures matinales tapote sur le tapis, avançant son panier chargé toujours plein, quoique lentement il ait glissé déjà. Le lecteur bipe. La caissière de service lui répond derrière une caisse. Elle le regarde puis lui tend le reçu quand elle le remercie. Le ticket qui lui semble froissé. Alors elle scanne le code magnétique qu'elle repasse rapidement. Trois articles encore là il les pose près du convoyeur sur la borne Fidélité. Il a sur la barre qu'il te laisse pour placer sa monnaie soigneuse dans le portefeuille. Elle lui glisse ceci vers le bagage et poliment."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 229.7,
+ "refused": 18,
+ "attempts": 26,
+ "gens": [
+  {
+   "i": 0,
+   "text": "At the Terminal gate before a departure hour, the queue of travelers slowly threads toward a barrier, snaking past the belt where every satchel and coat goes forward, so that whoever has been searched grabs a tray of goods from officers behind him. Bins fill up. A monitor of light will flash across each of the lanes, checking silently for anyone. You watch it while it scans you; the belts they run steadily. The impersonal announcement nobody could ignore had grown insistent. Ahead, someone flags a nervous man; they wand him along beneath him. Two officials quietly beckon him toward the Central Immigration Desk of Security within the Regional Passport Authority. He was on the register; he had flagged him, he did not clear the automated threshold standing between us there. They ask him again inside the booth, and away."
+  },
+  {
+   "i": 1,
+   "text": "At the Concourse checkpoint before a morning rush. The line at nearly six divides passengers past a barrier slowly toward the scanning belt, quietly ahead, though because everyone must have surrendered every device into trays for inspection by then. Signage warns above. A voice on speakers is heard across three of the lanes, echoing thinly beneath it. She approaches him while gesturing her way, he complies now. The impersonal courtesy she has offered to seem cold. Ahead they pass a designated agent who selects one from among us. One officer quietly them examines against a Terminal Security Directive by protocol under the National Aviation Authority. He is beyond the counter, they have flagged whatever she cannot yet declare, the metal wand tracing along her collar. She waves them onward around the gate and away."
+  },
+  {
+   "i": 2,
+   "text": "At the Meridian terminal by the western concourse. The queue at barely six coiled inward past the checkpoint, snaking under a signboard slowly toward the divestment station beyond, though whether one had actually reached the threshold of order remained beneath us. Trays waited alongside. Each traveller before entry must surrender at once into the scanner, passing quietly through it. Officers watched them as belts, the coins they unloaded there. The metal arch we had triggered was loud. Then someone flagged a suspect passenger, motioning him aside toward us. Two guards there approached him beside the Border Interdiction Authority for clearance under the Regional Screening Directive. He was beneath the protocol nobody had told him, obliged to raise both outstretched arms while wanding across his person. They searched him thoroughly along the corridor and away."
+  },
+  {
+   "i": 3,
+   "text": "At the Meridian terminal near the western gate, the queue of morning travelers stretched slowly toward the barriers, coiling patiently behind a rope divider precisely because nobody could recall which line was faster than another. Belts slide off. Each tray on conveyor is filled with keys before the scanner swallows everything about them. She empties it while removing her jacket, then folds it neatly. The nearest officer nobody had noticed does not seem irritable. Ahead, someone unloads a small satchel; guards inspect it under against him. Two agents quietly wave me toward the checkpoint marked Security Zone by signage above the Restricted Access Corridor. It is beyond the threshold nobody has crossed; you must not enter this cordoned area waiting for its clearance. They flag him again beside the counter, and forward."
+  },
+  {
+   "i": 4,
+   "text": "At the Concourse gateway near a security lane, the queue at nearly nine coiled ahead toward a barrier line, slowly and impatiently, because although everyone had been shuffling their trays beyond patience toward it. Belts slide off. The divestment of items must happen before three at the scanner ahead of us. She wands him while checking his every pocket he examines closely. The blinking detector nobody had triggered would sound. Then someone selected a random passenger they escorted aside past behind me. Two officers quietly they questioned him about the Northbound Transit Authority through paperwork inside the Regional Screening Bureau. He was in a booth nobody had shown him, was not folding a laminated placard printed above his desk. They processed it thoroughly across the checkpoint, and again."
+  },
+  {
+   "i": 5,
+   "text": "At the Meridian terminal near the eastern gate. The queue on tonight barely twenty snaked past a barrier slowly toward the checkpoint lane, forward and inward because although everyone had been shuffling their belongings into trays with resignation. Signs demand quiet. A traveller with luggage was pulled from ahead of the line, waved along by him. She approaches it while emptying her pockets, they watch closely. The metallic wand it had swept then registered nothing. Immediately she surrendered the folded passport she carried inside beneath it. One officer meanwhile they questioned her about the Transit Security Directive on procedures under the Federal Border Authority. He was in a booth she had processed her, could not verify each stamped document filed under her dossier. They cleared her then through a gate and away."
+  },
+  {
+   "i": 6,
+   "text": "At the Concourse gate near a security lane. The line by now everyone shuffles forward through the checkpoint slowly toward the scanning belt, quietly enough that although nobody has been told anything, a hush of tension among them. Instructions repeat overhead. Each traveller with luggage must divest at once into the trays, moving briskly along it. She watches him while placing her tray somewhere; they nod curtly. The uniformed officer she has stepped not aside. Then someone selects a random passenger who beckons him forward toward her. One badge later, they wave them past the Transit Security Authority into scrutiny beneath the Central Screening Post. He is under a directive whom they have flagged; he must not carry any prohibited item detected on his person. They pat him again across a barrier and onward."
+  },
+  {
+   "i": 7,
+   "text": "At the Meridian Terminal near a security gate, the line of nearly forty shuffled forward beneath a ceiling wide across the fluorescent panels overhead, quietly, because although we had been told the wait at counters near noon. Signage warned above. A voice through speakers had murmured about eleven at the checkpoint, guiding travellers along it. She watched him while he emptied his pockets; keys clinked softly. The plastic tray we were sliding forward was empty. Then someone selected a nervous passenger, waving him toward beside us. Two officers there checked me against the Departure Authorization Certificate under scrutiny by the National Screening Bureau. He was at the barrier when they had signalled, so we should not cross that yellow threshold marked with our documents. They cleared us, then, past the exit, and onward."
+  },
+  {
+   "i": 8,
+   "text": "At the Meridian terminal past a security cordon. The line at once eleven surrenders belongings into a tray, deliberately at the conveyor edge, quickly nervously while although travelers must have emptied every pocket of change before departure. Alarms blare within. The signage above passengers has warned about liquids beyond a threshold, flagging plainly for everyone. Officers watch someone whenever detectors flag him whatever bag he carries forward. The nearest lane, it is cordoned off, remaining closed. Then they wand a suspicious contour, patting it down against him. One officer quietly gestures him toward the Zone Bravo Checkpoint by protocol under the Delta Prime Inspection. He does within a moment, he has isolated it, must not question the standing perimeter drawn beside their booth. She summons him aside beneath the barrier and again."
+  },
+  {
+   "i": 9,
+   "text": "At the Fairmont Terminal near a checkpoint gate. The queue at nearly six thousand snakes forward beside the barriers, coiling steadily toward a scanning station almost silently, though because everyone must have surrendered their coats into trays before them. Belts vanish inside. Each traveller with luggage is directed past two of the detectors, standing still against it. She waves me while addressing my a supervisor whom she signals politely. The impersonal courtesy neither has softened nor been cold. Rather I answer the required question they pose me under after all. One official quietly they select him from the Hartsdale Border Authority of Zone within the Meridian Regional Precinct. He is beyond a doubt someone who has flagged whom they would not release, the routine wanding conducted upon his person. They escort us onward through a corridor and away."
+  }
+ ],
+ "topups": [
+  {
+   "date": "2026-08-08",
+   "added": 2,
+   "refused": 3,
+   "attempts": 5,
+   "elapsed_s": 52.1,
+   "note": "prompt replayed verbatim from this record; original rows untouched"
+  }
+ ]
+}

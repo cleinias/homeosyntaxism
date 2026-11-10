@@ -1,0 +1,58 @@
+{
+ "lang": "en",
+ "degree": "D2c",
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "n_periods": 10,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (about 8 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 2,
+   "words": 29,
+   "spec": "Period 2 (about 29 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n    - adverbial clause"
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (about 3 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 4,
+   "words": 15,
+   "spec": "Period 4 (about 15 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause"
+  },
+  {
+   "k": 5,
+   "words": 11,
+   "spec": "Period 5 (about 11 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - relative/adnominal clause"
+  },
+  {
+   "k": 6,
+   "words": 9,
+   "spec": "Period 6 (about 9 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)"
+  },
+  {
+   "k": 7,
+   "words": 12,
+   "spec": "Period 7 (about 12 words) clause-nesting schema:\n  - main clause\n    - adverbial clause"
+  },
+  {
+   "k": 8,
+   "words": 18,
+   "spec": "Period 8 (about 18 words) clause-nesting schema:\n  - main clause"
+  },
+  {
+   "k": 9,
+   "words": 19,
+   "spec": "Period 9 (about 19 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n          - relative/adnominal clause"
+  },
+  {
+   "k": 10,
+   "words": 9,
+   "spec": "Period 10 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause"
+  }
+ ]
+}

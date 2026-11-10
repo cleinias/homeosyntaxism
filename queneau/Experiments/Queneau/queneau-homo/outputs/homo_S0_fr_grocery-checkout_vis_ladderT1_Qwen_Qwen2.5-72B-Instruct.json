@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "grocery-checkout",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.7,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nDans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 5.8,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans l'X, à une heure d'affluence. Une personne dans les trente-quatre ans, panier rempli avec des produits divers, file trop longue comme si elle s'étirait indéfiniment. Les clients avancent. La personne en question s'agace contre un voisin. Elle lui reproche de la presser chaque fois qu'il approche quelqu'un. Ton exaspéré qui se veut autoritaire. Comme elle voit une place libre, s'y précipite. Deux heures plus tard, je la rencontre Allée des Épices, devant l'entrée principale. Elle est avec un ami qui lui dit: \"Tu devrais demander de rajouter un espace entre les articles.\" Il lui montre où (au milieu) et pourquoi."
+  },
+  {
+   "i": 1,
+   "text": "Dans le G, à une heure de pointe. Une dame aux trente-cinq ans, casquette ornée de sequins, silhouette trop fluide comme si elle avait été étirée. Les clients avancent. La dame en question s'agace contre une voisine. Elle lui reproche de la presser chaque fois qu'elle franchit le tapis. Ton geignard qui se veut autoritaire. Comme elle voit une place libre, se rue dessus. Deux heures plus tard, je la croise Passage des Halles, devant le magasin Carrefour. Elle est avec une amie qui lui dit: \"Tu devrais demander d'ajouter une corbeille supplémentaire à ton caddie.\" Elle lui montre où (à la poignée) et pourquoi."
+  },
+  {
+   "i": 2,
+   "text": "Dans le C, à une heure d'affluence. Une femme aux quarante ans, sac léger avec sangle en cuir, démarche trop rapide comme si elle courait sur place. Les articles glissent. La cliente en question s'agace contre une voisine. Elle lui reproche de pousser chaque fois qu'elle avance son chariot. Ton agressif qui se veut autoritaire. Comme elle voit un espace libre, s'y précipite. Trente minutes plus tard, je la croise Près du rayon fruits, devant l'entrée principale. Elle est avec une collègue qui lui dit : \"Tu devrais utiliser un autre moyen de transport pour tes courses.\" Elle lui montre comment (en utilisant un vélo) et pourquoi."
+  },
+  {
+   "i": 3,
+   "text": "Dans le C, à une heure d'affluence. Une personne dans les trente ans, casquette avec étiquette remplaçant le lien, cou trop court comme si on l'avait comprimé. Les articles avancent. La personne en question s'agace contre un client. Elle lui reproche de lui bousculer chaque fois qu'il glisse quelque chose. Ton geignard qui se veut revêche. Comme elle voit un espace libre, se précipite dessus. Quelques minutes plus tard, je la rencontre Près du rayon fruits, devant le comptoir des légumes. Elle est avec un ami qui lui dit: \"Tu devrais faire installer un compartiment supplémentaire à ton caddie.\" Il lui montre où (au milieu) et pourquoi."
+  },
+  {
+   "i": 4,
+   "text": "Dans le U, à une heure d'affluence. Une personne aux trente-quatre ans, casquette plate ornée d'un badge au lieu d'un ruban, silhouette trop étirée comme si elle avait été tirée par les quatre fers. Les articles avancent. La personne mentionnée s'agace contre un prochain. Elle lui reproche de lui marcher sur les pieds chaque fois qu'on scanne quelque chose. Ton geignard qui se veut dur. Comme elle voit une place libre, s'empresse d'y aller. Deux heures plus tard, je la retrouve Rue des Épices, près de la grande épicerie. Elle est avec une collègue qui lui dit : \"Tu devrais demander d'ajouter une poche supplémentaire à ton sac à courses.\" Elle lui montre où (sur le côté) et pourquoi."
+  },
+  {
+   "i": 5,
+   "text": "Dans le S, à une heure d'affluence. Une personne dans la trentaine, chariot plein de produits, queue trop longue comme si on l'avait prolongée. Les clients paient. La personne en question s'agace contre un voisin. Elle lui reproche de la presser chaque fois que passe quelqu'un. Ton geignard qui veut paraître sévère. Comme elle voit une place libre, s'y précipite. Deux heures plus tard, je la croise au rayon fruits, devant le supermarché Carrefour. Elle est avec une amie qui lui dit : \"Tu devrais demander d'ajouter un espace supplémentaire à ton caddie.\" Elle lui montre où (à la poignée) et pourquoi."
+  },
+  {
+   "i": 6,
+   "text": "Dans le C, à une heure de ruée. Un client dans la trentaine, chariot plein de provisions, front plissé comme s'il venait de recevoir une mauvaise nouvelle. Les articles défilent. Le client en question s'agace contre un voisin. Il lui reproche de lui envahir l'espace chaque fois qu'il avance un article. Ton geignard qui se croit important. Comme il voit un espace libre, s'y précipite. Quelques minutes plus tard, je le croise au rayon des fruits, près du scanner automatique. Il est avec une caissière qui lui dit: \"Vous devriez utiliser un séparateur pour vos courses.\" Elle lui montre où (à la fin du tapis) et pourquoi."
+  },
+  {
+   "i": 7,
+   "text": "Dans le C, à une heure d'affluence. Une personne aux trente-cinq ans, chariot rempli avec produits divers, file trop longue comme si elle s'étirait indéfiniment. Les articles passent. La cliente en question s'agace contre un voisin. Elle lui reproche de la presser chaque fois que quelqu'un avance. Ton irrité qui se veut dominateur. Comme elle voit une place libre, s'y précipite. Deux heures plus tard, je la rencontre Place du Marché, devant l'entrée principale. Elle est avec une collègue qui lui dit : \"Tu devrais utiliser une carte de fidélité supplémentaire.\" Elle lui montre où (au guichet) et pourquoi."
+  },
+  {
+   "i": 8,
+   "text": "Dans le G, à une heure d'affluence. Une femme aux quarante ans, chariot plein avec boîtes empilées, queue trop longue comme si elle n'avait pas avancé. Les clients paient. La dame en question s'agace contre une voisine. Elle lui reproche de la presser chaque fois qu'elle passe quelqu'un. Ton irrité qui se veut ferme. Comme elle voit un espace libre, s'empresse d'y placer son sac. Deux heures plus tard, je la croise Rue des Halles, devant le supermarché Carrefour. Elle est avec une collègue qui lui dit: \"Tu devrais utiliser une carte de fidélité pour gagner des points.\" Elle lui montre où (près du tiroir-caisse) et pourquoi."
+  },
+  {
+   "i": 9,
+   "text": "Dans le C, à une heure de flux intense. Un individu dans les trente-cinq ans, casquette ornée d'une broche en lieu et place du bandeau, silhouette trop étirée comme si on l'avait allongée. Les clients sortent. L'individu en question s'énerve contre un prochain. Il lui reproche de lui envahir l'espace chaque fois que quelqu'un s'approche. Ton geignard qui prétend être intimidant. Comme il voit une place vacante, s'y précipite. Deux heures plus tard, je le croise Avenue des Halles, devant le supermarché. Il est avec un complice qui lui dit : \"Tu devrais faire installer un tiroir supplémentaire à ton caddie.\" Il lui indique où (au milieu) et pourquoi."
+  }
+ ]
+}

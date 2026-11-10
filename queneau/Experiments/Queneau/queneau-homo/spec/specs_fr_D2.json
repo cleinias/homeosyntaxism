@@ -1,0 +1,58 @@
+{
+ "lang": "fr",
+ "degree": "D2",
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "n_periods": 10,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 2,
+   "words": 23,
+   "spec": "Period 2 (~23 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 adverbial clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 4,
+   "words": 9,
+   "spec": "Period 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  },
+  {
+   "k": 5,
+   "words": 12,
+   "spec": "Period 5 (~12 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2."
+  },
+  {
+   "k": 6,
+   "words": 6,
+   "spec": "Period 6 (~6 words) clause architecture: 1 main clause; 1 relative/adnominal clause; 1 open complement (infinitive); subordination nested up to depth 2."
+  },
+  {
+   "k": 7,
+   "words": 9,
+   "spec": "Period 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1."
+  },
+  {
+   "k": 8,
+   "words": 14,
+   "spec": "Period 8 (~14 words) clause architecture: 1 main clause; 1 open complement (infinitive); subordination nested up to depth 1."
+  },
+  {
+   "k": 9,
+   "words": 18,
+   "spec": "Period 9 (~18 words) clause architecture: 1 main clause; 1 adverbial clause; 1 finite complement clause; 1 open complement (infinitive); subordination nested up to depth 3."
+  },
+  {
+   "k": 10,
+   "words": 9,
+   "spec": "Period 10 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0."
+  }
+ ]
+}

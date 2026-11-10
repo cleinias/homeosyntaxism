@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "fr",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 23 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 12 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 14 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\nPeriod 9 (about 18 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - finite complement clause\n        - open complement (infinitive)\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 3.0,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans la salle d'urgence, un épisode de pointe, les infirmières et le médecin se déplaçaient rapidement entre les bays, les moniteurs et les perfusions étalés sur le corridor, tandis qu'un patient agonisait et son compagnon s'agitaient nerveusement. Au-dessus d'eux, une tente remuait sous un drap noir, couvrant une forme inconfortable. À quelques mètres, un registre de priorité clinique répétait les cliquettis rapides du téléphone intercom, les clics de l'imprimante et les rumeurs sourdes des conversations au sein de la structure. Un formulaire à plusieurs feuilles était éparpillé sur la table de triage, les mains d'une femme agrippées à ses pliements blancs, son regard vague et fatigué."
+  },
+  {
+   "i": 1,
+   "text": "Dans le hall d'entrée bondé, un hôpital sature, les nurses agiles entrebâillent des portes, les infirmières courant avec agilité. Un Dr, robuste, se fraye un chemin, le dos droit, ses lunettes de vue traînant derrière lui. Des gynécomanes sont étendus sur des brancards, alignés le long de l'allée. À la réception, un assistant dépouille les patients de leurs inscriptions, le comptoir chargé. Le Dr salue un couple en train d’errer, son regard se perd dans le mur. La pièce est animée : moniteurs, perfusions, une voile tendue discrètement à un patient. Leur compagnon gronde, la main sur sa joue, le cœur battant, tandis que le Dr s'affaire autour d'un autre. Les registres sont pleins de signes d'urgence : les intercoms clignotent, les bracelets fluorescentes brillent sous la lumière bleutée."
+  },
+  {
+   "i": 2,
+   "text": "Dans le hall d'entrée d'une établissement hospitalier bondé, les infirmières et le médecin sillonnaient rapidement les zones de tri et les gondolas le long de l'allée. Le consultoir était entouré de sièges où les patients s'étiraient nerveusement. Les moniteurs et les perfusions étaient visibles, un rideau tenu haut sur une civière. Un malade affligé soupirait tandis qu'un ami lui réclamait, lassé, la promesse d'une aide plus prompte. Sur la liste d'importance médicale, on pouvait entendre les sons stridents du système d'appel entre les murs, les bracelets médicaux, et les formulaires de consultation remplis."
+  },
+  {
+   "i": 3,
+   "text": "Dans l'urgence, la consultation était une toile d'araignée de visages pressés et de machines. Le régisseur de triage, debout au milieu du hall, parlait à voix basse à un groupe de patients. Les gynécologues s'activaient entre les baies, surveillant les machines et les perfusions. Un patient en détresse s'était assis dans une chaise en plastique, son compagnon en face, leurs regards rivés sur l'écran du monitor. À l'autre bout, une table était remise pour un nouveau cas. Au-dessus de la porte, un rideau tiré dissimulait quelque chose. Le bloc-notes du régisseur s'affichait sur l'écran, tandis qu'une sirène interrompait le silence. Leur nom était inscrit sur un bracelet fluorescent, et devant eux, des formulaires s'étiraient sur un bureau."
+  },
+  {
+   "i": 4,
+   "text": "Dans l'urgence, les infirmières couraient entre les baies, les docteurs se déplaçaient rapidement le long du corridor. Les moniteurs clignotaient, les perfusions reposaient paisiblement sur les gonds, un rideau cachait un secret. Un patient agité tentait d'expliquer son état à une personne assise près de lui. Au bureau de régularisation de l'urgénétrie, les intermèdes sonoraux appelaient le nombre croissant, les bandes de peau tiraient leur numéro d'ordre, les formulaires s'étalaient devant eux."
+  },
+  {
+   "i": 5,
+   "text": "Dans la salle d'urgence d'un hôpital bondée, à l'heure de pointe, le tapis en lambeaux étincelait sous la lumière tamisée. Au fond, des chaises de plastique renversées attendaient sans espoir, entourées de brancards et de panneaux hospitaliers. Des nurses et un médecin erraient entre les baies, les doigts englués de vernis. Les moniteurs clignotaient d'une activité inquiétante, les perfusions filant sous des draps sombres. Derrière une voile de tissu, on percevait le sifflement lointain des respirateurs. Un homme agonisant gisait dans un lit, entouré d'une femme effrayée, leurs mains tremblantes formant des cercles sur son torse. Un message sonore interrompait leur silence : « Urgence médicale ». Au centre du brouhaha, un registre de la gravité clinique : appels intercom, bandes de saisie, formulaires."
+  },
+  {
+   "i": 6,
+   "text": "Dans la salle d'urgence d'un hôpital bondé, les panneaux de triage claquent sous le vent, les chaises de patients attendent en rangée, les brancards alignés le long du couloir. Les infirmières et le médecin sillonnent des bains entre les littes, les moniteurs agités, les perfusions et le rideau tiré. Un patient en détresse est accompagné par une personne proche, leur plainte sur l'attente est à peine voilée. Dans les registres de gravité clinique, les appels d'urgence se chevauchent, les bandes manuscrites, les formulaires."
+  },
+  {
+   "i": 7,
+   "text": "Dans l'urgence, le tiroir est désert, tandis que les tapis de la salle d'attente se remplissent de malades. Un infirmier courait entre les bays, son ordinateur en main, les gouttes coulaient sur sa lèvre. Au bout du corridor, la lumière tamisée illuminait le bruit des infusions et le murmure de la télévision par-delà une toile de coton. Un patient agonisa, écrabouillé par la douleur, un homme accablé l'observait, déçu de cette attente qui se prolongeait sans fin. Sur un registre brillant, les appels étaient répétés, tandis qu'une feuille de papier s'envolait vers le haut. Le médecin se faufilait entre les pansements, sa cape froissée à peine visible, la main agrippée à son poignet."
+  },
+  {
+   "i": 8,
+   "text": "Un éclat de panique s'élevait à chaque visite de l'urgentiste entre les bains de lumière. Les gosses serraient les doigts sur la paillasse, attendant leur tour. Sur les chaises, les adultes étaient comme figés, leurs regards sifflants de frustration. À travers le rideau tiré, on percevait le crépitement des machines et le bourdonnement des douleurs. Un patient agonisait dans les bras de son partenaire, une voix agacée résonnant dans l'intercom. Le registre de saisissement clignotait, les bandes de plastique claquaient et les formulaires jonchaient le sol. Le médecin traçait un chemin entre les bains de bruit, le filtre des urgences. Le jeune garçon regardait par-dessus le bras de sa mère, un cri d'inquiétude au visage. Le compteur d'urgence grésillait, signalant des appels prioritaires. Les enfants pleuraient, leurs pleurs mêlés aux cris désespérés du mourant. Un murmure persistait, la hargne de la longue attente."
+  },
+  {
+   "i": 9,
+   "text": "Dans la salle d'urgence du centre hospitalier, les infirmières et le médecin couraient d'un bout à l'autre du couloir avec des gîtes. À côté, les sièges de déambulation étaient pleins de patients anxieux. Au bout du couloir, un moniteur brillait, des tubes sanguins se pressaient, une toile de rideau était tirée. Le patient dans un état d'agitation parlait à sa compagne, critiquant la longueur du parcours. Un registre de priorité médicaux résonnait d'appels en intercom, de bandes numériques et de formulaires à remplir."
+  }
+ ]
+}

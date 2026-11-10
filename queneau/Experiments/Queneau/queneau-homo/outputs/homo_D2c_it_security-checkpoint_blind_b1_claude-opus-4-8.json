@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2c",
+ "lang": "it",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 25 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 10 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 17 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 7 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 10 (about 10 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\nPeriod 11 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 105.9,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "La fila avanza lenta verso i controlli. I passeggeri svuotano le tasche nei vassoi di plastica grigia, mentre un altoparlante ripete istruzioni che quasi nessuno ascolta davvero. Suona un allarme. Un agente solleva appena una mano. Una donna esce dalla coda per attraversare il portale che segnala qualcosa di metallico. Le cinture finiscono nei cesti. Il metal detector ronza ancora, quando il viaggiatore alza le braccia. Il funzionario passa il rilevatore lungo i fianchi con la cortesia neutra e misurata di chi ripete lo stesso gesto mille volte al giorno. Compaiono i documenti, che una mano guantata esamina in silenzio. Il cartello sopra il nastro avverte che ogni bagaglio deve restare sorvegliato. L'agente conferma infine che tutto è in ordine."
+  },
+  {
+   "i": 1,
+   "text": "La fila avanza lenta verso i controlli. I passeggeri svuotano le tasche nei vassoi di plastica grigia, mentre un altoparlante ripete le stesse istruzioni con una voce cortese e priva di calore. Le barriere si aprono. Un agente osserva lo scorrere dei corpi stanchi. Un uomo si ferma davanti al metal detector, deciso a superare il varco che tutti attraversano in silenzio. Il segnale acustico suona improvviso. L'ufficiale lo invita da parte, mentre gli altri proseguono senza voltarsi. Sul banco l'uomo appoggia il passaporto, la carta d'imbarco, il portafoglio e le mani aperte sotto lo sguardo attento dell'agente. Una donna in divisa impugna il rilevatore che ronza lungo le braccia. I cartelli sulle pareti avvertono che ogni oggetto va dichiarato. L'agente conferma alla fine che il passeggero può riprendere il suo cammino."
+  },
+  {
+   "i": 2,
+   "text": "La fila avanza lenta verso i controlli. I passeggeri svuotano le tasche nei vassoi di plastica grigia, mentre un altoparlante ripete le stesse istruzioni con una calma che non ammette repliche. Le barriere serpeggiano. Un cartello luminoso indica il percorso obbligato. Ognuno è tenuto a togliere le scarpe che i sensori potrebbero scambiare per un rischio. Lo scanner ronza sommesso. Il metal detector suona improvvisamente, quando un viaggiatore lo attraversa distratto. Un agente lo invita da parte con un gesto misurato, controlla il documento, poi passa il rilevatore lungo le braccia e i fianchi. La donna dietro osserva la scena, che si ripete identica ogni pochi minuti. L'ufficiale spiega con voce neutra che la procedura è di routine. Il viaggiatore annuisce e comprende che ogni resistenza sarebbe inutile."
+  },
+  {
+   "i": 3,
+   "text": "La fila si allunga sotto le luci fredde del terminal. I passeggeri avanzano lentamente verso i banchi metallici, mentre un annuncio ripete le stesse istruzioni con una voce impersonale e cortese. Le vaschette scivolano. Ognuno vi depone cinture, portafogli e chiavi. Occorre svuotare le tasche di ogni oggetto che possa suonare al varco. Il metal detector attende in silenzio. Le persone attraversano il portale una alla volta, appena l'agente concede il cenno. Uno scanner enorme ruota attorno a un viaggiatore fermo con le braccia sollevate, immobile dentro quella luce azzurrina. Una donna viene chiamata da parte, che stringe ancora il suo documento. L'agente le spiega con calma che dovrà sottoporsi a un controllo supplementare. Il segnale rosso sul cartello ricorda che nessuno può oltrepassare la barriera."
+  },
+  {
+   "i": 4,
+   "text": "La fila avanza lenta verso i varchi metallici. I passeggeri svuotano le tasche nei vassoi di plastica grigia, mentre gli altoparlanti ripetono avvisi che nessuno sembra davvero ascoltare in quel frastuono. Le cinture scivolano via. Un agente osserva lo scorrere disciplinato dei corpi. Un cartello luminoso invita a rimuovere ogni oggetto che possa attivare l'allarme. Le scarpe finiscono nel cestello. Il metal detector suona, quando una donna lo attraversa distratta. Viene chiamata di lato, cortesemente, con quel tono neutro che l'autorità riserva a chiunque, senza malizia e senza calore. L'agente impugna il dispositivo portatile, che ronza contro il tessuto della giacca. Le chiede se porti addosso qualcosa di metallico. Lei risponde che ha soltanto le chiavi di casa."
+  },
+  {
+   "i": 5,
+   "text": "La coda avanza lenta verso i varchi. I passeggeri posano le loro cose nei vassoi di plastica, mentre un annuncio ripete che ogni oggetto metallico deve essere estratto dalle tasche e dalle borse. Le luci lampeggiano. Un nastro trasporta i bagagli dentro lo scanner. Bisogna passare sotto l'arco, che segnala con un suono acuto ogni residuo dimenticato. L'agente solleva una mano. Il viaggiatore si ferma, quando viene chiamato fuori dalla fila. Un uomo in divisa controlla il documento, confronta il volto con la fotografia e restituisce tutto con un gesto asciutto e cortese. Una donna impugna il rilevatore, che scorre lungo le braccia distese. La cartellonistica avverte che i controlli sono obbligatori per tutti. L'agente conclude che il passeggero può proseguire verso l'imbarco."
+  },
+  {
+   "i": 6,
+   "text": "La fila si allungava fino ai nastri metallici. I viaggiatori svuotavano le tasche nelle vaschette grigie, mentre un altoparlante ripeteva le stesse istruzioni con voce cortese e impersonale. Il metal detector suonò. Un agente sollevò appena la mano guantata. Cominciò a controllare i bagagli che scorrevano lentamente sul rullo. Le luci del monitor tremolavano. L'ufficiale chiamò un passeggero, quando la macchina segnalò un'anomalia. L'uomo fu invitato a spostarsi accanto alla barriera, con i documenti in mano e lo sguardo teso verso il varco successivo. Consegnò il passaporto a una donna che ne verificò ogni pagina. La cartellonistica avvisava che ogni oggetto andava dichiarato prima del controllo. L'agente spiegò con calma che la perquisizione era una procedura ordinaria."
+  },
+  {
+   "i": 7,
+   "text": "La fila avanza lenta verso i controlli. I passeggeri depositano zaini e giacche nelle vaschette di plastica, mentre un nastro trasparente li trascina verso la bocca luminosa dello scanner. Un allarme suona. L'agente solleva una mano guantata. Chiede al viaggiatore di aprire la valigia che poggia sul rullo. Il metal detector lampeggia ancora. Il passeggero attraversa il portale, benché nessun oggetto pericoloso emerga. Le indicazioni sui cartelli ripetono formule secche, cortesi, impersonali, cifre di un potere che non guarda mai nessuno negli occhi. Una donna esce dalla coda, indicata da un cenno del funzionario. L'agente spiega che la procedura richiede una perquisizione manuale. Il viaggiatore comprende che ogni gesto qui obbedisce a un ordine invisibile."
+  },
+  {
+   "i": 8,
+   "text": "La fila avanzava lenta verso il varco. Le persone spingevano i loro trolley contro le transenne metalliche, mentre un altoparlante ripeteva le stesse istruzioni con una cortesia impersonale e stanca. Suonava un allarme. Un agente sollevò appena la mano guantata. Ciascuno era invitato a svuotare le tasche in vaschette che scorrevano sul nastro. Il metal detector lampeggiava di rosso. I passeggeri deponevano cinture e monete, quando la voce li richiamava all'ordine. Una donna venne separata dalla coda e condotta oltre la barriera, dove un secondo funzionario controllava documenti e biglietti con gesti precisi. Passò sul suo corpo un bastone elettronico che ronzava sommesso. L'agente le spiegò con calma che doveva allargare le braccia. Tutti compresero, in quel silenzio ordinato, che nessuno era davvero un'eccezione."
+  },
+  {
+   "i": 9,
+   "text": "La fila avanzava lenta verso i tornelli metallici. I passeggeri deponevano ogni oggetto nei vassoi di plastica, mentre un altoparlante ripeteva istruzioni con quella cortesia impersonale che nessuno ascoltava davvero. Le barriere si aprivano. Uno scanner illuminava i bagagli in transito. Un cartello invitava tutti a togliere le cinture, gesto che sembrava ormai una liturgia. Il metal detector suonò all'improvviso. Un agente sollevò la mano, quando la macchina emise il suo trillo acuto. Una viaggiatrice fu invitata a farsi da parte, estratta dalla coda con un cenno breve e senza spiegazioni superflue. Presentò i documenti all'ufficiale, che li sfogliò con distratta lentezza. La donna capì che la perquisizione era ormai inevitabile. L'agente le comunicò che avrebbe usato il rivelatore manuale."
+  }
+ ]
+}

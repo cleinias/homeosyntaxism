@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "fr",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~23 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]DET [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]NOUN [11]VERB [12]DET [13]NOUN [14]NOUN [15]ADV [16]ADJ [17]SCONJ [18]SCONJ [19]PRON [20]PRON [21]AUX [22]VERB [23]ADV\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~12 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]ADP [5]PRON [6]VERB [7]DET [8]NOUN [9]SCONJ [10]PRON [11]VERB [12]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]PRON [4]PRON [5]VERB [6]ADJ\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]SCONJ [2]PRON [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]VERB [9]ADV\nPeriod 8 (~14 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]PRON [7]VERB [8]NOUN [9]ADP [10]PROPN [11]ADP [12]DET [13]NOUN [14]PROPN\nPeriod 9 (~18 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]PRON [8]VERB [9]PRON [10]VERB [11]AUX [12]VERB [13]DET [14]NOUN [15]ADJ [16]ADP [17]DET [18]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]PRON [3]VERB [4]PRON [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 3.6,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Un bruit constant résonne dans le rayon de la caisse, une file d'attente qui gagne du temps. Le petit wagon en plastique s'immobilise sur la ligne de passage, tandis que la caisse sonore grésille, répétant l'annonce insistante. Les rayons se pressent autour du barreau séparateur. La carte à puce glougloute, annonçant la suite des opérations. Derrière, une femme remue entre les passants, une main sèche agitant le bout d'une pancarte. Le comptoir se déplace avec précaution entre les marchandises, la carte de fidélité l'appelle doucement. L'homme à l'accueil ajuste sa casquette et soupire légèrement. Un autre client s'insinue dans la file, provoquant un brouhaha soudain. Le compteur marque les achats, révèle un montant précis et engage la carte d'abonnement pour offrir des rabais. Le moniteur vibre, annonçant la prochaine transaction. Le rayon s’étire autour du caisson, les emballages scannés une par une. Un rictus se dessine sur les lèvres de l'employé, tandis qu'il glisse le panier vers le fond. Un sourire timide illumine les traits du commerçant, mais une légère irritation flotte dans l’air. Le moniteur retentit, laissant tomber un détail supplémentaire."
+  },
+  {
+   "i": 1,
+   "text": "Un rayon, un bar de code, un area de bagages, un lecteur de carte. La caissière et une cliente ; un chariot, une barrière divisatrice, une facture. Un autre client se presse derrière, créant un malaise dans la file. Le registre de routine du commerce : bip, le total annoncé, les messages de fidélité affichés."
+  },
+  {
+   "i": 2,
+   "text": "À l'heure de pointe du supermarché, le rayon des courses se bâclait sur la piste. Le rouleau roulait d'un ralenti, le lecteur-barcode scannait une série d'écrans bleus, tandis que le coin de toile était occupé par l'encadrement, l'unité de palettage et la machine de lecture du chèque. Le caissier tendait la main, un panier à main à ses côtés, tandis qu'une autre passante s'introduisait en coup de vent, creusant un peu plus son passage dans la file. Le registre tournait, un écho répétitif aux cliquetis de bois, le total clignotait, apparaissant sur les panneaux, invitant à l'achat de la carte de fidélité."
+  },
+  {
+   "i": 3,
+   "text": "Au coin du caisse au créneau bondé d’une heure de pointe, la bande transporteuse, le lecteur-barcode, l’aire de déchargement, le lecteur de carte ; au comptoir et une femme cliente ; un panier, un écart vertical, une facture. Un autre client qui encercle de derrière ; un frisson discret dans le rang. Au cerveau de la vente, des bipins, le total annoncé, les messages de fidélité."
+  },
+  {
+   "i": 4,
+   "text": "À l'angle du rayon des fruits et de la confiserie, la file s'étirait en une colonne compacte. La caissière, à peine reçue par son dernier client, était sur le point de déclencher les beeps du compteur automatique. À ses côtés, un client, une mallette sous le bras, faisait défiler ses aliments vers la vitesse maximale du convoyeur. En face d'eux, une femme enceinte, sa main posée sur le grillage séparant la file, cherchait désespérément un endroit pour passer à son tour. Le carton de la caissière se remplissait de boîtes de chocolats, tandis que le total s'affichait devant elle. Elle vérifiait avec circonstance d'ordinaire les points de fidélité de son badge avant d'appuyer sur un bouton. Un autre client, plus rapide que prévu, avançait de force vers l'avant de la file, provoquant un échange étouffé entre lui et la caissière. Plus loin, le robot de lecture de codes-barres scannait rapidement chaque paquet, réduisant les interruptions dans le flux continu de l'espace de la caisse."
+  },
+  {
+   "i": 5,
+   "text": "Un rayon de soleil filtrait à travers les rideaux tandis que le rayonnage des fruits dresseait sa ligne droite. Le chariot traîné par le passager s'alignait à l'angle du panneau séparant la caissière et l'autre client, qui pressait son poing contre le comptoir. Le scanner de barcodes émettait son bruit caractéristique. Devant eux, l'encaisseur faisait son travail quotidien : les bipistes retentissaient, annonçaient une somme et appelaient la carte de fidélité. Au moment où l'autre consommateur venait de se rapprocher, un petit désaccord quant à la place dans la file se produisait."
+  },
+  {
+   "i": 6,
+   "text": "À la caisse pleine d’acheteurs, entre les rayons et devant le scanner lumineux du produit, le panier s'agite. La caissière tend les bras vers un client avec sa bourse en plastique, tandis qu'un autre acheteur, pressé, avance dans la file à la vitesse de l'éclair. Entre eux, une bande de séparation fait office de limite, laissant un espace de frictions minuscules entre les deux. Devant la caisse, un registre répète la routine : des bipés ponctuent les paquets de fruits, les vêtements. À la fin, le total est annoncé, et l'instant est suspendu sous les promesses de l'application de fidélité."
+  },
+  {
+   "i": 7,
+   "text": "Dans la file d'attente du supermarché pleine de monde, le caissier et le client ; un panier, un séparateur, une facture. Un autre client se pressant derrière, une petite friction dans la file. Le registre du quotidien : beeps, la somme annoncée, les promesses de carte de fidélité."
+  },
+  {
+   "i": 8,
+   "text": "Dans la file d'attente mouvementée du supermarché, le tapis de caisse roulant s'étirait devant lui. Un émetteur-bar code scannait les codes-barres de leurs paniers, tandis que l'aire de séparation entre les deux paniers remplissait le rang. La caissière était concentrée sur sa télécommande, et l'acheteuse tenait un sac. Deux autres clients prenaient place à la file d'attente, les échanges se faisaient sous le silence presque palpable. Le registre martelait les cliquots habituels, annonçant la somme totale avec une précision méticuleuse. Le système de carte de fidélité guiderait les achats futures, tout en empêchant la pression qui envahissait l'espace."
+  },
+  {
+   "i": 9,
+   "text": "Un client s'agglutine derrière le caissier, la toile de course tourbillonnant sous les yeux rivés du scanner. À côté, l'emballage prend sa tâche avec une précision chirurgicale, entre les rayons débordants de sacs et l'écran à identifiants mobile. Le caillot de marchandises entre les rangées s'étire en long, le bruit des machines résonnant dans l'air étouffé. Entre les lignes fluides de file, une autre personne se presse, un ronronnement discret d'instabilité se fait entendre. Au-dessus, le tableau de bord rituel bourdonne, les bipper rythment le flux, le prix annoncé clignote et une voix d'accueil promet points de service. Un signal de retour suggère un rappel à la politesse, tandis que le panneau affiche le code de récompense pour une carte fidélité en train d'être insérée. L'assiette à emporter scintille avec le message de récapitulation, les mains tremblantes, la réconciliation enfin accomplie."
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "degree": "D1",
+ "ladder": [
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "cells": 15,
+   "s0_pos": 0.228,
+   "d2_clause": 0.514,
+   "held_rate": 0,
+   "coherence": 0.033
+  },
+  {
+   "model": "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.357,
+   "d2_clause": 0.647,
+   "held_rate": 0,
+   "coherence": null
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "cells": 15,
+   "s0_pos": 0.281,
+   "d2_clause": 0.582,
+   "held_rate": 0.007,
+   "coherence": 0.135
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "cells": 15,
+   "s0_pos": 0.376,
+   "d2_clause": 0.619,
+   "held_rate": 0.013,
+   "coherence": 0.237
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "cells": 15,
+   "s0_pos": 0.318,
+   "d2_clause": 0.581,
+   "held_rate": 0.013,
+   "coherence": 0.529
+  },
+  {
+   "model": "hf.co/LiquidAI/LFM2.5-8B-A1B-GGUF:Q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.243,
+   "d2_clause": 0.37,
+   "held_rate": 0,
+   "coherence": null
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "cells": 15,
+   "s0_pos": 0.356,
+   "d2_clause": 0.619,
+   "held_rate": 0.007,
+   "coherence": 0.799
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "cells": 15,
+   "s0_pos": 0.334,
+   "d2_clause": 0.628,
+   "held_rate": 0,
+   "coherence": 0.737
+  },
+  {
+   "model": "Qwen/Qwen2.5-72B-Instruct",
+   "cells": 15,
+   "s0_pos": 0.376,
+   "d2_clause": 0.708,
+   "held_rate": 0,
+   "coherence": 0.964
+  },
+  {
+   "model": "qwen2.5:14b-instruct-q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.301,
+   "d2_clause": 0.589,
+   "held_rate": 0,
+   "coherence": 0.878
+  },
+  {
+   "model": "qwen2.5:7b-instruct-q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.287,
+   "d2_clause": 0.552,
+   "held_rate": 0,
+   "coherence": 0.757
+  },
+  {
+   "model": "qwen2.5:7b-instruct-q8_0",
+   "cells": 3,
+   "s0_pos": 0.28,
+   "d2_clause": 0.547,
+   "held_rate": 0,
+   "coherence": 0.702
+  }
+ ]
+}

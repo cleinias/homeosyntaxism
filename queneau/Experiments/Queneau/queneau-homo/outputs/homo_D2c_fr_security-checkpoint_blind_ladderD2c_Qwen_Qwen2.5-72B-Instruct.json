@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "fr",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 23 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 12 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 14 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\nPeriod 9 (about 18 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - finite complement clause\n        - open complement (infinitive)\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 11.5,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans la salle d'embarquement bondée, les voyageurs avancent lentement, leurs bagages à la main. Un voyageur, dont le sac contient un objet suspect, passe devant l'agent vigilant. Tous attendent. Les portiques bipent. Les agents demandent de placer leurs affaires dans des plateaux. Un homme, dont le passeport semble faux, est invité à s'approcher pour un contrôle plus poussé. Il s'arrête, les mains levées. Une femme examine soigneusement chaque document. Les panneaux indiquent clairement la procédure à suivre. L'officier ordonne de passer par le détecteur de métaux. Devant l'appareil, le voyageur est fouillé avec précaution, la main de l'agent parcourant son corps. Enfin, tous reprennent leur chemin vers la sécurité."
+  },
+  {
+   "i": 1,
+   "text": "Dans le tumulte de l’aéroport, les voyageurs s’alignent aux contrôles.  \nL’homme, dont le regard trahit l’impatience, avance quand la file ralentit.  \nIl pose ses affaires.  \nSes gestes sont précis.  \nLe douanier l’observe, lui demandant de retirer ses chaussures, qui semblent suspectes.  \nLes agents notent chaque mouvement.  \nLe dispositif sonne, interrompant le flux constant.  \nLe voyageur doit passer une nouvelle inspection.  \nAlors qu’il est isolé, un officier examine minutieusement ses papiers, l’invitant à lever les bras.  \nIl rejoint ensuite le reste des passagers."
+  },
+  {
+   "i": 2,
+   "text": "Dans la salle d'embarquement bruyante, les voyageurs se pressent.  \nLe contrôle de sécurité, une barrière infranchissable, où l'on dépose ses biens.  \nLes files s’allongent.  \nDes trayeurs métalliques glissent lentement.  \nL'agent signale de passer au scanner, dont l’œil scrutateur.  \nUn passant attend, les bras levés.  \nLes signes lumineux guident le flux.  \nIl faut s’arrêter pour un examen plus minutieux.  \nAvec une courtoisie distante, l'officier demande de lever les mains, avant de fouiller méthodiquement.  \nLa routine se poursuit sans relâche."
+  },
+  {
+   "i": 3,
+   "text": "Dans le hall bruyant, les voyageurs patientaient en file, leurs valises à roulettes cliquetant.  \nChacun déposait son sac dans un bac plastique, avant de passer sous l'arche métallique.  \nLe rythme était lent.  \nDes agents veillaient attentivement.  \nUn homme fut invité à retirer ses chaussures pour une fouille supplémentaire.  \nSes documents furent examinés minutieusement.  \nLa procédure était stricte, mais polie.  \nOn lui demanda d'étendre les bras et les jambes.  \nAlors qu'il obéissait, un officier vérifiait son sac, cherchant des objets interdits.  \nLa routine se poursuivait sans faille."
+  },
+  {
+   "i": 4,
+   "text": "Dans la salle d'embarquement bruissante de vie, les voyageurs formaient une longue file interminable. Chacun, après avoir déposé ses effets personnels dans des plateaux, avançait avec précaution. Les portiques de sécurité, imposants, scrutaient chaque passant, tandis que des agents, impassibles, surveillaient le flux. Un individu fut désigné par un bip strident et invité à approcher pour un contrôle supplémentaire. L'officier, d'une voix neutre, lui demanda de présenter ses documents, tout en l'observant attentivement. Le voyageur, nerveux, ouvrit son sac sous le regard vigilant du personnel. À proximité, des panneaux indicateurs rappelaient les consignes de sécurité, l'atmosphère empreinte d'une discipline stricte. Les agents, polis mais fermes, guidaient la foule avec des gestes précis, maintenant l'ordre et l'efficacité. Un visiteur, après avoir passé l'épreuve des détecteurs, fut prié de subir une palpation à la baguette métallique. Enfin, l'homme, rassuré, regagna sa place dans la file, les traits détendus."
+  },
+  {
+   "i": 5,
+   "text": "Dans la foule, les voyageurs avancent lentement vers le contrôle de sécurité.  \nUn homme, dont le regard trahit l'anxiété, pose délicatement sa veste dans un bac.  \nIl attend.  \nLa file serpente entre les barrières.  \nLe voyant passe au vert, invitant chacun à se présenter.  \nUn agent scrute attentivement l'écran.  \nSes gestes sont précis, guidés par des consignes strictes.  \nLa femme est priée d'ôter ses bijoux avant de passer.  \nAlors que le détecteur sonne, l'officier lui demande de rester.  \nIl procède à une fouille corporelle rapide et professionnelle."
+  },
+  {
+   "i": 6,
+   "text": "Dans le tumulte de l'aéroport, les voyageurs attendent leur tour.  \nL'homme, dont la valise est trop grande, s'arrête devant le contrôle, où l'on vérifie ses papiers.  \nIl respire profondément.  \nLes barrières séparent le chaos de l'ordre.  \nLe scanner émet un bip, invitant le prochain à passer, qui pose ses objets avec précaution.  \nUn agent observe attentivement.  \nLes consignes s'affichent clairement.  \nLa femme tend son passeport pour être autorisée à avancer.  \nL'officier, après avoir noté un détail suspect, demande à la personne de rester, pour une fouille plus approfondie.  \nLa file continue, méthodique et silencieuse."
+  },
+  {
+   "i": 7,
+   "text": "Dans le hall bondé, les voyageurs s'alignent patiemment devant les contrôles de sécurité. Les barrières métalliques encadrent la file, où chacun dépose ses effets dans des plateaux plastifiés. Les écrans affichent des images fantomatiques, scannant les corps et les bagages. Un agent observe attentivement chaque passant, prêt à intervenir. Une femme est invitée à rejoindre un côté pour un contrôle plus approfondi. Son passeport est examiné minutieusement, puis vient le tour du détecteur de métaux. L’officier lui demande de lever les bras, geste routinier et impersonnel. Les consignes affichées rappellent la procédure, guidant chacun avec une courtoisie distante. Les caméras surveillent chaque mouvement, garantissant la sécurité de tous. Les voyageurs reprennent leurs affaires, prêts à poursuivre leur voyage."
+  },
+  {
+   "i": 8,
+   "text": "Dans l'aéroport, la file s'allonge.  \nL'agent observe chaque passager, qui dépose ses affaires, avant de franchir la sécurité.  \nIl attend.  \nUn voyageur hésite.  \nLa fouille commence, tandis que l'officier vérifie les documents.  \nSon regard reste professionnel.  \nAvec calme, il guide les gens.  \nSes gestes sont précis, pour assurer la routine.  \nQuand le détecteur sonne, il demande poliment d'ôter le ceinturon, puis examine attentivement.  \nLa queue avance lentement."
+  },
+  {
+   "i": 9,
+   "text": "La foule s'agite, impatiente, dans l'aéroport bondé.  \nUn voyageur dépose sa valise, que l'on scrute, avant de passer la sécurité.  \nLe cliquetis des barrières retentit.  \nLes trayeux se remplissent d'effets personnels.  \nL'agent, vigilant, invite le passager à lever les bras, tandis qu'il examine.  \nLe détecteur bipe, signalant un objet suspect.  \nLes consignes affichées guident les gestes.  \nL'officier vérifie attentivement les papiers présentés.  \nUn contrôle plus approfondi s'impose, car la machine a repéré une anomalie.  \nLa procédure se poursuit, methodique et impersonnelle."
+  }
+ ]
+}

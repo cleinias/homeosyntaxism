@@ -14,6 +14,20 @@ Experimentation as Close Reading Strategy in the Age of LLMs* (ACH 2026). Deposi
 access (CC BY-SA 4.0) on Humanities Commons CORE:
 <https://doi.org/10.17613/1p8bw-67y06>.
 
+## The CHR 2027 paper
+
+Marchesini & Franchi, *Keeping It in Shape: Semantic Transpositions of a Form-Bound Text*
+(Computational Humanities Research 2027) draws on two parts of this repository: the
+**Manzoni stress test** (§5, Appendix A, and the discourse-type control) here in the root,
+and the **Queneau ladder** (§4, Appendices C and D, Tables 2–6) in [`queneau/`](queneau/README.md),
+which has its own README with a table-by-table map and a run-by-run `PROVENANCE.md`.
+
+**Notation.** The paper names the degrees D₀ (ordered tree), D₁ (order-free dependencies),
+D₂ (clause nesting), D₃ (clause inventory) and D₄ (depth). The code below predates those
+names: here `D2` is the clause architecture taken whole (inventory and nesting) and `D3` the
+hypotaxis profile, and in the Queneau code the paper's D₂ is `D2c` and its D₃ is `D2`.
+`queneau/README.md` gives the full table.
+
 ## The two-dimensional design space
 
 Every run is a point in a 2-D space:
@@ -142,6 +156,7 @@ worked FP8-MoE examples of standing up such a server on H100s.
 | `texts/`   | the public-domain Italian source (Manzoni 1840) |
 | `results/` | the generations + scored outputs + metric-validation data |
 | `docs/`    | the rubric workbook + `Pipeline_Scripts.md`, `Data_Files.md`, `Tools_and_Stack.md` |
+| `queneau/` | the Queneau ladder of the CHR 2027 paper: scripts, specs, every generation and score (see its README) |
 
 ## Reproducibility & models
 
@@ -154,7 +169,7 @@ in every result file. See `MANIFEST.md` for slugs, parameters, and environment, 
 ## A note on the English track and copyright
 
 The Italian source is public-domain (Manzoni, 1840) and is included. The English source used
-in the paper (the revised Colquhoun translation, ed. Reynolds) is **in copyright and is not
-included**; the English specs and English result files are therefore omitted from this repo.
-To reproduce the English track, place your own copy at `texts/incipit_en.txt` and run
-`build_specs.py --lang en`.
+in the paper (the revised Colquhoun translation, ed. Reynolds) is in copyright: only the
+incipit we analyse (`texts/incipit_en.txt`, about 680 words) is included, as quotation for
+scholarly analysis, with the specs and results derived from it; the complete translation is
+not. The same holds for the Queneau passage and its two translations in `queneau/`.

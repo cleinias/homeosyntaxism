@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 3.7,
+ "gens": [
+  {
+   "i": 0,
+   "text": "In coda alla lunga fila alla caosica fila al centro della sala, il convogliatore galleggiava sospeso tra i puntatori degli scansionatori, l'area di contatto, e la lettiera del carrello. Il cassiere, assorto, era impegnato con il cliente, il carrello in mano, un divieto di spostamento in mezzo. Un altro cliente si affrettò davanti a loro, creando un piccolo impatto fisico nella stretta fila. In quella routine di negoziata, le note sonore del registratore, il rivelare del totale, e le promemoria del regalo scorrevano come una musica monotona."
+  },
+  {
+   "i": 1,
+   "text": "La fila al bancone della spesa scorreva freneticamente durante lo spuntino pomeridiano. Sul tavolo di fronte, la coda saliva verso il cielo, mentre il lettore di codici a barre squillava intermittente. La cassetta sussurrava le tue carte, i pacchi venivano caricati con cura e il ricevitrice annunziava l'importo. Un altro cliente affrettò il passo dalla parte opposta, causando un lieve scambio di posizioni nello sfasamento. Il registratore ripeteva le azioni quotidiane: ticchettii, annunci del totale, consigli per le cartelle di fidelizzazione. Il vassoio traboccava di verdure, il cellulare squillò, la testa scattò in avanti, una busta fu consegnata."
+  },
+  {
+   "i": 2,
+   "text": "In affanno sul filo della coda al negozio affollato, la coda scivolava lungo lo spostatore con il suo ronzio, mentre il macchinario da codice da scattare e l'area da raccogliere i pacchi erano in vista. Il cassiere e la cliente stavano vicino al tavolo di pagamento, la cesta sullo schienale del sedile e un divario per separare i prodotti. Un'altra cliente si stropicciava congedo da dietro, un leggero scontrarsi tra i due accreseva la tensione nella fila. Nella zona di registratura, i bip ripetuti e l'annuncio del totale facevano parte del rituale del negozio, mentre le prompt della carta di rinnovo si facevano sentire."
+  },
+  {
+   "i": 3,
+   "text": "[1]cartella[2]della[3]baracca[4]ad[5]appoggio[6]del[7]divider[8]barre[9]della[10]consegna[11]il[12]soggetto[13]diventava[14]più[15]stretto[16]dall'[17]altro[18]passeggero[19]che[20]si[21]impilava[22]all'[23]indietro[24]una[25]consegna"
+  },
+  {
+   "i": 4,
+   "text": "C'era un caos al carrello di consegna del supermercato nel tardo pomeriggio. Sul banco dietro la quale stava il cassiere, una fila cresceva lungo il lungo pendio del corridoio. Dietro la linea, una barra divisoria impediva l'avanzamento libero. Sul pianale, una cartella attendeva con le mani sui fianchi. Da dietro veniva un altro cliente che cercava di spingersi avanti. \n\nIn quel frastuono di ronzii e rumori, il registratore si attivava con uno squillare regolare. Sull'altoparlante annunciava, \"Il tuo totale è di €120,25\". Il cassiere digitò la combinazione della scheda del cliente in ritardo, un po' impacciato per la pressione. \n\nSul fondo, un altro cliente arrivava con passo pesante, incappando nelle sue gambe. La barra divisoria si spostò come per evitare uno scontro fisico. Un'occhiata al mostranello da lettura della ricevuta, il nome del cliente e il numero del conto, tutto perfettamente visibile. \n\nCon un gesto veloce, il cassiere premette un pulsante di conferma. Una lieve vibrazione dal registratore segnalò il pronto completamento della transazione. Con un gesto di sfida, l'ultimo cliente si lasciò catturare dalla barra divisoria, lasciando una scia di nervosismo nell'aria."
+  },
+  {
+   "i": 5,
+   "text": "C'era un flusso costante di persone nel corridoio della cassa, il carrello della donna si fermò davanti al divisore metallico. Il registratore emise un suono sonoro, la somma apparve sul display e la donna fu inviata a pulire i dettagli. Un'altra donna entrò di corsa, sfiorando la testa del cartello che separava le file. Il sistema annunziò la quantità, la donna prese il cartellino e fece le scelte per i suoi prodotti. La cassetta vibrò, segnando il conto. Altri passanti cominciarono ad avvicinarsi, creando una tensione di spazio nella fila. La routine dell'edificio continuava: cigolii, il risultato annunciato e i messaggi sul sistema di rilascio del codice di abbonamento."
+  },
+  {
+   "i": 6,
+   "text": "Un cartello giallo diceva: \"Scarti esterni, per favore\". Il cassiere stava contando velocemente le banconote nel ricevitore. La cartella si muoveva tra i pacchi sullo schema. Il cartellino scompariva dopo l'ultimo taglio. All'improvviso una signora arrivò con un bagaglio da spingere. Le parole venivano schiacciate contro lo sportello dalla gente. Il beep ritmico del sistema annunciava il conto. Su un'apposita lavagna apparivano numeri e testo, la consegna sarebbe stata promossa dal suo utilizzo. Sotto di loro c'era un cartello che indicava: \"Rifiuti di consegna, per favore\"."
+  },
+  {
+   "i": 7,
+   "text": "Una fila nel rifornitore vibrava freneticamente mentre il carrello scorreva lungo la coda regolare, la macchina di scanezza accendeva e spegneva incessantemente, lo spazio intorno alla barra divisoria diventava sempre più stretto, il lettore del conto si trovava proprio davanti al vettore. La cassiera parlò, gli occhi su un ordine, mentre la compagna di shopping si avvicinava a passi veloci, incalzandola verso l'orizzonte della fila. Il registratore faceva sentire i suoi bip insistenti, poi annunciò il totale con voce chiassosa, mentre le promemoria sulla carta di fidelizzazione risuonavano a intervalli regolari. Un altro cliente si staccò dalla sua posizione e si avvicinò, aumentando ancora di più la pressione sull'equilibrio delicato."
+  },
+  {
+   "i": 8,
+   "text": "A fila del distributore era piena, il treno da bagno scorreva con regolarità, mentre la bilancia attendeva la prossima vettura, l'apparecchio di identificazione si scaldava. Il cassiere stazionava davanti alla linea, l'acquartiere avanzava con lo zaino, una carriola e un divieto. Un'altra persona entrava dalla porta, afferrando lo spazio tra loro, i litigi nascevano rapidamente. Il registratore ripeteva l'elenco, il segnale d'avvertimento risuonava, le promemoria sulla carta d'identità erano incessanti."
+  },
+  {
+   "i": 9,
+   "text": "Un cartello lampeggiava sopra al passaggio della coda: \"Attendeți, un minuto\". Il righello trasportava la scatola di prodotti sotto il cavo d'isobara. L'area di ripacco stava vicino alla macchina che leggeva i codici a barre. La cassiera, con la sua gonna e il cappellino da giornalista, sistemava una pila di buste plastiche sul tavolo. Un altro cliente, che aveva un portatile sulla spalla, si era mosso in fretta per entrare nella coda. Un lieve spostamento di corpo nella fila creò un lieve scontro. Sul registro, lo squillo ticchettava regolare. Sulla scrivania, l'orario faceva apparire il totale. Un sipario del programma di fidelizzazione lampeggiava in basso. Le istruzioni della licenza erano visibili sullo schermo. Il registratore emetteva un piccolo rumore costante. La cassiera digitava il totale sullo schermo e poi premeva un pulsante. Lo sforzo fisico le faceva sollevare una mano. La donna con il portatile aveva infilato la ricevuta nel cassetto. Un altro cliente, con due buste, stava per entrare nella coda. Le parole \"Ritirate le buste\" lampeggiavano sullo schermo."
+  }
+ ]
+}

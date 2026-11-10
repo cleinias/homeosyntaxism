@@ -1,0 +1,70 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "S0",
+ "lang": "en",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": null,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]NOUN [5]ADP [6]DET [7]NOUN [8]NOUN\nPeriod 2 (~29 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]VERB [7]NOUN [8]ADP [9]DET [10]NOUN [11]ADV [12]ADP [13]DET [14]NOUN [15]NOUN [16]ADV [17]ADV [18]SCONJ [19]SCONJ [20]PRON [21]AUX [22]AUX [23]VERB [24]DET [25]NOUN [26]ADP [27]NOUN [28]ADP [29]PRON\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]NOUN [2]VERB [3]ADP\nPeriod 4 (~15 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]AUX [6]VERB [7]ADP [8]NUM [9]ADP [10]DET [11]NOUN [12]VERB [13]ADV [14]ADP [15]PRON\nPeriod 5 (~11 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]SCONJ [5]VERB [6]PRON [7]DET [8]NOUN [9]PRON [10]VERB [11]ADV\nPeriod 6 (~9 words) ordered part-of-speech sequence: [1]DET [2]ADJ [3]NOUN [4]PRON [5]AUX [6]VERB [7]PART [8]AUX [9]ADJ\nPeriod 7 (~12 words) ordered part-of-speech sequence: [1]ADV [2]PRON [3]VERB [4]DET [5]ADJ [6]NOUN [7]PRON [8]VERB [9]PRON [10]ADP [11]ADP [12]PRON\nPeriod 8 (~18 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]PRON [5]VERB [6]PRON [7]ADP [8]DET [9]PROPN [10]PROPN [11]PROPN [12]ADP [13]NOUN [14]ADP [15]DET [16]PROPN [17]PROPN [18]PROPN\nPeriod 9 (~19 words) ordered part-of-speech sequence: [1]PRON [2]AUX [3]ADP [4]DET [5]NOUN [6]PRON [7]AUX [8]VERB [9]PRON [10]AUX [11]PART [12]VERB [13]DET [14]ADJ [15]NOUN [16]VERB [17]ADP [18]PRON [19]NOUN\nPeriod 10 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]PRON [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 171.0,
+ "refused": 21,
+ "attempts": 22,
+ "gens": [
+  {
+   "i": 0,
+   "text": "At the Meridian Hospital past a nurses' station. The waiting, so already crowded, held patients from the entrance ward tightly against the corridor gurneys still there, though because someone had been paging the doctor about coverage across bays. Wristbands snapped on. A monitor near intake was blinking through three of the crowded bays flashing red beside her. She watched him while clutching his frayed sleeve, everyone breathing hard. The drawn curtain nobody would pull fully aside. Nervously she checked the flickering screen, then read it from behind me. Two nurses quietly they answered him about the Central Triage Directive under protocol from the Emergency Response Board. She was in the queue nobody had assigned, forms not filed, each unstamped intake sitting beneath her clipboard. They begged us again through the intercom, or loudly."
+  },
+  {
+   "i": 1,
+   "text": "Beyond the sliding doors of Riverside sat the triage desk. A nurse for barely three logged names into the system quietly beneath the fluorescent panels, steadily, since though she could still call another patient from bay to her.\n\nMonitors beeped nearby.\n\nThe companion beside her had waited for twenty in the corridor, drumming anxiously against it.\n\nHe watched him while clutching his wristband they held still.\n\nA wounded stranger she had gasped not being calm.\n\nLater they rushed the frightened man who wheeled him across into me.\n\nSix hours already they gave us from the East Ward Annex to Radiology across the North Intake Corridor.\n\nShe was on a gurney nobody had noticed, so I would not disturb the sleeping arrivals lying beside her stretcher.\n\nThey summoned me quickly through a curtain and again."
+  },
+  {
+   "i": 2,
+   "text": "Past the crowded ward past a triage desk. The corridor at nearly midnight held gurneys along the wall, lined against the fluorescent glare, everywhere throughout because whenever anyone had been assigned a bed near admissions beside them. Wristbands snapped on.\n\nThe intercom above reception was paging for two of the waiting patients moved slowly toward it. She watched him while examining her the chart nobody read aloud. A drawn curtain none could pull nor keep shut.\n\nSomewhere they sensed a growing dread they felt themselves beyond within us. Three monitors already they showed them across the Emergency Intake Zone during handoff among the Central Nursing Station.\n\nHe was through the wait, he had wanted them; nurses would not soothe this distressed companion pacing beyond her ward. They summoned us again toward a bay, yet quietly."
+  },
+  {
+   "i": 3,
+   "text": "Past the triage desk stood a gurney. The intercom above barely once paged someone through a corridor loudly toward the waiting chairs urgently, though whether anyone had actually heard that summons over sirens remained unclear to everyone.\n\nWristbands slipped off.\n\nEvery nurse near bay three was scrambling between four of the monitors beeping wildly around her.\n\nShe grabbed him because bandaging his the wound she managed quickly.\n\nThe frantic companion who was pleading not seemed impatient.\n\nStill she checked the swollen ankle, then examined it against alongside herself.\n\nOne doctor meanwhile pulled them beside the North Wing Emergency Ward across triage into the South Corridor Recovery Suite.\n\nThey had past the shift nobody could stabilize, so nobody would not summon another exhausted intern working under his supervision.\n\nShe wheeled it away toward past the curtain and swiftly."
+  },
+  {
+   "i": 4,
+   "text": "Past the crowded triage into a corridor bay. The wristband on nearly every arriving patient blinked orange under the fluorescent glare, almost like when someone had been marking a queue against death behind them.\n\nMonitors beeped through.\n\nThe companion beside her had waited for twenty into the night, tapping anxiously against it.\n\nShe told him that they knew the routine, they endured together.\n\nThe drawn curtain neither could pull nor stay open.\n\nStill she gripped a trembling hand, holding it against beneath them.\n\nThree hours already they had spent inside the Saint Marlow Regional beneath ceilings of the East Halloway Ward.\n\nThey had into the register they had scrawled, they should not misplace those crucial forms filed under her name.\n\nShe watched him quietly across a gurney and again."
+  },
+  {
+   "i": 5,
+   "text": "Past the crowded Emergency toward a triage station, the queue at nearly six overflowed chairs along the corridor, spilling awkwardly beyond a swinging door frame, endlessly still because whenever it seemed cleared, another gurney rolled a patient through doorways toward them. Alarms rang overhead. A nurse in scrubs was pushing past two of the bays, moving quickly among us. She checked him while scanning her clipboard, then jotted rapidly. That distant intercom she had queued to sound urgent. Suddenly someone demanded the responsible physician, questioning him about beyond me. Twelve minutes already, they promised us at the Saint Vincent Regional through updates via the Central Admissions Line. He was in a bay, someone had told them, waiting not to receive any available bed reserved for his companion. They wanted us here, past the desk and forward."
+  },
+  {
+   "i": 6,
+   "text": "Past the swinging Emergency into a waiting bay. The clock above barely twenty registered minutes for a patient still along the fluorescent hallway again, yet since whoever had been questioning the nurse about protocol before her. Monitors beeped nearby. A companion beside triage was arguing over one about the delay standing there beside them. She warned him though pressing his aching chest they moved slowly. This anxious murmur nobody could hush not was audible. Meanwhile someone paged the attending physician, summoning her from beyond it. Three residents suddenly they hurried toward the Bay Twelve Corridor into distress across the Central Nursing Station. They were among the gurneys everyone had wheeled inside, having quietly checked each blinking screen humming above their wristbands. Someone flagged them again from a form and forward."
+  },
+  {
+   "i": 7,
+   "text": "At the County General beyond a nurses station. The corridor at nearly midnight held gurneys along the wall, crammed loosely against the triage desk edge, everywhere already because whenever anyone had been wheeling a stretcher past bay toward it. Monitors beeped near. A curtain of vinyl was drawn across three of the bays, sheltering everyone from us. She watched them until noticed she the drip, they measured slowly. The pale patient who had slumped and remained restless. Still someone paged another urgent code, alerting nobody about across them. Two nurses barely helped him through the East Wing Annex during handoff toward the West Corridor Hall. He had into the chart she had scribbled, they could not read a barely legible number written for her ward. They wanted them badly beyond a wristband and quietly."
+  },
+  {
+   "i": 8,
+   "text": "Past the triage Station in an intake bay, the corridor along nearly six occupied gurneys stretched endlessly beneath the fluorescent panels, restlessly yet insistently because though everyone had been waiting outside since dawn near us. Monitors beeped overhead. A doctor with scrubs was moving toward three of the curtained bays quickly for her. She checked him before scanning his the wristband someone recorded there. The overwhelmed nurse we had summoned not was available.\n\nThen someone flagged a passing orderly who paged us at across them. Two patients loudly they alerted us of the Central Admissions Desk about protocol under the West Reception Wing. He had past this hour they had told him he would not clear another crowded backlog forming across our shift. They rescheduled us anyway despite the delay, and again."
+  },
+  {
+   "i": 9,
+   "text": "Into the Mercy ward through a glass door. The night at once threw patients across the corridor, hurriedly past the triage station outside, so that whoever had been waiting the fever with dread over them. Nurses hurried near. A monitor beside a bay was blinking through three of the drips flowing quietly beneath it. She watched him while grabbing his an armband she checked twice. That frantic clerk we had summoned to be present. Already she signed the initial chart she filed there beyond among them. Two forms later, she handed them across the Saint Vincent Regional after intake into the East Admissions Unit. It was under a curtain she had drawn; she had not seen those anxious relatives waiting beyond his gurney. They lost it quickly among the crowd and away."
+  }
+ ],
+ "topups": [
+  {
+   "date": "2026-08-08",
+   "added": 9,
+   "refused": 24,
+   "attempts": 33,
+   "elapsed_s": 418.9,
+   "note": "prompt replayed verbatim from this record; original rows untouched"
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2",
+ "lang": "it",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~25 words) clause architecture: 1 main clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~10 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~17 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 9 (~7 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1.\nPeriod 10 (~10 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\nPeriod 11 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 105.3,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "La fila avanza lenta verso i varchi. Mentre i viaggiatori depositano nei vassoi le cinture e le monete, un annuncio ripete che ogni oggetto metallico va estratto dalle tasche. Il metal detector suona. Un agente indica con un cenno il passeggero successivo. Chiede di allargare le braccia al signore che ha fatto scattare l'allarme. La barra magnetica scorre lungo i fianchi. Quando il documento viene restituito, il funzionario accenna un sorriso cortese. La cortesia impersonale dell'autorità accompagna ogni gesto, ogni istruzione ripetuta, ogni sguardo posato con misurata attenzione sui bagagli. I cartelli, che vietano liquidi e lame, sovrastano il nastro trasportatore. L'addetto conferma che il controllo è concluso. Il viaggiatore comprende che può finalmente recuperare le sue cose."
+  },
+  {
+   "i": 1,
+   "text": "La fila avanza lenta verso i varchi. Mentre l'altoparlante ripete le istruzioni con voce impersonale, i passeggeri svuotano le tasche e depositano le loro cose nei vassoi grigi. Le barriere serpeggiano. Un cartello segnala i divieti in molte lingue. Un agente si avvicina per invitare un viaggiatore che è uscito dalla coda. Il metal detector emette un segnale acuto. Quando l'uomo attraversa il portale, la spia si accende di rosso. L'agente lo guida verso un lato appartato, esamina i documenti con cortesia misurata e impugna il rilevatore manuale lungo le braccia. La cintura, che era rimasta indosso, viene tolta e appoggiata. Il funzionario spiega che la procedura è di routine. Il viaggiatore annuisce e risponde che ha capito perfettamente."
+  },
+  {
+   "i": 2,
+   "text": "La fila avanzava lenta verso i controlli. Mentre i passeggeri svuotavano le tasche nei vassoi di plastica, un funzionario ripeteva le istruzioni con quella cortesia impersonale che l'uniforme concede a chiunque. Il metal detector suonò. Una donna si fermò oltre la barriera bianca. Un agente le chiese di sollevare le braccia, un gesto che ormai nessuno discute. I documenti passarono di mano in mano. Quando la paletta scivolò lungo i fianchi, la viaggiatrice trattenne il respiro. Le cartelle luminose indicavano i limiti dei liquidi, le scarpe da togliere, le regole affisse ovunque con precisione fredda e definitiva. Lo scanner mostrava sagome che nessun occhio umano avrebbe interpretato senza addestramento. L'agente disse che tutto era in ordine. La donna capì che poteva finalmente riprendere le sue cose."
+  },
+  {
+   "i": 3,
+   "text": "La fila avanzava lenta verso i varchi. Mentre i passeggeri deponevano cinture e monete nei vassoi grigi, un annuncio ripeteva le stesse parole, invitando tutti a preparare i documenti. Il nastro scorreva. Le borse sparivano dietro la tenda di gomma. Un agente le osservava sullo schermo, cercando le sagome che gli ordini imponevano di riconoscere. Il metal detector suonò brevemente. Quando la donna oltrepassò l'arco, una luce rossa lampeggiò all'improvviso. L'agente la invitò da parte con un gesto cortese e neutro, indicando la piazzola segnata sul pavimento accanto alla parete bianca. Un collega impugnava il rilevatore manuale, che ronzava lungo le braccia aperte. Il cartello sopra il banco avvertiva che ogni controllo rispondeva a norme superiori. La voce impersonale precisava che la collaborazione avrebbe reso tutto più rapido."
+  },
+  {
+   "i": 4,
+   "text": "La coda avanzava lenta verso i varchi. I passeggeri, mentre attendevano il loro turno, deponevano scarpe e cinture nelle vaschette grigie che scorrevano dentro lo scanner. Il metal detector suonava. Un agente indicava la linea gialla dipinta sul pavimento. Una donna fu invitata a fermarsi accanto a un banco, dove un secondo funzionario controllava i documenti. La macchina emise un altro segnale. Quando il viaggiatore alzò le braccia, l'ispettore passò lentamente il rilevatore lungo i fianchi. La cortesia impersonale delle istruzioni riempiva l'aria come un rumore neutro, ripetuto, uguale per tutti quelli in attesa. I cartelli, che pendevano dal soffitto, elencavano gli oggetti proibiti. L'agente disse che la borsa doveva essere aperta di nuovo. La donna rispose che non nascondeva nulla di vietato."
+  },
+  {
+   "i": 5,
+   "text": "La fila avanzava lenta verso i controlli. Mentre i passeggeri deponevano borse e cinture nei vassoi di plastica, un funzionario indicava con gesto rapido il varco successivo. Suonava un allarme. I metal detector lampeggiavano ancora una volta. Bisognava svuotare le tasche, un obbligo che nessuno discuteva. La cortesia era impersonale, quasi automatica. Quando l'ufficiale la chiamò da parte, la donna si irrigidì appena. Le venne chiesto di allargare le braccia mentre un secondo agente passava il rilevatore lungo i fianchi con lenta precisione professionale. I documenti, che erano già stati esaminati, tornarono in mano al viaggiatore. Il cartello sopra il nastro avvertiva che ogni bagaglio incustodito sarebbe stato rimosso. L'agente ripeté che il controllo era ormai concluso."
+  },
+  {
+   "i": 6,
+   "text": "La fila avanzava lenta verso i controlli. Mentre i viaggiatori spingevano i bagagli sul nastro, gli agenti osservavano ogni gesto, pronti a fermare chiunque dimenticasse di svuotare le tasche. Suonava un allarme. Una donna posava le scarpe nel vassoio. Il metal detector cominciava a lampeggiare, segnalando un oggetto che nessuno aveva dichiarato. L'agente alzò una mano. Quando il passeggero fu invitato a farsi da parte, tutti trattennero il respiro. L'ispezione procedeva con quella cortesia impersonale che l'autorità riserva a ciascuno senza mai concedere un vero sorriso. Il funzionario impugnava il rilevatore, che ronzava contro le maniche. Il cartello ricordava a tutti che ogni liquido andava dichiarato. La voce registrata annunciava che il varco successivo era ormai libero."
+  },
+  {
+   "i": 7,
+   "text": "La fila avanza lenta verso i banchi metallici. Ogni viaggiatore posa le sue cose nei vassoi grigi, mentre l'addetto ripete la stessa formula che nessuno ascolta più davvero. Suona l'allarme. Un uomo esce dalla colonna con aria stanca. Deve alzare le braccia davanti al portale che lampeggia di rosso. La cortesia dell'ordine è impersonale. Quando il funzionario si avvicina, il metal detector traccia lentamente il contorno del corpo. I documenti passano di mano in mano sotto la luce fredda, e i cartelli sopra le teste indicano procedure e divieti con parole asciutte. Il bastone elettronico ronza vicino alle tasche che l'uomo svuota. Tutti capiscono che nessuno protesterà davvero. Sembra che l'autorità sappia già ogni cosa."
+  },
+  {
+   "i": 8,
+   "text": "La fila avanzava lenta verso i varchi. Mentre i viaggiatori spingevano i bagagli sul nastro, un annuncio ripeteva le stesse istruzioni, e le voci si perdevano nel rumore metallico dei vassoi. Le barriere delimitavano tutto. Ogni cosa doveva finire dentro quelle vaschette grigie. L'agente invitava a togliere le cinture che rallentavano il passaggio dei corpi. Il metal detector suonava di continuo. Quando la donna oltrepassò l'arco, la macchina emise un lampo rosso. Un funzionario la chiamò da parte con un gesto cortese e impersonale, quasi automatico, mostrando appena il palmo aperto. Controllò i documenti che lei porgeva tremando appena. Chiese con voce piatta se portasse oggetti metallici addosso. Ripeté a bassa voce che la procedura era del tutto ordinaria."
+  },
+  {
+   "i": 9,
+   "text": "La fila avanza lenta verso i controlli. I passeggeri, mentre attendono che il varco si liberi, depositano nei vassoi le cinture, le monete e i telefoni. Le luci lampeggiano. Un cartello impone di svuotare le tasche. L'agente invita a procedere verso il metal detector che scandisce ogni corpo. Il segnale acustico risuona improvviso. Quando l'allarme scatta, una viaggiatrice viene fermata di lato. L'ufficiale controlla il documento con gesto misurato, poi passa il rilevatore lungo le braccia, i fianchi, le caviglie. La donna resta immobile, mentre l'apparecchio ronza vicino al polso. La voce ripete che la procedura richiede soltanto pochi istanti. Il cartello ricorda che ogni oggetto va dichiarato con cortesia impersonale."
+  }
+ ]
+}

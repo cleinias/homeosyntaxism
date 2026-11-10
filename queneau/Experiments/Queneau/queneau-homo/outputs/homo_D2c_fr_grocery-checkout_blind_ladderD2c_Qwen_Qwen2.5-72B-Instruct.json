@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "fr",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Dans l'S, à une heure d'affluence. Un type dans les vingt-six ans, chapeau mou avec cordon remplaçant le ruban, cou trop long comme si on lui avait tiré dessus. Les gens descendent. Le type en question s'irrite contre un voisin. Il lui reproche de le bousculer chaque fois qu'il passe quelqu'un. Ton pleurnichard qui se veut méchant. Comme il voit une place libre, se précipite dessus. Deux heures plus tard, je le rencontre Cour de Rome, devant la gare Saint-Lazare. Il est avec un camarade qui lui dit: \"Tu devrais faire mettre un bouton supplémentaire à ton pardessus .\" Il lui montre où (à l'échancrure) et pourquoi.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in French, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 23 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 12 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 14 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\nPeriod 9 (about 18 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - finite complement clause\n        - open complement (infinitive)\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural French. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 6.1,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Dans la file de caisse bondée, le tapis roulant avance lentement. Un chariot plein de provisions attend son tour, une barre de séparation en main. Le caissier scanne les articles, l’écran affiche chaque prix. Les sacs sont remplis avec soin, le lecteur de carte à portée. Le client tend sa carte, une autre personne pousse derrière. Un léger frottement s’ensuit, chacun veut son espace. Les bips retentissent, le total est annoncé à voix haute. Le caissier invite à présenter la carte de fidélité. L’écran du terminal affiche un message d’attente. La caissière remet le reçu, le sourire aux lèvres."
+  },
+  {
+   "i": 1,
+   "text": "La file au supermarché s’étire, dense et bruissante.  \nUne caissière active, le tapis roule sous ses doigts habiles, chaque article s’offre, scanné avec précision, tandis qu’un client patiente, son caddy prêt pour l’évasion.  \nLe bip résonne.  \nL’espace se fait précieux.  \nLa cliente tend sa carte, l’appareil l’accepte, attendant qu’elle la pose délicatement.  \nUn chariot pousse, derrière, insistant.  \nLe total s’affiche, clair.  \nLa caissière invite le client à payer, le rituel continue.  \nUn autre client s’impatiente, laissant échapper un soupir, alors que l’écran propose d’enregistrer une carte de fidélité.  \nLes sacs s’empilent, prêts pour le voyage."
+  },
+  {
+   "i": 2,
+   "text": "Dans la file du supermarché, le tapis roulant s’anime sous les yeux attentifs de la caissière.  \nLe lecteur de codes-barres, à côté, attend impatiemment que chaque article défile, comme s’il avait sa propre conscience.  \nLa cliente pose son sac sur le comptoir.  \nLe chariot métallique résonne légèrement derrière elle.  \nElle sort sa carte pour payer, tandis que la machine annonce la somme totale.  \nLa personne derrière tape du pied, irritée par l’attente.  \nLes bips se succèdent rapidement, rythmant chaque passage d’article.  \nLa caissière, sans hésiter, invite la cliente à valider son paiement.  \nTout en scannant, elle répond aux questions du terminal concernant la carte de fidélité.  \nLe reçu tombe dans un crissement discret."
+  },
+  {
+   "i": 3,
+   "text": "Dans la file caisse du supermarché bondé, le tapis roulant s’anime.  \nLe code-barres résonne sous l'œil électronique tandis que le client défile, pressé par l’impatience derrière lui.  \nLa caissière scanne.  \nLes articles s'accumulent.  \nElle invite le suivant à passer, le panier rempli d’espoirs.  \nL'acheteur présente sa carte.  \nLa machine bipe, ponctuelle.  \nElle annonce le total.  \nAvant de payer, elle demande la carte fidélité, une invite répétitive.  \nLe reçu imprime enfin."
+  },
+  {
+   "i": 4,
+   "text": "Dans la file du supermarché bondé, le tapis roulant avance lentement.  \nLe panier du client, plein de denrées, attend que le scanner lise chaque code.  \nLa caissière salue aimablement.  \nLes articles s'empilent rapidement dans le sac.  \nElle invite le client à payer, tout en surveillant.  \nLe client, stressé, cherche sa carte.  \nLa file derrière s'impatiente bruyamment.  \nIl faut finir rapidement cette transaction.  \nUn autre acheteur pousse légèrement, créant une tension.  \nEnfin, le montant total est annoncé clairement."
+  },
+  {
+   "i": 5,
+   "text": "Dans la file de caisse, la foule s'agite.  \nLa bande transporteuse avance, le lecteur scanne, tandis que la cliente paie par carte.  \nLe chariot attend patiemment.  \nLe bip résonne dans l'air.  \nLa caissière annonce le total, invitant celui qui suit à préparer sa carte.  \nL’homme derrière, impatient, presse le pas.  \nLes bips s’enchaînent rapidement.  \nElle range ses courses, prête à partir.  \nAlors que la file s’ébranle, une dispute éclate pour un espace de plus.  \nLa caissière conclut avec un sourire."
+  },
+  {
+   "i": 6,
+   "text": "La file s'étire, impatiente.  \nLe tapis roulant s'anime, la caissière saisit le code, tandis que derrière, une ombre murmure.  \nElle soupire.  \nLes articles glissent doucement.  \nLa cliente tend sa carte, prête à payer, lorsque quelqu'un bouscule légèrement son sac.  \nLe voisin se plaint, trop près.  \nLes bips résonnent.  \nLa somme s'affiche, invitant au paiement.  \nAlors qu'elle insère son badge, un autre client supplie de passer rapidement, espérant payer avant lui.  \nLe reçu tombe, concluant la transaction."
+  },
+  {
+   "i": 7,
+   "text": "Dans la file du supermarché, le tapis roulant défile devant la caissière.  \nLa dame derrière pousse son caddie, impatiente, pendant que le code-barres clignote.  \nLe bip résonne.  \nLe total s’affiche à l’écran.  \nLa cliente sort sa carte pour payer, une autre personne l’observe, prête.  \nLe lecteur de carte attend, le ticket se prépare à sortir.  \nL’annonce du montant retentit.  \nLa caissière demande aimablement le code du programme fidélité.  \nPendant qu’elle baguette les articles, un client s’agace de l’espace manquant.  \nLes sacs se remplissent lentement."
+  },
+  {
+   "i": 8,
+   "text": "Dans la file de caisse, le tapis roulant s'active, imperturbable.  \nL'épicerie bourdonne, une file de chariots attend, le lecteur de codes-barres bippe sans relâche, tandis que les sacs s'empilent.  \nLe temps passe lentement.  \nLe client présente sa carte de fidélité.  \nLe caissier, concentré, annonce le montant, invitant le suivant à passer.  \nDerrière, une dame s'impatiente, tapotant le sol.  \nLes beeps se succèdent, rythmant chaque article.  \nLa cliente finit par payer, glissant sa carte dans le terminal.  \nAlors qu'elle récupère sa facture, une personne s'interpose légèrement, cherchant un espace.  \nLa routine se poursuit, invariable."
+  },
+  {
+   "i": 9,
+   "text": "Dans la file du supermarché bondée, les clients s’impatientent.  \nLe tapis roulant avance, le lecteur de codes-barres bipe, tandis que la caissière vérifie la carte de paiement.  \nLes caddies s'alignent.  \nLa sonnerie de la caisse résonne.  \nLa cliente demande qu'on lui passe les articles, que le système scanne rapidement.  \nL'homme derrière observe, attendant qu'on termine.  \nLes beeps se succèdent rapidement.  \nLe montant total est annoncé clairement.  \nLorsqu'on sollicite sa carte de fidélité, la cliente fouille dans son sac, sous le regard pressant du suivant.  \nLa file progresse lentement."
+  }
+ ]
+}

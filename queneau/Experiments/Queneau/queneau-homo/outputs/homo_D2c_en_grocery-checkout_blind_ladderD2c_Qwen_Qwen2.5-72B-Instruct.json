@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "en",
+ "scenario": "grocery-checkout",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 29 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 15 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 5 (about 11 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - relative/adnominal clause\nPeriod 6 (about 9 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 12 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 18 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 19 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n          - relative/adnominal clause\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 4.6,
+ "gens": [
+  {
+   "i": 0,
+   "text": "The line snakes long, carts loaded heavy. To scan each item quickly, the cashier works to beat the rush, her hands a blur. Beep. A divider slides, marking boundaries. Behind, a shopper edges closer, space tight and tempers thin. Bags wait, ready to fill. Overhead, the card reader blinks, awaiting the final swipe. The total chimes, a number called out loud. Loyalty cards flash, discounts promised. In the chaos, a receipt prints, proof of purchase. Transactions complete, the cycle repeats."
+  },
+  {
+   "i": 1,
+   "text": "The line snakes through the store, carts brimming.  \nShoppers load items, waiting to pay, as the conveyor belt slides forward.  \nBeeps punctuate the air.  \nThe cashier scans each item, her hands moving swiftly.  \nBehind her, the bagging area fills quickly, bags piling high.  \nA customer taps the card reader, eyes on the screen.  \nAnother shopper shifts, impatient, in the line behind.  \nThe register chimes, announcing the total.  \nThe cashier asks for a loyalty card, her voice steady.  \nA receipt prints, the paper curling slightly."
+  },
+  {
+   "i": 2,
+   "text": "The line snakes forward, carts piled high with evening buys. The scanner whirs to life, awaiting items to glide across its beam, while the cashier greets the shopper with a practiced smile. The conveyor belt hums, a steady stream of goods passing through. A woman, her cart overflowing, eyes the space warily. She inches closer, the divider bar clinking softly against the belt. The beeps of the scanner punctuate the air, each product registered with a chime. The total mounts, displayed prominently on the screen. The cashier prompts for a loyalty card, the machine ready to read. The next shopper, impatient, leans in, causing a slight tension in the queue. The receipt prints, a final confirmation of the day’s purchases."
+  },
+  {
+   "i": 3,
+   "text": "The queue snaked through the supermarket, each cart laden with goods. The cashier scanned items, the beeps marking progress, as the conveyor belt moved steadily. She smiled. A shopper placed groceries on the belt, her card ready. Behind her, another customer shuffled impatiently, his cart pressing close. The divider bar clicked into place, separating purchases. The cashier, focused, announced the total. Receipts printed, loyalty cards scanned, transactions completed smoothly. The routine was seamless, a dance of retail efficiency. The shopper, relieved, packed her bags, the final beep signaling completion."
+  },
+  {
+   "i": 4,
+   "text": "The cashier rings up items, the belt groans with goods, shoppers jostle for space. The scanner beeps, the shopper reaches to swipe, a line forms impatiently behind. Cash changes hands. The card reader blinks, awaiting a tap from the next in line. Behind, a cart nudges, its wheels squeak, tension mounts quietly. The divider slides, the receipt prints, a whispered complaint trails. Shelves empty, the register ticks, the rhythm of commerce drones on. The total displays, the cashier prompts, a loyalty card is requested. The beep signals success, the total is announced, a brief pause follows. The cashier smiles, the transaction concludes, the next cart awaits."
+  },
+  {
+   "i": 5,
+   "text": "The checkout line buzzes with impatient energy. Shoppers wait to unload carts, their eyes fixed on the conveyor belt, moving steadily forward. Cashiers scan items quickly, hands dancing over the barcode scanner. Each beep signals progress, the digital display climbing higher. A customer swipes a card, the machine whirring softly. Bags fill up swiftly, the bagging area a hub of activity. A receipt prints out, the paper curling slightly. The next person in line shuffles closer, eager for their turn. The cashier asks if they have a loyalty card, the question part of the routine. Another shopper steps aside, making room for the cart."
+  },
+  {
+   "i": 6,
+   "text": "The shopper slides items onto the conveyor belt. The cashier scans each, waiting to tally the total, as the queue shifts impatiently. Behind, a cart nudges closer. A divider bar marks territory. The scanner beeps rhythmically, announcing prices. The card reader waits, glowing. The cashier prompts for a loyalty card. The total flashes, the receipt prints. The next shopper steps forward, already unfolding bags."
+  },
+  {
+   "i": 7,
+   "text": "The shopper pushed the cart through the crowded aisle, lining up at the checkout. The cashier, poised to scan, waited for the items to glide smoothly down the conveyor. She scanned each barcode swiftly. The beeping was rhythmic, punctuating the air. In the bagging area, products piled neatly, almost organized. The machine whirred softly, awaiting the next swipe. Behind, a restless patron shifted, eager to advance. The cashier announced the total with a practiced smile. The card reader blinked, prompting for the loyalty number. The receipt printed, finalizing the transaction."
+  },
+  {
+   "i": 8,
+   "text": "The line snakes forward, restless. Shoppers push carts, aiming to scan items swiftly, before another eager customer closes the gap. Beeps echo, rhythmic. Cashier rings up apples, their stickers dance under light. Behind, a voice murmurs, \"Almost there,\" eyes fixed on progress. At the belt, a divider marks territory, a subtle claim. Receipts print, paper whispers secrets of purchases. Totals rise, numbers chant a familiar tune. Loyalty cards tap, screens glow, prompting passwords, linking deals. Final beep confirms the day’s tally, a brief pause in the retail rush."
+  },
+  {
+   "i": 9,
+   "text": "The line snakes forward, carts brimming with goods. Shoppers load items onto the belt, scanning eyes fixed on the screen ahead. The belt slides, a steady hum beneath. A cashier greets, her smile warm and practiced. Behind, a patron shifts, impatient for their turn to come. The scanner chirps, each beep a tiny victory. Bags fill, the plastic crinkling softly. The card reader blinks, awaiting the final swipe. Loyalty cards dangle, a reminder of points to earn. Receipts print, the day’s purchases neatly tallied."
+  }
+ ]
+}

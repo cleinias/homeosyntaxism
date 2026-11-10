@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "it",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 25 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 9 words) clause-nesting schema:\n  - main clause\nPeriod 5 (about 10 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n      - relative/adnominal clause\nPeriod 6 (about 6 words) clause-nesting schema:\n  - main clause\nPeriod 7 (about 9 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 17 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 7 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 10 (about 10 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\nPeriod 11 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 6.9,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel pronto soccorso, il trambusto era incessante. Fuori dalla triage, una donna ansiosa chiedeva spiegazioni, mentre l'orologio ticchettava. Le sedie della sala d'attesa erano tutte occupate. Lungo il corridoio, le barelle si susseguivano, pronte per l'intervento necessario. Un paziente, pallido e sudato, cercava di respirare, sostenuto dal suo compagno. Le infermiere correvano da un box all'altro. Il dottore, con espressione seria, consultava i monitor e regolava le flebo. La stanza sembrava un turbine di attività. Dietro una tenda semichiusa, una voce implorava soccorso. L'interfono annunciava numeri di stanza e codici urgenti."
+  },
+  {
+   "i": 1,
+   "text": "Nel pronto soccorso, le luci intense illuminavano il caos. Mentre le infermiere correvano tra le corsie, un medico consultava i monitor, osservando l’andamento dei pazienti. La tensione era palpabile. Il trambusto continuava senza sosta. Un uomo anziano, seduto su una sedia d’aspetto, cercava di respirare, mentre la sua moglie implorava aiuto. In sottofondo, l'interfono annunciava urgenze critiche. L'aria era carica di ansia. Una giovane donna, con un bracciale rosso al polso, compilava i moduli con mani tremanti. Dietro una tenda, un paziente gemeva forte. Tutti attendevano, sperando in una rapida assistenza."
+  },
+  {
+   "i": 2,
+   "text": "Nella sala d'urgenza, il trambusto è incessante.  \nIl personale si muove con precisione, mentre le sirene echeggiano fuori.  \nQualcuno ansima.  \nLe sedie di plastica sono occupate da volti tesi.  \nUn paziente cerca di respirare, il suo braccio stretto in una fascia, che pulsa.  \nUna tenda si apre e si chiude.  \nIl dottore parla, mentre lo schermo del monitor lampeggia.  \nLe infermiere corrono tra i lettini, reggendo flebo e cartelle.  \nUn uomo, pallido, osserva, terrorizzato dalla situazione.  \nLa compagna di un malato protesta, la voce tremante per l'ansia.  \nGli annunci dell'interfono interrompono il caos, richiamando medici e pazienti."
+  },
+  {
+   "i": 3,
+   "text": "Nel reparto di emergenza, il trambusto era palpabile. Oltre la reception, pazienti ansiosi occupavano le sedie d'attesa. Tra i lettini del corridoio, passi affrettati echeggiavano. Un medico esaminava un modulo, mentre un'infermiera sistemava una flebo. Alcuni pazienti aspettavano di essere chiamati. Le tendine dividevano gli spazi, nascondendo scene di disagio. Sullo sfondo, un monitor emetteva bip regolari. Una donna, palesemente insofferente, brontolava per l'attesa. Un uomo, al suo fianco, cercava di calmarla. L'interfono annunciava con urgenza un altro intervento. Tutti i presenti si muovevano con determinazione, rispondendo alle necessità del momento."
+  },
+  {
+   "i": 4,
+   "text": "Nell'atrio dell'ospedale, le luci fluorescenti danzano.  \nUn infermiere corre lungo il corridoio, mentre l'interfono urla ordini.  \nSilenzio.  \nLa tensione è palpabile.  \nLe porte delle stanze si aprono e chiudono, mentre pazienti attendono.  \nIl tempo sembra fermarsi.  \nLe macchine bippano incessantemente, scandendo i secondi.  \nUna donna si lamenta, aggrappandosi alla mano del compagno.  \nL'uomo, con lo sguardo ansioso, osserva il monitor vicino.  \nIl dottore annuncia che il paziente sarà presto visitato.  \nIl personale affronta la situazione con calma professionale."
+  },
+  {
+   "i": 5,
+   "text": "Nell'atrio dell'ospedale, l'aria è densa di tensione. Fuori dalla triage, la gente si agita impaziente, mentre il personale corre da una parte all'altra. Un bambino piange sommessamente. Le porte delle sale d'urgenza si aprono e chiudono senza sosta, rivelando i pazienti distesi su lettini metallici, circondati da flebo e monitor. Un uomo anziano cerca disperatamente aria, sostenuto da sua moglie che protesta contro l'attesa. Il dottore controlla le vitine vitali di un paziente, mentre una suora distribuisce polsiere colorate. Nell'angolo, un ragazzo scrive febbrilmente su moduli ufficiali, cercando di mantenere l'ordine. L'interfono annuncia urgentemente la presenza di un medico in sala 3. Una voce metallica richiede assistenza immediata per un trauma cranico."
+  },
+  {
+   "i": 6,
+   "text": "Nel reparto di emergenza, l'attività non accenna a placarsi. Mentre i minuti sembrano dilatarsi, il silenzio è solo apparente. I pazienti si lamentano, spossati. Un uomo, pallido e sudato, cerca di respirare, mentre la sua compagna lo sostiene. Le infermiere si muovono rapide tra le tende tirate, gli apparecchi emettono segnali continui. La tensione è palpabile, ogni gesto è preciso. Sul tavolo della triage, pile di moduli aspettano firma. Il dottore consulta il monitor, prima di afferrare un altro fascicolo. Tra i bisbigli, si sente la voce del citofono che chiama un nome."
+  },
+  {
+   "i": 7,
+   "text": "Nell'atrio dell'ospedale, il trambusto non smette un istante. Le luci al neon si riverberano sulle facce stanche dei pazienti. Un uomo ansima, aggrappato alla sedia di plastica. La dottoressa esamina con calma un referto, mentre l'infermiera annota i dati vitali del paziente. Il silenzio è interrotto dai bip delle macchine e dal fruscio delle tende tirate. Qualcuno borbotta irritato, sfogando la tensione per l'attesa infinita. Sopra le loro teste, un altoparlante annuncia un urgenza codice rosso. Un bambino piange sommessamente, stretto tra le braccia della madre. La porta del pronto soccorso si apre con uno scatto, lasciando entrare una barella. Il medico si precipita, chiedendo informazioni al personale."
+  },
+  {
+   "i": 8,
+   "text": "Nel reparto di emergenza, il trambusto è incessante.  \nSotto la luce fredda, le infermiere corrono da una postazione all'altra, scambiando informazioni concitate.  \nIl tempo vola.  \nL'ansia si diffonde tra i pazienti.  \nAlcuni cercano di respirare, mentre attendono di essere visti, circondati da macchinari silenziosi.  \nLe tende separano spazi angusti.  \nFuori, le sirene delle ambulanze echeggiano, annunciando nuovi arrivi.  \nUn uomo stringe la mano della moglie, supplicandola di resistere.  \nIl dottore, che controlla le sue condizioni, indossa una mascherina.  \nLa segretaria, intanto, verifica gli esami più urgenti, registrando dettagli cruciali.  \nL'interfono chiama un medico in corridoio, mentre i monitor lampeggiano."
+  },
+  {
+   "i": 9,
+   "text": "Nel reparto di emergenza, il trambusto era incessante. Sul banco del triage, una infermiera annotava pazienti, mentre l'orologio ticchettava veloce. Un medico si affrettava. I visitatori occupavano sedie scomode. Una barella attendeva lungo il corridoio, pronta a muoversi. Un paziente ansimava, mentre un accompagnatore esprimeva frustrazione per l'attesa. Monitor lampeggiavano, flebo pendevano, una tenda nascondeva una scena critica. Le pagine interne risuonavano, richiamando nomi e specialità. Una fascia al polso indicava la priorità. Un malato chiedeva spiegazioni su ritardi. L'infermiera rassicurava, promettendo cure immediate."
+  }
+ ]
+}

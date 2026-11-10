@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "grocery-checkout",
+ "source_visible": true,
+ "regime": "vis",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of the source shown below: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nSOURCE TEXT --- this is the exemplar whose syntactic form you must hold. Do NOT\nreuse its words, its content, or its setting; take only its syntactic form:\nSulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a supermarket checkout line at a busy hour\n  - the conveyor belt, the barcode scanner, the bagging area, the card reader\n  - the cashier and a shopper; a cart, a divider bar, a receipt\n  - another shopper crowding from behind; a small friction over space in the queue\n  - the register of retail routine: beeps, the total announced, loyalty-card prompts\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 6.6,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel grande G, accanto alla cassa. Un cliente di circa trenta anni, berretto basso con una visiera consumata, figura esile, quasi scheletrica, come se l'avessero steso su un telaio. Le persone avanzano. L'uomo in questione si irrita con un vicino. Lo accusa di invadere il suo spazio ogni volta che qualcuno si muove. Tonale frustrato, con un fondo di rabbia. Appena vede uno spazio libero, ci si infila. Dopo poco lo ritrovo nell'area di imballaggio, accanto alla cassa automatica. Sta con un amico che gli suggerisce: «Dovresti usare un carrello più piccolo». Gli mostra come (sulla sinistra) e perché."
+  },
+  {
+   "i": 1,
+   "text": "Nel supermercato, tra le code. Un uomo di circa trent'anni, berretto storto con una fascia scolorita, collo sottile, come se fosse stato tirato. Le persone avanzano. L'uomo in questione si irrita con un vicino. Lo accusa di spingerlo ogni volta che qualcuno supera la cassa. Tono fastidioso, con pretese di superiorità. Non appena vede uno spazio vuoto, ci si precipita. Dopo due ore lo rividi alla piazza del mercato, davanti all'ingresso principale. È con un amico che gli dice: «Dovresti sistemare meglio il carrello». Gli indica dove (alla maniglia) e perché."
+  },
+  {
+   "i": 2,
+   "text": "Nel supermercato, durante l'ora punta. Una donna di circa trent'anni, vestito elegante con una giacca leggera, capelli corti, come se fossero stati tagliati alla fretta. Le persone aspettano. La cliente in questione si irrita con il commesso. Lo accusa di non scansare abbastanza il carrello ogni volta che passa qualcuno. Tonante, con pretese di competenza. Non appena vede uno spazio libero, ci si infila. Due ore più tardi la incontro alla cassa, davanti alla fila della biglietteria. È con una collega che le dice: «Dovresti far installare un divisore nella tua lista della spesa». Le mostra dove (alla fine della corsia) e perché."
+  },
+  {
+   "i": 3,
+   "text": "Nel P, durante l'ora di punta. Una signora intorno ai cinquanta, berretto rigido con una catenina al posto della visiera, braccia troppo corte, come se fossero state tagliate cortissime. Le persone si spostano. La donna in questione si irrita con un vicino. Lo accusa di invaderle lo spazio ogni volta che qualcuno fa avanzare il carrello. Tonologia esasperata, con pretese di sicumera. Non appena vede la cassa libera, vi si dirige. Due ore più tardi la incontro alla fila del supermercato, di fronte alla cassa automatica. È con un'amica che le suggerisce: «Dovresti far mettere una ruota in più al carrello». Le indica dove (all'angolo) e perché."
+  },
+  {
+   "i": 4,
+   "text": "Nel supermercato, in un'ora affollata. Una donna di circa trentacinque anni, giacca corta con una sciarpa colorata al collo, capelli cortissimi, come se fossero stati tagliati di corsa. Le persone avanzano. La cliente in questione si irrita con un vicino. Lo accusa di invadere il suo spazio ogni volta che la coda si muove. Tonante, con pretese di importanza. Non appena vede un buco, vi si inserisce. Due ore più tardi la incontro alla cassa, davanti alla fila della corsia rapida. È con un'altra cliente che le dice: «Dovresti far aggiustare il carrello». Le indica dove (al manubrio) e perché."
+  },
+  {
+   "i": 5,
+   "text": "Nel P, in un'ora di affluenza. Una cliente di circa trentacinque anni, camicia leggera con un giro di perle al collo, capelli troppo lunghi, come se li avesse fatti crescere di recente. Le persone procedono. La donna in questione si irrita con una vicina. Le rimprovera di invadere il suo spazio ogni volta che qualcuno si muove. Tono seccato, con pretese di importanza. Non appena vede uno spazio libero, vi si infila. Due ore più tardi la incontro nel parcheggio, davanti al supermercato. È con una collega che le dice: «Dovresti far mettere un cestello più grande al carrello». Le fa vedere dove (all'estremità) e perché."
+  },
+  {
+   "i": 6,
+   "text": "Sullo sportello, in un'ora di affollamento. Una donna di circa trentacinque anni, coda di cavallo slanciata, giacca troppo larga, come se la portasse da anni. La gente avanza. La signora in questione si irrita con una vicina. Le rinfaccia di premere contro di lei ogni volta che qualcuno carica le borse. Tono fastidioso, con pretese di serietà. Non appena vede uno spazio libero, ci si precipita. Due ore più tardi la incontro alla sezione frutta, davanti allo scaffale delle mele. È con un'amica che le dice: «Dovresti mettere un altro fermaglio alla spilla». Glielo indica dove (sul risvolto) e perché."
+  },
+  {
+   "i": 7,
+   "text": "Sul nastro, in un'ora di affollamento. Un cliente di circa trent'anni, cappuccio largo con una stringa al posto del laccetto, braccia troppo corte, come se fossero state stirate. La fila procede. L'uomo in questione si irrita con il vicino. Lo accusa di premere contro di lui ogni volta che qualcuno avanza. Tonalità lamentosa, con pretese di severità. Non appena vede uno spazio vuoto, ci si posiziona. Due ore dopo lo incontro all'uscita, davanti al supermercato. È con un collega che gli dice: «Dovresti far aggiungere una ruota in più al carrello». Gli fa vedere dove (alla sospensione) e perché."
+  },
+  {
+   "i": 8,
+   "text": "In mezzo alla fila, durante l'ora di affluenza. Una persona di circa trent'anni, cappotto sformato con un fiocco al posto del bottone, figura troppo alta, come se fosse cresciuta di colpo. Le persone pagano. L'individuo in questione si irrita con un vicino. Lo accusa di spingerlo ogni volta che qualcuno passa. Tonalità frustrata, con accenno di aggressività. Non appena vede uno spazio libero, ci si piazza. Due ore più tardi lo incontro al reparto frutta, vicino alla cassa automatica. È con un amico che gli suggerisce: «Dovresti far aggiustare la ruota del carrello». Gli mostra dove (sul pezzo rotto) e perché."
+  },
+  {
+   "i": 9,
+   "text": "Nel G, durante un'ora di affollamento. Una donna di circa trent'anni, sciarpa leggera con un fiocco in stile vintage, braccia troppo sottili, come se fossero state stirate. Le persone avanzano. La signora in questione si irrita con una cliente. Le rimprovera di occupare troppo spazio ogni volta che avanza il carrello. Tono esasperato, con un'aria di frustrazione. Non appena vede uno spazio libero, ci si piazza. Due ore più tardi la incontro nella corsia frutta e verdura, davanti allo scaffale delle mele. È con un'amica che le dice: «Dovresti usare un carrello più grande». Le indica dove (all'ingorgo) e perché."
+  }
+ ]
+}

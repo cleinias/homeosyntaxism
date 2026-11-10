@@ -1,0 +1,58 @@
+{
+ "lang": "en",
+ "degree": "D0",
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "n_periods": 10,
+ "periods": [
+  {
+   "k": 1,
+   "words": 8,
+   "spec": "Period 1 (~8 words) ordered dependency tree ([pos] relation->[head position]): [1]ADP case->[4]; [2]DET det->[4]; [3]PROPN compound->[4]; [4]NOUN root->[0]; [5]ADP case->[8]; [6]DET det->[8]; [7]NOUN compound->[8]; [8]NOUN nmod->[4]"
+  },
+  {
+   "k": 2,
+   "words": 29,
+   "spec": "Period 2 (~29 words) ordered dependency tree ([pos] relation->[head position]): [1]DET det->[2]; [2]NOUN nsubj->[6]; [3]ADP case->[5]; [4]ADV advmod->[5]; [5]NUM nmod->[2]; [6]VERB root->[0]; [7]NOUN xcomp->[6]; [8]ADP case->[10]; [9]DET det->[10]; [10]NOUN obl->[6]; [11]ADV case->[14]; [12]ADP fixed->[11]; [13]DET det->[14]; [14]NOUN obl->[6]; [15]NOUN conj->[14]; [16]ADV advmod->[17]; [17]ADV advmod->[15]; [18]SCONJ mark->[23]; [19]SCONJ fixed->[18]; [20]PRON nsubj->[23]; [21]AUX aux->[23]; [22]AUX aux->[23]; [23]VERB advcl->[6]; [24]DET det->[27]; [25]NOUN obj->[23]; [26]ADP case->[27]; [27]NOUN nmod->[25]; [28]ADP case->[29]; [29]PRON obl->[23]"
+  },
+  {
+   "k": 3,
+   "words": 3,
+   "spec": "Period 3 (~3 words) ordered dependency tree ([pos] relation->[head position]): [1]NOUN nsubj->[2]; [2]VERB root->[0]; [3]ADP compound:prt->[2]"
+  },
+  {
+   "k": 4,
+   "words": 15,
+   "spec": "Period 4 (~15 words) ordered dependency tree ([pos] relation->[head position]): [1]DET det->[2]; [2]NOUN nsubj:pass->[6]; [3]ADP case->[4]; [4]NOUN nmod->[2]; [5]AUX aux:pass->[6]; [6]VERB root->[0]; [7]ADP case->[8]; [8]NUM obl->[6]; [9]ADP case->[11]; [10]DET det->[11]; [11]NOUN nmod->[8]; [12]VERB acl->[11]; [13]ADV advmod->[12]; [14]ADP case->[15]; [15]PRON obl->[12]"
+  },
+  {
+   "k": 5,
+   "words": 11,
+   "spec": "Period 5 (~11 words) ordered dependency tree ([pos] relation->[head position]): [1]PRON nsubj->[2]; [2]VERB root->[0]; [3]PRON obj->[2]; [4]SCONJ mark->[5]; [5]VERB advcl->[2]; [6]PRON obj->[5]; [7]DET det->[8]; [8]NOUN obl:unmarked->[5]; [9]PRON nsubj->[10]; [10]VERB acl:relcl->[8]; [11]ADV advmod->[10]"
+  },
+  {
+   "k": 6,
+   "words": 9,
+   "spec": "Period 6 (~9 words) ordered dependency tree ([pos] relation->[head position]): [1]DET det->[3]; [2]ADJ amod->[3]; [3]NOUN root->[0]; [4]PRON nsubj:pass->[6]; [5]AUX aux:pass->[6]; [6]VERB acl:relcl->[3]; [7]PART mark->[9]; [8]AUX cop->[9]; [9]ADJ xcomp->[6]"
+  },
+  {
+   "k": 7,
+   "words": 12,
+   "spec": "Period 7 (~12 words) ordered dependency tree ([pos] relation->[head position]): [1]ADV advmod->[3]; [2]PRON nsubj->[3]; [3]VERB advcl->[8]; [4]DET det->[6]; [5]ADJ amod->[6]; [6]NOUN obj->[3]; [7]PRON nsubj->[8]; [8]VERB root->[0]; [9]PRON obj->[8]; [10]ADP compound:prt->[8]; [11]ADP case->[12]; [12]PRON obl->[8]"
+  },
+  {
+   "k": 8,
+   "words": 18,
+   "spec": "Period 8 (~18 words) ordered dependency tree ([pos] relation->[head position]): [1]NUM nummod->[2]; [2]NOUN obl:unmarked->[3]; [3]ADV advmod->[5]; [4]PRON nsubj->[5]; [5]VERB root->[0]; [6]PRON obj->[5]; [7]ADP case->[9]; [8]DET det->[9]; [9]PROPN obl->[5]; [10]PROPN flat->[9]; [11]PROPN flat->[9]; [12]ADP case->[13]; [13]NOUN obl->[5]; [14]ADP case->[16]; [15]DET det->[16]; [16]PROPN nmod->[13]; [17]PROPN flat->[16]; [18]PROPN flat->[16]"
+  },
+  {
+   "k": 9,
+   "words": 19,
+   "spec": "Period 9 (~19 words) ordered dependency tree ([pos] relation->[head position]): [1]PRON nsubj->[5]; [2]AUX cop->[5]; [3]ADP case->[5]; [4]DET det->[5]; [5]NOUN root->[0]; [6]PRON nsubj->[8]; [7]AUX aux->[8]; [8]VERB acl:relcl->[5]; [9]PRON nsubj->[10]; [10]AUX ccomp->[8]; [11]PART mark->[12]; [12]VERB xcomp->[10]; [13]DET det->[15]; [14]ADJ amod->[15]; [15]NOUN obj->[12]; [16]VERB acl->[15]; [17]ADP case->[19]; [18]PRON nmod:poss->[19]; [19]NOUN obl->[16]"
+  },
+  {
+   "k": 10,
+   "words": 9,
+   "spec": "Period 10 (~9 words) ordered dependency tree ([pos] relation->[head position]): [1]PRON nsubj->[2]; [2]VERB root->[0]; [3]PRON obj->[2]; [4]ADV ccomp->[2]; [5]ADP case->[7]; [6]DET det->[7]; [7]NOUN obl->[4]; [8]CCONJ cc->[9]; [9]ADV conj->[4]"
+  }
+ ]
+}

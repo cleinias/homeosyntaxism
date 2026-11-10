@@ -1,0 +1,102 @@
+{
+ "model": "qwen2.5:7b-instruct-q4_K_M",
+ "lang": "en",
+ "scenario": "hospital-emergency-room",
+ "n": 7,
+ "agg": {
+  "s0_pos": 0.236,
+  "d1_triple": 0.274,
+  "d2_clause": 0.516,
+  "words": 170.286,
+  "depth_gap": 2.71,
+  "coherence": 0.386,
+  "held_rate": 0,
+  "pass_rate": 0
+ },
+ "rows": [
+  {
+   "i": 0,
+   "s0_pos": 0.23,
+   "d1_deprel": 0.387,
+   "d1_triple": 0.281,
+   "d2_clause": 0.529,
+   "depth_gap": 3,
+   "coherence": 0.0,
+   "words": 164,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 1,
+   "s0_pos": 0.297,
+   "d1_deprel": 0.56,
+   "d1_triple": 0.391,
+   "d2_clause": 0.609,
+   "depth_gap": 1,
+   "coherence": 1.0,
+   "words": 214,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 2,
+   "s0_pos": 0.172,
+   "d1_deprel": 0.17,
+   "d1_triple": 0.105,
+   "d2_clause": 0.5,
+   "depth_gap": 3,
+   "coherence": 0.7,
+   "words": 265,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 4,
+   "s0_pos": 0.222,
+   "d1_deprel": 0.469,
+   "d1_triple": 0.294,
+   "d2_clause": 0.579,
+   "depth_gap": 3,
+   "coherence": 0.0,
+   "words": 82,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 5,
+   "s0_pos": 0.233,
+   "d1_deprel": 0.274,
+   "d1_triple": 0.234,
+   "d2_clause": 0.296,
+   "depth_gap": 3,
+   "coherence": 0.0,
+   "words": 78,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 6,
+   "s0_pos": 0.29,
+   "d1_deprel": 0.547,
+   "d1_triple": 0.371,
+   "d2_clause": 0.769,
+   "depth_gap": 3,
+   "coherence": 1.0,
+   "words": 145,
+   "held": false,
+   "pass": false
+  },
+  {
+   "i": 8,
+   "s0_pos": 0.205,
+   "d1_deprel": 0.349,
+   "d1_triple": 0.245,
+   "d2_clause": 0.333,
+   "depth_gap": 3,
+   "coherence": 0.0,
+   "words": 244,
+   "held": false,
+   "pass": false
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2c",
+ "lang": "en",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 29 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 15 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 5 (about 11 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - relative/adnominal clause\nPeriod 6 (about 9 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 12 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 18 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 19 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n          - relative/adnominal clause\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 5.2,
+ "gens": [
+  {
+   "i": 0,
+   "text": "The lights flickered overhead. A man rushed to check the vitals, ensuring no harm would come. Silence. Nurses whispered, their eyes scanning the forms. Through the crowded hall, a doctor moved swiftly, her steps precise. Behind the curtain, a monitor beeped steadily. A woman clutched her chest, her friend beside her pacing anxiously. Voices murmured, the air thick with tension. Forms rustled on the triage desk. In the bay, a patient cried out, a nurse quickly responded, explaining how to calm the rising panic, a task that seemed endless. The intercom buzzed, paging a specialist."
+  },
+  {
+   "i": 1,
+   "text": "The emergency room buzzes with urgent whispers. A nurse strides to secure the patient’s wristband, as the intercom crackles overhead. Forms scatter on desks. The doctor rushes past gurneys, where monitors beep persistently. In the corner, a man clutches his chest, his friend pacing anxiously. The triage nurse, in her calm demeanor, reassures them it will be quick. Pages echo through the corridor, guiding the staff. Charts and IV drips frame the bustling scene. A woman complains bitterly about the wait, her voice barely audible over the chaos. Curtains part to reveal another patient in distress."
+  },
+  {
+   "i": 2,
+   "text": "The lights flicker overhead, casting sterile shadows. Patients await their turn, eyes glued to the clock, hoping to expedite their care. A nurse strides past, her steps muffled by the quiet hum of machinery. In the corner, a man fidgets, his wristband a stark reminder of his condition. As the doctor rushes by, the intercom crackles with urgent pages. The air is thick with the scent of antiseptic, and murmurs fill the space. Forms clutter the triage desk, a bureaucratic dance amidst chaos. Monitors beep steadily, a symphony of life and concern. Behind the drawn curtain, a woman whispers to her companion, her voice trembling with fear. The clock ticks on, relentless, indifferent to the human stories unfolding."
+  },
+  {
+   "i": 3,
+   "text": "The lights flicker above the bustling triage desk. Nurses hurry to assess, to find rooms for the ailing. A clock ticks loudly. A woman in a crimson sweater sits, her face pale. Beside her, a man paces, his worry palpable. The doctor glances at the monitor, which beeps steadily. Forms clutter the counter, awaiting signatures. An intercom crackles with urgent pages. A patient moans behind a drawn curtain, waiting for relief. The staff coordinates, their movements precise."
+  },
+  {
+   "i": 4,
+   "text": "The emergency room buzzes with chaos. A nurse rushes to check vital signs, ensuring no one's condition worsens. Lights flicker. Monitors beep rhythmically, tethered to patients draped in white sheets. In the corner, a woman whispers, her voice strained. She watches the clock, irritated by the endless wait. Forms litter the triage desk, each a testament to medical bureaucracy. Pages echo through the intercom, summoning doctors to urgent cases. A gurney slides past, its wheels screeching on the linoleum. A man clutches his chest, his eyes wide with fear, as a friend tries to calm him. Wristbands mark the severity, a color-coded map of human suffering."
+  },
+  {
+   "i": 5,
+   "text": "The emergency room buzzes with urgent whispers. A nurse rushes to tend, securing a drip with care, as alarms chime softly. Time stretches. Patients line the corridor, some on gurneys, others in chairs, eyes glazed with worry. In the corner, a man clutches his chest, his companion pacing nervously, muttering complaints about the endless wait. Monitors beep steadily, their rhythms intertwining with the doctor’s brisk steps. Forms shuffle, wristbands flash, each a silent testament to the chaos. An intercom page crackles, summoning a specialist to bay three, where a curtain is drawn, shielding a critical case from view. The doctor leans in, explaining the next steps to a worried family, their faces etched with fear. Pages continue, a relentless dance of life and urgency."
+  },
+  {
+   "i": 6,
+   "text": "The emergency room buzzes with tension. A nurse rushes to check a patient, who gasps for air, as the clock ticks louder. Panic mounts. Forms clutter the triage desk, where a harried clerk sorts through them. Patients shuffle in the waiting area, their faces etched with worry, while the intercom blares pages. Monitors beep incessantly, and IV drips steadily, behind a drawn curtain. A man paces, muttering about the endless wait. The doctor hurries past, her steps quickened by the urgency. Gurneys line the corridor, each carrying stories of pain and hope. A woman clutches her companion’s hand, her voice trembling as she asks when they will be seen. Nurses confer quietly, glancing at wristbands for vital signs."
+  },
+  {
+   "i": 7,
+   "text": "The emergency room buzzes with urgency. A nurse rushes to secure an IV, as the intercom crackles with coded alerts. The doors swing wide. Near the triage desk, a man paces, his worry palpable. Charts shuffle in hurried hands. Along the corridor, gurneys stand ready, their wheels locked. In a curtained bay, a patient gasps, her companion murmuring reassurances. Monitors beep steadily. Forms flutter on clipboards, wrists adorned with colored bands. A doctor emerges, her voice calm yet swift. The man complains bitterly about the endless wait."
+  },
+  {
+   "i": 8,
+   "text": "The emergency room buzzes with relentless activity. Nurses hurry to triage, assessing patients who wait anxiously in crowded chairs. A gurney races past, its wheels screeching on the polished floor. In one corner, a doctor leans over a chart, his brow furrowed in concentration. Monitors beep steadily, their rhythmic sounds mingling with the hum of conversations. A woman paces near the triage desk, her face etched with worry. She glances at her watch, muttering a complaint about the interminable wait. An intercom crackles, paging a specialist to the trauma bay. A man in distress clutches his chest, his companion trying to keep him calm. Forms and wristbands litter the desks, symbols of the clinical urgency that governs this chaotic space."
+  },
+  {
+   "i": 9,
+   "text": "The emergency room buzzed with activity. Nurses rushed to prepare for the next patient, while families waited anxiously in the crowded chairs. A doctor hurried past, his stethoscope swinging freely. In one bay, a monitor beeped steadily, its rhythm punctuated by the drip of an IV. Along the corridor, gurneys lined the walls, their wheels locked in place. Behind a drawn curtain, a patient gasped for air, his companion’s voice rising in frustration. Overhead, the intercom crackled with urgent pages. Forms littered the triage desk, each one a story of pain and need. A nurse, her eyes scanning the room, asked the patient to describe his symptoms, which he did with strained effort, his words faltering. The doctor, upon hearing the details, quickly reviewed the chart, his decision clear."
+  }
+ ]
+}

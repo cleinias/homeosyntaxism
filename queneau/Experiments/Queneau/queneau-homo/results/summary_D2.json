@@ -1,0 +1,109 @@
+{
+ "degree": "D2",
+ "ladder": [
+  {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.226,
+   "d2_clause": 0.503,
+   "held_rate": 0,
+   "coherence": 0.054
+  },
+  {
+   "model": "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.28,
+   "d2_clause": 0.57,
+   "held_rate": 0.4,
+   "coherence": 0.611
+  },
+  {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.298,
+   "d2_clause": 0.581,
+   "held_rate": 0,
+   "coherence": 0.149
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.385,
+   "d2_clause": 0.64,
+   "held_rate": 0,
+   "coherence": 0.319
+  },
+  {
+   "model": "Qwen/Qwen2.5-7B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.348,
+   "d2_clause": 0.61,
+   "held_rate": 0,
+   "coherence": 0.489
+  },
+  {
+   "model": "hf.co/LiquidAI/LFM2.5-8B-A1B-GGUF:Q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.289,
+   "d2_clause": 0.623,
+   "held_rate": 0.5,
+   "coherence": null
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.346,
+   "d2_clause": 0.639,
+   "held_rate": 0,
+   "coherence": 0.738
+  },
+  {
+   "model": "Qwen/Qwen2.5-32B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.37,
+   "d2_clause": 0.735,
+   "held_rate": 0,
+   "coherence": 0.763
+  },
+  {
+   "model": "Qwen/Qwen2.5-72B-Instruct",
+   "cells": 9,
+   "s0_pos": 0.391,
+   "d2_clause": 0.775,
+   "held_rate": 0,
+   "coherence": 0.871
+  },
+  {
+   "model": "claude-opus-4-8",
+   "cells": 9,
+   "s0_pos": 0.385,
+   "d2_clause": 0.87,
+   "held_rate": 0,
+   "coherence": 0.953
+  },
+  {
+   "model": "qwen2.5:14b-instruct-q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.335,
+   "d2_clause": 0.571,
+   "held_rate": 0,
+   "coherence": 0.793
+  },
+  {
+   "model": "qwen2.5:7b-instruct-q4_K_M",
+   "cells": 3,
+   "s0_pos": 0.336,
+   "d2_clause": 0.625,
+   "held_rate": 0,
+   "coherence": 0.66
+  },
+  {
+   "model": "qwen2.5:7b-instruct-q8_0",
+   "cells": 3,
+   "s0_pos": 0.319,
+   "d2_clause": 0.578,
+   "held_rate": 0,
+   "coherence": 0.603
+  }
+ ]
+}

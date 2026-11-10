@@ -1,0 +1,189 @@
+{
+ "models": [
+  "openai/gpt-5",
+  "google/gemini-2.5-pro"
+ ],
+ "n": 10,
+ "items": [
+  {
+   "cell": "S0_en_grocery-checkout_blind_ladderS0_Qwen_Qwen2.5-32B-Instruct",
+   "i": 8,
+   "lang": "en",
+   "sonnet": null,
+   "mistral": 1.0,
+   "words": 195,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 1.0,
+    "raw": "1"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 1.0,
+    "raw": "1"
+   }
+  },
+  {
+   "cell": "D0_it_hospital-emergency-room_blind_ladderD0soft_Qwen_Qwen2.5-0.5B-Instruct",
+   "i": 5,
+   "lang": "it",
+   "sonnet": null,
+   "mistral": 0.0,
+   "words": 599,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   }
+  },
+  {
+   "cell": "S0_en_grocery-checkout_blind_ladderS0_Qwen_Qwen2.5-32B-Instruct",
+   "i": 3,
+   "lang": "en",
+   "sonnet": null,
+   "mistral": 1.0,
+   "words": 237,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 1.0,
+    "raw": "1"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 1.0,
+    "raw": "1"
+   }
+  },
+  {
+   "cell": "S0_en_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-7B-Instruct",
+   "i": 8,
+   "lang": "en",
+   "sonnet": null,
+   "mistral": 1.0,
+   "words": 95,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 1.0,
+    "raw": "1"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 1.0,
+    "raw": "1"
+   }
+  },
+  {
+   "cell": "S0_it_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-14B-Instruct",
+   "i": 7,
+   "lang": "it",
+   "sonnet": null,
+   "mistral": 0.0,
+   "words": 139,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   }
+  },
+  {
+   "cell": "D0_en_hospital-emergency-room_blind_ladderD0soft_Qwen_Qwen2.5-32B-Instruct",
+   "i": 7,
+   "lang": "en",
+   "sonnet": null,
+   "mistral": 1.0,
+   "words": 285,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 1.0,
+    "raw": "1"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 1.0,
+    "raw": "1"
+   }
+  },
+  {
+   "cell": "D0_it_grocery-checkout_blind_ladderD0soft_Qwen_Qwen2.5-32B-Instruct",
+   "i": 1,
+   "lang": "it",
+   "sonnet": null,
+   "mistral": 0.0,
+   "words": 227,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   }
+  },
+  {
+   "cell": "S0_it_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-7B-Instruct",
+   "i": 9,
+   "lang": "it",
+   "sonnet": null,
+   "mistral": 0.0,
+   "words": 146,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   }
+  },
+  {
+   "cell": "S0_en_security-checkpoint_blind_b1_meta-llama_llama-4-maverick",
+   "i": 4,
+   "lang": "en",
+   "sonnet": null,
+   "mistral": 0.0,
+   "words": 163,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   }
+  },
+  {
+   "cell": "S0_it_security-checkpoint_blind_ladderS0_Qwen_Qwen2.5-0.5B-Instruct",
+   "i": 2,
+   "lang": "it",
+   "sonnet": null,
+   "mistral": 0.0,
+   "words": 539,
+   "openai/gpt-5": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   },
+   "google/gemini-2.5-pro": {
+    "outcome": "scored",
+    "score": 0.0,
+    "raw": "0"
+   }
+  }
+ ]
+}

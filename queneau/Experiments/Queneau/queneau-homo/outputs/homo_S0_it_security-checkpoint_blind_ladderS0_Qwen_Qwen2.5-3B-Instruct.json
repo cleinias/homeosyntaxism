@@ -1,0 +1,58 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "backend": "vllm-http",
+ "degree": "S0",
+ "lang": "it",
+ "scenario": "security-checkpoint",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na ISOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the ORDERED PART-OF-SPEECH SEQUENCE below: at each position emit a word of exactly the part of speech shown, in exactly that order (each token reads '[position]POS'). Same tags, same order --- only the words are yours. Nothing about dependency or clause structure is specified: only the bare linear POS string.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) ordered part-of-speech sequence: [1]ADP [2]DET [3]PROPN [4]ADP [5]DET [6]NOUN [7]ADP [8]NOUN\nPeriod 2 (~25 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]ADV [5]NUM [6]NOUN [7]NOUN [8]ADJ [9]ADP [10]DET [11]NOUN [12]ADP [13]DET [14]NOUN [15]ADP [16]DET [17]NOUN [18]NOUN [19]ADV [20]ADJ [21]ADV [22]SCONJ [23]PRON [24]AUX [25]VERB\nPeriod 3 (~3 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]VERB\nPeriod 4 (~9 words) ordered part-of-speech sequence: [1]DET [2]NOUN [3]ADP [4]NOUN [5]PRON [6]VERB [7]ADP [8]DET [9]NOUN\nPeriod 5 (~10 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]ADP [4]VERB [5]PRON [6]DET [7]NOUN [8]SCONJ [9]VERB [10]PRON\nPeriod 6 (~6 words) ordered part-of-speech sequence: [1]NOUN [2]ADJ [3]ADP [4]NOUN [5]ADP [6]NOUN\nPeriod 7 (~9 words) ordered part-of-speech sequence: [1]ADV [2]SCONJ [3]VERB [4]DET [5]NOUN [6]ADJ [7]PRON [8]PRON [9]VERB\nPeriod 8 (~17 words) ordered part-of-speech sequence: [1]NUM [2]NOUN [3]ADV [4]ADV [5]PRON [6]NOUN [7]ADP [8]DET [9]PROPN [10]ADP [11]PROPN [12]ADV [13]ADP [14]DET [15]PROPN [16]PROPN [17]PROPN\nPeriod 9 (~7 words) ordered part-of-speech sequence: [1]AUX [2]ADP [3]DET [4]NOUN [5]PRON [6]PRON [7]VERB\nPeriod 10 (~10 words) ordered part-of-speech sequence: [1]AUX [2]VERB [3]VERB [4]DET [5]NOUN [6]ADP [7]ADV [8]ADP [9]DET [10]NOUN\nPeriod 11 (~9 words) ordered part-of-speech sequence: [1]PRON [2]VERB [3]VERB [4]ADV [5]ADP [6]DET [7]NOUN [8]CCONJ [9]ADV\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - an airport/border security checkpoint at a busy hour\n  - the queue and the barriers; the divestment of belongings into trays\n  - the scanners, metal detectors, and the body-search gesture\n  - an officer and a traveller singled out of the line; documents and a wanded pat-down\n  - the register of control: instructions, signage, the impersonal courtesy of authority\n\nREQUIREMENTS --- both hold together:\n1. SURFACE PRESERVED --- the ordered part-of-speech sequence above reproduced period by period, position for position, in your own words.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 3.5,
+ "gens": [
+  {
+   "i": 0,
+   "text": "un controllo di sicurezza all'aeroporto durante un'ora di traffico, la coda e i cancelli, l'escursione degli averi nelle scatole, i rivelatori, i detector a base di metallo e il gesto di perquisizione, un ufficiale e un viaggiatore isolati nella fila; documenti e una perquisizione corporea, il registro di controllo: istruzioni, sottolineature, la cortesia impersonale dell'autorità"
+  },
+  {
+   "i": 1,
+   "text": "Inna vista l'aeroporto di notte, al centro del parcheggio, una fila accanita di gente, con barriere metalliche che scattano e stridono. Lì, i passeggeri piantano la loro roba nelle ciotole mentre passano attraverso i controlli. In un angolo, i motorizzati esaminano le loro bagagli a mano attraverso le apparecchiature per la sorveglianza. Di là, un poliziotto si distacca dal flusso ordinario, trascinando con sé un viaggiatore sottoposto a un perquisizione corporea approfondita. Sul registro, ordini, segni d'indicazione, un servizio da parte impersonale ma autoritario. Il poliziotto prende il taccuino, apre la valigia in modo cauto, poi esamina il documento con cura. Poi, il poliziotto pone una domanda in codice, mentre il viaggiatore mormora con riluttanza. Il taccuino di controllo indica di fare un controllo addizionale con l'accessoriante. Poi, il poliziotto prende il portafoglio, lo esamina con attenzione, quindi lo posiziona vicino alla scansione aerea. Il viaggiatore emette un lungo sospiro mentre il poliziotto nota con soddisfazione il risultato."
+  },
+  {
+   "i": 2,
+   "text": "[1]uomo [2]pasta [3]scansore [4]palo [5]barre [6]tramezzi [7]scansione [8]peso [9]cerchio [10]signorina [11]pallottola [12]esame [13]ricevuta [14]segnaletica [15]autorità [16]rigidi [17]comando"
+  },
+  {
+   "i": 3,
+   "text": "A bordo l'aeroporto, la corsia di sicurezza era piena di passeggeri ansiosi. Lasciammo cadere i nostri bagagli nei cestini in fila e passammo velocemente attraverso i sensoni e gli esaminatori ad alto tasso di dettaglio. Sul muro c'era un messaggio che recitava: \"Se vuoi passare, spiegami come operano\". Il vigile si allontanò per controllare un viaggiatore singolo, il suo compagno lo guardò con sospetto e poi si rivolse al controllore, presentandogli una dichiarazione. Il controllore sollevò un dito come a dire: \"Ricorda\", quindi lo sfiorò leggermente con la mano. Le cassegate registravano attentamente ogni movimento, mentre l'aria era densa di parole d'ordine: \"Controllo a tutti\" e \"Ricorda, non fare rumore\". Il controllore fece segno al vigile di avvicinarsi e li guidò verso un corridoio isolato dove avrebbero fatto la perquisizione. La routine era così familiare, lì dentro."
+  },
+  {
+   "i": 4,
+   "text": "allineati in una lunga fila, depositavano con cura le loro cose nelle ceste di plastica. Dietro il cancello metallico, i sensori e le scanterne si muovevano freneticamente. Un poliziotto individuò un viaggiatore nell'orda di passanti. Sollevò il suo portafoglio, mentre la donna che lo accompagnava riceveva un controllino corporeo esauriente. Sul monitor, il bilancio dei controlli mostrava le istruzioni, i segnali luminosi e l'inconfondibile cortesia della responsabilità. Il poliziotto premette il tasto d'accesso, osservando attentamente il dispositivo che calcolava i dati. La donna sussurrò qualcosa all'uomo, spiegandogli la procedura. I sensori squillarono per indicare eventuali dettaglietti metallici sotto la camicia del viaggiatore. La donna in attesa si guardò intorno, cercando una possibile scusa per allontanarsi. Il poliziotto, però, le lanciò uno sguardo imperativo, confermando l'esattezza del loro quadro."
+  },
+  {
+   "i": 5,
+   "text": "all’area di sicurezza dell’aeroporto al centro della folla, un gruppo di persone si arrampicava lungo i tavoli di deposito con le borse e i pacchi, mentre sotto gli occhi degli agenti la roba veniva trasmessa ai robot automatici. Lì accanto, i motori del metal detector cigolavano con il rombo monotono del traffico intorno, le antenne delle telecamere a contatto con l’acciaio, pronte per intrappolare il minimo dettaglio che potesse mettere sospetto. Il guardiano, con un passo deciso, portava avanti un passeggero isolato. La figura alta e curva veniva frugata dall’alto e dall’interno, con una serie di manovre accuratamente orchestrate che cercavano qualsiasi cosa strana potesse nascondersi. Dietro la vetrina lucida, una lista di regole e dei messaggi luminosi fornivano istruzioni chiare. Gli agenti, con la loro uniforme grigia immacolata, sorridevano cordiali al passeggero, mantenendo sempre un tono professionale e distaccato."
+  },
+  {
+   "i": 6,
+   "text": "In una fila affollata, il passo pesante del poliziotto si muove tra la barriera e l'ultravioleto, mentre la trave di plastica rovescia rapidamente gli oggetti. I motori del detector emettono un ronzio sordo, e le luci verdi lampeggiano quando i bagagli passano. La macchina da tassello scorre con un ticchettio metallico, trascinando lo spezzatino sul corpo. In coda, il viaggiatore osserva con ansietà la documentazione e la breve perquisizione corporea. Sul registro, i segnali luminosi indicano con enfasi l'autorità impersonale, le istruzioni e i messaggi visivi che risuonano come un mormorio sottile."
+  },
+  {
+   "i": 7,
+   "text": "In attesa lunga di un'aeroporto affollato, la coda si arricciava tra i tendoni. Le bagagli venivano scartati con cura, uno alla volta, nei sacchetti da depositare. I controllori aerea erano occupati, mentre gli scanner e le detectrici metalliche facevano la loro comparsa. L'agentessa era in singolo isolamento, con il passeggero sottoposto agli sguardi critici. Il controllo dei documenti seguitava, come un rito antico. In lontananza, i cartelli d'insegnamento della regolamentazione davano un'idea dell'arroganza dietro l'angusto portone. Un gesto di perquisizione fisica terminava la fase preliminare. La scansione automatica del controllo seguiva, sempre più vicino al destino del destinatario. Nel quadro di questa scena, una squadra di poliziotti faceva da custodia, con l'immobilità della statua. Le voci dei controllori risuonavano come lente, monotone note musicali. Nel silenzio, soltanto un ticchettio di metallo si levava dal pavimento. L'autorità impersonale era un fulcro intorno al quale tutto girava."
+  },
+  {
+   "i": 8,
+   "text": "a albergo di frontiera in un'ora di affollamento, la coda e i controllori; la divisa degli oggetti nelle ciotole, \nil ronzio dei sensi di sicurezza, il trucco degli agenti, \nl'ufficio di controllo: istruzioni, segni, l'onorevole cortesia dell'autorità."
+  },
+  {
+   "i": 9,
+   "text": "Al largo del corridoio di controllo dell'aeroporto, l'ufficiale puntò il dito verso la fila. La coda era lunga e affollata. Il turista lasciò i suoi averi nel tavolo della dispensa in modo da non farsi distrarre. I monitor sul muro mostravano i campioni di plastica per scansione. Le macchine che squittivano controllavano l'elettricità, mentre l'ufficiale eseguiva un passaggio corporeo con mano ferma. Al centro della scena, le istruzioni su pannello bianco erano chiare e distinte. Dietro l'ufficiale, il portone di accesso era chiuso. Il controllo registrava ogni dettaglio nella sua macchina, ma anche nel tono privo di emozioni che emanava dall'uomo in divisa."
+  }
+ ]
+}

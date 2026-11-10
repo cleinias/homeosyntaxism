@@ -1,0 +1,56 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "backend": "vllm-http",
+ "degree": "D2",
+ "lang": "it",
+ "scenario": "hospital-emergency-room",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "Sulla S, in un'ora di traffico. Un tipo di circa ventisei anni, cappello floscio con una cordicella al posto del nastro, collo troppo lungo, come se glielo avessero tirato. La gente scende. Il tizio in questione si arrabbia con un vicino. Gli rimprovera di spingerlo ogni volta che passa qualcuno. Tono lamentoso, con pretese di cattiveria. Non appena vede un posto libero, vi si butta. Due ore più tardi lo incontro alla Cour de Rome, davanti alla Gare Saint-Lazare. È con un amico che gli dice: «Dovresti far mettere un bottone in più al soprabito». Gli fa vedere dove (alla sciancratura) e perché.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in Italian, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE ARCHITECTURE below --- the same inventory and nesting of clauses (main / relative / adverbial / complement / coordinate, to the stated depth). The WORD ORDER and the words themselves are entirely yours; only the clause skeleton is fixed.\nReproduce it for all 11 periods, in this order:\nPeriod 1 (~8 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 2 (~25 words) clause architecture: 1 main clause; 1 adverbial clause; subordination nested up to depth 1.\nPeriod 3 (~3 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 4 (~9 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 5 (~10 words) clause architecture: 1 main clause; 1 open complement (infinitive); 1 relative/adnominal clause; subordination nested up to depth 2.\nPeriod 6 (~6 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 7 (~9 words) clause architecture: 1 adverbial clause; 1 main clause; subordination nested up to depth 1.\nPeriod 8 (~17 words) clause architecture: 1 main clause; subordination nested up to depth 0.\nPeriod 9 (~7 words) clause architecture: 1 main clause; 1 relative/adnominal clause; subordination nested up to depth 1.\nPeriod 10 (~10 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\nPeriod 11 (~9 words) clause architecture: 1 main clause; 1 finite complement clause; subordination nested up to depth 1.\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE ARCHITECTURE PRESERVED --- the same clause inventory and nesting depth per period, in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural Italian. Produce the 11 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 7.4,
+ "gens": [
+  {
+   "i": 0,
+   "text": "Nel reparto di emergenza, le luci fluorescenti si riflettono sul pavimento liscio. Quando il dottore passa tra i lettini, una sirena echeggia nei corridoi, annunciando un arrivo imminente. Attende. Ognuno osserva in silenzio, teso. Tra le tende semi-aperte, un paziente ansima, cercando sollievo. Il tempo sembra fermarsi. Mentre l'infermiera scrive, lo schermo del monitor lampeggia ritmicamente. Alcuni si lamentano della lunga attesa, sospirando profondamente. Un uomo inquieto cammina avanti e indietro, controllando l'orologio. L'interfono chiama il medico di guardia, aumentando la tensione. Nella stanza accanto, un altro paziente grida, implorando aiuto. La sala è un vortice di attività incessante, dove ogni istante conta."
+  },
+  {
+   "i": 1,
+   "text": "Il pronto soccorso è gremito di gente. Nell'angolo, una voce si alza, lamentando l'attesa troppo lunga. Fuori, le sedie di plastica sono tutte occupate. Dietro il bancone, una infermiera verifica i polsi dei pazienti, che arrivano senza sosta. Un medico, con passo rapido, si dirige verso un lettino, dove un uomo geme sotto una tenda tirata. I macchinari emettono bip continui, intercalati da voci dall'altoparlante. La tensione nell'aria è palpabile. Sul tavolo, pile di moduli aspettano firma. Una donna, accanto a un paziente ansimante, stringe la sua mano con forza. L'infermiera annuisce, rassicurante, mentre controlla le flebo."
+  },
+  {
+   "i": 2,
+   "text": "Il reparto d'urgenza vibrava di frenesia. Quando le porte si aprirono, un urlo squarciò l'aria. Un uomo ansimava. La sua compagna, pallida, cercava conforto. Tra i pazienti, infermieri e medici si affrettavano, spingendo lettini nei corridoi. Le luci lampeggiavano. Mentre il dottore esaminava un paziente in difficulty, una donna protestava per l'attesa. Sul bancone, le mascherine chirurgiche erano disordinate. Tutt'intorno, i monitor emettevano bip incessanti. Qualcuno urlò un nome attraverso l'altoparlante. Il silenzio si fece pesante. Ogni minuto sembrava un'eternità."
+  },
+  {
+   "i": 3,
+   "text": "Nell'atrio dell'ospedale il trambusto non placa. Quando le porte automatiche si aprono, un vento freddo invade l'aria. Sussurri. L'odore antiseptico impregna ogni angolo. Tra le sedie di plastica, un anziano attende con lo sguardo perso. Mentre la dottoressa esamina il paziente, una infermiera apre lentamente la tenda. Un uomo ansima, il volto pallido. Se non si muovono più veloci, potrebbe succedere qualcosa. Il monitor lampeggia, emettendo un bip ritmico. Sul braccio del malato, una fascia colorata indica la priorità. La receptionista annuncia una chiamata d'emergenza. Ogni minuto sembra un'eternità."
+  },
+  {
+   "i": 4,
+   "text": "Nel reparto di emergenza, l'attività è frenetica. Quando il medico passa tra i lettini, le monitorazioni si intensificano, mentre un paziente ansima. La sala d'attesa è gremita, e i visitatori sembrano irrequieti. Dietro la scrivania, una infermiera annota dati su moduli importanti. Una signora, accanto al marito sofferente, protesta per l'attesa. Prima che possa continuare, un'infermiera la interrompe gentilmente. Le voci si mescolano con il ronzio dei macchinari, creando un'atmosfera tesa. Sul braccio di ogni paziente, un polso colorato indica la priorità. Tra le tende tirate, si sentono mormorii di preoccupazione. L'interfono annuncia una chiamata d'urgenza, aumentando la tensione. Una giovane donna, seduta su una sedia, osserva con ansia."
+  },
+  {
+   "i": 5,
+   "text": "Nell'atrio dell'ospedale, il trambusto cresce. Fuori dalla sala di triage, le sedie si riempiono rapidamente, mentre carrelli metallici sfrecciano lungo il corridoio. Il dottore consulta i monitor. Una tenda si chiude su un paziente ansimante, accompagnato da un'amica preoccupata. Le infermiere scattano tra le postazioni. La voce metallica dell'interfono chiama numeri di stanza. Un paziente protesta per l'attesa interminabile. Le fascette ai polsi segnalano l'urgenza. I moduli volano da una mano all'altra."
+  },
+  {
+   "i": 6,
+   "text": "Il pronto soccorso brulica di movimento, il suono delle voci si mescola al ronzio dei macchinari. Quando l'infermiera chiama il prossimo paziente, il tempo sembra rallentare, ogni secondo è carico di tensione. L'attesa. Le sedie sono occupate da volti preoccupati. Accanto a una sedia, una barella cigola leggermente, coperta da un lenzuolo bianco. Tra le tende, un paziente ansima, accompagnato da un parente che mormora parole d'incoraggiamento. Nel corridoio, un medico cammina rapido, seguito da una troupe di infermieri con cuscini e flebo. Mentre l'interfono annuncia una chiamata d'emergenza, un uomo si lamenta ad alta voce del ritardo. Sul bancone della triage, le fascette colorate e i moduli si accumulano in mucchi ordinati."
+  },
+  {
+   "i": 7,
+   "text": "Nella sala d'urgenza, il rumore è assordante. Quando il dottore passa tra i lettini, le luci si riflettono sui volti preoccupati. Aspetta. Ogni minuto sembra un'eternità. Una paziente, avvolta nel lenzuolo, urla di dolore, mentre suo marito la osserva impotente. La segretaria, con calma, continua a compilare moduli importanti. Sullo sfondo, le sirene dell'ambulanza risuonano incessanti. Un'infermiera corre verso la sala operatoria. Qualcuno borbotta, irritato dal lungo attesa. La cortina divide il mondo in frammenti. Annunci intermittenti echeggiano nell'aria. Spera che l'aiuto arrivi presto."
+  },
+  {
+   "i": 8,
+   "text": "L'ospedale era un turbine di attività quella sera. Quando l'infermiera chiamò il paziente successivo, il corridoio si riempì di voci sommesse. Fuori la notte. Dentro, l'ansia. Il dottore, con passo rapido, andò verso una stanza dove le luci lampeggiavano, indicando una situazione critica. La paziente, accanto alla sedia, tremava. Mentre gli altri attendevano, l'orologio sembrava muoversi lentamente. Di tanto in tanto, l'interfono annunciava nomi e codici. La sala d'attesa era zeppa di persone impazienti. Un uomo, con il bracciale rosso, protestava per il ritardo. La tenda si aprì rivelando un quadro clinico complesso."
+  },
+  {
+   "i": 9,
+   "text": "Nell'atrio dell'ospedale, l'aria è carica di tensione. Quando l'infermiera chiama il prossimo paziente, le sue parole si perdono nel vociare generale. Paura. Speranza. In una sedia, un uomo stringe la mano di sua moglie. Accanto a loro, un cartello indica l'area di triage. Un paziente ansima, cercando sollievo. Mentre lo fa, un medico si avvicina con decisione. Il corridoio è affollato di barelle, ognuna con una storia. L'urgenza è palpabile in ogni gesto. Un monitor lampeggia, segnando il ritmo della vita. Dietro una tenda, si intravede un braccialetto colorato. Un compagno di sventura mormora un lamento. L'interfono annuncia un codice blu, e tutti tratteniamo il fiato."
+  }
+ ]
+}

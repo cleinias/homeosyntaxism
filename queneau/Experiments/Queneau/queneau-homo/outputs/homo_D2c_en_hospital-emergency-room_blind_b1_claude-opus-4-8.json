@@ -1,0 +1,60 @@
+{
+ "model": "claude-opus-4-8",
+ "backend": "anthropic",
+ "degree": "D2c",
+ "lang": "en",
+ "scenario": "hospital-emergency-room",
+ "source_visible": false,
+ "regime": "blind",
+ "n": 10,
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "provider_routing": null,
+ "source": "In the S bus, in the rush hour. A chap of about 26, felt hat with a cord instead of a ribbon, neck too long, as if someone’s been having a tug-of-war with it. People getting off. The chap in question gets annoyed with one of the men standing next to him. He accuses him of jostling him every time anyone goes past. A snivelling tone which is meant to be aggressive. When he sees a vacant seat he throws himself on to it. Two hours later, I meet him in the Cour de Rome, in front of the gare Saint-Lazare. He’s with a friend who’s saying: \"You ought to get an extra button put on your overcoat.\" He shows him where (at the lapels) and why.",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL short prose passage in English, set in the target scenario below. It must be\na HOMEOSYNTACTIC transposition of a hidden source: hold the source's syntactic form at the level\nspecified below while inventing entirely new words and moving the content into the target\nscenario. It is NOT a paraphrase or a translation.\n\nFORM TARGET (hold this). Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- an indented tree in which each line is a clause (main / relative / adverbial / complement / coordinate) and indentation marks subordination (a clause indented under another is embedded in it). Hold the SAME nesting: the same clauses, each embedded under the same kind of parent clause, to the same depth. The WORD ORDER and the words themselves are entirely yours; only the clause-embedding tree is fixed.\nReproduce it for all 10 periods, in this order:\nPeriod 1 (about 8 words) clause-nesting schema:\n  - main clause\nPeriod 2 (about 29 words) clause-nesting schema:\n  - main clause\n    - open complement (infinitive)\n    - adverbial clause\nPeriod 3 (about 3 words) clause-nesting schema:\n  - main clause\nPeriod 4 (about 15 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\nPeriod 5 (about 11 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\n      - relative/adnominal clause\nPeriod 6 (about 9 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\nPeriod 7 (about 12 words) clause-nesting schema:\n  - main clause\n    - adverbial clause\nPeriod 8 (about 18 words) clause-nesting schema:\n  - main clause\nPeriod 9 (about 19 words) clause-nesting schema:\n  - main clause\n    - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n          - relative/adnominal clause\nPeriod 10 (about 9 words) clause-nesting schema:\n  - main clause\n    - finite complement clause\n\nTARGET SCENARIO --- render the content here (in your own words):\n  - a hospital emergency room at a busy hour\n  - the triage desk, the waiting chairs, the gurneys along the corridor\n  - nurses and a doctor moving between bays; monitors, drips, a curtain drawn\n  - a patient in distress and a companion; a complaint about the wait\n  - the register of clinical urgency: intercom pages, wristbands, forms\n\nREQUIREMENTS --- both hold together:\n1. CLAUSE NESTING PRESERVED --- the same clause-embedding tree per period (which clause embeds in which, to the same depth), in any word order and words you choose.\n2. COHERENT --- one continuous, fully sensible passage in the target scenario; new lexicon,\n   no trace of any source content.\n\nWrite modern, natural English. Produce the 10 periods in order as continuous prose --- no\nnumbering, no headings. Output ONLY the passage: no preamble, no self-audit.",
+ "elapsed_s": 78.0,
+ "refused": 0,
+ "attempts": 10,
+ "gens": [
+  {
+   "i": 0,
+   "text": "The doors slid open at seven o'clock. A weary nurse crossed the tiled floor to reach the triage desk, though the corridor already overflowed with gurneys. The pages resumed. A doctor in blue scrubs checked the monitor that blinked beside the nearest bay. She adjusted a drip while the wristband that circled the patient's arm slipped loose. A clerk arrived with forms to sign. The companion muttered angrily because the wait had stretched past two hours. Behind the drawn curtain, a monitor sounded its shrill alarm into the crowded, restless room. The patient, whose breathing had grown ragged, insisted that he needed someone to fetch a nurse who could actually help him. The intercom announced that another ambulance was arriving."
+  },
+  {
+   "i": 1,
+   "text": "The doors slid open on the crowded night. A nurse rose from the triage desk to greet them, though the corridor was already lined with gurneys and murmuring strangers. The intercom crackled. A page summoned a doctor who had not slept in hours. Monitors beeped somewhere behind a curtain that a technician had drawn shut. The companion begged a nurse to hurry. Someone signed the forms while the clock above the chairs kept climbing. A wristband was fastened, a drip was hung, and a stretcher rolled past toward the farthest bay. The patient in the corner chair, whose breathing frightened everyone near him, whispered that he wanted only to reach a bed where the pain might finally ease. The whole room seemed to sense that the waiting had grown unbearable."
+  },
+  {
+   "i": 2,
+   "text": "The doors slid open at seven o'clock. A nurse crossed the corridor to reach the triage desk, snapping fresh gloves while the intercom paged a doctor to bay four. Monitors chirped. A woman clutched her chest in the plastic chair that faced the registration window. She could barely breathe when the alarm above her gurney began to shriek. A porter arrived, wanting to move her past the curtain. Wristbands piled up as the forms multiplied on every clipboard. The companion beside her rose, demanded attention, jabbed a finger toward the clock above the drug cabinet. He shouted that the staff had promised, hours ago, a bed to relieve the pain that had swelled all night. Everyone knew that the waiting would stretch longer."
+  },
+  {
+   "i": 3,
+   "text": "The doors slid open onto chaos. A nurse hurried past to reach the far bay before the monitor began its shrill alarm again. Someone was bleeding. A man on a gurney gripped the rails that framed his narrow, wheeled bed. The intercom paged a surgeon whose shift had ended hours earlier. A clerk leaned over the desk to log the newest arrival. Wristbands accumulated as the evening thickened. The waiting chairs held tired families, restless children, and a woman clutching a clipboard of unfinished forms. A companion demanded to know why the doctor kept insisting they wait for a bed that never seemed to open. Everyone sensed that the night had barely started."
+  },
+  {
+   "i": 4,
+   "text": "The doors slid open at seven sharp. A woman rushed to the triage desk to demand attention, while her father slumped against the wall behind her. Nurses converged. The clerk, who had already logged three arrivals that minute, glanced up wearily. She frowned when the monitor that hung above bay four began beeping. A resident appeared, hurrying to check it. Wristbands were printed while the intercom paged a second doctor. Two gurneys lined the corridor, their occupants half-hidden behind a curtain nobody had time to open. The companion insisted, in a voice that suggested she believed the staff meant to leave them stranded in a room that reeked of antiseptic. Everyone knew the wait would only grow longer."
+  },
+  {
+   "i": 5,
+   "text": "The doors hissed open again.\n\nA nurse crossed the floor to reach the triage desk, hurrying because the corridor had already filled with waiting bodies.\n\nMonitors chimed.\n\nA woman gripped the rail of a gurney that stood beneath a flickering intercom speaker.\n\nThe doctor slowed when he passed the bay whose curtain someone had drawn.\n\nHe signaled to a nurse assigned to check the drip.\n\nWristbands piled on the counter while the forms multiplied unread.\n\nThe companion of the trembling patient demanded an answer about the endless wait in that stale, crowded room.\n\nThe clerk called a name that the record showed a duty to summon before others who had waited longer than an hour.\n\nEveryone in the room understood that the delay would continue."
+  },
+  {
+   "i": 6,
+   "text": "The doors slid open with a hiss. A nurse rushed past the triage desk to reach the nearest bay, while the intercom crackled overhead with another urgent page. Chairs filled quickly. A woman clutched her wristband, the plastic band that marked her arrival hours ago. The doctor moved between curtains as the monitor she checked kept beeping. A gurney waited in the corridor, ready to carry someone through. Drips hung on their poles while the pumps ticked steadily. The companion leaned close and murmured something about the endless wait for a bed. He said that the forms he had filled made him believe he would be seen sooner, a promise that no one could keep. Everyone knew that the night had barely begun."
+  },
+  {
+   "i": 7,
+   "text": "The doors slid open with a hiss. A nurse hurried past the triage desk to reach the corridor, where a fresh line of gurneys had already stacked against the wall. The intercom crackled. A page for the attending physician cut through the murmur that filled the crowded waiting room. Somewhere behind a curtain a monitor beeped in the rhythm that only the anxious seem to hear. A junior resident darted between the bays, trying to steady a swaying drip. Wristbands were scanned quickly, though the clipboards kept piling up regardless. A woman clutched her companion's sleeve, her breath shallow, her voice thinning into something close to panic. She insisted that the staff should be told how long she had endured a pain that no one seemed to notice. Everyone knew the night would only grow longer."
+  },
+  {
+   "i": 8,
+   "text": "The doors hissed open at seven.\n\nA nurse crossed the floor to reach the triage desk, wheeling a fresh gurney into place before the next wave of arrivals could crowd the entrance.\n\nMonitors chirped steadily.\n\nA man clutched the wristband that a clerk had just fastened around his swollen arm.\n\nEveryone tensed when the intercom paged a code that no one in the corridor recognized.\n\nA doctor arrived, ready to examine the patient behind the drawn curtain.\n\nForms piled up quickly while the waiting chairs filled with restless families.\n\nThe companion of a trembling woman demanded answers at the desk in a rising, exhausted voice.\n\nShe was the one who insisted that the staff had promised to see a patient whom the drip had barely stabilized.\n\nThe charge nurse admitted that the wait would stretch longer still."
+  },
+  {
+   "i": 9,
+   "text": "The night shift swallowed the emergency room whole. She hurried past the triage desk to reach the far bay, because the pages kept multiplying overhead. Someone was screaming. A nurse threaded a fresh drip into the arm that trembled beneath the thin sheet. The doctor arrived just as the monitor that hung above the gurney faltered. Behind the curtain lingered a man too frightened to speak. Chairs filled steadily while the corridor narrowed with waiting bodies. A companion demanded answers, clutched a crumpled intake form, and jabbed his finger toward the clock. He insisted that the wait proved what everyone had begun to suspect, that the ward was too swamped to admit the woman whose wristband already named her. They warned us that no beds remained."
+  }
+ ]
+}
