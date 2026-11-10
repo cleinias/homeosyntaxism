@@ -1,0 +1,36 @@
+{
+  "upload_type": "software",
+  "title": "homeosyntaxism: code and data for homeosyntactic transposition of literary texts",
+  "description": "<p>Code, form specifications, prompts, every generation and every score behind Manuela Marchesini and Stefano Franchi, <em>Keeping It in Shape: Semantic Transpositions of a Form-Bound Text</em> (Computational Humanities Research 2027, Manchester). Homeosyntactic transposition holds a text's syntactic form at a chosen degree while its content is replaced, and measures how much of the form survives. The repository holds the Queneau ladder (Notations, in French, English and Italian; <code>queneau/</code>) and the Manzoni stress test (the incipit of <em>I promessi sposi</em>; repository root).</p><p>Scripts are licensed GPL-3.0; texts, specifications, generations and scores CC BY-SA 4.0. The short source passages that are in copyright (Queneau and his translators, the English Manzoni incipit) are included as quotation for scholarly analysis and are not covered by either license. See LICENSE.md.</p>",
+  "creators": [
+    {
+      "name": "Marchesini, Manuela",
+      "affiliation": "Department of Global Languages and Cultures, Texas A&M University",
+      "orcid": "0009-0001-7850-620X"
+    },
+    {
+      "name": "Franchi, Stefano",
+      "affiliation": "Independent Scholar",
+      "orcid": "0000-0001-6955-6320"
+    }
+  ],
+  "license": "cc-by-sa-4.0",
+  "keywords": [
+    "homeosyntaxism",
+    "form-bound generation",
+    "syntactic control",
+    "large language models",
+    "computational stylistics",
+    "Oulipo",
+    "Queneau",
+    "Manzoni"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.17613/1p8bw-67y06",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    }
+  ],
+  "language": "eng"
+}
