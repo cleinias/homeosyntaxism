@@ -70,6 +70,7 @@ Fidelity metric by degree: S₀ surface → `s0_pos` · D₀ ordered tree → `s
 | what | file | source text | generator | n |
 |---|---|---|---|---|
 | en · Lampedusa · unrestricted-homeo-source-blind | `Experiments/Manzoni/homeosyntaxism/results/unrestricted_en_1840_Qwen3-235B-A22B-Instruct-2507-FP8_n10.json` | `texts/incipit_en.txt` sha1 `d58c771f08c1…` | Qwen/Qwen3-235B-A22B-Instruct-2507-FP8 | 10 |
+| en · Lampedusa · unrestricted-homeo-source-blind | `Experiments/Manzoni/homeosyntaxism/results/unrestricted_en_1840_fable5_n10.json` | `texts/incipit_en.txt` sha1 `d58c771f08c1…` | claude-fable-5 | 10 |
 | en · inheritance ruling (Table 5) · unrestricted-homeo-source-blind | `Experiments/Manzoni/homeosyntaxism/results/unrestricted_en_1840_opus5_ctrl-argument_n10.json` | `texts/incipit_en.txt` sha1 `d58c771f08c1…` | claude-opus-5 | 10 |
 | en · surgical procedure (Table 5) · unrestricted-homeo-source-blind | `Experiments/Manzoni/homeosyntaxism/results/unrestricted_en_1840_opus5_ctrl-procedure_n10.json` | `texts/incipit_en.txt` sha1 `d58c771f08c1…` | claude-opus-5 | 10 |
 | en · Lampedusa · unrestricted-homeo-source-blind | `Experiments/Manzoni/homeosyntaxism/results/unrestricted_en_1840_opus5_n10.json` | `texts/incipit_en.txt` sha1 `d58c771f08c1…` | claude-opus-5 | 10 |
