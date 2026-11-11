@@ -20,6 +20,16 @@ which means a table whose provenance moves breaks this script loudly instead of 
 
     python scripts/chr_verify.py            # summary
     python scripts/chr_verify.py -v         # every check, passing ones included
+    python scripts/chr_verify.py --figures paper_figures.json   # manifest mode (below)
+
+TWO MODES. With the paper's LyX source present (the working repository), the script reads
+the printed figures from it, runs every check, and writes `paper_figures.json`: each
+figure the checks read from the paper, with where it is printed and a line of context.
+Without the source (the public repository), it reads that manifest instead and runs the
+same data checks against it; the checks that only make sense on the manuscript itself
+(word count, inset and layout balance, cross-references, repository links) are reported
+as skipped. A reader can hold the manifest against the published PDF. Regenerate it -- by
+running this script in the working repository -- whenever the paper changes.
 
 NOTE ON DEGREE NAMES. Files named D2 hold the paper's D3 (clause inventory); the paper's
 D2 (clause nesting) is in files named D2c. This is load-bearing and easy to get backwards.
@@ -35,6 +45,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DOC = ROOT / "Docs and Research notes/CHR2027 paper/Holding-the-Shape-CHR2027-TRIMMED.lyx"
+# where the manifest is written (working repo) and read (public queneau/ folder)
+FIG_OUT = [DOC.parent / "paper_figures.json",
+           ROOT / "Experiments/Manzoni/homeosyntaxism/queneau/paper_figures.json"]
+FIG_PUBLIC = ROOT / "paper_figures.json"
 S = ROOT / "Experiments/Queneau/queneau-homo/outputs/scored"
 O = ROOT / "Experiments/Queneau/queneau-homo/outputs"
 MZ = ROOT / "Experiments/Manzoni/homeosyntaxism/results"
@@ -109,7 +123,10 @@ def agg(rows, deg):
 
 
 # ---------------------------------------------------------------- LyX reading
-L = DOC.read_text(encoding="utf-8").split("\n")
+# Loaded only in document mode (see main), so that the module imports -- chr_provenance.py
+# uses POS, BRACK and contaminated() -- where the LyX source is absent.
+L = NOTE = None
+BODY = ""
 
 
 def in_note():
@@ -126,9 +143,6 @@ def in_note():
             depth -= 1
         out[i] = nd is not None
     return out
-
-
-NOTE = in_note()
 
 
 def flat(a, b, skip_notes=True):
@@ -151,21 +165,33 @@ def flat(a, b, skip_notes=True):
     return re.sub(r"\s+", " ", " ".join(o))
 
 
-BODY = flat(0, len(L))
-
-
-def table_rows(label, marker):
+def _table_span(label):
     i = next(k for k, l in enumerate(L) if l.startswith(f'name "{label}"'))
     s = max(k for k in range(i) if L[k].startswith("\\begin_inset Float table"))
     tb = next(k for k in range(s, i) if L[k].startswith("<lyxtabular"))
     te = max(k for k in range(s, i) if L[k].startswith("</lyxtabular>"))
+    return list(zip([k for k in range(tb, te) if L[k].startswith("<row")],
+                    [k for k in range(tb, te) if L[k].startswith("</row>")]))
+
+
+def table_rows(label, marker):
     out = []
-    for a, b in zip([k for k in range(tb, te) if L[k].startswith("<row")],
-                    [k for k in range(tb, te) if L[k].startswith("</row>")]):
+    for a, b in _table_span(label):
         v = []
         for k in range(a, b + 1):
             if L[k].startswith("<cell "):
                 j = next((m for m in range(k, b + 1) if L[m] == marker), None)
+                if j is None:
+                    # LyX drops a \lang switch that equals the document language on save
+                    # (2026-11-10, when the document became "english"), so the marker can
+                    # vanish: fall back to the cell's first content line, skipping the
+                    # layout's own \-directives (\lang, \size, \family, ...).
+                    e = next(m for m in range(k, b + 1) if L[m] == "</cell>")
+                    p = next((m for m in range(k, e) if L[m].startswith("\\begin_layout")), None)
+                    j = p and next((m for m in range(p + 1, e)
+                                    if L[m] and (not L[m].startswith("\\")
+                                                 or L[m].startswith("\\begin_inset"))), None)
+                    j = j and j - 1
                 v.append(None if j is None or L[j + 1].startswith("\\begin_inset")
                          else L[j + 1])
         lvl = ("S0" if any(L[k].endswith("Formula $S_{0}$") for k in range(a, b))
@@ -175,13 +201,210 @@ def table_rows(label, marker):
     return out
 
 
+def table_grid(label):
+    """Every cell as one string, formulas first and then text (the laptop table's layout)."""
+    grid = []
+    for a, b in _table_span(label):
+        cells = []
+        for k in range(a, b + 1):
+            if L[k].startswith("<cell "):
+                end = next(m for m in range(k, b + 1) if L[m].startswith("</cell>"))
+                txt = [L[m].strip() for m in range(k, end)
+                       if not L[m].startswith(("\\", "<")) and L[m].strip()]
+                math = [re.sub(r"^\\begin_inset Formula\s*", "", L[m]).strip("$ ")
+                        .replace("_{", "").replace("}", "")
+                        for m in range(k, end) if L[m].startswith("\\begin_inset Formula")]
+                cells.append(" ".join(math + txt))
+        grid.append(cells)
+    return grid
+
+
+# ---------------------------------------------------------------- where things are printed
+HEADINGS, TABNO, SECTEXT = [], {}, []
+
+
+def _headings():
+    """(line, label) for every numbered section and appendix, in order."""
+    out, n, app, in_app = [], 0, 0, False
+    for i, l in enumerate(L):
+        if l == "\\begin_layout Section" and not NOTE[i]:
+            e = next(k for k in range(i, len(L)) if L[k] == "\\end_layout")
+            if any("\\start_of_appendix" in L[k] for k in range(i, e)):
+                in_app = True
+            title = re.sub(r"\s*\(\w*\s*\)", "", flat(i + 1, e))   # "(table [ref])"
+            if in_app:
+                out.append((i, f"Appendix {chr(ord('A') + app)} ({title})"))
+                app += 1
+            else:
+                n += 1
+                out.append((i, f"§{n} ({title})"))
+    return out
+
+
+def _table_numbers():
+    """LyX label -> printed table number (table floats outside notes, in document order)."""
+    floats = [i for i, l in enumerate(L)
+              if l.startswith("\\begin_inset Float table") and not NOTE[i]]
+    out = {}
+    for i, l in enumerate(L):
+        if l.startswith('name "tab:'):
+            f = max((k for k in floats if k < i), default=None)
+            if f is not None:
+                out[l[6:-1]] = floats.index(f) + 1
+    return out
+
+
+def _section_of(line):
+    return max(((i, t) for i, t in HEADINGS if i <= line), default=(0, "front matter"))[1]
+
+
+def _load_doc():
+    global L, NOTE, BODY, HEADINGS, TABNO, SECTEXT
+    L = DOC.read_text(encoding="utf-8").split("\n")
+    NOTE = in_note()
+    BODY = flat(0, len(L))
+    HEADINGS = _headings()
+    TABNO = _table_numbers()
+    bounds = [i for i, _ in HEADINGS] + [len(L)]
+    SECTEXT = [(t, flat(a, b)) for (a, t), b in zip(HEADINGS, bounds[1:])]
+
+
+# ---------------------------------------------------------------- the paper, either way
+# Every value the checks read from the paper goes through PAPER. In document mode it reads
+# the LyX source and records what it read; in manifest mode it answers from
+# paper_figures.json, so the checks themselves are the same code in both modes.
+class _Match:
+    def __init__(self, groups, text):
+        self._g, self._t = groups, text
+
+    def group(self, i=0):
+        return self._t if i == 0 else self._g[i - 1]
+
+
+class Paper:
+    def __init__(self, manifest=None):
+        self.m = manifest                    # None = read the LyX source
+        self.src = {}                        # id -> exactly what the checks consumed
+        self.figs = []                       # the same, flat and readable
+
+    def _fig(self, fid, where, value, context=""):
+        try:
+            num = float(str(value).replace(",", "").rstrip("%"))
+        except (TypeError, ValueError):
+            num = None
+        self.figs.append({"id": fid, "where": where, "printed": value, "number": num,
+                          "context": context})
+
+    @staticmethod
+    def _clean(h):
+        return str(h).replace("{\\text{-", "-").replace("\\", "")
+
+    def _line(self, label):
+        return next(k for k, l in enumerate(L) if l.startswith(f'name "{label}"'))
+
+    def _where(self, label):
+        return f"Table {TABNO.get(label, '?')}, {_section_of(self._line(label))}"
+
+    def table(self, label, marker):
+        fid = f"table:{label}"
+        if self.m is not None:
+            return [(lvl, v) for lvl, v in self.m["sources"][fid]]
+        rows = table_rows(label, marker)
+        if fid not in self.src:
+            self.src[fid] = rows
+            head = table_grid(label)[0]        # header cells are often formulas
+            for r, (lvl, v) in enumerate(rows[1:], 1):
+                for c, x in enumerate(v):
+                    if x is None or c == 0:
+                        continue
+                    col = (self._clean(head[c]) if c < len(head) and head[c]
+                           else f"column {c + 1}")
+                    self._fig(f"{fid}:r{r}c{c}", self._where(label), x,
+                              f"row '{v[0]}'{' at ' + lvl if lvl else ''}, column '{col}'")
+        return rows
+
+    def grid(self, label):
+        fid = f"table:{label}"
+        if self.m is not None:
+            return self.m["sources"][fid]
+        g = table_grid(label)
+        if fid not in self.src:
+            self.src[fid] = g
+            for r, row in enumerate(g[1:], 1):
+                for c, x in enumerate(row[1:], 1):
+                    self._fig(f"{fid}:r{r}c{c}", self._where(label), x,
+                              f"row '{row[0]}', column "
+                              f"'{self._clean(g[0][c]) if c < len(g[0]) else c}'")
+        return g
+
+    def search(self, fid, pattern):
+        """re.search over the printed prose (notes excluded), recorded under `fid`."""
+        fid = f"prose:{fid}"
+        if self.m is not None:
+            d = self.m["sources"].get(fid)
+            return None if d is None else _Match(d["groups"], d["text"])
+        m = re.search(pattern, BODY)
+        if m is None:
+            return None
+        if fid not in self.src:
+            where = next((t for t, txt in SECTEXT if m.group(0) in txt), "?")
+            ctx = BODY[max(0, m.start() - 60):m.end() + 60]
+            self.src[fid] = {"groups": list(m.groups()), "text": m.group(0)}
+            for k, g in enumerate(m.groups(), 1):
+                self._fig(f"{fid}:{k}", where, g, f"…{ctx}…")
+        return m
+
+    def contains(self, fid, text):
+        fid = f"prose:{fid}"
+        if self.m is not None:
+            return self.m["sources"][fid]
+        ok = text in BODY
+        if fid not in self.src:
+            self.src[fid] = ok
+            if ok:
+                where = next((t for t, txt in SECTEXT if text in txt), "?")
+                self._fig(fid, where, text, "")
+        return ok
+
+    def transcribed(self, fid, where, values, note):
+        """Figures the script carries as literals, typed in from the paper."""
+        if self.m is None:
+            for k, v in enumerate(values, 1):
+                self._fig(f"transcribed:{fid}:{k}", where, v, note)
+
+    def write(self, paths):
+        doc = {"paper": "Marchesini & Franchi, Keeping It in Shape: Semantic "
+                        "Transpositions of a Form-Bound Text (CHR 2027)",
+               "generated_by": "scripts/chr_verify.py, reading the paper's LyX source",
+               "how_to_read": "`figures` lists every figure the checks read from the "
+                              "paper: `where` names the printed table or section, "
+                              "`printed` is the value as printed, `context` locates it "
+                              "(the row and column of a table cell, or the surrounding "
+                              "words of a sentence). Figures under `transcribed:` are "
+                              "carried in the script as literals. `sources` holds the "
+                              "same material in the shape the checks consume; "
+                              "chr_verify.py reads it when the LyX source is absent.",
+               "figures": self.figs,
+               "sources": self.src}
+        txt = json.dumps(doc, ensure_ascii=False, indent=1) + "\n"
+        out = []
+        for p in paths:
+            if p.parent.is_dir():
+                p.write_text(txt, encoding="utf-8")
+                out.append(p)
+        return out
+
+
+PAPER = None
+
+
 QW = {s: f"Qwen_Qwen2.5-{s}-Instruct" for s in
       ("0.5B", "1.5B", "3B", "7B", "14B", "32B", "72B")}
 
 
 # ================================================================ A. TABLE 1
 def table1():
-    rows = table_rows("tab:blind-vs-copy-data", "\\lang english")
+    rows = PAPER.table("tab:blind-vs-copy-data", "\\lang english")
     for lvl, v in rows[1:]:
         model, regime = v[0], v[2]
         tag_reg = "blind" if regime == "blind" else "vis"
@@ -203,7 +426,7 @@ def table1():
 
 # ================================================================ B. TABLE 3
 def table3():
-    rows = table_rows("tab:gradient", "\\size small")
+    rows = PAPER.table("tab:gradient", "\\size small")
     cols = [("D0", "blind_ladderD0soft"), ("D1", "ladderD1"),
             ("D2c", "blind_ladderD2c"), ("D2", "ladderD2")]
     for _, v in rows[1:]:
@@ -228,25 +451,7 @@ def table4():
                "72B fp8": ("72B", {"S0": "blind_ladderS0"})}
     LADDER = {"D0": "blind_ladderD0soft", "D1": "ladderD1",
               "D2c": "blind_ladderD2c", "D2": "ladderD2"}
-    printed = {}
-    i = next(k for k, l in enumerate(L) if l.startswith('name "tab:mincompute"'))
-    s = max(k for k in range(i) if L[k].startswith("\\begin_inset Float table"))
-    tb = next(k for k in range(s, i) if L[k].startswith("<lyxtabular"))
-    te = max(k for k in range(s, i) if L[k].startswith("</lyxtabular>"))
-    grid = []
-    for a, b in zip([k for k in range(tb, te) if L[k].startswith("<row")],
-                    [k for k in range(tb, te) if L[k].startswith("</row>")]):
-        cells = []
-        for k in range(a, b + 1):
-            if L[k].startswith("<cell "):
-                end = next(m for m in range(k, b + 1) if L[m].startswith("</cell>"))
-                txt = [L[m].strip() for m in range(k, end)
-                       if not L[m].startswith(("\\", "<")) and L[m].strip()]
-                math = [re.sub(r"^\\begin_inset Formula\s*", "", L[m]).strip("$ ")
-                        .replace("_{", "").replace("}", "")
-                        for m in range(k, end) if L[m].startswith("\\begin_inset Formula")]
-                cells.append(" ".join(math + txt))
-        grid.append(cells)
+    grid = PAPER.grid("tab:mincompute")
     header = grid[0]
     for row in grid[1:]:
         deg_lbl = row[0].strip()
@@ -275,7 +480,7 @@ def table4():
 
 # ================================================================ D. TABLE 5
 def table5():
-    rows = table_rows("tab:homosyntaxism", "\\size small")
+    rows = PAPER.table("tab:homosyntaxism", "\\size small")
     for _, v in rows[1:]:
         lbl = v[0]
         if lbl.startswith("Qwen2.5-"):
@@ -297,15 +502,15 @@ def table5():
 def cross_table():
     """The same configuration must not print two values in two tables."""
     a = agg(pool("D0", "blind_b1", "claude-opus-4-8"), "D0")
-    t1 = {(lvl, v[0], v[2]): v for lvl, v in table_rows("tab:blind-vs-copy-data",
-                                                        "\\lang english")[1:]}
-    t5 = {v[0]: v for _, v in table_rows("tab:homosyntaxism", "\\size small")[1:]}
+    t1 = {(lvl, v[0], v[2]): v for lvl, v in PAPER.table("tab:blind-vs-copy-data",
+                                                         "\\lang english")[1:]}
+    t5 = {v[0]: v for _, v in PAPER.table("tab:homosyntaxism", "\\size small")[1:]}
     r1, r5 = t1[("D0", "Opus 4.8", "blind")], t5["Opus 4.8"]
     check("Opus D0 blind agrees between Table 1 and Table 5",
           (r1[3], r1[4], r1[5], r1[6]) == (r5[1], r5[2], r5[4], r5[3]),
           f"T1 {r1[3]}/{r1[4]}/{r1[5]}/{r1[6]}  T5 {r5[1]}/{r5[2]}/{r5[4]}/{r5[3]}")
     # the scale-ladder sentence must quote Table 5, not Table 1's second run
-    m = re.search(r"Qwen-72B,? coherence ([\d.]+)", BODY)
+    m = PAPER.search("scale-ladder-72B-coherence", r"Qwen-72B,? coherence ([\d.]+)")
     check("scale-ladder coherence quotes Table 5's 72B value",
           bool(m) and m.group(1) == t5["Qwen2.5-72B"][4],
           f"prose {m.group(1) if m else '?'}  Table 5 {t5['Qwen2.5-72B'][4]}")
@@ -313,11 +518,11 @@ def cross_table():
 
 # ================================================================ F. PROSE
 def prose():
-    t1 = {(lvl, v[0], v[2]): v for lvl, v in table_rows("tab:blind-vs-copy-data",
-                                                        "\\lang english")[1:]}
+    t1 = {(lvl, v[0], v[2]): v for lvl, v in PAPER.table("tab:blind-vs-copy-data",
+                                                         "\\lang english")[1:]}
     # "none of N surface generations ... two of M one degree down" over Table 1's population
-    m = re.search(r"none of (\d+) surface generations clears both bars;"
-                  r" one degree down,? (two) of (\d+)", BODY)
+    m = PAPER.search("both-bars", r"none of (\d+) surface generations clears both bars;"
+                     r" one degree down,? (two) of (\d+)")
     if not check("body: the both-bars denominators are present", bool(m)):
         return
     s0 = sum(agg(pool("S0", tag, mod), "S0")["n"]
@@ -341,7 +546,8 @@ def prose():
     check("body: 2 clear both bars at D0", both("D0") == 2, f"{both('D0')} do")
     # Opus refusals in the source-visible D0 cells
     # reworded 2026-11-10: "refused 59 of its 140 attempts ... 81 of 90 in all"
-    m = re.search(r"refused (\d+) of its (\d+) attempts.{0,200}?(\d+) of (\d+) in all", BODY)
+    m = PAPER.search("opus-refusals",
+                     r"refused (\d+) of its (\d+) attempts.{0,200}?(\d+) of (\d+) in all")
     if check("body: Opus refusal sentence present", bool(m)):
         def nref(j):
             # generation refusals live under `refused` here (an int); the judge-refusal
@@ -361,7 +567,7 @@ def prose():
         eq("body: Opus generation attempts", m.group(2), att, "{:d}")
         eq("body: Opus surviving generations", m.group(3), got, "{:d}")
     # "144-fold"
-    check("body: 144-fold range", "144-fold" in BODY, "72 / 0.5 = 144")
+    check("body: 144-fold range", PAPER.contains("144-fold", "144-fold"), "72 / 0.5 = 144")
 
 
 # ================================================================ G. MANZONI
@@ -377,6 +583,16 @@ def manzoni():
             return
         d[k] = json.loads(p.read_text(encoding="utf-8"))["rows"]
     col = lambda rows, k: [r[k] for r in rows]
+    PAPER.transcribed("manzoni-opus5", "Appendix A.1", ["0.90", "0.94", "0.75", "0.82",
+                      "0.86", "0.90", "0.71", "0.76"],
+                      "Opus 5 inventory mean/best, nesting mean/best: Italian, then English")
+    PAPER.transcribed("manzoni-qwen3", "Appendix A.1", ["0.73", "0.58", "0.70", "0.54"],
+                      "Qwen3-235B inventory and nesting means: Italian, then English")
+    PAPER.transcribed("manzoni-specimens", "§5 and Appendix A", [
+        "0.93", "0.82", "0.41", "0.10", "0.90", "1.00",
+        "0.90", "0.76", "0.38", "0.11", "1.00", "1.00"],
+        "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, "
+        "then English")
     for lang, im, ib, nm, nb in (("it", "0.90", "0.94", "0.75", "0.82"),
                                  ("en", "0.86", "0.90", "0.71", "0.76")):
         r = d[("opus5", lang)]
@@ -465,16 +681,20 @@ def census():
                 flag += 1; by_deg[deg] += 1; by_cond[cond] += 1
                 if r["coherence"] >= 0.5:
                     coh += 1
-    eq("census: reported cells", re.search(r"touching \d+ of (\d+) cells", BODY).group(1),
+    eq("census: reported cells",
+       PAPER.search("census-cells", r"touching \d+ of (\d+) cells").group(1),
        len(files), "{:d}")
-    m = re.search(r"(\d+) of ([\d,]+) generations \(([\d.]+)%\) carry leaked", BODY)
+    m = PAPER.search("census-flagged",
+                     r"(\d+) of ([\d,]+) generations \(([\d.]+)%\) carry leaked")
     eq("census: flagged", m.group(1), flag, "{:d}")
     eq("census: reported generations", m.group(2), tot, "{:,d}")
     eq("census: flagged share", m.group(3), 100 * flag / tot, "{:.1f}")
     eq("census: rated coherent",
-       re.search(r"judge rated (\d+) of them coherent", BODY).group(1), coh, "{:d}")
-    r = re.search(r"It is ([\d.]+)% of surface-level generations,? ([\d.]+)% at the "
-                  r"ordered-tree degree,? ([\d.]+)% one degree below", BODY)
+       PAPER.search("census-coherent", r"judge rated (\d+) of them coherent").group(1),
+       coh, "{:d}")
+    r = PAPER.search("census-rates",
+                     r"It is ([\d.]+)% of surface-level generations,? ([\d.]+)% at the "
+                     r"ordered-tree degree,? ([\d.]+)% one degree below")
     eq("census: S0 rate", r.group(1), 100 * by_deg["S0"] / by_deg_t["S0"], "{:.1f}")
     eq("census: D0 rate", r.group(2), 100 * by_deg["D0"] / by_deg_t["D0"], "{:.1f}")
     eq("census: D1 rate", r.group(3), 100 * by_deg["D1"] / by_deg_t["D1"], "{:.1f}")
@@ -482,14 +702,16 @@ def census():
           f"D2c {by_deg['D2c']} D2 {by_deg['D2']}")
     check("census: 'almost entirely' the 7B",
           by_cond["7B"] / flag >= 0.85, f"{by_cond['7B']}/{flag}")
-    rm = re.search(r"rate is (\d+) generations in ([\d,]+) attempts,? ([\d.]+)%,? "
-                   r"touching (\d+) of", BODY)
+    rm = PAPER.search("census-refusals",
+                      r"rate is (\d+) generations in ([\d,]+) attempts,? ([\d.]+)%,? "
+                      r"touching (\d+) of")
     eq("census: refusals", rm.group(1), refg, "{:d}")
     eq("census: attempts", rm.group(2), att, "{:,d}")
     eq("census: refusal rate", rm.group(3), 100 * refg / att, "{:.2f}")
     eq("census: cells with a refusal", rm.group(4), refc, "{:d}")
     # the showcase passage must exist in the reported corpus
-    ms = re.search(r"One passage carrying (\d+) tags and (\d+) markers", BODY)
+    ms = PAPER.search("census-showcase",
+                      r"One passage carrying (\d+) tags and (\d+) markers")
     want = (int(ms.group(1)), int(ms.group(2)))
     found = False
     for f in files:
@@ -534,14 +756,35 @@ def document():
           f"{t.count(mk.REPO_HREF)} vs {mk.REPO_LINKS}")
 
 
+DOCUMENT_CHECKS = 5          # document(): manuscript-only, skipped in manifest mode
+
+
 def main():
+    global PAPER
     ap = argparse.ArgumentParser()
     ap.add_argument("-v", "--verbose", action="store_true")
+    ap.add_argument("--figures", type=Path,
+                    help="check against this paper_figures.json instead of the LyX source")
     a = ap.parse_args()
-    for name, fn in (("Table 1", table1), ("Table 3", table3), ("Table 4", table4),
-                     ("Table 5", table5), ("cross-table", cross_table),
+    figs = a.figures or (None if DOC.exists() else FIG_PUBLIC)
+    if figs is None:
+        _load_doc()
+        PAPER = Paper()
+        print(f"  reading the paper from {DOC.name}")
+    else:
+        if not figs.exists():
+            print(f"  neither the LyX source nor {figs} is present")
+            return 2
+        PAPER = Paper(json.loads(figs.read_text(encoding="utf-8")))
+        print(f"  manifest mode: reading the paper's figures from {figs.name}")
+    for name, fn in (("Table 2", table1), ("Table 4", table3), ("Table 6", table4),
+                     ("Table 7", table5), ("cross-table", cross_table),
                      ("body prose", prose), ("Manzoni", manzoni),
                      ("census", census), ("document", document)):
+        if fn is document and PAPER.m is not None:
+            print(f"  {name:12} skipped: {DOCUMENT_CHECKS} manuscript-only checks (word "
+                  f"count, insets, layouts, cross-references, repository links)")
+            continue
         before = len(RESULTS)
         try:
             fn()
@@ -557,7 +800,12 @@ def main():
                 if ok:
                     print(f"      ok   {n}: {d}")
     nbad = sum(1 for _, ok, _ in RESULTS if not ok)
-    print(f"\n  ==> {len(RESULTS)} checks, {nbad} failed")
+    skipped = f", {DOCUMENT_CHECKS} manuscript-only skipped" if PAPER.m is not None else ""
+    print(f"\n  ==> {len(RESULTS)} checks, {nbad} failed{skipped}")
+    if PAPER.m is None:
+        wrote = PAPER.write(FIG_OUT)
+        print(f"  wrote {len(PAPER.figs)} figures to "
+              + ", ".join(str(p.relative_to(ROOT)) for p in wrote))
     return 1 if nbad else 0
 
 

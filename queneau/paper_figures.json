@@ -1,0 +1,2074 @@
+{
+ "paper": "Marchesini & Franchi, Keeping It in Shape: Semantic Transpositions of a Form-Bound Text (CHR 2027)",
+ "generated_by": "scripts/chr_verify.py, reading the paper's LyX source",
+ "how_to_read": "`figures` lists every figure the checks read from the paper: `where` names the printed table or section, `printed` is the value as printed, `context` locates it (the row and column of a table cell, or the surrounding words of a sentence). Figures under `transcribed:` are carried in the script as literals. `sources` holds the same material in the shape the checks consume; chr_verify.py reads it when the LyX source is absent.",
+ "figures": [
+  {
+   "id": "table:tab:blind-vs-copy-data:r1c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "blind",
+   "number": null,
+   "context": "row 'Qwen2.5-7B' at S0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r1c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.31",
+   "number": 0.31,
+   "context": "row 'Qwen2.5-7B' at S0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r1c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.49",
+   "number": 0.49,
+   "context": "row 'Qwen2.5-7B' at S0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r1c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.59",
+   "number": 0.59,
+   "context": "row 'Qwen2.5-7B' at S0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r1c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-7B' at S0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r1c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "40",
+   "number": 40.0,
+   "context": "row 'Qwen2.5-7B' at S0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r2c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "copy",
+   "number": null,
+   "context": "row 'Qwen2.5-7B' at S0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r2c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.49",
+   "number": 0.49,
+   "context": "row 'Qwen2.5-7B' at S0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r2c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.65",
+   "number": 0.65,
+   "context": "row 'Qwen2.5-7B' at S0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r2c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.30",
+   "number": 0.3,
+   "context": "row 'Qwen2.5-7B' at S0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r2c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.45",
+   "number": 0.45,
+   "context": "row 'Qwen2.5-7B' at S0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r2c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "89",
+   "number": 89.0,
+   "context": "row 'Qwen2.5-7B' at S0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r3c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "blind",
+   "number": null,
+   "context": "row 'Qwen2.5-7B' at D0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r3c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.35",
+   "number": 0.35,
+   "context": "row 'Qwen2.5-7B' at D0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r3c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.58",
+   "number": 0.58,
+   "context": "row 'Qwen2.5-7B' at D0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r3c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.65",
+   "number": 0.65,
+   "context": "row 'Qwen2.5-7B' at D0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r3c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-7B' at D0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r3c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "87",
+   "number": 87.0,
+   "context": "row 'Qwen2.5-7B' at D0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r4c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "copy",
+   "number": null,
+   "context": "row 'Qwen2.5-7B' at D0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r4c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.52",
+   "number": 0.52,
+   "context": "row 'Qwen2.5-7B' at D0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r4c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.68",
+   "number": 0.68,
+   "context": "row 'Qwen2.5-7B' at D0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r4c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.35",
+   "number": 0.35,
+   "context": "row 'Qwen2.5-7B' at D0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r4c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.44",
+   "number": 0.44,
+   "context": "row 'Qwen2.5-7B' at D0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r4c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "87",
+   "number": 87.0,
+   "context": "row 'Qwen2.5-7B' at D0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r5c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "blind",
+   "number": null,
+   "context": "row 'Qwen2.5-72B' at S0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r5c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.38",
+   "number": 0.38,
+   "context": "row 'Qwen2.5-72B' at S0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r5c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.67",
+   "number": 0.67,
+   "context": "row 'Qwen2.5-72B' at S0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r5c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.88",
+   "number": 0.88,
+   "context": "row 'Qwen2.5-72B' at S0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r5c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-72B' at S0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r5c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "90",
+   "number": 90.0,
+   "context": "row 'Qwen2.5-72B' at S0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r6c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "copy",
+   "number": null,
+   "context": "row 'Qwen2.5-72B' at S0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r6c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.76",
+   "number": 0.76,
+   "context": "row 'Qwen2.5-72B' at S0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r6c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.92",
+   "number": 0.92,
+   "context": "row 'Qwen2.5-72B' at S0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r6c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.61",
+   "number": 0.61,
+   "context": "row 'Qwen2.5-72B' at S0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r6c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.96",
+   "number": 0.96,
+   "context": "row 'Qwen2.5-72B' at S0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r6c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "90",
+   "number": 90.0,
+   "context": "row 'Qwen2.5-72B' at S0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r7c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "blind",
+   "number": null,
+   "context": "row 'Qwen2.5-72B' at D0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r7c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.38",
+   "number": 0.38,
+   "context": "row 'Qwen2.5-72B' at D0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r7c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.72",
+   "number": 0.72,
+   "context": "row 'Qwen2.5-72B' at D0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r7c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.98",
+   "number": 0.98,
+   "context": "row 'Qwen2.5-72B' at D0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r7c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-72B' at D0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r7c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "90",
+   "number": 90.0,
+   "context": "row 'Qwen2.5-72B' at D0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r8c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "copy",
+   "number": null,
+   "context": "row 'Qwen2.5-72B' at D0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r8c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.75",
+   "number": 0.75,
+   "context": "row 'Qwen2.5-72B' at D0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r8c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.89",
+   "number": 0.89,
+   "context": "row 'Qwen2.5-72B' at D0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r8c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.65",
+   "number": 0.65,
+   "context": "row 'Qwen2.5-72B' at D0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r8c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.87",
+   "number": 0.87,
+   "context": "row 'Qwen2.5-72B' at D0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r8c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "90",
+   "number": 90.0,
+   "context": "row 'Qwen2.5-72B' at D0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r9c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "blind",
+   "number": null,
+   "context": "row 'Opus 4.8' at S0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r9c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.85",
+   "number": 0.85,
+   "context": "row 'Opus 4.8' at S0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r9c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.85",
+   "number": 0.85,
+   "context": "row 'Opus 4.8' at S0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r9c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.01",
+   "number": 0.01,
+   "context": "row 'Opus 4.8' at S0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r9c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "1.00",
+   "number": 1.0,
+   "context": "row 'Opus 4.8' at S0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r9c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "90",
+   "number": 90.0,
+   "context": "row 'Opus 4.8' at S0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r10c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "copy",
+   "number": null,
+   "context": "row 'Opus 4.8' at S0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r10c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.82",
+   "number": 0.82,
+   "context": "row 'Opus 4.8' at S0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r10c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.89",
+   "number": 0.89,
+   "context": "row 'Opus 4.8' at S0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r10c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.12",
+   "number": 0.12,
+   "context": "row 'Opus 4.8' at S0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r10c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "1.00",
+   "number": 1.0,
+   "context": "row 'Opus 4.8' at S0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r10c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "90",
+   "number": 90.0,
+   "context": "row 'Opus 4.8' at S0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r11c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "blind",
+   "number": null,
+   "context": "row 'Opus 4.8' at D0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r11c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.80",
+   "number": 0.8,
+   "context": "row 'Opus 4.8' at D0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r11c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.88",
+   "number": 0.88,
+   "context": "row 'Opus 4.8' at D0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r11c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.04",
+   "number": 0.04,
+   "context": "row 'Opus 4.8' at D0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r11c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "1.00",
+   "number": 1.0,
+   "context": "row 'Opus 4.8' at D0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r11c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "90",
+   "number": 90.0,
+   "context": "row 'Opus 4.8' at D0, column 'n'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r12c2",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "copy",
+   "number": null,
+   "context": "row 'Opus 4.8' at D0, column 'regime'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r12c3",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.77",
+   "number": 0.77,
+   "context": "row 'Opus 4.8' at D0, column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r12c4",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.89",
+   "number": 0.89,
+   "context": "row 'Opus 4.8' at D0, column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r12c5",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.22",
+   "number": 0.22,
+   "context": "row 'Opus 4.8' at D0, column 'coher'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r12c6",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "0.98",
+   "number": 0.98,
+   "context": "row 'Opus 4.8' at D0, column 'form held'"
+  },
+  {
+   "id": "table:tab:blind-vs-copy-data:r12c7",
+   "where": "Table 2, §4 (The Queneau ladder)",
+   "printed": "81",
+   "number": 81.0,
+   "context": "row 'Opus 4.8' at D0, column 'n'"
+  },
+  {
+   "id": "table:tab:gradient:r1c1",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.24",
+   "number": 0.24,
+   "context": "row 'Qwen2.5-0.5B', column 'D0 surf-synt'"
+  },
+  {
+   "id": "table:tab:gradient:r1c2",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.35",
+   "number": 0.35,
+   "context": "row 'Qwen2.5-0.5B', column 'D1 dep-triple'"
+  },
+  {
+   "id": "table:tab:gradient:r1c3",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.46",
+   "number": 0.46,
+   "context": "row 'Qwen2.5-0.5B', column 'D2 clause-nest'"
+  },
+  {
+   "id": "table:tab:gradient:r1c4",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.50",
+   "number": 0.5,
+   "context": "row 'Qwen2.5-0.5B', column 'D3 clause-inv'"
+  },
+  {
+   "id": "table:tab:gradient:r1c5",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.09 / 0.05 / 0.06 / 0.05",
+   "number": null,
+   "context": "row 'Qwen2.5-0.5B', column 'coher D0 D1 D2 D3 / / /'"
+  },
+  {
+   "id": "table:tab:gradient:r2c1",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.31",
+   "number": 0.31,
+   "context": "row 'Qwen2.5-1.5B', column 'D0 surf-synt'"
+  },
+  {
+   "id": "table:tab:gradient:r2c2",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.40",
+   "number": 0.4,
+   "context": "row 'Qwen2.5-1.5B', column 'D1 dep-triple'"
+  },
+  {
+   "id": "table:tab:gradient:r2c3",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.55",
+   "number": 0.55,
+   "context": "row 'Qwen2.5-1.5B', column 'D2 clause-nest'"
+  },
+  {
+   "id": "table:tab:gradient:r2c4",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.58",
+   "number": 0.58,
+   "context": "row 'Qwen2.5-1.5B', column 'D3 clause-inv'"
+  },
+  {
+   "id": "table:tab:gradient:r2c5",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.19 / 0.19 / 0.16 / 0.15",
+   "number": null,
+   "context": "row 'Qwen2.5-1.5B', column 'coher D0 D1 D2 D3 / / /'"
+  },
+  {
+   "id": "table:tab:gradient:r3c1",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.37",
+   "number": 0.37,
+   "context": "row 'Qwen2.5-3B', column 'D0 surf-synt'"
+  },
+  {
+   "id": "table:tab:gradient:r3c2",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.49",
+   "number": 0.49,
+   "context": "row 'Qwen2.5-3B', column 'D1 dep-triple'"
+  },
+  {
+   "id": "table:tab:gradient:r3c3",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.55",
+   "number": 0.55,
+   "context": "row 'Qwen2.5-3B', column 'D2 clause-nest'"
+  },
+  {
+   "id": "table:tab:gradient:r3c4",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.64",
+   "number": 0.64,
+   "context": "row 'Qwen2.5-3B', column 'D3 clause-inv'"
+  },
+  {
+   "id": "table:tab:gradient:r3c5",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.27 / 0.34 / 0.33 / 0.32",
+   "number": null,
+   "context": "row 'Qwen2.5-3B', column 'coher D0 D1 D2 D3 / / /'"
+  },
+  {
+   "id": "table:tab:gradient:r4c1",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.34",
+   "number": 0.34,
+   "context": "row 'Qwen2.5-7B', column 'D0 surf-synt'"
+  },
+  {
+   "id": "table:tab:gradient:r4c2",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.42",
+   "number": 0.42,
+   "context": "row 'Qwen2.5-7B', column 'D1 dep-triple'"
+  },
+  {
+   "id": "table:tab:gradient:r4c3",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.57",
+   "number": 0.57,
+   "context": "row 'Qwen2.5-7B', column 'D2 clause-nest'"
+  },
+  {
+   "id": "table:tab:gradient:r4c4",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.61",
+   "number": 0.61,
+   "context": "row 'Qwen2.5-7B', column 'D3 clause-inv'"
+  },
+  {
+   "id": "table:tab:gradient:r4c5",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.52 / 0.62 / 0.56 / 0.49",
+   "number": null,
+   "context": "row 'Qwen2.5-7B', column 'coher D0 D1 D2 D3 / / /'"
+  },
+  {
+   "id": "table:tab:gradient:r5c1",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.35",
+   "number": 0.35,
+   "context": "row 'Qwen2.5-14B', column 'D0 surf-synt'"
+  },
+  {
+   "id": "table:tab:gradient:r5c2",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.46",
+   "number": 0.46,
+   "context": "row 'Qwen2.5-14B', column 'D1 dep-triple'"
+  },
+  {
+   "id": "table:tab:gradient:r5c3",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.46",
+   "number": 0.46,
+   "context": "row 'Qwen2.5-14B', column 'D2 clause-nest'"
+  },
+  {
+   "id": "table:tab:gradient:r5c4",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.64",
+   "number": 0.64,
+   "context": "row 'Qwen2.5-14B', column 'D3 clause-inv'"
+  },
+  {
+   "id": "table:tab:gradient:r5c5",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.78 / 0.81 / 0.69 / 0.74",
+   "number": null,
+   "context": "row 'Qwen2.5-14B', column 'coher D0 D1 D2 D3 / / /'"
+  },
+  {
+   "id": "table:tab:gradient:r6c1",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.34",
+   "number": 0.34,
+   "context": "row 'Qwen2.5-32B', column 'D0 surf-synt'"
+  },
+  {
+   "id": "table:tab:gradient:r6c2",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.42",
+   "number": 0.42,
+   "context": "row 'Qwen2.5-32B', column 'D1 dep-triple'"
+  },
+  {
+   "id": "table:tab:gradient:r6c3",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.68",
+   "number": 0.68,
+   "context": "row 'Qwen2.5-32B', column 'D2 clause-nest'"
+  },
+  {
+   "id": "table:tab:gradient:r6c4",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.73",
+   "number": 0.73,
+   "context": "row 'Qwen2.5-32B', column 'D3 clause-inv'"
+  },
+  {
+   "id": "table:tab:gradient:r6c5",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.65 / 0.81 / 0.73 / 0.76",
+   "number": null,
+   "context": "row 'Qwen2.5-32B', column 'coher D0 D1 D2 D3 / / /'"
+  },
+  {
+   "id": "table:tab:gradient:r7c1",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.38",
+   "number": 0.38,
+   "context": "row 'Qwen2.5-72B', column 'D0 surf-synt'"
+  },
+  {
+   "id": "table:tab:gradient:r7c2",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.47",
+   "number": 0.47,
+   "context": "row 'Qwen2.5-72B', column 'D1 dep-triple'"
+  },
+  {
+   "id": "table:tab:gradient:r7c3",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.74",
+   "number": 0.74,
+   "context": "row 'Qwen2.5-72B', column 'D2 clause-nest'"
+  },
+  {
+   "id": "table:tab:gradient:r7c4",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.77",
+   "number": 0.77,
+   "context": "row 'Qwen2.5-72B', column 'D3 clause-inv'"
+  },
+  {
+   "id": "table:tab:gradient:r7c5",
+   "where": "Table 4, §4 (The Queneau ladder)",
+   "printed": "0.94 / 0.99 / 0.87 / 0.87",
+   "number": null,
+   "context": "row 'Qwen2.5-72B', column 'coher D0 D1 D2 D3 / / /'"
+  },
+  {
+   "id": "table:tab:mincompute:r1c1",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.30/0.90",
+   "number": null,
+   "context": "row 'S0', column '7B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r1c2",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.24/0.76",
+   "number": null,
+   "context": "row 'S0', column '7B q8 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r1c3",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.29/1.00",
+   "number": null,
+   "context": "row 'S0', column '7B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r1c4",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.31/0.63",
+   "number": null,
+   "context": "row 'S0', column '14B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r1c5",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.33/0.92",
+   "number": null,
+   "context": "row 'S0', column '14B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r1c6",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.35/0.94",
+   "number": null,
+   "context": "row 'S0', column '72B fp8 (cluster, best open)'"
+  },
+  {
+   "id": "table:tab:mincompute:r2c1",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.33/0.66",
+   "number": null,
+   "context": "row 'D0', column '7B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r2c2",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.33/0.72",
+   "number": null,
+   "context": "row 'D0', column '7B q8 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r2c3",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.32/0.88",
+   "number": null,
+   "context": "row 'D0', column '7B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r2c4",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.33/0.84",
+   "number": null,
+   "context": "row 'D0', column '14B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r2c5",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.32/0.99",
+   "number": null,
+   "context": "row 'D0', column '14B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r2c6",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.36/1.00",
+   "number": null,
+   "context": "row 'D0', column '72B fp8 (cluster, best open)'"
+  },
+  {
+   "id": "table:tab:mincompute:r3c1",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.38/0.76",
+   "number": null,
+   "context": "row 'D1', column '7B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r3c2",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.38/0.70",
+   "number": null,
+   "context": "row 'D1', column '7B q8 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r3c3",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.41/0.89",
+   "number": null,
+   "context": "row 'D1', column '7B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r3c4",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.40/0.88",
+   "number": null,
+   "context": "row 'D1', column '14B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r3c5",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.40/0.96",
+   "number": null,
+   "context": "row 'D1', column '14B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r3c6",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.45/1.00",
+   "number": null,
+   "context": "row 'D1', column '72B fp8 (cluster, best open)'"
+  },
+  {
+   "id": "table:tab:mincompute:r4c1",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.57/0.84",
+   "number": null,
+   "context": "row 'D2', column '7B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r4c2",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.54/0.74",
+   "number": null,
+   "context": "row 'D2', column '7B q8 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r4c3",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.51/0.88",
+   "number": null,
+   "context": "row 'D2', column '7B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r4c4",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.46/0.90",
+   "number": null,
+   "context": "row 'D2', column '14B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r4c5",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.39/0.92",
+   "number": null,
+   "context": "row 'D2', column '14B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r4c6",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.67/0.99",
+   "number": null,
+   "context": "row 'D2', column '72B fp8 (cluster, best open)'"
+  },
+  {
+   "id": "table:tab:mincompute:r5c1",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.62/0.66",
+   "number": null,
+   "context": "row 'D3', column '7B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r5c2",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.58/0.60",
+   "number": null,
+   "context": "row 'D3', column '7B q8 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r5c3",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.55/0.82",
+   "number": null,
+   "context": "row 'D3', column '7B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r5c4",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.57/0.79",
+   "number": null,
+   "context": "row 'D3', column '14B q4 (laptop)'"
+  },
+  {
+   "id": "table:tab:mincompute:r5c5",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.61/0.94",
+   "number": null,
+   "context": "row 'D3', column '14B BF16 (cluster)'"
+  },
+  {
+   "id": "table:tab:mincompute:r5c6",
+   "where": "Table 6, Appendix C (Reproducibility)",
+   "printed": "0.72/0.98",
+   "number": null,
+   "context": "row 'D3', column '72B fp8 (cluster, best open)'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r1c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.24",
+   "number": 0.24,
+   "context": "row 'Qwen2.5-0.5B', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r1c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.60",
+   "number": 0.6,
+   "context": "row 'Qwen2.5-0.5B', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r1c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-0.5B', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r1c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.09",
+   "number": 0.09,
+   "context": "row 'Qwen2.5-0.5B', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r2c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.31",
+   "number": 0.31,
+   "context": "row 'Qwen2.5-1.5B', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r2c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.61",
+   "number": 0.61,
+   "context": "row 'Qwen2.5-1.5B', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r2c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-1.5B', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r2c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.19",
+   "number": 0.19,
+   "context": "row 'Qwen2.5-1.5B', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r3c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.37",
+   "number": 0.37,
+   "context": "row 'Qwen2.5-3B', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r3c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.64",
+   "number": 0.64,
+   "context": "row 'Qwen2.5-3B', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r3c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-3B', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r3c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.27",
+   "number": 0.27,
+   "context": "row 'Qwen2.5-3B', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r4c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.34",
+   "number": 0.34,
+   "context": "row 'Qwen2.5-7B', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r4c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.60",
+   "number": 0.6,
+   "context": "row 'Qwen2.5-7B', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r4c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-7B', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r4c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.52",
+   "number": 0.52,
+   "context": "row 'Qwen2.5-7B', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r5c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.35",
+   "number": 0.35,
+   "context": "row 'Qwen2.5-14B', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r5c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.58",
+   "number": 0.58,
+   "context": "row 'Qwen2.5-14B', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r5c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-14B', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r5c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.78",
+   "number": 0.78,
+   "context": "row 'Qwen2.5-14B', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r6c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.30",
+   "number": 0.3,
+   "context": "row 'Llama-4-Maverick (17B active)', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r6c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.57",
+   "number": 0.57,
+   "context": "row 'Llama-4-Maverick (17B active)', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r6c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Llama-4-Maverick (17B active)', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r6c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.79",
+   "number": 0.79,
+   "context": "row 'Llama-4-Maverick (17B active)', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r7c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.34",
+   "number": 0.34,
+   "context": "row 'Qwen2.5-32B', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r7c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.61",
+   "number": 0.61,
+   "context": "row 'Qwen2.5-32B', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r7c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-32B', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r7c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.65",
+   "number": 0.65,
+   "context": "row 'Qwen2.5-32B', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r8c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.38",
+   "number": 0.38,
+   "context": "row 'Qwen2.5-72B', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r8c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.71",
+   "number": 0.71,
+   "context": "row 'Qwen2.5-72B', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r8c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.00",
+   "number": 0.0,
+   "context": "row 'Qwen2.5-72B', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r8c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.94",
+   "number": 0.94,
+   "context": "row 'Qwen2.5-72B', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r9c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.80",
+   "number": 0.8,
+   "context": "row 'Opus 4.8', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r9c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.88",
+   "number": 0.88,
+   "context": "row 'Opus 4.8', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r9c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "1.00",
+   "number": 1.0,
+   "context": "row 'Opus 4.8', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r9c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "0.04",
+   "number": 0.04,
+   "context": "row 'Opus 4.8', column 'coher'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r10c1",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "—",
+   "number": null,
+   "context": "row 'Fable 5 (EN)', column 'surf-synt'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r10c2",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "—",
+   "number": null,
+   "context": "row 'Fable 5 (EN)', column 'clause-inv'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r10c3",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "—",
+   "number": null,
+   "context": "row 'Fable 5 (EN)', column 'held-rate'"
+  },
+  {
+   "id": "table:tab:homosyntaxism:r10c4",
+   "where": "Table 7, Appendix D (Failed homosyntaxism data)",
+   "printed": "refused",
+   "number": null,
+   "context": "row 'Fable 5 (EN)', column 'coher'"
+  },
+  {
+   "id": "prose:scale-ladder-72B-coherence:1",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "0.94",
+   "number": 0.94,
+   "context": "…l, the more coherent the prose it writes in its own syntax (Qwen-72B, coherence 0.94), never the prescribed one. Opus fails the other way: blind…"
+  },
+  {
+   "id": "prose:both-bars:1",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "220",
+   "number": 220.0,
+   "context": "…omes a situation. In sum, source-visible, both hold; blind, none of 220 surface generations clears both bars; one degree down, two of 267 barely do. Table illustrates the discussion with concrete e…"
+  },
+  {
+   "id": "prose:both-bars:2",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "two",
+   "number": null,
+   "context": "…omes a situation. In sum, source-visible, both hold; blind, none of 220 surface generations clears both bars; one degree down, two of 267 barely do. Table illustrates the discussion with concrete e…"
+  },
+  {
+   "id": "prose:both-bars:3",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "267",
+   "number": 267.0,
+   "context": "…omes a situation. In sum, source-visible, both hold; blind, none of 220 surface generations clears both bars; one degree down, two of 267 barely do. Table illustrates the discussion with concrete e…"
+  },
+  {
+   "id": "prose:opus-refusals:1",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "59",
+   "number": 59.0,
+   "context": "…luded throughout. One row is short for another reason: Opus refused 59 of its 140 attempts in its source-visible cells at the ordered-tree degree, nearly all of them in English, and two English cells were left with four and seven texts, 81 of 90 in all; see Appendix for the retry rule. Given the text of Notatio…"
+  },
+  {
+   "id": "prose:opus-refusals:2",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "140",
+   "number": 140.0,
+   "context": "…luded throughout. One row is short for another reason: Opus refused 59 of its 140 attempts in its source-visible cells at the ordered-tree degree, nearly all of them in English, and two English cells were left with four and seven texts, 81 of 90 in all; see Appendix for the retry rule. Given the text of Notatio…"
+  },
+  {
+   "id": "prose:opus-refusals:3",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "81",
+   "number": 81.0,
+   "context": "…luded throughout. One row is short for another reason: Opus refused 59 of its 140 attempts in its source-visible cells at the ordered-tree degree, nearly all of them in English, and two English cells were left with four and seven texts, 81 of 90 in all; see Appendix for the retry rule. Given the text of Notatio…"
+  },
+  {
+   "id": "prose:opus-refusals:4",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "90",
+   "number": 90.0,
+   "context": "…luded throughout. One row is short for another reason: Opus refused 59 of its 140 attempts in its source-visible cells at the ordered-tree degree, nearly all of them in English, and two English cells were left with four and seven texts, 81 of 90 in all; see Appendix for the retry rule. Given the text of Notatio…"
+  },
+  {
+   "id": "prose:144-fold",
+   "where": "§4 (The Queneau ladder)",
+   "printed": "144-fold",
+   "number": null,
+   "context": ""
+  },
+  {
+   "id": "transcribed:manzoni-opus5:1",
+   "where": "Appendix A.1",
+   "printed": "0.90",
+   "number": 0.9,
+   "context": "Opus 5 inventory mean/best, nesting mean/best: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-opus5:2",
+   "where": "Appendix A.1",
+   "printed": "0.94",
+   "number": 0.94,
+   "context": "Opus 5 inventory mean/best, nesting mean/best: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-opus5:3",
+   "where": "Appendix A.1",
+   "printed": "0.75",
+   "number": 0.75,
+   "context": "Opus 5 inventory mean/best, nesting mean/best: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-opus5:4",
+   "where": "Appendix A.1",
+   "printed": "0.82",
+   "number": 0.82,
+   "context": "Opus 5 inventory mean/best, nesting mean/best: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-opus5:5",
+   "where": "Appendix A.1",
+   "printed": "0.86",
+   "number": 0.86,
+   "context": "Opus 5 inventory mean/best, nesting mean/best: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-opus5:6",
+   "where": "Appendix A.1",
+   "printed": "0.90",
+   "number": 0.9,
+   "context": "Opus 5 inventory mean/best, nesting mean/best: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-opus5:7",
+   "where": "Appendix A.1",
+   "printed": "0.71",
+   "number": 0.71,
+   "context": "Opus 5 inventory mean/best, nesting mean/best: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-opus5:8",
+   "where": "Appendix A.1",
+   "printed": "0.76",
+   "number": 0.76,
+   "context": "Opus 5 inventory mean/best, nesting mean/best: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-qwen3:1",
+   "where": "Appendix A.1",
+   "printed": "0.73",
+   "number": 0.73,
+   "context": "Qwen3-235B inventory and nesting means: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-qwen3:2",
+   "where": "Appendix A.1",
+   "printed": "0.58",
+   "number": 0.58,
+   "context": "Qwen3-235B inventory and nesting means: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-qwen3:3",
+   "where": "Appendix A.1",
+   "printed": "0.70",
+   "number": 0.7,
+   "context": "Qwen3-235B inventory and nesting means: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-qwen3:4",
+   "where": "Appendix A.1",
+   "printed": "0.54",
+   "number": 0.54,
+   "context": "Qwen3-235B inventory and nesting means: Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:1",
+   "where": "§5 and Appendix A",
+   "printed": "0.93",
+   "number": 0.93,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:2",
+   "where": "§5 and Appendix A",
+   "printed": "0.82",
+   "number": 0.82,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:3",
+   "where": "§5 and Appendix A",
+   "printed": "0.41",
+   "number": 0.41,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:4",
+   "where": "§5 and Appendix A",
+   "printed": "0.10",
+   "number": 0.1,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:5",
+   "where": "§5 and Appendix A",
+   "printed": "0.90",
+   "number": 0.9,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:6",
+   "where": "§5 and Appendix A",
+   "printed": "1.00",
+   "number": 1.0,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:7",
+   "where": "§5 and Appendix A",
+   "printed": "0.90",
+   "number": 0.9,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:8",
+   "where": "§5 and Appendix A",
+   "printed": "0.76",
+   "number": 0.76,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:9",
+   "where": "§5 and Appendix A",
+   "printed": "0.38",
+   "number": 0.38,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:10",
+   "where": "§5 and Appendix A",
+   "printed": "0.11",
+   "number": 0.11,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:11",
+   "where": "§5 and Appendix A",
+   "printed": "1.00",
+   "number": 1.0,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "transcribed:manzoni-specimens:12",
+   "where": "§5 and Appendix A",
+   "printed": "1.00",
+   "number": 1.0,
+   "context": "the two printed specimens (inv, nest, surf, lex, sem-diverg, coher): Italian, then English"
+  },
+  {
+   "id": "prose:census-cells:1",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "423",
+   "number": 423.0,
+   "context": "…ed here the rate is 8 generations in 4,216 attempts, 0.19%, touching 7 of 423 cells. It is worth looking at what such a passage contains: 599 w…"
+  },
+  {
+   "id": "prose:census-flagged:1",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "142",
+   "number": 142.0,
+   "context": "…cification instead of prose. Across the runs reported here, 142 of 4,208 generations (3.4%) carry leaked scaffolding — standalone part-of-speech tags, bracketed per…"
+  },
+  {
+   "id": "prose:census-flagged:2",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "4,208",
+   "number": 4208.0,
+   "context": "…cification instead of prose. Across the runs reported here, 142 of 4,208 generations (3.4%) carry leaked scaffolding — standalone part-of-speech tags, bracketed per…"
+  },
+  {
+   "id": "prose:census-flagged:3",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "3.4",
+   "number": 3.4,
+   "context": "…cification instead of prose. Across the runs reported here, 142 of 4,208 generations (3.4%) carry leaked scaffolding — standalone part-of-speech tags, bracketed per…"
+  },
+  {
+   "id": "prose:census-coherent:1",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "89",
+   "number": 89.0,
+   "context": "…keted period markers — or degenerate word-doubling, and the judge rated 89 of them coherent. One passage carrying 161 tags and 161 markers interleaved …"
+  },
+  {
+   "id": "prose:census-rates:1",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "16.3",
+   "number": 16.3,
+   "context": "…ts prose was scored 1.00. The failure is not spread evenly. It is 16.3% of surface-level generations, 1.6% at the ordered-tree degree, 0.7% one degree below that, and absent at the two clause degrees; and it is almos…"
+  },
+  {
+   "id": "prose:census-rates:2",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "1.6",
+   "number": 1.6,
+   "context": "…ts prose was scored 1.00. The failure is not spread evenly. It is 16.3% of surface-level generations, 1.6% at the ordered-tree degree, 0.7% one degree below that, and absent at the two clause degrees; and it is almos…"
+  },
+  {
+   "id": "prose:census-rates:3",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "0.7",
+   "number": 0.7,
+   "context": "…ts prose was scored 1.00. The failure is not spread evenly. It is 16.3% of surface-level generations, 1.6% at the ordered-tree degree, 0.7% one degree below that, and absent at the two clause degrees; and it is almos…"
+  },
+  {
+   "id": "prose:census-refusals:1",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "8",
+   "number": 8.0,
+   "context": "… five identical refusals. Across the runs reported here the rate is 8 generations in 4,216 attempts, 0.19%, touching 7 of 423 cells. It is worth looking at what such a passage conta…"
+  },
+  {
+   "id": "prose:census-refusals:2",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "4,216",
+   "number": 4216.0,
+   "context": "… five identical refusals. Across the runs reported here the rate is 8 generations in 4,216 attempts, 0.19%, touching 7 of 423 cells. It is worth looking at what such a passage conta…"
+  },
+  {
+   "id": "prose:census-refusals:3",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "0.19",
+   "number": 0.19,
+   "context": "… five identical refusals. Across the runs reported here the rate is 8 generations in 4,216 attempts, 0.19%, touching 7 of 423 cells. It is worth looking at what such a passage conta…"
+  },
+  {
+   "id": "prose:census-refusals:4",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "7",
+   "number": 7.0,
+   "context": "… five identical refusals. Across the runs reported here the rate is 8 generations in 4,216 attempts, 0.19%, touching 7 of 423 cells. It is worth looking at what such a passage conta…"
+  },
+  {
+   "id": "prose:census-showcase:1",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "161",
+   "number": 161.0,
+   "context": "…ate word-doubling, and the judge rated 89 of them coherent. One passage carrying 161 tags and 161 markers interleaved through its prose was scored 1.00. The failure …"
+  },
+  {
+   "id": "prose:census-showcase:2",
+   "where": "Appendix C (Reproducibility)",
+   "printed": "161",
+   "number": 161.0,
+   "context": "…ate word-doubling, and the judge rated 89 of them coherent. One passage carrying 161 tags and 161 markers interleaved through its prose was scored 1.00. The failure …"
+  }
+ ],
+ "sources": {
+  "table:tab:blind-vs-copy-data": [
+   [
+    "",
+    [
+     "Model",
+     "level",
+     "regime",
+     null,
+     null,
+     null,
+     "form held",
+     "n"
+    ]
+   ],
+   [
+    "S0",
+    [
+     "Qwen2.5-7B",
+     null,
+     "blind",
+     "0.31",
+     "0.49",
+     "0.59",
+     "0.00",
+     "40"
+    ]
+   ],
+   [
+    "S0",
+    [
+     "Qwen2.5-7B",
+     null,
+     "copy",
+     "0.49",
+     "0.65",
+     "0.30",
+     "0.45",
+     "89"
+    ]
+   ],
+   [
+    "D0",
+    [
+     "Qwen2.5-7B",
+     null,
+     "blind",
+     "0.35",
+     "0.58",
+     "0.65",
+     "0.00",
+     "87"
+    ]
+   ],
+   [
+    "D0",
+    [
+     "Qwen2.5-7B",
+     null,
+     "copy",
+     "0.52",
+     "0.68",
+     "0.35",
+     "0.44",
+     "87"
+    ]
+   ],
+   [
+    "S0",
+    [
+     "Qwen2.5-72B",
+     null,
+     "blind",
+     "0.38",
+     "0.67",
+     "0.88",
+     "0.00",
+     "90"
+    ]
+   ],
+   [
+    "S0",
+    [
+     "Qwen2.5-72B",
+     null,
+     "copy",
+     "0.76",
+     "0.92",
+     "0.61",
+     "0.96",
+     "90"
+    ]
+   ],
+   [
+    "D0",
+    [
+     "Qwen2.5-72B",
+     null,
+     "blind",
+     "0.38",
+     "0.72",
+     "0.98",
+     "0.00",
+     "90"
+    ]
+   ],
+   [
+    "D0",
+    [
+     "Qwen2.5-72B",
+     null,
+     "copy",
+     "0.75",
+     "0.89",
+     "0.65",
+     "0.87",
+     "90"
+    ]
+   ],
+   [
+    "S0",
+    [
+     "Opus 4.8",
+     null,
+     "blind",
+     "0.85",
+     "0.85",
+     "0.01",
+     "1.00",
+     "90"
+    ]
+   ],
+   [
+    "S0",
+    [
+     "Opus 4.8",
+     null,
+     "copy",
+     "0.82",
+     "0.89",
+     "0.12",
+     "1.00",
+     "90"
+    ]
+   ],
+   [
+    "D0",
+    [
+     "Opus 4.8",
+     null,
+     "blind",
+     "0.80",
+     "0.88",
+     "0.04",
+     "1.00",
+     "90"
+    ]
+   ],
+   [
+    "D0",
+    [
+     "Opus 4.8",
+     null,
+     "copy",
+     "0.77",
+     "0.89",
+     "0.22",
+     "0.98",
+     "81"
+    ]
+   ]
+  ],
+  "table:tab:gradient": [
+   [
+    "D0",
+    [
+     "Model",
+     null,
+     null,
+     null,
+     null,
+     "\\emph on"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-0.5B",
+     "0.24",
+     "0.35",
+     "0.46",
+     "0.50",
+     "0.09 / 0.05 / 0.06 / 0.05"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-1.5B",
+     "0.31",
+     "0.40",
+     "0.55",
+     "0.58",
+     "0.19 / 0.19 / 0.16 / 0.15"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-3B",
+     "0.37",
+     "0.49",
+     "0.55",
+     "0.64",
+     "0.27 / 0.34 / 0.33 / 0.32"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-7B",
+     "0.34",
+     "0.42",
+     "0.57",
+     "0.61",
+     "0.52 / 0.62 / 0.56 / 0.49"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-14B",
+     "0.35",
+     "0.46",
+     "0.46",
+     "0.64",
+     "0.78 / 0.81 / 0.69 / 0.74"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-32B",
+     "0.34",
+     "0.42",
+     "0.68",
+     "0.73",
+     "0.65 / 0.81 / 0.73 / 0.76"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-72B",
+     "0.38",
+     "0.47",
+     "0.74",
+     "0.77",
+     "0.94 / 0.99 / 0.87 / 0.87"
+    ]
+   ]
+  ],
+  "table:tab:mincompute": [
+   [
+    "level",
+    "7B q4 (laptop)",
+    "7B q8 (laptop)",
+    "7B BF16 (cluster)",
+    "14B q4 (laptop)",
+    "14B BF16 (cluster)",
+    "72B fp8 (cluster, best open)"
+   ],
+   [
+    "S0",
+    "0.30/0.90",
+    "0.24/0.76",
+    "0.29/1.00",
+    "0.31/0.63",
+    "0.33/0.92",
+    "0.35/0.94"
+   ],
+   [
+    "D0",
+    "0.33/0.66",
+    "0.33/0.72",
+    "0.32/0.88",
+    "0.33/0.84",
+    "0.32/0.99",
+    "0.36/1.00"
+   ],
+   [
+    "D1",
+    "0.38/0.76",
+    "0.38/0.70",
+    "0.41/0.89",
+    "0.40/0.88",
+    "0.40/0.96",
+    "0.45/1.00"
+   ],
+   [
+    "D2",
+    "0.57/0.84",
+    "0.54/0.74",
+    "0.51/0.88",
+    "0.46/0.90",
+    "0.39/0.92",
+    "0.67/0.99"
+   ],
+   [
+    "D3",
+    "0.62/0.66",
+    "0.58/0.60",
+    "0.55/0.82",
+    "0.57/0.79",
+    "0.61/0.94",
+    "0.72/0.98"
+   ]
+  ],
+  "table:tab:homosyntaxism": [
+   [
+    "",
+    [
+     "\\emph on",
+     "\\emph on",
+     "\\emph on",
+     "\\emph on",
+     "\\emph on"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-0.5B",
+     "0.24",
+     "0.60",
+     "0.00",
+     "0.09"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-1.5B",
+     "0.31",
+     "0.61",
+     "0.00",
+     "0.19"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-3B",
+     "0.37",
+     "0.64",
+     "0.00",
+     "0.27"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-7B",
+     "0.34",
+     "0.60",
+     "0.00",
+     "0.52"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-14B",
+     "0.35",
+     "0.58",
+     "0.00",
+     "0.78"
+    ]
+   ],
+   [
+    "",
+    [
+     "Llama-4-Maverick (17B active)",
+     "0.30",
+     "0.57",
+     "0.00",
+     "0.79"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-32B",
+     "0.34",
+     "0.61",
+     "0.00",
+     "0.65"
+    ]
+   ],
+   [
+    "",
+    [
+     "Qwen2.5-72B",
+     "0.38",
+     "0.71",
+     "0.00",
+     "0.94"
+    ]
+   ],
+   [
+    "",
+    [
+     "Opus 4.8",
+     "0.80",
+     "0.88",
+     "1.00",
+     "0.04"
+    ]
+   ],
+   [
+    "",
+    [
+     "Fable 5 (EN)",
+     "—",
+     "—",
+     "—",
+     "refused"
+    ]
+   ]
+  ],
+  "prose:scale-ladder-72B-coherence": {
+   "groups": [
+    "0.94"
+   ],
+   "text": "Qwen-72B, coherence 0.94"
+  },
+  "prose:both-bars": {
+   "groups": [
+    "220",
+    "two",
+    "267"
+   ],
+   "text": "none of 220 surface generations clears both bars; one degree down, two of 267"
+  },
+  "prose:opus-refusals": {
+   "groups": [
+    "59",
+    "140",
+    "81",
+    "90"
+   ],
+   "text": "refused 59 of its 140 attempts in its source-visible cells at the ordered-tree degree, nearly all of them in English, and two English cells were left with four and seven texts, 81 of 90 in all"
+  },
+  "prose:144-fold": true,
+  "prose:census-cells": {
+   "groups": [
+    "423"
+   ],
+   "text": "touching 7 of 423 cells"
+  },
+  "prose:census-flagged": {
+   "groups": [
+    "142",
+    "4,208",
+    "3.4"
+   ],
+   "text": "142 of 4,208 generations (3.4%) carry leaked"
+  },
+  "prose:census-coherent": {
+   "groups": [
+    "89"
+   ],
+   "text": "judge rated 89 of them coherent"
+  },
+  "prose:census-rates": {
+   "groups": [
+    "16.3",
+    "1.6",
+    "0.7"
+   ],
+   "text": "It is 16.3% of surface-level generations, 1.6% at the ordered-tree degree, 0.7% one degree below"
+  },
+  "prose:census-refusals": {
+   "groups": [
+    "8",
+    "4,216",
+    "0.19",
+    "7"
+   ],
+   "text": "rate is 8 generations in 4,216 attempts, 0.19%, touching 7 of"
+  },
+  "prose:census-showcase": {
+   "groups": [
+    "161",
+    "161"
+   ],
+   "text": "One passage carrying 161 tags and 161 markers"
+  }
+ }
+}

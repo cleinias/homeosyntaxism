@@ -20,6 +20,7 @@ unchanged from here (each one resolves its paths from `scripts/..`):
 | `Experiments/Queneau/queneau-homo/mac/` | the minimal-compute (laptop, Ollama) runs of Table 6 |
 | `Experiments/Manzoni/homeosyntaxism/` | two symlinks (`results`, `texts`) back to the repository root, where the scripts expect the Manzoni files |
 | `PROVENANCE.md` | run by run: which job, temperature, quantization and launcher produced each cell, and how many generations were kept |
+| `paper_figures.json` | every figure the paper prints that `scripts/chr_verify.py` checks, with where it is printed |
 
 The library modules in `scripts/` are the versions the Queneau runs used. They are not
 identical to the same-named modules in the root `scripts/`, which serve the Manzoni pipeline;
@@ -64,11 +65,18 @@ excluded from every table by one rule, `queneau_contamination_check.REPORTED`.
 
 ```
 python3 scripts/queneau_claims_check.py     # recomputes, from the scored cells, the claims the prose makes
-python3 scripts/chr_verify.py               # checks every number in the paper against the data
+python3 scripts/chr_verify.py               # checks every figure printed in the paper against the data
 ```
 
-`chr_verify.py` reads the paper's LyX source to find the numbers it checks. Both scripts only
-read; the summary scripts (`queneau_summarize.py` and the like) rewrite files in `results/`. Regenerating text needs the API keys or a vLLM endpoint described in the root
+`chr_verify.py` recomputes each printed figure from the run files it must come from: every
+cell of Tables 2, 4, 6 and 7, and every figure quoted in the prose (the both-bars counts,
+Opus's refusals, the census, the Manzoni means). The figures themselves are listed in
+`paper_figures.json`, each with where it is printed (table and section) and its row and
+column or the words around it, so the file can be held against the published PDF. Here the
+script checks the data against that file (237 checks); in our working repository it reads the
+same figures from the paper's source and runs five more checks on the manuscript itself
+(word count, cross-references, links), which is also where `paper_figures.json` is written.
+Both scripts only read; the summary scripts (`queneau_summarize.py` and the like) rewrite files in `results/`. Regenerating text needs the API keys or a vLLM endpoint described in the root
 `README.md`, and the Stanza 1.12.2 English, French and Italian models for scoring.
 
 ## Copyright
