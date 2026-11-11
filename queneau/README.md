@@ -17,7 +17,7 @@ unchanged from here (each one resolves its paths from `scripts/..`):
 | `Experiments/Queneau/queneau-homo/spec/` | the form specification of each degree, per language |
 | `Experiments/Queneau/queneau-homo/outputs/` | every generation (`homo_*.json`, with the exact prompt sent) and every scored cell (`outputs/scored/`) |
 | `Experiments/Queneau/queneau-homo/results/` | the summaries the tables are read from, and the audit results |
-| `Experiments/Queneau/queneau-homo/mac/` | the minimal-compute (laptop, Ollama) runs of Table 5 |
+| `Experiments/Queneau/queneau-homo/mac/` | the minimal-compute (laptop, Ollama) runs of Table 6 |
 | `Experiments/Manzoni/homeosyntaxism/` | two symlinks (`results`, `texts`) back to the repository root, where the scripts expect the Manzoni files |
 | `PROVENANCE.md` | run by run: which job, temperature, quantization and launcher produced each cell, and how many generations were kept |
 
@@ -43,17 +43,19 @@ Run tags (`b1`, `ladderT1`, `ladderD0soft`, `ladderD1`, `ladderD2c`, `ladderD2`,
 
 ## Where each table comes from
 
-`PROVENANCE.md` was generated before the tables were renumbered for the camera-ready; its
-"T1"–"T5" are the paper's Tables 2, 4, 5 and 6 as follows.
+`PROVENANCE.md` uses the paper's table numbers. The scripts still name the tables by their
+working labels ("T1"–"T5", in `queneau_contamination_check.REPORTED`); the last column gives
+them.
 
-| paper | content | runs | PROVENANCE |
+| paper | content | runs | working label |
 |---|---|---|---|
 | Table 1 | the measures | — (definitions; validation data in the root `results/metric_validation*`) | — |
 | Table 2 | blind vs. source-visible at S₀ and D₀ | Opus `b1`; Qwen `ladderT1` (temperature 0.7) | T1 |
 | Table 3 | four sample generations | the Table 2 cells, plus one D₃ generation | — |
 | Table 4 | the Qwen 2.5 ladder, D₀–D₃ | `ladderD0soft`, `ladderD1`, `ladderD2c`, `ladderD2` | T3 |
-| Table 5 | minimal compute (laptop) | `mac`, beside the cluster's 72B | T4 |
-| Table 6 | blind homosyntaxism (Appendix D) | `ladderD0soft` blind; Opus and Maverick `b1`; Fable 5's refusal (`FABLE5_REFUSAL_RECORD.md`) | T5 |
+| Table 5 | the discourse-type control (Appendix A.4): the Manzoni D₂ prompt into a surgical procedure and an inheritance ruling | root `results/scored_unrestricted_*_1840_opus5_ctrl-*_n10.json` (Opus 5); the Lampedusa rows are root `results/scored_unrestricted_*_1840_opus5_n10.json` | — |
+| Table 6 | minimal compute (laptop) | `mac`, beside the cluster's 72B | T4 |
+| Table 7 | blind homosyntaxism (Appendix D) | `ladderD0soft` blind; Opus and Maverick `b1`; Fable 5's refusal (`FABLE5_REFUSAL_RECORD.md`) | T5 |
 
 Contaminated generations (the model recited the specification instead of writing prose) are
 excluded from every table by one rule, `queneau_contamination_check.REPORTED`.
