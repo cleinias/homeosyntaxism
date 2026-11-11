@@ -131,18 +131,18 @@ def main():
             out.append(f"{deg}:{'32B' if C[('32B',deg)]>C[('14B',deg)] else '14B'}")
         return " ".join(out)
 
-    claim("Table 3 gradient: fidelity climbs D0<=D1<=D2<=D3",
+    claim("Table 4 gradient: fidelity climbs D0<=D1<=D2<=D3",
           lambda e: gradient_ok(F1 if e else F0))
-    claim("Table 3: 72B at/near the fidelity peak",
+    claim("Table 4: 72B at/near the fidelity peak",
           lambda e: peak72(F1 if e else F0))
     claim("prose: 'surface reproduced at only about 0.3'",
           lambda e: floor(F1 if e else F0))
-    claim("Table 5 caption: coherence rises with scale",
+    claim("Table 7 caption: coherence rises with scale",
           lambda e: coh_scale(C1 if e else C0))
     claim("32B inversion confined to tight rungs (who leads)",
           lambda e: b32_vs_14(C1 if e else C0))
 
-    # Table 1 claims
+    # Table 2 claims (blind vs. source-visible)
     def blind_both(exc):
         n = tot = 0
         for deg in ("S0", "D0"):
@@ -170,9 +170,9 @@ def main():
         v = [mean(rows(f"scored_homo_D0_{{l}}_{{s}}_ladder_{slug}.json", exc), "held")
              for _, slug in LADDER]
         return f"max held-rate across the 7 Qwen rows: {max(v):.2f}"
-    claim("Table 5: held-rate zero for every model", t5_held)
+    claim("Table 7: held-rate zero for every model", t5_held)
 
-    # Table 4 claims (English only)
+    # Table 6 claims (laptop; English only)
     def t4_flat(exc):
         q4 = rows("scored_homo_D2c_{l}_{s}_mac-7b-q4_qwen2.5_7b-instruct-q4_K_M.json", exc, EN)
         bf = rows("scored_homo_D2c_{l}_{s}_blind_ladderD2c_Qwen_Qwen2.5-7B-Instruct.json", exc, EN)
