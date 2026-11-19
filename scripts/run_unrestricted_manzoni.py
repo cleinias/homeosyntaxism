@@ -15,11 +15,16 @@ copyrighted source material (the EN/Colquhoun embargo list stays in the gitignor
 
 Beside --out it writes the prompt verbatim as <out>_PROMPT.txt, before any call is made; the run
 file also keeps the request body exactly as sent and each response's metadata (stop reason, usage,
-block types, refusals included). An existing run is never overwritten.
+block types, refusals included). An existing run is never overwritten, and a run that fails
+part-way is still written, with the failure recorded.
 
   python scripts/run_unrestricted_manzoni.py \
       --constrained results/production_D2_it_pilot-1840_claude-opus-5.json \
       --model claude-opus-4-8 --n 10 --out results/production_d2a_unrestricted_it_opus48.json
+  python scripts/run_unrestricted_manzoni.py --backend openrouter \
+      --model qwen/qwen3-235b-a22b-2507 --provider deepinfra --max-tokens 4096 \
+      --constrained results/production_D2_it_qwen-or-1840-mt4096_qwen_qwen3-235b-a22b-2507.json \
+      --out results/unrestricted_it_1840_qwen3-235b-or_clean_n10.json
 """
 import argparse, hashlib, json, re, sys, time
 from datetime import datetime, timezone
@@ -136,13 +141,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--constrained", required=True, help="recorded constrained-production JSON")
     ap.add_argument("--backend", default="anthropic",
-                    choices=["anthropic", "vllm-http"],
+                    choices=["anthropic", "vllm-http", "openrouter"],
                     help="anthropic = frontier reference; vllm-http = self-hosted "
-                         "open weights (ACES), served by the sbatch on :8000")
+                         "open weights (ACES), served by the sbatch on :8000; "
+                         "openrouter = hosted open weights")
     ap.add_argument("--endpoint", default="http://127.0.0.1:8000",
                     help="vllm-http only")
+    ap.add_argument("--provider", default=None,
+                    help="openrouter only: pin this provider at fp8 (e.g. deepinfra)")
     ap.add_argument("--temperature", type=float, default=0.9,
-                    help="vllm-http only; the Anthropic path omits temperature")
+                    help="vllm-http and openrouter; the Anthropic path omits temperature")
     ap.add_argument("--model", default="claude-opus-4-8")
     ap.add_argument("--n", type=int, default=10)
     ap.add_argument("--max-tokens", type=int, default=2048,
@@ -207,13 +215,24 @@ def main():
         extra["thinking"] = {"type": "disabled"}
     if a.effort:
         extra["output_config"] = {"effort": a.effort}
-    if a.backend == "vllm-http":
-        # one request, n completions; no refusal channel on the OpenAI-compatible API
-        gens = RP.gen_vllm(a.endpoint, a.model, prompt, a.n, a.temperature, a.max_tokens)
-        refused, att = 0, 1
-    else:
-        gens, refused, att = gen_opus(a.model, prompt, a.n, max_tokens=a.max_tokens,
-                                      extra_body=extra)
+    gens, refused, att, ormeta, failure = [], 0, 0, None, None
+    try:
+        if a.backend == "vllm-http":
+            # one request, n completions; no refusal channel on the OpenAI-compatible API
+            gens = RP.gen_vllm(a.endpoint, a.model, prompt, a.n, a.temperature, a.max_tokens)
+            refused, att = 0, 1
+        elif a.backend == "openrouter":
+            # n single-sample calls, as for the constrained OpenRouter cells
+            gens, ormeta = RP.gen_openrouter(a.model, prompt, a.n, a.temperature,
+                                             a.max_tokens, a.provider)
+            refused, att = 0, a.n
+        else:
+            gens, refused, att = gen_opus(a.model, prompt, a.n, max_tokens=a.max_tokens,
+                                          extra_body=extra)
+    except RP.PartialRun as e:
+        gens, failure = e.out, str(e)
+    except (SystemExit, Exception) as e:
+        failure = str(e) or repr(e)
     # what was sent, from the requests themselves (see run_production.RECORD); one
     # copy of the body when the calls are identical, as they are in an n-call run
     sent = RP.RECORD
@@ -236,10 +255,11 @@ def main():
         "max_tokens": a.max_tokens,
         "thinking": (("disabled" if a.disable_thinking else "default")
                      if a.backend == "anthropic" else None),
-        "effort": a.effort, "prompt": prompt, "prompt_file": pfn.name,
+        "effort": a.effort, "provider_routing": ormeta,
+        "prompt": prompt, "prompt_file": pfn.name,
         "source_ref": d.get("source_ref"), "source_sha1": d.get("source_sha1"),
         "source": d.get("source"),   # only present when derived from a pre-2026-07-30 run
-        "elapsed_s": round(time.time() - t0, 1),
+        "elapsed_s": round(time.time() - t0, 1), "failure": failure,
         "request" if same else "requests": bodies[0] if same and bodies else bodies,
         # one per call that got an answer, refusals and empty answers included, so
         # these do not line up one-to-one with gens
@@ -247,6 +267,8 @@ def main():
         "gens": [{"i": k, "text": g} for k, g in enumerate(gens)],
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"[done] wrote {a.out}: {len(gens)} gens (refused {refused}, {att} attempts)", flush=True)
+    if failure:
+        sys.exit(f"run_unrestricted_manzoni: FAILED, recorded in {a.out}: {failure}")
 
 
 if __name__ == "__main__":
