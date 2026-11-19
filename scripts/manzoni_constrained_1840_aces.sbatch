@@ -10,6 +10,17 @@
 #
 # Two rungs per language: D2 = clause nesting, D3 = clause inventory.
 # Scoring happens off-cluster (the judges need the Anthropic API).
+#
+# RERUN AT A HIGHER TOKEN CAP (2026-11-19). The 1840 cells ran at --max-tokens
+# 2048 and many open-model texts stop mid-sentence (Qwen3 IT D3: 9 of 10).
+# MAXTOK raises the cap, and the tag gets "-mt<MAXTOK>" so nothing is
+# overwritten. REFDIR names a directory holding the original run files: each
+# cell's prompt must equal its original's byte for byte, checked before the
+# model is served, so the rerun differs from the original in the cap alone.
+#   sbatch --export=ALL,MAXTOK=4096,REFDIR=ref-1840 \
+#       scripts/manzoni_constrained_1840_aces.sbatch                  # Qwen3-235B
+#   sbatch --gres=gpu:h100:8 --export=ALL,MODEL=RedHatAI/Llama-4-Maverick-17B-128E-Instruct-FP8,TP=8,MAXTOK=4096,REFDIR=ref-1840 \
+#       scripts/manzoni_constrained_1840_aces.sbatch                  # Maverick
 #=============================================================================
 #SBATCH --job-name=manzoni-constr
 #SBATCH --partition=gpu
@@ -44,6 +55,8 @@ MODEL=${MODEL:-Qwen/Qwen3-235B-A22B-Instruct-2507-FP8}
 TP=${TP:-4}
 N=${N:-10}
 DEGREES=${DEGREES:-D2 D3}
+MAXTOK=${MAXTOK:-2048}
+REFDIR=${REFDIR:-}
 SHORT=$(basename $MODEL)
 
 # The run tag names the cell in every output filename, so it has to follow MODEL.
@@ -55,11 +68,27 @@ case "$SHORT" in
   Llama-4-Maverick*) DEFTAG=maverick-1840 ;;
   *)                DEFTAG=$(echo "$SHORT" | tr 'A-Z' 'a-z' | cut -d- -f1)-1840 ;;
 esac
+BASETAG=$DEFTAG
+[ "$MAXTOK" = 2048 ] || DEFTAG="$DEFTAG-mt$MAXTOK"
 TAG=${TAG:-$DEFTAG}
+SLUG=$(echo "$MODEL" | tr '/' '_')
 echo "tag=$TAG"
+ref_of() { echo "$REFDIR/production_${2}_${1}_${BASETAG}_${SLUG}.json"; }   # lang degree
+
+#--- pre-flight: same prompt as the run being repeated, before any GPU time ---
+if [ -n "$REFDIR" ]; then
+  for LANG in it en; do
+    for DEG in $DEGREES; do
+      python scripts/run_homeo.py --print-prompt --lang $LANG --degree $DEG \
+        --domain specs/domain_brief_3item.txt --same-prompt-as "$(ref_of $LANG $DEG)" \
+        || { echo "pre-flight FAILED ($LANG/$DEG) --- nothing served"; exit 1; }
+    done
+  done
+  echo "pre-flight ok: every prompt identical to its reference in $REFDIR"
+fi
 
 echo "=== job $SLURM_JOB_ID on $SLURMD_NODENAME ==="; date -Is
-echo "model=$MODEL tp=$TP n=$N degrees='$DEGREES'  (1840 source, menu-free patterns)"
+echo "model=$MODEL tp=$TP n=$N degrees='$DEGREES' max_tokens=$MAXTOK refdir='$REFDIR'  (1840 source, menu-free patterns)"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 nohup vllm serve $MODEL \
@@ -82,11 +111,13 @@ mkdir -p results
 for LANG in it en; do
   for DEG in $DEGREES; do
     echo; echo "=== $LANG / $DEG : $SHORT (constrained, 1840) ==="
+    SAME=()
+    [ -n "$REFDIR" ] && SAME=(--same-prompt-as "$(ref_of $LANG $DEG)")
     python scripts/run_homeo.py \
       --backend vllm-http --endpoint http://127.0.0.1:8000 \
       --model $MODEL --lang $LANG --degree $DEG \
-      --n $N --temperature 0.9 --max-tokens 2048 \
-      --domain specs/domain_brief_3item.txt \
+      --n $N --temperature 0.9 --max-tokens $MAXTOK \
+      --domain specs/domain_brief_3item.txt "${SAME[@]}" \
       --tag $TAG || echo "RUN FAILED ($LANG/$DEG)"
   done
 done

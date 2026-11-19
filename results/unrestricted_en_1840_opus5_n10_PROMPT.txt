@@ -129,4 +129,3 @@ REQUIREMENTS --- all three hold together (the constrained homeomorphism):
 
 Write MODERN literary English. Produce the 12 periods in order as continuous prose --- no numbering,
 no headings. Output ONLY the passage: no preamble, no self-audit.
-

@@ -85,6 +85,7 @@ spec/specs_it_D2.json
         │  run_homeo.py --degree D2 --backend … --model …
         ▼
 results/production_<label>_<tag>_<model>.json        ← the generations
+results/production_<label>_<tag>_<model>_PROMPT.txt  ← the prompt sent, verbatim
         │  score_production.py
         ▼
 results/production_scored_*.json                     ← the 3-axis gate

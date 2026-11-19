@@ -109,12 +109,34 @@ def env(k):
     return None
 
 
+# Set RECORD to a list and _post appends, for every successful call, the request body
+# exactly as sent and the response without its generated text (id, model, stop
+# reason, usage, the types of the content blocks).  Never the headers: they carry
+# the API key.  run_homeo.py stores these in the run file, so the record of what was
+# asked (temperature sent or not, thinking on or off) is the request itself and not a
+# reconstruction from the command line.
+RECORD = None
+
+
+def _response_meta(r):
+    meta = {k: v for k, v in r.items() if k not in ("content", "choices")}
+    if "content" in r:
+        meta["content_types"] = [b.get("type") for b in r["content"]]
+    if "choices" in r:
+        meta["finish_reasons"] = [c.get("finish_reason") for c in r["choices"]]
+    return meta
+
+
 def _post(url, body, headers):
     req = urllib.request.Request(url, data=json.dumps(body).encode(),
                                  headers=headers, method="POST")
     for attempt in range(6):
         try:
-            return json.loads(urllib.request.urlopen(req, timeout=600).read())
+            r = json.loads(urllib.request.urlopen(req, timeout=600).read())
+            if RECORD is not None:
+                RECORD.append({"url": url, "body": json.loads(json.dumps(body)),
+                               "response": _response_meta(r)})
+            return r
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503, 529) and attempt < 5:
                 time.sleep(min(3 * 2 ** attempt, 40)); continue
@@ -165,6 +187,13 @@ def resolve_source(obj, root=ROOT):
 NO_TEMPERATURE = ("opus-4-8", "opus-5", "fable-5")
 
 
+class PartialRun(Exception):
+    """A generation loop stopped early; `out` holds the texts already paid for."""
+    def __init__(self, msg, out):
+        super().__init__(msg)
+        self.out = out
+
+
 def gen_anthropic(model, prompt, n, temperature, max_tokens, extra_body=None):
     out = []
     for _ in range(n):
@@ -180,7 +209,14 @@ def gen_anthropic(model, prompt, n, temperature, max_tokens, extra_body=None):
                   {"x-api-key": env("ANTHROPIC_API_KEY"),
                    "anthropic-version": "2023-06-01",
                    "content-type": "application/json"})
-        out.append(r["content"][0]["text"].strip())
+        # the first TEXT block: with thinking on, the content opens with a thinking
+        # block, which has no "text" key and used to crash the run with a KeyError
+        txt = next((b["text"] for b in r["content"] if b.get("type") == "text"), None)
+        if txt is None:
+            raise PartialRun(f"gen_anthropic: no text block (stop_reason="
+                             f"{r.get('stop_reason')}, blocks="
+                             f"{[b.get('type') for b in r['content']]})", out)
+        out.append(txt.strip())
     return out
 
 
@@ -207,7 +243,11 @@ def gen_openrouter(model, prompt, n, temperature, max_tokens, provider):
         used = r.get("provider", used)
         txt = (r["choices"][0]["message"].get("content") or "").strip()
         out.append(txt if txt else "[ERR empty content (reasoning ate budget?)]")
-    return out, {"requested_provider": provider, "resolved_provider": used, "quant": "fp8"}
+    # "quant" is what was REQUIRED, so it is fp8 only when the pin was sent; an
+    # unpinned run (Kimi-K2 in July) used to be labelled fp8 regardless.  The
+    # quantization actually served is the provider's, not something we set.
+    return out, {"requested_provider": provider, "resolved_provider": used,
+                 "quant": "fp8" if provider else None}
 
 
 def main():

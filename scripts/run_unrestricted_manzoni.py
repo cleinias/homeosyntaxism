@@ -13,11 +13,16 @@ D3 = clause inventory; pre-2026-07-30 runs say grain c and grain a for the same 
 It reads the constrained prompt from a production JSON at runtime, so the script itself embeds no
 copyrighted source material (the EN/Colquhoun embargo list stays in the gitignored input file).
 
+Beside --out it writes the prompt verbatim as <out>_PROMPT.txt, before any call is made; the run
+file also keeps the request body exactly as sent and each response's metadata (stop reason, usage,
+block types, refusals included). An existing run is never overwritten.
+
   python scripts/run_unrestricted_manzoni.py \
       --constrained results/production_D2_it_pilot-1840_claude-opus-5.json \
       --model claude-opus-4-8 --n 10 --out results/production_d2a_unrestricted_it_opus48.json
 """
-import argparse, json, re, sys, time
+import argparse, hashlib, json, re, sys, time
+from datetime import datetime, timezone
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -165,8 +170,19 @@ def main():
         prompt = replace_discourse(prompt, json.loads(Path(a.discourse).read_text(encoding="utf-8")))
         print(f"[discourse]  text type from {a.discourse}", flush=True)
     assert_source_blind(prompt)
-    print(f"[unrestrict] {len(d['prompt'])} -> {len(prompt)} chars; source-blind {degree}, no patterns",
-          flush=True)
+    # The prompt is saved verbatim beside the run before any call is made, and a run
+    # file is never overwritten: the 1840 Italian no-pattern run lost its prompt when
+    # a scorer wrote over it, and the prompt had to be rebuilt.
+    out = Path(a.out)
+    pfn = out.with_name(out.stem + "_PROMPT.txt")
+    for f in (out, pfn):
+        if f.exists():
+            sys.exit(f"run_unrestricted_manzoni: {f} exists; refusing to overwrite a run")
+    pfn.write_text(prompt, encoding="utf-8")
+    print(f"[unrestrict] {len(d['prompt'])} -> {len(prompt)} chars; source-blind {degree}, no patterns"
+          f" -> {pfn.name}", flush=True)
+    RP.RECORD = []
+    started = datetime.now(timezone.utc).isoformat(timespec="seconds")
     t0 = time.time()
     extra = {}
     if a.disable_thinking:
@@ -180,21 +196,35 @@ def main():
     else:
         gens, refused, att = gen_opus(a.model, prompt, a.n, max_tokens=a.max_tokens,
                                       extra_body=extra)
-    Path(a.out).write_text(json.dumps({
+    # what was sent, from the requests themselves (see run_production.RECORD); one
+    # copy of the body when the calls are identical, as they are in an n-call run
+    sent = RP.RECORD
+    RP.RECORD = None
+    bodies = [x["body"] for x in sent]
+    same = all(b == bodies[0] for b in bodies)
+    out.write_text(json.dumps({
         "model": a.model, "backend": a.backend, "degree": degree,
         # recorded because the scorer used to default a missing lang to Italian and
         # silently parsed an English run with the Italian model
         "lang": "en" if (d.get("source_ref") or "").endswith("_en.txt") else "it",
         "regime": "unrestricted-homeo-source-blind", "derived_from": str(a.constrained),
+        # so the constrained prompt this one was cut from can be matched by hash
+        "derived_from_prompt_sha1": hashlib.sha1(d["prompt"].encode("utf-8")).hexdigest(),
         "domain_brief": a.domain, "discourse": a.discourse,
-        "n": len(gens), "refused": refused, "attempts": att,
-        "temperature": a.temperature if a.backend == "vllm-http" else None,
+        "n": len(gens), "refused": refused, "attempts": att, "started_utc": started,
+        # the value in the request; None when none was sent (the Anthropic path)
+        "temperature": bodies[0].get("temperature") if bodies else None,
         "max_tokens": a.max_tokens,
-        "thinking": "disabled" if a.disable_thinking else "default",
-        "effort": a.effort, "prompt": prompt,
+        "thinking": (("disabled" if a.disable_thinking else "default")
+                     if a.backend == "anthropic" else None),
+        "effort": a.effort, "prompt": prompt, "prompt_file": pfn.name,
         "source_ref": d.get("source_ref"), "source_sha1": d.get("source_sha1"),
         "source": d.get("source"),   # only present when derived from a pre-2026-07-30 run
         "elapsed_s": round(time.time() - t0, 1),
+        "request" if same else "requests": bodies[0] if same and bodies else bodies,
+        # one per call that got an answer, refusals and empty answers included, so
+        # these do not line up one-to-one with gens
+        "responses": [x["response"] for x in sent],
         "gens": [{"i": k, "text": g} for k, g in enumerate(gens)],
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"[done] wrote {a.out}: {len(gens)} gens (refused {refused}, {att} attempts)", flush=True)

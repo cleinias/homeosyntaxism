@@ -128,4 +128,3 @@ REQUIREMENTS --- all three hold together (the constrained homeomorphism):
 
 Write MODERN literary Italian (no apocope, no archaic elisions). Produce the 9 periods in order as continuous prose --- no numbering,
 no headings. Output ONLY the passage: no preamble, no self-audit.
-
