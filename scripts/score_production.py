@@ -47,6 +47,9 @@ def judged(fn, *a):
     for attempt in range(6):
         try:
             return fn(*a)
+        except M.JudgeRefusal as e:              # deterministic: one call is the verdict
+            print(f"  [{fn.__name__}] {e} -- recorded as None", flush=True)
+            return M.JudgeRefusal
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503, 529) and attempt < 5:
                 time.sleep(delay); delay = min(delay * 2, 40); continue
@@ -91,6 +94,9 @@ def score_file(path):
         lj = len(sl & gl) / len(sl | gl) if (sl | gl) else 0.0
         fsim = judged(M.frame_judge_sim, src, txt, lang)
         coh = judged(M.coh_judge, txt, lang)
+        refused = [n for n, v in (("frame", fsim), ("coherence", coh)) if v is M.JudgeRefusal]
+        fsim = None if fsim is M.JudgeRefusal else fsim
+        coh = None if coh is M.JudgeRefusal else coh
         fdiv = (1 - fsim) if fsim is not None else None
         good = [c["clause_inv"], 1 - c["s0_pos"], 1 - lj,
                 fdiv if fdiv is not None else 0.0, coh if coh is not None else 0.0]
@@ -101,7 +107,8 @@ def score_file(path):
             "depth_gap": c["depth_gap"],
             "s0_pos": c["s0_pos"], "lemma_jacc": round(lj, 3),
             "frame_div": round(fdiv, 3) if fdiv is not None else None,
-            "coherence": coh, "score": round(sum(good) / 5, 3), "text": txt,
+            "coherence": coh, "score": round(sum(good) / 5, 3),
+            "judge_refused": refused or None, "text": txt,
         })
         time.sleep(0.2)
     rows.sort(key=lambda r: r["score"], reverse=True)

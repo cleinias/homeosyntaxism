@@ -70,7 +70,11 @@ def cells(allow_mixed):
         out.append({"model": m, "lang": lang.upper(), "degree": degree,
                     "regime": regime, "n": len(rows), "file": s.name,
                     "sha1": (r.get("source_sha1") or "?")[:12],
-                    **{k: st.mean([(x[k] or 0) for x in rows]) for k, _ in COLS},
+                    # over the passages that HAVE a value: a judge refusal is None, and
+                    # counting it as 0 would drag the cell's mean down for a non-verdict
+                    **{k: st.mean([x[k] for x in rows if x[k] is not None] or [0])
+                       for k, _ in COLS},
+                    "judge_refused": sum(1 for x in rows if x.get("judge_refused")),
                     "nest_sd": st.pstdev([(x["clause_nest"] or 0) for x in rows]),
                     "words": st.mean([x["words"] for x in rows]),
                     "embargo": sum(len(x.get("embargo_hits") or []) for x in rows)})

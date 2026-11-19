@@ -1,0 +1,10 @@
+{
+ "note": "No patterns AND no lexical embargo (2026-11-19, SF): the clean no-pattern prompt (unrestrict() after the 11-19 fix) with the LEXICAL EMBARGO block removed. Partner of effectfree-noemb-1840: the recognition probe found Opus 5 cannot name the source once the embargo is gone (probe D, 0/10).",
+ "base_run": "results/production_D2_it_constr-1840_claude-opus-5.json",
+ "edits": [
+  [
+   "LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\n",
+   ""
+  ]
+ ]
+}

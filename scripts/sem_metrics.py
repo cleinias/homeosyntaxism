@@ -133,6 +133,16 @@ def _tamu_call(prompt, model, max_tokens):
     return r["choices"][0]["message"]["content"]
 
 
+class JudgeRefusal(RuntimeError):
+    """The judge DECLINED to score this passage (HTTP 200, stop_reason "refusal").
+
+    Deterministic, as measured on the Queneau corpus (queneau/scripts/sem_metrics.py):
+    identical text, identical refusal, so it is not retried.  The passage stays in its cell
+    with the judged value set to None, never 0, and the table means are taken over the
+    passages the judge scored.  Until 2026-11-19 a refusal crashed this scorer on
+    r["content"][0] and took the whole cell's scores with it."""
+
+
 def anthropic(prompt, max_tokens=12):
     if _use_tamu(JUDGE_MODEL):
         return _tamu_call(prompt, JUDGE_MODEL, max_tokens)
@@ -145,7 +155,12 @@ def anthropic(prompt, max_tokens=12):
         headers={"x-api-key": env("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01",
                  "content-type": "application/json"}, method="POST")
     r = json.loads(urllib.request.urlopen(req, timeout=60).read())
-    return r["content"][0]["text"]
+    if r.get("stop_reason") == "refusal":
+        raise JudgeRefusal(f"judge refused: {r.get('stop_details')}")
+    blocks = [b for b in r.get("content", []) if b.get("type") == "text"]
+    if not blocks:                 # an empty answer is not a verdict: let the caller retry
+        raise RuntimeError(f"judge returned no text block (stop_reason={r.get('stop_reason')})")
+    return blocks[0]["text"]
 
 
 def _num(s):

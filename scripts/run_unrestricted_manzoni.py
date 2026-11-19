@@ -46,10 +46,15 @@ def unrestrict(prompt: str) -> str:
     p = re.sub(r';\s*satisfy every pattern with fresh material,\s*not by copying a phrasing\.',
                '.', p, flags=re.DOTALL)
     p = p.replace('this is the constrained homeomorphism', 'the threefold criterion')
+    # run_homeo's wording since the D_n refactor, which the two lines above never matched:
+    # every no-pattern prompt until 2026-11-19 still said "satisfy each pattern with fresh
+    # material" and "(the constrained homeomorphism)" while listing no pattern
+    p = re.sub(r';\s*satisfy each pattern with fresh material\.', '.', p)
+    p = p.replace('(the constrained homeomorphism)', '(the threefold criterion)')
     p = re.sub(r'\n{3,}', '\n\n', p).strip() + "\n"
-    # verify no pattern residue
-    assert 'C-P' not in p and 'formal pattern' not in p.lower() and 'FORMAL PATTERNS' not in p, \
-        "pattern references not fully removed"
+    # verify no pattern residue: not a pattern block, and not a word about patterns
+    assert 'C-P' not in p and 'FORMAL PATTERNS' not in p and 'pattern' not in p.lower() \
+        and 'constrained' not in p.lower(), "pattern references not fully removed"
     return p
 
 
@@ -152,6 +157,9 @@ def main():
     ap.add_argument("--domain", help="file holding a replacement TARGET DOMAIN block")
     ap.add_argument("--discourse", help="JSON {what, coherent}: change the requested "
                     "discourse type (see replace_discourse)")
+    ap.add_argument("--prompt-edits", metavar="FILE",
+                    help="JSON {edits: [[old, new], ...]} applied after the other swaps, each old "
+                         "string matching exactly once (e.g. specs/noembargo_edits_it_D2.json)")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
@@ -169,6 +177,16 @@ def main():
     if a.discourse:
         prompt = replace_discourse(prompt, json.loads(Path(a.discourse).read_text(encoding="utf-8")))
         print(f"[discourse]  text type from {a.discourse}", flush=True)
+    edits = None
+    if a.prompt_edits:
+        edits = json.loads(Path(a.prompt_edits).read_text(encoding="utf-8"))["edits"]
+        for old, new in edits:
+            k = prompt.count(old)
+            if k != 1:
+                sys.exit(f"run_unrestricted_manzoni: prompt edit matches {k} times, not once: "
+                         f"{old[:70]!r}")
+            prompt = prompt.replace(old, new)
+        print(f"[edits]      {len(edits)} from {a.prompt_edits}: {len(prompt)} chars", flush=True)
     assert_source_blind(prompt)
     # The prompt is saved verbatim beside the run before any call is made, and a run
     # file is never overwritten: the 1840 Italian no-pattern run lost its prompt when
@@ -211,6 +229,7 @@ def main():
         # so the constrained prompt this one was cut from can be matched by hash
         "derived_from_prompt_sha1": hashlib.sha1(d["prompt"].encode("utf-8")).hexdigest(),
         "domain_brief": a.domain, "discourse": a.discourse,
+        "prompt_edits": {"file": a.prompt_edits, "edits": edits} if edits else None,
         "n": len(gens), "refused": refused, "attempts": att, "started_utc": started,
         # the value in the request; None when none was sent (the Anthropic path)
         "temperature": bodies[0].get("temperature") if bodies else None,

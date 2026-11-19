@@ -1,0 +1,62 @@
+You are assisting with a scholarly experiment in structural literary analysis.
+
+TASK: Write an ORIGINAL descriptive opening (incipit) in English for a narrative set in the target
+domain below. It must be a CONSTRAINED HOMEOSYNTACTIC transposition: hold the clause inventory (D3), AND instantiate
+every formal pattern listed --- while inventing entirely new words, images, and content. It is NOT
+a paraphrase, translation, or reconstruction of any source.
+
+FORM TARGET. Reproduce, period by period, the CLAUSE INVENTORY below --- which clause types and how many of each; how they nest, and the word order, are yours.
+Reproduce it for all 12 periods, in this order:
+Period 1 (about 106 words): 6 coordinated clause; 4 adverbial clause; 3 relative/adnominal clause; 3 open complement (infinitive)s; 1 main clause; subordination nested up to depth 11.
+Period 2 (about 90 words): 3 relative/adnominal clause; 3 adverbial clause; 1 main clause; 1 open complement (infinitive); 1 parataxis; subordination nested up to depth 2.
+Period 3 (about 38 words): 1 main clause; 1 parataxis; 1 adverbial clause; subordination nested up to depth 2.
+Period 4 (about 39 words): 2 relative/adnominal clause; 1 main clause; 1 parataxis; subordination nested up to depth 2.
+Period 5 (about 53 words): 2 relative/adnominal clause; 2 open complement (infinitive)s; 1 coordinated clause; 1 main clause; 1 adverbial clause; 1 parataxis; subordination nested up to depth 3.
+Period 6 (about 92 words): 4 relative/adnominal clause; 4 coordinated clause; 2 open complement (infinitive)s; 1 main clause; 1 adverbial clause; subordination nested up to depth 6.
+Period 7 (about 32 words): 1 main clause; 1 open complement (infinitive); 1 coordinated clause; subordination nested up to depth 1.
+Period 8 (about 34 words): 3 coordinated clause; 1 main clause; 1 open complement (infinitive); 1 parataxis; 1 adverbial clause; subordination nested up to depth 2.
+Period 9 (about 50 words): 4 coordinated clause; 1 main clause; 1 parataxis; 1 adverbial clause; subordination nested up to depth 4.
+Period 10 (about 107 words): 3 coordinated clause; 3 relative/adnominal clause; 2 parataxiss; 2 adverbial clause; 1 main clause; 1 open complement (infinitive); subordination nested up to depth 5.
+Period 11 (about 19 words): 1 relative/adnominal clause; 1 main clause; subordination nested up to depth 1.
+Period 12 (about 84 words): 3 relative/adnominal clause; 2 adverbial clause; 2 coordinated clause; 1 main clause; 1 parataxis; subordination nested up to depth 3.
+
+FORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW
+material (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):
+  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble
+    Specification: The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.
+  [C-P2-01] (SHOULD) from P_2: Embedded English metric verse (RE-DERIVED, not translated)
+    Specification: Per the plan's option (b): the Italian syllabic meter does not port, so substitute the accentual-syllabic equivalent. The opening syntagm scans as iambic pentameter, and the passage embeds >= 2 blank-verse (unrhymed iambic-pentameter) lines inside descriptive sentences, doing the same iconic-pacing work below conscious scansion. Tag as RE-DERIVED. Verifiable by scansion. NB: the non-portability of the Italian meter is itself reported as a finding (option (a)).
+  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination
+    Specification: The text contains >= 3 two-member coordinations 'X and Y' whose members share a lexical field (seascape/movement; e.g. 'in bays and inlets', 'swelling and subsiding'), with parallel syntactic shape. Verifiable by enumeration.
+  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)
+    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.
+  [C-P5-01] (MUST) from P_5: Sea duality — alternating contraction/dilation lexicon, full arc
+    Specification: Two opposed lexical fields alternate over the single referent 'the sea': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.
+  [C-P5-02] (SHOULD) from P_5: Sea duality — juridical naming pivot
+    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.
+  [C-P6-01] (MUST) from P_6: Specular doubling on a single head
+    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.
+  [C-P7-01] (MUST) from P_7: Lucid waviness at the SYNTACTIC level — GLOBAL constraint
+    Specification: Sustained across the passage: the periodic syntax UNDULATES — successive waves of expansion and contraction, clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 long multi-clause period — while hierarchy stays fully legible (no anacoluthon, recoverable syntactic tree). DEPTH THRESHOLD to be set from Moore's measured incipit (English tolerates less subordination than Italian; the Italian used depth 8). Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility.
+  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level
+    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.
+  [C-P8-01] (MUST) from P_8: Historicized-present puncture
+    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.
+
+TARGET DOMAIN — the border/migration landscape of the central Mediterranean
+(deploy in your own words; nothing beyond these three):
+  - THE SCENE: the border/migration landscape of the central Mediterranean
+  - THE PLACE: Lampedusa
+  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography
+
+LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may
+appear, in any inflected form:
+adda, como, foreshorten, lakeside, lecco, lombard, martino, milan, modesty, obscurer, resegone, san, spanish, wildness
+
+REQUIREMENTS --- all three hold together (the constrained homeomorphism):
+1. FORM PRESERVED at the clause inventory (D3) (as specified above), in your own words.
+2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque; satisfy each pattern with fresh material.
+3. COHERENT --- one continuous, fully sensible geographical description.
+
+Write MODERN literary English. Produce the 12 periods in order as continuous prose --- no numbering,
+no headings. Output ONLY the passage: no preamble, no self-audit.
