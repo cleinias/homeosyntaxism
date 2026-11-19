@@ -1,0 +1,498 @@
+{
+ "probe": "recognition",
+ "variant": "A",
+ "prompt_source": "specs/probe/recognition_A_it_D2.txt",
+ "model": "qwen/qwen3-235b-a22b-2507",
+ "backend": "openrouter",
+ "n": 10,
+ "tag": "probe-1840",
+ "started_utc": "2026-11-19T18:56:52+00:00",
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "thinking": null,
+ "provider_routing": {
+  "requested_provider": "deepinfra",
+  "resolved_provider": "DeepInfra",
+  "quant": "fp8"
+ },
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nFORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW\nmaterial (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):\n  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n    Specification: The opening syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X e Y' whose members share a lexical field (seascape/movement), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Mare duality — juridical naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid waviness (ondeggiamento) at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the entire passage: the periodic syntax UNDULATES rather than merely winds — successive waves of expansion and contraction, with clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 period of >= 8 clauses — while hierarchy stays fully legible: no anacoluthon, exact lexicon, recoverable syntactic tree. The syntactic shape adheres to the target referent: the sea's wave-motion, not the river's meander. Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility. (Same figure as C-P7-02, one level down.)\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nLEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>",
+ "prompt_file": "probe_A_probe-1840_qwen_qwen3-235b-a22b-2507_PROMPT.txt",
+ "elapsed_s": 36.6,
+ "failure": null,
+ "recognised": 0,
+ "request": {
+  "model": "qwen/qwen3-235b-a22b-2507",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nFORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW\nmaterial (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):\n  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n    Specification: The opening syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X e Y' whose members share a lexical field (seascape/movement), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Mare duality — juridical naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid waviness (ondeggiamento) at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the entire passage: the periodic syntax UNDULATES rather than merely winds — successive waves of expansion and contraction, with clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 period of >= 8 clauses — while hierarchy stays fully legible: no anacoluthon, exact lexicon, recoverable syntactic tree. The syntactic shape adheres to the target referent: the sea's wave-motion, not the river's meander. Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility. (Same figure as C-P7-02, one level down.)\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nLEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>"
+   }
+  ],
+  "temperature": 0.9,
+  "top_p": 0.95,
+  "max_tokens": 1024,
+  "provider": {
+   "order": [
+    "deepinfra"
+   ],
+   "quantizations": [
+    "fp8"
+   ],
+   "allow_fallbacks": false
+  }
+ },
+ "responses": [
+  {
+   "id": "gen-1795114612-qTu4i1tso1bRAvwg6jMR",
+   "object": "chat.completion",
+   "created": 1795114612,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 71,
+    "total_tokens": 2421,
+    "cost": 0.00025055,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00025055,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.905e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114617-7SM1sTBSnf7olSQ1jDts",
+   "object": "chat.completion",
+   "created": 1795114617,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 65,
+    "total_tokens": 2415,
+    "cost": 0.00024725,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00024725,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.575e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114622-mPlBpeNhfTT8F8a0e7PL",
+   "object": "chat.completion",
+   "created": 1795114622,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 79,
+    "total_tokens": 2429,
+    "cost": 0.00025495,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00025495,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 4.345e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114627-VvaltzwSX5GmgqOg6mjh",
+   "object": "chat.completion",
+   "created": 1795114627,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 60,
+    "total_tokens": 2410,
+    "cost": 0.0002445,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0002445,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.3e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114630-IeL4AYdFCHEbQirzOI7X",
+   "object": "chat.completion",
+   "created": 1795114630,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 67,
+    "total_tokens": 2417,
+    "cost": 0.00024835,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00024835,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.685e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114633-xATuon38as0pJzJx86dF",
+   "object": "chat.completion",
+   "created": 1795114633,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 63,
+    "total_tokens": 2413,
+    "cost": 0.00024615,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00024615,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.465e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114636-PtTA6W0RnYcc7TC0Mq5z",
+   "object": "chat.completion",
+   "created": 1795114636,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 67,
+    "total_tokens": 2417,
+    "cost": 0.00024835,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00024835,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.685e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114640-7ZY9B6LPtCpyHCZECgiJ",
+   "object": "chat.completion",
+   "created": 1795114640,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 64,
+    "total_tokens": 2414,
+    "cost": 0.0002467,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0002467,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.52e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114643-XRxTqat9A94pb7Xh9DYb",
+   "object": "chat.completion",
+   "created": 1795114643,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 61,
+    "total_tokens": 2411,
+    "cost": 0.00024505,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00024505,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.355e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114645-l6rGodda358p8snVy2If",
+   "object": "chat.completion",
+   "created": 1795114645,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 2350,
+    "completion_tokens": 67,
+    "total_tokens": 2417,
+    "cost": 0.00024835,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00024835,
+     "upstream_inference_prompt_cost": 0.0002115,
+     "upstream_inference_completions_cost": 3.685e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  }
+ ],
+ "answers": [
+  {
+   "i": 0,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material does not contain any actual text to analyze; it is a set of formal instructions and constraints for a literary experiment, not a derived passage. Therefore, no identification of source text is possible from the given input.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material does not contain any actual text to analyze; it is a set of formal instructions and constraints for a literary experiment, not a derived passage. Therefore, no identification of source text is possible from the given input.",
+   "recognised": false
+  },
+  {
+   "i": 1,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material is a synthetic reconstruction based on formal constraints and does not reproduce any existing literary passage verbatim; it is generated for an experimental structural analysis, not derived from a specific known text.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material is a synthetic reconstruction based on formal constraints and does not reproduce any existing literary passage verbatim; it is generated for an experimental structural analysis, not derived from a specific known text.",
+   "recognised": false
+  },
+  {
+   "i": 2,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material does not correspond to any identifiable literary passage, as it is a synthetic construction designed to meet specific formal constraints and generative patterns rather than a transformed excerpt from an existing work. No recoverable original text can be identified from the schema and patterns given.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material does not correspond to any identifiable literary passage, as it is a synthetic construction designed to meet specific formal constraints and generative patterns rather than a transformed excerpt from an existing work. No recoverable original text can be identified from the schema and patterns given.",
+   "recognised": false
+  },
+  {
+   "i": 3,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material is a synthetic structural and formal specification for a literary experiment, not an actual excerpt from an existing literary work; therefore, no source passage can be identified.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material is a synthetic structural and formal specification for a literary experiment, not an actual excerpt from an existing literary work; therefore, no source passage can be identified.",
+   "recognised": false
+  },
+  {
+   "i": 4,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material is a synthetic schema and set of constraints for a literary experiment, not a derived text from an existing literary work, and therefore cannot be traced to a specific author, title, or passage.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material is a synthetic schema and set of constraints for a literary experiment, not a derived text from an existing literary work, and therefore cannot be traced to a specific author, title, or passage.",
+   "recognised": false
+  },
+  {
+   "i": 5,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material is a set of formal constraints and generative instructions for a literary experiment, not a derived text from an existing literary passage; therefore, no source passage can be identified.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material is a set of formal constraints and generative instructions for a literary experiment, not a derived text from an existing literary passage; therefore, no source passage can be identified.",
+   "recognised": false
+  },
+  {
+   "i": 6,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material is a synthetic schema and set of formal constraints for a literary experiment, not an actual excerpt from a known literary work; therefore, no identifiable source passage can be determined from the data given.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material is a synthetic schema and set of formal constraints for a literary experiment, not an actual excerpt from a known literary work; therefore, no identifiable source passage can be determined from the data given.",
+   "recognised": false
+  },
+  {
+   "i": 7,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material is not a derivation from a known literary passage but a highly specific formal schema constructed for an experimental transformation; no identifiable source text matches the intricate structural and patterned constraints described.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material is not a derivation from a known literary passage but a highly specific formal schema constructed for an experimental transformation; no identifiable source text matches the intricate structural and patterned constraints described.",
+   "recognised": false
+  },
+  {
+   "i": 8,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material is a synthetic schema and formal specification for a literary experiment, not a derived text from an existing literary work; therefore, no identifiable source passage can be determined.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material is a synthetic schema and formal specification for a literary experiment, not a derived text from an existing literary work; therefore, no identifiable source passage can be determined.",
+   "recognised": false
+  },
+  {
+   "i": 9,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided material does not contain any actual text to analyze; it is a set of formal instructions and constraints for a writing experiment, not a derived passage. Therefore, no identification of source text is possible.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided material does not contain any actual text to analyze; it is a set of formal instructions and constraints for a writing experiment, not a derived passage. Therefore, no identification of source text is possible.",
+   "recognised": false
+  }
+ ]
+}

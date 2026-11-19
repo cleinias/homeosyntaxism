@@ -1,0 +1,498 @@
+{
+ "probe": "recognition",
+ "variant": "D",
+ "prompt_source": "specs/probe/recognition_D_it_D2.txt",
+ "model": "qwen/qwen3-235b-a22b-2507",
+ "backend": "openrouter",
+ "n": 10,
+ "tag": "probe-1840",
+ "started_utc": "2026-11-19T18:58:30+00:00",
+ "temperature": 0.9,
+ "max_tokens": 1024,
+ "thinking": null,
+ "provider_routing": {
+  "requested_provider": "deepinfra",
+  "resolved_provider": "DeepInfra",
+  "quant": "fp8"
+ },
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>",
+ "prompt_file": "probe_D_probe-1840_qwen_qwen3-235b-a22b-2507_PROMPT.txt",
+ "elapsed_s": 38.0,
+ "failure": null,
+ "recognised": 0,
+ "request": {
+  "model": "qwen/qwen3-235b-a22b-2507",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>"
+   }
+  ],
+  "temperature": 0.9,
+  "top_p": 0.95,
+  "max_tokens": 1024,
+  "provider": {
+   "order": [
+    "deepinfra"
+   ],
+   "quantizations": [
+    "fp8"
+   ],
+   "allow_fallbacks": false
+  }
+ },
+ "responses": [
+  {
+   "id": "gen-1795114711-77OkFdUIRfojF0dtkgv8",
+   "object": "chat.completion",
+   "created": 1795114711,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 66,
+    "total_tokens": 1076,
+    "cost": 0.0001272,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0001272,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 3.63e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114713-YPsZLsHDNdknjwmMKl5V",
+   "object": "chat.completion",
+   "created": 1795114713,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 64,
+    "total_tokens": 1074,
+    "cost": 0.0001261,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0001261,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 3.52e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114717-7z3amcTceOHE0WIK9Ya3",
+   "object": "chat.completion",
+   "created": 1795114717,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 71,
+    "total_tokens": 1081,
+    "cost": 0.00012995,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00012995,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 3.905e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114720-fzkswZbXrOToVtdyHJlZ",
+   "object": "chat.completion",
+   "created": 1795114720,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 67,
+    "total_tokens": 1077,
+    "cost": 0.00012775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00012775,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 3.685e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114724-XW3YZjzBTujJg9pKknMk",
+   "object": "chat.completion",
+   "created": 1795114724,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 61,
+    "total_tokens": 1071,
+    "cost": 0.00012445,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00012445,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 3.355e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114727-33znE7IhOWOcof1vsUiU",
+   "object": "chat.completion",
+   "created": 1795114727,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 79,
+    "total_tokens": 1089,
+    "cost": 0.00013435,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00013435,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 4.345e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114730-f8IUkfSjzb7FQox4jq9E",
+   "object": "chat.completion",
+   "created": 1795114730,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 86,
+    "total_tokens": 1096,
+    "cost": 0.0001382,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0001382,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 4.73e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114736-Yvxax2tAJqtfAoZZQNUP",
+   "object": "chat.completion",
+   "created": 1795114736,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 68,
+    "total_tokens": 1078,
+    "cost": 0.0001283,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0001283,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 3.74e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114740-FRyGdiyXapCFaHEKApIN",
+   "object": "chat.completion",
+   "created": 1795114740,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 84,
+    "total_tokens": 1094,
+    "cost": 0.0001371,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0001371,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 4.62e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  },
+  {
+   "id": "gen-1795114743-HQIN9b9t0IsEfIfkoc1p",
+   "object": "chat.completion",
+   "created": 1795114743,
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "provider": "DeepInfra",
+   "system_fingerprint": null,
+   "service_tier": "default",
+   "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 67,
+    "total_tokens": 1077,
+    "cost": 0.00012775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.00012775,
+     "upstream_inference_prompt_cost": 9.09e-05,
+     "upstream_inference_completions_cost": 3.685e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "finish_reasons": [
+    "stop"
+   ]
+  }
+ ],
+ "answers": [
+  {
+   "i": 0,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schema and target domain do not match any known literary passage with sufficient specificity to identify author, title, or source passage; without additional lexical or thematic overlap, attribution is impossible.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schema and target domain do not match any known literary passage with sufficient specificity to identify author, title, or source passage; without additional lexical or thematic overlap, attribution is impossible.",
+   "recognised": false
+  },
+  {
+   "i": 1,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schema and target domain do not match any identifiable passage from a known literary work, and no verifiable linguistic or structural parallels to a specific authored text can be established.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schema and target domain do not match any identifiable passage from a known literary work, and no verifiable linguistic or structural parallels to a specific authored text can be established.",
+   "recognised": false
+  },
+  {
+   "i": 2,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schema does not match any known literary passage with verifiable precision, and without access to a specific source text exhibiting this exact syntactic structure across nine periods in the described domain, identification is not possible.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schema does not match any known literary passage with verifiable precision, and without access to a specific source text exhibiting this exact syntactic structure across nine periods in the described domain, identification is not possible.",
+   "recognised": false
+  },
+  {
+   "i": 3,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The clause-nesting schema and thematic domain provided do not correspond to any identifiable passage from a known literary work by structural or stylistic match; without further textual clues or attribution, the source cannot be determined.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The clause-nesting schema and thematic domain provided do not correspond to any identifiable passage from a known literary work by structural or stylistic match; without further textual clues or attribution, the source cannot be determined.",
+   "recognised": false
+  },
+  {
+   "i": 4,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schemas and thematic domain do not correspond to any identifiable passage from a known literary work; without additional textual features or stylistic markers, attribution is impossible.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schemas and thematic domain do not correspond to any identifiable passage from a known literary work; without additional textual features or stylistic markers, attribution is impossible.",
+   "recognised": false
+  },
+  {
+   "i": 5,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schema and target domain do not correspond to any identifiable literary passage with sufficient specificity; without access to the original text from which the schema was derived, and given the abstract, decontextualized structure provided, no reliable attribution can be made.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schema and target domain do not correspond to any identifiable literary passage with sufficient specificity; without access to the original text from which the schema was derived, and given the abstract, decontextualized structure provided, no reliable attribution can be made.",
+   "recognised": false
+  },
+  {
+   "i": 6,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schema and target domain do not correspond to any known literary passage with verifiable structural and thematic consistency; without access to the original source text or a matching literary work exhibiting this exact syntactic complexity and thematic focus on Lampedusa and Mediterranean border policing, identification is not possible.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schema and target domain do not correspond to any known literary passage with verifiable structural and thematic consistency; without access to the original source text or a matching literary work exhibiting this exact syntactic complexity and thematic focus on Lampedusa and Mediterranean border policing, identification is not possible.",
+   "recognised": false
+  },
+  {
+   "i": 7,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schemas and thematic domain do not correspond to any identifiable literary passage with sufficient specificity; without matching syntactic patterns or distinctive lexical fingerprints in a known text, no reliable attribution can be made.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schemas and thematic domain do not correspond to any identifiable literary passage with sufficient specificity; without matching syntactic patterns or distinctive lexical fingerprints in a known text, no reliable attribution can be made.",
+   "recognised": false
+  },
+  {
+   "i": 8,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schema and target domain do not correspond to any known literary passage with sufficient specificity to identify a source text, author, or work. Without access to the original passage or further contextual markers tied to a specific author's style or known literary work, identification is not possible.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schema and target domain do not correspond to any known literary passage with sufficient specificity to identify a source text, author, or work. Without access to the original passage or further contextual markers tied to a specific author's style or known literary work, identification is not possible.",
+   "recognised": false
+  },
+  {
+   "i": 9,
+   "text": "AUTHOR: UNKNOWN  \nTITLE: UNKNOWN  \nPASSAGE: UNKNOWN  \nCONFIDENCE: 0  \nEVIDENCE: The provided clause-nesting schema and thematic domain do not correspond to any identifiable literary passage with sufficient specificity to determine author, title, or source passage; no verifiable text matches the structural and thematic criteria.",
+   "author": "UNKNOWN",
+   "title": "UNKNOWN",
+   "passage": "UNKNOWN",
+   "confidence": 0,
+   "evidence": "The provided clause-nesting schema and thematic domain do not correspond to any identifiable literary passage with sufficient specificity to determine author, title, or source passage; no verifiable text matches the structural and thematic criteria.",
+   "recognised": false
+  }
+ ]
+}

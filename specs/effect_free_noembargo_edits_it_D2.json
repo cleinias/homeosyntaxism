@@ -1,0 +1,62 @@
+{
+ "note": "Effect-free arm WITHOUT the lexical embargo (2026-11-19, SF): the 13 effect-free edits, then the LEXICAL EMBARGO block removed. The recognition probe showed the embargo is what identifies the source to Opus 5 (A/B/C 10/10, D 0/10); this arm asks whether form and effects hold when the model cannot know the source.",
+ "base_run": "results/production_D2_it_constr-1840_claude-opus-5.json",
+ "edits": [
+  [
+   "predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory",
+   "predicating a benevolent quality or intention, in words of your own choosing, of actions the context shows to be the opposite"
+  ],
+  [
+   "Mare duality — juridical naming pivot",
+   "Mare duality — naming pivot"
+  ],
+  [
+   "the boundary made perceptible only by something outside the thing -- a document, an instrument, a record.",
+   "the boundary made perceptible only by something outside the thing."
+  ],
+  [
+   "Audited by locating the cessation/recommencement predicates and the external marker.",
+   "Audited by locating the pivot sentence and the external marker."
+  ],
+  [
+   "a reflection or representation predicate",
+   "a reflection predicate"
+  ],
+  [
+   "Which medium mirrors -- natural or instrumental -- is yours to choose.",
+   "Which medium mirrors is yours to choose."
+  ],
+  [
+   "Lucid waviness (ondeggiamento) at the SYNTACTIC level",
+   "Lucid periodic syntax at the SYNTACTIC level"
+  ],
+  [
+   "the periodic syntax UNDULATES rather than merely winds — successive waves of expansion and contraction, with clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period",
+   "the periodic syntax alternates: clause groups grow and shrink (in length and embedding depth) in turn, with >= 2 full long-short cycles within the longest period"
+  ],
+  [
+   " The syntactic shape adheres to the target referent: the sea's wave-motion, not the river's meander.",
+   ""
+  ],
+  [
+   "(ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within)",
+   "(ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within)"
+  ],
+  [
+   "the syntactic waviness prefigures a movement",
+   "the syntactic pattern prefigures a movement"
+  ],
+  [
+   " (cf. A9: 'prefigura già il complesso universo del romanzo')",
+   ""
+  ],
+  [
+   "a deictic phrase locating the description in the present of writing",
+   "a temporal deictic phrase anchoring the description to a particular present"
+  ],
+  [
+   "LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\n",
+   ""
+  ]
+ ]
+}

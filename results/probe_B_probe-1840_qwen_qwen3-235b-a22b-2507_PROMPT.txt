@@ -1,0 +1,152 @@
+You are assisting with a scholarly experiment in structural literary analysis.
+
+TASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing
+literary passage, which is not shown. Identify that passage: from which literary work, by which author, was the
+material below derived?
+
+FORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.
+Reproduce it for all 9 periods, in this order:
+Period 1 (about 111 words):
+  - main clause
+    - relative/adnominal clause
+      - relative/adnominal clause
+      - coordinated clause
+    - open complement (infinitive)
+      - coordinated clause
+    - coordinated clause
+      - relative/adnominal clause
+      - finite complement clause
+        - open complement (infinitive)
+      - coordinated clause
+        - relative/adnominal clause
+          - coordinated clause
+            - adverbial clause
+              - relative/adnominal clause
+                - adverbial clause
+                - adverbial clause
+                  - coordinated clause
+Period 2 (about 91 words):
+  - main clause
+    - relative/adnominal clause
+    - open complement (infinitive)
+      - adverbial clause
+    - parataxis
+      - relative/adnominal clause
+        - open complement (infinitive)
+      - relative/adnominal clause
+      - finite complement clause
+        - relative/adnominal clause
+        - coordinated clause
+          - open complement (infinitive)
+Period 3 (about 35 words):
+  - main clause
+    - coordinated clause
+Period 4 (about 37 words):
+  - main clause
+    - relative/adnominal clause
+    - relative/adnominal clause
+    - relative/adnominal clause
+Period 5 (about 45 words):
+  - main clause
+    - relative/adnominal clause
+    - open complement (infinitive)
+    - coordinated clause
+      - open complement (infinitive)
+      - adverbial clause
+        - coordinated clause
+          - finite complement clause
+Period 6 (about 83 words):
+  - main clause
+    - relative/adnominal clause
+      - relative/adnominal clause
+        - open complement (infinitive)
+    - coordinated clause
+      - relative/adnominal clause
+    - relative/adnominal clause
+      - relative/adnominal clause
+    - coordinated clause
+    - coordinated clause
+      - finite complement clause
+        - adverbial clause
+        - coordinated clause
+Period 7 (about 102 words):
+  - main clause
+    - coordinated clause
+    - coordinated clause
+      - adverbial clause
+        - coordinated clause
+      - adverbial clause
+    - coordinated clause
+      - adverbial clause
+    - coordinated clause
+      - coordinated clause
+      - coordinated clause
+        - coordinated clause
+Period 8 (about 91 words):
+  - main clause
+    - relative/adnominal clause
+      - relative/adnominal clause
+        - finite complement clause
+          - relative/adnominal clause
+            - adverbial clause
+            - coordinated clause
+    - adverbial clause
+      - coordinated clause
+      - relative/adnominal clause
+        - relative/adnominal clause
+          - coordinated clause
+            - open complement (infinitive)
+            - relative/adnominal clause
+Period 9 (about 86 words):
+  - main clause
+    - relative/adnominal clause
+    - parataxis
+      - relative/adnominal clause
+      - coordinated clause
+      - adverbial clause
+        - coordinated clause
+          - relative/adnominal clause
+      - coordinated clause
+        - relative/adnominal clause
+      - coordinated clause
+    - coordinated clause
+
+FORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW
+material (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):
+  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble
+    Specification: The text contains >= 2 clauses predicating a benevolent quality or intention, in words of your own choosing, of actions the context shows to be the opposite, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.
+  [C-P2-01] (MUST) from P_2: Embedded Italian metric verses
+    Specification: The opening syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).
+  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination
+    Specification: The text contains >= 3 two-member coordinations 'X e Y' whose members share a lexical field (seascape/movement), with parallel syntactic shape. Verifiable by enumeration.
+  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)
+    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.
+  [C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc
+    Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.
+  [C-P5-02] (SHOULD) from P_5: Mare duality — naming pivot
+    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing. Which naming systems collide is yours to choose. Audited by locating the pivot sentence and the external marker.
+  [C-P6-01] (MUST) from P_6: Specular doubling on a single head
+    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors is yours to choose. Audited by parsing the coordinate predications.
+  [C-P7-01] (MUST) from P_7: Lucid periodic syntax at the SYNTACTIC level — GLOBAL constraint
+    Specification: Sustained across the entire passage: the periodic syntax alternates: clause groups grow and shrink (in length and embedding depth) in turn, with >= 2 full long-short cycles within the longest period, and >= 1 period of >= 8 clauses — while hierarchy stays fully legible: no anacoluthon, exact lexicon, recoverable syntactic tree. Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility. (Same figure as C-P7-02, one level down.)
+  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level
+    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.
+  [C-P8-01] (MUST) from P_8: Historicized-present puncture
+    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a temporal deictic phrase anchoring the description to a particular present, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.
+
+TARGET DOMAIN — the border/migration landscape of the central Mediterranean
+(deploy in your own words; nothing beyond these three):
+  - THE SCENE: the border/migration landscape of the central Mediterranean
+  - THE PLACE: Lampedusa
+  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography
+
+LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may
+appear, in any inflected form:
+accaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia
+
+Answer in exactly this form, and nothing else:
+AUTHOR: <name, or UNKNOWN>
+TITLE: <title of the work, or UNKNOWN>
+PASSAGE: <which part of the work, or UNKNOWN>
+CONFIDENCE: <a number from 0 to 100>
+EVIDENCE: <one or two sentences: what in the material led you to this answer>

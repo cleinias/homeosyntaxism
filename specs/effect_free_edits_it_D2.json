@@ -1,0 +1,58 @@
+{
+ "note": "Effect-free arm (PT review §2.4), agreed by SF 2026-11-19. Applied to the July constrained Italian D2 prompt: each `old` must occur exactly once. What each edit removes and why: Docs and Research notes/PoeticsToday/Effect-free-arm-prompt-changes.md",
+ "base_run": "results/production_D2_it_constr-1840_claude-opus-5.json",
+ "edits": [
+  [
+   "predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory",
+   "predicating a benevolent quality or intention, in words of your own choosing, of actions the context shows to be the opposite"
+  ],
+  [
+   "Mare duality — juridical naming pivot",
+   "Mare duality — naming pivot"
+  ],
+  [
+   "the boundary made perceptible only by something outside the thing -- a document, an instrument, a record.",
+   "the boundary made perceptible only by something outside the thing."
+  ],
+  [
+   "Audited by locating the cessation/recommencement predicates and the external marker.",
+   "Audited by locating the pivot sentence and the external marker."
+  ],
+  [
+   "a reflection or representation predicate",
+   "a reflection predicate"
+  ],
+  [
+   "Which medium mirrors -- natural or instrumental -- is yours to choose.",
+   "Which medium mirrors is yours to choose."
+  ],
+  [
+   "Lucid waviness (ondeggiamento) at the SYNTACTIC level",
+   "Lucid periodic syntax at the SYNTACTIC level"
+  ],
+  [
+   "the periodic syntax UNDULATES rather than merely winds — successive waves of expansion and contraction, with clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period",
+   "the periodic syntax alternates: clause groups grow and shrink (in length and embedding depth) in turn, with >= 2 full long-short cycles within the longest period"
+  ],
+  [
+   " The syntactic shape adheres to the target referent: the sea's wave-motion, not the river's meander.",
+   ""
+  ],
+  [
+   "(ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within)",
+   "(ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within)"
+  ],
+  [
+   "the syntactic waviness prefigures a movement",
+   "the syntactic pattern prefigures a movement"
+  ],
+  [
+   " (cf. A9: 'prefigura già il complesso universo del romanzo')",
+   ""
+  ],
+  [
+   "a deictic phrase locating the description in the present of writing",
+   "a temporal deictic phrase anchoring the description to a particular present"
+  ]
+ ]
+}

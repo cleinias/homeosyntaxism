@@ -1,0 +1,436 @@
+{
+ "probe": "recognition",
+ "variant": "D",
+ "prompt_source": "specs/probe/recognition_D_it_D2.txt",
+ "model": "claude-opus-5",
+ "backend": "anthropic",
+ "n": 10,
+ "tag": "probe-1840",
+ "started_utc": "2026-11-19T18:59:28+00:00",
+ "temperature": null,
+ "max_tokens": 1024,
+ "thinking": "disabled",
+ "provider_routing": null,
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>",
+ "prompt_file": "probe_D_probe-1840_claude-opus-5_PROMPT.txt",
+ "elapsed_s": 47.7,
+ "failure": null,
+ "recognised": 0,
+ "request": {
+  "model": "claude-opus-5",
+  "max_tokens": 1024,
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>"
+   }
+  ],
+  "thinking": {
+   "type": "disabled"
+  }
+ },
+ "responses": [
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoQmdDke5HUbMRkesyq",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 227,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoR9RtQeFDj11P4g8z7",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 218,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoRWEHvNcokXMU2T3wL",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 259,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoRt5wQJ7ccjWUU1s1w",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 202,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoSDUVwA8J9dXjyZ1Wa",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 227,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoSYune3gzeV8vE3k5i",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 208,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoSsVzGTdh52tiiZatZ",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 227,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoTDmPzzPCPP4WLR9NZ",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 216,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoTZK8z4gGVKV51p7eS",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 223,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoTvEiQodUYdrafseTJ",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 211,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  }
+ ],
+ "answers": [
+  {
+   "i": 0,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath\nCONFIDENCE: 50\nEVIDENCE: The task asks for a long, heavily subordinated topographical overture in which a landscape is described as a quasi-human presence, with a short sequence of periods of exactly these diminishing/expanding lengths — the hallmark of Hardy's Egdon Heath opening, whose syntactic architecture (massive opening period, then shorter declaratives, then renewed elaboration) matches the given schema.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath",
+   "confidence": 50,
+   "evidence": "The task asks for a long, heavily subordinated topographical overture in which a landscape is described as a quasi-human presence, with a short sequence of periods of exactly these diminishing/expanding lengths — the hallmark of Hardy's Egdon Heath opening, whose syntactic architecture (massive opening period, then shorter declaratives, then renewed elaboration) matches the given schema.",
+   "recognised": false
+  },
+  {
+   "i": 1,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter 1, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath\nCONFIDENCE: 50\nEVIDENCE: The schema's long opening periods with deeply nested relative and adverbial chains, followed by shorter definitional periods and a return to sprawling sentences, matches Hardy's famous topographical overture; the instruction to render a landscape and its human presence \"in the same descriptive register as the topography\" mirrors Egdon Heath's personified, time-resistant terrain.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter 1, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath",
+   "confidence": 50,
+   "evidence": "The schema's long opening periods with deeply nested relative and adverbial chains, followed by shorter definitional periods and a return to sprawling sentences, matches Hardy's famous topographical overture; the instruction to render a landscape and its human presence \"in the same descriptive register as the topography\" mirrors Egdon Heath's personified, time-resistant terrain.",
+   "recognised": false
+  },
+  {
+   "i": 2,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath\nCONFIDENCE: 55\nEVIDENCE: The requested structure — a sequence of long, heavily subordinated periods describing a bleak, enduring landscape, with a human/observing presence rendered in the same descriptive register as the topography, followed by shorter periods and a return to expansive sentences — matches Hardy's famous overture on Egdon Heath. The brief, three-to-four-clause periods in the middle (periods 3–5) correspond to the short declarative sentences punctuating that chapter's otherwise elaborate syntax.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath",
+   "confidence": 55,
+   "evidence": "The requested structure — a sequence of long, heavily subordinated periods describing a bleak, enduring landscape, with a human/observing presence rendered in the same descriptive register as the topography, followed by shorter periods and a return to expansive sentences — matches Hardy's famous overture on Egdon Heath. The brief, three-to-four-clause periods in the middle (periods 3–5) correspond to the short declarative sentences punctuating that chapter's otherwise elaborate syntax.",
+   "recognised": false
+  },
+  {
+   "i": 3,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: The opening chapter, \"A Face on Which Time Makes but Little Impression,\" describing Egdon Heath\nCONFIDENCE: 42\nEVIDENCE: The brief implies a long, heavily subordinated topographical overture in which a single named place is personified and human figures are rendered in the same descriptive register as the landscape — the hallmark of Hardy's Egdon Heath opening, whose nine sentences of relative-clause-laden periods followed by shorter sentences match the schema's proportions.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "The opening chapter, \"A Face on Which Time Makes but Little Impression,\" describing Egdon Heath",
+   "confidence": 42,
+   "evidence": "The brief implies a long, heavily subordinated topographical overture in which a single named place is personified and human figures are rendered in the same descriptive register as the landscape — the hallmark of Hardy's Egdon Heath opening, whose nine sentences of relative-clause-laden periods followed by shorter sentences match the schema's proportions.",
+   "recognised": false
+  },
+  {
+   "i": 4,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath\nCONFIDENCE: 46\nEVIDENCE: The task asks for a long, heavily subordinated topographical overture of nine periods in which a human presence is rendered in the same descriptive register as the landscape, a structure characteristic of Hardy's famous set-piece evocation of Egdon Heath; the very long opening periods with stacked relative and adverbial clauses, then abruptly short periods 3–5, match that chapter's rhythm.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath",
+   "confidence": 46,
+   "evidence": "The task asks for a long, heavily subordinated topographical overture of nine periods in which a human presence is rendered in the same descriptive register as the landscape, a structure characteristic of Hardy's famous set-piece evocation of Egdon Heath; the very long opening periods with stacked relative and adverbial clauses, then abruptly short periods 3–5, match that chapter's rhythm.",
+   "recognised": false
+  },
+  {
+   "i": 5,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter 1, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath\nCONFIDENCE: 46\nEVIDENCE: The brief asks for a long, heavily subordinated topographical overture in which a named place and the human presence are rendered in one continuous descriptive register, matching Hardy's famous opening periods on Egdon Heath; the nine-period sequence with a very long first period tapering to short ones and then expanding again fits that chapter's architecture.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter 1, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath",
+   "confidence": 46,
+   "evidence": "The brief asks for a long, heavily subordinated topographical overture in which a named place and the human presence are rendered in one continuous descriptive register, matching Hardy's famous opening periods on Egdon Heath; the nine-period sequence with a very long first period tapering to short ones and then expanding again fits that chapter's architecture.",
+   "recognised": false
+  },
+  {
+   "i": 6,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath\nCONFIDENCE: 46\nEVIDENCE: The brief given is a landscape-description template of nine long, heavily subordinated periods in which a named place and its human/topographical features are rendered in a single sustained descriptive register, matching the celebrated opening set-piece of Hardy's Egdon Heath; the instruction to treat the human presence \"in the same descriptive register as the topography\" echoes Hardy's absorption of figures into the heath.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath",
+   "confidence": 46,
+   "evidence": "The brief given is a landscape-description template of nine long, heavily subordinated periods in which a named place and its human/topographical features are rendered in a single sustained descriptive register, matching the celebrated opening set-piece of Hardy's Egdon Heath; the instruction to treat the human presence \"in the same descriptive register as the topography\" echoes Hardy's absorption of figures into the heath.",
+   "recognised": false
+  },
+  {
+   "i": 7,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter I (\"A Face on Which Time Makes but Little Impression\") — the opening description of Egdon Heath\nCONFIDENCE: 45\nEVIDENCE: The brief instructs that a landscape be rendered in long, heavily subordinated periods with the human/institutional presence described in the same register as the topography, a hallmark of Hardy's opening evocation of Egdon Heath; the nine-period structure, with its massive opening sentence tapering to short periods and then expanding again, matches the rhythm of that chapter.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter I (\"A Face on Which Time Makes but Little Impression\") — the opening description of Egdon Heath",
+   "confidence": 45,
+   "evidence": "The brief instructs that a landscape be rendered in long, heavily subordinated periods with the human/institutional presence described in the same register as the topography, a hallmark of Hardy's opening evocation of Egdon Heath; the nine-period structure, with its massive opening sentence tapering to short periods and then expanding again, matches the rhythm of that chapter.",
+   "recognised": false
+  },
+  {
+   "i": 8,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath\nCONFIDENCE: 52\nEVIDENCE: The task asks for a long, heavily subordinated topographical overture in nine periods in which a named place and the human presence are rendered in a single descriptive register, which matches the sentence-architecture of Hardy's opening evocation of Egdon Heath; the declining period-lengths and the opening 111-word main clause with deep relative/adverbial nesting fit that chapter's cadence.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter I, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath",
+   "confidence": 52,
+   "evidence": "The task asks for a long, heavily subordinated topographical overture in nine periods in which a named place and the human presence are rendered in a single descriptive register, which matches the sentence-architecture of Hardy's opening evocation of Egdon Heath; the declining period-lengths and the opening 111-word main clause with deep relative/adverbial nesting fit that chapter's cadence.",
+   "recognised": false
+  },
+  {
+   "i": 9,
+   "text": "AUTHOR: Thomas Hardy\nTITLE: The Return of the Native\nPASSAGE: Book First, Chapter 1, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath\nCONFIDENCE: 46\nEVIDENCE: The brief given — a vast, sombre topographical scene whose human presence is rendered in the same descriptive register as the landscape itself, unfolding in nine long, heavily subordinated periods with a single climactic place-name — matches the syntactic grandeur and structure of Hardy's celebrated set-piece opening on Egdon Heath.",
+   "author": "Thomas Hardy",
+   "title": "The Return of the Native",
+   "passage": "Book First, Chapter 1, \"A Face on Which Time Makes but Little Impression\" — the opening description of Egdon Heath",
+   "confidence": 46,
+   "evidence": "The brief given — a vast, sombre topographical scene whose human presence is rendered in the same descriptive register as the landscape itself, unfolding in nine long, heavily subordinated periods with a single climactic place-name — matches the syntactic grandeur and structure of Hardy's celebrated set-piece opening on Egdon Heath.",
+   "recognised": false
+  }
+ ]
+}

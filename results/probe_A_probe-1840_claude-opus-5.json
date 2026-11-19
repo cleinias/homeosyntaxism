@@ -1,0 +1,436 @@
+{
+ "probe": "recognition",
+ "variant": "A",
+ "prompt_source": "specs/probe/recognition_A_it_D2.txt",
+ "model": "claude-opus-5",
+ "backend": "anthropic",
+ "n": 10,
+ "tag": "probe-1840",
+ "started_utc": "2026-11-19T18:56:52+00:00",
+ "temperature": null,
+ "max_tokens": 1024,
+ "thinking": "disabled",
+ "provider_routing": null,
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nFORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW\nmaterial (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):\n  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n    Specification: The opening syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X e Y' whose members share a lexical field (seascape/movement), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Mare duality — juridical naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid waviness (ondeggiamento) at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the entire passage: the periodic syntax UNDULATES rather than merely winds — successive waves of expansion and contraction, with clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 period of >= 8 clauses — while hierarchy stays fully legible: no anacoluthon, exact lexicon, recoverable syntactic tree. The syntactic shape adheres to the target referent: the sea's wave-motion, not the river's meander. Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility. (Same figure as C-P7-02, one level down.)\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nLEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>",
+ "prompt_file": "probe_A_probe-1840_claude-opus-5_PROMPT.txt",
+ "elapsed_s": 49.4,
+ "failure": null,
+ "recognised": 10,
+ "request": {
+  "model": "claude-opus-5",
+  "max_tokens": 1024,
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nFORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW\nmaterial (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):\n  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n    Specification: The opening syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X e Y' whose members share a lexical field (seascape/movement), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Mare duality — juridical naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid waviness (ondeggiamento) at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the entire passage: the periodic syntax UNDULATES rather than merely winds — successive waves of expansion and contraction, with clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 period of >= 8 clauses — while hierarchy stays fully legible: no anacoluthon, exact lexicon, recoverable syntactic tree. The syntactic shape adheres to the target referent: the sea's wave-motion, not the river's meander. Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility. (Same figure as C-P7-02, one level down.)\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nLEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>"
+   }
+  ],
+  "thinking": {
+   "type": "disabled"
+  }
+ },
+ "responses": [
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoDFrWw61jxshYkKVz5",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 288,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoDcqpVrgJDQsqjKN1J",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 277,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoDyXmgj5m8EMV3ecau",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 284,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoEJgx4Nd3pSPCNzUhi",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 304,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoEgf2xr2QSgZEF7MTQ",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 263,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoF1dZ3nNxzvf1eWWAX",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 317,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoFSBgUG95EfcQM79qw",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 282,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoFmcELsGjRXFMot7S3",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 311,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoGAeowhp28JWQqHAns",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 300,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoGYANW7SsLqPvY1iMV",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3456,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 290,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  }
+ ],
+ "answers": [
+  {
+   "i": 0,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of Lake Como and the Lecco branch at the start of Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Resegone, giogaia, rincomincia, San Martino, andirivieni, ciottoloni, spagnoli) is precisely the vocabulary of Manzoni's incipit, and the formal constraints — the lake that \"cessa\" and \"rincomincia\" as river at a juridically invisible boundary, mountains mirrored in the water, the long undulating opening period, and the ironic benevolent register for the Spanish garrison/bravi — match that passage's structure and its famous embedded hendecasyllables.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening description of Lake Como and the Lecco branch at the start of Chapter I (\"Quel ramo del lago di Como...\")",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Resegone, giogaia, rincomincia, San Martino, andirivieni, ciottoloni, spagnoli) is precisely the vocabulary of Manzoni's incipit, and the formal constraints — the lake that \"cessa\" and \"rincomincia\" as river at a juridically invisible boundary, mountains mirrored in the water, the long undulating opening period, and the ironic benevolent register for the Spanish garrison/bravi — match that passage's structure and its famous embedded hendecasyllables.",
+   "recognised": true
+  },
+  {
+   "i": 1,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of Lake Como and the Lecco landscape in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Resegone, giogaia, ciottoloni, andirivieni, serpeggiamento, \"rincomincia\", \"spagnoli\") belongs unmistakably to the famous incipit of I promessi sposi, and the formal constraints (the lake that ceases and recommences as a river at a bridge, the mountain seen directly and reflected, the historicized-present puncture, the proverbial \"ondeggiamento\" of the periodic syntax) match that passage's known stylistic analyses.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening description of Lake Como and the Lecco landscape in Chapter I (\"Quel ramo del lago di Como...\")",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Resegone, giogaia, ciottoloni, andirivieni, serpeggiamento, \"rincomincia\", \"spagnoli\") belongs unmistakably to the famous incipit of I promessi sposi, and the formal constraints (the lake that ceases and recommences as a river at a bridge, the mountain seen directly and reflected, the historicized-present puncture, the proverbial \"ondeggiamento\" of the periodic syntax) match that passage's known stylistic analyses.",
+   "recognised": true
+  },
+  {
+   "i": 2,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of Lake Como and the Lecco branch at the start of Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Resegone, giogaia, ciottoloni, andirivieni, serpeggiamento, rincomincia, San Martino, \"spagnoli\") is precisely the proper-name and marked-word inventory of Manzoni's famous incipit, and the schema's long undulating opening period with a water-body that \"cessa\" and \"rincomincia\" at a bridge, plus the historicized-present puncture and the Spanish garrison/soldiery described like topography, matches Chapter I of I promessi sposi.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening description of Lake Como and the Lecco branch at the start of Chapter I (\"Quel ramo del lago di Como...\")",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Resegone, giogaia, ciottoloni, andirivieni, serpeggiamento, rincomincia, San Martino, \"spagnoli\") is precisely the proper-name and marked-word inventory of Manzoni's famous incipit, and the schema's long undulating opening period with a water-body that \"cessa\" and \"rincomincia\" at a bridge, plus the historicized-present puncture and the Spanish garrison/soldiery described like topography, matches Chapter I of I promessi sposi.",
+   "recognised": true
+  },
+  {
+   "i": 3,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening of Chapter I — the description of the Lake of Como, the Adda, and the landscape around Lecco, including the Spanish garrison and the bravi-era policing apparatus\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Adda, Resegone, giogaia, andirivieni, ciottoloni, Spagnoli, San Martino, vendemmia, serpeggiamento) is precisely the proper-name and marked-word set of Manzoni's famous incipit \"Quel ramo del lago di Como...\", and the constraints mirror its features: the long undulating first period, the \"mare\"/lake naming pivot where the lake ceases and recommences as river, and the deadpan description of the Spanish garrison in the same register as the topography.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening of Chapter I — the description of the Lake of Como, the Adda, and the landscape around Lecco, including the Spanish garrison and the bravi-era policing apparatus",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Adda, Resegone, giogaia, andirivieni, ciottoloni, Spagnoli, San Martino, vendemmia, serpeggiamento) is precisely the proper-name and marked-word set of Manzoni's famous incipit \"Quel ramo del lago di Como...\", and the constraints mirror its features: the long undulating first period, the \"mare\"/lake naming pivot where the lake ceases and recommences as river, and the deadpan description of the Spanish garrison in the same register as the topography.",
+   "recognised": true
+  },
+  {
+   "i": 4,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of Lake Como and the Lecco landscape in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Resegone, giogaia, andirivieni, serpeggiamento, \"rincomincia\", ciottoloni, valloncelli, vendemmia, \"Spagnoli\", San Martino) is precisely the proper-name and marked-word inventory of Manzoni's famous opening landscape; the schema's long nested first period, the lake that ceases and resumes its name, the mountains reflected in the water, and the historicized present all match that incipit.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening description of Lake Como and the Lecco landscape in Chapter I (\"Quel ramo del lago di Como...\")",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Resegone, giogaia, andirivieni, serpeggiamento, \"rincomincia\", ciottoloni, valloncelli, vendemmia, \"Spagnoli\", San Martino) is precisely the proper-name and marked-word inventory of Manzoni's famous opening landscape; the schema's long nested first period, the lake that ceases and resumes its name, the mountains reflected in the water, and the historicized present all match that incipit.",
+   "recognised": true
+  },
+  {
+   "i": 5,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening of Chapter I — the description of the Lake of Como, the Adda, the shore near Lecco and the Spanish garrison (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Adda, Resegone, giogaia, serpeggiamento, \"rincomincia\", San Martino, \"spagnoli\", ciottoloni, viottole/stradette, vendemmia) is precisely the vocabulary of Manzoni's famous incipit, and the schema's long opening period with cascading relatives, the \"mare duality\" (the lake that ceases and recommences being a river, marked by bridges/boundaries), the mirrored mountains, and the ironic benevolent-sounding predications of the occupying soldiery all match that passage's structure.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening of Chapter I — the description of the Lake of Como, the Adda, the shore near Lecco and the Spanish garrison (\"Quel ramo del lago di Como...\")",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Adda, Resegone, giogaia, serpeggiamento, \"rincomincia\", San Martino, \"spagnoli\", ciottoloni, viottole/stradette, vendemmia) is precisely the vocabulary of Manzoni's famous incipit, and the schema's long opening period with cascading relatives, the \"mare duality\" (the lake that ceases and recommences being a river, marked by bridges/boundaries), the mirrored mountains, and the ironic benevolent-sounding predications of the occupying soldiery all match that passage's structure.",
+   "recognised": true
+  },
+  {
+   "i": 6,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of Lake Como and the Lecco branch in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, \"rincomincia\", \"spagnoli\") is precisely the vocabulary of Manzoni's famous incipit, and the prescribed schema — a long winding opening period about a branch of water narrowing between mountains, followed by shorter descriptive periods, a juridical naming pivot (lake ceasing and river recommencing, marked by bridge/boundary), and a historicized-present aside — matches that passage's structure.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening description of Lake Como and the Lecco branch in Chapter I (\"Quel ramo del lago di Como...\")",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, \"rincomincia\", \"spagnoli\") is precisely the vocabulary of Manzoni's famous incipit, and the prescribed schema — a long winding opening period about a branch of water narrowing between mountains, followed by shorter descriptive periods, a juridical naming pivot (lake ceasing and river recommencing, marked by bridge/boundary), and a historicized-present aside — matches that passage's structure.",
+   "recognised": true
+  },
+  {
+   "i": 7,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening of Chapter I — the description of the Lake of Como, the branch at Lecco, the Resegone and the shore, leading to the lane where don Abbondio meets the bravi\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, \"rincomincia\", \"lombarda\", \"spagnoli\") is precisely the vocabulary of Manzoni's famous incipit \"Quel ramo del lago di Como...\", and the formal constraints (the lake that ceases to be a lake and becomes a river again, named by juridical/instrumental boundaries; mountains reflected and inverted in the water; the undulating long periods; the \"antiphrastic\" register for coercive authority) match that passage's structure point by point.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening of Chapter I — the description of the Lake of Como, the branch at Lecco, the Resegone and the shore, leading to the lane where don Abbondio meets the bravi",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, \"rincomincia\", \"lombarda\", \"spagnoli\") is precisely the vocabulary of Manzoni's famous incipit \"Quel ramo del lago di Como...\", and the formal constraints (the lake that ceases to be a lake and becomes a river again, named by juridical/instrumental boundaries; mountains reflected and inverted in the water; the undulating long periods; the \"antiphrastic\" register for coercive authority) match that passage's structure point by point.",
+   "recognised": true
+  },
+  {
+   "i": 8,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of Lake Como and the Lecco branch in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, rincomincia, Spagnoli, vendemmia) is precisely the vocabulary of Manzoni's famous opening landscape, including the Spanish garrison described in the same topographic register; the required \"mare\" duality, the juridical naming pivot (lake ceasing to be lake and becoming river again at the bridge), and the opening syntagm scanning as a canonical Italian verse all match \"Quel ramo del lago di Como, che volge a mezzogiorno.\"",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening description of Lake Como and the Lecco branch in Chapter I (\"Quel ramo del lago di Como...\")",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, rincomincia, Spagnoli, vendemmia) is precisely the vocabulary of Manzoni's famous opening landscape, including the Spanish garrison described in the same topographic register; the required \"mare\" duality, the juridical naming pivot (lake ceasing to be lake and becoming river again at the bridge), and the opening syntagm scanning as a canonical Italian verse all match \"Quel ramo del lago di Como, che volge a mezzogiorno.\"",
+   "recognised": true
+  },
+  {
+   "i": 9,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of Lake Como and the Lecco branch at the start of Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 97\nEVIDENCE: The embargoed words (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, \"rincomincia\", \"serpeggiamento\", \"San Martino\", \"spagnoli\") are precisely the proper names and marked lexemes of Manzoni's famous incipit; the schema of long undulating periods with a lake/mountain topography that \"cessa\" and \"rincomincia\" as river versus lake, plus the Spanish policing/bravi apparatus described in the same register as the landscape, matches Chapter I of I promessi sposi.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi",
+   "passage": "The opening description of Lake Como and the Lecco branch at the start of Chapter I (\"Quel ramo del lago di Como...\")",
+   "confidence": 97,
+   "evidence": "The embargoed words (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, \"rincomincia\", \"serpeggiamento\", \"San Martino\", \"spagnoli\") are precisely the proper names and marked lexemes of Manzoni's famous incipit; the schema of long undulating periods with a lake/mountain topography that \"cessa\" and \"rincomincia\" as river versus lake, plus the Spanish policing/bravi apparatus described in the same register as the landscape, matches Chapter I of I promessi sposi.",
+   "recognised": true
+  }
+ ]
+}

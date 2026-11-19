@@ -1,0 +1,381 @@
+{
+ "model": "claude-opus-5",
+ "backend": "anthropic",
+ "degree": "D2",
+ "lang": "en",
+ "n": 10,
+ "tag": "constr-1840-rep",
+ "started_utc": "2026-11-19T18:08:06+00:00",
+ "temperature": null,
+ "temperature_asked": 0.9,
+ "max_tokens": 4096,
+ "thinking": "disabled",
+ "effort": null,
+ "provider_routing": null,
+ "endpoint": null,
+ "domain_file": "specs/domain_brief_3item.txt",
+ "source_ref": "texts/incipit_en.txt",
+ "source_sha1": "d58c771f08c109d809ce57f20d46c0ec80d95bfc",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL descriptive opening (incipit) in English for a narrative set in the target\ndomain below. It must be a CONSTRAINED HOMEOSYNTACTIC transposition: hold the clause nesting (D2, the operative rung), AND instantiate\nevery formal pattern listed --- while inventing entirely new words, images, and content. It is NOT\na paraphrase, translation, or reconstruction of any source.\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 12 periods, in this order:\nPeriod 1 (about 106 words):\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\n      - coordinated clause\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - open complement (infinitive)\n        - coordinated clause\n          - relative/adnominal clause\n            - coordinated clause\n              - adverbial clause\n                - open complement (infinitive)\n                  - adverbial clause\n                    - adverbial clause\n                      - open complement (infinitive)\n                        - coordinated clause\nPeriod 2 (about 90 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n      - open complement (infinitive)\n    - parataxis\n      - adverbial clause\n      - adverbial clause\n      - adverbial clause\nPeriod 3 (about 38 words):\n  - main clause\n    - parataxis\n      - adverbial clause\nPeriod 4 (about 39 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\nPeriod 5 (about 53 words):\n  - main clause\n    - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\nPeriod 6 (about 92 words):\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\n    - relative/adnominal clause\n    - coordinated clause\n      - relative/adnominal clause\n      - relative/adnominal clause\n        - coordinated clause\n        - coordinated clause\n          - open complement (infinitive)\n            - adverbial clause\n              - coordinated clause\nPeriod 7 (about 32 words):\n  - main clause\n    - open complement (infinitive)\n    - coordinated clause\nPeriod 8 (about 34 words):\n  - main clause\n    - open complement (infinitive)\n    - parataxis\n    - coordinated clause\n      - coordinated clause\n    - coordinated clause\n      - adverbial clause\nPeriod 9 (about 50 words):\n  - main clause\n    - parataxis\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - coordinated clause\n          - coordinated clause\nPeriod 10 (about 107 words):\n  - main clause\n    - parataxis\n      - coordinated clause\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n    - parataxis\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - adverbial clause\n            - open complement (infinitive)\n            - adverbial clause\nPeriod 11 (about 19 words):\n  - main clause\n    - relative/adnominal clause\nPeriod 12 (about 84 words):\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\n      - coordinated clause\n      - adverbial clause\n        - relative/adnominal clause\n    - coordinated clause\n      - relative/adnominal clause\n    - parataxis\n\nFORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW\nmaterial (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):\n  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (SHOULD) from P_2: Embedded English metric verse (RE-DERIVED, not translated)\n    Specification: Per the plan's option (b): the Italian syllabic meter does not port, so substitute the accentual-syllabic equivalent. The opening syntagm scans as iambic pentameter, and the passage embeds >= 2 blank-verse (unrhymed iambic-pentameter) lines inside descriptive sentences, doing the same iconic-pacing work below conscious scansion. Tag as RE-DERIVED. Verifiable by scansion. NB: the non-portability of the Italian meter is itself reported as a finding (option (a)).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X and Y' whose members share a lexical field (seascape/movement; e.g. 'in bays and inlets', 'swelling and subsiding'), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Sea duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'the sea': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Sea duality — juridical naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid waviness at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the passage: the periodic syntax UNDULATES — successive waves of expansion and contraction, clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 long multi-clause period — while hierarchy stays fully legible (no anacoluthon, recoverable syntactic tree). DEPTH THRESHOLD to be set from Moore's measured incipit (English tolerates less subordination than Italian; the Italian used depth 8). Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility.\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nLEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\nadda, como, foreshorten, lakeside, lecco, lombard, martino, milan, modesty, obscurer, resegone, san, spanish, wildness\n\nREQUIREMENTS --- all three hold together (the constrained homeomorphism):\n1. FORM PRESERVED at the clause nesting (D2, the operative rung) (as specified above), in your own words.\n2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque; satisfy each pattern with fresh material.\n3. COHERENT --- one continuous, fully sensible geographical description.\n\nWrite MODERN literary English. Produce the 12 periods in order as continuous prose --- no numbering,\nno headings. Output ONLY the passage: no preamble, no self-audit.",
+ "prompt_file": "production_D2_en_constr-1840-rep_claude-opus-5_PROMPT.txt",
+ "same_prompt_as": "production_D2_en_constr-1840_claude-opus-5.json",
+ "elapsed_s": 319.8,
+ "failure": null,
+ "request": {
+  "model": "claude-opus-5",
+  "max_tokens": 4096,
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL descriptive opening (incipit) in English for a narrative set in the target\ndomain below. It must be a CONSTRAINED HOMEOSYNTACTIC transposition: hold the clause nesting (D2, the operative rung), AND instantiate\nevery formal pattern listed --- while inventing entirely new words, images, and content. It is NOT\na paraphrase, translation, or reconstruction of any source.\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 12 periods, in this order:\nPeriod 1 (about 106 words):\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\n      - coordinated clause\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - open complement (infinitive)\n        - coordinated clause\n          - relative/adnominal clause\n            - coordinated clause\n              - adverbial clause\n                - open complement (infinitive)\n                  - adverbial clause\n                    - adverbial clause\n                      - open complement (infinitive)\n                        - coordinated clause\nPeriod 2 (about 90 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n      - open complement (infinitive)\n    - parataxis\n      - adverbial clause\n      - adverbial clause\n      - adverbial clause\nPeriod 3 (about 38 words):\n  - main clause\n    - parataxis\n      - adverbial clause\nPeriod 4 (about 39 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\nPeriod 5 (about 53 words):\n  - main clause\n    - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\nPeriod 6 (about 92 words):\n  - main clause\n    - relative/adnominal clause\n      - open complement (infinitive)\n    - relative/adnominal clause\n    - coordinated clause\n      - relative/adnominal clause\n      - relative/adnominal clause\n        - coordinated clause\n        - coordinated clause\n          - open complement (infinitive)\n            - adverbial clause\n              - coordinated clause\nPeriod 7 (about 32 words):\n  - main clause\n    - open complement (infinitive)\n    - coordinated clause\nPeriod 8 (about 34 words):\n  - main clause\n    - open complement (infinitive)\n    - parataxis\n    - coordinated clause\n      - coordinated clause\n    - coordinated clause\n      - adverbial clause\nPeriod 9 (about 50 words):\n  - main clause\n    - parataxis\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - coordinated clause\n          - coordinated clause\nPeriod 10 (about 107 words):\n  - main clause\n    - parataxis\n      - coordinated clause\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n    - parataxis\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - adverbial clause\n            - open complement (infinitive)\n            - adverbial clause\nPeriod 11 (about 19 words):\n  - main clause\n    - relative/adnominal clause\nPeriod 12 (about 84 words):\n  - main clause\n    - relative/adnominal clause\n    - adverbial clause\n      - coordinated clause\n      - adverbial clause\n        - relative/adnominal clause\n    - coordinated clause\n      - relative/adnominal clause\n    - parataxis\n\nFORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW\nmaterial (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):\n  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (SHOULD) from P_2: Embedded English metric verse (RE-DERIVED, not translated)\n    Specification: Per the plan's option (b): the Italian syllabic meter does not port, so substitute the accentual-syllabic equivalent. The opening syntagm scans as iambic pentameter, and the passage embeds >= 2 blank-verse (unrhymed iambic-pentameter) lines inside descriptive sentences, doing the same iconic-pacing work below conscious scansion. Tag as RE-DERIVED. Verifiable by scansion. NB: the non-portability of the Italian meter is itself reported as a finding (option (a)).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X and Y' whose members share a lexical field (seascape/movement; e.g. 'in bays and inlets', 'swelling and subsiding'), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Sea duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'the sea': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Sea duality — juridical naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing -- a document, an instrument, a record. Which naming systems collide is yours to choose. Audited by locating the cessation/recommencement predicates and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection or representation predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors -- natural or instrumental -- is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid waviness at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the passage: the periodic syntax UNDULATES — successive waves of expansion and contraction, clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period, and >= 1 long multi-clause period — while hierarchy stays fully legible (no anacoluthon, recoverable syntactic tree). DEPTH THRESHOLD to be set from Moore's measured incipit (English tolerates less subordination than Italian; the Italian used depth 8). Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility.\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within), and (iii) functions as a proleptic marker: the syntactic waviness prefigures a movement the ensuing narrative will unfold (cf. A9: 'prefigura già il complesso universo del romanzo'). The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a deictic phrase locating the description in the present of writing, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nLEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\nadda, como, foreshorten, lakeside, lecco, lombard, martino, milan, modesty, obscurer, resegone, san, spanish, wildness\n\nREQUIREMENTS --- all three hold together (the constrained homeomorphism):\n1. FORM PRESERVED at the clause nesting (D2, the operative rung) (as specified above), in your own words.\n2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque; satisfy each pattern with fresh material.\n3. COHERENT --- one continuous, fully sensible geographical description.\n\nWrite MODERN literary English. Produce the 12 periods in order as continuous prose --- no numbering,\nno headings. Output ONLY the passage: no preamble, no self-audit."
+   }
+  ],
+  "thinking": {
+   "type": "disabled"
+  }
+ },
+ "responses": [
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjVaRCqcPDKUdDA2DJ3",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1307,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjXkbgd1D8sezzP8vDR",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1256,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCja16NZHND9bsgS9TS6",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1441,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjcXNqHou2H9VN4YCSd",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1480,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjf4yvFXM1UMmyfFVkd",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1287,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjhRaivZ8h942PRMzJX",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1205,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjjYZDUiQLgcAQ8KvuN",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1452,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjmsNcqx9J3VcTQaFMK",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1390,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjpBteiULqvXrUzM2po",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1475,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCjriB7SaUCcrxxp7V3x",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1438,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  }
+ ],
+ "gens": [
+  {
+   "i": 0,
+   "text": "That stretch of water between the shoals of Africa and the long calcareous spine of Sicily, which the charts call a channel and the ministries call a frontier, narrows here to a width that the eye refuses, and the sea, hemmed on both sides by invisible jurisdictions, seems to gather itself, to thicken into a corridor whose surface is sometimes glass and sometimes hammered tin, and which, swelling and subsiding under the long Saharan wind, runs north and east until the limestone of the island splits it, so that the water must divide to pass, slowing as it goes, pressing into the inlets and the cuts, narrowing again to squeeze between the headlands, and heaping itself white along the rock.\n\nThe island itself, which lies lower in the water than anyone expects, which the Africans see first as a smudge of light and the pilots see last as a strip of runway, which costs eight hours to reach in a good wooden boat with a working engine, is a tilted table of white stone: it rises in the north into cliffs that the gulls hold, it slopes in the south into a long dry apron of thyme and fennel and dust, and it ends everywhere at once in a line of foam.\n\nNothing grows tall on it; the wind sees to that, bending the few planted pines landward in a permanent attitude of flight, so that even on a still afternoon in August the trees appear to be leaning away from something arriving out of the sea.\n\nThe harbour on the southern flank, which the fishermen made and the state inherited, is a pocket of improbable green: the colour belongs to the shallow bottom, which is sand over limestone and takes the light the way a lamp takes oil.\n\nHere the grey hulls lie at their moorings, patrol craft that carry a number and no name, waiting to be summoned by a radio voice before dawn, and here too the small blue boats lie hauled out on the quay, the ones nobody has come to claim.\n\nThe motorboat of the Guardia di Finanza, which goes out at four to render assistance, which returns at seven with a hundred and eleven persons aboard, is met by a line of men in white suits, and the men, who hold clipboards, who have been trained to be gentle, work along the row of wet shoulders and stamp each wrist with a number in violet ink, counting aloud so that nothing shall be lost, and the count is read twice.\n\nThe pier is swept afterwards, and the water, which has been slit all night by keels, closes and is smooth again by nine.\n\nThen the land takes over: the bus, the gate, the low white sheds beyond the airstrip, the enclosure where the children are educated in queueing and the adults are taught the alphabet of the fingerprint, which is rolled thumb first, left hand before right, until the ridges read clean.\n\nSeen from the cliff at Albero Sole the enclosure is nothing, a pale rectangle, a thing the eye slides off, while the sea beyond it goes on performing its one gesture, rising and falling, rising and falling, lifting a long swell out of the south and letting it down.\n\nThe water does not change at the line; the line is a paper line, drawn in Brussels, running twelve miles out from the last rock, and the sea on either side of it is the same sea, the same temperature, the same green-black glass — but the name changes there, and so does the verb: a hull that is rescued inside the line is intercepted outside it, and the only instrument by which the moment of change can be witnessed is the plotter in the wheelhouse, which prints a latitude to four decimal places, logging the second at which assistance ceases to be owed and interdiction begins.\n\nAt night the glass holds everything doubled, the cliff and the lamp and the slow red beacon that stands on its head in the swell.\n\nThe harbour mouth lies open to the south, the way a hand lies open, and because the island is small and because the sea is large the two facts arrange themselves into a single fact, which the islanders state without emphasis when asked, and they have been asked often, since the ferry now brings researchers as well as olives; it is this: everything arrives from the water, and everything, in the end, is returned to it."
+  },
+  {
+   "i": 1,
+   "text": "The channel that runs between the shoal and the rock narrows here to a width the charts record in metres, and because the current pushes north while the wind in winter pushes south, the water heaps against itself in a short standing chop, a surface that has drowned more arithmetic than any ledger can hold, seeming always to widen as one watches it, so that the eye, which has no instrument but itself, loses the far shore and recovers it, while the mind, unable to settle on a distance, consents at last to call the whole expanse one thing, because to name it twice would be to admit two jurisdictions, and the second has no office on this island.\n\nThe island lies low and long on the water, a slab of limestone that the Mediterranean has planed flat, which from the air shows white as a cut bone, which the pilots of the patrol aircraft use to correct their drift before they turn back toward the invisible line; the cliffs stand on the southern side, the harbour notches the eastern flank, the airstrip takes the middle like a scar.\n\nAt the harbour mouth the grey hulls lie moored in rotation, the cutters of the finance police and the coastguard, and the registry of their comings is kept in a logbook ashore, which is filled in only after the hour of arrival has already passed.\n\nBeyond the mole the seabed drops into a trench whose colour is not blue but a lightless indigo, and across its surface the ferry draws a white seam each morning, which the swell unpicks within the quarter hour.\n\nThe reception centre sits inland in a dry valley that the goats once used and the wind still uses, built low to escape the summer glare, since nothing taller than a wall survives the scirocco here; and the service it renders is described in the manuals as hospitality, a word the gate is instructed to honour.\n\nThe coast road climbs to a headland where the lamps are mounted to sweep the water, a headland the fishermen called by another name before the surveys, and the beam goes out across the swell and returns broken, a beam the lenses correct, a beam the chop below disassembles into a hundred smaller lights and reassembles into one, so that a watcher standing at the rail may see the sea twice at once, once as it is and once as the glass gives it back inverted, while the real water swells and the mirrored water subsides.\n\nThe cemetery of the nameless occupies a terrace above the town, a place easy to overlook from the road, and the markers there are numbered rather than lettered.\n\nThe authorities describe their work as rescue, as assistance, as care; the boats are brought in, the engines are cut, the wrists are counted and the names are asked for and rarely given, and the whole operation is logged as a saving of life, though the vessel that performed it will turn south again before dawn.\n\nFrom the terrace the eye runs down to the water: the roofs fall away in white steps, and the harbour opens below like a cupped palm, where the fishing fleet lies idle and the grey hulls lie ready and the ferry lies waiting for the manifest.\n\nThe prison of the strait is also its road: the current carries and the wind carries, and the same water that closes around a hull at midnight will open at dawn into a plain of such flat and shining calm that it seems to have no memory; but there is the matter of the line, a line no surveyor has ever cut into the sea, which becomes perceptible only when a radio set aboard a cutter begins to receive one nation's channel and ceases to receive another's, so that a hull floating still can pass from rescue into interception without moving, the water underneath it unchanged.\n\nIn this decade the sea off the southern cliffs is warming, and the fish the old men netted are going elsewhere.\n\nEverything here undulates, the land in its low terraces, and while the limestone rises and the limestone sinks beneath a thin skin of soil that holds nothing, the water offshore repeats the motion in a slower measure, a measure the island has been keeping since before the first registry; the chop subsides, the swell gathers, the long dilation begins again."
+  },
+  {
+   "i": 2,
+   "text": "The channel that runs between the Pelagie shelf and the long African bank, narrowing where two ridges of drowned limestone approach each other, opens again toward the south into a basin so wide that the eye loses its anchorage, and continues thus, slackening and tightening, taking the shape of the floor beneath it, until the water comes up against the low western cliffs of the island and gathers there in a bay whose arms, closing almost to a mouth, make a harbor of what was open sea, so that a vessel that has crossed four hundred miles of unmarked blue, having nothing to steer by but a bearing and a rumor, must slow and feel its way in where the swell flattens and the color turns from indigo to a pale, floored green.\n\nThe island itself is a tilted slab of pale rock, long since stripped of its soil by the north wind, grazed down to its bones by goats that have been gone for a generation, scored along its spine by a single road that the municipality keeps resurfacing to no visible end; it lies low on the horizon, a hull without mast; and to the west the cliffs stand up sheer out of the water, while to the east the land slides down in dry terraces, and between them the airstrip lies flat as a ruled line.\n\nBelow the cliffs the sea moves in and out of the coves with a patience that has no witness: it swells into the hollows, it subsides, it swells again, each surge arriving a little after the one before, as though the whole basin were breathing through a narrow throat.\n\nThe rock above is honeycombed with caves that the swell has cut and abandoned at successive heights; they are dry now, floored with dust and feathers, and the lowest of them, which still takes water in winter, is named on no chart.\n\nA stone jetty closes the inner harbor, built in a year nobody records and extended twice since, and seems, when the light is low, to float a hand's breadth above its own footing; beneath it the hulls of the impounded boats, which the port authority has arranged in rows to be counted, lie wooden and blue-painted and immobile.\n\nThe apparatus that keeps this place is itself a kind of topography, laid along the contours like scree: a mast on the highest point that turns without sound, four white containers below it that are described in the official documents as reception, a quay that is described as a point of first assistance, and a prefabricated hall, set back among the prickly pears, where the arrivals are registered and photographed and where their fingerprints are taken for their own protection, so that they may be identified later, should the sea return them in a condition that does not permit it otherwise, and the registers are closed each evening at eight.\n\nOffshore a grey cutter holds station, keeping the line that the agency's charts draw at twelve miles, and its wake writes a slow white curve that the wind erases within the hour.\n\nThe line is nowhere to be seen on the water: there is no change of color, no reef, no smell; a boat crosses it and crosses back, and the sea beneath the keel is the same sea, though on one side of it the hull is a rescue and on the other an interception, the difference residing entirely in a position logged to four decimals in an instrument below deck.\n\nSouthward the water dilates again past all measure: it loses the shelf, it loses the green, and nothing interrupts it as far as the Tunisian coast, where the lights come on at dusk in a thin chain, and the fishing fleets go out, and the same swell that flattened in the bay here runs free and unnamed across ninety miles of open channel.\n\nAt dawn the island shows twice: it stands up grey and particular in the east, and it hangs inverted beneath itself in the glassed calm, which the first wind of the morning crumples and takes away; and the watch officer on the mast, who has been awake since three, who records what he sees in a logbook ruled in columns, writes down a shape at eleven degrees, pausing to count the seconds between one lift of the hull and the next, before the horizon tilts once more and the thing is gone.\n\nThese are the forms the place has worn as long as anyone has described it, which is to say for about sixty years.\n\nBut in these last winters the shoreline is changing under the accumulation of what the sea delivers: the coves that the swell cut are silting with bright plastic, and because the currents here turn clockwise and the basin tightens where the ridges approach, the harbor takes what the whole channel sheds; and the municipality, which has no budget for it, sends two men with rakes; they work from the jetty outward, and the water swells and subsides behind them, and the line offshore holds, and the registers are opened again at eight."
+  },
+  {
+   "i": 3,
+   "text": "The channel that divides the two continents narrows here to a trench of open water, and where it narrows it turns the color of slate, running between the Tunisian shelf and the drowned spine of rock that surfaces, at its last gasp, as a single pale island; and the island, which has no river and no spring and takes its water from a plant that hums all night above the harbor, seems to float rather than stand, set down on the blue like a plate on a cloth, so low that a vessel approaching from the south will see the beacon before it sees the land, and the land only when the swell lifts it, and then only as a line of lime, so that the eye must learn to read the horizon twice before it will consent to call that thinness a country, and the mind corrects the eye.\n\nThe water here forgets its own distinctions. The stone of the island is Africa, which the maps concede; the law of the island is Europe, which the maps also concede; the two facts, which refuse to be reconciled by any instrument the harbormaster owns, are obliged to share one anchorage — and so the cutters ride at their moorings in the inner basin, and the gulls work the outfall where the desalination plant returns its brine, and the whole arrangement looks, at seven in the morning, like nothing more than a fishing port in a good season.\n\nSouthward the sea opens and keeps opening: it dilates past the shoal, it widens through the deep channel toward the Libyan coast, and it spreads until the eye surrenders the attempt, because there is nothing in that quarter that will hold a shadow.\n\nThen the satellite sweep, which has no edge a sailor can see, closes over the dilation like a lid; and somewhere beneath the aircraft's track runs a line that no buoy marks, which the patrol logs record to four decimal places and the water does not record at all.\n\nInside that line the sea contracts. The vessel that crosses it, and that crossed nothing perceptible in crossing, ceases at that instant to be a boat in distress and becomes an event, as the duty officer's screen prefers to say; and the master who was a smuggler on one side of the pencil-stroke is, on the other side, a person to be assisted.\n\nThe officers of the mission, who are instructed to render aid to all craft encountered, keep their launches trim and their fenders clean, and they tow the wooden hulls that no longer steer, and they shepherd the rubber ones that cannot be towed; the shepherding is careful, the shepherding is documented, and the launches turn the boats southward with great patience in order to preserve them from the hazards of the deeper passage, while the sun comes up behind the radar mast and the water, briefly, goes the color of tin.\n\nNorthward of the line the sea begins again to widen, to open its long fetch toward the Sicilian channel, and the swell lengthens into the easy rhythm that the hydrographers call a lucid waviness.\n\nThis is the rhythm the island teaches: to rise and subside, to rise and subside; nothing here is still; the dunes migrate across the eastern headland and the headland loses a meter a decade, and the limestone drinks the rain and gives it back as dust, as it has done since the quarrying stopped.\n\nEverything doubles on that water. The cliff stands above Rabbit Bay and the cliff hangs beneath it, inverted in the shallows, and the hull of a launched tender shows twice as it clears the mole, once in air and once in the glass of the harbor, the upper image sharp, the lower image longer and slower and faintly wrong.\n\nTwo measures of the same hour contend for the harbor. The clock of the fishery runs on the season: the boats go out when the water warms, and the catch comes in at the hour it has always come in, which the old men on the mole still predict and the young men no longer bother to learn; the clock of the reception center runs on the ledger, which counts arrivals as the quay counts them, which registers the hour of disembarkation to the minute, so that a person may be in the harbor an hour before being in the record, floating in the gap in order to be made countable, before the photograph fixes the face and the number fixes the photograph.\n\nAt this moment, in the years of the writing, the island's two populations are quietly exchanging proportions.\n\nThe center behind the old airfield, which was built for a hundred and holds what it holds, swells and empties with the weather, for the sea opens and the boats come, and the sea closes when the north wind sets in, which keeps the channel white for a week together; and the cemetery on the slope above the town has been enlarged twice, which the municipal record notes without comment — the stones face south, the stones are mostly unlettered, the sea beyond them subsides and swells and subsides."
+  },
+  {
+   "i": 4,
+   "text": "The channel that divides the two seas narrows here between a shoal and a headland, and where the water shallows over rock it goes the colour of weak tea, so that the strait seems less a passage than a sill; and the island itself, lying low on the horizon like a hull run aground, appears from the air to be a thing the sea is still deciding about, which rises barely forty metres at its crown and falls away in white cliffs on the north side, where the swell has undercut the limestone for ten thousand years, patient enough to wait while a cove opens, slow enough that no one watching from a boat would see a single stone give way, though the floor of the cove is paved with what has fallen.\n\nThe harbour is a hook of grey water that holds perhaps a hundred hulls, that smells of diesel and of drying net, that the patrol vessels enter stern-first in the late afternoon to take on fuel and water: the quay is concrete, the bollards are rust, and the men on the gangway count heads aloud as the ramp comes down.\n\nAbove the quay the cemetery of boats lies open to the weather, stacked three deep and splitting — paint, gunwale, thwart — while the registry in the port office records each hull by a number that no one aboard it ever knew.\n\nThe road from the harbour climbs past a fuel depot whose tanks are the only white things on the hill, and then it bends inland: the airstrip, which takes the whole waist of the island, lies flat as a ruled line across the scrub.\n\nBeyond the strip the garrigue runs to the southern cliffs in a low grey mat that the wind combs one way and the salt burns at the tips, too dry to hold a footprint unless rain has come in the night; and the only tall things are the masts of the coastal radar, which turn all day to sweep an empty quadrant.\n\nThe centre, which the signage calls a facility for reception and first aid, which sits in a stony hollow called the Valley of Ghosts, stands behind two fences and a gate, and the bus that brings people up from the pier is said in the ledgers to deliver them into care, and the officers who meet it are described as assisting with disembarkation, so that the sentence is complete and the forms are signed, and nobody is required to add anything to a wording designed to be sufficient as it is, until the bus returns empty and the gate is drawn shut behind it.\n\nA kilometre south the cliffs begin again, dropping sheer to a sea that has no beach to break on, and the light comes up off the water in sheets.\n\nHere the stone goes ochre at evening — the whole face warms — and the swell runs in long and comes out short, and the gulls hang in the updraught where the wall turns the wind.\n\nThe water in the inlet is so clear that the hull of a sunken skiff shows plain on the bottom, and its shape returns inverted on the surface whenever the chop lies down, so that the thing is both below and above, both keel-down in the sand and keel-up in the mirror of the inlet.\n\nOffshore the sea opens: it widens past the shelf, it loses its floor, it spreads to the full blue breadth of the channel where nothing marks distance but the long swell that lifts and sets down, lifts and sets down; and the plotters in the operations room show it as a grid of boxes, each box a jurisdiction, each with a different set of words for the same body of water, so that a hull crossing a line it cannot see ceases to be a rescue and becomes an interception, the ceasing and the recommencing both occurring in a log entry made ashore.\n\nThe same swell that dilates offshore contracts again in the throat of the harbour, where it rises and falls against the steps.\n\nThese are the dimensions of the island, which can be walked end to end in a morning, and the apparatus laid upon it is measured in the same way — a fence is so many metres, a radar arc so many degrees — while the ledgers thicken, and the numbers that are entered in them grow year by year; and as of this writing the channel is widening again in the only sense that counts, which is the count: more boxes, more lines, more words for one sea."
+  },
+  {
+   "i": 5,
+   "text": "The channel that runs south of Sicily, which narrows there to a corridor of some ninety miles, is pressed between two shelves of limestone, and because the African plate leans north under the water and the Sicilian one leans south to meet it, the seabed rises in a long welt; and the welt, which surfaces at last as a slab of pale rock tilted toward Tunisia, seems almost to drag the whole basin after it, so that the currents gather at the shoal and wrap it, and the swell that arrives from the west must bend, and bends, and when it has bent it begins to climb the terraces of stone until, breaking, the water spreads thin over the shallows and lies there in sheets, and shines.\n\nThe island, which carries no river, which drinks only the rain it can hold in cisterns cut into the limestone, which has learned to ration what it cannot refuse, lies low and dry and bright; the goats work the terraces, the prickly pear holds the walls, the wind goes over the ridge without obstruction.\n\nA surveillance mast stands above the harbour on the island's one high shoulder; it turns through its arc, it turns again, and while it turns the radar paints the water in a slow grey wedge that widens as it reaches out.\n\nBelow it the port opens into two arms of quay, which hold the fishing boats and the ferry, and beyond the arms, where the breakwater ends, the open water begins again in bays and inlets that no road reaches.\n\nThe coast guard keeps a cutter at the inner mole, whose hull is grey and whose decks are washed each morning, ready to put out when the duty room receives a position; and the duty room, which exists to render assistance, logs each hull it is sent to find.\n\nThe approach from the south, which is easier to describe than to make, which runs two hundred and seventy kilometres from the Libyan shore, has been measured and remeasured, and the agency that measures it, whose aircraft fly a racetrack pattern over the deep, whose analysts mark each contact with a number, assigns the contacts to a category and passes the category to a cell on the mainland, in order to assist the coastal authorities of the departure state, so that the boats are turned back toward the shore they left, and the shore receives them.\n\nThe frequencies are open at all hours, to allow the fishermen to call in, and the fishermen call in, and the mast hears them.\n\nThere is a hotspot above the town, built to receive and to register, to count, to photograph; the gate is steel and the fence is mesh, and the files go north by cable while the bodies stay.\n\nThe water in the small harbour is very clear; the hulls of the boats stand on it and their shadows stand under it, and where the bottom is sand the shadow doubles the hull, inverted, so that one keel rides and one keel hangs, and the light between them flickers.\n\nThe sea here is not one sea: it dilates westward into the broad Strait, and it closes again at the Pelagie shoals, which pinch the traffic into lanes that the charts record and the patrols know; and the chart, which prints a line across water that shows nothing of itself, which turns search-and-rescue zone into another state's search-and-rescue zone at a meridian no swimmer could find, decides there what a hull is called, obliging one authority to cease and another to begin, though the swell runs on across it unbroken.\n\nAs I write, in the third week of the crossing season, the registry on the quay fills faster than the island can empty it.\n\nThe lanes that pinch the traffic, which the patrols know and the charts record, dilate once more beyond the shoals, because the shelf falls away there and the colour of the water changes from green to a blue that takes no light back, and the swell that left the slab resumes its old width, which nothing on the island measures; the mast turns, the wedge widens, the water lies open to the north."
+  },
+  {
+   "i": 6,
+   "text": "The channel that runs between the shoal and the headland, which narrows there to a trench of cobalt no wider than a town, bends south where the shelf falls away and the cold water climbs, and continues as a single uninterrupted road of swell, broken only by the island that sits athwart it, seeming to hold the two continents apart with the flat of one limestone hand, a hand that the wind has scoured and the salt has pitted until it has learned to shed everything that touches it, so that even the rain, when it comes in February, when it arrives all at once to flood the dry stone gullies, runs off and is gone by evening.\n\nLampedusa, which belongs geologically to Africa and administratively to Europe, which lies nearer to Tunisia than to Sicily, which measures some twenty square kilometres of dolomite and prickly pear and has never managed to hold fresh water, is a lid upon a drowned plateau; its cliffs stand white above the water where the swell has undercut them, its single harbour opens east because the prevailing weather comes from the northwest, and its airstrip runs the long way of the island because there is no other way it could run.\n\nThe sea arrives at the eastern cove in long combers out of the open; it rises, it thins, it goes glassy over the sand, and it withdraws, dragging the gravel back with a sound like a drawer closing.\n\nThe patrol boats lie against the quay in a grey line that the morning does not flatter, hulls streaked with rust at the hawseholes; forward of the bridge each one carries a numbered stencil, which is the only writing on the vessel that anyone ashore can read.\n\nA body of water crosses a line drawn on a chart, a line that is in the water nowhere and on the paper everywhere, and ceases at that instant to be the high seas and becomes territorial sea; nothing in the water changes, no shade, no temperature, no swell—only the plotter on the bridge, which registers the crossing and begins to write a different column of figures.\n\nThe low mole that encloses the inner basin, built to shelter the fishing fleet, which it still shelters, carries along its spine a row of floodlights, and the lights burn all night above the moored hulls, doubled beneath them in the oily black of the basin, where each lamp hangs inverted, a second and lower lamp, each filament reversed in the water that is the island's only mirror, so that the basin appears to go down as far as the lights go up, until a tender crosses and the whole lower town of lights shivers and knits itself together again.\n\nThe work of the apparatus here is to receive, to assist, to identify and register; the registering is done in a hangar beyond the airstrip, and the assisting is done with blankets, with plastic sandals, and with a numbered wristband.\n\nThe vessels go out to render aid, to bring in, to escort; they fuel, they sail, they return; they bring the rescued to the mole and they hand them to the people in the white suits, and they take on fuel again before the deck is dry.\n\nThe centre lies inland in a dry valley out of sight of the town; it was built for a few hundred, and it holds what it holds, because the arrivals do not consult it, because the weather in the channel decides, because the smugglers read the same forecasts the coastguard reads, and because a flat sea in March is an invitation written in a language everybody has learned.\n\nEverything on the island is oriented to the channel: the road bends toward it, the cemetery faces it, the harbour masters watch it on three screens at once, screens on which the sea appears as a grey field scattered with small triangles that are given names only when they answer; and the radar turns, the radar that sees the surface and not the water, that sees a hull and not a hold, that will show a twelve-metre wooden boat as a point of light exactly the size of a trawler's point of light, so that distinguishing them requires a voice on channel sixteen, which the boat, having no radio, cannot provide.\n\nBeyond the last light of the mole the channel undulates away southward, dark, rising and subsiding under a dry wind.\n\nThe movement is the island's whole grammar, a rhythm of swelling and slackening that the stone repeats in its terraces, and as the year turns the crossings slacken and swell with it, so that in the season when the water lies down flat, in the weeks that the fishermen call the oiled days, the boats come and the hangar fills, and the channel that was a barrier becomes a corridor, a corridor that is open for as long as the barometer permits; this month, as the registers in the hangar are filling faster than in any March recorded, the wind is dropping."
+  },
+  {
+   "i": 7,
+   "text": "The channel that divides the two shores runs narrow here, between the shelf of Africa and the last crumb of Europe, and the water, which lies open and lucid above the drowned ridge, changes its character as the seabed rises, so that the shallows glare turquoise over sand and darken to indigo over rock, and the island itself sits low on that brightness, a single tilted slab of limestone turned always to the south, its northern cliffs standing sheer to be hammered by the open sea, while the southern coast, which the fishermen once worked and the patrol vessels now cross, slides gently down until the stone lets the water in, where the bays narrow to pools and the pools to the cupped rock of the Rabbit shore, and even there the swell comes in, and comes in again.\n\nLampedusa, which belongs geologically to one continent and administratively to another, which measures some twenty square kilometres of thyme and dust and dry wall, which has neither river nor spring but tanks to catch what rain arrives, is therefore an island of arrivals: the ferries arrive twice weekly from Porto Empedocle, the summer visitors arrive by air with their folded towels, the grey hulls arrive at every hour out of the dark and tie up at the commercial quay under floodlight.\n\nOn the quay a long trestle stands, and the officers of the Guardia di Finanza assist the disembarked towards the buses, which wait with their engines running, before the gate of the hotspot closes behind them for the night.\n\nThe centre at Contrada Imbriacola, which was built for four hundred and holds at times eleven hundred, lies in a bowl of rock inland from the airstrip; the Prefecture educates the new arrivals in the procedures of identification, which begins with the taking of the fingers.\n\nAbove all this the radar turns on its mast, which sweeps the channel twice a minute and feeds the screens at the operations room; the officers watch the sea contract to a lit rectangle, as the cursor crawls; and the dark beyond that rectangle is where the small boats are, which the instruments are patient enough to find.\n\nThe sea is the one body here that will not hold a single name: the stretch that a skipper calls the Strait, which the charts rule off into zones and sectors, which no eye distinguishes from the water a hundred metres west of it, is also a frontier, and the frontier is a line drawn on paper, which an officer reads from an instrument and not from the water, where the same wave that was high seas at one moment is territorial at the next, and search becomes rescue, and rescue becomes transfer, and transfer becomes custody, until a name has settled on a person who entered the strait without one.\n\nThe island lifts and falls with the long swell, seeming to breathe against the horizon, and the horizon breathes back.\n\nIn the harbour at evening the water is clear enough to show the hulls twice: each cutter floats on the surface and hangs inverted beneath it, keel upward in the mirror of the basin, and the reflection trembles and reassembles whenever the wash of a launch crosses the mooring.\n\nThe flotilla widens from the pier at dawn: the cutters go out at speed and the long grey Frontex ship stands further off, where she keeps her station for a fortnight, and watches, and reports, and comes no nearer than the law requires.\n\nBeyond the harbour mouth the water opens again and keeps opening: the shelf falls away into two thousand metres of blue, the channel dilates southward toward Tunisia and the Libyan coast, which lies some three hundred kilometres off and sends its boats north through the gap between the banks; and on the cliff above the Cala there is the second cemetery, the plot for the unnamed, whose graves bear numbers where the names should be, because the sea delivers bodies faster than the registry can identify them, giving each a code instead, as these last years the plot continues to enlarge.\n\nUnder the cliff the swell works at a fissure that it has been widening since before the Phoenicians.\n\nEverything on Lampedusa is arranged around that movement, which is the island's only industry and its only history now, for the stone is barren and the fish have thinned, and where the goats once grazed the hard scrub the antennae stand instead, and the whole small plateau has become a machine for the receiving of what the water brings, which does not stop arriving; the swell comes in, and comes in again."
+  },
+  {
+   "i": 8,
+   "text": "The channel that divides the island from the African shelf narrows here into a trough of shallow water, scored by the banks and shoals that the current has been combing southward since before any chart recorded them, and because the shelf drops away without warning on the eastern flank and the bottom rises again to within fathoms of the keel on the western, the whole passage behaves less like open water than like a corridor with doors, which the patrol hulls enter at dusk to sweep, their wakes braiding and unbraiding across a surface that goes on smoothing itself long after the engines have passed, so that the hour before moonrise, in order to be read at all, must be read twice, once as weather and once as traffic, before it settles and the swell resumes its own slow argument.\n\nThe island itself lies low and pale against that argument, a tilted limestone raft that carries no river, whose cisterns hold winter in their throats until August drinks them dry, whose southern cliffs stand undercut and fluted by a sea that has learned to hollow before it breaks; the harbour opens on the east, where the mole throws its arm around the basin, where the hulls of impounded boats lie stacked in the yard above the quay, and where the wind, when it comes from the Sahara, carries a fine ochre dust that settles on everything and whitens nothing.\n\nFrom the airstrip the land runs out in terraces of burnt thyme toward the cliff edge; the terraces end, and the horizon begins, and nothing between the two marks where one authority stops and another, equally invisible, begins to hold.\n\nBeyond the mole the water deepens in stages, each stage a different colour of blue, which the fishermen name by the fish that work it; and the last stage, the one that no one names, is where the rescue zone of one state is held to abut the rescue zone of another.\n\nThe coastguard cutter stands offshore with its running lights dimmed, whose radar sweeps the arc between the island and the bank and returns, every forty seconds, a scatter of soft returns too small to resolve, holding station in order to observe the sector until the aircraft overhead has fixed a position; and the aircraft, which circles at eight thousand feet, is there to see without approaching.\n\nThe reception centre sits inland in a hollow called the Valley of the Shepherd, which the slope was once terraced to shelter from the north wind, whose roofs show white from the road above; and the perimeter fence, which follows the contour of the hollow exactly, which rises where the ground rises and falls where the ground falls, encloses two hectares of gravel, and is spoken of, in the ledgers of the prefecture, as a measure for the protection of persons, framed to assist the arriving in their transit while the register is compiled and the fingerprints are taken and the numbers are returned, by cable, to the mainland.\n\nThe gravel is hosed each morning to keep the dust from rising, and the buses leave at first light for the airstrip.\n\nThe sea has an aptitude for giving back; it gives back timber, it gives back the bright blue plastic of a fuel drum and the foam of a cushion, and it gives back, less often, what the current has carried past the headland before the search began.\n\nOn the far side of the island the cliffs face Africa directly; the limestone there is cut into cavities, and the swell enters them with a sound that is not quite a report, when the trough empties and the air compresses and the water climbs the shaft and lets go.\n\nStand on the rim at Cape Mallow at slack tide and the whole channel seems to breathe: it widens, it loosens, the pressure goes out of it, and then it gathers again toward the strait, where the set of the current pinches the flow between the bank and the island and will not release it; and the same water, which the sailing directions call open sea north of the twelfth parallel and territorial water south of it, which the log of the cutter enters under one heading at twenty-three hundred and under another at twenty-three hundred and four, changes its name without changing its colour, the boundary being nowhere in the water at all but only in the instrument, which must be read in order to be obeyed, as a line is obeyed that no eye has ever found.\n\nIn that water the island stands twice, once in stone and once inverted in the glass of the harbour.\n\nThese days the second island is the one that lengthens, since the cameras multiply along the cliff road and the registers thicken in the prefecture, while the first grows no larger than the limestone that the winter storms are quietly removing from its southern face; and the undulation that the swell performs in the channel each night, rising and settling and rising, is the shape of everything the island has yet to do: the crossing comes, the lists are drawn, the buses leave at first light."
+  },
+  {
+   "i": 9,
+   "text": "The channel that divides the two shores narrows here to a trough of water scarcely ninety miles across, and the shelf beneath it, which for most of its length lies flat and sedimentary under the swell, rises abruptly at a point that no chart marks with any feature of land, so that the depth contracts, the current quickens, and the whole body of the sea, which has been running wide and unhurried out of the southwest, begins to crowd upon itself, gathering in the long grooves it has cut between the banks, until a single island, lifted clear of that crowding and set like a flat stone upon the glare, interrupts the horizon, as though some patience below had been waiting through the centuries to break surface, and, having broken it, had stopped.\n\nA low limestone table is what the island is, tilted northward, whose southern cliffs fall sheer to a water so clear it publishes the stones beneath, whose northern face shelves into coves no deeper than a cistern, which the fishing craft have learned to enter sideways: the ground bears no river, no spring surfaces in any hollow, and the rain that falls in November is caught on roofs and held in tanks beneath the houses.\n\nNothing on the island is more than a hundred and thirty-three meters above the sea; the land simply stops, and the stopping is sudden, because the rock has been undercut for a thousand years by water that enters the fissures and freezes nothing, only widens them.\n\nThe harbor lies on the eastern flank, a bay whose mouth faces the Levant, and the quay runs out from it in a grey arm that the port authority keeps lit through the night, a light which can be seen, on a still evening, from eleven miles out.\n\nTwo currents meet off the cape, one that arrives cold along the Tunisian shelf and one that returns warm from the east, and the water appears to stand still where they touch, though neither current rests; there is a seam there, visible from the cliff, that the gulls have learned to read.\n\nThe vessel that patrols this seam is grey as well, a cutter whose hull was designed to intercept and whose deck carries a pair of mounted glasses, and she makes nine knots in the dark without running lights, moving along a line that exists only in the software of two ministries, a line that the sea does not acknowledge, since water passes over it unaltered, and craft pass over it altered entirely, because to cross it northward is to acquire a name, while to drift back south under tow is to lose the name again, and the ledger closes.\n\nThe radar on the headland turns at six revolutions a minute, sweeping the channel to the limit of its arc, and its beam touches everything afloat between the island and the Libyan sand.\n\nThere is a word for what the apparatus does to those it lifts from the water: it is said to rescue them, the register is settled, the boats are brought in and the people are counted, and the counting is called assistance in the forms, because the forms have a column for it.\n\nBeyond the mole stands the first-reception center at Imbriacola, a compound of prefabricated blocks; the gate is monitored, and the perimeter is described in the municipal plan as a facility for welcome, where the new arrivals are instructed in the procedures, and the instruction is recorded, and the recording is filed by date.\n\nOut in the channel the same water runs under three names; it is territorial for twelve miles, and contiguous for twelve more, where a vessel's status changes with no change in the vessel, and the only instrument that registers the change is a transponder log kept ashore; the sea itself shows nothing, giving back from its surface the hull that rides upon it, the same hull inverted and trembling, which the swell lengthens and shortens as the light declines, so that a boat seen from the cliff appears to be two boats, one standing upright in the air and one hanging downward in the glass of the water, until the wind rises and erases the lower one.\n\nAt dusk the light on the mole begins its interval, a rhythm of three seconds that the whole bay keeps.\n\nThis is the island as it stands in the spring of this decade, a shelf of stone whose population doubles and halves with the weather, and as the season turns the wind backs easterly, and the crossings resume, because the channel calms in the months when the sirocco slackens, which the smugglers at Zuwarah compute as carefully as any harbormaster; and the water that contracted here among the banks spreads out again beyond the cape, dilating northward over the deep plain toward Sicily, toward the long opening of the gulfs: it widens, and goes on widening, and is not measured again until the coast."
+  }
+ ]
+}

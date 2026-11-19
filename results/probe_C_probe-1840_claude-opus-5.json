@@ -1,0 +1,436 @@
+{
+ "probe": "recognition",
+ "variant": "C",
+ "prompt_source": "specs/probe/recognition_C_it_D2.txt",
+ "model": "claude-opus-5",
+ "backend": "anthropic",
+ "n": 10,
+ "tag": "probe-1840",
+ "started_utc": "2026-11-19T18:58:32+00:00",
+ "temperature": null,
+ "max_tokens": 1024,
+ "thinking": "disabled",
+ "provider_routing": null,
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nLEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>",
+ "prompt_file": "probe_C_probe-1840_claude-opus-5_PROMPT.txt",
+ "elapsed_s": 56.2,
+ "failure": null,
+ "recognised": 10,
+ "request": {
+  "model": "claude-opus-5",
+  "max_tokens": 1024,
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The material below was prepared for a writing experiment. It was derived from one existing\nliterary passage, which is not shown. Identify that passage: from which literary work, by which author, was the\nmaterial below derived?\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nLEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the material led you to this answer>"
+   }
+  ],
+  "thinking": {
+   "type": "disabled"
+  }
+ },
+ "responses": [
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoLd4fiifvG2ZW1MQaV",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 248,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoLzxnhNeeUzhsUbJHY",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 279,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoMQF1Ufhhq9tmnmgp2",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 253,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoMkfqEo88TBzCMCUT8",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 259,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoN8S32KQi3zaqWGr68",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 277,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoNVsscuQvetuQeP16t",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 276,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoNscLCmQpacjT3KArb",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 283,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoPGrp5ivq6tTTGrLv1",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 275,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoPiQUFYdbbH2nbpbQ6",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 274,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChCoQ6n7aHMwwhjLTuCXi",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 255,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  }
+ ],
+ "answers": [
+  {
+   "i": 0,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone and the Spanish garrison/castle\nCONFIDENCE: 97\nEVIDENCE: The embargoed words (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, \"spagnoli\") are the signature vocabulary of Manzoni's famous \"Quel ramo del lago di Como\" incipit; the long, heavily nested first period followed by shorter topographic periods and a final sentence on the Spanish soldiery matches that passage's structure.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone and the Spanish garrison/castle",
+   "confidence": 97,
+   "evidence": "The embargoed words (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, \"spagnoli\") are the signature vocabulary of Manzoni's famous \"Quel ramo del lago di Como\" incipit; the long, heavily nested first period followed by shorter topographic periods and a final sentence on the Spanish soldiery matches that passage's structure.",
+   "recognised": true
+  },
+  {
+   "i": 1,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening description of Lake Como and the Lecco branch in Chapter I, including the \"Resegone\" mountain and the lanes, vineyards and the Spanish garrison/castle with its soldiers\nCONFIDENCE: 96\nEVIDENCE: The embargoed vocabulary (Como, Lecco, Resegone, giogaia, Lombarda, Spagnoli, vendemmia, stradette, valloncelli, serpeggiamento, \"quel ramo... si scorcia\") is precisely the lexicon of Manzoni's famous opening topographical description; the required schema of long periods with a mountain-landscape scene plus a policing/garrison presence described in the same register matches that incipit.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening description of Lake Como and the Lecco branch in Chapter I, including the \"Resegone\" mountain and the lanes, vineyards and the Spanish garrison/castle with its soldiers",
+   "confidence": 96,
+   "evidence": "The embargoed vocabulary (Como, Lecco, Resegone, giogaia, Lombarda, Spagnoli, vendemmia, stradette, valloncelli, serpeggiamento, \"quel ramo... si scorcia\") is precisely the lexicon of Manzoni's famous opening topographical description; the required schema of long periods with a mountain-landscape scene plus a policing/garrison presence described in the same register matches that incipit.",
+   "recognised": true
+  },
+  {
+   "i": 2,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening description of the Lake of Como and the Lecco shore in Chapter I, including the sketch of the Spanish garrison/bravi territory\nCONFIDENCE: 97\nEVIDENCE: The embargoed words (Como, Lecco, Resegone, giogaia, Adda, San Martino, serpeggiamento, valloncelli, paesetti) are the signature vocabulary of Manzoni's famous \"Quel ramo del lago di Como\" incipit; the long, heavily subordinated opening periods followed by shorter ones, and the human/military presence described in the same topographical register, match that chapter's structure.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening description of the Lake of Como and the Lecco shore in Chapter I, including the sketch of the Spanish garrison/bravi territory",
+   "confidence": 97,
+   "evidence": "The embargoed words (Como, Lecco, Resegone, giogaia, Adda, San Martino, serpeggiamento, valloncelli, paesetti) are the signature vocabulary of Manzoni's famous \"Quel ramo del lago di Como\" incipit; the long, heavily subordinated opening periods followed by shorter ones, and the human/military presence described in the same topographical register, match that chapter's structure.",
+   "recognised": true
+  },
+  {
+   "i": 3,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone and the Spanish garrison/soldiery\nCONFIDENCE: 97\nEVIDENCE: The embargoed words (Como, Lecco, Resegone, giogaia, San Martino, \"spagnoli\", vendemmia, serpeggiamento) are the signature lexicon of Manzoni's famous \"Quel ramo del lago di Como\" opening, and the task's target—a topographical panorama into which a policing/garrison presence is folded in the same descriptive register—matches that chapter's landscape plus Spanish soldiery.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone and the Spanish garrison/soldiery",
+   "confidence": 97,
+   "evidence": "The embargoed words (Como, Lecco, Resegone, giogaia, San Martino, \"spagnoli\", vendemmia, serpeggiamento) are the signature lexicon of Manzoni's famous \"Quel ramo del lago di Como\" opening, and the task's target—a topographical panorama into which a policing/garrison presence is folded in the same descriptive register—matches that chapter's landscape plus Spanish soldiery.",
+   "recognised": true
+  },
+  {
+   "i": 4,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone, the hillside paths and the Spanish garrison/castellano\nCONFIDENCE: 97\nEVIDENCE: The embargoed vocabulary (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, spagnoli, vendemmia) is exactly the lexicon of Manzoni's famous \"Quel ramo del lago di Como\" incipit; the long opening period with deeply nested relatives and the later shift to the soldiers garrisoned there matches the chapter's structure of landscape followed by the policing presence described in the same register.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone, the hillside paths and the Spanish garrison/castellano",
+   "confidence": 97,
+   "evidence": "The embargoed vocabulary (Como, Lecco, Resegone, giogaia, andirivieni, ciottoloni, valloncelli, spagnoli, vendemmia) is exactly the lexicon of Manzoni's famous \"Quel ramo del lago di Como\" incipit; the long opening period with deeply nested relatives and the later shift to the soldiers garrisoned there matches the chapter's structure of landscape followed by the policing presence described in the same register.",
+   "recognised": true
+  },
+  {
+   "i": 5,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone, the hillside paths and the Spanish garrison/castellano\nCONFIDENCE: 97\nEVIDENCE: The embargoed vocabulary (Como, Lecco, Resegone, giogaia, lombarda, Spagnoli, andirivieni, valloncelli, stradette, vendemmia) is precisely the lexicon of Manzoni's famous topographical incipit, and the requested schema — long opening periods of landscape description followed by shorter ones and a passage on the occupying soldiery described in the same register as the terrain — matches Chapter I of I promessi sposi.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone, the hillside paths and the Spanish garrison/castellano",
+   "confidence": 97,
+   "evidence": "The embargoed vocabulary (Como, Lecco, Resegone, giogaia, lombarda, Spagnoli, andirivieni, valloncelli, stradette, vendemmia) is precisely the lexicon of Manzoni's famous topographical incipit, and the requested schema — long opening periods of landscape description followed by shorter ones and a passage on the occupying soldiery described in the same register as the terrain — matches Chapter I of I promessi sposi.",
+   "recognised": true
+  },
+  {
+   "i": 6,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening topographical description of chapter I — the branch of Lake Como, the Resegone, the Adda, the lanes and hills near Lecco, culminating in the Spanish garrison/soldiery introduced in the same descriptive register\nCONFIDENCE: 97\nEVIDENCE: The embargoed lexicon is precisely the proper names and marked diction of Manzoni's famous incipit (\"Quel ramo del lago di Como...\", Adda, Lecco, Resegone, giogaia, valloncelli, Spagnoli), and the brief required to render a landscape with its policing apparatus described like topography matches the chapter's close, where the Spanish garrison is catalogued alongside the hills and lanes.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening topographical description of chapter I — the branch of Lake Como, the Resegone, the Adda, the lanes and hills near Lecco, culminating in the Spanish garrison/soldiery introduced in the same descriptive register",
+   "confidence": 97,
+   "evidence": "The embargoed lexicon is precisely the proper names and marked diction of Manzoni's famous incipit (\"Quel ramo del lago di Como...\", Adda, Lecco, Resegone, giogaia, valloncelli, Spagnoli), and the brief required to render a landscape with its policing apparatus described like topography matches the chapter's close, where the Spanish garrison is catalogued alongside the hills and lanes.",
+   "recognised": true
+  },
+  {
+   "i": 7,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening topographical description of Chapter I — Lake Como, the Lecco branch, the Resegone, the Adda, and the Spanish castellan's soldiery\nCONFIDENCE: 97\nEVIDENCE: The embargoed vocabulary (Como, Lecco, Adda, Resegone, giogaia, San Martino, \"Quel ramo... si piega... e si restringe\" landscape terms, vendemmia, spagnoli) is precisely the lexicon of Manzoni's famous opening description; the schema's long first period with deeply nested relatives matches \"Quel ramo del lago di Como...\" and the later periods match the descent to the lanes and the garrisoned castle.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening topographical description of Chapter I — Lake Como, the Lecco branch, the Resegone, the Adda, and the Spanish castellan's soldiery",
+   "confidence": 97,
+   "evidence": "The embargoed vocabulary (Como, Lecco, Adda, Resegone, giogaia, San Martino, \"Quel ramo... si piega... e si restringe\" landscape terms, vendemmia, spagnoli) is precisely the lexicon of Manzoni's famous opening description; the schema's long first period with deeply nested relatives matches \"Quel ramo del lago di Como...\" and the later periods match the descent to the lanes and the garrisoned castle.",
+   "recognised": true
+  },
+  {
+   "i": 8,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone, the valleys and paths, and the Spanish garrison/castellano\nCONFIDENCE: 97\nEVIDENCE: The embargoed vocabulary (Como, Lecco, Resegone, giogaia, Lombarda, ciottoloni, Spagnoli, San Martino) is precisely the lexicon of Manzoni's famous incipit, and the schema's long opening periods with heavy relative nesting match \"Quel ramo del lago di Como...\"; the target's \"policing apparatus described like topography\" mirrors the Spanish garrison presented as part of the landscape.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening description of Lake Como and the Lecco branch in Chapter I, including the view of the Resegone, the valleys and paths, and the Spanish garrison/castellano",
+   "confidence": 97,
+   "evidence": "The embargoed vocabulary (Como, Lecco, Resegone, giogaia, Lombarda, ciottoloni, Spagnoli, San Martino) is precisely the lexicon of Manzoni's famous incipit, and the schema's long opening periods with heavy relative nesting match \"Quel ramo del lago di Como...\"; the target's \"policing apparatus described like topography\" mirrors the Spanish garrison presented as part of the landscape.",
+   "recognised": true
+  },
+  {
+   "i": 9,
+   "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi (The Betrothed)\nPASSAGE: The opening description of the Lake of Como and the Lecco territory in Chapter I, extending to the castle/Spanish garrison and the bravoes' setting\nCONFIDENCE: 97\nEVIDENCE: The embargoed vocabulary (Como, Lecco, Resegone, giogaia, San Martino, Milano, valloncelli, vendemmia, \"Spagnoli\") is the signature lexicon of Manzoni's famous \"Quel ramo del lago di Como\" opening; the long first period with deeply nested relatives and the shift to a military/garrison presence described in the same topographic register matches that chapter's structure.",
+   "author": "Alessandro Manzoni",
+   "title": "I promessi sposi (The Betrothed)",
+   "passage": "The opening description of the Lake of Como and the Lecco territory in Chapter I, extending to the castle/Spanish garrison and the bravoes' setting",
+   "confidence": 97,
+   "evidence": "The embargoed vocabulary (Como, Lecco, Resegone, giogaia, San Martino, Milano, valloncelli, vendemmia, \"Spagnoli\") is the signature lexicon of Manzoni's famous \"Quel ramo del lago di Como\" opening; the long first period with deeply nested relatives and the shift to a military/garrison presence described in the same topographic register matches that chapter's structure.",
+   "recognised": true
+  }
+ ]
+}
