@@ -3,6 +3,7 @@
 
     python3 scripts/make_production_table.py                    # markdown to stdout
     python3 scripts/make_production_table.py --csv table.csv    # and a csv beside it
+    python3 scripts/make_production_table.py --table1 --csv ... # Table 1: one row per cell
 
 One row per (model, language, degree), each the mean over that cell's candidates,
 which is what the paper's table reports. Reads the scored files and pairs each
@@ -48,9 +49,36 @@ def label(model):
     return model or "?"
 
 
-def cells(allow_mixed):
+# Table 1 rule (--table1, 2026-11-20). Without it every scored file is a row, so a cell
+# run twice appears twice.
+#  - A rerun at a higher token cap (`-mt<N>` in the tag) supersedes the same cell at a
+#    lower cap: the 2048 open-model cells are truncated, and Qwen3 IT D3 still lost 2 of
+#    10 texts at 4096, so its 8192 run stands in for both.
+#  - Side arms belong to §4.4 and the appendix, not Table 1: the Opus replicate and clean
+#    reruns (pooling them is still undecided), effect-free, no-embargo, discourse-type
+#    controls, Fable 5.
+TABLE1_EXCLUDE = re.compile(r"-rep_|effectfree|noemb|ctrl-|opus5_clean|fable5")
+MT = re.compile(r"-mt(\d+)")
+
+
+def table1(paths):
+    keep = {}
+    for s in paths:
+        if TABLE1_EXCLUDE.search(s.name):
+            continue
+        key = MT.sub("", s.name)
+        cap = int(m.group(1)) if (m := MT.search(s.name)) else 2048
+        if key not in keep or cap > keep[key][0]:
+            keep[key] = (cap, s)
+    return sorted(s for _, s in keep.values())
+
+
+def cells(allow_mixed, only_table1=False):
     out, hashes = [], collections.defaultdict(set)
-    for s in sorted(RESULTS.glob("*scored*.json")):
+    paths = sorted(RESULTS.glob("*scored*.json"))
+    if only_table1:
+        paths = table1(paths)
+    for s in paths:
         if "legacy" in s.parts or "metric_validation" in s.name:
             continue
         d = json.loads(s.read_text(encoding="utf-8"))
@@ -91,14 +119,16 @@ def main():
     ap.add_argument("--csv")
     ap.add_argument("--regime", choices=["constrained", "unconstrained"])
     ap.add_argument("--allow-mixed-source", action="store_true")
+    ap.add_argument("--table1", action="store_true",
+                    help="one row per cell under the Table 1 rule (see TABLE1_EXCLUDE)")
     a = ap.parse_args()
 
-    rows, refs = cells(a.allow_mixed_source)
+    rows, refs = cells(a.allow_mixed_source, a.table1)
     if a.regime:
         rows = [r for r in rows if r["regime"] == a.regime]
     order = {"Opus 5": 0, "Opus 4.8": 1, "Fable 5": 2, "Qwen3-235B (ACES)": 3,
              "Qwen3-235B (OpenRouter)": 4, "Kimi-K2": 5, "Llama-4-Maverick (ACES)": 6,
-             "Llama-4-Maverick (bf16, Delta)": 7}
+             "Llama-4-Maverick (bf16, Delta)": 7, "Qwen2.5-72B (ACES)": 8}
     rows.sort(key=lambda r: (r["regime"] != "constrained", order.get(r["model"], 9),
                              r["lang"], r["degree"]))
 

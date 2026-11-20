@@ -21,6 +21,9 @@
 #       scripts/manzoni_constrained_1840_aces.sbatch                  # Qwen3-235B
 #   sbatch --gres=gpu:h100:8 --export=ALL,MODEL=RedHatAI/Llama-4-Maverick-17B-128E-Instruct-FP8,TP=8,MAXTOK=4096,REFDIR=ref-1840 \
 #       scripts/manzoni_constrained_1840_aces.sbatch                  # Maverick
+# LANGS and DEGREES pick single cells (2026-11-20: Qwen3 IT D3 still cut 2 of 10 at 4096):
+#   sbatch --export=ALL,LANGS=it,DEGREES=D3,MAXTOK=8192,REFDIR=ref-1840 \
+#       scripts/manzoni_constrained_1840_aces.sbatch
 #=============================================================================
 #SBATCH --job-name=manzoni-constr
 #SBATCH --partition=gpu
@@ -55,6 +58,7 @@ MODEL=${MODEL:-Qwen/Qwen3-235B-A22B-Instruct-2507-FP8}
 TP=${TP:-4}
 N=${N:-10}
 DEGREES=${DEGREES:-D2 D3}
+LANGS=${LANGS:-it en}
 MAXTOK=${MAXTOK:-2048}
 REFDIR=${REFDIR:-}
 SHORT=$(basename $MODEL)
@@ -77,7 +81,7 @@ ref_of() { echo "$REFDIR/production_${2}_${1}_${BASETAG}_${SLUG}.json"; }   # la
 
 #--- pre-flight: same prompt as the run being repeated, before any GPU time ---
 if [ -n "$REFDIR" ]; then
-  for LANG in it en; do
+  for LANG in $LANGS; do
     for DEG in $DEGREES; do
       python scripts/run_homeo.py --print-prompt --lang $LANG --degree $DEG \
         --domain specs/domain_brief_3item.txt --same-prompt-as "$(ref_of $LANG $DEG)" \
@@ -88,7 +92,7 @@ if [ -n "$REFDIR" ]; then
 fi
 
 echo "=== job $SLURM_JOB_ID on $SLURMD_NODENAME ==="; date -Is
-echo "model=$MODEL tp=$TP n=$N degrees='$DEGREES' max_tokens=$MAXTOK refdir='$REFDIR'  (1840 source, menu-free patterns)"
+echo "model=$MODEL tp=$TP n=$N langs='$LANGS' degrees='$DEGREES' max_tokens=$MAXTOK refdir='$REFDIR'  (1840 source, menu-free patterns)"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 nohup vllm serve $MODEL \
@@ -108,7 +112,7 @@ done
 [ "$READY" -eq 1 ] || { echo "vllm not ready in 50 min"; tail -80 vllm-constr-$SLURM_JOB_ID-$SHORT.log; exit 1; }
 
 mkdir -p results
-for LANG in it en; do
+for LANG in $LANGS; do
   for DEG in $DEGREES; do
     echo; echo "=== $LANG / $DEG : $SHORT (constrained, 1840) ==="
     SAME=()
