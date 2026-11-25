@@ -27,6 +27,11 @@
   ],
   "related_identifiers": [
     {
+      "identifier": "10.17613/fkp22-mqh13",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
       "identifier": "10.17613/1p8bw-67y06",
       "relation": "isSupplementTo",
       "scheme": "doi"

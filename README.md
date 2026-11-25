@@ -21,6 +21,8 @@ Marchesini & Franchi, *Keeping It in Shape: Semantic Transpositions of a Form-Bo
 **Manzoni stress test** (§5, Appendix A, and the discourse-type control) here in the root,
 and the **Queneau ladder** (§4, Appendices C and D, Tables 2–6) in [`queneau/`](queneau/README.md),
 which has its own README with a table-by-table map and a run-by-run `PROVENANCE.md`.
+The accepted manuscript is deposited open access (CC BY 4.0) on Humanities Commons CORE:
+<https://doi.org/10.17613/fkp22-mqh13>.
 
 **Notation.** The paper names the degrees D₀ (ordered tree), D₁ (order-free dependencies),
 D₂ (clause nesting), D₃ (clause inventory) and D₄ (depth). The code below predates those
