@@ -454,14 +454,16 @@ def structure(P, cells, extra, src_words, ik, nk, sfx):
             a, b = find(cells, model, lang, "D2"), find(cells, model, lang, None, "none")
             if not (a and b):
                 continue
-            arms = [("July", [a], [b])]
+            # only the Opus cells are both July runs; the Qwen3 pairs set a November
+            # rerun against a July (ACES) or a clean-prompt (OpenRouter) no-pattern run
+            arms = [("July" if model == "Opus 5" else "", [a], [b])]
             if model == "Opus 5":
                 l = lang.lower()
                 arms.append(("pooled", [a, extra[EXTRA[0].format(l=l)]],
                              [b, extra[EXTRA[1].format(l=l)]]))
             for tag, A, B in arms:
                 n = f"{len(vals(A, ik))} v {len(vals(B, ik))}"
-                P(f"| {model} ({tag}) | {lang} | {n} | " +
+                P(f"| {model}{f' ({tag})' if tag else ''} | {lang} | {n} | " +
                   " | ".join(fmt_test(vals(A, k), vals(B, k))
                              for k in (ik, nk, "depth_sim", "coherence")) +
                   f" | {m(A, 'words'):.0f} v {m(B, 'words'):.0f} |")
