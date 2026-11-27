@@ -1,0 +1,593 @@
+{
+ "probe": "loopA",
+ "manifest": "specs/probe/p2_opening_check_1127.json",
+ "manifest_sha1": "2e6062b1ee581278bb4df46d29d563c358e2510b",
+ "manifest_sources": null,
+ "tag": "p2check-1127",
+ "params": {
+  "backend": "anthropic",
+  "model": "claude-opus-5",
+  "provider": null,
+  "n": 5,
+  "temperature_arg": 0.9,
+  "max_tokens": 1024,
+  "thinking": "disabled",
+  "on_refusal": "record and continue"
+ },
+ "started_utc": "2026-11-27T23:18:47+00:00",
+ "prompt_file": "probe_p2_opening_check_1127_p2check-1127_claude-opus-5_PROMPTS.jsonl",
+ "endpoints": [],
+ "items": {
+  "P2check-one": {
+   "test": 2,
+   "question": "identity",
+   "pattern": "C-P2-01",
+   "wording": "both",
+   "id": "P2check-one",
+   "base": "T2-ident-C-P2-01-both",
+   "variant": "one",
+   "prompt_sha1": "1ee66cfd9dcff70264ab9db2215c2298767e930b",
+   "elapsed_s": 20.8,
+   "failure": null,
+   "recognised": 5,
+   "refused": [],
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: One syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    },
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: One syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    },
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: One syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    },
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: One syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    },
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: One syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHf1x8ym5PozJEq4ti8",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 403,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 203,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    },
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHfLMg3A78cbfL9vJpR",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 403,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 238,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    },
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHfeuPc67Ysvn72WjqQ",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 403,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 249,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    },
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHfxq9T6sj3Sz6dYuQH",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 403,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 205,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    },
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHgFvJhbTajzpqFCPaj",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 403,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 201,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como and the Adda in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 62\nEVIDENCE: The specification targets Italian prose whose descriptive sentences conceal canonical metric units (novenari, settenari, endecasillabi), a famous critical observation about the hidden verses in the opening landscape description of Manzoni's novel (e.g. \"Quel ramo del lago di Como\" scanning as a novenario).",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como and the Adda in Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 62,
+     "evidence": "The specification targets Italian prose whose descriptive sentences conceal canonical metric units (novenari, settenari, endecasillabi), a famous critical observation about the hidden verses in the opening landscape description of Manzoni's novel (e.g. \"Quel ramo del lago di Como\" scanning as a novenario).",
+     "recognised": true
+    },
+    {
+     "j": 1,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 72\nEVIDENCE: The specification concerns hidden canonical Italian metrical units (novenari, settenari, endecasillabi) embedded in descriptive prose, a famous critical observation about the rhythmic, quasi-verse opening landscape description of Manzoni's novel (\"Quel ramo del lago di Como\" scans as a novenario). The focus on scansion with synaloepha and verso tronco rules points to this much-analyzed Italian prose passage.",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como in Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 72,
+     "evidence": "The specification concerns hidden canonical Italian metrical units (novenari, settenari, endecasillabi) embedded in descriptive prose, a famous critical observation about the rhythmic, quasi-verse opening landscape description of Manzoni's novel (\"Quel ramo del lago di Como\" scans as a novenario). The focus on scansion with synaloepha and verso tronco rules points to this much-analyzed Italian prose passage.",
+     "recognised": true
+    },
+    {
+     "j": 2,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como and the Adda in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 62\nEVIDENCE: The specification concerns hidden canonical Italian metrical units (novenario, settenario, endecasillabo) embedded in descriptive prose, a feature famously identified by critics in the celebrated landscape incipit of Manzoni's novel (e.g. \"Quel ramo del lago di Como\" scanning as a novenario). The emphasis on scansion with synaloepha and verso tronco in descriptive sentences points to this classic case of prose concealing verse.",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como and the Adda in Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 62,
+     "evidence": "The specification concerns hidden canonical Italian metrical units (novenario, settenario, endecasillabo) embedded in descriptive prose, a feature famously identified by critics in the celebrated landscape incipit of Manzoni's novel (e.g. \"Quel ramo del lago di Como\" scanning as a novenario). The emphasis on scansion with synaloepha and verso tronco in descriptive sentences points to this classic case of prose concealing verse.",
+     "recognised": true
+    },
+    {
+     "j": 3,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como and the Adda in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 62\nEVIDENCE: The specification targets Italian prose whose descriptive sentences conceal canonical metric units (novenari, settenari, endecasillabi), a feature famously noted by critics in the hidden verses of Manzoni's opening landscape description in I promessi sposi (\"Quel ramo del lago di Como\" scans as a novenario).",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como and the Adda in Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 62,
+     "evidence": "The specification targets Italian prose whose descriptive sentences conceal canonical metric units (novenari, settenari, endecasillabi), a feature famously noted by critics in the hidden verses of Manzoni's opening landscape description in I promessi sposi (\"Quel ramo del lago di Como\" scans as a novenario).",
+     "recognised": true
+    },
+    {
+     "j": 4,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 72\nEVIDENCE: The specification concerns Italian prose whose descriptive sentences conceal canonical metric units (novenari, settenari, endecasillabi), a famous critical observation about Manzoni's opening landscape description in I promessi sposi, where \"Quel ramo del lago di Como\" scans as a novenario and further hidden verses follow.",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como in Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 72,
+     "evidence": "The specification concerns Italian prose whose descriptive sentences conceal canonical metric units (novenari, settenari, endecasillabi), a famous critical observation about Manzoni's opening landscape description in I promessi sposi, where \"Quel ramo del lago di Como\" scans as a novenario and further hidden verses follow.",
+     "recognised": true
+    }
+   ]
+  },
+  "P2check-drop": {
+   "test": 2,
+   "question": "identity",
+   "pattern": "C-P2-01",
+   "wording": "both",
+   "id": "P2check-drop",
+   "base": "T2-ident-C-P2-01-both",
+   "variant": "drop",
+   "prompt_sha1": "6cc188dfa432b76c8f8a146bdd87497972ce6052",
+   "elapsed_s": 22.5,
+   "failure": null,
+   "recognised": 5,
+   "refused": [],
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: The passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    },
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: The passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    },
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: The passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    },
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: The passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    },
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: The passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHgYMGsQdhtGNhndVRD",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 365,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 230,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    },
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHgsAMK2eAQyjHEjwGA",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 365,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 173,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    },
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHh93azwAa3C2YVZbtK",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 365,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 248,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    },
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHhZBefKbELPSQ83vCx",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 365,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 217,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    },
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUHhtJbkt4KPDpj5as4q",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 365,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 241,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como and the Adda landscape in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 62\nEVIDENCE: The specification concerns hidden Italian metrical units (novenari, settenari, endecasillabi) embedded in descriptive prose, a famously discussed feature of Manzoni's prose; the most celebrated case is the opening landscape description of I promessi sposi, where critics scan \"Quel ramo del lago di Como\" as a novenario and find further hidden verses in the surrounding sentences.",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como and the Adda landscape in Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 62,
+     "evidence": "The specification concerns hidden Italian metrical units (novenari, settenari, endecasillabi) embedded in descriptive prose, a famously discussed feature of Manzoni's prose; the most celebrated case is the opening landscape description of I promessi sposi, where critics scan \"Quel ramo del lago di Como\" as a novenario and find further hidden verses in the surrounding sentences.",
+     "recognised": true
+    },
+    {
+     "j": 1,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como and the Lecco branch (Chapter I)\n\nCONFIDENCE: 61\nEVIDENCE: The specification targets hidden Italian metrical units (novenari, settenari, endecasillabi) embedded in descriptive prose, a famous critical observation about the \"Quel ramo del lago di Como...\" incipit, whose opening clauses scan as regular verses.",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como and the Lecco branch (Chapter I)",
+     "confidence": 61,
+     "evidence": "The specification targets hidden Italian metrical units (novenari, settenari, endecasillabi) embedded in descriptive prose, a famous critical observation about the \"Quel ramo del lago di Como...\" incipit, whose opening clauses scan as regular verses.",
+     "recognised": true
+    },
+    {
+     "j": 2,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 62\nEVIDENCE: The specification concerns Italian prose whose descriptive sentences conceal regular metric units (novenari, settenari, endecasillabi), a famously noted feature of Manzoni's landscape opening of I promessi sposi, where critics scan hidden verses such as \"Quel ramo del lago di Como\". The focus on scansion rules (synaloepha, verso tronco) in a descriptive passage points to this canonical case of \"prosa ritmica\" in the Italian novel.",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como in Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 62,
+     "evidence": "The specification concerns Italian prose whose descriptive sentences conceal regular metric units (novenari, settenari, endecasillabi), a famously noted feature of Manzoni's landscape opening of I promessi sposi, where critics scan hidden verses such as \"Quel ramo del lago di Como\". The focus on scansion rules (synaloepha, verso tronco) in a descriptive passage points to this canonical case of \"prosa ritmica\" in the Italian novel.",
+     "recognised": true
+    },
+    {
+     "j": 3,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening description of the Lake of Como and the Adda in Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 62\nEVIDENCE: The specification's focus on Italian metric units (novenario, settenario, endecasillabo) hidden inside descriptive prose sentences points to a canonical Italian prose passage famous for its concealed verse rhythms, and the Manzonian incipit is the classic case cited in criticism (e.g., the endecasillabo-like cadences of the Como landscape description).",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening description of the Lake of Como and the Adda in Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 62,
+     "evidence": "The specification's focus on Italian metric units (novenario, settenario, endecasillabo) hidden inside descriptive prose sentences points to a canonical Italian prose passage famous for its concealed verse rhythms, and the Manzonian incipit is the classic case cited in criticism (e.g., the endecasillabo-like cadences of the Como landscape description).",
+     "recognised": true
+    },
+    {
+     "j": 4,
+     "text": "AUTHOR: Alessandro Manzoni\nTITLE: I promessi sposi\nPASSAGE: The opening descriptive passage of Chapter I (\"Quel ramo del lago di Como...\")\nCONFIDENCE: 61\nEVIDENCE: The specification concerns Italian metric units (novenario, settenario, endecasillabo) hidden inside descriptive prose sentences, a feature famously noted by critics in the landscape description that opens the novel (\"Quel ramo del lago di Como\" scans as a settenario/endecasillabo sequence). The emphasis on scansion with synaloepha and verso tronco in a prose passage points to this canonical case of \"prosa ritmica\" in Italian literature.",
+     "author": "Alessandro Manzoni",
+     "title": "I promessi sposi",
+     "passage": "The opening descriptive passage of Chapter I (\"Quel ramo del lago di Como...\")",
+     "confidence": 61,
+     "evidence": "The specification concerns Italian metric units (novenario, settenario, endecasillabo) hidden inside descriptive prose sentences, a feature famously noted by critics in the landscape description that opens the novel (\"Quel ramo del lago di Como\" scans as a settenario/endecasillabo sequence). The emphasis on scansion with synaloepha and verso tronco in a prose passage points to this canonical case of \"prosa ritmica\" in Italian literature.",
+     "recognised": true
+    }
+   ]
+  }
+ },
+ "finished_utc": "2026-11-27T23:19:31+00:00"
+}

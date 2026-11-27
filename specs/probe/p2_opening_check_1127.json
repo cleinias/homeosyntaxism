@@ -1,0 +1,31 @@
+{
+ "built_by": "scripts/build_p2_opening_check.py",
+ "what": "P2-01 identity prompt without 'opening': one syntagm / clause dropped",
+ "derived_from": {
+  "file": "specs/probe/loopA_patterns_it_D2_nopre.json",
+  "sha1": "9d8c1b940cc3fd81ea2a1f6e670a9c790805a3b6",
+  "item": "T2-ident-C-P2-01-both"
+ },
+ "items": [
+  {
+   "test": 2,
+   "question": "identity",
+   "pattern": "C-P2-01",
+   "wording": "both",
+   "id": "P2check-one",
+   "base": "T2-ident-C-P2-01-both",
+   "variant": "one",
+   "prompt": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: One syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+  },
+  {
+   "test": 2,
+   "question": "identity",
+   "pattern": "C-P2-01",
+   "wording": "both",
+   "id": "P2check-drop",
+   "base": "T2-ident-C-P2-01-both",
+   "variant": "drop",
+   "prompt": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n  Specification: The passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+  }
+ ]
+}
