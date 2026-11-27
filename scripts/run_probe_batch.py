@@ -24,6 +24,9 @@ I promessi sposi (or a translation of the title), the rule of scripts/run_probe.
   # Opus 5 (needs SF's approval of the cost first):
   python scripts/run_probe_batch.py --manifest specs/probe/loopA_outputs_it_D2.json \\
       --backend anthropic --model claude-opus-5 --disable-thinking --n 1 --tag loopA-1126
+  # a refusal recorded and the item carried on (SF, 11-27); without the flag an item stops at its
+  # first refusal and the tries after it are never sent (the 11-26 runs):
+  python scripts/run_probe_batch.py --manifest ... --backend anthropic ... --n 5 --tag x --continue-after-refusal
   # what would be sent, and nothing else:
   python scripts/run_probe_batch.py --manifest ... --model ... --n 1 --tag x --dry-run
 """
@@ -85,8 +88,13 @@ def main():
     ap.add_argument("--only", default=None, help="regex on item ids: send only these")
     ap.add_argument("--retry", type=int, default=None, metavar="K",
                     help="resend the main file's failed/short items into <stem>_retryK.json")
+    ap.add_argument("--continue-after-refusal", action="store_true",
+                    help="anthropic: send the n tries one by one; a refusal is recorded (its try index "
+                         "in 'refused') and the item goes on, so every item gets n tries")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
+    if a.continue_after_refusal and a.backend not in (None, "anthropic"):
+        sys.exit("run_probe_batch: --continue-after-refusal is for the anthropic backend")
 
     mpath = (ROOT / a.manifest) if not Path(a.manifest).is_absolute() else Path(a.manifest)
     mraw = mpath.read_text(encoding="utf-8")
@@ -117,6 +125,8 @@ def main():
               "max_tokens": a.max_tokens,
               "thinking": (("disabled" if a.disable_thinking else "default")
                            if a.backend == "anthropic" else None)}
+    if a.continue_after_refusal:
+        params["on_refusal"] = "record and continue"
     if fn.exists():
         res = json.loads(fn.read_text(encoding="utf-8"))
         if res["manifest_sha1"] != sha1(mraw) or res["params"] != params:
@@ -131,7 +141,8 @@ def main():
     if a.backend == "vllm-http" and a.endpoint not in res["endpoints"]:
         res["endpoints"].append(a.endpoint)
     # a failed or short item is sent again on resume; a complete one never is
-    done = {i for i, v in res["items"].items() if not v["failure"] and len(v["answers"]) == a.n}
+    done = {i for i, v in res["items"].items()
+            if not v["failure"] and len(v["answers"]) + len(v.get("refused", [])) == a.n}
     if a.retry is not None:  # one attempt per item per retry file: nothing in it is replaced
         done = set(res["items"])
         res.setdefault("retry_of", stem + ".json")
@@ -148,32 +159,48 @@ def main():
         if it["id"] in done:
             continue
         RP.RECORD = []
-        t0, gens, failure = time.time(), [], None
+        t0, gens, failure, refused = time.time(), [], None, []
         try:
             if a.backend == "vllm-http":
                 gens = RP.gen_vllm(a.endpoint, a.model, it["prompt"], a.n, a.temperature, a.max_tokens)
             elif a.backend == "openrouter":
                 gens, _ = RP.gen_openrouter(a.model, it["prompt"], a.n, a.temperature, a.max_tokens,
                                             a.provider)
-            else:
+            elif not a.continue_after_refusal:
                 extra = {"thinking": {"type": "disabled"}} if a.disable_thinking else {}
                 gens = RP.gen_anthropic(a.model, it["prompt"], a.n, a.temperature, a.max_tokens,
                                         extra_body=extra)
+            else:
+                extra = {"thinking": {"type": "disabled"}} if a.disable_thinking else {}
+                for j in range(a.n):
+                    try:
+                        gens.append((j, RP.gen_anthropic(a.model, it["prompt"], 1, a.temperature,
+                                                         a.max_tokens, extra_body=extra)[0]))
+                    except RP.PartialRun as e:
+                        if "stop_reason=refusal" not in str(e):
+                            raise
+                        refused.append(j)
         except Exception as e:  # keep what was paid for, record why it stopped
-            gens = getattr(e, "out", gens)
+            if not a.continue_after_refusal:
+                gens = getattr(e, "out", gens)
             failure = str(e) or repr(e)
         sent, RP.RECORD = RP.RECORD, None
-        answers = [{"j": j, "text": g, **parse(g)} for j, g in enumerate(gens)]
+        if not a.continue_after_refusal:
+            gens = list(enumerate(gens))
+        answers = [{"j": j, "text": g, **parse(g)} for j, g in gens]
         meta = {key: v for key, v in it.items() if key != "prompt"}
         res["items"][it["id"]] = {
             **meta, "prompt_sha1": sha1(it["prompt"]), "elapsed_s": round(time.time() - t0, 1),
             "failure": failure, "recognised": sum(x["recognised"] for x in answers),
+            **({"refused": refused} if a.continue_after_refusal else {}),
             "requests": [s["body"] for s in sent], "responses": [s["response"] for s in sent],
             "answers": answers}
         res["finished_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
         dump(fn, res)
         print(f"  [{k + 1}/{len(items)}] {it['id']}: {len(answers)} answers, recognised "
-              f"{res['items'][it['id']]['recognised']}{'  FAILED: ' + failure[:80] if failure else ''}",
+              f"{res['items'][it['id']]['recognised']}"
+              f"{f', refused {len(refused)}' if refused else ''}"
+              f"{'  FAILED: ' + failure[:80] if failure else ''}",
               flush=True)
         fails_in_a_row = fails_in_a_row + 1 if failure else 0
         if fails_in_a_row >= 3:

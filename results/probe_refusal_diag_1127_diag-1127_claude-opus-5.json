@@ -1,0 +1,806 @@
+{
+ "probe": "loopA",
+ "manifest": "specs/probe/refusal_diag_1127.json",
+ "manifest_sha1": "9825f8aa461d02191820669a25627aa92ccc9fbc",
+ "manifest_sources": {
+  "manifest": "specs/probe/loopA_patterns_it_D2.json",
+  "sha1": "86d03986fe711d7a14173f3547505b90e37658dc"
+ },
+ "tag": "diag-1127",
+ "params": {
+  "backend": "anthropic",
+  "model": "claude-opus-5",
+  "provider": null,
+  "n": 1,
+  "temperature_arg": 0.9,
+  "max_tokens": 1024,
+  "thinking": "disabled"
+ },
+ "started_utc": "2026-11-27T22:08:12+00:00",
+ "prompt_file": "probe_refusal_diag_1127_diag-1127_claude-opus-5_PROMPTS.jsonl",
+ "endpoints": [],
+ "items": {
+  "diag-T2-ident-C-P7-02-revised-v0": {
+   "id": "diag-T2-ident-C-P7-02-revised-v0",
+   "base": "T2-ident-C-P7-02-revised",
+   "variant": "v0",
+   "prompt_sha1": "4644cb3eb31bb2b98ba8efdd5b1a2b34929f606c",
+   "elapsed_s": 1.4,
+   "failure": "gen_anthropic: no text block (stop_reason=refusal, blocks=[])",
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n  Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCGoaYxHQmyYpMusr59",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "refusal",
+     "stop_sequence": null,
+     "stop_details": {
+      "type": "refusal",
+      "category": "cyber",
+      "explanation": "This request triggered restrictions on violative cyber content and was blocked under Anthropic's Usage Policy. To learn more, see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback. API integrators: you can reduce refusals for your users by configuring a fallback model — see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback"
+     },
+     "usage": {
+      "input_tokens": 480,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 0,
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": []
+    }
+   ],
+   "answers": []
+  },
+  "diag-T2-ident-C-P7-02-revised-v1": {
+   "id": "diag-T2-ident-C-P7-02-revised-v1",
+   "base": "T2-ident-C-P7-02-revised",
+   "variant": "v1",
+   "prompt_sha1": "73493aef70fc850d5539b519b87413334173a970",
+   "elapsed_s": 4.3,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n  Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCGupqYCn8NK4XXFQ6W",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 456,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 236,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "AUTHOR: Virginia Woolf\nTITLE: To the Lighthouse\nPASSAGE: The opening of \"The Window\" (Mrs Ramsay's reply to James about going to the Lighthouse) — the long, qualifying, clause-deferring first sentences\n\nCONFIDENCE: 29\nEVIDENCE: The specification describes a word naming a physical movement in the scene that also names the prose's own deferring, swerving syntax and proleptically announces the novel's later movement — a self-reflexive trick characteristic of Woolf's opening, where the promised \"expedition\"/\"going\" to the Lighthouse is both a bodily motion and the shape of the sentences and of the book's eventual journey.",
+     "author": "Virginia Woolf",
+     "title": "To the Lighthouse",
+     "passage": "The opening of \"The Window\" (Mrs Ramsay's reply to James about going to the Lighthouse) — the long, qualifying, clause-deferring first sentences",
+     "confidence": 29,
+     "evidence": "The specification describes a word naming a physical movement in the scene that also names the prose's own deferring, swerving syntax and proleptically announces the novel's later movement — a self-reflexive trick characteristic of Woolf's opening, where the promised \"expedition\"/\"going\" to the Lighthouse is both a bodily motion and the shape of the sentences and of the book's eventual journey.",
+     "recognised": false
+    }
+   ]
+  },
+  "diag-T2-ident-C-P7-02-revised-v2": {
+   "id": "diag-T2-ident-C-P7-02-revised-v2",
+   "base": "T2-ident-C-P7-02-revised",
+   "variant": "v2",
+   "prompt_sha1": "0cc1f18a137ca850456ad6c779befb08395b4f6e",
+   "elapsed_s": 4.6,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n  Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCHEpMT1hmwrcqiNPjB",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 472,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 265,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "AUTHOR: Virginia Woolf\nTITLE: To the Lighthouse\nPASSAGE: The opening of \"The Window\" — Mrs Ramsay's reply to James about going to the Lighthouse\n\nCONFIDENCE: 25\n\nEVIDENCE: The specification describes a single physical-movement word that doubles as a name for the prose's own looping/extending syntax while prefiguring the novel's central journey, which fits Woolf's famous opening sentence where a word of motion (\"going,\" the expedition to the Lighthouse) both mirrors the clause structure and anticipates the voyage deferred to Part III. The \"proleptic marker\" emphasis and the self-naming syntax are hallmarks of critical readings of Woolf's first paragraph, though the identification is tentative without the passage.",
+     "author": "Virginia Woolf",
+     "title": "To the Lighthouse",
+     "passage": "The opening of \"The Window\" — Mrs Ramsay's reply to James about going to the Lighthouse",
+     "confidence": 25,
+     "evidence": "The specification describes a single physical-movement word that doubles as a name for the prose's own looping/extending syntax while prefiguring the novel's central journey, which fits Woolf's famous opening sentence where a word of motion (\"going,\" the expedition to the Lighthouse) both mirrors the clause structure and anticipates the voyage deferred to Part III. The \"proleptic marker\" emphasis and the self-naming syntax are hallmarks of critical readings of Woolf's first paragraph, though the identification is tentative without the passage.",
+     "recognised": false
+    }
+   ]
+  },
+  "diag-T2-ident-C-P7-02-revised-v3": {
+   "id": "diag-T2-ident-C-P7-02-revised-v3",
+   "base": "T2-ident-C-P7-02-revised",
+   "variant": "v3",
+   "prompt_sha1": "38493c0da0be680fbec17c5891ef7cc09093facc",
+   "elapsed_s": 1.2,
+   "failure": "gen_anthropic: no text block (stop_reason=refusal, blocks=[])",
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The description below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the original: from which literary work, by which author, was this description derived?\n\nSPECIFICATION:\n[C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n  Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCHb22ru3f9rwMDz9bo",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "refusal",
+     "stop_sequence": null,
+     "stop_details": {
+      "type": "refusal",
+      "category": "cyber",
+      "explanation": "This request triggered restrictions on violative cyber content and was blocked under Anthropic's Usage Policy. To learn more, see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback. API integrators: you can reduce refusals for your users by configuring a fallback model — see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback"
+     },
+     "usage": {
+      "input_tokens": 478,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 0,
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": []
+    }
+   ],
+   "answers": []
+  },
+  "diag-T2-ident-C-P7-02-revised-v4": {
+   "id": "diag-T2-ident-C-P7-02-revised-v4",
+   "base": "T2-ident-C-P7-02-revised",
+   "variant": "v4",
+   "prompt_sha1": "0cc877c6306b41fe5e815ac1041452dfb25dd21a",
+   "elapsed_s": 4.1,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nPATTERN:\n[C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n  Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n\nAnswer in exactly this form, and nothing else:\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nPASSAGE: <which part of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100>\nEVIDENCE: <one or two sentences: what in the specification led you to this answer>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCHggM7SC29skg2aauf",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 477,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 228,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "AUTHOR: Virginia Woolf\nTITLE: To the Lighthouse\nPASSAGE: The opening of Part I (\"The Window\"), Mrs Ramsay's promise to James — the word \"expedition\" / the swerving, deferring syntax of the first pages\nCONFIDENCE: 25\nEVIDENCE: The specification describes a single word naming a physical movement that doubles as a name for the prose's own deferring, clause-swerving syntax and proleptically announces the novel's long-postponed journey, which fits Woolf's famous opening sentences about the trip to the lighthouse; the \"named from within\" self-referential formula is a hallmark of critical readings of that passage.",
+     "author": "Virginia Woolf",
+     "title": "To the Lighthouse",
+     "passage": "The opening of Part I (\"The Window\"), Mrs Ramsay's promise to James — the word \"expedition\" / the swerving, deferring syntax of the first pages",
+     "confidence": 25,
+     "evidence": "The specification describes a single word naming a physical movement that doubles as a name for the prose's own deferring, clause-swerving syntax and proleptically announces the novel's long-postponed journey, which fits Woolf's famous opening sentences about the trip to the lighthouse; the \"named from within\" self-referential formula is a hallmark of critical readings of that passage.",
+     "recognised": false
+    }
+   ]
+  },
+  "diag-T2-ident-C-P7-02-revised-v5": {
+   "id": "diag-T2-ident-C-P7-02-revised-v5",
+   "base": "T2-ident-C-P7-02-revised",
+   "variant": "v5",
+   "prompt_sha1": "0cca5ad5d012c775d0266ba69e136ce8cc894909",
+   "elapsed_s": 1.1,
+   "failure": "gen_anthropic: no text block (stop_reason=refusal, blocks=[])",
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage; a writer was then asked to reproduce the pattern in a new setting. Identify the source: from which literary work, by which author, was this specification derived?\n\nSPECIFICATION:\n[C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n  Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n\nAnswer in a few sentences, naming the author and the title of the work if you know them, or saying that you do not.\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCHzyBPMNMTYeKpVTho",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "refusal",
+     "stop_sequence": null,
+     "stop_details": {
+      "type": "refusal",
+      "category": "cyber",
+      "explanation": "This request triggered restrictions on violative cyber content and was blocked under Anthropic's Usage Policy. To learn more, see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback. API integrators: you can reduce refusals for your users by configuring a fallback model — see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback"
+     },
+     "usage": {
+      "input_tokens": 382,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 0,
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": []
+    }
+   ],
+   "answers": []
+  },
+  "diag-T2-recon-C-P5-01-both-v0": {
+   "id": "diag-T2-recon-C-P5-01-both-v0",
+   "base": "T2-recon-C-P5-01-both",
+   "variant": "v0",
+   "prompt_sha1": "ba00328eee36a2b1236643d543723e5f17ca68a5",
+   "elapsed_s": 12.5,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage. Reconstruct, as far as the specification allows, what the source passage contained: what it described or narrated, who or what acted in it, and which of its words or phrases the specification seems to echo. Where the specification gives you no ground for a reconstruction, write UNKNOWN. You need not identify the work; name it only if you recognise it.\n\nSPECIFICATION:\n[C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n  Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n\nAnswer in exactly this form, and nothing else:\nCONTENT: <what the source passage described or narrated, or UNKNOWN>\nAGENTS: <who or what acts in the source passage, or UNKNOWN>\nECHOED_WORDS: <words or phrases of the source that the specification seems to echo, or UNKNOWN>\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100: your confidence in the reconstruction>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCJ6JugBKbyLmZHs8e5",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 548,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 636,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "CONTENT: An Italian-language passage (the fifth of a numbered sequence of sections or paragraphs, P_5) describing the sea as its single subject, in which the sea is rendered through two opposed and alternating registers: first as something vast, open, wide, spreading or swelling outward; then as something narrowed, closed in, hemmed, shrunken or pressed between limits (a strait, a bay, a horizon that tightens, a shore that confines); and finally as reopening into vastness again. The movement is likely perceptual as well as physical — the sea seen from a vantage point (coast, boat, window) appearing by turns boundless and bounded, breathing in and out like a body, so that the full arc expansion → constriction → re-expansion traces something like a respiration or a tide. UNKNOWN whether any narrative event accompanies the description.\n\nAGENTS: Principally 'il mare' itself, the sole referent, acting intransitively — it expands, narrows, closes, reopens. Possibly an implicit observer or narrator who watches it; possibly the coast, cliffs, headlands or horizon as the constricting agents. UNKNOWN beyond this.\n\nECHOED_WORDS: 'il mare' is the only word of the source quoted by the specification. The terms 'expansion/dilation' and 'contraction/constriction' are the critic's abstractions, but they plausibly echo Italian lexical pairs in the text such as dilatarsi / allargarsi / distendersi / aprirsi / vasto / immenso / sterminato / disteso on the expansive side, and stringersi / restringersi / chiudersi / serrarsi / angusto / stretto / rinchiuso / contratto on the constrictive side. No specific wording can be recovered: the specification explicitly states that none of the field-words are supplied.\n\nAUTHOR: UNKNOWN\n\nTITLE: UNKNOWN\n\nCONFIDENCE: 13",
+     "author": "UNKNOWN",
+     "title": "UNKNOWN",
+     "confidence": 13,
+     "content": "An Italian-language passage (the fifth of a numbered sequence of sections or paragraphs, P_5) describing the sea as its single subject, in which the sea is rendered through two opposed and alternating registers: first as something vast, open, wide, spreading or swelling outward; then as something narrowed, closed in, hemmed, shrunken or pressed between limits (a strait, a bay, a horizon that tightens, a shore that confines); and finally as reopening into vastness again. The movement is likely perceptual as well as physical — the sea seen from a vantage point (coast, boat, window) appearing by turns boundless and bounded, breathing in and out like a body, so that the full arc expansion → constriction → re-expansion traces something like a respiration or a tide. UNKNOWN whether any narrative event accompanies the description.",
+     "agents": "Principally 'il mare' itself, the sole referent, acting intransitively — it expands, narrows, closes, reopens. Possibly an implicit observer or narrator who watches it; possibly the coast, cliffs, headlands or horizon as the constricting agents. UNKNOWN beyond this.",
+     "echoed_words": "'il mare' is the only word of the source quoted by the specification. The terms 'expansion/dilation' and 'contraction/constriction' are the critic's abstractions, but they plausibly echo Italian lexical pairs in the text such as dilatarsi / allargarsi / distendersi / aprirsi / vasto / immenso / sterminato / disteso on the expansive side, and stringersi / restringersi / chiudersi / serrarsi / angusto / stretto / rinchiuso / contratto on the constrictive side. No specific wording can be recovered: the specification explicitly states that none of the field-words are supplied.",
+     "recognised": false
+    }
+   ]
+  },
+  "diag-T2-recon-C-P5-01-both-v1": {
+   "id": "diag-T2-recon-C-P5-01-both-v1",
+   "base": "T2-recon-C-P5-01-both",
+   "variant": "v1",
+   "prompt_sha1": "d0b40d75bfcdf18645f9456010acd902308815fb",
+   "elapsed_s": 9.4,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "TASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage. Reconstruct, as far as the specification allows, what the source passage contained: what it described or narrated, who or what acted in it, and which of its words or phrases the specification seems to echo. Where the specification gives you no ground for a reconstruction, write UNKNOWN. You need not identify the work; name it only if you recognise it.\n\nSPECIFICATION:\n[C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n  Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n\nAnswer in exactly this form, and nothing else:\nCONTENT: <what the source passage described or narrated, or UNKNOWN>\nAGENTS: <who or what acts in the source passage, or UNKNOWN>\nECHOED_WORDS: <words or phrases of the source that the specification seems to echo, or UNKNOWN>\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100: your confidence in the reconstruction>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCK2TkcxijQRjYZFdVn",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 524,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 475,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "CONTENT: A sustained description of the sea (in Italian) in which the sea itself is the single subject, presented first as a vast open expanse spreading or widening out, then as narrowing, closing, tightening or being hemmed in (perhaps between coasts, cliffs, a strait or a gulf), and finally opening out again into breadth — the whole movement traced as a rhythm of the sea's own breathing or swelling and shrinking rather than as a narrative of human events. Beyond this alternation of widening and narrowing applied to \"il mare,\" the specification supports no reconstruction of particular scenery, weather, vessels or incidents: UNKNOWN.\n\nAGENTS: The sea (\"il mare\") itself is the sole acting referent, performing the expansion and constriction (widening, stretching, opening / closing, narrowing, tightening). Any human observer, speaker or other presence: UNKNOWN.\n\nECHOED_WORDS: \"il mare\" (quoted directly in the specification). The paired fields echoed are words of expansion and of constriction — plausibly Italian terms such as si allarga / si apre / si distende / immenso / vasto / sconfinato versus si stringe / si restringe / si chiude / angusto / stretto — but no specific lexical items are supplied, so the actual wording is UNKNOWN.\n\nAUTHOR: UNKNOWN\n\nTITLE: UNKNOWN\n\nCONFIDENCE: 17",
+     "author": "UNKNOWN",
+     "title": "UNKNOWN",
+     "confidence": 17,
+     "content": "A sustained description of the sea (in Italian) in which the sea itself is the single subject, presented first as a vast open expanse spreading or widening out, then as narrowing, closing, tightening or being hemmed in (perhaps between coasts, cliffs, a strait or a gulf), and finally opening out again into breadth — the whole movement traced as a rhythm of the sea's own breathing or swelling and shrinking rather than as a narrative of human events. Beyond this alternation of widening and narrowing applied to \"il mare,\" the specification supports no reconstruction of particular scenery, weather, vessels or incidents: UNKNOWN.",
+     "agents": "The sea (\"il mare\") itself is the sole acting referent, performing the expansion and constriction (widening, stretching, opening / closing, narrowing, tightening). Any human observer, speaker or other presence: UNKNOWN.",
+     "echoed_words": "\"il mare\" (quoted directly in the specification). The paired fields echoed are words of expansion and of constriction — plausibly Italian terms such as si allarga / si apre / si distende / immenso / vasto / sconfinato versus si stringe / si restringe / si chiude / angusto / stretto — but no specific lexical items are supplied, so the actual wording is UNKNOWN.",
+     "recognised": false
+    }
+   ]
+  },
+  "diag-T2-recon-C-P5-01-both-v2": {
+   "id": "diag-T2-recon-C-P5-01-both-v2",
+   "base": "T2-recon-C-P5-01-both",
+   "variant": "v2",
+   "prompt_sha1": "c1c41e1a19235de26d7bdbe8723916a0b24739c6",
+   "elapsed_s": 10.0,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage. Reconstruct, as far as the specification allows, what the source passage contained: what it described or narrated, who or what acted in it, and which of its words or phrases the specification seems to echo. Where the specification gives you no ground for a reconstruction, write UNKNOWN. You need not identify the work; name it only if you recognise it.\n\nSPECIFICATION:\n[C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n  Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n\nAnswer in exactly this form, and nothing else:\nCONTENT: <what the source passage described or narrated, or UNKNOWN>\nAGENTS: <who or what acts in the source passage, or UNKNOWN>\nECHOED_WORDS: <words or phrases of the source that the specification seems to echo, or UNKNOWN>\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100: your confidence in the reconstruction>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCKjPNvSp8jwXDxB2A5",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 540,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 569,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "CONTENT: An Italian-language passage (the label \"il mare\" indicates the original tongue) in which the sea is described as a single sustained subject, presented through shifting perception: it first opens out, widening or spreading to the horizon, then seems to narrow, shrink, close in or press together — a strait, a tightening, a sense of confinement — and finally opens out again, dilating or broadening once more. The effect is of a sea that breathes, or of a watcher whose eye and feeling make the same water alternately vast and cramped; the critical reading abstracted from it a \"duality\" of the sea, an oscillation between boundlessness and enclosure traced as a full arc of expansion, contraction, re-expansion. No narrative event beyond this perceptual movement can be recovered from the specification.\n\nAGENTS: The sea itself (\"il mare\") is the sole named referent and the grammatical/figurative actor — it expands, contracts, expands again. An implied observer or narrating consciousness perceiving the sea may be present but is not evidenced by the specification. UNKNOWN as to any other persons or named characters.\n\nECHOED_WORDS: \"il mare\" is the only phrase quoted from the source. The terms \"expansion/dilation\" and \"contraction/constriction\" are the specification's own abstractions — it states explicitly that the lexical items of both fields are not supplied — but they presumably gloss source words along the lines of si allarga / si distende / si apre / sconfinato / immenso on the one hand, and si stringe / si restringe / si chiude / angusto on the other. These particular Italian words are reconstructions, not attested echoes.\n\nAUTHOR: UNKNOWN\n\nTITLE: UNKNOWN\n\nCONFIDENCE: 23",
+     "author": "UNKNOWN",
+     "title": "UNKNOWN",
+     "confidence": 23,
+     "content": "An Italian-language passage (the label \"il mare\" indicates the original tongue) in which the sea is described as a single sustained subject, presented through shifting perception: it first opens out, widening or spreading to the horizon, then seems to narrow, shrink, close in or press together — a strait, a tightening, a sense of confinement — and finally opens out again, dilating or broadening once more. The effect is of a sea that breathes, or of a watcher whose eye and feeling make the same water alternately vast and cramped; the critical reading abstracted from it a \"duality\" of the sea, an oscillation between boundlessness and enclosure traced as a full arc of expansion, contraction, re-expansion. No narrative event beyond this perceptual movement can be recovered from the specification.",
+     "agents": "The sea itself (\"il mare\") is the sole named referent and the grammatical/figurative actor — it expands, contracts, expands again. An implied observer or narrating consciousness perceiving the sea may be present but is not evidenced by the specification. UNKNOWN as to any other persons or named characters.",
+     "echoed_words": "\"il mare\" is the only phrase quoted from the source. The terms \"expansion/dilation\" and \"contraction/constriction\" are the specification's own abstractions — it states explicitly that the lexical items of both fields are not supplied — but they presumably gloss source words along the lines of si allarga / si distende / si apre / sconfinato / immenso on the one hand, and si stringe / si restringe / si chiude / angusto on the other. These particular Italian words are reconstructions, not attested echoes.",
+     "recognised": false
+    }
+   ]
+  },
+  "diag-T2-recon-C-P5-01-both-v3": {
+   "id": "diag-T2-recon-C-P5-01-both-v3",
+   "base": "T2-recon-C-P5-01-both",
+   "variant": "v3",
+   "prompt_sha1": "03f75950593fa9469f6a0c3a7627eb1b8f6b2340",
+   "elapsed_s": 7.6,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The description below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage. Reconstruct, as far as the description allows, what the original passage contained: what it described or narrated, who or what acted in it, and which of its words or phrases the description seems to echo. Where the description gives you no ground for a reconstruction, write UNKNOWN. You need not identify the work; name it only if you recognise it.\n\nSPECIFICATION:\n[C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n  Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n\nAnswer in exactly this form, and nothing else:\nCONTENT: <what the source passage described or narrated, or UNKNOWN>\nAGENTS: <who or what acts in the source passage, or UNKNOWN>\nECHOED_WORDS: <words or phrases of the source that the specification seems to echo, or UNKNOWN>\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100: your confidence in the reconstruction>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCLUukhWS6zJcAvEgdW",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 544,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 371,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "CONTENT: A description of the sea (\"il mare\") in Italian, in which the sea is successively characterized as vast/open and then as narrowed, enclosed or shrunken, and then as opening out again — i.e. a single seascape presented through alternating impressions of widening and tightening (possibly a strait, gulf or coastline where the water broadens, is pinched between shores, and broadens once more), observed by a narrator or implied gaze. Beyond this alternation of apparent breadth and confinement the content cannot be recovered.\n\nAGENTS: \"Il mare\" itself is the sole named referent and grammatical subject undergoing the expansion/constriction; any human observer is UNKNOWN.\n\nECHOED_WORDS: \"il mare\"; the description otherwise withholds the source's vocabulary, stating explicitly that the words of both lexical fields are not supplied — so the specific terms of expansion (e.g. words for widening/opening) and of constriction (narrowing/closing) are UNKNOWN.\n\nAUTHOR: UNKNOWN\n\nTITLE: UNKNOWN\n\nCONFIDENCE: 17",
+     "author": "UNKNOWN",
+     "title": "UNKNOWN",
+     "confidence": 17,
+     "content": "A description of the sea (\"il mare\") in Italian, in which the sea is successively characterized as vast/open and then as narrowed, enclosed or shrunken, and then as opening out again — i.e. a single seascape presented through alternating impressions of widening and tightening (possibly a strait, gulf or coastline where the water broadens, is pinched between shores, and broadens once more), observed by a narrator or implied gaze. Beyond this alternation of apparent breadth and confinement the content cannot be recovered.",
+     "agents": "\"Il mare\" itself is the sole named referent and grammatical subject undergoing the expansion/constriction; any human observer is UNKNOWN.",
+     "echoed_words": "\"il mare\"; the description otherwise withholds the source's vocabulary, stating explicitly that the words of both lexical fields are not supplied — so the specific terms of expansion (e.g. words for widening/opening) and of constriction (narrowing/closing) are UNKNOWN.",
+     "recognised": false
+    }
+   ]
+  },
+  "diag-T2-recon-C-P5-01-both-v4": {
+   "id": "diag-T2-recon-C-P5-01-both-v4",
+   "base": "T2-recon-C-P5-01-both",
+   "variant": "v4",
+   "prompt_sha1": "ca009b2d6e03a7a2a9fbf44e898298990ba1dceb",
+   "elapsed_s": 8.0,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage. Reconstruct, as far as the specification allows, what the source passage contained: what it described or narrated, who or what acted in it, and which of its words or phrases the specification seems to echo. Where the specification gives you no ground for a reconstruction, write UNKNOWN. You need not identify the work; name it only if you recognise it.\n\nPATTERN:\n[C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n  Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n\nAnswer in exactly this form, and nothing else:\nCONTENT: <what the source passage described or narrated, or UNKNOWN>\nAGENTS: <who or what acts in the source passage, or UNKNOWN>\nECHOED_WORDS: <words or phrases of the source that the specification seems to echo, or UNKNOWN>\nAUTHOR: <name, or UNKNOWN>\nTITLE: <title of the work, or UNKNOWN>\nCONFIDENCE: <a number from 0 to 100: your confidence in the reconstruction>\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCM3xMeLBCBJxReCuLr",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 545,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 447,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "CONTENT: An Italian-language passage describing the sea as the single, continuous subject of perception — the sea seen first as something vast and open, spreading or widening out to the horizon, then as something that narrows, shrinks, closes in or is hemmed and compressed (perhaps between rocks, headlands, walls, or into a strait/inlet), and then opening out again into breadth. The description seems to track the sea's changing aspect as a rhythmic alternation of swelling and tightening, so that the same water appears by turns immense and confined, with the final movement returning it to openness.\n\nAGENTS: The sea itself ('il mare') is the sole grammatical and thematic agent of the passage — it expands, contracts, and expands again; any human observer is implied rather than named (UNKNOWN whether a narrator or character watches it).\n\nECHOED_WORDS: 'il mare'; terms of expansion (something like 'si apre', 'si allarga', 'si distende', 'immenso', 'sconfinato', 'dilata') and terms of constriction (something like 'si stringe', 'si chiude', 'si restringe', 'angusto', 'serrato', 'stretto'). The precise words are not supplied by the specification and are UNKNOWN.\n\nAUTHOR: UNKNOWN\n\nTITLE: UNKNOWN\n\nCONFIDENCE: 17",
+     "author": "UNKNOWN",
+     "title": "UNKNOWN",
+     "confidence": 17,
+     "content": "An Italian-language passage describing the sea as the single, continuous subject of perception — the sea seen first as something vast and open, spreading or widening out to the horizon, then as something that narrows, shrinks, closes in or is hemmed and compressed (perhaps between rocks, headlands, walls, or into a strait/inlet), and then opening out again into breadth. The description seems to track the sea's changing aspect as a rhythmic alternation of swelling and tightening, so that the same water appears by turns immense and confined, with the final movement returning it to openness.",
+     "agents": "The sea itself ('il mare') is the sole grammatical and thematic agent of the passage — it expands, contracts, and expands again; any human observer is implied rather than named (UNKNOWN whether a narrator or character watches it).",
+     "echoed_words": "'il mare'; terms of expansion (something like 'si apre', 'si allarga', 'si distende', 'immenso', 'sconfinato', 'dilata') and terms of constriction (something like 'si stringe', 'si chiude', 'si restringe', 'angusto', 'serrato', 'stretto'). The precise words are not supplied by the specification and are UNKNOWN.",
+     "recognised": false
+    }
+   ]
+  },
+  "diag-T2-recon-C-P5-01-both-v5": {
+   "id": "diag-T2-recon-C-P5-01-both-v5",
+   "base": "T2-recon-C-P5-01-both",
+   "variant": "v5",
+   "prompt_sha1": "76291e916145c6c8d410c22fef7d2810798ea099",
+   "elapsed_s": 10.8,
+   "failure": null,
+   "recognised": 0,
+   "requests": [
+    {
+     "model": "claude-opus-5",
+     "max_tokens": 1024,
+     "messages": [
+      {
+       "role": "user",
+       "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Do not write any new text. The specification below was written for a writing experiment. It describes one formal pattern, abstracted from one existing literary passage (which is not shown) and from a critical reading of that passage. Reconstruct, as far as the specification allows, what the source passage contained: what it described or narrated, who or what acted in it, and which of its words or phrases the specification seems to echo. Where the specification gives you no ground for a reconstruction, write UNKNOWN. You need not identify the work; name it only if you recognise it.\n\nSPECIFICATION:\n[C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n  Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n\nAnswer in a few sentences, naming the author and the title of the work if you know them, or saying that you do not.\n"
+      }
+     ],
+     "thinking": {
+      "type": "disabled"
+     }
+    }
+   ],
+   "responses": [
+    {
+     "model": "claude-opus-5",
+     "id": "msg_011ChUCMesKgeB5X5KdPPRK7",
+     "type": "message",
+     "role": "assistant",
+     "container": null,
+     "stop_reason": "end_turn",
+     "stop_sequence": null,
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 395,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 513,
+      "output_tokens_details": {
+       "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+     },
+     "diagnostics": null,
+     "content_types": [
+      "text"
+     ]
+    }
+   ],
+   "answers": [
+    {
+     "j": 0,
+     "text": "The specification points to an Italian prose passage (P_5) whose single governing subject is \"il mare\" — the sea — described through two antithetical registers applied to the same referent: one of opening out (breadth, swelling, widening, the horizon dilating, the sea spreading or growing immense) and one of closing in (narrowing, shrinking, tightening, the sea drawing together, pressed or hemmed into a strait or basin). The passage evidently traces a three-beat movement: the sea first appears vast and dilated, then contracts or is constricted, then opens out again — a rhythm that could be literal (a coastline narrowing into a strait and then releasing into open water, or a tide/swell breathing in and out) or perceptual (the sea seen from a moving vantage, a boat or a shore, alternately widening and closing around the observer).\n\nBeyond this, the specification supplies no content: it explicitly withholds the actual vocabulary of both fields, so the particular words the source used (and therefore which phrases the spec \"echoes\") are UNKNOWN. The only phrase quoted is \"il mare\" itself, which indicates the source is in Italian and that the sea is the grammatical and thematic subject throughout. Any human actors, narrator, setting, plot action, or figurative frame (e.g. the sea as breath, as living body, as mirror) are UNKNOWN.\n\nI do not recognise the specific work or author with any confidence; the Italian wording and the breathing-sea motif are suggestive of writers such as Calvino, Morante, or D'Annunzio, but I cannot identify it.",
+     "confidence": null,
+     "recognised": false
+    }
+   ]
+  }
+ },
+ "finished_utc": "2026-11-27T22:09:28+00:00"
+}

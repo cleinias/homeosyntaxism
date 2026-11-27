@@ -1,0 +1,129 @@
+{
+ "what": "Test 2, reconstruction prompt, both wordings: a reading by hand of every answer against the 1840 incipit. Opus 5 from the 11-27 rerun (frame without its opening line, refusals recorded and every try sent); Qwen3-235B from the 11-26 run (its readings carried over from test2_recon_hand_reading_1127.json, which keeps the reading of the 11-26 Opus run).",
+ "reader": "Claude (first pass, 2026-11-27), to be checked by SF",
+ "criterion": "An answer reconstructs Manzoni's passage if it names Manzoni or I promessi sposi, or if it describes something particular to the incipit that the specification does not itself state: the lake, its narrowing into a river and widening again, the bridge that marks the change, the mountains and their names, the places (Como, Lecco, the Adda), the view from above, the Spanish garrison and what it teaches. Restating the specification does not count, nor does reconstructing the target domain (the sea), nor does a generic example of what the specification describes.",
+ "sources": {
+  "Opus 5": "results/probe_loopA_patterns_it_D2_nopre_loopA-1127_claude-opus-5.json",
+  "Qwen3-235B": "results/probe_loopA_patterns_it_D2_loopA-1126_Qwen_Qwen3-235B-A22B-Instruct-2507-FP8.json"
+ },
+ "keys": "entries are keyed by the reconstruction item id of the manifest (wording: july, revised, or both = unchanged)",
+ "entries": {
+  "T2-recon-C-P1-01-july": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Opus and Qwen alike reconstruct institutional violence told in the institution's own benevolent idiom (colonial, missionary, carceral, forced schooling). The July wording's 'pedagogical' brings in teaching and instruction, and soldiers appear in some of Opus's lists of possible agents, but no answer has a garrison, girls, modesty or any setting. They restate the specification."
+  },
+  "T2-recon-C-P1-01-revised": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Both models describe a generic antiphrasis: harm, oppression or colonisation presented as kindness, with no narrator's correction. No soldiers, no garrison, no girls or modesty, no setting. They restate the specification."
+  },
+  "T2-recon-C-P2-01-both": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Both models describe descriptive prose with hidden verse lines and say the scene cannot be recovered (Qwen guesses introspection, love, nature or a domestic scene). Nothing of the incipit, although under the identity prompt Opus names the novel five times out of five for this same entry (see the table)."
+  },
+  "T2-recon-C-P3-01-both": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Both models reconstruct a seascape, from the specification's own '(seascape/movement)': that is our target domain, not the source, whose water is a lake."
+  },
+  "T2-recon-C-P4-01-both": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "UNKNOWN throughout, or the specification's AB ... BA restated."
+  },
+  "T2-recon-C-P5-01-both": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Both models restate the arc over 'il mare': vast, narrowing, wide again. Opus concretizes the narrowing as a sea squeezed 'between coasts, headlands, or walls of rock', a strait or an inlet, the generic shapes of a narrowing sea; no lake, no river, no bridge. Qwen offers 'restringeva', 'ristretto', the ordinary words for what the specification says (the incipit's verb is 'ristringersi')."
+  },
+  "T2-recon-C-P5-02-july": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Both models reconstruct a sea divided by an invisible legal line (territorial waters and the high seas, mare liberum and mare clausum) that only a chart, a log or a treaty records. The July wording's 'cessation/recommencement predicates' comes back in Opus's answers as 'ceases ... begins': Manzoni's 'il lago cessa, e l'Adda rincomincia', carried by the specification itself. No lake, river or bridge."
+  },
+  "T2-recon-C-P5-02-revised": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "The closest in shape among the revised entries. Opus describes one water bearing two names on either side of an invisible line, made perceptible by something outside it (a cape, a headland, a lighthouse, a buoy, a chart). That is the incipit's pivot ('il lago cessa, e l'Adda rincomincia', the bridge marking the point), but only as the specification states it: no lake, no river, no bridge; the water is a sea and the marker nautical. Qwen reads 'Mare' as a name or a metaphor."
+  },
+  "T2-recon-C-P6-01-july": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Opus reconstructs a thing seen directly and seen again upside down in a reflecting medium, most plausibly still water (a river, lake or pool) or a mirror, with examples such as a bird, a boat, a tree, a cliff. That is the specification made concrete; the incipit's mountains and villages 'che l'acqua riflette capovolti' are not there. Qwen: a person looking at their own reflection in a mirror."
+  },
+  "T2-recon-C-P6-01-revised": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "As for the original wording: Opus has a thing beside water (a tree, a bird, a boat, a building) and its inverted reflection in a named medium, water or glass; no mountains, no villages. Qwen reads 'single head' in the title literally: a person looking at their own head in a mirror."
+  },
+  "T2-recon-C-P7-01-july": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Opus reconstructs the sea's wave-motion set against the winding, meandering course of a river, and takes 'ondeggiamento' and 'lucid' to be the source's words. The river's meander is the specification's own ('the sea's wave-motion, not the river's meander'), and it points to the incipit's 'lucido serpeggiamento'; the answers repeat it and add nothing of the incipit. Qwen: sea waves."
+  },
+  "T2-recon-C-P7-01-revised": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Opus: UNKNOWN in all five. Qwen: UNKNOWN or the syntax described again, once a generic reflective scene."
+  },
+  "T2-recon-C-P7-02-july": {
+   "reconstructs": {
+    "Opus 5": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "Qwen3-235B": []
+   },
+   "note": "Four of Opus's five name Manzoni or the novel in their AUTHOR and TITLE fields (two as uncertain), and they reconstruct the incipit: 'the course of Lake Como and its shore... the lake narrows and widens between promontories and bays, running between mountain ridges'; 'a lake or river that bends, narrows and spreads again between mountains'. They cite the quoted A9 sentence as the clue. The fifth names nothing and stays generic. Qwen restates the specification."
+  },
+  "T2-recon-C-P7-02-revised": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Both models describe a movement that the syntax imitates and the narrative later carries out, with generic examples (a descent, a turning, a winding, a spiral). No water, no lake, no novel."
+  },
+  "T2-recon-C-P8-01-july": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Both models restate the specification: a timeless present punctured by a phrase of the moment of writing ('now', 'at this day', 'even as I write') over a verb of ongoing change; Opus adds a topographer's or naturalist's description. Nothing of the incipit."
+  },
+  "T2-recon-C-P8-01-revised": {
+   "reconstructs": {
+    "Opus 5": [],
+    "Qwen3-235B": []
+   },
+   "note": "Both models restate the specification: a timeless present punctured by a temporal deictic ('now', 'today', 'at the present day') over a verb of ongoing change. The incipit's phrase is 'al giorno d'oggi', but 'today' is the first example anyone would give, and the specification rules out the source's phrase."
+  }
+ }
+}
