@@ -11,17 +11,27 @@ of the six Opus-5 D2 arms that contain it (document frequency, 0-10). Then compa
   nopat    = nopat + nopat-noemb       (20 texts, no patterns)
 
 The null is july against the replicate: the same prompt sent twice, so whatever a lemma does between
-them is what ten texts do by chance. Differences are in proportions of texts. A 10-vs-10 difference
-is noisier than a 20-vs-20 one by a factor sqrt(2) (binomial), so the null for the group contrasts is
-the july/replicate curve read at t*sqrt(2). The threshold is the smallest t at which that scaled null
-admits no lemma; a "watch" tier one step below (0.1 less) is listed too, with its own false-positive
-count. A lemma must move by the threshold in a group contrast to be listed.
+them is what ten texts do by chance. The criterion is per arm, so that it is on the null's own scale
+and no lemma passes on the strength of one arm of a pooled group (the two arms of a group differ in
+the embargo, which adds noise of its own; the within-pair moves are reported for all three pairs).
+For a contrast "hi over lo" the score is
 
-Each lemma that moves is sorted by its profile across the three groups:
+  every-arm difference = (min over the arms of hi - max over the arms of lo) / 10
+
+i.e. the smallest of the four 10-vs-10 differences. Tiers are fixed in advance on the raw null
+(the share of lemmas whose july/replicate difference reaches t):
+  firm       >= 0.7   (the null reaches 0.7 for 2 of ~2,650 lemmas, for one pair, not four)
+  candidate  >= 0.6   (3)
+  below      >= 0.5   (13: listed for completeness, not findings)
+(The first version of this script pooled each group and scaled the null by sqrt(2); that threshold
+was chosen after a strict first run and is withdrawn. Journal, 2026-11-26.)
+
+Each lemma that moves is sorted by its profile across the three groups (both contrasts at the tier):
   first-wording    first high, revised and nopat low   (the July wording carried it)
   revised-wording  revised high, first and nopat low   (second turn: left in by the revision)
   pattern          first and revised high, nopat low   (travels with the pattern, in both wordings)
   anti-pattern     nopat high, first and revised low   (the patterns push it out)
+  partial          one contrast only (named in the table)
 and flagged when it occurs in the 1840 incipit (provenance candidate), in the July prompt, in the
 revised prompt, or in the no-pattern prompt (wording candidates). Provenance itself stays a reader's
 judgment: the flags only shorten the list.
@@ -31,7 +41,7 @@ Read-only on the run files. Writes results/test1_signs_<tag>.json and .md, plus 
 
   ~/.local/share/manzoni-stanza-venv/bin/python scripts/test1_signs_without_hypotheses.py
 """
-import argparse, hashlib, json, math, sys
+import argparse, hashlib, json, sys
 from pathlib import Path
 
 HS = Path(__file__).resolve().parent.parent
@@ -100,79 +110,79 @@ def main():
     def p(lem, grp):
         return sum(df[lem][x] for x in GROUPS[grp]) / (10 * len(GROUPS[grp]))
 
+    def every(v, hi, lo):
+        return (min(v[x] for x in GROUPS[hi]) - max(v[x] for x in GROUPS[lo])) / 10
+
+    TIERS = [("firm", 0.7), ("candidate", 0.6), ("below", 0.5)]
+    PROFILES = [("first-wording", ("first", "revised"), ("first", "nopat")),
+                ("revised-wording", ("revised", "first"), ("revised", "nopat")),
+                ("pattern", ("first", "nopat"), ("revised", "nopat")),
+                ("anti-pattern", ("nopat", "first"), ("nopat", "revised"))]
+    CONTRASTS = [(h, l) for h in GROUPS for l in GROUPS if h != l]
+    eps = 1e-9
+
     rows = []
-    for lem in df:
-        g = {k: p(lem, k) for k in GROUPS}
-        rows.append({"lemma": lem, "df": df[lem], **{f"p_{k}": v for k, v in g.items()},
-                     "null": abs(df[lem]["july"] - df[lem]["replicate"]) / 10,
-                     "first_vs_nopat": g["first"] - g["nopat"],
-                     "first_vs_revised": g["first"] - g["revised"],
-                     "revised_vs_nopat": g["revised"] - g["nopat"],
+    for lem, v in df.items():
+        e = {f"{h}>{l}": round(every(v, h, l), 1) for h, l in CONTRASTS}
+        # profile: the one whose weaker contrast is strongest; else the single strongest contrast
+        prof, score, contrast = max(((name, min(e[f"{a[0]}>{a[1]}"], e[f"{b[0]}>{b[1]}"]), None)
+                                     for name, a, b in PROFILES), key=lambda x: x[1])
+        prof2, score2 = prof, score   # the best two-contrast profile, kept for partial rows
+        best = max(e, key=e.get)
+        if e[best] > score + eps:
+            # a single contrast clears a higher tier than any two-contrast profile
+            tier_of = lambda x: next((n for n, t in TIERS if x >= t - eps), None)
+            if tier_of(score) is None or tier_of(e[best]) != tier_of(score):
+                prof, score, contrast = "partial", e[best], best
+        tier = next((n for n, t in TIERS if score >= t - eps), None)
+        rows.append({"lemma": lem, "df": v, **{f"p_{k}": p(lem, k) for k in GROUPS},
+                     "every_arm": e, "profile": prof if tier else None, "contrast": contrast,
+                     "score": score, "tier": tier, "profile2": prof2, "score2": score2,
+                     "null": abs(v["july"] - v["replicate"]) / 10,
                      "in_incipit": lem in inc, "in_prompt_july": lem in pr["july"],
                      "in_prompt_revised": lem in pr["revised"], "in_prompt_nopat": lem in pr["nopat"]})
 
-    # empirical false-positive curve: lemmas over threshold t under the null vs in each contrast
-    ts = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
-    cmp_keys = ["first_vs_nopat", "first_vs_revised", "revised_vs_nopat"]
-    eps = 1e-9
-    curve = {t: {"null": sum(r["null"] >= t - eps for r in rows),
-                 "null_scaled": sum(r["null"] >= t * math.sqrt(2) - eps for r in rows),
-                 **{c: sum(abs(r[c]) >= t - eps for r in rows) for c in cmp_keys}} for t in ts}
+    pairs = {"july/replicate": ("july", "replicate"), "revised/stranger": ("revised", "stranger"),
+             "nopat/nopat-noemb": ("nopat", "nopat-noemb")}
+    ts = [0.5, 0.6, 0.7, 0.8]
+    within = {t: {k: sum(abs(r["df"][a] - r["df"][b]) / 10 >= t - eps for r in rows)
+                  for k, (a, b) in pairs.items()} for t in ts}
+    passing = {t: sum(r["score"] >= t - eps for r in rows) for t in ts}
     null_max = max(r["null"] for r in rows)
-    thr = next(t for t in ts if curve[t]["null_scaled"] == 0)
-    watch = round(thr - 0.1, 1)
-
-    def profile(r, thr):
-        hi = {k: r[f"p_{k}"] for k in GROUPS}
-        f, v, n = hi["first"], hi["revised"], hi["nopat"]
-        if f - v >= thr and f - n >= thr: return "first-wording"
-        if v - f >= thr and v - n >= thr: return "revised-wording"
-        if f - n >= thr and v - n >= thr: return "pattern"
-        if n - f >= thr and n - v >= thr: return "anti-pattern"
-        if max(abs(r[c]) for c in cmp_keys) >= thr: return "partial"
-        return None
-
-    for r in rows:
-        f, v, n = (r[f"p_{k}"] for k in GROUPS)
-        r["first_vs_nopat"], r["first_vs_revised"], r["revised_vs_nopat"] = (
-            round(f - n, 3), round(f - v, 3), round(v - n, 3))
-        r["profile"] = profile(r, thr - eps)
-        r["tier"] = "main" if r["profile"] else None
-        if not r["profile"]:
-            r["profile"] = profile(r, watch - eps)
-            r["tier"] = "watch" if r["profile"] else None
-    order = ["first-wording", "pattern", "revised-wording", "anti-pattern", "partial"]
-    short = sorted((r for r in rows if r["profile"]),
-                   key=lambda r: (r["tier"] != "main", order.index(r["profile"]),
-                                  -max(abs(r[c]) for c in cmp_keys), r["lemma"]))
+    order = [n for n, _ in TIERS]
+    porder = [n for n, _, _ in PROFILES] + ["partial"]
+    short = sorted((r for r in rows if r["tier"]),
+                   key=lambda r: (order.index(r["tier"]), porder.index(r["profile"]), -r["score"], r["lemma"]))
 
     out = {"spec": "PT context-leakage draft 2026-11-26, note 15, test 1", "tag": a.tag,
            "stanza": L["stanza"], "upos": L["upos"],
            "arms": {k: {"file": f"results/{fn}", "sha1": sha} for k, (fn, sha) in ARMS.items()},
-           "groups": GROUPS, "n_lemmas": len(rows), "null_max": null_max, "threshold": thr,
-           "watch": watch,
-           "fp_curve": curve, "short_list": short,
-           "null_movers": sorted((r for r in rows if r["null"] >= 0.5), key=lambda r: -r["null"])}
+           "groups": GROUPS, "criterion": "every-arm difference; tiers fixed on the raw null",
+           "tiers": dict(TIERS), "n_lemmas": len(rows), "null_max": null_max,
+           "within_pair_moves": within, "lemmas_passing": passing, "short_list": short}
     (RES / f"test1_signs_{a.tag}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
 
     arms = list(ARMS)
     md = [f"# Test 1: signs without hypotheses ({a.tag})", "",
-          f"Content lemmas: {len(rows)}. Null (july vs replicate, 10 vs 10): largest move {null_max:.1f}. "
-          f"Group contrasts are 20 vs 20; their null is the july/replicate curve read at t*sqrt(2). "
-          f"Threshold {thr:.1f} (scaled null admits no lemma); watch tier {watch:.1f}.", "",
-          "Lemmas over threshold t (null = raw 10 vs 10; scaled = expected false positives at 20 vs 20):", "",
-          "| t | null | scaled | first vs nopat | first vs revised | revised vs nopat |",
-          "|---|---|---|---|---|---|"]
-    md += [f"| {t} | {c['null']} | {c['null_scaled']} | {c['first_vs_nopat']} | {c['first_vs_revised']} | {c['revised_vs_nopat']} |"
-           for t, c in curve.items()]
+          f"Content lemmas: {len(rows)}. Criterion: the every-arm difference (smallest of the four "
+          f"10-vs-10 differences between the arms of two groups), on the raw null's scale. Tiers fixed "
+          f"on the raw null: firm >= 0.7, candidate >= 0.6, below >= 0.5 (not findings).", "",
+          "Lemmas moving by t or more between the two arms of a pair (july/replicate is the null), "
+          "and lemmas whose every-arm score reaches t:", "",
+          "| t | july/replicate | revised/stranger | nopat/nopat-noemb | every-arm score |",
+          "|---|---|---|---|---|"]
+    md += [f"| {t} | " + " | ".join(str(within[t][k]) for k in pairs) + f" | {passing[t]} |" for t in ts]
     md += ["", "Short list (texts of ten per arm; I = incipit; prompts: J july, R revised, N no-pattern):", "",
-           "| tier | profile | lemma | " + " | ".join(arms) + " | I | J | R | N |",
-           "|---|---|---|" + "---|" * (len(arms) + 4)]
+           "| tier | profile | lemma | score | " + " | ".join(arms) + " | I | J | R | N |",
+           "|---|---|---|---|" + "---|" * (len(arms) + 4)]
     for r in short:
         fl = ["I" if r["in_incipit"] else "", "J" if r["in_prompt_july"] else "",
               "R" if r["in_prompt_revised"] else "", "N" if r["in_prompt_nopat"] else ""]
-        md.append(f"| {r['tier']} | {r['profile']} | {r['lemma']} | " + " | ".join(str(r['df'][x]) for x in arms)
-                  + " | " + " | ".join(fl) + " |")
+        pf = r["profile"] + (f" ({r['contrast']})" if r["contrast"] else "")
+        if r["contrast"] and r["score2"] >= TIERS[-1][1] - eps:
+            pf += f"; {r['profile2']} at {r['score2']:.1f}"
+        md.append(f"| {r['tier']} | {pf} | {r['lemma']} | {r['score']:.1f} | "
+                  + " | ".join(str(r['df'][x]) for x in arms) + " | " + " | ".join(fl) + " |")
     (RES / f"test1_signs_{a.tag}.md").write_text("\n".join(md) + "\n")
     print("\n".join(md))
 
