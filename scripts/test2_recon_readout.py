@@ -152,7 +152,9 @@ def main():
 
     def cell(pat, w, m):
         n, mm, p, q, z, u = cells[(pat, w, m)]
-        return f"{n}/{mm}\\textbar{{}}{p}/{q}({z})" + ("\\textsuperscript{*}" if u else "")
+        # the table no longer shows refusals (SF, 11-27): there must be none to hide
+        assert z == 0 and u == 0, (pat, w, m, z, u)
+        return f"{n}/{mm}\\textbar{{}}{p}/{q}"
 
     tex = ["\\begin{center}\\small", "\\begin{tabular}{@{}l cc @{\\hspace{2em}} cc@{}}", "\\toprule",
            "pattern & \\multicolumn{2}{c}{" + list(MODELS)[0] + "} & \\multicolumn{2}{c}{"
@@ -175,10 +177,9 @@ def main():
           "Each pattern entry was sent alone, in two separate prompts, an identity prompt and a "
           "reconstruction prompt, five times per model. The six entries the revision rewrote were sent "
           "in their original (July) and their revised wording, the four it left alone once. Opus 5 "
-          "(thinking disabled) is the rerun of 11-27, every try sent and each refusal recorded, in the "
-          "frame below; Qwen3-235B (ACES, 11-26) had the same frame with one more opening line, \"You "
-          "are assisting with a scholarly experiment in structural literary analysis.\" Dropping that "
-          "line cleared Opus's refusals (refusal check, 11-27). Both prompts are quoted verbatim from "
+          "(thinking disabled) is the rerun of 11-27, in the frame below; Qwen3-235B (ACES, 11-26) had "
+          "the same frame with one more opening line, \"You are assisting with a scholarly experiment in "
+          "structural literary analysis.\"[^frame] Both prompts are quoted verbatim from "
           "specs/probe/loopA_patterns_it_D2_nopre.json, with the entry replaced by [ENTRY].", "",
           "**Identity prompt, as sent to Opus 5:**", "",
           quote(frame(next(i for i in nopre["items"] if i["question"] == "identity"))), "",
@@ -187,17 +188,21 @@ def main():
           "The question for each reconstruction answer is whether it reconstructs Manzoni's passage. "
           f"Criterion, applied by hand ({esc(hand['reader'])}): {esc(hand['criterion'])} Each entry "
           "carries a note on how its answers were read.", "",
-          "In the table each cell gives *n/m*\\textbar{}*p/q*(*z*): identity, *n* answers naming "
+          "In the table each cell gives *n/m*\\textbar{}*p/q*: identity, *n* answers naming "
           "Manzoni or *I promessi sposi* of the *m* given; reconstruction, *p* answers that reconstruct "
-          "Manzoni's passage of the *q* given; *z*, the refusals in the two prompts together. A cell "
-          "spanning both columns is an entry whose wording the revision left unchanged. "
-          + ("\\* The run stopped an item at its first refusal, so in the starred cells the tries "
-             "after a refusal were never sent, and *m* + *q* + *z* falls short of ten by that number. "
-             if any(totals[(m, "unsent")] for m in MODELS) else "")
-          + " ".join(f"{m}: {totals[(m, 'refused')]} refusals, {totals[(m, 'unsent')]} tries not sent."
-                     for m in MODELS), ""] + tex + ["", check_line(), ""]
+          "Manzoni's passage of the *q* given. A cell spanning both columns is an entry whose wording "
+          "the revision left unchanged.", ""] + tex + ["", check_line(), ""]
     md += ["# The incipit (1840)", "", INCIPIT.read_text().strip(), "", "\\newpage", "",
            "# The entries", ""] + body
+    md += ["", "[^frame]: Getting Opus 5 to answer took more than one framing. On 11-26, in the frame "
+           "Qwen3 received, Anthropic's `cyber` classifier stopped 11 of Opus's calls, a false positive "
+           "on material that has nothing to do with computer security, and the run stopped each refused "
+           "item at its first refusal, so 40 further tries were never sent. On 11-27 one refused prompt "
+           "was sent again with one change to its frame at a time, never to the pattern entry (12 "
+           "calls): three of five changes cleared the refusal, dropping the opening line among them. "
+           "The whole test was then sent again to Opus 5 without that line, five tries per item, and "
+           f"none of the {sum(len(res['Opus 5'][i['id']]['requests']) for i in man['items'])} calls was "
+           "refused. Qwen3 never refused and was not sent again."]
     Path(a.out).write_text("\n".join(md) + "\n")
     print(f"wrote {a.out}")
     for k, v in cells.items():

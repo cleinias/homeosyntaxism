@@ -169,6 +169,12 @@ def main():
                     help="JSON {edits: [[old, new], ...]} applied after the other swaps, each old "
                          "string matching exactly once (e.g. specs/noembargo_edits_it_D2.json)")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--expect-prompt-of", metavar="RUNFILE",
+                    help="more texts for an existing arm: the FINAL prompt must equal that run "
+                         "file's `prompt` byte for byte, or nothing is sent")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="assemble and check the prompt and the output names, then stop: "
+                         "nothing is sent and nothing is written")
     a = ap.parse_args()
 
     d = json.loads(Path(a.constrained).read_text(encoding="utf-8"))
@@ -196,6 +202,15 @@ def main():
             prompt = prompt.replace(old, new)
         print(f"[edits]      {len(edits)} from {a.prompt_edits}: {len(prompt)} chars", flush=True)
     assert_source_blind(prompt)
+    if a.expect_prompt_of:
+        ref = json.loads(Path(a.expect_prompt_of).read_text(encoding="utf-8"))["prompt"]
+        if prompt != ref:
+            k = next((i for i, (x, y) in enumerate(zip(prompt, ref)) if x != y),
+                     min(len(prompt), len(ref)))
+            sys.exit(f"run_unrestricted_manzoni: final prompt differs from "
+                     f"{Path(a.expect_prompt_of).name} at char {k} ({len(prompt)} vs "
+                     f"{len(ref)} chars); nothing sent")
+        print(f"[expect]     final prompt identical to {Path(a.expect_prompt_of).name}", flush=True)
     # The prompt is saved verbatim beside the run before any call is made, and a run
     # file is never overwritten: the 1840 Italian no-pattern run lost its prompt when
     # a scorer wrote over it, and the prompt had to be rebuilt.
@@ -204,6 +219,10 @@ def main():
     for f in (out, pfn):
         if f.exists():
             sys.exit(f"run_unrestricted_manzoni: {f} exists; refusing to overwrite a run")
+    if a.dry_run:
+        print(f"[dry run]    would send n={a.n} to {a.model} (max_tokens {a.max_tokens}, thinking "
+              f"{'disabled' if a.disable_thinking else 'default'}) -> {out.name}", flush=True)
+        return
     pfn.write_text(prompt, encoding="utf-8")
     print(f"[unrestrict] {len(d['prompt'])} -> {len(prompt)} chars; source-blind {degree}, no patterns"
           f" -> {pfn.name}", flush=True)

@@ -1,0 +1,7 @@
+[domain] 10987 -> 10046 chars; brief from specs/domain_brief_3item.txt
+[D2/it] prompt identical to production_D2_it_constr-1840_claude-opus-5.json
+[D2/it] 14 prompt edits from specs/effect_free_noembargo_edits_it_D2.json: 9097 chars
+[D2/it] final prompt identical to production_D2_it_effectfree-noemb-1840_claude-opus-5.json
+[D2/it] backend=anthropic model=claude-opus-5 n=10 prompt_chars=9097 -> production_D2_it_effectfree-noemb-1840-b1127_claude-opus-5_PROMPT.txt
+[D2/it] wrote production_D2_it_effectfree-noemb-1840-b1127_claude-opus-5.json: 10 candidates in 299.6s
+  e.g. (522 w): Il mare di Lampedusa si apre a sud come una lamina che nessuna carta nautica riesce a contenere, e che pure i radar misurano ogni notte, per restituirne il respiro in forma di punti luminosi e di coor

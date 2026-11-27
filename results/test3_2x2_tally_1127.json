@@ -1,0 +1,427 @@
+{
+ "spec": "SF 2026-11-27: test 3 on the 2x2 arms, two batches of ten texts per arm",
+ "sources": {
+  "1126": {
+   "file": "results/probe_loopA_outputs_it_D2_loopA-1126_claude-opus-5.json",
+   "manifest": "specs/probe/loopA_outputs_it_D2.json",
+   "params": {
+    "backend": "anthropic",
+    "model": "claude-opus-5",
+    "provider": null,
+    "n": 1,
+    "temperature_arg": 0.9,
+    "max_tokens": 1024,
+    "thinking": "disabled"
+   }
+  },
+  "b1127": {
+   "file": "results/probe_loopA_outputs_it_D2_b1127_loopA-1127_claude-opus-5.json",
+   "manifest": "specs/probe/loopA_outputs_it_D2_b1127.json",
+   "params": {
+    "backend": "anthropic",
+    "model": "claude-opus-5",
+    "provider": null,
+    "n": 1,
+    "temperature_arg": 0.9,
+    "max_tokens": 1024,
+    "thinking": "disabled"
+   }
+  }
+ },
+ "arms": {
+  "revised": "patterns, embargo (revised)",
+  "stranger": "patterns, no embargo (constrained, no embargo)",
+  "nopat": "no patterns, embargo",
+  "nopat-noemb": "no patterns, no embargo"
+ },
+ "cells": {
+  "revised|uncued": {
+   "batches": {
+    "1126": [
+     4,
+     10,
+     0
+    ],
+    "b1127": [
+     3,
+     10,
+     0
+    ]
+   },
+   "pooled": [
+    7,
+    20,
+    0
+   ]
+  },
+  "revised|cued": {
+   "batches": {
+    "1126": [
+     8,
+     10,
+     0
+    ],
+    "b1127": [
+     7,
+     9,
+     1
+    ]
+   },
+   "pooled": [
+    15,
+    19,
+    1
+   ]
+  },
+  "stranger|uncued": {
+   "batches": {
+    "1126": [
+     0,
+     10,
+     0
+    ],
+    "b1127": [
+     0,
+     10,
+     0
+    ]
+   },
+   "pooled": [
+    0,
+    20,
+    0
+   ]
+  },
+  "stranger|cued": {
+   "batches": {
+    "1126": [
+     2,
+     10,
+     0
+    ],
+    "b1127": [
+     1,
+     10,
+     0
+    ]
+   },
+   "pooled": [
+    3,
+    20,
+    0
+   ]
+  },
+  "nopat|uncued": {
+   "batches": {
+    "1126": [
+     2,
+     10,
+     0
+    ],
+    "b1127": [
+     2,
+     10,
+     0
+    ]
+   },
+   "pooled": [
+    4,
+    20,
+    0
+   ]
+  },
+  "nopat|cued": {
+   "batches": {
+    "1126": [
+     3,
+     10,
+     0
+    ],
+    "b1127": [
+     5,
+     10,
+     0
+    ]
+   },
+   "pooled": [
+    8,
+    20,
+    0
+   ]
+  },
+  "nopat-noemb|uncued": {
+   "batches": {
+    "1126": [
+     0,
+     10,
+     0
+    ],
+    "b1127": [
+     0,
+     10,
+     0
+    ]
+   },
+   "pooled": [
+    0,
+    20,
+    0
+   ]
+  },
+  "nopat-noemb|cued": {
+   "batches": {
+    "1126": [
+     3,
+     9,
+     1
+    ],
+    "b1127": [
+     2,
+     10,
+     0
+    ]
+   },
+   "pooled": [
+    5,
+    19,
+    1
+   ]
+  }
+ },
+ "contrasts": {
+  "embargo, pooled over patterns|uncued|1126": {
+   "embargo": [
+    6,
+    20,
+    0
+   ],
+   "no_embargo": [
+    0,
+    20,
+    0
+   ],
+   "p": 0.0201960201960202
+  },
+  "embargo, pooled over patterns|uncued|b1127": {
+   "embargo": [
+    5,
+    20,
+    0
+   ],
+   "no_embargo": [
+    0,
+    20,
+    0
+   ],
+   "p": 0.04712404712404713
+  },
+  "embargo, pooled over patterns|uncued|pooled": {
+   "embargo": [
+    11,
+    40,
+    0
+   ],
+   "no_embargo": [
+    0,
+    40,
+    0
+   ],
+   "p": 0.00044128129275043356
+  },
+  "embargo, pooled over patterns|cued|1126": {
+   "embargo": [
+    11,
+    20,
+    0
+   ],
+   "no_embargo": [
+    5,
+    19,
+    1
+   ],
+   "p": 0.10534026796540702
+  },
+  "embargo, pooled over patterns|cued|b1127": {
+   "embargo": [
+    12,
+    19,
+    1
+   ],
+   "no_embargo": [
+    3,
+    20,
+    0
+   ],
+   "p": 0.003056449107617072
+  },
+  "embargo, pooled over patterns|cued|pooled": {
+   "embargo": [
+    23,
+    39,
+    1
+   ],
+   "no_embargo": [
+    8,
+    39,
+    1
+   ],
+   "p": 0.0010370125725329658
+  },
+  "embargo | patterns|uncued|1126": {
+   "embargo": [
+    4,
+    10,
+    0
+   ],
+   "no_embargo": [
+    0,
+    10,
+    0
+   ],
+   "p": 0.08668730650154799
+  },
+  "embargo | patterns|uncued|b1127": {
+   "embargo": [
+    3,
+    10,
+    0
+   ],
+   "no_embargo": [
+    0,
+    10,
+    0
+   ],
+   "p": 0.21052631578947367
+  },
+  "embargo | patterns|uncued|pooled": {
+   "embargo": [
+    7,
+    20,
+    0
+   ],
+   "no_embargo": [
+    0,
+    20,
+    0
+   ],
+   "p": 0.008316008316008316
+  },
+  "embargo | patterns|cued|1126": {
+   "embargo": [
+    8,
+    10,
+    0
+   ],
+   "no_embargo": [
+    2,
+    10,
+    0
+   ],
+   "p": 0.023014137565221155
+  },
+  "embargo | patterns|cued|b1127": {
+   "embargo": [
+    7,
+    9,
+    1
+   ],
+   "no_embargo": [
+    1,
+    10,
+    0
+   ],
+   "p": 0.005477494641581328
+  },
+  "embargo | patterns|cued|pooled": {
+   "embargo": [
+    15,
+    19,
+    1
+   ],
+   "no_embargo": [
+    3,
+    20,
+    0
+   ],
+   "p": 8.750174634974171e-05
+  },
+  "embargo | no patterns|uncued|1126": {
+   "embargo": [
+    2,
+    10,
+    0
+   ],
+   "no_embargo": [
+    0,
+    10,
+    0
+   ],
+   "p": 0.4736842105263158
+  },
+  "embargo | no patterns|uncued|b1127": {
+   "embargo": [
+    2,
+    10,
+    0
+   ],
+   "no_embargo": [
+    0,
+    10,
+    0
+   ],
+   "p": 0.4736842105263158
+  },
+  "embargo | no patterns|uncued|pooled": {
+   "embargo": [
+    4,
+    20,
+    0
+   ],
+   "no_embargo": [
+    0,
+    20,
+    0
+   ],
+   "p": 0.10602910602910605
+  },
+  "embargo | no patterns|cued|1126": {
+   "embargo": [
+    3,
+    10,
+    0
+   ],
+   "no_embargo": [
+    3,
+    9,
+    1
+   ],
+   "p": 1.0
+  },
+  "embargo | no patterns|cued|b1127": {
+   "embargo": [
+    5,
+    10,
+    0
+   ],
+   "no_embargo": [
+    2,
+    10,
+    0
+   ],
+   "p": 0.34984520123839014
+  },
+  "embargo | no patterns|cued|pooled": {
+   "embargo": [
+    8,
+    20,
+    0
+   ],
+   "no_embargo": [
+    5,
+    19,
+    1
+   ],
+   "p": 0.5006034160650401
+  }
+ }
+}

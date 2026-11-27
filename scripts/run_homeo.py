@@ -150,6 +150,13 @@ def main():
                          "old string matching exactly once: a variant arm of an existing run "
                          "(e.g. specs/effect_free_edits_it_D2.json). With --same-prompt-as, the "
                          "check runs on the prompt BEFORE the edits")
+    ap.add_argument("--expect-prompt-of", metavar="RUNFILE",
+                    help="more texts for an existing arm: the FINAL prompt (after --domain and "
+                         "--prompt-edits) must equal that run file's `prompt` byte for byte, or "
+                         "nothing is sent")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="assemble and check the prompt and the output names, then stop: "
+                         "nothing is sent and nothing is written")
     a = ap.parse_args()
 
     if not a.print_prompt and not (a.backend and a.model and a.tag):
@@ -188,6 +195,16 @@ def main():
             RUM.assert_source_blind(prompt)
             print(f"[{label}/{a.lang}] {len(edits)} prompt edits from {a.prompt_edits}: "
                   f"{len(prompt)} chars", flush=True)
+        if a.expect_prompt_of:
+            ref = json.loads(Path(a.expect_prompt_of).read_text(encoding="utf-8"))["prompt"]
+            if prompt != ref:
+                k = next((i for i, (x, y) in enumerate(zip(prompt, ref)) if x != y),
+                         min(len(prompt), len(ref)))
+                sys.exit(f"run_homeo: [{label}/{a.lang}] final prompt differs from "
+                         f"{Path(a.expect_prompt_of).name} at char {k} ({len(prompt)} vs "
+                         f"{len(ref)} chars); nothing sent")
+            print(f"[{label}/{a.lang}] final prompt identical to {Path(a.expect_prompt_of).name}",
+                  flush=True)
         if a.print_prompt:
             RP.OUT.mkdir(parents=True, exist_ok=True)
             fn = RP.OUT / f"prompt_{label}_{a.lang}.json"
@@ -208,6 +225,11 @@ def main():
             if f.exists():
                 sys.exit(f"run_homeo: {f.name} exists; refusing to overwrite a run. "
                          f"Use a new --tag.")
+        if a.dry_run:
+            print(f"[{label}/{a.lang}] dry run: would send n={a.n} to {a.model} "
+                  f"(max_tokens {a.max_tokens}, thinking "
+                  f"{'disabled' if a.disable_thinking else 'default'}) -> {fn.name}", flush=True)
+            continue
         pfn.write_text(prompt, encoding="utf-8")
         print(f"[{label}/{a.lang}] backend={a.backend} model={a.model} n={a.n} prompt_chars={len(prompt)}"
               f" -> {pfn.name}", flush=True)

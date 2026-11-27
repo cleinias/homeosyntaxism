@@ -1,0 +1,34 @@
+[probe-batch] loopA_patterns_it_D2_nopre.json (32 prompts) anthropic claude-opus-5 n=5 -> probe_loopA_patterns_it_D2_nopre_loopA-1127_claude-opus-5.json
+  [1/32] T2-ident-C-P1-01-july: 5 answers, recognised 0
+  [2/32] T2-ident-C-P1-01-revised: 5 answers, recognised 0
+  [3/32] T2-ident-C-P2-01-both: 5 answers, recognised 5
+  [4/32] T2-ident-C-P3-01-both: 5 answers, recognised 0
+  [5/32] T2-ident-C-P4-01-both: 5 answers, recognised 0
+  [6/32] T2-ident-C-P5-01-both: 5 answers, recognised 0
+  [7/32] T2-ident-C-P5-02-july: 5 answers, recognised 0
+  [8/32] T2-ident-C-P5-02-revised: 5 answers, recognised 0
+  [9/32] T2-ident-C-P6-01-july: 5 answers, recognised 0
+  [10/32] T2-ident-C-P6-01-revised: 5 answers, recognised 0
+  [11/32] T2-ident-C-P7-01-july: 5 answers, recognised 0
+  [12/32] T2-ident-C-P7-01-revised: 5 answers, recognised 0
+  [13/32] T2-ident-C-P7-02-july: 5 answers, recognised 5
+  [14/32] T2-ident-C-P7-02-revised: 5 answers, recognised 0
+  [15/32] T2-ident-C-P8-01-july: 5 answers, recognised 0
+  [16/32] T2-ident-C-P8-01-revised: 5 answers, recognised 0
+  [17/32] T2-recon-C-P1-01-july: 5 answers, recognised 0
+  [18/32] T2-recon-C-P1-01-revised: 5 answers, recognised 0
+  [19/32] T2-recon-C-P2-01-both: 5 answers, recognised 0
+  [20/32] T2-recon-C-P3-01-both: 5 answers, recognised 0
+  [21/32] T2-recon-C-P4-01-both: 5 answers, recognised 0
+  [22/32] T2-recon-C-P5-01-both: 5 answers, recognised 0
+  [23/32] T2-recon-C-P5-02-july: 5 answers, recognised 0
+  [24/32] T2-recon-C-P5-02-revised: 5 answers, recognised 0
+  [25/32] T2-recon-C-P6-01-july: 5 answers, recognised 0
+  [26/32] T2-recon-C-P6-01-revised: 5 answers, recognised 0
+  [27/32] T2-recon-C-P7-01-july: 5 answers, recognised 0
+  [28/32] T2-recon-C-P7-01-revised: 5 answers, recognised 0
+  [29/32] T2-recon-C-P7-02-july: 5 answers, recognised 4
+  [30/32] T2-recon-C-P7-02-revised: 5 answers, recognised 0
+  [31/32] T2-recon-C-P8-01-july: 5 answers, recognised 0
+  [32/32] T2-recon-C-P8-01-revised: 5 answers, recognised 0
+[probe-batch] wrote probe_loopA_patterns_it_D2_nopre_loopA-1127_claude-opus-5.json: 32 items, 0 failed, 929s

@@ -1,0 +1,7 @@
+[domain] 10987 -> 10046 chars; brief from specs/domain_brief_3item.txt
+[D2/it] prompt identical to production_D2_it_constr-1840_claude-opus-5.json
+[D2/it] 13 prompt edits from specs/effect_free_edits_it_D2.json: 9585 chars
+[D2/it] final prompt identical to production_D2_it_effectfree-1840_claude-opus-5.json
+[D2/it] backend=anthropic model=claude-opus-5 n=10 prompt_chars=9585 -> production_D2_it_effectfree-1840-b1127_claude-opus-5_PROMPT.txt
+[D2/it] wrote production_D2_it_effectfree-1840-b1127_claude-opus-5.json: 10 candidates in 276.9s
+  e.g. (607 w): L'isola si distende sul filo d'acqua come una lastra di calcare che il vento ha levigato per secoli e che nessun fiume ha mai inciso, a reggere il peso di un orizzonte troppo largo e a dividere due ac

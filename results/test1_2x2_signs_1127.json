@@ -1,0 +1,986 @@
+{
+ "spec": "SF 2026-11-27: test 1 on the 2x2 dataset (patterns x embargo) only",
+ "tag": "1127",
+ "stanza": "1.12.2",
+ "upos": [
+  "ADJ",
+  "ADV",
+  "NOUN",
+  "PROPN",
+  "VERB"
+ ],
+ "n_lemmas": 2268,
+ "arms": {
+  "pat+emb": {
+   "file": "results/production_D2_it_effectfree-1840_claude-opus-5.json",
+   "sha1": "4a6611451c5dc01dc6b8829dabdf0765cef5a8ce"
+  },
+  "pat": {
+   "file": "results/production_D2_it_effectfree-noemb-1840_claude-opus-5.json",
+   "sha1": "b9bff3c29974716e26596753311da9cf5ec67aac"
+  },
+  "emb": {
+   "file": "results/unrestricted_it_1840_opus5_clean_n10.json",
+   "sha1": "2c22e198d0d3b353b670400462fe0927bbcf8f6a"
+  },
+  "none": {
+   "file": "results/unrestricted_it_1840_opus5_noemb_n10.json",
+   "sha1": "8dc2e3155a9cbe76fdee4ae95e8d74aa373c5ab0"
+  }
+ },
+ "text_lemmas_same_as_1126_parse": true,
+ "null": {
+  "method": "stratified shuffles",
+  "n": 2000,
+  "seed": 20261127
+ },
+ "tier_rule": {
+  "firm": "smallest t with family-wise rate <= 0.05",
+  "candidate": "smallest t with expected chance passes < 1, if below firm"
+ },
+ "contrasts": {
+  "patterns": {
+   "high": [
+    "pat+emb",
+    "pat"
+   ],
+   "low": [
+    "emb",
+    "none"
+   ],
+   "shuffled_within": [
+    [
+     "pat+emb",
+     "emb"
+    ],
+    [
+     "pat",
+     "none"
+    ]
+   ],
+   "t": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "expected_chance": [
+    5.529,
+    0.695,
+    0.074,
+    0.002,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "familywise": [
+    0.995,
+    0.492,
+    0.072,
+    0.002,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "observed": [
+    31,
+    16,
+    8,
+    2,
+    1,
+    0,
+    0
+   ],
+   "firm": 0.6,
+   "candidate": 0.4,
+   "lemmas": [
+    {
+     "lemma": "onda",
+     "score": 0.7,
+     "direction": "up",
+     "tier": "firm",
+     "df": {
+      "pat+emb": 10,
+      "pat": 8,
+      "emb": 1,
+      "none": 1
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "allargare",
+     "score": 0.6,
+     "direction": "up",
+     "tier": "firm",
+     "df": {
+      "pat+emb": 9,
+      "pat": 7,
+      "emb": 1,
+      "none": 1
+     },
+     "I": true,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P5-01 expansion, re-expansion"
+    },
+    {
+     "lemma": "conca",
+     "score": 0.5,
+     "direction": "down",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 1,
+      "pat": 2,
+      "emb": 7,
+      "none": 7
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "dilare",
+     "score": 0.5,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 5,
+      "pat": 5,
+      "emb": 0,
+      "none": 0
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P5-01 dilation (stanza's lemma for some forms of dilatare)"
+    },
+    {
+     "lemma": "dilatare",
+     "score": 0.5,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 5,
+      "pat": 6,
+      "emb": 0,
+      "none": 0
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P5-01 dilation"
+    },
+    {
+     "lemma": "lampedusa",
+     "score": 0.5,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 7,
+      "pat": 10,
+      "emb": 1,
+      "none": 2
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": true,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "specchio",
+     "score": 0.5,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 5,
+      "pat": 5,
+      "emb": 0,
+      "none": 0
+     },
+     "I": true,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P6-01 specular, mirroring medium"
+    },
+    {
+     "lemma": "superficie",
+     "score": 0.5,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 7,
+      "pat": 8,
+      "emb": 2,
+      "none": 1
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "capovolto",
+     "score": 0.4,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 7,
+      "pat": 4,
+      "emb": 0,
+      "none": 0
+     },
+     "I": true,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P6-01 inversion marker"
+    },
+    {
+     "lemma": "insenatura",
+     "score": 0.4,
+     "direction": "down",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 3,
+      "pat": 2,
+      "emb": 9,
+      "none": 7
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "nuovo",
+     "score": 0.4,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 5,
+      "pat": 8,
+      "emb": 1,
+      "none": 0
+     },
+     "I": true,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P5-01 re-expansion (di nuovo); also 'NEW material'"
+    },
+    {
+     "lemma": "paesaggio",
+     "score": 0.4,
+     "direction": "down",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 0,
+      "pat": 0,
+      "emb": 4,
+      "none": 4
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": true,
+     "gloss": "domain brief: migration landscape"
+    },
+    {
+     "lemma": "pazienza",
+     "score": 0.4,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 4,
+      "pat": 4,
+      "emb": 0,
+      "none": 0
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "respiro",
+     "score": 0.4,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 5,
+      "pat": 5,
+      "emb": 0,
+      "none": 1
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "riflesso",
+     "score": 0.4,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 4,
+      "pat": 4,
+      "emb": 0,
+      "none": 0
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P6-01 reflection predicate"
+    },
+    {
+     "lemma": "stringere",
+     "score": 0.4,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 6,
+      "pat": 6,
+      "emb": 2,
+      "none": 2
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P5-01 constriction"
+    }
+   ]
+  },
+  "embargo": {
+   "high": [
+    "pat+emb",
+    "emb"
+   ],
+   "low": [
+    "pat",
+    "none"
+   ],
+   "shuffled_within": [
+    [
+     "pat+emb",
+     "pat"
+    ],
+    [
+     "emb",
+     "none"
+    ]
+   ],
+   "t": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "expected_chance": [
+    4.96,
+    0.624,
+    0.072,
+    0.004,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "familywise": [
+    0.994,
+    0.461,
+    0.068,
+    0.004,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "observed": [
+    8,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "firm": 0.6,
+   "candidate": 0.4,
+   "lemmas": [
+    {
+     "lemma": "chiaro",
+     "score": 0.4,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 7,
+      "pat": 2,
+      "emb": 7,
+      "none": 3
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    }
+   ]
+  },
+  "patterns|no emb": {
+   "high": [
+    "pat"
+   ],
+   "low": [
+    "none"
+   ],
+   "shuffled_within": [
+    [
+     "pat",
+     "none"
+    ]
+   ],
+   "t": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "expected_chance": [
+    125.772,
+    40.289,
+    11.335,
+    2.619,
+    0.492,
+    0.066,
+    0.005
+   ],
+   "familywise": [
+    1.0,
+    1.0,
+    1.0,
+    0.926,
+    0.383,
+    0.064,
+    0.005
+   ],
+   "observed": [
+    190,
+    72,
+    33,
+    13,
+    6,
+    2,
+    0
+   ],
+   "firm": 0.9,
+   "candidate": 0.7,
+   "lemmas": [
+    {
+     "lemma": "lampedusa",
+     "score": 0.8,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 7,
+      "pat": 10,
+      "emb": 1,
+      "none": 2
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": true,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "nuovo",
+     "score": 0.8,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 5,
+      "pat": 8,
+      "emb": 1,
+      "none": 0
+     },
+     "I": true,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P5-01 re-expansion (di nuovo); also 'NEW material'"
+    },
+    {
+     "lemma": "correre",
+     "score": 0.7,
+     "direction": "down",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 3,
+      "pat": 0,
+      "emb": 3,
+      "none": 7
+     },
+     "I": true,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "onda",
+     "score": 0.7,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 10,
+      "pat": 8,
+      "emb": 1,
+      "none": 1
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "prefabbricato",
+     "score": 0.7,
+     "direction": "down",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 3,
+      "pat": 0,
+      "emb": 5,
+      "none": 7
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "superficie",
+     "score": 0.7,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 7,
+      "pat": 8,
+      "emb": 2,
+      "none": 1
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    }
+   ]
+  },
+  "patterns|emb": {
+   "high": [
+    "pat+emb"
+   ],
+   "low": [
+    "emb"
+   ],
+   "shuffled_within": [
+    [
+     "pat+emb",
+     "emb"
+    ]
+   ],
+   "t": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "expected_chance": [
+    123.556,
+    42.142,
+    10.775,
+    2.797,
+    0.447,
+    0.068,
+    0.005
+   ],
+   "familywise": [
+    1.0,
+    1.0,
+    1.0,
+    0.945,
+    0.35,
+    0.061,
+    0.005
+   ],
+   "observed": [
+    181,
+    76,
+    28,
+    13,
+    5,
+    3,
+    2
+   ],
+   "firm": 0.9,
+   "candidate": 0.7,
+   "lemmas": [
+    {
+     "lemma": "fondo",
+     "score": 0.9,
+     "direction": "up",
+     "tier": "firm",
+     "df": {
+      "pat+emb": 9,
+      "pat": 1,
+      "emb": 0,
+      "none": 1
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "onda",
+     "score": 0.9,
+     "direction": "up",
+     "tier": "firm",
+     "df": {
+      "pat+emb": 10,
+      "pat": 8,
+      "emb": 1,
+      "none": 1
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "allargare",
+     "score": 0.8,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 9,
+      "pat": 7,
+      "emb": 1,
+      "none": 1
+     },
+     "I": true,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P5-01 expansion, re-expansion"
+    },
+    {
+     "lemma": "capovolto",
+     "score": 0.7,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 7,
+      "pat": 4,
+      "emb": 0,
+      "none": 0
+     },
+     "I": true,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": true,
+     "U": false,
+     "gloss": "P6-01 inversion marker"
+    },
+    {
+     "lemma": "europeo",
+     "score": 0.7,
+     "direction": "down",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 0,
+      "pat": 2,
+      "emb": 7,
+      "none": 3
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": true,
+     "gloss": "domain brief: Italian and European policing apparatus"
+    }
+   ]
+  },
+  "embargo|patterns": {
+   "high": [
+    "pat+emb"
+   ],
+   "low": [
+    "pat"
+   ],
+   "shuffled_within": [
+    [
+     "pat+emb",
+     "pat"
+    ]
+   ],
+   "t": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "expected_chance": [
+    121.306,
+    37.739,
+    10.811,
+    2.527,
+    0.467,
+    0.062,
+    0.006
+   ],
+   "familywise": [
+    1.0,
+    1.0,
+    1.0,
+    0.912,
+    0.367,
+    0.061,
+    0.006
+   ],
+   "observed": [
+    169,
+    58,
+    23,
+    4,
+    4,
+    1,
+    0
+   ],
+   "firm": 0.9,
+   "candidate": 0.7,
+   "lemmas": [
+    {
+     "lemma": "fondo",
+     "score": 0.8,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 9,
+      "pat": 1,
+      "emb": 0,
+      "none": 1
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "cale",
+     "score": 0.7,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 9,
+      "pat": 2,
+      "emb": 5,
+      "none": 5
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "esistere",
+     "score": 0.7,
+     "direction": "down",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 2,
+      "pat": 9,
+      "emb": 4,
+      "none": 5
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    },
+    {
+     "lemma": "recinto",
+     "score": 0.7,
+     "direction": "up",
+     "tier": "candidate",
+     "df": {
+      "pat+emb": 7,
+      "pat": 0,
+      "emb": 6,
+      "none": 6
+     },
+     "I": false,
+     "E": false,
+     "P": false,
+     "B": false,
+     "T": false,
+     "U": false,
+     "gloss": null
+    }
+   ]
+  },
+  "embargo|no pat": {
+   "high": [
+    "emb"
+   ],
+   "low": [
+    "none"
+   ],
+   "shuffled_within": [
+    [
+     "emb",
+     "none"
+    ]
+   ],
+   "t": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "expected_chance": [
+    126.457,
+    41.096,
+    11.586,
+    2.64,
+    0.509,
+    0.059,
+    0.009
+   ],
+   "familywise": [
+    1.0,
+    1.0,
+    1.0,
+    0.933,
+    0.398,
+    0.059,
+    0.009
+   ],
+   "observed": [
+    139,
+    38,
+    8,
+    1,
+    0,
+    0,
+    0
+   ],
+   "firm": 0.9,
+   "candidate": 0.7,
+   "lemmas": []
+  }
+ }
+}

@@ -1,0 +1,393 @@
+{
+ "model": "claude-opus-5",
+ "backend": "anthropic",
+ "degree": "D2",
+ "lang": "it",
+ "regime": "unrestricted-homeo-source-blind",
+ "derived_from": "results/production_D2_it_constr-1840_claude-opus-5.json",
+ "derived_from_prompt_sha1": "bb66e52b42acf3b4e4b85b6958cfea2c2c2774ff",
+ "domain_brief": null,
+ "discourse": null,
+ "prompt_edits": {
+  "file": "specs/noembargo_edits_it_D2.json",
+  "edits": [
+   [
+    "LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\n",
+    ""
+   ]
+  ]
+ },
+ "n": 10,
+ "refused": 0,
+ "attempts": 10,
+ "started_utc": "2026-11-27T19:57:38+00:00",
+ "temperature": null,
+ "max_tokens": 4096,
+ "thinking": "disabled",
+ "effort": null,
+ "provider_routing": null,
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL descriptive opening (incipit) in Italian for a narrative set in the target\ndomain below. It must be a HOMEOSYNTACTIC transposition: hold the clause nesting (D2, the operative rung) --- while inventing entirely new words, images, and content. It is NOT\na paraphrase, translation, or reconstruction of any source.\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nREQUIREMENTS --- all three hold together (the threefold criterion):\n1. FORM PRESERVED at the clause nesting (D2, the operative rung) (as specified above), in your own words.\n2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque.\n3. COHERENT --- one continuous, fully sensible geographical description.\n\nWrite MODERN literary Italian (no apocope, no archaic elisions). Produce the 9 periods in order as continuous prose --- no numbering,\nno headings. Output ONLY the passage: no preamble, no self-audit.\n",
+ "prompt_file": "unrestricted_it_1840_opus5_noemb_n10_b1127_PROMPT.txt",
+ "source_ref": "texts/incipit_it.txt",
+ "source_sha1": "0d3a92484994da0c02b69c65f5f75c1938af1d41",
+ "source": null,
+ "elapsed_s": 310.5,
+ "failure": null,
+ "request": {
+  "model": "claude-opus-5",
+  "max_tokens": 4096,
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL descriptive opening (incipit) in Italian for a narrative set in the target\ndomain below. It must be a HOMEOSYNTACTIC transposition: hold the clause nesting (D2, the operative rung) --- while inventing entirely new words, images, and content. It is NOT\na paraphrase, translation, or reconstruction of any source.\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nREQUIREMENTS --- all three hold together (the threefold criterion):\n1. FORM PRESERVED at the clause nesting (D2, the operative rung) (as specified above), in your own words.\n2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque.\n3. COHERENT --- one continuous, fully sensible geographical description.\n\nWrite MODERN literary Italian (no apocope, no archaic elisions). Produce the 9 periods in order as continuous prose --- no numbering,\nno headings. Output ONLY the passage: no preamble, no self-audit.\n"
+   }
+  ],
+  "thinking": {
+   "type": "disabled"
+  }
+ },
+ "responses": [
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2KNJx1NvxrbZYAKQJW",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1263,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2MHntttrx39qrqeoew",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1558,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2PVBZ91jG3XEGQxMLm",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1416,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2RddMKiYiPwBNX7Gzd",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1651,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2U242hBwCYmcKfGLRi",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1494,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2WExV2A5XBBLoV1bgS",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1641,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2YnZaD8rMfJLtkDViG",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1654,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2bF3LQPsDCEVWbzTNU",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1647,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2dbrXtJGYjQNrV6fPw",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1507,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2frnkuLkF5w5k8gDxX",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 1636,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1489,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  }
+ ],
+ "gens": [
+  {
+   "i": 0,
+   "text": "L'isola che si leva dal canale come un dorso di calcare consumato, e che le carte nautiche registrano con un nome breve, appare a chi arrivi da sud una lastra pallida sospesa fra due azzurri, e sembra voler negare ogni rilievo, giacché non concede alture né boschi, e tuttavia custodisce un intaglio di baie che la roccia ha scavato pazientemente, sicché chi la osserva a lungo comprende di dover rinunciare alle misure continentali, e la ridisegna come una zattera di pietra, dove i muretti a secco si inseguono fino ai promontori e si interrompono soltanto là dove il vento, che sale dal libeccio quando il mare si gonfia e quando le correnti risalgono dalle secche africane, li ha smantellati pietra su pietra.\n\nIl porto, che occupa l'insenatura orientale, pare raccogliere ogni cosa come se la terraferma avesse delegato a quell'ansa il compito di contenere; vi si affacciano magazzini bassi che paiono dormire, gru ferme che nessuno manovra, e si intuisce che l'acqua, la quale è verde oltre ogni verosimiglianza, continua a respirare sotto le carene e non smette di spingere alghe contro le bitte, quasi volesse restituire qualcosa.\n\nOltre il molo comincia la banchina amministrativa, e lì il cemento assume la stessa funzione geologica degli scogli che lo sostengono.\n\nSi allineano motovedette dallo scafo grigio, che le sigle distinguono, che la salsedine uniforma, che il sole di luglio dilata fino a renderle incerte nei contorni.\n\nLa sigla europea, che campeggia sulle fiancate, sembra appartenere al paesaggio, e si confonde con le scritte dei pescherecci fino a far credere che ogni cosa galleggiante sia parente e che il mare non distingua le intenzioni.\n\nPiù in alto, sul pianoro che il vento ha spianato e che nessun albero riesce a interrompere, si stende un recinto di rete metallica, al quale si appoggiano teli verdi che il meriggio scolora, e una strada bianca vi conduce, e la polvere segnala da lontano che qualcuno sale quando i furgoni si muovono e che la collina non è mai del tutto quieta.\n\nLe antenne si alzano sul crinale, i radar ruotano con lentezza, i fari notturni spazzano l'acqua mentre le barche rientrano e mentre le luci dei pescatori si disperdono, e i motori si spengono quando la banchina si svuota, e allora il silenzio ricomincia, e il mare riprende il suo rumore, e la pietra si raffredda.\n\nResta la costa meridionale, che nessuna strada raggiunge davvero, dove i sentieri che il bestiame ha tracciato lasciano credere che esista un passaggio verso le cale che si aprono sotto la falesia quando la marea si ritira e quando la luce cade di fianco; eppure il sentiero si interrompe, e la roccia precipita, e le onde lavorano le grotte che il calcare offre loro, sotto cui si accumulano legni bianchi e plastiche scolorite che nessuno raccoglie.\n\nTutto intorno il canale continua, che nessuna linea segna; passano le rotte dei mercantili che scendono verso Suez, si incrociano le scie, e quando la foschia si alza l'orizzonte si chiude e la Tunisia che sta a ottanta miglia scompare, e i gabbiani ritornano verso le scogliere che li ospitano, e l'isola resta sola, e il faro comincia a contare le sue pause."
+  },
+  {
+   "i": 1,
+   "text": "L'isola che si solleva dal canale come una scaglia di calcare arsa dal vento è una lingua di roccia che appartiene geologicamente all'Africa, benché le mappe amministrative la assegnino all'Europa, e il suo profilo basso sembra galleggiare appena sopra la linea dell'acqua, mentre la costa settentrionale precipita in falesie verticali; il mare che la circonda non conosce stagioni intermedie, e chiunque abbia navigato quelle rotte sa che il canale può mutare in poche ore, e le correnti che scorrono da levante si incrociano con i venti meridionali quando la pressione cala sulle coste libiche, dove le barche partono di notte perché il buio protegge la partenza e perché il radar costiero arriva fino a una certa distanza, oltre la quale la responsabilità si dissolve.\n\nIl porto vecchio, che si apre in una insenatura stretta tra due braccia di pietra, sembra più piccolo di quanto risulti dalle carte nautiche, perché la banchina è occupata quasi interamente da scafi grigi; le motovedette ormeggiate in fila, che aspettano di uscire al tramonto, portano sigle che nessuno dei pescatori pronuncia più per esteso, e ogni marinaio dell'isola sa che la sigla indica un'agenzia con sede a Varsavia, e i suoi equipaggi ruotano ogni poche settimane senza imparare i nomi delle cale.\n\nSopra l'abitato, su un terrazzo di roccia spianata dai bulldozer, sorge il centro di primo soccorso, e intorno al suo perimetro corre una recinzione metallica alta tre metri.\n\nLa strada che vi conduce è asfaltata di recente, attraversa un vallone che d'estate si riempie di polvere bianca, e si chiude con un cancello che resta sempre abbassato.\n\nIl censimento dell'isola registra poco più di seimila residenti, una cifra che ogni autunno diventa incerta, difficile da verificare, e le anagrafi comunali tentano di distinguere le presenze, benché i registri si moltiplichino e nessuno confermi che i numeri coincidano.\n\nIl faro di Capo Grecale, che domina il versante esposto ai marosi che d'inverno salgono a coprire le scogliere, ruota ancora ogni notte, e la sua luce raggiunge una distanza che i regolamenti fissano in venti miglia; il fascio, che spazza l'orizzonte con regolarità cieca, illumina talvolta uno scafo di legno, ma più spesso non illumina nulla, e i turni di guardia annotano soltanto che la visibilità era buona, mentre il vento calava, e il mare restava lungo.\n\nA sud dell'abitato si apre la spiaggia dei Conigli, e la sabbia vi è chiarissima, e l'acqua assume una trasparenza verde sopra il fondale basso, tanto che le tartarughe risalgono a deporre in luglio, quando il litorale viene chiuso ai bagnanti; poco più a ponente si allunga il cimitero delle barche, dove gli scafi sequestrati marciscono sotto il sole, e il legno si apre in schegge bianche, e la vernice azzurra si stacca a placche, e sotto di essa compaiono altre vernici più antiche.\n\nIl piccolo aeroporto, la cui pista taglia l'isola per tutta la sua larghezza in un punto dove la roccia si abbassa quanto basta perché un velivolo da trasporto possa posarsi senza difficoltà, serve anche i voli di trasferimento verso la Sicilia, mentre le partenze commerciali si diradano in inverno, e il piazzale resta occupato da un elicottero bianco con le insegne dipinte sulla fiancata, le quali ripetono la stessa sigla delle motovedette, che non indica una nazione ma una funzione amministrativa definita da un regolamento comunitario.\n\nTutto questo compone una topografia leggibile, che si descrive per strati sovrapposti: la roccia, che risale al Miocene, e la macchia bassa di lentisco, e sopra di esse le infrastrutture, che si sono sedimentate a loro volta secondo un ordine riconoscibile dove ogni decennio ha lasciato il proprio cemento, e infine gli uomini in divisa, che si muovono su questa stratigrafia con la regolarità di un fenomeno stagionale, e il loro passaggio lascia tracce misurabili quanto quelle del vento."
+  },
+  {
+   "i": 2,
+   "text": "L'isola che sorge a mezzogiorno del canale, dove la piattaforma africana si solleva in un dorso di calcare bianco e il mare cambia improvvisamente colore, sembra galleggiare più vicina alla Tunisia che alla Sicilia, e tuttavia appartiene a un continente che la guarda da lontano; chi vi approda per la prima volta scopre che la geografia qui ha smesso di coincidere con le carte, e capisce che ogni scoglio porta un nome amministrativo che lo precede, perché la linea invisibile che corre al largo è stata disegnata da uomini i quali, mentre misuravano le profondità, pensavano già a chi sarebbe passato e a chi no.\n\nLa costa settentrionale, che il vento di maestrale scava da millenni, pare arretrare davanti all'acqua, finché la roccia non si apre in insenature brevissime: cale senza sabbia, buone soltanto a nascondere una barca; punte che nessun faro illumina; e si direbbe che il litorale, il quale non concede un solo approdo largo, abbia scelto la sua forma e continui a respingere senza mai smettere di attirare.\n\nIl porto vecchio occupa l'unica rientranza profonda del versante orientale, e sulle sue banchine si allineano gli scafi grigi delle motovedette.\n\nSono imbarcazioni dalla carena rinforzata, che recano sigle dipinte in nero, che portano antenne troppo alte per la loro stazza, che restano accese anche nelle ore immobili del pomeriggio.\n\nDietro di esse si estende un piazzale di cemento, che il sole scolorisce, buono a contenere file lunghissime, e là si raccolgono i mezzi della Guardia di Finanza, pronti a uscire, quando la centrale di Pratica di Mare trasmette una traccia e si stabilisce che qualcosa galleggia a sud.\n\nPiù in alto, oltre la strada che sale verso l'aeroporto, dove i radar girano senza fermarsi mai, si apre un vallone secco, e in quel vallone, che nessuna mappa turistica segnala, sta il centro di primo soccorso, un rettangolo di prefabbricati che la rete metallica circonda, e intorno crescono fichi d'India e canne, e si nota subito che, benché nulla vi sia di militare nell'architettura, ogni cancello guarda verso un unico varco.\n\nIl vento soffia da sudest nei mesi caldi, e porta sabbia sottile, e deposita quella sabbia sui parabrezza delle camionette, finché gli autisti non accendono i tergicristalli e la polvere si trasforma in fango chiaro, mentre le pattuglie percorrono la circonvallazione; il cielo resta bianco per ore, poi vira al rame quando il sole cade dietro l'Isola dei Conigli; e la notte arriva presto, e accende i proiettori sul molo Favaloro, e illumina le coperte termiche, che brillano come lamine d'oro ammassate.\n\nEsiste una topografia parallela sull'isola, fatta di punti che i funzionari conoscono a memoria, nei quali si decide che un uomo abbia o non abbia un nome che resista alla trascrizione, quando l'interprete manca, e l'alfabeto si piega; e mentre gli elicotteri ritornano verso l'hangar, i registri si riempiono, e crescono gli elenchi che le pagine non bastano più a contenere, i quali vengono archiviati in faldoni che qualcuno dovrà un giorno aprire, per cercare una data che nessuno ricorda più.\n\nResta infine il cimitero delle barche, che si stende oltre la discarica: legni azzurri che il sale ha sbiancato; alberi spezzati e corde marcite; e, siccome la ruggine divora i chiodi e il sole screpola le vernici, quei relitti perdono la forma che li rendeva navi, e diventano una materia sola, che il vento sposta di pochi centimetri ogni inverno, e finiscono per somigliare alla roccia stessa dell'isola, e nessuno li rimuove."
+  },
+  {
+   "i": 3,
+   "text": "L'isola che chiude a meridione l'arcipelago delle Pelagie, e che nelle carte nautiche appare come una scheggia calcarea staccata dal corpo africano, si presenta a chi arriva dal mare come una piattaforma inclinata, pronta a rovesciare verso settentrione ogni sua acqua piovana e a trattenere invece, nelle fenditure del costone, la polvere rossa che il vento solleva dalle sabbie di Tripoli; e nessuno, osservando quella superficie lucida di sale, direbbe che su di essa possa posarsi una macchina di sorveglianza tanto minuziosa, se non fosse che ogni cala, ogni insenatura dove l'acqua si fa verde quando la corrente rallenta, porta impresso un numero, un settore, una sigla che i radar ripetono e gli elicotteri confermano.\n\nIl porto vecchio, che si apre a oriente in una conca riparata dal maestrale, sembra appartenere a un'altra geografia quando lo si guarda dalla banchina alta: le gru dormono, i pescherecci bianchi aspettano di essere riverniciati, le reti ammucchiate sui bitti hanno il colore spento della iuta bagnata, e si capisce subito che la vera attività dell'isola, quella che non si annuncia con sirene né si misura in tonnellate di pesce, comincia più in là, oltre il molo Favaloro, e continua a notte fonda senza mai dichiararsi del tutto.\n\nLà l'asfalto finisce in un piazzale di cemento battuto, e una recinzione di rete plastificata verde separa il piano dell'acqua dal piano della terraferma amministrativa.\n\nOltre la recinzione si distende un pianoro brullo, che il catasto chiama contrada Imbriacola, che le mappe dei soccorritori chiamano hotspot, che gli abitanti dell'isola nominano raramente e sempre a voce bassa.\n\nVi si giunge per una strada stretta, che sale fra muretti a secco e fichi d'India, senza incontrare case, e piega all'improvviso a destra per aggirare un avvallamento, dove l'aria stagna e l'erba secca lascia intravedere che il terreno è stato spianato di recente.\n\nIl recinto, che racchiude moduli prefabbricati disposti su file parallele le quali sembrano imitare l'ordine di un vivaio, ha un ingresso unico sorvegliato da una garitta che proietta luce bianca fino all'alba, possiede un piazzale centrale dove le ombre si accorciano a mezzogiorno fino a sparire, conserva ai margini qualche ulivo superstite, e dichiara con la sua stessa disposizione che nulla, finché duri la stagione dei trasferimenti, è provvisorio quanto si pretende e nulla è definitivo quanto appare.\n\nDal pianoro la vista raggiunge il canale, e il canale raggiunge l'orizzonte, e l'orizzonte si popola di natanti grigi che incrociano a velocità costante mentre i motori restano sordi alla distanza e le scie si allargano in ventagli lentissimi, finché il crepuscolo non le cancella del tutto; più a sud, oltre le secche, pattugliano unità battenti bandiere diverse, poiché il mandato europeo si sovrappone a quello nazionale; e così la frontiera smette di essere una linea, diventa uno spessore d'acqua di trenta miglia, si dilata e si contrae secondo le carte meteorologiche, e respira come un organo vivo.\n\nLa torre radar sul promontorio di Capo Grecale, che domina il punto più alto dell'isola e che ripete all'infinito la medesima rotazione, segnala alle sale operative di Roma e di Varsavia che qualunque oggetto galleggiante, il quale superi la soglia dimensionale fissata dai protocolli mentre la visibilità resti accettabile, sarà registrato e classificato prima ancora di avere un nome; e intanto il faro continua il suo giro antico, indifferente alla sorveglianza numerica, con una luce che nessuna consolle registra e che serve soltanto a dire a chi sta in mare, e non sa riconoscere le costellazioni, che una terra c'è, che è vicina.\n\nTutto questo compone un paesaggio, che non si lascia descrivere senza nominare i suoi apparati: la pietra bianca che riverbera a mezzogiorno, le agavi lungo la statale, la pista dell'aeroporto che taglia l'isola in due mentre gli aerei militari atterrano con le luci spente, i furgoni blu che risalgono dal molo nelle ore in cui nessuno fotografa, e il mare, sempre il mare, che da qui appare sgombro e perfettamente immobile."
+  },
+  {
+   "i": 4,
+   "text": "L'isola che si solleva dal canale come una scaglia di calcare sbiancata dal sale, e che i naviganti antichi segnavano con un punto solo sulle carte, non ha fiumi né boschi che trattengano l'acqua, e offre al vento di scirocco una superficie bassa, inclinata verso meridione, buona per asciugare le reti e per confondere ogni misura delle distanze; e questa pendenza, che nessuna strada corregge davvero, fa sì che lo sguardo di chi arriva dal porto debba scivolare fino alla linea del mare senza incontrare ostacolo, e si posa alla fine sulle scogliere meridionali, che custodiscono anfratti di pietra chiara e cadono a picco dove la corrente, che risale dalla Tunisia con una lentezza ostinata, si spacca contro i bassi fondali quando il tempo cambia e le onde si allungano in lunghe lingue bianche.\n\nIl porto vecchio, che occupa l'unica insenatura riparata, sembra raccogliere in sé tutta la vita dell'isola quando le barche rientrano all'alba: vi si allineano i pescherecci che aspettano di essere riverniciati, vi stanno le motovedette dalle fiancate grigie, e appare evidente a chiunque vi scenda che il molo serve a due traffici diversi, che si sfiorano e non si confondono, e che le stesse bitte ormeggiano chi parte per il largo e chi viene riportato a terra senza volerlo.\n\nSopra il porto la cittadina si distende in file di case basse e intonacate, e la calce rimanda il sole con una durezza che obbliga a socchiudere gli occhi verso mezzogiorno.\n\nCi sono strade strette che salgono verso l'interno, muri a secco che spartiscono campi non più coltivati, fichi d'India che reggono la polvere depositata dalle estati.\n\nAll'estremità orientale si apre un pianoro brullo che il vento spazza senza interruzione, buono per nulla, e qui sorgono recinzioni metalliche disposte a formare corridoi, perché anche questa parte dell'isola possiede una sua geografia e si direbbe che la pietra stessa abbia accettato di essere divisa.\n\nIl centro di primo soccorso, che sta in una conca riparata dalla vista di chi passa sulla strada litoranea e ha bisogno di non essere guardato, si compone di padiglioni prefabbricati e di tende che l'inverno sfilaccia, ed è circondato da una rete alta che il vento fa vibrare come una corda, e nessuna insegna lo nomina, e tuttavia ogni abitante sa indicarlo con un cenno quando qualcuno chiede dove sia, e nessuno aggiunge altro.\n\nLe pattuglie percorrono la circonvallazione a intervalli regolari, i fari delle camionette illuminano i tornanti, e gli uomini in divisa scendono sul molo appena una segnalazione arriva dalla sala operativa, e allora le lampade si accendono tutte insieme, mentre il mare resta nero fino all'orizzonte; i gommoni della guardia costiera escono dalla rada e tornano prima che albeggi, e le radio gracchiano nomi di coordinate, e i registri si riempiono di cifre, e le cifre diventano elenchi che nessuno legge.\n\nL'apparato che regola tutto questo, e che dall'isola si prolunga verso Roma e verso le capitali settentrionali in una catena di uffici dove si decide ciò che accade sulla banchina prima ancora che le barche siano avvistate e dove nessuno ha mai respirato questo vento, appare qui come una formazione geologica, perché si è depositato per strati successivi e ha assunto la consistenza della roccia che lo sostiene, la quale non si lascia scalfire né si può aggirare da chi arriva dal sud.\n\nPiù in là, oltre l'ultimo tornante, si stende il cimitero delle barche, che occupa un avvallamento sterrato: scafi di legno azzurro accatastati senza ordine, timoni spezzati, e quando il maestrale si alza il legno emette un suono secco che somiglia a un lamento, e restano impigliati nelle fessure brandelli di stoffa che il sole scolora, e tutto intorno il terreno si copre di salsedine."
+  },
+  {
+   "i": 5,
+   "text": "L'isola che d'estate si solleva dal canale come una scaglia di calcare sbiancato, e che le carte nautiche registrano con un numero prima che con un nome, si lascia misurare per intero in un'ora di cammino, e tuttavia comincia molto più lontano di sé, in un reticolo di coordinate che nessun abitante ha mai veduto e che i radar continuano a interrogare, sicché accade che la sua vera frontiera si distenda a sud per ottanta miglia d'acqua aperta, e si prolunghi in un arcipelago di procedure il quale, pur non avendo spessore alcuno, pesa sulle secche più delle rocce, quando il vento di libeccio, che da marzo lavora il versante esposto, si placa all'improvviso perché la corrente cambia verso e il mare si fa piatto come una lamiera.\n\nLa banchina di ponente, dove attraccano le motovedette dipinte di grigio azzurrino, sembra appartenere a un'altra geografia rispetto alle cale di levante, se si guarda la pietra: qui il cemento colato in fretta per reggere i mezzi pesanti, qui le bitte di ghisa che nessuno lucida più, e si direbbe insomma che la costruzione ubbidisca a un disegno il quale non riguarda l'isola, e che agli isolani tocchi soltanto di guardare dall'alto della strada bianca quelle manovre silenziose.\n\nPiù su, oltre la curva, il presidio sanitario occupa un terrazzamento di agave e di cardi secchi, e gli automezzi stazionano in fila ordinata sotto una tettoia di lamiera ondulata che il sale ha corroso fino al colore della ruggine chiara.\n\nL'aeroporto, che taglia l'isola quasi per metà, che obbliga ogni percorso a una deviazione, che riversa sul paese un rumore caldo ogni poche ore, divide i campi di capperi dalle alture brulle del nord.\n\nLa torre di avvistamento, che sorge sul punto più alto del promontorio, pare vigilare il vuoto, e in effetti non osserva altro che il vuoto, ogni volta che le schermate restano grigie e l'operatore annota che nulla si muove nel settore assegnato.\n\nIl centro di prima accoglienza, che sorge nella conca di Imbriacola, dove il terreno si avvalla abbastanza da nascondere i tetti, non si vede dalla strada costiera e non figura nelle guide che si vendono al porto; la sua recinzione, che segue l'andamento del declivio, corre per quattrocento metri tra i fichi d'India, e un cancello di metallo verniciato la interrompe a monte, e chi arriva d'inverno nota subito che il sentiero esterno è battuto fino all'osso mentre l'erba cresce indisturbata all'interno.\n\nLe pattuglie salgono dal paese alle sei, percorrono il nastro d'asfalto fino al bivio, e si distribuiscono poi lungo i costoni secondo un ordine stabilito altrove, mentre il cielo si schiarisce da levante e le prime barche da pesca escono dal Porto Vecchio, finché la luce non raggiunge anche il versante occidentale. Più tardi rientrano a gruppi di due, quando il caldo rende inutile ogni sorveglianza; e il paese le assorbe senza clamore, le automobili si fermano davanti ai bar della via principale, i motori restano accesi per l'aria condizionata e il rumore si confonde con quello dei frigoriferi.\n\nEsiste poi una cartografia parallela, che i pescatori conoscono meglio di chiunque altro, i quali hanno imparato da vent'anni che esistono tratti di mare dove la responsabilità si sfalda appena la si nomina, e dove le radio ripetono formule identiche in tre lingue, mentre nessuna mappa ufficiale la riporta, perché le isobate contano più dei confini e le linee che gli accordi tracciano sull'acqua, le quali nessuna boa segnala, si spostano a seconda della stagione politica senza mai smettere di esistere per chi vi naviga dentro.\n\nDall'alto dell'isola, che in una giornata limpida lascia indovinare la curvatura dell'orizzonte, lo sguardo riconosce ogni cosa: il faro di Capo Grecale che lampeggia a intervalli regolari, le antenne fiorite sul crinale, e poiché l'aria d'ottobre è tersa e la foschia si è ritirata verso la Tunisia che resta comunque invisibile, si distinguono le scie bianche dei pattugliatori che incrociano a nord, e il resto si perde in un azzurro uniforme, dove nulla segnala che il mare sia una soglia."
+  },
+  {
+   "i": 6,
+   "text": "L'isola che chiude a meridione l'arcipelago delle Pelagie, e che le carte nautiche segnano come l'ultimo rilievo calcareo prima della piattaforma africana, si distende sul mare per non più di venti chilometri quadrati e pare galleggiare come un relitto di pietra abbandonato dalle correnti, e chiunque la raggiunga dall'alto, prima ancora che il carrello tocchi la pista bianca di polvere, capisce di trovarsi davanti a una soglia più che a una terra, e intuisce quello che gli abitanti ripetono da sempre, e cioè che il paese guarda a settentrione soltanto per abitudine amministrativa, mentre il suo fianco meridionale, che si frantuma in falesie dove il vento non smette mai, resta rivolto verso una sponda che nessuno vede ma che tutti nominano quando il mare si placa e il buio si riempie di luci basse.\n\nLa costa di ponente, che nessuna strada asfaltata accompagna per intero, sembra ritirarsi dall'abitato man mano che il terreno si alza in dorsali brulle; là non crescono alberi capaci di resistere al salino, non vi sono sorgenti che meritino un nome sulle mappe, e si sa bene che ogni cala celata fra le rocce, la quale solo i pescatori sanno riconoscere al crepuscolo, è stata un approdo e continuerà a esserlo finché il canale resterà la via più breve per attraversare il confine liquido.\n\nIl porto vecchio si apre invece a levante, in una conca riparata dal maestrale, e accoglie in fila i motoscafi grigi della Guardia costiera accanto alle lampare dipinte di azzurro e di ruggine.\n\nSul molo sostano uomini in divisa blu notte, che consultano tabulati stampati, che si passano radioline gracchianti, che scrutano l'orizzonte con il gesto antico di chi aspetta un tempo migliore.\n\nPiù in alto, una antenna parabolica che ruota lentamente sopra il poggio continua a interrogare il canale e non cessa mai di tracciare rotte sullo schermo, perché le direttive europee lo impongono e nessuno ammetterebbe che la vigilanza possa concedersi una pausa.\n\nIl centro di prima accoglienza, che occupa l'avvallamento di contrada Imbriacola, il quale il vallone protegge dagli sguardi senza impedire al vento di entrare, si annuncia da lontano con un reticolo metallico che corre lungo il margine della strada, e la sua recinzione, che il sole ha scolorito fino al grigio, delimita un rettangolo di prefabbricati, e sembra suggerire che, benché la cartografia ufficiale lo ignori, quel recinto costituisce la vera capitale dell'isola.\n\nDall'alto del Monte Albero Sole la geografia si semplifica, il mare occupa tre quarti dello sguardo, e l'isola si riduce a una lama inclinata, poiché il versante settentrionale precipita a strapiombo e quello meridionale digrada in terrazze, mentre la linea di cresta divide nettamente i due regni. Di lassù si distinguono i mezzi di pattuglia che risalgono la provinciale, e tutto il resto si confonde: il bianco dei muretti a secco, la macchia bassa dei lentischi, il nero delle gomme bruciate che segnano l'approdo dei barconi dismessi.\n\nIl cimitero delle imbarcazioni, che giace in un piazzale polveroso dietro il molo commerciale, raccoglie scafi di legno azzurro il cui fasciame conserva ancora le iscrizioni di partenza, nelle quali si legge, quando la vernice ha resistito alla pioggia e la ruggine non ha divorato i chiodi, il nome di un villaggio costiero. Più oltre il terreno si fa brullo, i fichi d'India avanzano sui pendii, e un sentiero di capre conduce a una guardiola abbandonata, dalla quale, per anni, un milite della Finanza ha osservato un tratto di mare che nessuna frontiera attraversa visibilmente.\n\nResta infine la Tabaccara, che nessuna strada raggiunge direttamente: il turista vi scende per una scarpata di detriti, il fondale appare di un verde impossibile, e quando la tramontana cessa l'acqua diventa così limpida che le barche ormeggiate sembrano sospese nel vuoto, mentre poco più in là l'Isola dei Conigli, che una lingua di sabbia unisce alla costa nei mesi di secca, custodisce le tartarughe sotto sorveglianza, e sopra ogni cosa passa, due volte al giorno, l'ombra di un velivolo senza pilota."
+  },
+  {
+   "i": 7,
+   "text": "L'isola che chiude a meridione l'arcipelago delle Pelagie, e che le carte nautiche segnano come un rilievo calcareo appena emerso, sembra galleggiare sopra una piattaforma sommersa che la lega all'Africa più che all'Europa, e il suo profilo si distende da ponente a levante in una gobba bassa che i venti hanno levigata, cosicché chi vi arriva dal mare crede di avvistare una duna anziché una terra, e intorno le acque cambiano di colore secondo la profondità, passando dal verde delle secche al blu dei fondali che precipitano a settentrione, dove le correnti si incontrano quando il maestrale si piega, e là nascono i frangenti che si rompono senza riva, mentre le navi passano al largo e i radar le contano una per una.\n\nIl porto, che si apre in una insenatura stretta e protetta dalle falesie, sembra un corridoio d'acqua piuttosto che un bacino, finché non si raggiunge la banchina: vi stazionano le motovedette dipinte di bianco e di rosso, pronte a uscire con qualunque stato del mare, e vi si allineano i gommoni di legno dei pescatori, e si dice che le une e gli altri conoscano le medesime rotte che il canale impone a tutti, e che la differenza stia soltanto nel verso di percorrerle.\n\nSopra il porto la roccia si alza in gradoni di tufo chiaro, e la strada sale per tornanti fino al pianoro dove l'abitato si raccoglie attorno a tre vie.\n\nIl pianoro è una tavola arida di terra rossa, che il vento spoglia di ogni albero, che i muretti a secco dividono in quadrati senza colture, che soltanto il fico d'India riesce a popolare.\n\nAl margine settentrionale sorge la struttura di contrada Imbriacola, che i documenti ufficiali chiamano centro di prima accoglienza, difficile da scorgere dalla strada, e nessun cartello la indica, salvo avvicinarsi al cancello, dove la recinzione si raddoppia e si capisce che il luogo è stato pensato per contenere.\n\nIl complesso, che occupa una conca riparata dagli sguardi e dalle fotografie che i giornali pretendono di scattare, consiste in padiglioni prefabbricati che il sole scolorisce, ed è circondato da una rete alta più di tre metri, sulla quale corre un filo spinato che nessuno taglia più, e due torri di illuminazione lo vegliano di notte, e la sua capienza nominale resta un numero teorico, perché i registri si gonfiano quando sbarcano i convogli, e si svuotano dopo i trasferimenti verso Porto Empedocle.\n\nAttorno alla conca si dispone l'apparato: le camionette della Guardia di Finanza occupano lo spiazzo d'ingresso, i blindati dei carabinieri presidiano il bivio, e le antenne della Guardia Costiera ruotano sul crinale mentre i ripetitori ammiccano in sequenza, e i gabbiani vi si posano come su uno scoglio qualunque, finché un rumore di motore non li solleva tutti insieme; e più in alto, sul promontorio, la stazione radar di Frontex interroga il canale ventiquattro ore al giorno, e la sua antenna gira, e la sua ombra si allunga sul terreno, e percorre il pianoro come la lancetta di una meridiana.\n\nPiù a oriente si stende il cimitero delle barche, un recinto di filo metallico che raccoglie gli scafi sequestrati e che nessuna autorità sa che cosa debba farne, ammassati in pile che il sale corrode da anni, da quando il primo è stato trascinato qui dalla gru, e nessuno lo ha mai portato via; e ogni inverno la pioggia ne scrosta la vernice, mentre il legno si apre lungo le commessure, e i nomi dipinti sulle prue, che erano arabi o berberi, sbiadiscono fino a diventare macchie che nessun interprete potrebbe più leggere.\n\nAl capo opposto dell'isola si apre l'Isola dei Conigli, che le guide descrivono come la spiaggia più bella del Mediterraneo: vi depongono le tartarughe marine che la tradizione protegge, e la sabbia vi resta bianca e asciutta, e d'estate i traghetti scaricano i visitatori mentre le gomene si tendono sulle bitte arrugginite, e nessuno dei bagnanti guarda a mezzogiorno, dove la linea dell'orizzonte si confonde con la foschia, e settanta miglia più in là comincia la costa tunisina, e il canale che separa le due rive resta largo quanto una giornata di navigazione."
+  },
+  {
+   "i": 8,
+   "text": "L'isola che chiude a meridione l'arco delle terre italiane, e che nelle carte nautiche appare come una scaglia calcarea staccata dal corpo d'Africa, si presenta a chi giunge dal mare come una tavola inclinata, bassa sul fianco settentrionale, dove il porto raccoglie le barche, e tagliata a picco sull'altro versante, quello che guarda Tunisi; e il viaggiatore che si accosti di notte non immagina di trovarsi davanti a un presidio, ma scorge soltanto una linea di lampade arancioni che si distende per qualche chilometro e poi si interrompe, là dove la falesia riprende la sua autorità di pietra, mentre i fari dei motoscafi frugano la rada e le antenne ruotano senza posa.\n\nLa costa, che non conosce fiumi, sembra concepita per trattenere il vento piuttosto che l'acqua, poiché nessuna vena scende dall'altopiano: ogni piega del terreno, pronta a raccogliere la pioggia rara, ogni muretto a secco che divide i campi di capperi, dichiara che la terra qui è un deposito di polvere bianca e che la vegetazione deve rassegnarsi a restare bassa, grigia, odorosa di salsedine.\n\nDalla sommità del promontorio di Albero Sole si domina l'intero perimetro dell'isola, e lo sguardo misura in un giro completo i ventuno chilometri quadrati di roccia abitata.\n\nSi distinguono allora le cale minute, che incidono la costa meridionale, le insenature sabbiose, dove l'acqua assume quel verde minerale che non ha nome, e le torrette di avvistamento, che ne sorvegliano l'accesso.\n\nPiù in basso, verso il centro abitato, si apre la conca di contrada Imbriacola, che il Ministero ha destinato all'accoglienza, un recinto da riempire e da svuotare secondo il ritmo degli sbarchi, con un cancello che si lascia attraversare quando i registri lo consentono e i bus bianchi dichiarano di essere pronti alla partenza.\n\nIl centro, che occupa un avvallamento naturale che il vento di scirocco attraversa senza incontrare ostacoli, è circondato da una recinzione metallica che nessuna mappa turistica riporta, e la strada che vi conduce, che nessun cartello segnala, scende tra fichi d'India e lentischi; nessuna finestra del paese vi si affaccia, e perfino gli abitanti riconoscono che l'avvallamento, da quando è stato scelto, non appartiene più del tutto all'isola ma risponde a un'altra geografia.\n\nIl molo Favaloro giace a oriente della darsena, e i mezzi della Guardia costiera vi attraccano all'alba, e le autoambulanze vi attendono in fila, dopo che le motovedette hanno compiuto il loro giro largo e hanno riportato dentro la diga foranea il loro carico, quando il mare lo permette; i militari scendono allora sulla banchina, mentre i funzionari contano; le coperte termiche brillano, i passi si ordinano, e la fila avanza lentamente verso i pullman.\n\nEsiste poi una topografia minore, che le carte ignorano, fatta di segni che confessano quanto il mare restituisce: relitti di legno azzurro, accatastati in un piazzale dietro la discarica fino a che la ruggine li consuma, e scarpe spaiate deposte sugli scogli. Al largo, invece, le navi delle agenzie europee incrociano senza sosta, e i radar che le sostengono, e le unità aeree che dall'alto osservano, tracciano sull'acqua una frontiera che nessuno potrebbe disegnare su una carta e che nessun confine terrestre possiede.\n\nRimane, sulla punta meridionale, la piccola scultura di ferro che chiamano Porta d'Europa: tre metri di ceramica e metallo, che guardano verso sud, aperti sul nulla azzurro; il vento vi passa attraverso, e, poiché la soglia non si chiude e nulla la sorveglia tranne la luce, il monumento resta l'unico varco che l'isola offre senza condizioni; le navi lo doppiano al largo, ignorandolo, e il visitatore vi si ferma qualche minuto prima di tornare al paese."
+  },
+  {
+   "i": 9,
+   "text": "L'isola che affiora a mezzogiorno delle rotte, quella scheggia calcarea che i portolani antichi segnavano appena e che i radar oggi illuminano ogni notte, pare galleggiare sopra un fondale di luce verdissima e sembra arretrare quanto più ci si avvicina, e tuttavia resta ferma nella sua pietra bianca, la stessa pietra che il vento del quadrante meridionale leviga da millenni, tanto che i geologi affermano di riconoscervi l'ossatura africana, e dunque la dichiarano una costola del continente opposto, una costola che il mare ha scollato dalla madre e che la burocrazia ha riassegnato a un'altra sponda, perché qualcuno dovesse disegnare la linea che passa in mezzo all'acqua, dove nessuna pietra la sostiene e dove nessuna rete la trattiene, benché i motori la attraversino ogni ora.\n\nLa rada di levante, quella che accoglie le chiglie azzurre dei pescherecci, continua a riempirsi di scafi prima ancora che il giorno si decida, e il porto lavora: ci sono le gru che devono sollevare il legname fradicio, ci sono le motovedette verniciate di grigio, e ogni marinaio sa che la fila ormeggiata contro la banchina non è una flotta, ma è un cimitero che qualcuno ha dimenticato di seppellire.\n\nPiù in alto, oltre il pendio dei fichi d'India, la strada si arrampica verso l'interno, e l'asfalto si fa polvere chiara tra i muretti a secco e le agavi riverse.\n\nLassù sta il recinto, che nessuna carta turistica nomina, che una duna artificiale nasconde agli obiettivi, che i tornanti rivelano soltanto all'ultima curva.\n\nUn cancello di lamiera, che due uomini presidiano a turno, sembra chiudere una cava abbandonata, ma la cava respira di notte e diffonde un brusio basso, perché dentro si muovono molte lingue e nessuno fuori ammette che si muovano.\n\nIl sistema che tiene insieme questa geografia, e che ciascun ufficio preferisce chiamare dispositivo, non ha pareti, ma ha corpi: le vedette che ruotano ogni sei ore, i gommoni plumbei che tagliano il canale, le antenne piantate sul promontorio di ponente, e nessuno dei suoi elementi figura nel catasto; eppure tutti sanno che, quando la libecciata si placa, la macchina si accende e il mare diventa una dogana liquida.\n\nDalle terrazze della stazione aeronavale si vede il banco di nebbia salire da sud, e le luci di posizione si moltiplicano all'orizzonte, e gli schermi si popolano di punti che palpitano mentre gli operatori contano, perché il conteggio precede sempre il soccorso; poi le sirene salgono dal molo, mentre il paese dorme; e all'alba il cerchio si chiude, e i registri si riempiono di numeri, e i numeri scendono negli archivi, dove nessuna onda li raggiunge più.\n\nC'è una cala, a tramontana, che le correnti hanno scavato nella roccia tenera, dove si accumula ciò che il canale restituisce, e chi raccoglie quei resti giura che il mare non perde nulla di quanto gli viene affidato, se gli si lascia il tempo, e li depone sulla ghiaia uno a uno, mentre il sole li asciuga e le gabbiane li sorvegliano, e nessun verbale li registra, perché non hanno nome, non hanno bandiera, e non appartengono a nessuna delle due sponde che se li sono contesi vivi.\n\nAlla fine tutto converge verso il faro di Capo Grecale, che domina il versante più alto, e la luce gira: un fascio che spazza l'acqua nera, e il fascio non distingue, anzi tocca allo stesso modo le chiglie, perché la lampada ignora le pratiche e non legge le carte che gli uffici timbrano, e il raggio prosegue verso il largo, dove nessun confine lo ferma, e ritorna dodici secondi dopo, e intanto l'isola continua a stare dove sta, sorda e calcarea sotto il suo pennello di luce."
+  }
+ ]
+}

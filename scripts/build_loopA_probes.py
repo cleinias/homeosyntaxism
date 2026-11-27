@@ -21,6 +21,14 @@ specs/probe/loopA_outputs_it_D2.json; each item carries its prompt verbatim. Ref
 
   python scripts/build_loopA_probes.py            # build both manifests
   python scripts/build_loopA_probes.py --show 3   # also print the first 3 prompts of each
+
+Second batch (SF, 2026-11-27: firm up test 3 on the 2x2 dataset). --batch b1127 builds only a test-3
+manifest, specs/probe/loopA_outputs_it_D2_b1127.json, from the ten new texts of each of the four 2x2
+arms (scripts/run_2x2_batch.sh), with the same two frames, verbatim. The arm keys are those of the
+first manifest (stranger = constrained, no embargo) so the two can be pooled; item ids carry the
+batch tag.
+
+  python scripts/build_loopA_probes.py --batch b1127
 """
 import argparse
 import hashlib
@@ -43,6 +51,12 @@ ARMS = [("july", "production_D2_it_constr-1840_claude-opus-5.json"),
         ("stranger", "production_D2_it_effectfree-noemb-1840_claude-opus-5.json"),
         ("nopat", "unrestricted_it_1840_opus5_clean_n10.json"),
         ("nopat-noemb", "unrestricted_it_1840_opus5_noemb_n10.json")]
+
+# the four 2x2 arms of the test-3 table, for a later batch (--batch TAG): same keys as above
+ARMS_2X2_BATCH = [("revised", "production_D2_it_effectfree-1840-{b}_claude-opus-5.json"),
+                  ("stranger", "production_D2_it_effectfree-noemb-1840-{b}_claude-opus-5.json"),
+                  ("nopat", "unrestricted_it_1840_opus5_clean_n10_{b}.json"),
+                  ("nopat-noemb", "unrestricted_it_1840_opus5_noemb_n10_{b}.json")]
 
 # names that would give the source away if a FRAME carried them (the texts are checked, not refused)
 SOURCE_TERMS = ["manzoni", "manzonian", "lecco", "promessi", "como", "spagnol", "spanish",
@@ -135,6 +149,29 @@ def check_frame(template):
         sys.exit(f"build_loopA_probes: source terms in a probe frame: {hits}")
 
 
+def output_items(arms, id_tag=""):
+    """Test-3 items: every text of each arm's run file, under both frames."""
+    items, src = [], {}
+    for arm, fn in arms:
+        b = (RES / fn).read_bytes()
+        gens = json.loads(b)["gens"]
+        if len(gens) != 10:
+            sys.exit(f"build_loopA_probes: {fn} has {len(gens)} texts, expected 10")
+        src[arm] = {"file": f"results/{fn}", "sha1": sha1(b)}
+        for k, gen in enumerate(gens):
+            i, g = gen["i"], gen["text"]
+            if i != k:
+                sys.exit(f"build_loopA_probes: {fn} text {k} is numbered {i}")
+            hits = [t for t in SOURCE_TERMS if re.search(rf"\b{t}", g, re.I)]
+            if hits:
+                print(f"  note: {arm} cand {i} contains {hits} (kept: the texts are probed as written)")
+            for cue, tpl in (("uncued", T3_UNCUED), ("cued", T3_CUED)):
+                items.append({"id": f"T3-{cue}-{arm}-{id_tag}c{i:02d}", "test": 3, "cue": cue,
+                              "arm": arm, "cand": i, "text_sha1": sha1(g.encode("utf-8")),
+                              "prompt": tpl.format(text=g)})
+    return items, src
+
+
 def write(path, obj):
     if path.exists():
         sys.exit(f"build_loopA_probes: {path.relative_to(ROOT)} exists; refusing to overwrite")
@@ -145,9 +182,23 @@ def write(path, obj):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--show", type=int, default=0)
+    ap.add_argument("--batch", default=None, help="test-3 manifest for a later batch of the 2x2 arms")
     a = ap.parse_args()
     for t in (T2_IDENTITY, T2_RECON, T3_UNCUED, T3_CUED):
         check_frame(t)
+    if a.batch:
+        items, src = output_items([(arm, fn.format(b=a.batch)) for arm, fn in ARMS_2X2_BATCH],
+                                  id_tag=f"{a.batch}-")
+        print(f"test 3, batch {a.batch}: {len(ARMS_2X2_BATCH)} arms x 10 texts x 2 cues")
+        write(OUTDIR / f"loopA_outputs_it_D2_{a.batch}.json", {
+            "built_by": f"scripts/build_loopA_probes.py --batch {a.batch}", "test": 3,
+            "what": f"output probe, batch {a.batch}: each Opus 5 IT D2 text of the four 2x2 arms "
+                    "(scripts/run_2x2_batch.sh), alone; uncued and cued; frames as in "
+                    "loopA_outputs_it_D2.json",
+            "sources": src, "items": items})
+        for it in items[:a.show]:
+            print(f"\n===== {it['id']} =====\n{it['prompt']}")
+        return
 
     # ---- test 2: per-pattern probe ----
     raw = {k: p.read_bytes() for k, p in PROMPTS.items()}
@@ -176,24 +227,7 @@ def main():
     shown = items[:a.show]
 
     # ---- test 3: output probe ----
-    items, src = [], {}
-    for arm, fn in ARMS:
-        b = (RES / fn).read_bytes()
-        gens = json.loads(b)["gens"]
-        if len(gens) != 10:
-            sys.exit(f"build_loopA_probes: {fn} has {len(gens)} texts, expected 10")
-        src[arm] = {"file": f"results/{fn}", "sha1": sha1(b)}
-        for k, gen in enumerate(gens):
-            i, g = gen["i"], gen["text"]
-            if i != k:
-                sys.exit(f"build_loopA_probes: {fn} text {k} is numbered {i}")
-            hits = [t for t in SOURCE_TERMS if re.search(rf"\b{t}", g, re.I)]
-            if hits:
-                print(f"  note: {arm} cand {i} contains {hits} (kept: the texts are probed as written)")
-            for cue, tpl in (("uncued", T3_UNCUED), ("cued", T3_CUED)):
-                items.append({"id": f"T3-{cue}-{arm}-c{i:02d}", "test": 3, "cue": cue, "arm": arm,
-                              "cand": i, "text_sha1": sha1(g.encode("utf-8")),
-                              "prompt": tpl.format(text=g)})
+    items, src = output_items(ARMS)
     print(f"test 3: {len(ARMS)} arms x 10 texts x 2 cues")
     write(OUTDIR / "loopA_outputs_it_D2.json", {
         "built_by": "scripts/build_loopA_probes.py", "test": 3,

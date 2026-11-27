@@ -1,0 +1,4 @@
+[edits]      1 from specs/noembargo_edits_it_D2.json: 4615 chars
+[expect]     final prompt identical to unrestricted_it_1840_opus5_noemb_n10.json
+[unrestrict] 10046 -> 4615 chars; source-blind D2, no patterns -> unrestricted_it_1840_opus5_noemb_n10_b1127_PROMPT.txt
+[done] wrote results/unrestricted_it_1840_opus5_noemb_n10_b1127.json: 10 gens (refused 0, 10 attempts)

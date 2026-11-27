@@ -1,0 +1,442 @@
+{
+ "model": "claude-opus-5",
+ "backend": "anthropic",
+ "degree": "D2",
+ "lang": "it",
+ "n": 10,
+ "tag": "effectfree-noemb-1840-b1127",
+ "started_utc": "2026-11-27T19:57:38+00:00",
+ "temperature": null,
+ "temperature_asked": 0.9,
+ "max_tokens": 4096,
+ "thinking": "disabled",
+ "effort": null,
+ "provider_routing": null,
+ "endpoint": null,
+ "domain_file": "specs/domain_brief_3item.txt",
+ "source_ref": "texts/incipit_it.txt",
+ "source_sha1": "0d3a92484994da0c02b69c65f5f75c1938af1d41",
+ "prompt": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL descriptive opening (incipit) in Italian for a narrative set in the target\ndomain below. It must be a CONSTRAINED HOMEOSYNTACTIC transposition: hold the clause nesting (D2, the operative rung), AND instantiate\nevery formal pattern listed --- while inventing entirely new words, images, and content. It is NOT\na paraphrase, translation, or reconstruction of any source.\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nFORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW\nmaterial (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):\n  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating a benevolent quality or intention, in words of your own choosing, of actions the context shows to be the opposite, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n    Specification: The opening syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X e Y' whose members share a lexical field (seascape/movement), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Mare duality — naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing. Which naming systems collide is yours to choose. Audited by locating the pivot sentence and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid periodic syntax at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the entire passage: the periodic syntax alternates: clause groups grow and shrink (in length and embedding depth) in turn, with >= 2 full long-short cycles within the longest period, and >= 1 period of >= 8 clauses — while hierarchy stays fully legible: no anacoluthon, exact lexicon, recoverable syntactic tree. Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility. (Same figure as C-P7-02, one level down.)\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a temporal deictic phrase anchoring the description to a particular present, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nREQUIREMENTS --- all three hold together (the constrained homeomorphism):\n1. FORM PRESERVED at the clause nesting (D2, the operative rung) (as specified above), in your own words.\n2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque; satisfy each pattern with fresh material.\n3. COHERENT --- one continuous, fully sensible geographical description.\n\nWrite MODERN literary Italian (no apocope, no archaic elisions). Produce the 9 periods in order as continuous prose --- no numbering,\nno headings. Output ONLY the passage: no preamble, no self-audit.",
+ "prompt_file": "production_D2_it_effectfree-noemb-1840-b1127_claude-opus-5_PROMPT.txt",
+ "same_prompt_as": "production_D2_it_constr-1840_claude-opus-5.json",
+ "prompt_edits": {
+  "file": "specs/effect_free_noembargo_edits_it_D2.json",
+  "edits": [
+   [
+    "predicating benevolent, charitable or pedagogical action -- in whatever words the target domain's own institutional register would use, chosen by you -- of actions the context marks as coercive or predatory",
+    "predicating a benevolent quality or intention, in words of your own choosing, of actions the context shows to be the opposite"
+   ],
+   [
+    "Mare duality — juridical naming pivot",
+    "Mare duality — naming pivot"
+   ],
+   [
+    "the boundary made perceptible only by something outside the thing -- a document, an instrument, a record.",
+    "the boundary made perceptible only by something outside the thing."
+   ],
+   [
+    "Audited by locating the cessation/recommencement predicates and the external marker.",
+    "Audited by locating the pivot sentence and the external marker."
+   ],
+   [
+    "a reflection or representation predicate",
+    "a reflection predicate"
+   ],
+   [
+    "Which medium mirrors -- natural or instrumental -- is yours to choose.",
+    "Which medium mirrors is yours to choose."
+   ],
+   [
+    "Lucid waviness (ondeggiamento) at the SYNTACTIC level",
+    "Lucid periodic syntax at the SYNTACTIC level"
+   ],
+   [
+    "the periodic syntax UNDULATES rather than merely winds — successive waves of expansion and contraction, with clause groups swelling (in length and embedding depth) and subsiding in alternation: >= 2 full crest-trough cycles within the longest period",
+    "the periodic syntax alternates: clause groups grow and shrink (in length and embedding depth) in turn, with >= 2 full long-short cycles within the longest period"
+   ],
+   [
+    " The syntactic shape adheres to the target referent: the sea's wave-motion, not the river's meander.",
+    ""
+   ],
+   [
+    "(ii) reads as a description of the prose's own undulating syntax (the C-P7-01 waviness, named from within)",
+    "(ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within)"
+   ],
+   [
+    "the syntactic waviness prefigures a movement",
+    "the syntactic pattern prefigures a movement"
+   ],
+   [
+    " (cf. A9: 'prefigura già il complesso universo del romanzo')",
+    ""
+   ],
+   [
+    "a deictic phrase locating the description in the present of writing",
+    "a temporal deictic phrase anchoring the description to a particular present"
+   ],
+   [
+    "LEXICAL EMBARGO (absolute): these are the source's names and its marked words. None may\nappear, in any inflected form:\naccaddero, adda, ameno, andirivieni, ciottoloni, cocuzzoli, como, considerabile, contornandosi, contrassegno, discerna, discosto, erte, fanciulle, giogaia, giogo, gradevolmente, lecco, lombarda, martino, milano, modestia, mutabili, orna, paesetti, prolungano, resegone, rincomincia, san, scorcia, serpeggiamento, spagnoli, spandersi, stradette, valloncelli, vendemmia\n\n",
+    ""
+   ]
+  ]
+ },
+ "elapsed_s": 299.6,
+ "failure": null,
+ "request": {
+  "model": "claude-opus-5",
+  "max_tokens": 4096,
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are assisting with a scholarly experiment in structural literary analysis.\n\nTASK: Write an ORIGINAL descriptive opening (incipit) in Italian for a narrative set in the target\ndomain below. It must be a CONSTRAINED HOMEOSYNTACTIC transposition: hold the clause nesting (D2, the operative rung), AND instantiate\nevery formal pattern listed --- while inventing entirely new words, images, and content. It is NOT\na paraphrase, translation, or reconstruction of any source.\n\nFORM TARGET. Reproduce, period by period, the CLAUSE-NESTING SCHEMA below --- which clause embeds in which (each node is a clause type, indentation is subordination); word order within it is entirely free.\nReproduce it for all 9 periods, in this order:\nPeriod 1 (about 111 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n      - coordinated clause\n    - open complement (infinitive)\n      - coordinated clause\n    - coordinated clause\n      - relative/adnominal clause\n      - finite complement clause\n        - open complement (infinitive)\n      - coordinated clause\n        - relative/adnominal clause\n          - coordinated clause\n            - adverbial clause\n              - relative/adnominal clause\n                - adverbial clause\n                - adverbial clause\n                  - coordinated clause\nPeriod 2 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n      - adverbial clause\n    - parataxis\n      - relative/adnominal clause\n        - open complement (infinitive)\n      - relative/adnominal clause\n      - finite complement clause\n        - relative/adnominal clause\n        - coordinated clause\n          - open complement (infinitive)\nPeriod 3 (about 35 words):\n  - main clause\n    - coordinated clause\nPeriod 4 (about 37 words):\n  - main clause\n    - relative/adnominal clause\n    - relative/adnominal clause\n    - relative/adnominal clause\nPeriod 5 (about 45 words):\n  - main clause\n    - relative/adnominal clause\n    - open complement (infinitive)\n    - coordinated clause\n      - open complement (infinitive)\n      - adverbial clause\n        - coordinated clause\n          - finite complement clause\nPeriod 6 (about 83 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - open complement (infinitive)\n    - coordinated clause\n      - relative/adnominal clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n    - coordinated clause\n    - coordinated clause\n      - finite complement clause\n        - adverbial clause\n        - coordinated clause\nPeriod 7 (about 102 words):\n  - main clause\n    - coordinated clause\n    - coordinated clause\n      - adverbial clause\n        - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - adverbial clause\n    - coordinated clause\n      - coordinated clause\n      - coordinated clause\n        - coordinated clause\nPeriod 8 (about 91 words):\n  - main clause\n    - relative/adnominal clause\n      - relative/adnominal clause\n        - finite complement clause\n          - relative/adnominal clause\n            - adverbial clause\n            - coordinated clause\n    - adverbial clause\n      - coordinated clause\n      - relative/adnominal clause\n        - relative/adnominal clause\n          - coordinated clause\n            - open complement (infinitive)\n            - relative/adnominal clause\nPeriod 9 (about 86 words):\n  - main clause\n    - relative/adnominal clause\n    - parataxis\n      - relative/adnominal clause\n      - coordinated clause\n      - adverbial clause\n        - coordinated clause\n          - relative/adnominal clause\n      - coordinated clause\n        - relative/adnominal clause\n      - coordinated clause\n    - coordinated clause\n\nFORMAL PATTERNS --- the critical claims this experiment tests. Each MUST be instantiated with NEW\nmaterial (e.g. the antiphrasis pattern requires a DIFFERENT antiphrasis on target-domain material):\n  [C-P1-01] (MUST) from P_1: Antiphrastic micro-ensemble\n    Specification: The text contains >= 2 clauses predicating a benevolent quality or intention, in words of your own choosing, of actions the context shows to be the opposite, with NO narratorial correction or evaluative comment. Audited by listing the predications and checking that no evaluative lexeme falls inside their span.\n  [C-P2-01] (MUST) from P_2: Embedded Italian metric verses\n    Specification: The opening syntagm of the passage scans as a canonical Italian verse (novenario, settenario, or endecasillabo); the passage contains >= 3 total embedded metric units (novenario / settenario / endecasillabo) inside descriptive sentences. Verifiable by scansion (synaloepha and verso tronco rules apply).\n  [C-P3-01] (MUST) from P_3: Conjunctive binary coordination\n    Specification: The text contains >= 3 two-member coordinations 'X e Y' whose members share a lexical field (seascape/movement), with parallel syntactic shape. Verifiable by enumeration.\n  [C-P4-01] (MUST) from P_4: Chiasmatic inversion of a recurring pair (presupposes C-P3-01)\n    Specification: At least one P_3 pair introduced early recurs later with its members' order inverted (AB ... BA), across a span of at least one sentence. Verifiable by locating both loci and comparing member order.\n  [C-P5-01] (MUST) from P_5: Mare duality — alternating contraction/dilation lexicon, full arc\n    Specification: Two opposed lexical fields alternate over the single referent 'il mare': one of expansion, one of constriction. The words of both fields are yours to choose; none are supplied. The passage runs the full arc expansion -> constriction -> re-expansion. Audited by locating the two fields in the text and checking the arc order.\n  [C-P5-02] (SHOULD) from P_5: Mare duality — naming pivot\n    Specification: The text contains >= 1 pivot sentence in which one and the same thing changes name or status across a boundary that is invisible in itself, the boundary made perceptible only by something outside the thing. Which naming systems collide is yours to choose. Audited by locating the pivot sentence and the external marker.\n  [C-P6-01] (MUST) from P_6: Specular doubling on a single head\n    Specification: The text contains >= 1 syntactic frame with paired predications on a single element of the described world: a direct-perception predicate and a reflection predicate carrying an inversion or transformation marker, with the mirroring medium named in the text. Which medium mirrors is yours to choose. Audited by parsing the coordinate predications.\n  [C-P7-01] (MUST) from P_7: Lucid periodic syntax at the SYNTACTIC level — GLOBAL constraint\n    Specification: Sustained across the entire passage: the periodic syntax alternates: clause groups grow and shrink (in length and embedding depth) in turn, with >= 2 full long-short cycles within the longest period, and >= 1 period of >= 8 clauses — while hierarchy stays fully legible: no anacoluthon, exact lexicon, recoverable syntactic tree. Verifiable by segmenting periods into clauses, plotting unit length/depth alternation, and parsing for legibility. (Same figure as C-P7-02, one level down.)\n  [C-P7-02] (SHOULD) from P_7: Self-referential formula with PROLEPTIC function — NARRATIVE level\n    Specification: The text contains one word, of its own choosing, that (i) denotes a physical movement in the described scene, (ii) reads as a description of the prose's own syntax (the C-P7-01 pattern, named from within), and (iii) functions as a proleptic marker: the syntactic pattern prefigures a movement the ensuing narrative will unfold. The word is not supplied. Audited in the human reading; (i) is mechanical once the word is identified.\n  [C-P8-01] (MUST) from P_8: Historicized-present puncture\n    Specification: The surrounding description is in the atemporal/naturalistic present, punctured >= 1 time by a temporal deictic phrase anchoring the description to a particular present, governing a present-tense verb of ongoing change. The phrase is yours to choose and must not be the source's own. Audited by locating the adverbial and checking the tense environment.\n\nTARGET DOMAIN — the border/migration landscape of the central Mediterranean\n(deploy in your own words; nothing beyond these three):\n  - THE SCENE: the border/migration landscape of the central Mediterranean\n  - THE PLACE: Lampedusa\n  - THE HUMAN PRESENCE: the Italian and European policing apparatus, given in the same descriptive register as the topography\n\nREQUIREMENTS --- all three hold together (the constrained homeomorphism):\n1. FORM PRESERVED at the clause nesting (D2, the operative rung) (as specified above), in your own words.\n2. DIVERGENT --- a genuinely different scene; new lexicon and content; no calque; satisfy each pattern with fresh material.\n3. COHERENT --- one continuous, fully sensible geographical description.\n\nWrite MODERN literary Italian (no apocope, no archaic elisions). Produce the 9 periods in order as continuous prose --- no numbering,\nno headings. Output ONLY the passage: no preamble, no self-audit."
+   }
+  ],
+  "thinking": {
+   "type": "disabled"
+  }
+ },
+ "responses": [
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2KNGUCwhwqkUP1xCmJ",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1228,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2MK52k3bTkGxwxXDsT",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1450,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2PXUhxWXfPFbbQFrMo",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1387,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2RhiBE6dmtj6DRfysE",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1435,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2TnH4pDsJ8iW1T8FzF",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1488,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2W7wJXZQofhgLRmZ8T",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1585,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2Yb7FDnTE7R2KQDbG1",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1325,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2ajT6VGroSuuz16saU",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1401,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2cutDAWVbRFx7dkvGp",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1594,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  },
+  {
+   "model": "claude-opus-5",
+   "id": "msg_011ChU2fJVZfLmSZrUjQuK3q",
+   "type": "message",
+   "role": "assistant",
+   "container": null,
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 3251,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1353,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   },
+   "diagnostics": null,
+   "content_types": [
+    "text"
+   ]
+  }
+ ],
+ "gens": [
+  {
+   "i": 0,
+   "text": "Il mare di Lampedusa si apre a sud come una lamina che nessuna carta nautica riesce a contenere, e che pure i radar misurano ogni notte, per restituirne il respiro in forma di punti luminosi e di coordinate numerate, e intorno all'isola si stringe in canali e secche che i pescatori chiamano per nome, tanto che si direbbe un corpo capace di rimpicciolirsi a volontà, e la sua acqua si ritira dentro cale anguste dove il moto si fa gorgo appena il vento cambia, perché la roccia, quando la corrente la morde, non cede e la costringe a tornare indietro.\n\nLampedusa dorme sopra la pietra bianca che il sole lavora da secoli, a sembrare più piccola di quanto la mappa la disegni: tre alture che sanno contrarsi in un solo orizzonte, un porto che raccoglie i motori spenti, e tutti sanno che la frontiera, la quale non ha spessore né colore, passa di qui e si lascia attraversare senza mostrare mai dove cominci a chiamarsi altrimenti.\n\nL'aria di maggio porta odore di gasolio e di salsedine, e le antenne sul promontorio girano lente dentro quell'odore come se lo contassero.\n\nIl molo Favaloro è una lingua di cemento che riceve le barche vuote, che trattiene le coperte termiche, che restituisce ogni mattina un silenzio amministrativo.\n\nLa motovedetta esce all'alba, scivola fuori dalla rada a verificare la linea, e rientra prima di mezzogiorno a consegnare i suoi numeri, mentre il mare si allarga di nuovo e l'ufficio di turno annota che la giornata è stata tranquilla.\n\nL'acqua del canale, che riflette lo scafo capovolto, lo porta rovesciato verso il basso con la chiglia in cielo, e la superficie, che da riva sembra vetro, lo tiene in quella posizione per un tratto lungo; la stessa superficie mostra lo scafo diritto a chi lo guarda controluce, e il riflesso non corregge nulla, e nessuno dirà che la figura capovolta esiste finché la risacca la cancella e il vetro torna liscio.\n\nLe pattuglie salgono alla torre, scendono al porto, risalgono per la strada di cresta mentre le cicale tacciono e il faro inizia il suo giro, poi si fermano dove la ghiaia finisce; il vento si alza e cala sul crinale, perché l'isola non offre riparo; le voci alla radio crescono, si assottigliano, si riducono a una sillaba e poi tacciono del tutto.\n\nNel Mediterraneo centrale esiste una procedura di soccorso che dispone la protezione di chiunque sia in pericolo, che stabilisce che ogni persona recuperata in una zona dove il rischio è provato venga condotta in un luogo sicuro, mentre le navi si spostano verso oriente e i registri, che segnano le ore, che contano le miglia, continuano a elencare approdi e a indicare porti che nessuno nomina.\n\nIl mare, che da tre stagioni restituisce i suoi relitti alla costa sud, si dilata di nuovo oltre le secche: la corrente che risale da Capo Ponente si gonfia, e quando il grecale la spinge contro le scogliere che chiudono la cala, l'acqua si solleva in creste che si vedono da Cala Croce, e il canale e l'isola scambiano i loro confini, e nessuno scrive nulla nel registro."
+  },
+  {
+   "i": 1,
+   "text": "Il mare di Lampedusa si apre a mezzogiorno come una lamina che nessuna carta nautica riesce a contenere nei suoi riquadri azzurri, e che pure gli uffici di Roma e di Bruxelles pretendono di misurare in miglia, in settori, in zone di competenza, continuando a chiamarlo spazio di soccorso anche quando le motovedette lo attraversano per respingere, e dichiarando di voler custodire ogni vita che vi galleggia, mentre dalle banchine di Cala Pisana salpano gli scafi grigi che hanno la prua bassa e il radar acceso, e virano verso sud appena il vento di libeccio si alza sopra l'isola, che resta ferma mentre l'acqua si gonfia, perché la pietra non cede e la schiuma invece si allarga e si ritira.\n\nIl vento sale dall'Africa e consuma la calcarenite che forma la costa, fino a renderla porosa come un pane vecchio, quando la luce del primo pomeriggio batte orizzontale: la scogliera, che sembra arretrare di un palmo ogni stagione, la caletta che accoglie i resti, il registro dell'ufficio marittimo dichiara che ogni relitto ha un numero progressivo, e i legni dipinti si accatastano dietro la rete metallica, dove nessuno viene a riconoscerli.\n\nDalla terrazza del faro si vedono la rotta e la corrente, e si distinguono appena, oltre il banco di Levante, le luci intermittenti dei pattugliatori.\n\nEsiste un canale, che divide Lampedusa dalla costa tunisina, che gli idrografi chiamano Canale di Sicilia, che i piloti dei rimorchiatori chiamano soltanto il passaggio.\n\nL'acqua che lo riempie non ha segni per distinguere un tratto dall'altro, né modo di dichiarare la propria appartenenza, ma cambia nome a metà percorso, senza mutare colore, perché una boa arancione galleggia lì e segnala che da quel punto la giurisdizione è un'altra.\n\nIl molo Favaloro, che la ruggine ha scavato nei punti dove le bitte sembrano piegarsi verso l'interno, raccoglie ogni mattina i teli termici, e un gabbiano li solleva quando il vento rinfresca; la banchina bagnata, che restituisce il profilo capovolto dei militari, li mostra diritti e li mostra rovesciati insieme, e l'acqua sporca di nafta registra che quando il turno cambia i volti si ripetono e le ombre si allungano.\n\nL'isola si restringe verso l'Isola dei Conigli e si allarga nella piana dell'aeroporto, e intorno all'hotspot di contrada Imbriacola la recinzione corre dritta finché il terreno regge, e poi si piega, perché la roccia affiora e il filo si adatta; i container stanno allineati mentre il sole li scalda fino a farli sibilare; dentro il perimetro una fila avanza, i piedi strisciano, e un megafono ripete, e nessuno risponde, e il numero scritto sul braccialetto resta leggibile.\n\nLa corrente, che gira in senso antiorario nel bacino, che i modelli del centro meteorologico calcolano con una precisione che nessun pescatore accetta, dove il fondale si abbassa e la temperatura scende, deposita sulla ghiaia di Cala Croce quanto il mare restituisce, mentre i volontari ripuliscono, e la sabbia, che il mare continua a lavorare, che le mareggiate di questo inverno stanno erodendo più in fretta di prima, seppellisce e conserva, senza che nessuno decida di trattenere le cose che affiorano.\n\nIl faro di Capo Grecale gira ogni dodici secondi, che è il ritmo con cui la notte si misura qui: la luce esce, l'acqua la riprende, e quando il fascio si allontana il buio si richiude sulla scogliera che nessuno sorveglia, e si distinguono soltanto la corrente e la rotta che portano a nord, e il mare torna ad allargarsi oltre il limite del fascio, e respira nel suo verso."
+  },
+  {
+   "i": 2,
+   "text": "Il mare che si apre a mezzogiorno di Lampedusa, dove la secca di Levante sfuma in un azzurro che nessuna carta nautica ha mai saputo misurare, e dove la corrente di Sicilia piega verso ponente, sembra dilatarsi oltre ogni limite percepibile e perdere i propri confini, e porta con sé una luce che ricade sugli scogli di Cala Croce in modo tale che chi guarda dalla banchina crede di assistere a una pacifica distensione delle acque, mentre al largo passano le motovedette grigie che ripetono ogni giorno la stessa rotta e la incidono sulla superficie come una scrittura, finché la scia non si chiude su se stessa, nel punto in cui l'orizzonte si abbassa quando il vento gira a scirocco e quando la foschia sale dal basso e cancella la linea di separazione.\n\nL'isola, che è calcare e vento e poco altro, pare galleggiare sopra la propria ombra quando il sole è alto; il porto la raccoglie, il faro la misura: una rada stretta che costringe ogni chiglia a rallentare, una strada bianca che sale al paese, e si capisce subito che il molo dove attraccano gli assetti operativi è lo stesso dove si asciugano le reti, e che gli uomini in uniforme sorvegliano con cura paterna le banchine e scendono all'alba a contare le teste.\n\nLa banchina di Favaloro è una lingua di cemento affacciata sul nulla, e il suo parapetto basso trattiene il sale e la memoria di ogni sbarco notturno.\n\nPiù su si stende il poligono della prima accoglienza, che nessuna mappa turistica segnala, che il filo spinato disegna con precisione, che il vento di maestrale percorre senza incontrare ostacolo alcuno.\n\nDa lì si vede il canale, che taglia il mondo in due metà disuguali, sembra stringersi fino a diventare un solco, e si rimpicciolisce ancora, quasi volesse chiudersi del tutto, finché la bonaccia non lo immobilizza e un radar lontano non registra che qualcosa si muove.\n\nL'acqua, che riflette la torre di avvistamento e che ne rovescia la sagoma fino a farla sprofondare, è la stessa che la torre interroga; e il fascio del radiofaro, che ruota lentamente, tocca la cresta delle onde, che la risacca disfa, e si spegne, e un ufficiale annota sul registro che la notte è tranquilla, mentre a sei miglia un motore si ferma e nessuno lo sente.\n\nIl mare, qui, cambia nome senza cambiare sostanza, e si chiama acque territoriali fino a dodici miglia, e si chiama zona SAR più in là, benché nulla lo distingua quando il cielo è basso e l'acqua è di piombo, benché nessun segno galleggi a dirlo; solo un apparato di coordinate lo divide, mentre le boe tacciono; e la stessa onda entra ed esce dalla giurisdizione, sale e scende, e nessuno la ferma.\n\nLa corrente che risale dal canale di Sicilia, e che porta con sé una temperatura che i pescatori riconoscono prima degli strumenti, dice a chi la legge che il fondale cambia dove la piattaforma si interrompe e dove la pendenza precipita; e oggi, in questa estate che non finisce, l'acqua si scalda di mese in mese, e le rotte che la attraversano, che l'apparato sorveglia con attenzione scrupolosa, si spostano verso levante per inseguire un varco che il satellite non vede.\n\nAl tramonto il canale torna ad aprirsi, che è la sua natura più antica: il mare si allarga, la linea si solleva, e quando la luce radente scopre le creste che il giorno teneva nascoste e quando il grigio delle motovedette si confonde con il grigio dell'acqua, l'isola resta sola, e il vento e la corrente riprendono il loro lavoro."
+  },
+  {
+   "i": 3,
+   "text": "Il mare si dilata a mezzogiorno in una lastra chiara che l'isola non riesce a contenere e che il vento increspa appena, sembra allargarsi fino al margine dove la luce si consuma, e rimane tuttavia quella distesa che i radar misurano a intervalli regolari, perché i funzionari sostengono che ogni superficie debba potersi leggere come un foglio, e la leggono infatti con strumenti puntuali che ruotano sulle torri e ritornano al punto di partenza quando il turno finisce, nell'ora in cui le scogliere si spengono mentre il vento cade e le imbarcazioni di pattuglia rientrano lentamente, e il porto le accoglie senza rumore.\n\nL'isola di Lampedusa, che il calcare rende bianca e porosa, pare galleggiare sopra sé stessa quando l'afa sale dalle rocce: la guardano dall'alto gli apparati del controllo, che hanno imparato a nominarla, che la dicono presidio e soglia, e tutti gli uffici ripetono che il presidio è generoso, che la soglia è una cura paziente, e i registri confermano la premura dei mezzi veloci, che muovono verso sud con la pazienza dei pescatori per rintracciare le sagome galleggianti.\n\nIl vento di scirocco porta sabbia e calore, e la cala dei Conigli si riempie di una polvere sottile che si posa sulle barche sequestrate e sui ferri arrugginiti del molo vecchio.\n\nEsiste un recinto di rete alta, che nessuna mappa turistica segnala, che il bosco di fichi d'India nasconde a metà, che le cicale coprono di un suono continuo per tutta l'estate asciutta.\n\nDalla strada sterrata si vede la pista d'atterraggio, che taglia l'altopiano in due parti disuguali, sembra più lunga dell'isola stessa, e scende verso il mare per finire contro la scogliera, dove il calcare si stringe e la banchina si restringe tanto che nessuna manovra appare possibile.\n\nIl canale, che la cartografia divide in settori di sorveglianza che le motovedette devono percorrere ogni notte, si assottiglia qui in un corridoio angusto che le correnti comprimono, trattiene una massa d'acqua che nessun porto accoglie, e stringe le rotte in un imbuto, e i verbali dichiarano che il soccorso è continuo mentre le navi attendono al largo e i telefoni satellitari tacciono per ore.\n\nOggi, verso la fine di agosto, la banchina si copre di coperte termiche, gli agenti distribuiscono acqua con gesti rapidi, e i numeri si scrivono sui polsi con pennarelli neri perché l'ordine richiede una contabilità e la contabilità richiede un segno, mentre le fotocamere registrano ogni passaggio; il molo si svuota al tramonto, poiché gli autobus salgono verso il centro, e la pietra conserva il calore del giorno, e le lamiere lo restituiscono, e il buio lo porta via lentissimamente.\n\nLa superficie dell'acqua, che la luna rischiara dal lato orientale, restituisce la sagoma rovesciata della torre di avvistamento che gli ufficiali chiamano occhio, quando il mare è calmo e nessun motore lo attraversa, mentre la stessa acqua si riapre verso il largo, si distende di nuovo sotto le stelle, e dilata l'orizzonte che il buio aveva ristretto, che solo una boa lampeggiante interrompe per segnalare il limite e per indicare la linea che nessun atlante disegna.\n\nLa stessa onda, che qui si chiama acqua territoriale, cambia nome a poche miglia: nulla la distingue nel colore, nessuna piega la separa, e soltanto il transponder acceso a bordo stabilisce il passaggio, perché il confine non si vede e la sua esistenza dipende da un segnale che proviene dal cielo, e il mare resta identico a sé stesso, che il calcolo divide in giurisdizioni, e le barche continuano a muoversi, e nessuno smette di contare."
+  },
+  {
+   "i": 4,
+   "text": "Il mare di Lampedusa si apre a mezzogiorno come una lastra che nessuna mano ha inciso, che pure trattiene il segno di ogni chiglia passata, e trascorre verso sud fino a perdere il nome, continuando a dilatarsi oltre la linea in cui l'occhio cede, e si allarga ancora, con una lentezza che pare generosità, mentre chi lo sorveglia dichiara di volerlo custodire, e dispone sulle sue acque una rete di natanti grigi che pattugliano e misurano, finché la distanza, che qui nessuna boa segnala, si fa sottile come un filo, quando il vento cala e quando la corrente, che viene dall'Africa, si piega e si arrotola contro gli scogli dei Conigli.\n\nScorre la corrente verso l'isola, che la riceve senza chiederle conto, a sollevare i relitti del fondale ogni volta che il libeccio insiste; l'isola accoglie, respinge, cataloga: una scogliera che si incurva a proteggere la rada, una strada bianca che sale al faro, e il porto dichiara che le imbarcazioni le quali attraccano di notte sono soltanto numeri, e li trascrive su registri di cartone destinati a invecchiare in un archivio senza finestre.\n\nLa banchina odora di gasolio e di salsedine, e le gomme dei gommoni sgonfi, ammucchiate dietro il capannone, assorbono il sole di marzo come pietra porosa.\n\nSul molo Favaloro stanno le cassette di plastica che reggono i giubbotti arancioni, che nessuno conta più, che le motovedette rimorchiano al largo prima dell'alba.\n\nIl canale di Sicilia, che d'inverno si restringe a un corridoio percorribile in poche ore, sembra chiudersi su se stesso, e comincia a serrarsi tra le due coste, a stringere l'acqua in un vicolo di schiuma, perché il vento ruota e perché i radar annunciano che la finestra meteorologica si chiuderà entro sera.\n\nL'acqua della cala, che riflette la torre di avvistamento la quale fa ombra senza riuscire a coprirla, trema appena, e il riflesso che ne sale restituisce la torre capovolta, con l'antenna affondata e il basamento in alto, e la lamiera della torre trattiene la luce diretta, mentre lo specchio liquido la rovescia, e il bagnasciuga registra che la marea sale di un palmo dopo mezzogiorno e che le alghe si ritirano verso la secca.\n\nVerso ponente la costa si abbassa, e le rocce si fanno gradini, e la terra rossa scende fino alla risacca, dove i fichi d'India resistono e dove la polvere si deposita sui cardi, mentre le jeep della Guardia di Finanza risalgono il crinale; il centro di contrada Imbriacola occupa l'avvallamento, dove le recinzioni seguono la curva del terreno; e la collina prosegue, e i muretti a secco la tagliano, e un sentiero di capre li scavalca e si perde nella macchia bassa.\n\nL'isola intera è una soglia che il diritto ha disegnato sull'acqua, che le carte nautiche riportano come una linea la quale afferma che il mare al di qua appartiene e quello al di là non appartiene, benché l'acqua sia identica e benché nessuna increspatura la distingua, mentre un pennone issato sulla punta la rende visibile, e la vedetta che vi monta la guardia sorveglia un confine che esiste solo nel quadrante, dove un battello smette di essere soccorso e diventa intercettazione, senza mutare rotta, pur restando lo stesso scafo che galleggia dalla sera prima.\n\nDa qualche settimana il mare torna ad allargarsi oltre il porto, che nelle sere di scirocco si riempie di voci: le nasse riposano sulla pietra, i pescatori rammendano, e quando la sirena della motovedetta attraversa la rada i gabbiani si alzano dai tetti che coprono i magazzini, e la banchina si svuota, e il faro gira il suo fascio sulla distesa che ricomincia a respirare, e nessuno ferma più il conteggio; l'acqua continua a dilatarsi verso il largo."
+  },
+  {
+   "i": 5,
+   "text": "La costa di Lampedusa si piega verso il canale come una lama posata di taglio, che l'acqua ha levigato per millenni e che il vento continua a limare, sembrando quasi offrirsi all'approdo e insieme negarlo, e la roccia che la compone, calcare pallido che pare trattenere il calore anche di notte, si sgretola in ghiaie minute mentre il mare, il quale ricomincia e si ritira secondo una legge che nessuno ha scritto, risale nelle cale quando la corrente del Sahara spinge verso settentrione, e lì si allarga, si distende, dilata le sue pianure di luce fino all'orizzonte dove il cielo e l'acqua si confondono e nessuno sa più dire dove finisca l'uno.\n\nIl mare in quel punto perde il nome che gli attribuiscono le carte, per diventare, appena la chiglia di un pattugliatore ne solca il bordo, una linea amministrativa: parata di boe che segnalano un confine da non oltrepassare, frontiera che nessun occhio distingue dall'acqua circostante, cosicché si direbbe che la superficie, la quale non porta alcun segno, cambi natura e si lasci attraversare da una soglia invisibile, percepibile solo per il mutare della sigla sullo scafo e per la frequenza radio che gli operatori devono cambiare.\n\nL'acqua si stringe fra gli scogli dei Conigli, si incanala, si comprime nelle fessure della scogliera, e nella gola stretta dell'insenatura perde ogni ampiezza, si fa gorgo, si fa cunicolo, si fa vena sottile che batte contro la pietra.\n\nSopra quella strettoia siede la torretta di avvistamento, che la Guardia di Finanza mantiene accesa, che il radar corona di una antenna lenta, che il riflettore prolunga ogni notte in un cono bianco disteso sull'acqua nera.\n\nIl faro dirimpetto manda il suo segnale regolare, che nessuno interroga, per avvertire del secco, e il fascio ritorna, sembra piegarsi sull'onda e rompersi, mentre la risacca lo raccoglie e lo disperde in schegge, sicché pare che la luce stessa si moltiplichi scendendo.\n\nIl motovedetta ormeggiata al molo Favaloro, che un marinaio lava con la manichetta, che un altro asciuga senza affrettarsi, porta sul fianco il numero d'ordine, che l'umidità ha ingiallito, che la vernice nuova non copre del tutto, e sul ponte di coperta brillano i rotoli di cima arancione, e dall'alto del molo si osserva che lo scafo si specchia nell'acqua ferma del bacino mentre il vento tace, e l'immagine capovolta ne restituisce la carena come una seconda nave sommersa.\n\nIl molo si allunga, e la banchina lo prolunga in cemento grigio, e la strada risale verso l'interno mentre i capannoni si allineano sul ciglio e le reti metalliche li recingono, finché l'asfalto si esaurisce davanti al cancello dell'hotspot, e il sentiero scende di nuovo fra i fichi d'India finché la pietra ricompare nuda, e il paesaggio ricomincia, e la macchia bassa si stende sui costoni, e l'elicottero di Frontex passa sopra, e la sua ombra corre sulla pietra e scivola sulle terrazze di carrubi.\n\nL'intero dispositivo, che si dispone sul promontorio con la stessa naturalezza dei muretti a secco, che hanno insegnato alla terra come trattenere la pioggia che l'inverno porta quando il maestrale cala, e che la primavera asciuga, appare benefico nella sua disposizione, poiché i gommoni vengono condotti a riva e i naufraghi accolti alla banchina, dove un funzionario distribuisce coperte dorate che il sole fa brillare come lamiere, e un altro registra i nomi e provvede a trascrivere le date di nascita che nessuno può documentare.\n\nIl mare, intanto, in questo decennio che ancora dura, si riapre: distesa che riprende fiato, e il canale torna a dilatarsi, e quando la bonaccia si posa e il blu si fa unico fino alla curvatura che il vetro dell'aria non deforma, allora l'orizzonte si solleva e l'occhio che lo cerca non trova più la linea, e la rotta ridiventa acqua senza nome, e la soglia svanisce finché una sigla nuova non la ricrei."
+  },
+  {
+   "i": 6,
+   "text": "Il mare che arriva a Lampedusa è una lama d'acqua che il vento del canale leviga ogni notte e che all'alba si distende fino a toccare la linea bassa della Tunisia, e sembra allargarsi oltre ogni misura conosciuta, e si apre verso sud in un respiro che nessuna carta nautica trattiene, perché i funzionari che misurano le acque hanno stabilito che quel respiro debba avere un confine, e lo hanno disegnato con una matita sottile su fogli plastificati che il sole scolorisce negli uffici del porto, mentre la corrente, che non legge i fogli, continua a salire da sud quando il libeccio la spinge e quando la luna la richiama verso le secche.\n\nIl canale si stringe qui, dove l'isola interrompe la rotta, e pare chiudersi come una gola di pietra quando il maestrale incide la superficie: le motovedette tagliano l'acqua in settori numerati che gli operatori imparano a memoria, i radar fissano punti che palpitano e scompaiono, e il comando di Palermo comunica che la zona di responsabilità, la quale copre quaranta miglia di mare contratto, resta sotto osservazione permanente e non consente ai pescherecci di avvicinarsi.\n\nLe scogliere di Cala Croce scendono diritte nell'acqua verde e i gabbiani le percorrono in cerchi lenti, senza posarsi mai sulla roccia calda.\n\nDietro il molo si allunga il piazzale di cemento che le gru hanno consumato, che le autoblindo attraversano all'alba, che il vento copre di una polvere bianchissima e salata.\n\nLa guardia costiera, che veglia su questo tratto di mare, sostiene di proteggere ogni vita che vi transiti, e intanto respinge i gommoni verso il largo per lasciarli andare, mentre il comandante annota nel registro e dichiara che l'operazione si è conclusa senza incidenti.\n\nL'acqua della rada, che riflette il fianco grigio della nave che sta per salpare, e il fianco grigio che nel riflesso si rovescia e si allunga verso il fondo, tremano insieme sotto la chiglia; il riflesso che l'onda deforma non è la nave che gli uomini vedono dalla banchina, e i marinai lo sanno, e ripetono che l'immagine si spezza quando il motore si accende e la schiuma la cancella.\n\nIl faro gira, il fascio percorre il mare nero, e l'isola si ritrae nel buio mentre la luce passa oltre, e il capo si accende per un attimo, e poi si spegne quando la lente compie il giro, e le barche dormono nella darsena, e il molo tace, e la rete metallica del centro di contrada Imbriacola brilla di rugiada e il cancello resta chiuso.\n\nIl terzo fenomeno è quello delle onde di risacca, che risalgono il canale dei Conigli con una regolarità che chiunque osservi dalla scala di pietra riconosce come un conteggio, quando il sole è alto e la sabbia si asciuga tra una serie e l'altra; eppure in questi mesi di settembre la secca arretra, e l'acqua che copriva la lingua di sabbia, che univa l'isolotto alla costa, si ritira e lascia emergere un ponte che i turisti attraversano a piedi nudi.\n\nIl mare torna ad aprirsi oltre la punta di Capo Ponente, dove nessuna boa lo segna; la distesa che da qui appare infinita si gonfia, e il colore si fa più chiaro verso l'orizzonte, e quando il vento cade la superficie si dilata e sembra un piano d'olio che nessuna chiglia incide, e le navi che lo solcano diventano punti, e il mare riprende tutto lo spazio che la pietra gli aveva negato."
+  },
+  {
+   "i": 7,
+   "text": "Il mare che circonda Lampedusa è una lastra che pare un'arena bianca quando il meriggio la percuote e la distende fino a toccare l'orizzonte, e sembra allargarsi oltre ogni misura conosciuta, e si apre a ventaglio verso meridione, dove nessuna carta nautica traccia più confini che un occhio possa riconoscere, perché le rotte si dilatano e si confondono e nulla trattiene quella distesa che gli idrografi chiamano piattaforma africana, benché i registri del porto la contino ancora come acqua d'Europa, mentre i gabbiani la attraversano senza sapere di valicare nulla, dato che nessun solco la divide e nessuna boa la misura, e il vento la spiana e la riconsegna uguale a sé stessa.\n\nA ponente del molo la scogliera si restringe in una gola che il sale ha levigato, e l'acqua comincia a contrarsi quando entra tra i due speroni di calcare; il canale si chiude a imbuto, l'onda vi si incunea come per cercare un'uscita che non trova, il risucchio si stringe in un nodo che gorgoglia contro i massi, e chiunque sosti sul parapetto osserva che il mare qui diventa una vena sottile, e la schiuma si rapprende e si ritira, fino a scomparire dentro la fessura.\n\nPiù in basso, dove il fondale riprende fiato, la distesa si riapre azzurra verso Cala Croce, e la superficie torna a respirare in un lungo movimento che nessuna roccia interrompe.\n\nSul promontorio sorge la torre di avvistamento, che ha il colore del tufo, che non proietta ombra a mezzogiorno, che guarda il tratto di mare dove le correnti si incrociano.\n\nAlla sua base il radar ruota con un passo regolare, che nessuno sorveglia, a scandire il silenzio dell'altopiano, e la sua antenna gira lentamente, senza mai arrestare la rotazione, finché il cono di luce verde non tocca la costa e l'operatore non registra che il settore è quieto.\n\nNel porto nuovo attracca la motovedetta che porta sul fianco la sigla che le consente di uscire oltre le dodici miglia, e accanto a essa riposa il gommone grigio che la squadra ha rimorchiato all'alba, e la banchina di cemento che il sole scheggia conserva le crepe che l'inverno ha allargato, e il parapetto di ferro si arrugginisce, e la gru resta ferma, perché il registro dichiara che l'operazione si è conclusa con successo quando il comandante firma e l'orario viene trascritto.\n\nL'isola misura venti chilometri quadrati, e la sua pietra è calcarea, e la vegetazione si fa bassa dove il vento marino la piega e la brucia, perché nessun albero alto vi resiste; i fichi d'India crescono lungo i muretti a secco, dove la terra si deposita; e la strada sale verso l'aeroporto, e il cancello del centro di primo soccorso si apre sul piazzale, e dentro il piazzale la ghiaia risuona sotto le ruote dei furgoni.\n\nIl mare che si vede dal faro di Capo Grecale è lo stesso specchio che i piloti dicono si confonda con il cielo nelle ore in cui la foschia si posa e la linea sparisce, mentre più sotto il basalto si inumidisce e la roccia che sostiene il pendio, che qualcuno ha dipinto di bianco per segnalare il sentiero e per indicare il tratto che precipita, trattiene le sterpaglie.\n\nIn questi mesi la rada si popola di scafi, che la capitaneria inventaria; alcuni giacciono capovolti, altri conservano il motore, e quando la luce del tramonto li colpisce il legno restituisce un riverbero che l'acqua ripete rovesciato, e la superficie mostra la chiglia che il sole mostra diritta, e la risacca cancella il riflesso, e ogni sera il conteggio ricomincia."
+  },
+  {
+   "i": 8,
+   "text": "La scogliera si piega verso il canale che separa l'isola dal continente d'Africa, un braccio d'acqua che i piloti chiamano corridoio e i pescatori chiamano fossa, e sul suo ciglio la pietra calcarea comincia a cedere, e scende in terrazze bianche fino al pelo dell'onda, dove il mare si allarga e si distende come una lamina che nessuna riva trattiene, perché la corrente che viene da sudest scava sotto la roccia e la svuota di dentro, mentre il faro di Capo Grecale gira la sua luce sopra un tratto d'acqua che non ha nome nelle carte civili, benché lo abbiano battezzato tre volte gli uffici di Bruxelles e lo misurino ogni notte i satelliti.\n\nScendono i gabbiani sul molo, uccelli che non temono più nessuno, abituati a cercare il pane fra le reti da quando le reti hanno smesso di uscire; la banchina di Cala Pisana, lastricata di cemento che il sale ha reso poroso, accoglie i motoscafi grigi della guardia costiera, che attraccano in fila con la prua rivolta al largo, e l'ufficiale di turno annota che ogni scafo è stato ispezionato con scrupolo, e la ragione dell'ispezione è provvedere alla sicurezza di chi naviga.\n\nOltre la banchina si apre il piazzale delle consegne, e dal piazzale una strada di asfalto chiaro sale verso l'entroterra fra i muretti a secco e i fichi d'India polverosi.\n\nLì sorge il recinto di contrada Imbriacola, una costruzione bassa che il vento imbianca di polvere, che i registri chiamano struttura di prima accoglienza, che i deputati in visita descrivono come temporanea.\n\nIntorno corre una rete metallica alta quattro metri, che il sole arrugginisce alla base, senza impedire alla luce di passare, e il filo superiore si piega verso l'interno per ragioni di decoro, mentre gli addetti alla vigilanza assicurano che la curvatura serve a proteggere gli ospiti dalle raffiche di tramontana.\n\nDentro il perimetro c'è un cortile di ghiaia che una pensilina di lamiera copre a metà, e sotto la lamiera stanno le brande allineate, che la condensa notturna inumidisce; al centro una cisterna di plastica azzurra raccoglie l'acqua piovana, che nessuno beve, e la superficie di quell'acqua è immobile, e chi si affaccia vi legge il proprio volto rovesciato, capovolto nello specchio liquido mentre la lamiera sopra gocciola e l'immagine si spezza in cerchi.\n\nFuori del recinto la macchia riprende, e la terra scende di nuovo verso il mare, e la discesa è lenta dove il terreno si fa sabbia, e il piede affonda, e diventa rapida dove la roccia riaffiora nuda; i capperi si aggrappano alle fenditure, mentre il vento li pettina verso terra, e la costa si incava in piccole insenature, e ciascuna raccoglie il suo deposito di plastica e di legno, e il legno è quasi sempre azzurro, verniciato in qualche cantiere di Zuwara.\n\nDa quattro stagioni la burocrazia dell'isola cresce più in fretta della sua vegetazione, e la cresce un apparato di uffici che conta i corpi e li fotografa e decide che il numero annotato corrisponde a una persona la quale, se non parla italiano, riceve un codice alfanumerico e lo porta al polso, mentre il molo Favaloro resta lo stesso molo di pietra e di cemento, e la stessa banchina dove di notte sbarcano le ombre che nessuno conta ad alta voce, e che al mattino non figurano negli elenchi, e l'elenco esiste per tutelare la dignità di ciascuno e per garantire a tutti l'assistenza dovuta.\n\nOltre il fanale rosso il mare torna a restringersi fra gli scogli dei Conigli, dove l'acqua si strozza nei canali di pietra; poi si libera di colpo, e la distesa si dilata verso l'orizzonte, e nessuna barriera la contiene, benché le mappe la dividano in zone di competenza che portano sigle diverse, e la stessa onda cambia nome quando attraversa una linea che non si vede, segnalata soltanto dal lampo di una boa, e l'acqua non se ne accorge, e continua il suo movimento lungo e uguale verso la costa bianca."
+  },
+  {
+   "i": 9,
+   "text": "Il mare che circonda Lampedusa si apre a ventaglio verso mezzogiorno, dove la piattaforma calcarea che regge l'isola declina in gradini sommersi e la luce vi si posa come una calce bagnata, e sembra voler allargare l'orizzonte fino a cancellare ogni distinzione di acque, e accoglie allora le rotte che vengono dal fondo del golfo di Sirte, sicché molti credono di poter leggere quel largo come una pianura senza recinti, e lo attraversano in barche di legno dipinto che prendono acqua dalla poppa, mentre il vento di scirocco, che arriva carico di sabbia sottile quando l'estate si rovescia, solleva la superficie e la stende, e la rimescola in un respiro lungo.\n\nLa linea tra le acque territoriali e l'alto mare, che nessuno vede, non si lascia riconoscere se non quando una motovedetta la nomina: è un confine che si fa visibile solo per la rotta di chi lo sorveglia, un taglio che esiste nelle carte di bordo e non sull'onda, e gli uomini sanno che la stessa distesa, la quale un istante prima si chiamava soccorso, muta nome dopo la virata e comincia a chiamarsi intercettazione.\n\nAl largo dell'Isola dei Conigli il fondale si stringe in secche bianche, e le correnti vi si incanalano con un rumore di fiato trattenuto.\n\nIl porto vecchio è una tasca di roccia che trattiene le ombre, che odora di gasolio e di alghe, che la banchina di cemento chiude come un labbro.\n\nGli scafi grigi della guardia costiera, che portano numeri a prua, sembrano dormire all'ormeggio, e tornano a muoversi prima dell'alba per raggiungere il punto segnalato, mentre le radio gracchiano e i registri dichiarano che tutto procede secondo le procedure.\n\nL'acqua del bacino, che è ferma come un vetro colato e che non lascia vedere il fondo, raddoppia le murate e le antenne, e i fanali che ardono sul molo vi scendono capovolti, e nella pozza nera ogni sagoma si ripete rovesciata, e chi guarda a lungo giura che il riflesso si muova prima della cosa riflessa, quando la risacca arriva, e che il porto intero galleggi sopra se stesso.\n\nIl centro di accoglienza sta in una conca dietro la collina, e un muro di rete lo cinge, e dalla strada non si vede quasi nulla, perché la pietra sale e le agavi coprono il varco, finché la curva non lo scopre tutto insieme; i fari lo custodiscono per tutta la notte, perché nessuno vi si perda; e il filo spinato protegge il sonno di chi dorme sotto le tettoie, e le camionette vegliano, e i cancelli si chiudono con cura, e la cura ha il suono di una catena.\n\nLa corrente che risale da sud, la quale porta meduse e bottiglie e tavole scolorite, fa sì che la spiaggia dei Conigli si copra di cose che nessuno raccoglie, finché il mare non le riprende, e le deposita altrove, mentre in questo settembre il livello dell'acqua cresce di un dito ogni stagione contro la scogliera, e il calcare si sfarina, e la costa che pareva eterna arretra come una pagina bagnata, che si disfa dai bordi.\n\nPoi la tramontana apre di nuovo il largo, che torna a dilatarsi oltre le secche: l'orizzonte che si era chiuso si allenta, la foschia si alza, e quando i motori tacciono si sente soltanto l'onda che batte sotto la roccia, e la distesa respira di nuovo fino alla linea che nessuno ha tracciato, e si allarga, e Lampedusa resta una scaglia di calcare in mezzo a quel respiro."
+  }
+ ]
+}
