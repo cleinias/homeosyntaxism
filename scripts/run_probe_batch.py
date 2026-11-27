@@ -10,8 +10,11 @@ results file per (manifest, tag, model):
   results/probe_<manifest stem>_<tag>_<model slug>_PROMPTS.jsonl   the prompts as sent, one per line
 
 The results file is rewritten after every item, so a job killed at its walltime keeps what it had
-finished, and a rerun with the same tag resumes: items already answered are skipped, and nothing
-already written is replaced. A reply counts as recognition when AUTHOR names Manzoni or TITLE names
+finished, and a rerun with the same tag resumes: items already answered are skipped, but a failed or
+short item is sent again whole and its record replaced (its partial answers and its refusal with it).
+To try failed items again without touching the first attempt, use --retry K: the items that failed
+or came back short in the main file are sent once more and written to <stem>_retryK.json, and an item
+already in that file is never sent again (a further attempt takes K+1). A reply counts as recognition when AUTHOR names Manzoni or TITLE names
 I promessi sposi (or a translation of the title), the rule of scripts/run_probe.py.
 
   # ACES, inside the sbatch (vllm serving on :8000):
@@ -80,6 +83,8 @@ def main():
     ap.add_argument("--disable-thinking", action="store_true")
     ap.add_argument("--tag", required=True)
     ap.add_argument("--only", default=None, help="regex on item ids: send only these")
+    ap.add_argument("--retry", type=int, default=None, metavar="K",
+                    help="resend the main file's failed/short items into <stem>_retryK.json")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
 
@@ -89,6 +94,13 @@ def main():
     items = [it for it in man["items"] if not a.only or re.search(a.only, it["id"])]
     stem = f"probe_{mpath.stem}_{a.tag}_{a.model.replace('/', '_')}"
     fn, pfn = RP.OUT / f"{stem}.json", RP.OUT / f"{stem}_PROMPTS.jsonl"
+    if a.retry is not None:  # the main file is only read; the prompts are already in its PROMPTS file
+        if not fn.exists():
+            sys.exit(f"run_probe_batch: --retry needs {fn.name}")
+        base = json.loads(fn.read_text(encoding="utf-8"))
+        ok = {i for i, v in base["items"].items() if not v["failure"] and len(v["answers"]) == a.n}
+        items = [it for it in items if it["id"] in base["items"] and it["id"] not in ok]
+        fn = RP.OUT / f"{stem}_retry{a.retry}.json"
     print(f"[probe-batch] {mpath.name} ({len(items)} prompts) {a.backend} {a.model} n={a.n} -> {fn.name}",
           flush=True)
     if a.dry_run:
@@ -120,6 +132,9 @@ def main():
         res["endpoints"].append(a.endpoint)
     # a failed or short item is sent again on resume; a complete one never is
     done = {i for i, v in res["items"].items() if not v["failure"] and len(v["answers"]) == a.n}
+    if a.retry is not None:  # one attempt per item per retry file: nothing in it is replaced
+        done = set(res["items"])
+        res.setdefault("retry_of", stem + ".json")
     logged = set()
     if pfn.exists():
         logged = {json.loads(line)["id"] for line in pfn.read_text(encoding="utf-8").splitlines() if line}
